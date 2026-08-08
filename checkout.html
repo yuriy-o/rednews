@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout — Red News</title>
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, sans-serif; text-align: center;
+           padding: 48px 20px; color: #333; }
+    h2 { margin: 0 0 8px; }
+    p { color: #666; }
+  </style>
+</head>
+<body>
+  <h2>Red News Premium</h2>
+  <p id="msg">Opening secure checkout…</p>
+
+  <script>
+    // Client-side tokens (Paddle → Developer Tools → Authentication → Client-side tokens).
+    // These are NOT secrets — they are meant to run in the browser.
+    const TOKENS = {
+      sandbox: "test_df24fc144d9eaf8ebbee12a8bc7",
+      production: "PASTE_PROD_CLIENT_TOKEN",
+    };
+
+    const params = new URLSearchParams(location.search);
+    const txn = params.get("_ptxn");
+    const env = params.get("env") === "sandbox" ? "sandbox" : "production";
+    const msg = document.getElementById("msg");
+
+    try {
+      Paddle.Environment.set(env);
+      Paddle.Setup({ token: TOKENS[env] });
+      if (txn) {
+        Paddle.Checkout.open({
+          transactionId: txn,
+          settings: { displayMode: "overlay", successUrl: location.origin + "/thanks.html" },
+        });
+      } else {
+        msg.textContent = "Missing checkout reference. Please return to the extension and try again.";
+      }
+    } catch (e) {
+      msg.textContent = "Could not load checkout: " + (e && e.message ? e.message : e);
+    }
+  </script>
+</body>
+</html>
