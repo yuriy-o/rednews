@@ -39,6 +39,7 @@
       const params = new URLSearchParams(location.search);
       const txn = params.get('_ptxn');
       const env = params.get('env') === 'sandbox' ? 'sandbox' : 'production';
+      const email = params.get('email');
       const msg = document.getElementById('msg');
 
       try {
@@ -47,6 +48,7 @@
         if (txn) {
           Paddle.Checkout.open({
             transactionId: txn,
+            customer: email ? { email } : undefined,
             settings: {
               displayMode: 'overlay',
               successUrl: new URL('thanks.html', location.href).href,
