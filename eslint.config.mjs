@@ -4,17 +4,9 @@ import prettier from 'eslint-plugin-prettier/recommended';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
-const extensionScripts = [
-  'background.{js,ts}',
-  'content.{js,ts}',
-  'inject.{js,ts}',
-  'popup.{js,ts}',
-  'shared.{js,ts}',
-  'service-worker.{js,ts}',
-  'extension/**/*.{js,ts}',
-];
+const extensionScripts = ['extension/**/*.{js,ts}'];
 
-const extensionPages = ['popup.html', 'options.html'];
+const extensionPages = ['extension/**/*.html'];
 
 const websiteFiles = ['**/*.html', 'website/**/*.{js,ts}', 'js/**/*.{js,ts}'];
 
@@ -23,6 +15,7 @@ export default tseslint.config(
     ignores: [
       'node_modules/**',
       'dist/**',
+      'extension/dist/**',
       'build/**',
       '.cursor-context/**',
       '**/*.min.js',

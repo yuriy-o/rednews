@@ -1,6 +1,7 @@
 node_modules/
 .cursor-context/
 dist/
+extension/dist/
 build/
 .env
 .env.local

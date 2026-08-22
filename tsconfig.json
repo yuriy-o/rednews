@@ -8,8 +8,8 @@
     "moduleResolution": "bundler",
     "lib": ["ES2022", "DOM"],
     "types": ["chrome"],
-    "outDir": "./dist",
-    "rootDir": "./",
+    "rootDir": "./extension/src",
+    "outDir": "./extension/dist",
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
@@ -20,6 +20,6 @@
     "allowJs": true,
     "checkJs": false
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts", "**/*.js"],
-  "exclude": ["node_modules", "dist", "build", "eslint.config.mjs"]
+  "include": ["extension/src/**/*.ts", "extension/src/**/*.d.ts"],
+  "exclude": ["node_modules", "extension/dist"]
 }
