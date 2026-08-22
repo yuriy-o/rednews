@@ -1,0 +1,43 @@
+# Red News Project Rules
+
+## Architecture
+- Chrome Extension: Manifest V3 (MV3)
+- Website: Vanilla HTML/CSS/JS on Cloudflare
+- Backend: Supabase (database + auth)
+- Payment: Paddle (payment processing)
+
+## Tech Stack
+- Language: JavaScript → TypeScript (migration in progress)
+- Extension: vanilla JS, no frameworks
+- Website: HTML/CSS/JS, vanilla
+- Build: esbuild, Webpack (for bundling)
+- Testing: Jest (new), Node.js (old tests)
+
+## Code Style
+- Use TypeScript strict mode
+- Follow Conventional Commits (feat: feat(feat:, fix:, chore:, docs:, test:)
+- ESLint + Prettier formatting
+- Comments in English, strings in i18n files
+
+## Project Phases
+1. **Week 1-2:** TypeScript migration for extension
+   - shared.js → shared.ts
+   - background.js → background.ts
+   - inject.js → inject.ts
+   - content.js → content.ts
+   - popup.js → popup.ts
+
+2. **Week 3-4:** Website improvements (incremental)
+   - Landing page enhancements
+   - User dashboard
+   - Real-time Supabase integration
+
+3. **Week 5:** GitHub Actions CI/CD setup
+
+4. **Week 6:** Documentation and polish
+
+## Important Constraints
+- NEVER break the live product (rednews.app)
+- KEEP Supabase and Paddle integrations working
+- Test locally before committing
+- Incremental commits (each feature = 1-2 commits)

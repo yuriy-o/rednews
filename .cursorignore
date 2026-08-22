@@ -1,0 +1,15 @@
+# Ignore these directories and files from AI indexing
+node_modules/
+.cursor-context/    # Context for AI to remember
+.git/               # Git repository
+dist/
+build/              # Build output
+.env                # Environment variables
+.env.local          # Local environment variables
+.env.*.local        # Local environment variables for specific environments
+*.log               # Log files
+.DS_Store           # macOS file system metadata
+.vscode/            # VSCode settings
+.idea/              # IntelliJ IDEA settings
+*.swp               # Vim swap files
+*.swo               # Vim swap files
