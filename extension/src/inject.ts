@@ -306,6 +306,328 @@ let paneById = new Map<string, ChartApi>();
 // Per-pane state
 const paneState = new Map<string, PaneState>();
 
+// ============ PANE MANAGEMENT ============
+
+/** Get TradingView API from window */
+function tvApi(): {
+  chartsCount?(): number;
+  chart(index: number): ChartApi | null;
+  activeChart?(): ChartApi | null;
+} | null {
+  try {
+    return window.TradingViewApi ?? null;
+  } catch (e) {
+    return null;
+  }
+}
+
+/** Get number of panes/charts */
+function paneCount(): number {
+  try {
+    const api = tvApi();
+    const n = api?.chartsCount?.();
+    return (n && n > 0) ? n : 1;
+  } catch (e) {
+    return 1;
+  }
+}
+
+/** Get chart at specific pane index */
+function chartAt(index: number): ChartApi | null {
+  try {
+    const api = tvApi();
+    return api?.chart(index) ?? null;
+  } catch (e) {
+    return null;
+  }
+}
+
+/** Get active chart API */
+function activeChartApi(): ChartApi | null {
+  try {
+    const api = tvApi();
+    return api?.activeChart?.() ?? null;
+  } catch (e) {
+    return null;
+  }
+}
+
+/** Generate stable pane ID from chart API object */
+function keyOf(chartApi: ChartApi | null): string | null {
+  if (!chartApi) return null;
+  let k = paneKeys.get(chartApi);
+  if (!k) {
+    k = `p${nextPaneKey++}`;
+    paneKeys.set(chartApi, k);
+  }
+  return k;
+}
+
+/** Enumerate all panes and update paneById map */
+function enumeratePanes(): Array<{ id: string; index: number; chart: ChartApi }> {
+  const n = paneCount();
+  const map = new Map<string, ChartApi>();
+  const list: Array<{ id: string; index: number; chart: ChartApi }> = [];
+
+  // Try to enumerate via public API
+  for (let i = 0; i < n; i++) {
+    const c = chartAt(i);
+    if (!c) continue;
+    const id = keyOf(c);
+    if (!id) continue;
+    map.set(id, c);
+    list.push({ id, index: i, chart: c });
+  }
+
+  // Fallback: if enumeration failed, use active chart
+  if (list.length === 0) {
+    const active = activeChartApi();
+    if (active) {
+      const id = keyOf(active);
+      if (id) {
+        map.set(id, active);
+        list.push({ id, index: 0, chart: active });
+      }
+    }
+  }
+
+  paneById = map;
+  return list;
+}
+
+/** Get chart API for a specific pane ID */
+function chartOf(paneId: string): ChartApi | null {
+  return paneById.get(paneId) ?? null;
+}
+
+/** Get or create state for a pane */
+function stateOf(paneId: string): PaneState {
+  let s = paneState.get(paneId);
+  if (!s) {
+    s = {
+      bySig: new Map(),
+      suppressed: new Map(),
+      drawnMeta: [],
+      lastScope: null,
+      swept: false,
+    };
+    paneState.set(paneId, s);
+  }
+  return s;
+}
+
+/** Get set of currently held shape IDs */
+function heldIds(st: PaneState): Set<string> {
+  return new Set([...st.bySig.values()].map((e) => e.id));
+}
+
+// ============ SERIES / BAR MANAGEMENT ============
+
+/** Get series data for a chart */
+function seriesData(chart: ChartApi | null): SeriesData | null {
+  if (!chart) return null;
+
+  try {
+    const d = chart.getSeries().data();
+    if (d && typeof d.size === 'function' && d.size() > 0) return d;
+  } catch (e) {
+    // Fall through to private API
+  }
+
+  // Fallback to private API for active chart
+  try {
+    const active = activeChartApi();
+    if (active === chart && window._exposed_chartWidgetCollection) {
+      const cw = window._exposed_chartWidgetCollection.activeChartWidget.value();
+      const d = cw.model().mainSeries().data();
+      if (d && typeof d.size === 'function' && d.size() > 0) return d;
+    }
+  } catch (e) {
+    // Fall through to single-pane fallback
+  }
+
+  // Single-pane fallback: use active chart's series if only one pane
+  try {
+    if (paneCount() <= 1) {
+      const ac = activeChartApi();
+      if (ac && ac !== chart) {
+        const d = ac.getSeries().data();
+        if (d && typeof d.size === 'function' && d.size() > 0) return d;
+      }
+    }
+  } catch (e) {
+    // Give up
+  }
+
+  return null;
+}
+
+/** Get bar span (seconds) and reference price for a chart */
+function seriesInfo(chart: ChartApi | null): SeriesInfo | null {
+  try {
+    const data = seriesData(chart);
+    if (!data) return null;
+
+    const first = data.first()?.value?.[0];
+    const lastBar = data.last()?.value;
+    if (typeof first !== 'number' || !lastBar) return null;
+
+    const last = lastBar[0];
+    const price = lastBar[4] ?? lastBar[1];
+    if (typeof price !== 'number') return null;
+
+    const size = data.size();
+    const span = size > 1 ? Math.max(60, (last - first) / (size - 1)) : 60;
+    return { span, price };
+  } catch (e) {
+    return null;
+  }
+}
+
+/** Get series bars accessor for a chart */
+function seriesBars(chart: ChartApi | null): SeriesBars | null {
+  try {
+    const data = seriesData(chart);
+    if (!data) return null;
+    const size = data.size();
+    if (size === 0) return null;
+    return {
+      data,
+      size,
+      lastBarTime: data.valueAt(size - 1)[0],
+    };
+  } catch (e) {
+    return null;
+  }
+}
+
+/** Find bar time that contains given timestamp (binary search) */
+function barTimeOf(sb: SeriesBars, tsec: number): number | null {
+  let lo = 0;
+  let hi = sb.size - 1;
+  let res: number | null = null;
+
+  while (lo <= hi) {
+    const mid = (lo + hi) >> 1;
+    const bt = sb.data.valueAt(mid)[0];
+    if (bt <= tsec) {
+      res = bt;
+      lo = mid + 1;
+    } else {
+      hi = mid - 1;
+    }
+  }
+  return res;
+}
+
+/** Get true bar duration in seconds */
+function barSeconds(chart: ChartApi | null): number | null {
+  try {
+    const sb = seriesBars(chart);
+    if (!sb) return null;
+
+    // Try official API first
+    if (chart && chart.barTimeToEndOfPeriod) {
+      const dur = chart.barTimeToEndOfPeriod(sb.lastBarTime) - sb.lastBarTime;
+      if (dur > 0 && isFinite(dur)) return dur;
+    }
+  } catch (e) {
+    // Fall through to heuristic
+  }
+
+  // Fallback: calculate from recent bar gaps
+  try {
+    const data = seriesData(chart);
+    if (!data) return null;
+    const size = data.size();
+    if (size < 2) return null;
+
+    let min = Infinity;
+    for (let i = Math.max(1, size - 20); i < size; i++) {
+      const d = data.valueAt(i)[0] - data.valueAt(i - 1)[0];
+      if (d > 0 && d < min) min = d;
+    }
+    return isFinite(min) ? min : null;
+  } catch (e) {
+    return null;
+  }
+}
+
+/** Map timestamps to their bar open times */
+function mapBars(chart: ChartApi | null, times: number[]): (number | null)[] {
+  const sb = seriesBars(chart);
+  if (!sb) return times.map(() => null);
+
+  const info = seriesInfo(chart);
+  const bs = barSeconds(chart) ?? (info?.span ?? null);
+
+  return times.map((t) => {
+    if (t <= sb.lastBarTime) return barTimeOf(sb, t);
+    if (!bs) return null;
+    // Floor: the open time of the bar that CONTAINS t
+    return sb.lastBarTime + Math.floor((t - sb.lastBarTime) / bs) * bs;
+  });
+}
+
+// ============ DRAWING HELPERS ============
+
+/** Remove shape entities from chart */
+function removeIds(chart: ChartApi | null, ids: string[]): void {
+  if (!chart) return;
+  ids.forEach((id) => {
+    try {
+      chart.removeEntity(id, { disableUndo: true });
+    } catch (e) {
+      try {
+        chart.removeEntity(id); // Fallback for older API
+      } catch (e2) {
+        // Ignore
+      }
+    }
+  });
+}
+
+/** Clamp number to range */
+function clampNum(v: unknown, min: number, max: number, dflt: number): number {
+  const n = typeof v === 'number' ? v : NaN;
+  return isNaN(n) ? dflt : Math.max(min, Math.min(max, n));
+}
+
+/** Extract ID list from unknown value */
+function idList(v: unknown): string[] {
+  if (!Array.isArray(v)) return [];
+  return v.filter((x) => typeof x === 'string');
+}
+
+/** Resolve pane ID from message data */
+function resolvePaneId(d: BaseMessage & { paneId?: string }): string {
+  return (typeof d.paneId === 'string' && d.paneId) ? d.paneId : '';
+}
+
+/** Verify message comes from same origin */
+function sameOrigin(ev: MessageEvent): boolean {
+  try {
+    return ev.origin === location.origin;
+  } catch (e) {
+    return false;
+  }
+}
+
+/** Sanitize and validate drawing lines */
+function sanitizeLines(lines: unknown): DrawLineInput[] {
+  if (!Array.isArray(lines)) return [];
+  return lines.filter((ln: unknown): ln is DrawLineInput => {
+    if (!ln || typeof ln !== 'object') return false;
+    const l = ln as Record<string, unknown>;
+    return (
+      typeof l.ts === 'number' &&
+      typeof l.sig === 'string' &&
+      typeof l.color === 'string' &&
+      typeof l.label === 'string'
+    );
+  });
+}
+
 // ============ MAIN MESSAGE HANDLER ============
 
 function setupMessageListener(): void {
@@ -423,14 +745,7 @@ async function handleHover(msg: RNHoverMessage): Promise<void> {
 }
 
 // ============ HELPER FUNCTIONS (STUBS) ============
-
-function sameOrigin(ev: MessageEvent): boolean {
-  try {
-    return ev.origin === location.origin;
-  } catch (e) {
-    return false;
-  }
-}
+// (sameOrigin moved to Drawing Helpers section)
 
 // ============ INIT ============
 
