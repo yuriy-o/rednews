@@ -628,6 +628,188 @@ function sanitizeLines(lines: unknown): DrawLineInput[] {
   });
 }
 
+// ============ DRAWING LOGIC ============
+
+/** Sync drawn metadata from state */
+function syncMeta(st: PaneState): void {
+  st.drawnMeta = [...st.bySig.values()].map((e) => ({
+    ts: e.stored != null ? e.stored : e.ts,
+    id: e.id,
+    keys: [...(e.keys || [e.key])],
+  }));
+}
+
+/** Resolve collisions: keep highest impact, fold keys */
+function resolveCollisions(st: PaneState): void {
+  const byStored = new Map<number, string>();
+
+  for (const [sig, e] of [...st.bySig]) {
+    if (e.stored == null) continue;
+    const prev = byStored.get(e.stored);
+    if (prev === undefined) {
+      byStored.set(e.stored, sig);
+      continue;
+    }
+
+    const a = st.bySig.get(prev);
+    const aWins = a && (a.rank !== e.rank ? a.rank > e.rank : a.ts <= e.ts);
+    const winSig = aWins ? prev : sig;
+    const loseSig = aWins ? sig : prev;
+    const winner = st.bySig.get(winSig);
+    const loser = st.bySig.get(loseSig);
+
+    if (loser && winner) {
+      loser.keys.forEach((k) => winner.keys.add(k));
+      st.bySig.delete(loseSig);
+      st.suppressed.set(loseSig, winSig);
+      byStored.set(e.stored, winSig);
+    }
+  }
+}
+
+/** Main drawing logic - diff draw on one pane */
+async function drawLines(
+  paneId: string,
+  lines: DrawLineInput[],
+  oldIds: string[],
+  symbol: string | null
+): Promise<DrawResult> {
+  const chart = chartOf(paneId) ?? activeChartApi();
+  const st = stateOf(paneId);
+
+  if (!chart) {
+    return {
+      ids: [...heldIds(st)],
+      eligible: lines.length,
+      skipped: 0,
+      notReady: true,
+    };
+  }
+
+  const info = seriesInfo(chart);
+  const sb = seriesBars(chart);
+
+  // Chart not ready
+  if (!info || !sb) {
+    return {
+      ids: [...heldIds(st)],
+      eligible: lines.length,
+      skipped: 0,
+      notReady: true,
+    };
+  }
+
+  // Symbol changed - clear this pane's registry
+  const scope = symbol || '';
+  if (scope !== st.lastScope) {
+    removeIds(chart, [...st.bySig.values()].map((e) => e.id));
+    st.bySig.clear();
+    st.suppressed.clear();
+    st.lastScope = scope;
+  }
+
+  // Build desired map
+  const desired = new Map<string, DrawLineInput>();
+  for (const ln of lines) {
+    if (!desired.has(ln.sig)) {
+      desired.set(ln.sig, ln);
+    }
+  }
+
+  // 1. Remove stale lines
+  const stale = [];
+  for (const [sig] of st.bySig) {
+    if (!desired.has(sig)) {
+      const entry = st.bySig.get(sig);
+      if (entry) stale.push(entry.id);
+      st.bySig.delete(sig);
+    }
+  }
+  removeIds(chart, stale);
+
+  // 2. Remove orphans
+  const held = heldIds(st);
+  const orphans = oldIds.filter((id) => !held.has(id));
+  if (orphans.length) removeIds(chart, orphans);
+
+  // 3. Create new lines
+  let skipped = 0;
+  let eligible = 0;
+
+  for (const ln of desired.values()) {
+    const existing = st.bySig.get(ln.sig);
+    if (existing) {
+      existing.key = ln.key != null ? ln.key : ln.ts;
+      existing.keys = new Set([existing.key]);
+      continue;
+    }
+
+    // Folded into another line
+    if (st.suppressed.has(ln.sig)) {
+      if (desired.has(st.suppressed.get(ln.sig)!)) continue;
+      st.suppressed.delete(ln.sig);
+    }
+
+    eligible++;
+    try {
+      const id = await chart.createShape(
+        { time: ln.ts, price: info.price },
+        {
+          shape: 'vertical_line',
+          lock: true,
+          disableSave: true,
+          showInObjectsTree: false,
+          overrides: {
+            linecolor: ln.color,
+            linewidth: ln.width,
+            linestyle: ln.style,
+          },
+        } as CreateShapeOverrides
+      );
+
+      const entry: DrawnEntry = {
+        id,
+        ts: ln.ts,
+        sig: ln.sig,
+        key: ln.key != null ? ln.key : ln.ts,
+        keys: new Set([ln.key != null ? ln.key : ln.ts]),
+        rank: 0, // TODO: calculate from impact
+      };
+
+      st.bySig.set(ln.sig, entry);
+    } catch (e) {
+      skipped++;
+    }
+  }
+
+  resolveCollisions(st);
+  syncMeta(st);
+
+  return {
+    ids: [...heldIds(st)],
+    eligible,
+    skipped,
+  };
+}
+
+/** Clear specific pane or all panes */
+function clearPane(paneId: string, extraIds: string[]): void {
+  const st = stateOf(paneId);
+  const chart = chartOf(paneId) ?? activeChartApi();
+  if (!chart) return;
+
+  const ids = [...st.bySig.values()].map((e) => e.id).concat(extraIds);
+  removeIds(chart, ids);
+  st.bySig.clear();
+  st.suppressed.clear();
+}
+
+function clearAllPanes(extraIds: string[]): void {
+  for (const [paneId] of paneById) {
+    clearPane(paneId, extraIds);
+  }
+}
+
 // ============ MAIN MESSAGE HANDLER ============
 
 function setupMessageListener(): void {
@@ -668,26 +850,58 @@ function setupMessageListener(): void {
   });
 }
 
-// ============ MESSAGE HANDLERS (STUBS) ============
+// ============ MESSAGE HANDLERS ============
 
 async function handleDraw(msg: RNDrawMessage): Promise<void> {
-  // TODO: Implement draw logic
+  if (typeof msg.tol === 'number') {
+    hoverTol = clampNum(msg.tol, 0, 40, 3);
+  }
+  enumeratePanes();
+
+  const paneId = resolvePaneId(msg);
+  let res: DrawResult = {
+    ids: [...heldIds(stateOf(paneId))],
+    eligible: 0,
+    skipped: 0,
+    notReady: true,
+  };
+
+  try {
+    res = await drawLines(
+      paneId,
+      sanitizeLines(msg.lines),
+      idList(msg.oldIds),
+      typeof msg.symbol === 'string' ? msg.symbol : null
+    );
+  } catch (e) {
+    // Log error but don't crash
+  }
+
   window.postMessage(
     {
       source: 'rn-page',
       type: 'RN_DRAWN',
       id: msg.id,
-      ids: [],
-      eligible: 0,
-      skipped: 0,
-      notReady: true,
+      paneId,
+      ids: res.ids,
+      eligible: res.eligible,
+      skipped: res.skipped,
+      notReady: !!res.notReady,
     } as RNDrawnResponse,
     location.origin
   );
 }
 
 async function handleClear(msg: RNClearMessage): Promise<void> {
-  // TODO: Implement clear logic
+  enumeratePanes();
+  const extra = idList(msg.oldIds);
+
+  if (typeof msg.paneId === 'string' && msg.paneId) {
+    clearPane(msg.paneId, extra);
+  } else {
+    clearAllPanes(extra);
+  }
+
   window.postMessage(
     {
       source: 'rn-page',
@@ -699,40 +913,70 @@ async function handleClear(msg: RNClearMessage): Promise<void> {
 }
 
 async function handleState(msg: RNStateMessage): Promise<void> {
-  // TODO: Implement state logic
+  enumeratePanes();
+  const panes: PaneReport[] = [...paneById.entries()].map(([id, chart]) => {
+    const info = seriesInfo(chart);
+    const view: ChartViewInfo = { timeFrom: 0, timeTo: 0 };
+
+    return {
+      id,
+      index: 0,
+      symbol: '',
+      resolution: '',
+      view,
+      span: info?.span ?? 0,
+      barSec: barSeconds(chart),
+    };
+  });
+
+  const active = activeChartApi();
+  const activePaneId = active ? keyOf(active) : panes[0]?.id ?? null;
+  const ap = panes.find((p) => p.id === activePaneId) ?? panes[0];
+
   window.postMessage(
     {
       source: 'rn-page',
       type: 'RN_STATE_RESP',
       id: msg.id,
-      symbol: '',
+      symbol: ap?.symbol ?? '',
       tz: '',
-      resolution: '',
-      view: { timeFrom: 0, timeTo: 0 },
-      span: 0,
-      barSec: null,
-      activePaneId: null,
-      panes: [],
+      resolution: ap?.resolution ?? '',
+      view: ap?.view ?? { timeFrom: 0, timeTo: 0 },
+      span: ap?.span ?? 0,
+      barSec: ap?.barSec ?? null,
+      activePaneId,
+      panes,
     } as RNStateResponse,
     location.origin
   );
 }
 
 async function handleBarmap(msg: RNBarmapMessage): Promise<void> {
-  // TODO: Implement barmap logic
+  enumeratePanes();
+  const paneId = resolvePaneId(msg);
+  const chart = chartOf(paneId) ?? activeChartApi();
+  const times = Array.isArray(msg.times)
+    ? msg.times.filter((t) => typeof t === 'number')
+    : [];
+
   window.postMessage(
     {
       source: 'rn-page',
       type: 'RN_BARMAP_RESP',
       id: msg.id,
-      bars: [],
+      paneId,
+      bars: chart ? mapBars(chart, times) : times.map(() => null),
     } as RNBarmapResponse,
     location.origin
   );
 }
 
 async function handleHover(msg: RNHoverMessage): Promise<void> {
-  // TODO: Implement hover logic
+  const x = Number(msg.x);
+  const y = Number(msg.y);
+
+  // TODO: Implement hit-test logic
+  // For now, return empty hits
   window.postMessage(
     {
       source: 'rn-page',
