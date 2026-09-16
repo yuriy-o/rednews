@@ -312,48 +312,350 @@ function cacheElements(): void {
 }
 
 function buildStatic(): void {
-  // TODO: Build currency checkboxes
-  // TODO: Build language menu
-  // TODO: Build calendar UI
+  if (!el.curGrid) return;
+
+  const currencies: Currency[] = ['USD', 'EUR', 'GBP', 'JPY', 'AUD', 'CAD', 'CHF'];
+
+  el.curGrid.innerHTML = '';
+  currencies.forEach((cur) => {
+    const label = document.createElement('label');
+    label.className = 'row';
+    label.innerHTML = `<input type="checkbox" data-cur="${cur}"> ${cur}`;
+    el.curGrid!.appendChild(label);
+  });
 }
 
 function updateUI(): void {
-  // TODO: Sync UI state with settings
-  // TODO: Update auth display
-  // TODO: Update telegram status
+  if (!settings) return;
+
+  // Enabled state
+  if (el.enabled) {
+    el.enabled.checked = settings.enabled;
+  }
+
+  // Timezone
+  if (el.timezone) {
+    el.timezone.value = settings.timezone;
+  }
+
+  // Currency mode
+  if (el.curAuto) {
+    el.curAuto.checked = settings.currencyMode === 'auto';
+  }
+
+  // Currency checkboxes
+  document.querySelectorAll('[data-cur]').forEach((checkbox) => {
+    const cur = (checkbox as HTMLInputElement).dataset.cur as Currency;
+    (checkbox as HTMLInputElement).checked = settings!.currencies[cur] ?? false;
+  });
+
+  // Label/Font settings
+  if (el.labelMode) {
+    el.labelMode.value = settings.labelMode;
+  }
+
+  if (el.fontSize) {
+    el.fontSize.value = String(settings.widths.High || 2);
+  }
+
+  // History/Future
+  if (el.showHistory) {
+    el.showHistory.checked = settings.showHistory;
+  }
+
+  if (el.showFuture) {
+    el.showFuture.checked = settings.showFuture;
+  }
+
+  if (el.nearbyHours) {
+    el.nearbyHours.value = String(settings.nearbyHours);
+  }
+
+  // Alert settings
+  if (el.alertEnabled) {
+    el.alertEnabled.checked = settings.alertEnabled;
+  }
+
+  if (el.alertDuration) {
+    el.alertDuration.value = String(settings.alertMinutes);
+  }
+
+  // Auth display
+  if (el.authSignedOut && el.authSignedIn) {
+    el.authSignedOut.style.display = auth.signedIn ? 'none' : 'block';
+    el.authSignedIn.style.display = auth.signedIn ? 'block' : 'none';
+  }
+
+  if (auth.signedIn && el.authEmail) {
+    el.authEmail.textContent = auth.email || '';
+  }
+
+  if (auth.signedIn && el.authPlan) {
+    el.authPlan.textContent = auth.plan === 'premium' ? 'Premium' : 'Free';
+  }
+
+  // Trial/Upgrade rows
+  if (el.trialRow) {
+    el.trialRow.style.display = auth.signedIn && auth.trialDaysLeft ? 'block' : 'none';
+  }
+
+  if (el.upgradeRow) {
+    el.upgradeRow.style.display =
+      auth.signedIn && auth.plan !== 'premium' ? 'block' : 'none';
+  }
+
+  // Telegram status
+  if (el.tgStatus) {
+    el.tgStatus.textContent = telegram.connected
+      ? `Connected as @${telegram.username}`
+      : 'Not connected';
+  }
+
+  if (el.tgEnabled) {
+    el.tgEnabled.checked = telegram.enabled;
+  }
 }
 
 function bindEvents(): void {
-  // TODO: Bind all event listeners
+  // Language selector
+  el.btnLang?.addEventListener('click', () => {
+    if (el.langMenu) {
+      el.langMenu.style.display = el.langMenu.style.display === 'none' ? 'block' : 'none';
+    }
+  });
+
+  // Theme toggle
+  el.btnTheme?.addEventListener('click', () => {
+    const newTheme = ui.theme === 'light' ? 'dark' : ui.theme === 'dark' ? 'auto' : 'light';
+    ui.theme = newTheme;
+    applyTheme();
+    chrome.storage.local.set({ rnUi: ui });
+  });
+
+  // Settings panel toggle
+  el.btnSettings?.addEventListener('click', () => {
+    viewSettings = !viewSettings;
+    if (el.settingsPanel) {
+      el.settingsPanel.style.display = viewSettings ? 'block' : 'none';
+    }
+  });
+
+  // Enabled checkbox
+  el.enabled?.addEventListener('change', (e) => {
+    if (!settings) return;
+    settings.enabled = (e.target as HTMLInputElement).checked;
+    saveSetting('enabled', settings.enabled);
+  });
+
+  // Timezone selector
+  el.timezone?.addEventListener('change', (e) => {
+    if (!settings) return;
+    settings.timezone = (e.target as HTMLSelectElement).value;
+    saveSetting('timezone', settings.timezone);
+  });
+
+  // Currency mode auto/manual
+  el.curAuto?.addEventListener('change', (e) => {
+    if (!settings) return;
+    settings.currencyMode = (e.target as HTMLInputElement).checked ? 'auto' : 'manual';
+    saveSetting('currencyMode', settings.currencyMode);
+  });
+
+  // Currency checkboxes
+  document.querySelectorAll('[data-cur]').forEach((checkbox) => {
+    (checkbox as HTMLInputElement).addEventListener('change', (e) => {
+      if (!settings) return;
+      const cur = (e.target as HTMLInputElement).dataset.cur as Currency;
+      settings.currencies[cur] = (e.target as HTMLInputElement).checked;
+      saveSetting('currencies', settings.currencies);
+    });
+  });
+
+  // Label mode
+  el.labelMode?.addEventListener('change', (e) => {
+    if (!settings) return;
+    settings.labelMode = (e.target as HTMLSelectElement).value as LabelMode;
+    saveSetting('labelMode', settings.labelMode);
+  });
+
+  // Show history/future
+  el.showHistory?.addEventListener('change', (e) => {
+    if (!settings) return;
+    settings.showHistory = (e.target as HTMLInputElement).checked;
+    saveSetting('showHistory', settings.showHistory);
+  });
+
+  el.showFuture?.addEventListener('change', (e) => {
+    if (!settings) return;
+    settings.showFuture = (e.target as HTMLInputElement).checked;
+    saveSetting('showFuture', settings.showFuture);
+  });
+
+  el.nearbyHours?.addEventListener('change', (e) => {
+    if (!settings) return;
+    settings.nearbyHours = parseInt((e.target as HTMLInputElement).value, 10);
+    saveSetting('nearbyHours', settings.nearbyHours);
+  });
+
+  // Alert settings
+  el.alertEnabled?.addEventListener('change', (e) => {
+    if (!settings) return;
+    settings.alertEnabled = (e.target as HTMLInputElement).checked;
+    saveSetting('alertEnabled', settings.alertEnabled);
+  });
+
+  el.alertDuration?.addEventListener('change', (e) => {
+    if (!settings) return;
+    settings.alertMinutes = parseInt(
+      (e.target as HTMLSelectElement).value,
+      10
+    ) as AlertDuration;
+    saveSetting('alertMinutes', settings.alertMinutes);
+  });
+
+  // Buttons
+  el.btnRefresh?.addEventListener('click', onRefresh);
+  el.btnClearLines?.addEventListener('click', onClearLines);
+  el.btnReset?.addEventListener('click', onReset);
+
+  // Auth buttons
+  el.btnSignIn?.addEventListener('click', onSignIn);
+  el.btnSignOut?.addEventListener('click', onSignOut);
+  el.btnTrial?.addEventListener('click', onStartTrial);
+  el.btnManage?.addEventListener('click', onManageAccount);
+
+  // Feedback
+  el.btnFeedbackSend?.addEventListener('click', onFeedbackSend);
+
+  // Telegram
+  el.btnTgConnect?.addEventListener('click', onTgConnect);
+  el.tgEnabled?.addEventListener('change', onTgToggle);
 }
 
-// ============ PLACEHOLDER FUNCTIONS ============
+// ============ HELPER FUNCTIONS ============
 
 function saveSetting(key: string, value: unknown): void {
   if (!settings) return;
-  console.log(`Save ${key}:`, value);
   chrome.storage.local.set({ rnSettings: settings });
+  chrome.runtime.sendMessage({
+    type: 'RN_SETTINGS_CHANGED',
+    settings,
+  }).catch(() => {
+    // Background may not be available
+  });
+}
+
+function applyTheme(): void {
+  const isDark = ui.theme === 'dark' ||
+    (ui.theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  document.documentElement.dataset.theme = isDark ? 'dark' : 'light';
 }
 
 function loadNews(): void {
   if (!el.newsList) return;
-  console.log('Load news');
+  el.newsList.innerHTML = '<li style="opacity: 0.5;">Loading news...</li>';
+
+  chrome.runtime.sendMessage({ type: 'RN_GET_NEWS' }, (response) => {
+    if (!el.newsList) return;
+    el.newsList.innerHTML = '';
+
+    const news = response.news || [];
+    if (news.length === 0) {
+      el.newsList.innerHTML = '<li style="opacity: 0.5;">No news today</li>';
+      return;
+    }
+
+    news.slice(0, 20).forEach((item: { ts: number; title: string; country: string; impact: string }) => {
+      const li = document.createElement('li');
+      li.textContent = `${item.country} ${item.impact}: ${item.title}`;
+      el.newsList!.appendChild(li);
+    });
+  });
 }
 
+// ============ EVENT HANDLERS ============
+
 function onRefresh(): void {
-  console.log('Refresh news');
+  loadNews();
+  chrome.runtime.sendMessage({ type: 'RN_REFRESH_NEWS' });
+}
+
+function onClearLines(): void {
+  if (!confirm('Clear all drawn lines?')) return;
+  chrome.runtime.sendMessage({ type: 'RN_CLEAR_LINES' });
+}
+
+function onReset(): void {
+  if (!confirm('Reset all settings to defaults?')) return;
+  chrome.storage.local.remove(['rnSettings', 'rnUi', 'rnAuthState']);
+  window.location.reload();
 }
 
 function onSignIn(): void {
-  console.log('Sign in');
+  chrome.runtime.sendMessage({ type: 'RN_AUTH_SIGNIN' });
 }
 
-function onFeedbackSend(): void {
-  console.log('Send feedback');
+function onSignOut(): void {
+  if (!confirm('Sign out?')) return;
+  auth = { signedIn: false };
+  chrome.storage.local.set({ rnAuthState: auth });
+  updateUI();
+}
+
+function onStartTrial(): void {
+  chrome.runtime.sendMessage({ type: 'RN_START_TRIAL' });
+}
+
+function onManageAccount(): void {
+  chrome.runtime.sendMessage({ type: 'RN_MANAGE_ACCOUNT' });
+}
+
+async function onFeedbackSend(): Promise<void> {
+  if (!el.fbMessage || !el.fbEmail) return;
+
+  const msg = el.fbMessage.value.trim();
+  const email = el.fbEmail.value.trim();
+
+  if (!msg || !email) {
+    alert('Please fill in all fields');
+    return;
+  }
+
+  try {
+    await chrome.runtime.sendMessage({
+      type: 'RN_SEND_FEEDBACK',
+      message: msg,
+      email,
+    });
+
+    if (el.fbStatus) {
+      el.fbStatus.textContent = 'Feedback sent ✓';
+      el.fbStatus.style.color = 'green';
+    }
+
+    el.fbMessage.value = '';
+    el.fbEmail.value = '';
+
+    setTimeout(() => {
+      if (el.fbStatus) {
+        el.fbStatus.textContent = '';
+      }
+    }, 3000);
+  } catch (e) {
+    if (el.fbStatus) {
+      el.fbStatus.textContent = 'Failed to send feedback';
+      el.fbStatus.style.color = 'red';
+    }
+  }
 }
 
 function onTgConnect(): void {
-  console.log('Connect Telegram');
+  chrome.runtime.sendMessage({ type: 'RN_TG_START_LOGIN' });
+}
+
+function onTgToggle(e: Event): void {
+  telegram.enabled = (e.target as HTMLInputElement).checked;
+  chrome.storage.local.set({ rnTelegram: telegram });
 }
 
 // ============ STARTUP ============
