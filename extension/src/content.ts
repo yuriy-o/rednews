@@ -100,7 +100,15 @@ let settings: Settings = {
   enabled: true,
   impacts: { High: true, Medium: true, Low: true, Holiday: true },
   currencyMode: 'auto',
-  currencies: {},
+  currencies: {
+    USD: false,
+    EUR: true,
+    GBP: true,
+    JPY: true,
+    AUD: true,
+    CAD: true,
+    CHF: true,
+  },
   labelMode: 'full',
   alertEnabled: true,
   alertMinutes: 15 as AlertDuration,
@@ -173,20 +181,63 @@ type IncomingPageMessage =
 // ============ INITIALIZATION ============
 
 async function init(): Promise<void> {
-  // TODO: Load settings from storage
-  // TODO: Load language preference
-  // TODO: Initialize message listeners
-  // TODO: Schedule refresh timers
-  // TODO: Setup event listeners (mousemove, etc)
-  console.log('Red News content script initialized');
+  try {
+    const stored = (await chrome.storage.local.get(['settings', 'uiPrefs'])) as {
+      settings?: Settings;
+      uiPrefs?: UIPrefs;
+    };
+
+    if (stored.settings) {
+      Object.assign(settings, stored.settings);
+    }
+
+    if (stored.uiPrefs?.lang) {
+      uiLang = stored.uiPrefs.lang;
+    }
+
+    chrome.storage.onChanged.addListener(guarded((changes) => {
+      if (changes.settings?.newValue) {
+        Object.assign(settings, changes.settings.newValue);
+        scheduleRedraw();
+      }
+    }));
+
+    window.addEventListener('message', handlePageMessage, false);
+    document.addEventListener('mousemove', throttle(onMouseMove, 200), true);
+
+    scheduleRefresh();
+    postToPage({ type: 'RN_HELLO', nonce: String(Date.now()) });
+
+    console.log('Red News content script initialized');
+  } catch (e) {
+    console.error('Failed to init Red News:', e);
+  }
+}
+
+function scheduleRefresh(): void {
+  const id = setInterval(guarded(async () => {
+    await refreshNews(false);
+  }), 60000);
+  timers.push(id);
 }
 
 // ============ NEWS/EVENTS FETCHING ============
 
 async function refreshNews(force: boolean): Promise<void> {
-  // TODO: Fetch news from background
-  // TODO: Update events array
-  // TODO: Schedule redraw
+  try {
+    const response = await new Promise<{ news?: NewsEvent[] }>((resolve) => {
+      chrome.runtime.sendMessage({ type: 'RN_GET_NEWS' }, (result) => {
+        resolve(result || {});
+      });
+    });
+
+    if (response.news && Array.isArray(response.news)) {
+      events = response.news;
+      scheduleRedraw();
+    }
+  } catch (e) {
+    console.error('Failed to refresh news:', e);
+  }
 }
 
 async function fetchViewEventsFor(
@@ -194,17 +245,33 @@ async function fetchViewEventsFor(
   needFrom: number,
   needTo: number
 ): Promise<NewsEvent[]> {
-  // TODO: Fetch events for specific pane view range
-  return [];
+  const pane = panes.find((p) => p.id === paneId);
+  if (!pane) return [];
+
+  const filtered = events.filter(
+    (e) =>
+      e.ts >= needFrom &&
+      e.ts <= needTo &&
+      (settings.impacts[e.impact as ImpactLevel] ?? false) &&
+      (settings.currencies[e.country as Currency] ?? false)
+  );
+
+  return filtered;
 }
 
 // ============ DRAWING PIPELINE ============
 
+let redrawTimer: ReturnType<typeof setTimeout> | null = null;
+
 async function redraw(): Promise<void> {
-  if (drawing || !panes.length) return;
+  if (drawing || !panes.length || !settings.enabled) return;
   drawing = true;
   try {
-    // TODO: Implement redraw logic
+    for (const pane of panes) {
+      await doRedrawPane(pane);
+    }
+  } catch (e) {
+    console.error('Redraw error:', e);
   } finally {
     drawing = false;
     if (pendingRedraw) {
@@ -215,61 +282,224 @@ async function redraw(): Promise<void> {
 }
 
 async function doRedrawPane(pane: Pane): Promise<void> {
-  // TODO: Draw lines for specific pane
-  // TODO: Handle multi-pane coordination
+  if (!pane.view) return;
+
+  const st = stateOf(pane.id);
+  const rangeKey = `${pane.view.timeFrom}-${pane.view.timeTo}`;
+
+  if (st.viewRangeKey === rangeKey && st.drawnKey) {
+    return;
+  }
+
+  st.viewRangeKey = rangeKey;
+
+  const evs = await fetchViewEventsFor(pane.id, pane.view.timeFrom, pane.view.timeTo);
+
+  const lines: DrawLineRequest[] = evs.map((e) => ({
+    ts: e.ts,
+    sig: `${e.ts}-${e.country}-${e.impact}`,
+    color: settings.colors[e.impact] || '#000000',
+    label: e.title,
+    width: settings.widths[e.impact] || 1,
+    style: 'solid',
+    fontSize: 10,
+    labelPos: 'above',
+    orientation: 'vertical',
+    horzAlign: 'center',
+  }));
+
+  postToPage({
+    type: 'RN_DRAW',
+    paneId: pane.id,
+    lines,
+    oldIds: Array.from(heldIds(st)),
+  });
 }
 
 function scheduleRedraw(): void {
-  // TODO: Schedule redraw with debounce
+  pendingRedraw = true;
+  if (redrawTimer !== null) return;
+  redrawTimer = setTimeout(guarded(async () => {
+    redrawTimer = null;
+    await redraw();
+  }), 500);
+}
+
+function stateOf(paneId: string): PaneState {
+  if (!paneStates.has(paneId)) {
+    paneStates.set(paneId, {
+      drawnKey: null,
+      viewRangeKey: null,
+      viewCache: null,
+      groups: new Map(),
+      retryAt: null,
+    });
+  }
+  return paneStates.get(paneId)!;
+}
+
+function heldIds(st: PaneState): Set<string> {
+  const ids = new Set<string>();
+  st.groups.forEach((evs) => {
+    evs.forEach((e) => {
+      ids.add(`${e.ts}-${e.country}`);
+    });
+  });
+  return ids;
 }
 
 // ============ STATE MANAGEMENT ============
 
 function applyState(newState: Partial<{ panes: Pane[]; activePaneId: string | null }>): void {
-  // TODO: Update panes and active pane
-  // TODO: Schedule redraw if changed
+  let changed = false;
+
+  if (newState.panes && Array.isArray(newState.panes)) {
+    if (panes.length !== newState.panes.length || !panes.every((p, i) => p.id === newState.panes?.[i]?.id)) {
+      panes = newState.panes;
+      paneStates.clear();
+      changed = true;
+    }
+  }
+
+  if (newState.activePaneId !== undefined && newState.activePaneId !== activePaneId) {
+    activePaneId = newState.activePaneId;
+    if (settings.currencyMode === 'auto') {
+      updateAutoCurrencies();
+    }
+    changed = true;
+  }
+
+  if (changed) {
+    scheduleRedraw();
+  }
 }
 
 function updateAutoCurrencies(): void {
-  // TODO: Update currencies from active pane symbol
+  if (!activePaneId) return;
+
+  const pane = panes.find((p) => p.id === activePaneId);
+  if (!pane) return;
+
+  const symbol = pane.symbol.toUpperCase();
+  const pairs = ['EUR', 'GBP', 'JPY', 'AUD', 'CAD', 'CHF', 'CNY', 'INR', 'MXN', 'NZD', 'SGD', 'HKD'];
+
+  Object.keys(settings.currencies).forEach((c) => {
+    settings.currencies[c as Currency] = pairs.includes(c);
+  });
 }
 
 // ============ TOOLTIP/HOVER ============
 
+let tooltipData: TooltipData | null = null;
+
 async function onMouseMove(e: MouseEvent): Promise<void> {
-  // TODO: Handle hover detection
-  // TODO: Show tooltip for news events
+  if (!panes.length || !events.length) return;
+
+  const rect = (e.target as HTMLElement)?.getBoundingClientRect();
+  if (!rect) return;
+
+  const relX = e.clientX - rect.left;
+  const relY = e.clientY - rect.top;
+
+  const ts = Math.round((Date.now() - 86400000) / 1000);
+  const nearby = events.filter((ev) => Math.abs(ev.ts - ts) < 3600 && ev.impact !== 'Holiday');
+
+  if (nearby.length > 0) {
+    showTooltip(
+      activePaneId || '0',
+      nearby.map((e) => e.ts),
+      Math.round(relX),
+      Math.round(relY)
+    );
+  } else {
+    hideTooltip();
+  }
 }
 
 function showTooltip(paneId: string, tsList: number[], x: number, y: number): void {
-  // TODO: Show tooltip with event info
+  tooltipData = { paneId, tsList, x, y };
+
+  let html = '<div style="background: #1e1e1e; color: #fff; padding: 8px; border-radius: 4px; font-size: 12px; max-width: 300px;">';
+
+  for (const ts of tsList.slice(0, 3)) {
+    const ev = events.find((e) => e.ts === ts);
+    if (!ev) continue;
+
+    const impact =
+      ev.impact === 'High' ? '🔴' : ev.impact === 'Medium' ? '🟠' : ev.impact === 'Low' ? '🟡' : '🔵';
+
+    html += `<div>${impact} <b>${ev.country}</b>: ${ev.title}</div>`;
+  }
+
+  if (tsList.length > 3) {
+    html += `<div style="color: #aaa; margin-top: 4px;">+${tsList.length - 3} more</div>`;
+  }
+
+  html += '</div>';
+
+  const el = document.getElementById('rn-tooltip');
+  if (el) {
+    el.innerHTML = html;
+    el.style.left = `${x}px`;
+    el.style.top = `${y}px`;
+    el.style.display = 'block';
+  }
 }
 
 function hideTooltip(): void {
-  // TODO: Hide tooltip
+  tooltipData = null;
+  const el = document.getElementById('rn-tooltip');
+  if (el) {
+    el.style.display = 'none';
+  }
 }
 
 // ============ MESSAGE HANDLERS ============
 
 function postToPage(payload: Record<string, unknown>): void {
-  // TODO: Send message to page (inject.js)
+  window.postMessage(
+    {
+      source: 'red-news-content',
+      ...payload,
+    },
+    window.location.origin
+  );
 }
 
 function handlePageMessage(ev: MessageEvent): void {
-  // TODO: Route incoming messages
+  if (ev.origin !== window.location.origin || typeof ev.data !== 'object' || !ev.data) return;
+
   const msg = ev.data as IncomingPageMessage;
 
+  if (msg.source !== 'red-news-page') return;
+
   if (msg.type === 'RN_STATE') {
-    applyState(msg as RNStateMessage);
+    applyState({
+      panes: (msg as RNStateMessage).panes,
+      activePaneId: (msg as RNStateMessage).activePaneId,
+    });
   } else if (msg.type === 'RN_ALERT') {
     handleAlert(msg as RNAlertMessage);
+  } else if (msg.type === 'RN_DRAWN') {
+    const drawn = msg as RNDrawnMessage;
+    const st = stateOf(drawn.paneId);
+    st.drawnKey = `${drawn.eligible}-${drawn.skipped}`;
   }
 }
 
 function handleAlert(msg: RNAlertMessage): void {
-  // TODO: Process alert
-  // TODO: Show toast
-  // TODO: Play sound if enabled
+  if (!settings.alertEnabled) return;
+
+  chrome.runtime.sendMessage({
+    type: 'RN_ALERT_SHOW',
+    event: msg.event,
+    minutesLeft: msg.minutesLeft,
+  }).catch(() => {
+    // Ignore if background not available
+  });
+
+  const label = `${msg.event.country}: ${msg.event.title}`;
+  console.log(`[Red News Alert] ${label} (${msg.minutesLeft}m)`);
 }
 
 // ============ UTILITIES ============
@@ -300,14 +530,27 @@ function throttle<T extends (...args: never[]) => unknown>(
 
 // ============ STARTUP ============
 
-init();
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
 
-// Setup message listener
-window.addEventListener('message', handlePageMessage);
+// Create tooltip element
+if (!document.getElementById('rn-tooltip')) {
+  const tooltip = document.createElement('div');
+  tooltip.id = 'rn-tooltip';
+  tooltip.style.cssText =
+    'position: fixed; pointer-events: none; z-index: 10000; display: none; background: #1e1e1e; color: #fff; padding: 8px; border-radius: 4px; font-size: 12px;';
+  document.body.appendChild(tooltip);
+}
 
 // Cleanup on unload
 window.addEventListener('beforeunload', () => {
   timers.forEach(clearInterval);
+  if (redrawTimer !== null) {
+    clearTimeout(redrawTimer);
+  }
 });
 
 export {};
