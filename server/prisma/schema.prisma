@@ -1,0 +1,240 @@
+// Red News Backend Database Schema
+// © 2026 Yuriy Orekhov. All rights reserved.
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// ============ USER & AUTH ============
+
+model User {
+  id                String   @id @default(cuid())
+  email             String   @unique
+  googleId          String?  @unique
+  displayName       String?
+  avatar            String?
+
+  // Subscription
+  plan              Plan     @default(FREE)
+  subscription      Subscription?
+
+  // Settings
+  settings          UserSettings?
+
+  // Telegram
+  telegramId        Int?     @unique
+  telegramUsername  String?
+  telegramChatId    String?
+  telegramConnected Boolean  @default(false)
+
+  // Metadata
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  lastLoginAt       DateTime?
+
+  // Relation
+  alerts            Alert[]
+  activityLogs      ActivityLog[]
+
+  @@index([email])
+  @@index([googleId])
+}
+
+enum Plan {
+  FREE
+  PREMIUM
+  ENTERPRISE
+}
+
+model Subscription {
+  id                String   @id @default(cuid())
+  userId            String   @unique
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Subscription info
+  plan              Plan     @default(PREMIUM)
+  stripeId          String?  @unique
+  status            SubscriptionStatus @default(ACTIVE)
+
+  // Trial
+  trialEndsAt       DateTime?
+
+  // Billing
+  billingCycle      BillingCycle @default(MONTHLY)
+  currentPeriodEnd  DateTime
+  cancelledAt       DateTime?
+
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@index([userId])
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  CANCELLED
+  EXPIRED
+  SUSPENDED
+}
+
+enum BillingCycle {
+  MONTHLY
+  YEARLY
+}
+
+// ============ USER SETTINGS ============
+
+model UserSettings {
+  id                String   @id @default(cuid())
+  userId            String   @unique
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Display
+  timezone          String   @default("UTC")
+  language          String   @default("en")
+  theme             String   @default("auto")
+
+  // Notification
+  alertEnabled      Boolean  @default(true)
+  alertMinutes      Int      @default(15)
+  emailNotifications Boolean @default(true)
+  telegramNotifications Boolean @default(false)
+
+  // Data
+  showHistory       Boolean  @default(true)
+  showFuture        Boolean  @default(true)
+  nearbyHours       Int      @default(24)
+
+  // Impacts & Currencies (stored as JSON for flexibility)
+  impacts           Json     @default("{\"High\": true, \"Medium\": true, \"Low\": false, \"Holiday\": false}")
+  currencies        Json     @default("{\"USD\": false, \"EUR\": true, \"GBP\": true, \"JPY\": true, \"AUD\": false, \"CAD\": false, \"CHF\": false}")
+
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@index([userId])
+}
+
+// ============ CALENDAR EVENTS ============
+
+model CalendarEvent {
+  id                String   @id @default(cuid())
+
+  // Event info
+  externalId        String   @unique  // Source event ID
+  timestamp         Int               // Unix seconds
+  country           String            // Currency code (USD, EUR, etc)
+  title             String
+  description       String?
+
+  // Impact & Forecast
+  impact            Impact   @default(MEDIUM)
+  forecast          String?
+  previous          String?
+  actual            String?
+
+  // Revision tracking
+  revisionId        Int      @default(1)
+  sourceApi         String   @default("trading-economics")
+
+  // Cache
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  fetchedAt         DateTime @default(now())
+
+  // Relations
+  alerts            Alert[]
+
+  @@unique([externalId, revisionId])
+  @@index([timestamp])
+  @@index([country])
+  @@index([impact])
+  @@index([fetchedAt])
+}
+
+enum Impact {
+  HIGH
+  MEDIUM
+  LOW
+  HOLIDAY
+}
+
+// ============ ALERTS ============
+
+model Alert {
+  id                String   @id @default(cuid())
+  userId            String
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  eventId           String
+  event             CalendarEvent @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  // Alert status
+  status            AlertStatus @default(PENDING)
+  scheduledFor      DateTime      // When to trigger
+  triggeredAt       DateTime?
+
+  // Delivery
+  emailSent         Boolean   @default(false)
+  smsSent           Boolean   @default(false)
+  telegramSent      Boolean   @default(false)
+  soundPlayed       Boolean   @default(false)
+
+  // Metadata
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@unique([userId, eventId])
+  @@index([userId])
+  @@index([eventId])
+  @@index([scheduledFor])
+  @@index([status])
+}
+
+enum AlertStatus {
+  PENDING
+  SENT
+  FAILED
+  CANCELLED
+  EXPIRED
+}
+
+// ============ ACTIVITY LOGGING ============
+
+model ActivityLog {
+  id                String   @id @default(cuid())
+  userId            String
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  action            String   // 'LOGIN', 'SETTINGS_CHANGED', 'ALERT_TRIGGERED', etc
+  resource          String?  // What was affected (e.g., 'UserSettings')
+  details           Json?    // Additional context
+
+  ipAddress         String?
+  userAgent         String?
+
+  createdAt         DateTime @default(now())
+
+  @@index([userId])
+  @@index([action])
+  @@index([createdAt])
+}
+
+// ============ CACHE & SYNC ============
+
+model CacheEntry {
+  id                String   @id @default(cuid())
+  key               String   @unique
+  value             Json
+  expiresAt         DateTime
+
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@index([expiresAt])
+}
