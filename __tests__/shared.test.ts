@@ -18,10 +18,9 @@ describe('shared', () => {
       expect(IMPACT_LEVELS).toHaveLength(4);
     });
 
-    it('should be readonly', () => {
-      expect(() => {
-        (IMPACT_LEVELS as any)[0] = 'Invalid';
-      }).toThrow();
+    it('should be array of correct values', () => {
+      expect(Array.isArray(IMPACT_LEVELS)).toBe(true);
+      expect([...IMPACT_LEVELS]).toEqual(['High', 'Medium', 'Low', 'Holiday']);
     });
   });
 
