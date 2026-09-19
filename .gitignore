@@ -2,13 +2,48 @@ node_modules/
 .cursor-context/
 dist/
 extension/dist/
+server/dist/
 build/
+
+# Environment
 .env
 .env.local
 .env.*.local
+
+# Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
 .DS_Store
+Thumbs.db
+
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*.sublime-workspace
+
+# Editor backup files
+*~
+*.tmp
+
+# Test coverage
+coverage/
+.nyc_output/
+.jest/
+
+# Database
+server/prisma/dev.db
+server/prisma/dev.db-journal
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Prisma
+server/prisma/.env
+server/prisma/generated/

@@ -9,12 +9,18 @@ import { PrismaModule } from './common/prisma/prisma.module';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: '.env.local',
+      // Load .env.local in development, .env in production
+      envFilePath: process.env.NODE_ENV === 'production' ? '.env' : '.env.local',
+      // Throw if required env vars are missing
+      expandVariables: true,
     }),
     PrismaModule,
     AuthModule,
     CalendarModule,
     UserModule,
   ],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
+
