@@ -23,6 +23,9 @@ export class AuthController {
   @Get('me')
   async getCurrentUser(@Req() req: any) {
     const user = await this.authService.getUserById(req.user.sub);
+    if (!user) {
+      throw new Error('User not found');
+    }
     return {
       id: user.id,
       email: user.email,
