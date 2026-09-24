@@ -17,9 +17,8 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,
     "alwaysStrict": true,
-    "exactOptionalPropertyTypes": true,
 
     // Output
     "declaration": true,

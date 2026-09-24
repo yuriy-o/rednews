@@ -89,8 +89,7 @@ export class CalendarController {
    */
   @UseGuards(JwtAuthGuard)
   @Get('sync')
-  async syncCalendar(@Req() req: any) {
-    // In production: check if user is admin
+  async syncCalendar() {
     const result = await this.calendarService.syncCalendar();
 
     return {
