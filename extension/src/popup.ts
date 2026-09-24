@@ -242,10 +242,16 @@ async function boot(): Promise<void> {
       telegram = stored.rnTelegram;
     }
 
+    // Load i18n messages BEFORE rendering
+    await loadMessages(ui.lang);
+    i18n();
+
     cacheElements();
     buildStatic();
     updateUI();
     bindEvents();
+    renderCalendar();
+    applyTheme();
 
     console.log('Red News popup initialized');
   } catch (e) {
@@ -530,6 +536,10 @@ function bindEvents(): void {
   // Telegram
   el.btnTgConnect?.addEventListener('click', onTgConnect);
   el.tgEnabled?.addEventListener('change', onTgToggle);
+
+  // Calendar navigation (if we add prev/next buttons)
+  // el.btnCalPrev?.addEventListener('click', onCalPrev);
+  // el.btnCalNext?.addEventListener('click', onCalNext);
 }
 
 // ============ HELPER FUNCTIONS ============
@@ -656,6 +666,168 @@ function onTgConnect(): void {
 function onTgToggle(e: Event): void {
   telegram.enabled = (e.target as HTMLInputElement).checked;
   chrome.storage.local.set({ rnTelegram: telegram });
+}
+
+// ============ CALENDAR FUNCTIONS ============
+
+function startOfMonth(date: Date): Date {
+  return new Date(date.getFullYear(), date.getMonth(), 1);
+}
+
+function endOfMonth(date: Date): Date {
+  return new Date(date.getFullYear(), date.getMonth() + 1, 0);
+}
+
+function formatDate(date: Date): string {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  return `${y}-${m}-${d}`;
+}
+
+function parseDate(str: string): Date | null {
+  const match = str.match(/(\d{4})-(\d{2})-(\d{2})/);
+  if (!match || !match[1] || !match[2] || !match[3]) return null;
+  return new Date(parseInt(match[1], 10), parseInt(match[2], 10) - 1, parseInt(match[3], 10));
+}
+
+function renderCalendar(): void {
+  if (!el.calMonths) return;
+
+  const start = startOfMonth(calendar.base);
+  const firstDay = start.getDay();
+  const daysInMonth = endOfMonth(calendar.base).getDate();
+  const daysInPrevMonth = new Date(
+    calendar.base.getFullYear(),
+    calendar.base.getMonth(),
+    0
+  ).getDate();
+
+  const prevDays = Array.from({ length: firstDay }, (_, i) =>
+    daysInPrevMonth - firstDay + i + 1
+  );
+  const currDays = Array.from({ length: daysInMonth }, (_, i) => i + 1);
+  const nextDays = Array.from(
+    { length: 42 - prevDays.length - currDays.length },
+    (_, i) => i + 1
+  );
+
+  el.calMonths.innerHTML = '';
+
+  // Render calendar grid
+  const grid = document.createElement('div');
+  grid.style.cssText = 'display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px;';
+
+  const allDays = [...prevDays, ...currDays, ...nextDays];
+  allDays.forEach((day, idx) => {
+    const cell = document.createElement('button');
+    const isCurrentMonth = idx >= prevDays.length && idx < prevDays.length + currDays.length;
+    const dateStr = formatDate(
+      new Date(calendar.base.getFullYear(), calendar.base.getMonth(), day)
+    );
+
+    cell.textContent = String(day);
+    cell.style.cssText = `
+      padding: 4px;
+      border: none;
+      background: ${
+        !isCurrentMonth
+          ? '#f0f0f0'
+          : calendar.selStart === dateStr || calendar.selEnd === dateStr
+            ? '#4CAF50'
+            : '#fff'
+      };
+      cursor: ${isCurrentMonth ? 'pointer' : 'default'};
+      color: ${isCurrentMonth ? '#000' : '#ccc'};
+    `;
+
+    if (isCurrentMonth) {
+      cell.addEventListener('click', () => {
+        if (!calendar.selStart) {
+          calendar.selStart = dateStr;
+        } else if (!calendar.selEnd) {
+          if (dateStr > calendar.selStart) {
+            calendar.selEnd = dateStr;
+          } else {
+            calendar.selEnd = calendar.selStart;
+            calendar.selStart = dateStr;
+          }
+        } else {
+          calendar.selStart = dateStr;
+          calendar.selEnd = null;
+        }
+        renderCalendar();
+      });
+    }
+
+    grid.appendChild(cell);
+  });
+
+  el.calMonths.appendChild(grid);
+}
+
+function onCalPrev(): void {
+  calendar.base = new Date(calendar.base.getFullYear(), calendar.base.getMonth() - 1);
+  renderCalendar();
+}
+
+function onCalNext(): void {
+  calendar.base = new Date(calendar.base.getFullYear(), calendar.base.getMonth() + 1);
+  renderCalendar();
+}
+
+// ============ i18n FUNCTIONS ============
+
+const messages: Record<string, Record<string, { message: string }>> = {};
+
+async function loadMessages(lang: string): Promise<void> {
+  try {
+    const url = chrome.runtime.getURL(`_locales/${lang}/messages.json`);
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`Failed to load ${lang}`);
+
+    const localeMessages = (await response.json()) as Record<string, { message: string }>;
+    messages[lang] = localeMessages;
+  } catch (e) {
+    console.error('Failed to load i18n:', e);
+    // Fallback to English
+    try {
+      const response = await fetch(chrome.runtime.getURL('_locales/en/messages.json'));
+      const localeMessages = (await response.json()) as Record<string, { message: string }>;
+      messages.en = localeMessages;
+    } catch (e2) {
+      console.error('Failed to load fallback English:', e2);
+    }
+  }
+}
+
+function msg(key: string): string {
+  const lang = ui.lang || 'en';
+  const langMessages = messages[lang] || messages.en;
+  if (!langMessages) return key;
+
+  const entry = langMessages[key];
+  if (!entry) return key;
+
+  return entry.message;
+}
+
+function i18n(): void {
+  // Translate all elements with data-i18n attribute
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = (el as HTMLElement).dataset.i18n;
+    if (key) {
+      el.textContent = msg(key);
+    }
+  });
+
+  // Translate placeholders
+  document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+    const key = (el as HTMLElement).dataset.i18nPlaceholder;
+    if (key) {
+      (el as HTMLInputElement).placeholder = msg(key);
+    }
+  });
 }
 
 // ============ STARTUP ============
