@@ -5,6 +5,7 @@ import { CalendarModule } from './calendar/calendar.module';
 import { UserModule } from './user/user.module';
 import { PrismaModule } from './common/prisma/prisma.module';
 import { HealthController } from './health.controller';
+import { FfProbeController } from './probe/ff-probe.controller';
 
 @Module({
   imports: [
@@ -20,7 +21,7 @@ import { HealthController } from './health.controller';
     CalendarModule,
     UserModule,
   ],
-  controllers: [HealthController],
+  controllers: [HealthController, FfProbeController],
   providers: [],
 })
 export class AppModule {}
