@@ -3,6 +3,9 @@ node_modules/
 dist/
 extension/dist/
 server/dist/
+*.tsbuildinfo
+.tsbuildinfo
+logs__render_com.md
 build/
 
 # Environment

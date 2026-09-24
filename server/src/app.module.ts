@@ -4,6 +4,7 @@ import { AuthModule } from './auth/auth.module';
 import { CalendarModule } from './calendar/calendar.module';
 import { UserModule } from './user/user.module';
 import { PrismaModule } from './common/prisma/prisma.module';
+import { HealthController } from './health.controller';
 
 @Module({
   imports: [
@@ -19,7 +20,7 @@ import { PrismaModule } from './common/prisma/prisma.module';
     CalendarModule,
     UserModule,
   ],
-  controllers: [],
+  controllers: [HealthController],
   providers: [],
 })
 export class AppModule {}

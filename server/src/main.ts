@@ -30,7 +30,7 @@ async function bootstrap() {
   );
 
   // Versioning
-  app.setGlobalPrefix('api/v1');
+  app.setGlobalPrefix('api/v1', { exclude: ['health'] });
 
   const port = process.env.PORT || 3000;
   await app.listen(port);
