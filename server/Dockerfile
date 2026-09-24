@@ -46,7 +46,7 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=40s --retries=3 \
 # Use dumb-init to handle signals properly
 ENTRYPOINT ["dumb-init", "--"]
 
-# Start application
-CMD ["npm", "run", "start:prod"]
+# Apply pending migrations, then start (Render free tier has no pre-deploy step)
+CMD ["npm", "run", "start:migrate"]
 
 EXPOSE 3000

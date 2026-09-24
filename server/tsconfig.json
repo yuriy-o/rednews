@@ -39,10 +39,6 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
 
-    // Emit Settings
-    "incremental": true,
-    "tsBuildInfoFile": "./.tsbuildinfo",
-
     // Paths (if using aliases)
     "baseUrl": "./",
     "paths": {
