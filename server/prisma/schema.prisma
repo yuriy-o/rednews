@@ -138,9 +138,16 @@ model CalendarEvent {
   previous          String?
   actual            String?
 
+  // ForexFactory extras (HTML calendar only; null for feed-fallback rows)
+  ebaseId           Int?              // FF indicator id — stable across releases, keys details/graph
+  revision          String?           // revised previous value
+  actualBetterWorse Int?              // 1 better than forecast, -1 worse, 0 neutral
+  notice            String?
+  soloUrl           String?
+
   // Revision tracking
   revisionId        Int      @default(1)
-  sourceApi         String   @default("trading-economics")
+  sourceApi         String   @default("ff-html")
 
   // Cache
   createdAt         DateTime @default(now())

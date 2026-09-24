@@ -1,101 +1,60 @@
-import { Controller, Get, Query, UseGuards } from '@nestjs/common';
-import { CalendarService } from './calendar.service';
-import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
+import { BadRequestException, Controller, Get, Query } from '@nestjs/common';
+import { Impact } from '@prisma/client';
+import { CalendarEventDto, CalendarService, EventFilters } from './calendar.service';
+
+const IMPACTS = new Set<string>(Object.values(Impact));
+
+function parseFilters(impacts?: string, currencies?: string): EventFilters {
+  const filters: EventFilters = {};
+  if (impacts) {
+    const list = impacts.split(',').map((s) => s.trim().toUpperCase()).filter(Boolean);
+    const bad = list.filter((i) => !IMPACTS.has(i));
+    if (bad.length) {
+      throw new BadRequestException(`unknown impact: ${bad.join(', ')} (allowed: ${[...IMPACTS].join(', ')})`);
+    }
+    filters.impacts = list as Impact[];
+  }
+  if (currencies) {
+    filters.currencies = currencies.split(',').map((s) => s.trim().toUpperCase()).filter(Boolean);
+  }
+  return filters;
+}
+
+const respond = (events: CalendarEventDto[], extra: object = {}) => ({ count: events.length, ...extra, events });
 
 @Controller('calendar')
 export class CalendarController {
   constructor(private calendarService: CalendarService) {}
 
-  /**
-   * GET /api/v1/calendar/events
-   * Get calendar events for a date range
-   */
+  /** GET /api/v1/calendar/events?from=&to=  (unix seconds, max 35 days) */
   @Get('events')
   async getEvents(
     @Query('from') from: string,
     @Query('to') to: string,
     @Query('impacts') impacts?: string,
-    @Query('countries') countries?: string,
+    @Query('currencies') currencies?: string,
   ) {
-    const fromTs = parseInt(from, 10);
-    const toTs = parseInt(to, 10);
-
-    if (!fromTs || !toTs) {
-      throw new Error('Invalid date range');
-    }
-
-    const filters = {
-      impacts: impacts ? impacts.split(',') : undefined,
-      countries: countries ? countries.split(',') : undefined,
-    };
-
-    const events = await this.calendarService.getEvents(fromTs, toTs, filters);
-
-    return {
-      count: events.length,
-      events,
-      from: fromTs,
-      to: toTs,
-    };
+    const fromTs = Number(from);
+    const toTs = Number(to);
+    const events = await this.calendarService.getEvents(fromTs, toTs, parseFilters(impacts, currencies));
+    return respond(events, { from: fromTs, to: toTs });
   }
 
-  /**
-   * GET /api/v1/calendar/upcoming
-   * Get upcoming events (next 7 days)
-   */
+  /** GET /api/v1/calendar/week — current ForexFactory week (Sun–Sat, US Eastern) */
+  @Get('week')
+  async getWeek(@Query('impacts') impacts?: string, @Query('currencies') currencies?: string) {
+    return respond(await this.calendarService.getCurrentWeek(parseFilters(impacts, currencies)));
+  }
+
+  /** GET /api/v1/calendar/upcoming — next 7 days */
   @Get('upcoming')
-  async getUpcoming(
-    @Query('impacts') impacts?: string,
-    @Query('countries') countries?: string,
-  ) {
-    const filters = {
-      impacts: impacts ? impacts.split(',') : undefined,
-      countries: countries ? countries.split(',') : undefined,
-    };
-
-    const events = await this.calendarService.getUpcomingEvents(filters);
-
-    return {
-      count: events.length,
-      events,
-    };
+  async getUpcoming(@Query('impacts') impacts?: string, @Query('currencies') currencies?: string) {
+    return respond(await this.calendarService.getUpcoming(parseFilters(impacts, currencies)));
   }
 
-  /**
-   * GET /api/v1/calendar/recent
-   * Get recent events (last 7 days)
-   */
+  /** GET /api/v1/calendar/recent — last 7 days */
   @Get('recent')
-  async getRecent(
-    @Query('impacts') impacts?: string,
-    @Query('countries') countries?: string,
-  ) {
-    const filters = {
-      impacts: impacts ? impacts.split(',') : undefined,
-      countries: countries ? countries.split(',') : undefined,
-    };
-
-    const events = await this.calendarService.getRecentEvents(filters);
-
-    return {
-      count: events.length,
-      events,
-    };
-  }
-
-  /**
-   * POST /api/v1/calendar/sync
-   * Sync calendar with Trading Economics (admin only)
-   */
-  @UseGuards(JwtAuthGuard)
-  @Get('sync')
-  async syncCalendar() {
-    const result = await this.calendarService.syncCalendar();
-
-    return {
-      message: 'Calendar synced',
-      eventsCount: result.length,
-      lastSync: new Date().toISOString(),
-    };
+  async getRecent(@Query('impacts') impacts?: string, @Query('currencies') currencies?: string) {
+    return respond(await this.calendarService.getRecent(parseFilters(impacts, currencies)));
   }
 }

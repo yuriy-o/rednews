@@ -1,170 +1,212 @@
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable, Logger } from '@nestjs/common';
+import { CalendarEvent, Impact } from '@prisma/client';
 import { PrismaService } from '../common/prisma/prisma.service';
-import axios from 'axios';
+import { FF_BASE, FF_FEED_URL, ffGet } from './forexfactory.client';
+import { FfEvent, ffDate, parseCalendarHtml, parseFeed } from './forexfactory.parser';
+
+// ForexFactory is fetched one FF week (Sun–Sat, US Eastern) at a time. Each week is cached
+// in CacheEntry, so every visitor shares one upstream request per TTL, and parsed events are
+// stored in CalendarEvent so the API keeps serving (stale) data while FF is unreachable.
+
+const FF_TZ = 'America/New_York';
+const WEEKDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const MIN = 60 * 1000;
+const TTL = {
+  current: 15 * MIN, // actuals land during the week
+  future: 60 * MIN,
+  past: 24 * 60 * MIN, // settled; revisions are rare
+  feedFallback: 5 * MIN, // retry the richer HTML source soon
+};
+export const MAX_RANGE_DAYS = 35;
+
+export interface EventFilters {
+  impacts?: Impact[];
+  currencies?: string[];
+}
+
+export interface CalendarEventDto {
+  id: string;
+  ts: number;
+  currency: string;
+  title: string;
+  impact: Impact;
+  actual: string | null;
+  forecast: string | null;
+  previous: string | null;
+  revision: string | null;
+  actualBetterWorse: number | null;
+  notice: string | null;
+  ebaseId: number | null;
+  url: string | null;
+}
+
+function nyDate(tsSec: number): string {
+  return new Intl.DateTimeFormat('en-CA', { timeZone: FF_TZ, year: 'numeric', month: '2-digit', day: '2-digit' }).format(
+    new Date(tsSec * 1000),
+  );
+}
+
+function addDays(ds: string, n: number): string {
+  const d = new Date(`${ds}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + n);
+  return d.toISOString().slice(0, 10);
+}
+
+/** Sunday (US Eastern) of the FF week containing tsSec, as 'YYYY-MM-DD'. */
+function weekStartOf(tsSec: number): string {
+  const wd = new Intl.DateTimeFormat('en-US', { timeZone: FF_TZ, weekday: 'short' }).format(new Date(tsSec * 1000));
+  return addDays(nyDate(tsSec), -Math.max(0, WEEKDAYS.indexOf(wd)));
+}
+
+function toDto(e: CalendarEvent): CalendarEventDto {
+  return {
+    id: e.externalId,
+    ts: e.timestamp,
+    currency: e.country,
+    title: e.title,
+    impact: e.impact,
+    actual: e.actual,
+    forecast: e.forecast,
+    previous: e.previous,
+    revision: e.revision,
+    actualBetterWorse: e.actualBetterWorse,
+    notice: e.notice,
+    ebaseId: e.ebaseId,
+    url: e.soloUrl ? `${FF_BASE}${e.soloUrl}` : null,
+  };
+}
 
 @Injectable()
 export class CalendarService {
-  private readonly TRADING_ECONOMICS_API = 'https://api.tradingeconomics.com/calendar';
-  private readonly CACHE_TTL = 3600; // 1 hour
+  private readonly logger = new Logger(CalendarService.name);
+  private readonly inflight = new Map<string, Promise<void>>();
 
   constructor(private prisma: PrismaService) {}
 
-  /**
-   * Fetch calendar events from Trading Economics API
-   */
-  async fetchCalendarEvents(from: number, to: number) {
-    try {
-      // Check cache first
-      const cacheKey = `calendar:${from}:${to}`;
-      const cached = await this.prisma.cacheEntry.findUnique({
-        where: { key: cacheKey },
-      });
-
-      if (cached && new Date(cached.expiresAt) > new Date()) {
-        return cached.value as any[];
-      }
-
-      // Fetch from Trading Economics
-      const response = await axios.get(this.TRADING_ECONOMICS_API, {
-        params: {
-          date: this.formatDateRange(from, to),
-          token: process.env.TRADING_ECONOMICS_TOKEN,
-        },
-      });
-
-      // Parse and save events
-      const events = response.data.map((evt: any) => ({
-        externalId: evt.EventID,
-        timestamp: Math.floor(new Date(evt.Date).getTime() / 1000),
-        country: evt.Country,
-        title: evt.Event,
-        impact: this.mapImpact(evt.Importance),
-        forecast: evt.Forecast,
-        previous: evt.Previous,
-        actual: evt.Actual,
-        sourceApi: 'trading-economics',
-      }));
-
-      // Save to database (upsert)
-      for (const event of events) {
-        await this.prisma.calendarEvent.upsert({
-          where: {
-            externalId_revisionId: {
-              externalId: event.externalId,
-              revisionId: 1,
-            },
-          },
-          create: event,
-          update: {
-            ...event,
-            fetchedAt: new Date(),
-          },
-        });
-      }
-
-      // Cache the result
-      const expiresAt = new Date(Date.now() + this.CACHE_TTL * 1000);
-      await this.prisma.cacheEntry.upsert({
-        where: { key: cacheKey },
-        create: {
-          key: cacheKey,
-          value: events,
-          expiresAt,
-        },
-        update: {
-          value: events,
-          expiresAt,
-        },
-      });
-
-      return events;
-    } catch (error) {
-      console.error('Failed to fetch calendar events:', error);
-      throw error;
+  async getEvents(from: number, to: number, filters: EventFilters = {}): Promise<CalendarEventDto[]> {
+    if (!Number.isInteger(from) || !Number.isInteger(to) || from <= 0 || to <= 0) {
+      throw new BadRequestException('from and to must be unix timestamps in seconds');
     }
-  }
+    if (to < from) throw new BadRequestException('to must be after from');
+    if (to - from > MAX_RANGE_DAYS * 86400) {
+      throw new BadRequestException(`range must not exceed ${MAX_RANGE_DAYS} days`);
+    }
 
-  /**
-   * Get events for a specific date range with filtering
-   */
-  async getEvents(
-    from: number,
-    to: number,
-    filters?: {
-      impacts?: string[];
-      countries?: string[];
-    },
-  ) {
-    let query = {
+    // Sequential on purpose: be gentle with FF when a range spans several uncached weeks.
+    for (let ws = weekStartOf(from); ws <= weekStartOf(to); ws = addDays(ws, 7)) {
+      await this.ensureWeek(ws);
+    }
+
+    const rows = await this.prisma.calendarEvent.findMany({
       where: {
-        timestamp: {
-          gte: from,
-          lte: to,
-        },
+        timestamp: { gte: from, lte: to },
+        ...(filters.impacts?.length ? { impact: { in: filters.impacts } } : {}),
+        ...(filters.currencies?.length ? { country: { in: filters.currencies } } : {}),
       },
-    } as any;
-
-    if (filters?.impacts) {
-      query.where.impact = { in: filters.impacts };
-    }
-
-    if (filters?.countries) {
-      query.where.country = { in: filters.countries };
-    }
-
-    return this.prisma.calendarEvent.findMany({
-      ...query,
       orderBy: { timestamp: 'asc' },
     });
+    return rows.map(toDto);
   }
 
-  /**
-   * Get upcoming events (next 7 days)
-   */
-  async getUpcomingEvents(filters?: { impacts?: string[]; countries?: string[] }) {
+  getUpcoming(filters?: EventFilters) {
     const now = Math.floor(Date.now() / 1000);
-    const in7Days = now + 7 * 86400;
-
-    return this.getEvents(now, in7Days, filters);
+    return this.getEvents(now, now + 7 * 86400, filters);
   }
 
-  /**
-   * Get recent events (last 7 days)
-   */
-  async getRecentEvents(filters?: { impacts?: string[]; countries?: string[] }) {
+  getRecent(filters?: EventFilters) {
     const now = Math.floor(Date.now() / 1000);
-    const last7Days = now - 7 * 86400;
-
-    return this.getEvents(last7Days, now, filters);
+    return this.getEvents(now - 7 * 86400, now, filters);
   }
 
-  /**
-   * Map importance level to impact enum
-   */
-  private mapImpact(importance: number): string {
-    if (importance >= 3) return 'HIGH';
-    if (importance === 2) return 'MEDIUM';
-    if (importance === 1) return 'LOW';
-    return 'HOLIDAY';
+  /** The current FF week, Sunday through Saturday. */
+  getCurrentWeek(filters?: EventFilters) {
+    const ws = weekStartOf(Math.floor(Date.now() / 1000));
+    const from = Math.floor(Date.parse(`${ws}T00:00:00Z`) / 1000) - 12 * 3600; // cover US Eastern offset
+    return this.getEvents(from, from + 8 * 86400, filters).then((events) =>
+      events.filter((e) => weekStartOf(e.ts) === ws),
+    );
   }
 
-  /**
-   * Format date range for API
-   */
-  private formatDateRange(from: number, to: number): string {
-    const fromDate = new Date(from * 1000).toISOString().split('T')[0];
-    const toDate = new Date(to * 1000).toISOString().split('T')[0];
-    return `${fromDate},${toDate}`;
+  /** Refreshes a week if its cache expired. Never throws: on failure the stored data is served. */
+  private ensureWeek(weekStart: string): Promise<void> {
+    const running = this.inflight.get(weekStart);
+    if (running) return running;
+    const task = this.refreshWeek(weekStart)
+      .catch((e: Error) => this.logger.warn(`FF week ${weekStart} not refreshed: ${e.message}`))
+      .finally(() => this.inflight.delete(weekStart));
+    this.inflight.set(weekStart, task);
+    return task;
   }
 
-  /**
-   * Sync calendar with Trading Economics API
-   */
-  async syncCalendar() {
-    const now = Math.floor(Date.now() / 1000);
-    const from = now - 30 * 86400; // 30 days ago
-    const to = now + 30 * 86400; // 30 days ahead
+  private async refreshWeek(weekStart: string): Promise<void> {
+    const key = `ff:week:${weekStart}`;
+    const cached = await this.prisma.cacheEntry.findUnique({ where: { key } });
+    if (cached && cached.expiresAt > new Date()) return;
 
-    return this.fetchCalendarEvents(from, to);
+    const currentWeek = weekStartOf(Math.floor(Date.now() / 1000));
+    const ttl = weekStart === currentWeek ? TTL.current : weekStart > currentWeek ? TTL.future : TTL.past;
+    const url = `${FF_BASE}/calendar?range=${ffDate(weekStart)}-${ffDate(addDays(weekStart, 6))}`;
+
+    try {
+      const { events, unknown } = parseCalendarHtml(await ffGet(url, 'text/html'));
+      if (!events.length) throw new Error('calendar page contained no events');
+      await this.store(events, 'ff-html');
+      // HTML rows supersede any feed-fallback rows stored for this week.
+      await this.prisma.calendarEvent.deleteMany({
+        where: { sourceApi: 'ff-feed', timestamp: { gte: events[0]!.ts - 86400, lte: events[events.length - 1]!.ts + 86400 } },
+      });
+      await this.setCache(key, { source: 'html', count: events.length, unknown }, ttl);
+    } catch (htmlError) {
+      // Only the current week exists in the CDN feed.
+      if (weekStart !== currentWeek) throw htmlError;
+      const { events, unknown } = parseFeed(JSON.parse(await ffGet(FF_FEED_URL, 'application/json')));
+      // Stale HTML rows (with actuals) beat fresh feed rows; mixing both would duplicate events.
+      const htmlRows = events.length
+        ? await this.prisma.calendarEvent.count({
+            where: { sourceApi: 'ff-html', timestamp: { gte: events[0]!.ts, lte: events[events.length - 1]!.ts } },
+          })
+        : 0;
+      if (!htmlRows) await this.store(events, 'ff-feed');
+      await this.setCache(key, { source: 'feed', count: events.length, unknown }, TTL.feedFallback);
+      this.logger.warn(`FF week ${weekStart} served from feed fallback: ${(htmlError as Error).message}`);
+    }
+  }
+
+  private async store(events: FfEvent[], sourceApi: string): Promise<void> {
+    const fetchedAt = new Date();
+    await this.prisma.$transaction(
+      events.map((e) => {
+        const data = {
+          timestamp: e.ts,
+          country: e.currency,
+          title: e.title,
+          impact: e.impact,
+          actual: e.actual,
+          forecast: e.forecast,
+          previous: e.previous,
+          revision: e.revision,
+          ebaseId: e.ebaseId,
+          actualBetterWorse: e.actualBetterWorse,
+          notice: e.notice,
+          soloUrl: e.soloUrl,
+          sourceApi,
+          fetchedAt,
+        };
+        return this.prisma.calendarEvent.upsert({
+          where: { externalId: e.externalId },
+          create: { externalId: e.externalId, ...data },
+          update: data,
+        });
+      }),
+    );
+  }
+
+  private async setCache(key: string, value: object, ttlMs: number): Promise<void> {
+    const expiresAt = new Date(Date.now() + ttlMs);
+    await this.prisma.cacheEntry.upsert({
+      where: { key },
+      create: { key, value, expiresAt },
+      update: { value, expiresAt },
+    });
   }
 }

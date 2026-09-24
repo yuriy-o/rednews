@@ -1,5 +1,5 @@
 # Build stage
-FROM node:20-alpine AS builder
+FROM node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293 AS builder
 
 WORKDIR /app
 
@@ -20,7 +20,9 @@ RUN npm run prisma:generate
 RUN npm run build
 
 # Production stage
-FROM node:20-alpine
+# Pinned by digest: Cloudflare in front of ForexFactory fingerprints the TLS client, and this
+# exact Node build is the one verified to pass. Re-run a reachability check before bumping.
+FROM node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293
 
 WORKDIR /app
 
