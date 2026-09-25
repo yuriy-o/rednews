@@ -19,6 +19,10 @@ export default tseslint.config(
       'build/**',
       '.cursor-context/**',
       '**/*.min.js',
+      // Separate projects with their own lint setup.
+      'app/**',
+      'server/**',
+      'coverage/**',
     ],
   },
   js.configs.recommended,

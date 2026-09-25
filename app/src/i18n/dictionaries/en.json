@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "siteName": "Red News",
+    "home": {
+      "title": "Red Folder News & Economic Calendar for TradingView",
+      "description": "High-impact economic news on your TradingView chart, with alerts before the release. Live Forex Factory calendar with actual, forecast and previous."
+    },
+    "calendar": {
+      "title": "Economic Calendar — High-Impact Forex News This Week",
+      "description": "This week's economic calendar: red folder news with actual, forecast and previous values, filterable by currency and impact, in your timezone."
+    },
+    "pricing": {
+      "title": "Pricing — Free and Premium",
+      "description": "Start free. Premium adds pre-news alerts, Telegram alerts and the full calendar range. 14-day trial, no card required."
+    },
+    "account": {
+      "title": "Your account"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "calendar": "Calendar",
+    "pricing": "Pricing",
+    "account": "Account",
+    "install": "Add to Chrome",
+    "skip": "Skip to content"
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "home": {
+    "title": "Red folder news alerts, right on your TradingView chart.",
+    "lead": "High-impact news on your chart, without a second screen."
+  },
+  "calendar": {
+    "title": "Economic calendar",
+    "lead": "This week's events in your timezone.",
+    "empty": "No events for this week yet.",
+    "unavailable": "The calendar is temporarily unavailable. Please try again in a minute.",
+    "columns": {
+      "time": "Time",
+      "currency": "Currency",
+      "impact": "Impact",
+      "event": "Event",
+      "actual": "Actual",
+      "forecast": "Forecast",
+      "previous": "Previous"
+    },
+    "impact": {
+      "HIGH": "High",
+      "MEDIUM": "Medium",
+      "LOW": "Low",
+      "HOLIDAY": "Holiday"
+    },
+    "better": "Better than forecast",
+    "worse": "Worse than forecast"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "lead": "Start free. Add red folder news alerts when you're ready."
+  },
+  "account": {
+    "title": "Your account",
+    "lead": "Sign-in and settings sync with the extension are coming soon."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "back": "Back to home"
+  }
+}
