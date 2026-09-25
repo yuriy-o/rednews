@@ -40,10 +40,21 @@ export class CalendarController {
     return respond(events, { from: fromTs, to: toTs });
   }
 
-  /** GET /api/v1/calendar/week — current ForexFactory week (Sun–Sat, US Eastern) */
+  /**
+   * GET /api/v1/calendar/week[?start=YYYY-MM-DD] — a ForexFactory week (Sun–Sat, US Eastern);
+   * the current one without `start`. 403 premium_required outside the free window.
+   */
   @Get('week')
-  async getWeek(@Query('impacts') impacts?: string, @Query('currencies') currencies?: string) {
-    return respond(await this.calendarService.getCurrentWeek(parseFilters(impacts, currencies)));
+  async getWeek(
+    @Query('start') start?: string,
+    @Query('impacts') impacts?: string,
+    @Query('currencies') currencies?: string,
+  ) {
+    const filters = parseFilters(impacts, currencies);
+    const events = start
+      ? await this.calendarService.getWeek(start, filters)
+      : await this.calendarService.getCurrentWeek(filters);
+    return respond(events);
   }
 
   /** GET /api/v1/calendar/upcoming — next 7 days */

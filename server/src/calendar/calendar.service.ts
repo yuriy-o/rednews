@@ -1,4 +1,4 @@
-import { BadRequestException, Injectable, Logger } from '@nestjs/common';
+import { BadRequestException, ForbiddenException, Injectable, Logger } from '@nestjs/common';
 import { CalendarEvent, Impact } from '@prisma/client';
 import { PrismaService } from '../common/prisma/prisma.service';
 import { FF_BASE, FF_FEED_URL, ffGet } from './forexfactory.client';
@@ -18,6 +18,17 @@ const TTL = {
   feedFallback: 5 * MIN, // retry the richer HTML source soon
 };
 export const MAX_RANGE_DAYS = 35;
+
+// Same free window as the extension (21 days back, 30 ahead). A week is in the window when any
+// of its days is — so the edge weeks are whole. Beyond it: Premium, once accounts exist.
+export const WINDOW_DAYS = { past: 21, future: 30 };
+
+function isWeekInWindow(weekStart: string): boolean {
+  const start = Date.parse(`${weekStart}T00:00:00Z`);
+  const end = start + 7 * 86400_000;
+  const now = Date.now();
+  return end > now - WINDOW_DAYS.past * 86400_000 && start < now + WINDOW_DAYS.future * 86400_000;
+}
 
 export interface EventFilters {
   impacts?: Impact[];
@@ -104,8 +115,10 @@ export class CalendarService {
     }
 
     // Sequential on purpose: be gentle with FF when a range spans several uncached weeks.
+    // Weeks outside the fetch window are served from the database only, so nobody (crawlers
+    // included) can make this server scrape arbitrary history from ForexFactory.
     for (let ws = weekStartOf(from); ws <= weekStartOf(to); ws = addDays(ws, 7)) {
-      await this.ensureWeek(ws);
+      if (isWeekInWindow(ws)) await this.ensureWeek(ws);
     }
 
     const rows = await this.prisma.calendarEvent.findMany({
@@ -131,11 +144,20 @@ export class CalendarService {
 
   /** The current FF week, Sunday through Saturday. */
   getCurrentWeek(filters?: EventFilters) {
-    const ws = weekStartOf(Math.floor(Date.now() / 1000));
-    const from = Math.floor(Date.parse(`${ws}T00:00:00Z`) / 1000) - 12 * 3600; // cover US Eastern offset
-    return this.getEvents(from, from + 8 * 86400, filters).then((events) =>
-      events.filter((e) => weekStartOf(e.ts) === ws),
-    );
+    return this.getWeek(weekStartOf(Math.floor(Date.now() / 1000)), filters);
+  }
+
+  /** One FF week by its Sunday ('YYYY-MM-DD', US Eastern). Only weeks inside the free window. */
+  async getWeek(weekStart: string, filters?: EventFilters): Promise<CalendarEventDto[]> {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(weekStart) || new Date(`${weekStart}T00:00:00Z`).getUTCDay() !== 0) {
+      throw new BadRequestException('start must be a Sunday as YYYY-MM-DD');
+    }
+    if (!isWeekInWindow(weekStart)) {
+      throw new ForbiddenException({ error: 'premium_required', window: WINDOW_DAYS });
+    }
+    const from = Math.floor(Date.parse(`${weekStart}T00:00:00Z`) / 1000) - 12 * 3600; // cover US Eastern offset
+    const events = await this.getEvents(from, from + 8 * 86400, filters);
+    return events.filter((e) => weekStartOf(e.ts) === weekStart);
   }
 
   /** Refreshes a week if its cache expired. Never throws: on failure the stored data is served. */
