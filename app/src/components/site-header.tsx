@@ -4,6 +4,7 @@ import type { Locale } from '@/i18n/config';
 import type { Dictionary } from '@/i18n/dictionaries';
 import { localePath } from '@/lib/seo';
 import { ThemeToggle } from './theme';
+import { MobileNav } from './mobile-nav';
 
 export const CHROME_STORE_URL = 'https://chromewebstore.google.com/detail/amfdnacihpdhedfadbcoeeoijnfpnllf';
 
@@ -35,6 +36,7 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
           <a className="button button--primary button--sm" href={CHROME_STORE_URL} target="_blank" rel="noopener">
             {dict.nav.install}
           </a>
+          <MobileNav items={nav} openLabel={dict.nav.menuOpen} closeLabel={dict.nav.menuClose} />
         </div>
       </div>
     </header>

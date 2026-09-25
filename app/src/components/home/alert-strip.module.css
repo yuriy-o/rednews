@@ -1,0 +1,163 @@
+.figure {
+  margin: 0;
+}
+.figure + .figure {
+  margin-block-start: 40px;
+}
+
+.strip,
+.filters {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  background: var(--bg-raised);
+}
+
+.strip {
+  block-size: 190px;
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px);
+  background-size: 100% 38px;
+  overflow: hidden;
+}
+
+.example {
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-start: 12px;
+  color: var(--fg-faint);
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-stretch: 86%;
+}
+
+.reminder,
+.release {
+  position: absolute;
+  inset-block: 0 28px;
+}
+.reminder {
+  border-inline-start: 1px dashed var(--fg-faint);
+}
+.bell {
+  position: absolute;
+  inset-block-start: 40px;
+  inset-inline-start: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px 3px 6px;
+  border: 1px solid var(--line);
+  border-radius: 0 4px 4px 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.reminder[data-side='left'] .bell {
+  inset-inline: auto 0;
+  padding: 3px 6px 3px 8px;
+  border-radius: 4px 0 0 4px;
+}
+.release {
+  border-inline-start: 1px solid var(--red);
+}
+/* The release sits near the right edge, so its flag opens to the left of the line. */
+.flag {
+  position: absolute;
+  inset-block-start: 12px;
+  inset-inline-end: 0;
+  padding: 3px 6px 3px 8px;
+  border-radius: 4px 0 0 4px;
+  background: var(--red-button);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-stretch: 86%;
+  white-space: nowrap;
+}
+
+.axis {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  block-size: 28px;
+  border-block-start: 1px solid var(--line);
+  color: var(--fg-muted);
+}
+.axis span {
+  position: absolute;
+  inset-block-start: 6px;
+  translate: -50% 0;
+}
+.axis span:first-child {
+  translate: 6px 0;
+}
+.axis span:last-child {
+  translate: calc(-100% - 6px) 0;
+}
+
+.filters {
+  display: grid;
+  gap: 12px;
+  padding: 40px 16px 16px;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  block-size: 30px;
+  padding-inline: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  color: var(--fg-muted);
+  font-size: 0.8125rem;
+  font-weight: 450;
+  font-stretch: 90%;
+  text-decoration: line-through;
+  text-decoration-color: var(--fg-muted);
+}
+/* "On" is carried by fill, weight and the absence of a strike-through — not colour alone. */
+.chip[data-on] {
+  border-color: var(--fg-faint);
+  background: var(--bg);
+  color: var(--fg);
+  font-weight: 600;
+  text-decoration: none;
+}
+.chip:not([data-on]) :global(.impact) {
+  color: var(--fg-muted);
+}
+
+.caption {
+  margin-block-start: 12px;
+  color: var(--fg-muted);
+  font-size: 0.9375rem;
+}
+.channels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-block-start: 10px;
+  color: var(--fg);
+  font-size: 0.875rem;
+}
+.channels li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.channels svg {
+  color: var(--fg-muted);
+}
+
+/* Narrow strips: the two reminders would meet, so they sit on two rows. */
+@media (max-width: 480px) {
+  .reminder:not([data-side='left']) .bell {
+    inset-block-start: 76px;
+  }
+}

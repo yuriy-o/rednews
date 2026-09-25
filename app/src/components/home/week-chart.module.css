@@ -217,6 +217,10 @@
 
 @media (max-width: 640px) {
   .title {
+    display: none; /* the button's aria-label keeps the full name */
+  }
+  /* The card docks at the bottom here and would cover the crosshair's time tag. */
+  .plot:has(.card) .axisTag {
     display: none;
   }
   .flag {

@@ -33,7 +33,7 @@
   color: var(--fg-muted);
 }
 
-/* Narrow screens: impact stays visible as its flag next to the time; the label stays for screen readers. */
+/* Narrow screens: impact keeps flag + label next to the time — colour alone is not enough. */
 @media (max-width: 720px) {
   .row {
     grid-template-columns: auto 1fr auto;
@@ -58,12 +58,7 @@
   .meta {
     display: none;
   }
-  .impactLabel {
-    position: absolute;
-    inline-size: 1px;
-    block-size: 1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap;
+  .impact {
+    font-size: 0.8125rem;
   }
 }

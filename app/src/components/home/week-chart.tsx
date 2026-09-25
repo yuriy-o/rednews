@@ -213,6 +213,8 @@ export function WeekChart({ lines, domain, path, locale, t }: Props) {
                 type="button"
                 className={styles.flag}
                 style={{ insetBlockStart: `${8 + levels[i]! * 30}px` }}
+                // Full name for screen readers even when narrow screens show only the currency.
+                aria-label={l.events.map(e => `${e.currency} ${e.title}`).join(', ')}
                 aria-describedby={active === i ? cardId : undefined}
                 onFocus={() => {
                   setActive(i);
@@ -310,6 +312,8 @@ export function WeekChart({ lines, domain, path, locale, t }: Props) {
         {days
           .map(ts => ({ ts, x: xOf(ts + 43200) }))
           .filter(({ x }) => x > 0.03 && x < 0.97)
+          // ~64px per label: thin out to every other day when they would touch.
+          .filter((_, i, all) => all.length * 64 <= width || i % 2 === 0)
           .map(({ ts, x }) => (
             <span key={ts} style={{ insetInlineStart: `${x * 100}%` }}>
               {dayLabel(ts * 1000)}

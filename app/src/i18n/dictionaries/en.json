@@ -23,6 +23,8 @@
     "pricing": "Pricing",
     "account": "Account",
     "install": "Add to Chrome",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
     "skip": "Skip to content"
   },
   "theme": {
@@ -31,12 +33,12 @@
     "dark": "Dark"
   },
   "home": {
-    "title": "Red folder news alerts, right on your TradingView chart.",
+    "titleLines": ["Red folder news alerts,", "right on your TradingView chart."],
     "lead": "Red News draws high-impact economic releases on your chart and warns you before they land. No second screen.",
     "cta": "Add to Chrome — it's free",
     "ctaSecondary": "See this week's calendar",
     "chart": {
-      "caption": "This week's high-impact releases, live from the calendar. The price line is illustrative.",
+      "caption": "High-impact releases, live from the calendar. The price line is illustrative.",
       "unavailable": "Live releases are loading. The calendar will be back in a moment.",
       "now": "Now",
       "in": "in",
@@ -51,12 +53,23 @@
       "lead": "Red News works inside TradingView, where you already are.",
       "items": [
         { "title": "News lines on your chart", "body": "Every release is drawn as a vertical line at the candle it lands on, colour-coded by impact." },
-        { "title": "Alerts before the release", "body": "On-chart, desktop and sound alerts, plus Telegram, minutes before the number hits. Premium." },
         { "title": "Actual, forecast, previous", "body": "Hover a line to see the numbers without leaving the chart." },
-        { "title": "Only what you trade", "body": "Filter by currency and impact level, so a quiet week stays quiet." },
         { "title": "Multi-chart layouts", "body": "Lines appear on every pane of a multi-chart layout." },
         { "title": "Your own AI", "body": "Connect a Gemini or Groq key and ask what to expect from a release." }
       ]
+    },
+    "alerts": {
+      "example": "Example",
+      "release": "Non-Farm Payrolls",
+      "before": "{m} min before",
+      "caption": "Up to three reminders per release, 15 minutes before by default. Premium.",
+      "channels": {
+        "chart": "On the chart",
+        "desktop": "Desktop",
+        "sound": "Sound",
+        "telegram": "Telegram"
+      },
+      "filtersCaption": "Pick the currencies and impact levels you trade; everything else stays off your chart."
     },
     "upcoming": {
       "title": "Coming up",

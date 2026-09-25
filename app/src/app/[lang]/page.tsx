@@ -8,6 +8,7 @@ import { illustrativePricePath } from '@/lib/price-path';
 import { CHROME_STORE_URL } from '@/components/site-header';
 import { WeekChart, type NewsLine } from '@/components/home/week-chart';
 import { UpcomingList } from '@/components/home/upcoming-list';
+import { AlertStrip, FilterStrip } from '@/components/home/alert-strip';
 
 export async function generateMetadata(): Promise<Metadata> {
   const [locale, dict] = await Promise.all([getLocale(), getDictionary()]);
@@ -22,13 +23,18 @@ interface WeekData {
 }
 
 async function loadWeek(): Promise<WeekData> {
+  const nowSec = Math.floor(Date.now() / 1000);
   let events: CalendarEvent[] | null = null;
   try {
     events = (await calendarApi.week()).events;
+    // From Friday evening the FF week has no high-impact release left and the chart would show a
+    // finished week with nothing to wait for. Roll the window forward so an upcoming line exists.
+    if (!events.some((e) => e.impact === 'HIGH' && e.ts > nowSec)) {
+      events = (await calendarApi.range(nowSec - 2 * 86400, nowSec + 6 * 86400)).events;
+    }
   } catch {
     /* rendered without lines */
   }
-  const nowSec = Math.floor(Date.now() / 1000);
   const first = events?.[0]?.ts ?? nowSec - 3 * 86400;
   const last = events?.[events.length - 1]?.ts ?? nowSec + 3 * 86400;
   const pad = (last - first) * 0.03;
@@ -84,17 +90,17 @@ export default async function HomePage() {
       />
 
       <section className="container hero">
-        <h1 className="display hero__title">{t.title}</h1>
+        {/* Authored line break on wide screens; lines flow naturally on narrow ones. */}
+        <h1 className="display hero__title">
+          {t.titleLines.map((line, i) => (
+            <span key={i} className="hero__line">
+              {line}{' '}
+            </span>
+          ))}
+        </h1>
         <p className="lead hero__lead">{t.lead}</p>
-        <div className="hero__chart">
-          <WeekChart lines={lines} domain={domain} path={path} locale={locale} t={t.chart} />
-          {!week && (
-            <p className="hero__notice" role="status">
-              {t.chart.unavailable}
-            </p>
-          )}
-        </div>
-        <p className="actions">
+        {/* Action above the chart so it is in the first viewport at every size (see home brief). */}
+        <p className="actions hero__actions">
           <a className="button button--primary" href={CHROME_STORE_URL} target="_blank" rel="noopener">
             {t.cta}
           </a>
@@ -103,6 +109,14 @@ export default async function HomePage() {
             <ArrowRight size={16} strokeWidth={1.75} aria-hidden />
           </Link>
         </p>
+        <div className="hero__chart">
+          <WeekChart lines={lines} domain={domain} path={path} locale={locale} t={t.chart} />
+          {!week && (
+            <p className="hero__notice" role="status">
+              {t.chart.unavailable}
+            </p>
+          )}
+        </div>
       </section>
 
       <section className="container band split" aria-labelledby="features-title">
@@ -112,14 +126,18 @@ export default async function HomePage() {
           </h2>
           <p className="lead">{t.features.lead}</p>
         </div>
-        <dl className="feature-list">
+        <div className="features__body">
+          <AlertStrip t={t.alerts} />
+          <FilterStrip t={t.alerts} impacts={dict.calendar.impact} />
+          <dl className="feature-list">
           {t.features.items.map((f) => (
             <div key={f.title} className="feature-list__row">
               <dt>{f.title}</dt>
               <dd>{f.body}</dd>
             </div>
           ))}
-        </dl>
+          </dl>
+        </div>
       </section>
 
       <section className="container band" aria-labelledby="upcoming-title">

@@ -33,6 +33,7 @@ Strategy: **Restrained** — neutrals plus one accent. Red is never decoration: 
 | `--worse` | `#c2255c` | `#f06595` | actual worse than forecast — rose, distinct in hue from brand red |
 
 Rules:
+- **Exception (user decision, 2026-09-25):** the *Premium* plan name is set in `--red-text` in both themes — it marks the paid tier's priority features. Keep it; do not flag it in reviews.
 - Impact and better/worse are **never colour alone**: impact carries a label and a flag shape; better/worse carries an up/down icon and an accessible name.
 - Candles and the price path are neutral `--ink`, never red/green: the only red on a chart is news.
 - Every text colour above is measured ≥4.5:1 on both `--bg` and `--bg-raised` (`--fg-faint` and `--red` ≥3:1, so they are for large text, strokes and axis marks only). Re-measure after any token change.
