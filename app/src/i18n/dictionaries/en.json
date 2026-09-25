@@ -7,7 +7,8 @@
     },
     "calendar": {
       "title": "Economic Calendar — High-Impact Forex News This Week",
-      "description": "This week's economic calendar: red folder news with actual, forecast and previous values, filterable by currency and impact, in your timezone."
+      "description": "This week's economic calendar: red folder news with actual, forecast and previous values, filterable by currency and impact, in your timezone.",
+      "weekTitle": "Economic calendar,"
     },
     "pricing": {
       "title": "Pricing — Free and Premium",
@@ -110,7 +111,28 @@
   },
   "calendar": {
     "title": "Economic calendar",
-    "lead": "This week's events in your timezone.",
+    "thisWeek": "This week",
+    "weekNav": "Week navigation",
+    "prevWeek": "Previous week",
+    "nextWeek": "Next week",
+    "today": "Today",
+    "now": "Now",
+    "in": "in",
+    "premiumRange": "Weeks further back or ahead come with Premium",
+    "premiumTitle": "This week is part of Premium",
+    "premiumBody": "The free calendar covers three weeks back and about a month ahead. Premium opens the extended history and future events.",
+    "premiumCta": "See Premium",
+    "backToThisWeek": "Back to this week",
+    "filters": {
+      "label": "Filters",
+      "currencies": "Currencies",
+      "impacts": "Impact",
+      "search": "Search events",
+      "searchPlaceholder": "Search: CPI, Payrolls, Lagarde…",
+      "reset": "Reset filters"
+    },
+    "showing": "{n} of {total} events",
+    "noMatch": "No events match these filters.",
     "empty": "No events for this week yet.",
     "unavailable": "The calendar is temporarily unavailable. Please try again in a minute.",
     "columns": {

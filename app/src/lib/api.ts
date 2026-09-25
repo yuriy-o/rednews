@@ -61,7 +61,8 @@ const filterParams = (f: EventFilters = {}) => ({
 });
 
 export const calendarApi = {
-  week: (f?: EventFilters) => get<EventsResponse>('/calendar/week', filterParams(f)),
+  /** Current FF week, or the week starting on `start` (a Sunday); 403 outside the free window. */
+  week: (f?: EventFilters, start?: string) => get<EventsResponse>('/calendar/week', { start, ...filterParams(f) }),
   upcoming: (f?: EventFilters) => get<EventsResponse>('/calendar/upcoming', filterParams(f)),
   recent: (f?: EventFilters) => get<EventsResponse>('/calendar/recent', filterParams(f)),
   range: (from: number, to: number, f?: EventFilters) =>

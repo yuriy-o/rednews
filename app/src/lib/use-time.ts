@@ -5,9 +5,13 @@ import { useSyncExternalStore } from 'react';
 const noopSubscribe = () => () => {};
 const browserTimeZone = () => Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-/** UTC on the server (crawlers, first paint), then the visitor's own timezone after hydration. */
-export function useTimeZone(): string {
-  return useSyncExternalStore(noopSubscribe, browserTimeZone, () => 'UTC');
+/**
+ * The visitor's timezone. The server renders in `serverTimeZone` — the one remembered in the
+ * `rn-tz` cookie on earlier visits, else UTC (crawlers, first visit) — and the client switches
+ * to the real one after hydration.
+ */
+export function useTimeZone(serverTimeZone = 'UTC'): string {
+  return useSyncExternalStore(noopSubscribe, browserTimeZone, () => serverTimeZone);
 }
 
 // One shared minute ticker so every "now"-aware component re-renders together.

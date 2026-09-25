@@ -1,0 +1,317 @@
+.view {
+  margin-block-start: 24px;
+}
+
+/* Toolbar: sticky under the 60px header so filters stay reachable while scanning. */
+.toolbar {
+  position: sticky;
+  inset-block-start: 60px;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  padding-block: 12px;
+  border-block-end: 1px solid var(--line);
+  background: var(--bg);
+}
+.group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  block-size: 32px;
+  padding-inline: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  color: var(--fg-muted);
+  font-size: 0.8125rem;
+  font-weight: 450;
+  font-stretch: 90%;
+  text-decoration: line-through;
+  text-decoration-color: var(--fg-muted);
+  cursor: pointer;
+  transition:
+    background-color 150ms var(--ease-out),
+    border-color 150ms var(--ease-out);
+}
+.chip:hover {
+  border-color: var(--fg-faint);
+}
+/* Pressed = on: fill + weight + no strike-through, never colour alone. */
+.chip[aria-pressed='true'] {
+  border-color: var(--fg-faint);
+  background: var(--bg-raised);
+  color: var(--fg);
+  font-weight: 600;
+  text-decoration: none;
+}
+.chip[aria-pressed='false'] :global(.impact) {
+  color: var(--fg-muted);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 1 200px;
+  min-inline-size: 0;
+  max-inline-size: 320px;
+  block-size: 32px;
+  padding-inline: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  color: var(--fg-muted);
+}
+.search:focus-within {
+  border-color: var(--fg-faint);
+}
+.search input {
+  flex: 1;
+  min-inline-size: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--fg);
+  font: inherit;
+  font-size: 0.875rem;
+}
+.search input::placeholder {
+  color: var(--fg-muted);
+}
+.reset {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--fg-muted);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.reset:hover {
+  color: var(--fg);
+}
+.srOnly {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.meta {
+  margin-block: 12px 4px;
+  color: var(--fg-muted);
+}
+
+.empty {
+  display: grid;
+  justify-items: start;
+  gap: 12px;
+  padding-block: 48px;
+  color: var(--fg-muted);
+}
+
+/* Table */
+.table {
+  inline-size: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+.table thead th {
+  padding: 10px 12px;
+  border-block-end: 1px solid var(--line);
+  color: var(--fg-muted);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  font-stretch: 86%;
+  text-align: start;
+}
+.table td {
+  padding: 10px 12px;
+  border-block-end: 1px solid var(--grid);
+  vertical-align: baseline;
+}
+.num {
+  text-align: end !important;
+  white-space: nowrap;
+}
+
+.dayRow th {
+  padding: 28px 12px 8px;
+  border-block-end: 1px solid var(--line);
+  color: var(--fg);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-align: start;
+}
+.day[data-today] .dayRow th {
+  color: var(--fg);
+}
+.todayTag {
+  margin-inline-start: 10px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--fg);
+  color: var(--bg);
+  font-size: 0.75rem;
+  font-weight: 600;
+  vertical-align: 1px;
+}
+
+.row:hover td {
+  background: var(--bg-raised);
+}
+.time {
+  white-space: nowrap;
+  color: var(--fg-muted);
+}
+.row:not([data-released]) .time {
+  color: var(--fg);
+}
+/* Neutral: the next release may be low impact, and red means red-folder news. */
+.countdown {
+  display: block;
+  color: var(--fg);
+  font-weight: 600;
+}
+.impactCell {
+  white-space: nowrap;
+}
+.ccy {
+  font-weight: 600;
+  font-stretch: 90%;
+}
+.event {
+  font-weight: 500;
+}
+.notice {
+  display: block;
+  margin-block-start: 2px;
+  color: var(--fg-muted);
+  font-size: 0.8125rem;
+  font-weight: 400;
+}
+.actual {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+}
+.better {
+  color: var(--better);
+}
+.worse {
+  color: var(--worse);
+}
+.revision {
+  color: var(--fg-muted);
+}
+
+/* "Now": a dashed rule between released and upcoming, like the chart's now line. */
+.nowRow td {
+  padding: 0;
+  border-block-end: 1px dashed var(--fg-faint);
+}
+.nowRow span {
+  display: inline-block;
+  translate: 0 50%;
+  padding-inline: 8px;
+  background: var(--bg);
+  color: var(--fg-muted);
+}
+
+/*
+ * Narrow screens: rows become stacked blocks, keeping table semantics.
+ * Line 1: time · impact · currency; line 2: event; line 3: actual / forecast / previous.
+ */
+@media (max-width: 720px) {
+  .toolbar {
+    inset-block-start: 60px;
+    gap: 8px;
+  }
+  .search {
+    max-inline-size: none;
+    flex-basis: 100%;
+  }
+  .table thead {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .table tbody,
+  .dayRow,
+  .dayRow th {
+    display: block;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-template-areas:
+      'time impact ccy'
+      'event event event'
+      'a f p';
+    gap: 4px 12px;
+    padding-block: 12px;
+    border-block-end: 1px solid var(--grid);
+  }
+  .row td {
+    padding: 0;
+    border: 0;
+  }
+  .time {
+    grid-area: time;
+  }
+  .countdown {
+    display: inline;
+    margin-inline-start: 8px;
+  }
+  .impactCell {
+    grid-area: impact;
+  }
+  .ccy {
+    grid-area: ccy;
+  }
+  .event {
+    grid-area: event;
+  }
+  .row .num {
+    text-align: start !important;
+    color: var(--fg);
+  }
+  .row .num::before {
+    content: attr(data-label) ' ';
+    color: var(--fg-muted);
+    font-weight: 400;
+    font-size: 0.75rem;
+  }
+  .row .num:empty,
+  .row .num[data-empty] {
+    display: none;
+  }
+  .dayRow th {
+    padding-inline: 0;
+  }
+  .row td:nth-child(5) {
+    grid-area: a;
+  }
+  .row td:nth-child(6) {
+    grid-area: f;
+  }
+  .row td:nth-child(7) {
+    grid-area: p;
+  }
+  .nowRow {
+    display: block;
+  }
+  .nowRow td {
+    display: block;
+  }
+}

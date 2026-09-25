@@ -1,0 +1,51 @@
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+}
+/* Operate surface: fixed rem type, no fluid heading (DESIGN.md). */
+.title {
+  font-size: 1.75rem;
+  font-weight: 620;
+  font-stretch: 108%;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+.range {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-block-start: 6px;
+  color: var(--fg-muted);
+  font-size: 0.9375rem;
+}
+.thisWeek {
+  padding: 1px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--fg);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.notice {
+  max-inline-size: 60ch;
+  margin-block-start: 40px;
+  color: var(--fg-muted);
+}
+.noticeTitle {
+  margin-block-end: 6px;
+  color: var(--fg);
+  font-size: 1.125rem;
+  font-weight: 600;
+}

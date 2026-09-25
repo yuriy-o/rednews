@@ -19,7 +19,7 @@
   --red-soft: rgb(229 53 43 / 0.1);
   --impact-medium: #ab5c10;
   --impact-low: #886f09;
-  --impact-holiday: #7c8590;
+  --impact-holiday: #58616c; /* = --fg-muted: text needs 4.5:1 */
   --better: #0e7f74;
   --worse: #c2255c;
 
@@ -43,7 +43,7 @@
   --red-soft: rgb(229 53 43 / 0.16);
   --impact-medium: #f0923a;
   --impact-low: #d9b53c;
-  --impact-holiday: #6f7985;
+  --impact-holiday: #98a2ae;
   --better: #2bb3a3;
   --worse: #f06595;
 }
@@ -545,36 +545,7 @@ html {
   }
 }
 
-/* Calendar */
-.calendar {
-  margin-block-start: 40px;
-}
-.calendar__tz {
-  color: var(--fg-muted);
-}
-.calendar__day {
-  margin-block: 40px 8px;
-  font-size: 1rem;
-  font-weight: 600;
-}
-.calendar__table {
-  inline-size: 100%;
-  border-collapse: collapse;
-  font-size: 0.875rem;
-  font-variant-numeric: tabular-nums;
-}
-.calendar__table th {
-  color: var(--fg-muted);
-  font-size: 0.8125rem;
-  font-weight: 500;
-  font-stretch: 82%;
-  text-align: start;
-}
-.calendar__table th,
-.calendar__table td {
-  padding: 10px 12px;
-  border-block-end: 1px solid var(--grid);
-}
+/* Impact flag (folder tab) + outcome — shared by the calendar and home */
 .impact {
   display: inline-flex;
   align-items: center;
@@ -600,24 +571,9 @@ html {
 .impact--holiday {
   color: var(--impact-holiday);
 }
-.bw {
-  display: inline-block;
-  margin-inline-start: 4px;
-  vertical-align: -2px;
-}
-.bw--better {
-  color: var(--better);
-}
-.bw--worse {
-  color: var(--worse);
-}
 
 @media (max-width: 720px) {
   .nav-list {
-    display: none;
-  }
-  .calendar__table th:nth-child(n + 6),
-  .calendar__table td:nth-child(n + 6) {
     display: none;
   }
 }

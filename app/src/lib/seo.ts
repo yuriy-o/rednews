@@ -21,8 +21,8 @@ interface PageMeta {
   path: string;
   title: string;
   description?: string;
-  /** Private or unfinished pages. */
-  noindex?: boolean;
+  /** Private or unfinished pages (noindex, nofollow); 'follow' keeps links crawlable. */
+  noindex?: boolean | 'follow';
 }
 
 // Explicit rather than an `opengraph-image` file: a page's own `openGraph` object replaces the
@@ -45,6 +45,6 @@ export function pageMetadata({ locale, path, title, description, noindex }: Page
       images: [shareImage],
     },
     twitter: { card: 'summary_large_image', title, description, images: [shareImage.url] },
-    ...(noindex ? { robots: { index: false, follow: false } } : {}),
+    ...(noindex ? { robots: { index: false, follow: noindex === 'follow' } } : {}),
   };
 }

@@ -28,7 +28,7 @@ Strategy: **Restrained** — neutrals plus one accent. Red is never decoration: 
 | `--red-soft` | `rgb(229 53 43 / 0.10)` | `rgb(229 53 43 / 0.16)` | news-line glow-free tint, selection |
 | `--impact-medium` | `#ab5c10` | `#f0923a` | medium impact (FF orange folder) |
 | `--impact-low` | `#886f09` | `#d9b53c` | low impact (FF yellow folder) |
-| `--impact-holiday` | `#7c8590` | `#6f7985` | holiday |
+| `--impact-holiday` | `#58616c` | `#98a2ae` | holiday (same as `--fg-muted`: it is text) |
 | `--better` | `#0e7f74` | `#2bb3a3` | actual better than forecast (TradingView teal) |
 | `--worse` | `#c2255c` | `#f06595` | actual worse than forecast — rose, distinct in hue from brand red |
 
@@ -72,6 +72,7 @@ Built and reviewed (home page):
 - **Example strips** (`components/home/alert-strip.tsx`): chart-grammar illustrations labelled "Example" — reminders before a release line (reminders near the release open leftward; stacked on narrow screens) and filter toggles whose state is fill + weight + strike-through, never colour alone.
 - **Lists instead of cards:** features and "Coming up" are hairline-separated rows; no icon-tile grids.
 - **Header:** ≥721px inline nav; ≤720px a menu button (disclosure, closes on route change, Escape and outside click — use `composedPath`, since toggles inside swap their icons); ≤480px the theme switch moves into that menu; ≤319px the logo mark only (name kept for screen readers).
+- **Calendar** (`components/calendar/`, Operate mode, fixed rem type): one FF week per URL, ← → and Today; sticky filter toolbar (currency and impact toggles with `aria-pressed`, search); days grouped in the visitor's timezone with a *Today* tag, a dashed *Now* rule and a countdown on the next release (neutral colour — the next release may be low impact). Desktop is a semantic `<table>` with right-aligned numbers; ≤720px the same table re-flows into stacked rows (time · impact · currency / event / labelled values). Filters live in the `rn-cal` cookie and the timezone in `rn-tz` (Vercel's `x-vercel-ip-timezone` on a first visit), so the server renders the final list and nothing regroups after hydration. Weeks outside the free window show a Premium note and are never fetched.
 - **Language switcher (planned, ships with the second language):** next to the theme switch on wide screens; inside the mobile menu on narrow ones. Shows native language names, links to the same page in the other locale and saves the choice in the `rn-locale` cookie the proxy already reads. Hidden while only English is enabled.
 
 Principles:
@@ -90,7 +91,7 @@ Principles:
 
 ## Quality gates
 
-Before a page ships: independent finish review (fresh context, not the builder); Lighthouse accessibility 100, CLS < 0.05; no horizontal overflow at 320px (including 125% zoom, i.e. ~256px); headings in order; text contrast re-measured for any new token use. Known open item: mobile Lighthouse performance varies 75–85 locally (main-thread style/layout); re-measure on the deployed site before optimizing.
+Before a page ships: independent finish review (fresh context, not the builder); Lighthouse accessibility 100, CLS < 0.05; no horizontal overflow at 320px (including 125% zoom, i.e. ~256px); headings in order; text contrast re-measured for any new token use. Known open items: mobile Lighthouse performance varies 75–85 locally (main-thread style/layout) — re-measure on the deployed site before optimizing; calendar pages read cookies, so Next sends `Cache-Control: no-store` and they miss the back/forward cache; locally (no Vercel timezone header) a first calendar visit regroups days after hydration (CLS ≈ 0.06).
 
 ## Do not
 
