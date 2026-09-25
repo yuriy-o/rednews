@@ -34,7 +34,8 @@ export interface CalendarEventDto {
   forecast: string | null;
   previous: string | null;
   revision: string | null;
-  actualBetterWorse: number | null;
+  /** Actual vs forecast, from the trader's point of view for this currency. */
+  outcome: Outcome | null;
   notice: string | null;
   ebaseId: number | null;
   url: string | null;
@@ -58,6 +59,16 @@ function weekStartOf(tsSec: number): string {
   return addDays(nyDate(tsSec), -Math.max(0, WEEKDAYS.indexOf(wd)));
 }
 
+export type Outcome = 'better' | 'worse' | 'neutral';
+
+// ForexFactory's actualBetterWorse code: 1 = better, 2 = worse, 0 = in line with forecast.
+function toOutcome(code: number | null): Outcome | null {
+  if (code === 1) return 'better';
+  if (code === 2) return 'worse';
+  if (code === 0) return 'neutral';
+  return null;
+}
+
 function toDto(e: CalendarEvent): CalendarEventDto {
   return {
     id: e.externalId,
@@ -69,7 +80,7 @@ function toDto(e: CalendarEvent): CalendarEventDto {
     forecast: e.forecast,
     previous: e.previous,
     revision: e.revision,
-    actualBetterWorse: e.actualBetterWorse,
+    outcome: e.actual ? toOutcome(e.actualBetterWorse) : null,
     notice: e.notice,
     ebaseId: e.ebaseId,
     url: e.soloUrl ? `${FF_BASE}${e.soloUrl}` : null,

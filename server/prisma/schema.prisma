@@ -141,7 +141,7 @@ model CalendarEvent {
   // ForexFactory extras (HTML calendar only; null for feed-fallback rows)
   ebaseId           Int?              // FF indicator id — stable across releases, keys details/graph
   revision          String?           // revised previous value
-  actualBetterWorse Int?              // 1 better than forecast, -1 worse, 0 neutral
+  actualBetterWorse Int?              // raw FF code: 1 better than forecast, 2 worse, 0 in line
   notice            String?
   soloUrl           String?
 

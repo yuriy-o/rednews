@@ -14,8 +14,8 @@ export interface CalendarEvent {
   forecast: string | null;
   previous: string | null;
   revision: string | null;
-  /** 1 better than forecast, -1 worse, 0 neutral, null unknown. */
-  actualBetterWorse: number | null;
+  /** Actual vs forecast; null until the actual is released. */
+  outcome: 'better' | 'worse' | 'neutral' | null;
   notice: string | null;
   ebaseId: number | null;
   url: string | null;
