@@ -20,7 +20,7 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
       <div className="container site-header__inner">
         <Link href={localePath(locale)} className="brand">
           <Image src="/red-news-logo-128.png" alt="" width={28} height={28} priority />
-          <span>{dict.meta.siteName}</span>
+          <span className="brand__name">{dict.meta.siteName}</span>
         </Link>
         <nav aria-label="Main">
           <ul className="nav-list">
@@ -32,11 +32,18 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
           </ul>
         </nav>
         <div className="site-header__actions">
-          <ThemeToggle label={dict.theme.toggle} />
+          <span className="header-theme">
+            <ThemeToggle label={dict.theme.toggle} />
+          </span>
           <a className="button button--primary button--sm" href={CHROME_STORE_URL} target="_blank" rel="noopener">
             {dict.nav.install}
           </a>
-          <MobileNav items={nav} openLabel={dict.nav.menuOpen} closeLabel={dict.nav.menuClose} />
+          <MobileNav
+            items={nav}
+            openLabel={dict.nav.menuOpen}
+            closeLabel={dict.nav.menuClose}
+            theme={{ label: dict.theme.label, toggle: dict.theme.toggle }}
+          />
         </div>
       </div>
     </header>

@@ -4,15 +4,17 @@ import { useEffect, useId, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
+import { ThemeToggle } from './theme';
 
 interface Props {
   items: { href: string; label: string }[];
   openLabel: string;
   closeLabel: string;
+  theme: { label: string; toggle: string };
 }
 
 /** Header navigation for narrow screens, where the inline nav is hidden. */
-export function MobileNav({ items, openLabel, closeLabel }: Props) {
+export function MobileNav({ items, openLabel, closeLabel, theme }: Props) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const listId = useId();
@@ -28,8 +30,10 @@ export function MobileNav({ items, openLabel, closeLabel }: Props) {
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false);
+    // composedPath is captured at dispatch: toggling the theme swaps its icon, so by the time this
+    // runs the clicked <svg> is detached and `contains(target)` would wrongly report an outside click.
     const onClick = (e: MouseEvent) => {
-      if (!rootRef.current?.contains(e.target as Node)) setOpen(false);
+      if (rootRef.current && !e.composedPath().includes(rootRef.current)) setOpen(false);
     };
     document.addEventListener('keydown', onKey);
     document.addEventListener('click', onClick);
@@ -59,6 +63,11 @@ export function MobileNav({ items, openLabel, closeLabel }: Props) {
             </Link>
           </li>
         ))}
+        {/* On the narrowest screens the header's theme button lives here instead. */}
+        <li className="mobile-nav__theme">
+          <span>{theme.label}</span>
+          <ThemeToggle label={theme.toggle} />
+        </li>
       </ul>
     </div>
   );

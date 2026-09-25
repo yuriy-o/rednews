@@ -241,10 +241,36 @@ html {
     gap: 4px;
   }
 }
-@media (max-width: 400px) {
+.mobile-nav__theme {
+  display: none;
+}
+@media (max-width: 480px) {
+  /* Theme switch moves into the menu so the header row never collides with the logo. */
+  .header-theme {
+    display: none;
+  }
+  .mobile-nav__theme {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 8px 0;
+    color: var(--fg-muted);
+    font-weight: 500;
+  }
   .site-header .button--sm {
     padding-inline: 10px;
     font-size: 0.8125rem;
+  }
+}
+@media (max-width: 319px) {
+  /* Logo mark only; the name stays for screen readers. */
+  .brand__name {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
   }
 }
 
@@ -321,11 +347,19 @@ html {
 .hero {
   padding-block: 48px 32px;
 }
-/* Two authored lines at laptop widths (contract + user); sized so the longer line fits the container. */
-.hero__title {
-  font-size: clamp(2.25rem, 1rem + 3.4vw, 3.5rem);
+/*
+ * Two authored lines at laptop widths (contract + user). Sized from the hero's own width (cqi),
+ * not the viewport or root font size: the longer line is ~16em wide, so 5.8cqi keeps it at ~93%
+ * of the container whatever the page zoom, OS scaling or browser font-size setting.
+ */
+.hero {
+  container-type: inline-size;
 }
-@media (min-width: 900px) {
+.hero__title {
+  font-size: clamp(2.25rem, 5.8cqi, 3.5rem);
+}
+/* Force the authored break only once the fluid size (5.8cqi) is above the 2.25rem floor. */
+@container (min-width: 39rem) {
   .hero__line {
     display: block;
   }
