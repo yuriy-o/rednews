@@ -1,6 +1,6 @@
 # Design
 
-> **Status: v0 foundation (2026-09-25).** Direction chosen, tokens set; per impeccable, this file is finalized from the built home and calendar pages. Product truth lives in [PRODUCT.md](PRODUCT.md); per-page strategy in [design/briefs/](design/briefs/).
+> **Status: v1 (2026-09-26)** — documented from the built home page after an independent finish review (verdict: ship) and Lighthouse (accessibility 100, best practices 100, CLS ≤ 0.003). The calendar page extends this system; update this file when it ships. Product truth lives in [PRODUCT.md](PRODUCT.md); per-page strategy in [design/briefs/](design/briefs/).
 
 ## World: chart-native
 
@@ -44,13 +44,14 @@ One family: **Archivo** (variable: `wdth` 62–125, `wght` 100–900), self-host
 
 | Role | Size | Weight | Width | Tracking |
 |---|---|---|---|---|
-| Display (h1) | `clamp(2.25rem, 1.4rem + 3.2vw, 4rem)` | 620 | 112 | -0.03em |
+| Display (h1) | `clamp(2.25rem, 1.4rem + 3.2vw, 4rem)`; hero h1 `clamp(2.25rem, 5.8cqi, 3.5rem)` | 620 | 112 | -0.03em |
 | H2 | `clamp(1.5rem, 1.1rem + 1.4vw, 2.25rem)` | 600 | 108 | -0.02em |
 | H3 | 1.125rem | 600 | 100 | -0.01em |
 | Body | 1rem / 1.6 | 400 | 100 | 0 |
 | Small / UI | 0.875rem | 450 | 100 | 0 |
 | Data / axis | 0.8125rem | 500 | 82 | 0.01em, `tabular-nums` |
 
+- **Fluid vs fixed type by mode.** Persuade surfaces (home, pricing) may use fluid display sizes. Size an authored multi-line headline from its **container** (`cqi` + `container-type: inline-size`), never from `vw`: page zoom, OS scaling and a larger browser font otherwise push a line past the container (a two-line hero broke into three this way). Apply authored breaks with a container query at the width where the fluid size clears its floor. Operate surfaces (calendar, account) use the fixed rem scale — no fluid headings.
 - All numerals in data (times, values, prices) use `font-variant-numeric: tabular-nums`.
 - Body measure 65–75ch; more space above a heading than below it.
 - **Non-Latin scripts:** Archivo covers Latin and Vietnamese only. When uk, el, ar, ur, hi, ja, ko or zh-CN ship, each gets a matching script font (e.g. a Noto family per script) in the stack; until then the OS font renders them.
@@ -63,7 +64,17 @@ One family: **Archivo** (variable: `wdth` 62–125, `wght` 100–900), self-host
 - Depth comes from the ground steps (`--bg` → `--bg-raised`) and hairlines, not shadows. Popovers only: `0 8px 24px -8px rgb(0 0 0 / 0.35)`.
 - Logical properties only (`inline`/`block`) — Arabic and Urdu are RTL.
 
-## Components (principles)
+## Components
+
+Built and reviewed (home page):
+
+- **Week chart** (`components/home/week-chart.tsx`): neutral illustrative price path (labelled as such) that stops at *Now*; releases at the same minute share one line. Past releases: faded line + outlined flag (`--bg-raised` fill, `--red-text`); upcoming: solid flag in `--red-button`. Colliding flags stack in up to three rows. The crosshair follows the pointer instantly (no easing — it tracks input) and snaps within 18px; the card shows local time, countdown for upcoming, actual/forecast/previous (grid omitted for speeches). Keyboard: Tab to flags, Escape closes. Time runs left to right even in RTL. Flag text order is *currency, +N, title*, and the accessible name begins with the visible text (WCAG 2.5.3). Narrow screens: flags show currency only; the card docks at the bottom; axis labels thin to every other day.
+- **Example strips** (`components/home/alert-strip.tsx`): chart-grammar illustrations labelled "Example" — reminders before a release line (reminders near the release open leftward; stacked on narrow screens) and filter toggles whose state is fill + weight + strike-through, never colour alone.
+- **Lists instead of cards:** features and "Coming up" are hairline-separated rows; no icon-tile grids.
+- **Header:** ≥721px inline nav; ≤720px a menu button (disclosure, closes on route change, Escape and outside click — use `composedPath`, since toggles inside swap their icons); ≤480px the theme switch moves into that menu; ≤319px the logo mark only (name kept for screen readers).
+- **Language switcher (planned, ships with the second language):** next to the theme switch on wide screens; inside the mobile menu on narrow ones. Shows native language names, links to the same page in the other locale and saves the choice in the `rn-locale` cookie the proxy already reads. Hidden while only English is enabled.
+
+Principles:
 
 - **News line:** 1px vertical `--red` line from the time axis to the top of the chart, with a flag (folder tab) at the top: currency + short title in the data style. Hover/focus opens a card: local time, actual vs forecast vs previous, better/worse icon.
 - **Buttons:** primary = red fill, white text; secondary = transparent with `--line` border. Height 40px (36px in the header). No gradients, no glow.
@@ -76,6 +87,10 @@ One family: **Archivo** (variable: `wdth` 62–125, `wght` 100–900), self-host
 - One authored moment per page. Home: the crosshair that follows the pointer over the chart and snaps to news lines.
 - Ease-out exponential (`cubic-bezier(0.16, 1, 0.3, 1)`), 150–250ms for UI, from an already-visible default; nothing animates in from invisible.
 - `prefers-reduced-motion`: no crosshair motion, no transitions beyond opacity.
+
+## Quality gates
+
+Before a page ships: independent finish review (fresh context, not the builder); Lighthouse accessibility 100, CLS < 0.05; no horizontal overflow at 320px (including 125% zoom, i.e. ~256px); headings in order; text contrast re-measured for any new token use. Known open item: mobile Lighthouse performance varies 75–85 locally (main-thread style/layout); re-measure on the deployed site before optimizing.
 
 ## Do not
 
