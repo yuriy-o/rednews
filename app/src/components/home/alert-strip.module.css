@@ -24,7 +24,7 @@
   position: absolute;
   inset-block-start: 10px;
   inset-inline-start: 12px;
-  color: var(--fg-faint);
+  color: var(--fg-muted);
   font-size: 0.75rem;
   font-weight: 500;
   font-stretch: 86%;

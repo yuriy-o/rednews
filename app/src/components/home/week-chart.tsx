@@ -213,8 +213,14 @@ export function WeekChart({ lines, domain, path, locale, t }: Props) {
                 type="button"
                 className={styles.flag}
                 style={{ insetBlockStart: `${8 + levels[i]! * 30}px` }}
-                // Full name for screen readers even when narrow screens show only the currency.
-                aria-label={l.events.map(e => `${e.currency} ${e.title}`).join(', ')}
+                // Starts with exactly the visible text (WCAG 2.5.3 Label in Name, so voice control
+                // matches), then names every release — narrow screens show only the currency.
+                // "+N" sits right after the currency, so the visible text is a prefix of this
+                // name whether or not the title is shown.
+                aria-label={[
+                  `${first.currency}${l.events.length > 1 ? ` +${l.events.length - 1}` : ''} ${first.title}`,
+                  ...l.events.slice(1).map(e => `${e.currency} ${e.title}`),
+                ].join(', ')}
                 aria-describedby={active === i ? cardId : undefined}
                 onFocus={() => {
                   setActive(i);
@@ -224,10 +230,13 @@ export function WeekChart({ lines, domain, path, locale, t }: Props) {
                 onClick={() => setActive(i)}
               >
                 <span className={styles.ccy}>{first.currency}</span>
-                <span className={styles.title}>{first.title}</span>
                 {l.events.length > 1 && (
-                  <span className={styles.more}>+{l.events.length - 1}</span>
-                )}
+                  <>
+                    {' '}
+                    <span className={styles.more}>+{l.events.length - 1}</span>
+                  </>
+                )}{' '}
+                <span className={styles.title}>{first.title}</span>
               </button>
             </div>
           );
