@@ -5,14 +5,18 @@ import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
 import { JwtStrategy } from './strategies/jwt.strategy';
 import { PrismaModule } from '../common/prisma/prisma.module';
+import { requireEnv } from '../common/env';
 
 @Module({
   imports: [
     PrismaModule,
     PassportModule,
-    JwtModule.register({
-      secret: process.env.JWT_SECRET || 'your-secret-key',
-      signOptions: { expiresIn: '7d' },
+    // Async so the secret is read after ConfigModule has loaded .env files.
+    JwtModule.registerAsync({
+      useFactory: () => ({
+        secret: requireEnv('JWT_SECRET'),
+        signOptions: { expiresIn: '7d' },
+      }),
     }),
   ],
   controllers: [AuthController],

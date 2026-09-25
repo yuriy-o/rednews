@@ -57,10 +57,15 @@ The calendar is not a separate screen the trader has to watch: Red News puts red
 
 **Terminology:** "red folder news" = high-impact events; impact levels High / Medium / Low / Holiday; Actual / Forecast / Previous / Revision.
 
-**Open decisions (do not assume):**
-- Account system: the extension authenticates via Supabase; the new API has its own Google OAuth + JWT. Settings sync requires deciding which one is the source of truth.
-- Domain: whether the new site replaces `rednews.app` or lives on a subdomain first.
-- Scope and data sources for "analysis, forecasts, statistics".
+**Analysis (planned, build later):**
+- Per-event AI outlook — "what to expect from this release"; already in the extension via the user's own Gemini/Groq key.
+- Historical reaction analysis — how price moved after similar past releases of the same indicator (FF `ebaseId` links releases). Needs a price-history source that is not chosen yet.
+
+**Direction agreed, implement at the account-area stage:**
+- One account system: Supabase Auth (already used by the extension) is the identity provider; the site signs in through Supabase and the NestJS API verifies Supabase-issued JWTs instead of minting its own. Entitlements come from the same source.
+- Domain: launch on a subdomain of rednews.app first, move to `rednews.app` later — canonical URLs and SEO setup must make that move cheap.
+
+**Open (do not assume):** price-data source for historical analysis; exact scope of statistics.
 
 ## Brand Commitments
 
