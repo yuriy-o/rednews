@@ -1,17 +1,9 @@
 'use client';
 
-import { useSyncExternalStore } from 'react';
 import { ArrowDown, ArrowUp } from 'lucide-react';
 import type { CalendarEvent } from '@/lib/api';
 import type { Dictionary } from '@/i18n/dictionaries';
-
-const noopSubscribe = () => () => {};
-const browserTimeZone = () => Intl.DateTimeFormat().resolvedOptions().timeZone;
-
-/** Renders in UTC on the server (crawlers, first paint), then in the visitor's own timezone. */
-function useTimeZone(): string {
-  return useSyncExternalStore(noopSubscribe, browserTimeZone, () => 'UTC');
-}
+import { useTimeZone } from '@/lib/use-time';
 
 interface Props {
   events: CalendarEvent[];

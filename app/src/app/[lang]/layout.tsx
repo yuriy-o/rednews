@@ -4,6 +4,7 @@ import { getDictionary, getLocale } from '@/i18n/dictionaries';
 import { siteUrl } from '@/lib/seo';
 import { ThemeScript } from '@/components/theme-script';
 import { SiteHeader } from '@/components/site-header';
+import { SiteFooter } from '@/components/site-footer';
 import { archivo } from '../fonts';
 import '../globals.css';
 
@@ -43,6 +44,7 @@ export default async function RootLayout({ children }: LayoutProps<'/[lang]'>) {
         </a>
         <SiteHeader locale={locale} dict={dict} />
         <main id="main">{children}</main>
+        <SiteFooter locale={locale} dict={dict} />
       </body>
     </html>
   );

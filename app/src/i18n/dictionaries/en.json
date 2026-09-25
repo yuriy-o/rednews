@@ -32,7 +32,67 @@
   },
   "home": {
     "title": "Red folder news alerts, right on your TradingView chart.",
-    "lead": "High-impact news on your chart, without a second screen."
+    "lead": "Red News draws high-impact economic releases on your chart and warns you before they land. No second screen.",
+    "cta": "Add to Chrome — it's free",
+    "ctaSecondary": "See this week's calendar",
+    "chart": {
+      "caption": "This week's high-impact releases, live from the calendar. The price line is illustrative.",
+      "unavailable": "Live releases are loading. The calendar will be back in a moment.",
+      "now": "Now",
+      "in": "in",
+      "actual": "Actual",
+      "forecast": "Forecast",
+      "previous": "Previous",
+      "better": "Better than forecast",
+      "worse": "Worse than forecast"
+    },
+    "features": {
+      "title": "Everything happens on the chart",
+      "lead": "Red News works inside TradingView, where you already are.",
+      "items": [
+        { "title": "News lines on your chart", "body": "Every release is drawn as a vertical line at the candle it lands on, colour-coded by impact." },
+        { "title": "Alerts before the release", "body": "On-chart, desktop and sound alerts, plus Telegram, minutes before the number hits. Premium." },
+        { "title": "Actual, forecast, previous", "body": "Hover a line to see the numbers without leaving the chart." },
+        { "title": "Only what you trade", "body": "Filter by currency and impact level, so a quiet week stays quiet." },
+        { "title": "Multi-chart layouts", "body": "Lines appear on every pane of a multi-chart layout." },
+        { "title": "Your own AI", "body": "Connect a Gemini or Groq key and ask what to expect from a release." }
+      ]
+    },
+    "upcoming": {
+      "title": "Coming up",
+      "lead": "The next releases, in your timezone.",
+      "empty": "No more releases this week.",
+      "forecast": "F",
+      "in": "in",
+      "all": "Full calendar"
+    },
+    "plans": {
+      "title": "Start free. Add alerts when you're ready.",
+      "free": {
+        "name": "Free",
+        "price": "$0",
+        "period": "forever",
+        "items": ["News lines on your chart", "Colour-coded impact levels", "Actual / forecast / previous tooltips", "Currency and impact filters", "22 interface languages"]
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "$4.99",
+        "period": "per month, or $39 per year",
+        "items": ["Everything in Free", "Pre-news alerts: on-chart, desktop and sound", "Telegram alerts", "Full calendar range: extended history and future events", "Priority support"]
+      },
+      "trial": "14-day Premium trial. No card required.",
+      "more": "Compare plans"
+    },
+    "close": {
+      "title": "Put the calendar where you already look.",
+      "lead": "Install in under a minute. Open a chart. The week's releases are already there."
+    }
+  },
+  "footer": {
+    "source": "Calendar data: Forex Factory.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "refund": "Refunds"
   },
   "calendar": {
     "title": "Economic calendar",

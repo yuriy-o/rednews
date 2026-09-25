@@ -1,0 +1,239 @@
+.chart {
+  margin: 0;
+}
+
+.plot {
+  position: relative;
+  block-size: clamp(300px, 46vh, 460px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  background: var(--bg-raised);
+  overflow: hidden;
+  touch-action: pan-y;
+  cursor: crosshair;
+}
+
+.svg {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+}
+.grid {
+  stroke: var(--grid);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+.price {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+/* News line: hairline from the axis to the top, flag above. */
+.news {
+  position: absolute;
+  inset-block: 0;
+  inline-size: 0;
+}
+.news::before {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: -0.5px;
+  inline-size: 1px;
+  background: var(--red);
+}
+.news[data-past]::before {
+  opacity: 0.55;
+}
+.news[data-active]::before {
+  inline-size: 2px;
+  inset-inline-start: -1px;
+  opacity: 1;
+}
+
+.flag {
+  position: absolute;
+  inset-inline-start: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  max-inline-size: 168px;
+  block-size: 24px;
+  padding-inline: 6px 8px;
+  border-radius: 0 4px 4px 0;
+  /* Button red, not brand red: white 12px text needs 4.5:1 (brand red gives 4.31). */
+  background: var(--red-button);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-stretch: 86%;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform 150ms var(--ease-out);
+}
+/* Released: outlined instead of a washed-out fill, so the text keeps its contrast. */
+.news[data-past] .flag {
+  background: var(--bg-raised);
+  color: var(--red-text);
+  box-shadow: inset 0 0 0 1px var(--red);
+}
+.news[data-active] .flag {
+  z-index: 2;
+  background: var(--red-button);
+  color: #fff;
+  box-shadow: none;
+  transform: translateX(2px);
+}
+.flag:focus-visible {
+  outline-offset: 1px;
+}
+.ccy {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.more {
+  opacity: 0.85;
+}
+
+.now {
+  position: absolute;
+  inset-block: 0;
+  border-inline-start: 1px dashed var(--fg-faint);
+  pointer-events: none;
+}
+.now span {
+  position: absolute;
+  inset-block-end: 8px;
+  inset-inline-start: 6px;
+  color: var(--fg-muted);
+}
+
+.crosshair {
+  position: absolute;
+  inset-block: 0;
+  border-inline-start: 1px solid var(--fg-faint);
+  pointer-events: none;
+  opacity: 0.7;
+}
+.axisTag {
+  position: absolute;
+  inset-block-end: 0;
+  translate: -50% 0;
+  padding: 2px 6px;
+  border-radius: 3px 3px 0 0;
+  background: var(--fg);
+  color: var(--bg);
+  white-space: nowrap;
+}
+
+.card {
+  position: absolute;
+  inset-block-start: 112px;
+  z-index: 3;
+  inline-size: min(300px, 70vw);
+  margin-inline-start: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  background: var(--bg);
+  box-shadow: var(--shadow-pop);
+  pointer-events: none;
+}
+.card[data-flip] {
+  translate: calc(-100% - 24px) 0;
+}
+.cardTime {
+  color: var(--fg-muted);
+}
+.cardEvent + .cardEvent {
+  margin-block-start: 10px;
+  padding-block-start: 10px;
+  border-block-start: 1px solid var(--grid);
+}
+.cardTitle {
+  margin-block: 4px 8px;
+  font-size: 0.875rem;
+  font-weight: 550;
+  line-height: 1.35;
+}
+.cardTitle .ccy {
+  color: var(--red-text);
+}
+.values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.values dt {
+  color: var(--fg-muted);
+  font-weight: 450;
+}
+.values dd {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: var(--fg);
+  font-size: 0.875rem;
+}
+.better {
+  color: var(--better);
+}
+.worse {
+  color: var(--worse);
+}
+
+.axis {
+  position: relative;
+  block-size: 28px;
+  color: var(--fg-muted);
+}
+.axis span {
+  position: absolute;
+  inset-block-start: 6px;
+  translate: -50% 0;
+  white-space: nowrap;
+}
+
+.caption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--fg-muted);
+  font-size: 0.8125rem;
+}
+.legend {
+  inline-size: 14px;
+  block-size: 2px;
+  background: var(--red);
+}
+
+@media (max-width: 640px) {
+  .title {
+    display: none;
+  }
+  .flag {
+    padding-inline: 6px;
+  }
+  .card {
+    inset-block-start: auto;
+    inset-block-end: 12px;
+    inset-inline: 12px !important;
+    inline-size: auto;
+    margin: 0;
+    translate: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flag {
+    transition: none;
+  }
+}

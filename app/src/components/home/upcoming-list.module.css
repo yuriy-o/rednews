@@ -1,0 +1,69 @@
+.list {
+  border-block-start: 1px solid var(--line);
+}
+.row {
+  display: grid;
+  grid-template-columns: 9rem 6.5rem 1fr 9rem 6rem;
+  align-items: baseline;
+  gap: 16px;
+  padding-block: 14px;
+  border-block-end: 1px solid var(--grid);
+}
+.row time,
+.meta,
+.countdown {
+  color: var(--fg-muted);
+}
+.countdown {
+  text-align: end;
+}
+.impact {
+  font-size: 0.875rem;
+}
+.event {
+  font-weight: 500;
+}
+.ccy {
+  margin-inline-end: 4px;
+  color: var(--fg-muted);
+  font-weight: 600;
+  font-stretch: 86%;
+}
+.empty {
+  color: var(--fg-muted);
+}
+
+/* Narrow screens: impact stays visible as its flag next to the time; the label stays for screen readers. */
+@media (max-width: 720px) {
+  .row {
+    grid-template-columns: auto 1fr auto;
+    gap: 4px 10px;
+  }
+  .impact {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .row time {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .countdown {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .event {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  .meta {
+    display: none;
+  }
+  .impactLabel {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
