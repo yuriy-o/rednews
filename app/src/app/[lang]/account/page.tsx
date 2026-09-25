@@ -11,7 +11,7 @@ export default async function AccountPage() {
   const dict = await getDictionary();
   return (
     <div className="container page">
-      <h1>{dict.account.title}</h1>
+      <h1 className="h2">{dict.account.title}</h1>
       <p className="lead">{dict.account.lead}</p>
     </div>
   );

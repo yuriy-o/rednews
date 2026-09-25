@@ -31,7 +31,7 @@ export default async function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
       />
-      <h1>{dict.home.title}</h1>
+      <h1 className="display">{dict.home.title}</h1>
       <p className="lead">{dict.home.lead}</p>
       <p className="actions">
         <a className="button button--primary" href={CHROME_STORE_URL} target="_blank" rel="noopener">

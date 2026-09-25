@@ -11,7 +11,7 @@ export default async function PricingPage() {
   const dict = await getDictionary();
   return (
     <div className="container page">
-      <h1>{dict.pricing.title}</h1>
+      <h1 className="h2">{dict.pricing.title}</h1>
       <p className="lead">{dict.pricing.lead}</p>
     </div>
   );

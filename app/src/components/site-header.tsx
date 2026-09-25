@@ -32,7 +32,7 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
         </nav>
         <div className="site-header__actions">
           <ThemeToggle label={dict.theme.toggle} />
-          <a className="button button--primary" href={CHROME_STORE_URL} target="_blank" rel="noopener">
+          <a className="button button--primary button--sm" href={CHROME_STORE_URL} target="_blank" rel="noopener">
             {dict.nav.install}
           </a>
         </div>

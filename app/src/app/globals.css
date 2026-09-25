@@ -1,87 +1,158 @@
 @import 'tailwindcss';
 
 /*
- * Provisional tokens carried over from the legacy site so the scaffold is usable.
- * The real palette, type scale and spacing come from DESIGN.md (impeccable) next.
- * Use logical properties (inline/block) everywhere: ar and ur render right-to-left.
+ * Tokens: see app/DESIGN.md (chart-native world). Every text colour is contrast-measured on
+ * --bg and --bg-raised — re-measure after changing one. Logical properties only (RTL locales).
  */
 :root {
-  --brand: #e5352b;
   --bg: #ffffff;
-  --bg-elev: #f6f8fa;
-  --line: rgba(16, 24, 40, 0.12);
-  --fg: #1a1d21;
-  --fg-dim: #5b6672;
-  --brand-text: #c52a20;
-  --better: #0f8a7e;
-  --worse: #c52a20;
-  --radius: 10px;
-  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --bg-raised: #f5f7f9;
+  --grid: #e9edf1;
+  --line: #dce1e7;
+  --fg: #111418;
+  --fg-muted: #58616c;
+  --fg-faint: #7c8590;
+  --ink: #8a939e;
+  --red: #e5352b;
+  --red-button: #de332a;
+  --red-text: #c42a20;
+  --red-soft: rgb(229 53 43 / 0.1);
+  --impact-medium: #ab5c10;
+  --impact-low: #886f09;
+  --impact-holiday: #7c8590;
+  --better: #0e7f74;
+  --worse: #c2255c;
+
+  --font-sans: var(--font-archivo), system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --radius-control: 6px;
+  --radius-panel: 10px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-pop: 0 8px 24px -8px rgb(0 0 0 / 0.35);
 }
 
 :root[data-theme='dark'] {
-  --bg: #0b0e11;
-  --bg-elev: #12161c;
-  --line: rgba(255, 255, 255, 0.08);
-  --fg: #e6e8eb;
-  --fg-dim: #8b95a1;
-  --brand-text: #ff6a5e;
-  --better: #26a69a;
-  --worse: #ff6a5e;
+  --bg: #0e1116;
+  --bg-raised: #151a21;
+  --grid: #1d232c;
+  --line: #262d37;
+  --fg: #e7eaee;
+  --fg-muted: #98a2ae;
+  --fg-faint: #6f7985;
+  --ink: #5d6772;
+  --red-text: #ff6b5f;
+  --red-soft: rgb(229 53 43 / 0.16);
+  --impact-medium: #f0923a;
+  --impact-low: #d9b53c;
+  --impact-holiday: #6f7985;
+  --better: #2bb3a3;
+  --worse: #f06595;
 }
 
+/* Base */
 html {
   background: var(--bg);
   color: var(--fg);
   font-family: var(--font-sans);
+  font-size: 100%;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
-
 body {
   min-block-size: 100dvh;
 }
-
 a {
   color: inherit;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+}
+h1,
+h2,
+h3 {
+  text-wrap: balance;
 }
 
-.container {
-  max-inline-size: 1120px;
-  margin-inline: auto;
-  padding-inline: 20px;
+/* Browser surfaces carry the design too */
+::selection {
+  background: var(--red-soft);
+  color: var(--fg);
+}
+:focus-visible {
+  outline: 2px solid var(--red-text);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+html {
+  caret-color: var(--red);
+  scrollbar-color: var(--line) transparent;
+  scrollbar-width: thin;
 }
 
-.page {
-  padding-block: 48px;
+/* Type scale (DESIGN.md) */
+.display {
+  font-size: clamp(2.25rem, 1.4rem + 3.2vw, 4rem);
+  font-weight: 620;
+  font-stretch: 112%;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
 }
-
-.page h1 {
-  font-size: clamp(1.75rem, 1.2rem + 2vw, 2.75rem);
-  font-weight: 650;
+.h2 {
+  font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.25rem);
+  font-weight: 600;
+  font-stretch: 108%;
   letter-spacing: -0.02em;
   line-height: 1.15;
 }
-
 .lead {
-  margin-block-start: 12px;
-  color: var(--fg-dim);
+  max-inline-size: 60ch;
+  color: var(--fg-muted);
   font-size: 1.125rem;
 }
+.data {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  font-stretch: 82%;
+  letter-spacing: 0.01em;
+  font-variant-numeric: tabular-nums;
+}
 
+/* Layout */
+.container {
+  max-inline-size: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+@media (max-width: 480px) {
+  .container {
+    padding-inline: 16px;
+  }
+}
+.page {
+  padding-block: 64px 96px;
+}
+.page > .lead {
+  margin-block-start: 12px;
+}
 .actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 12px;
-  margin-block-start: 28px;
+  margin-block-start: 32px;
 }
 
 .skip-link {
   position: absolute;
   inset-inline-start: 12px;
-  inset-block-start: -40px;
+  inset-block-start: -48px;
+  padding: 8px 12px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
 }
 .skip-link:focus {
   inset-block-start: 12px;
+  z-index: 20;
 }
 
 /* Header */
@@ -90,13 +161,13 @@ a {
   inset-block-start: 0;
   z-index: 10;
   border-block-end: 1px solid var(--line);
-  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: blur(12px);
 }
 .site-header__inner {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 32px;
   block-size: 60px;
 }
 .brand {
@@ -104,17 +175,21 @@ a {
   align-items: center;
   gap: 10px;
   font-weight: 650;
+  font-stretch: 108%;
+  letter-spacing: -0.01em;
   text-decoration: none;
   white-space: nowrap;
 }
 .nav-list {
   display: flex;
-  gap: 20px;
-  color: var(--fg-dim);
-  font-size: 0.9375rem;
+  gap: 24px;
+  color: var(--fg-muted);
+  font-size: 0.875rem;
+  font-weight: 450;
 }
 .nav-list a {
   text-decoration: none;
+  transition: color 150ms var(--ease-out);
 }
 .nav-list a:hover {
   color: var(--fg);
@@ -130,49 +205,63 @@ a {
 .button {
   display: inline-flex;
   align-items: center;
-  block-size: 36px;
-  padding-inline: 14px;
+  gap: 8px;
+  block-size: 40px;
+  padding-inline: 16px;
   border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border-radius: var(--radius-control);
   font-size: 0.9375rem;
   font-weight: 550;
   text-decoration: none;
   white-space: nowrap;
+  transition:
+    background-color 150ms var(--ease-out),
+    border-color 150ms var(--ease-out);
+}
+.button:hover {
+  border-color: var(--fg-faint);
 }
 .button--primary {
   border-color: transparent;
-  background: var(--brand);
+  background: var(--red-button);
   color: #fff;
+}
+.button--primary:hover {
+  border-color: transparent;
+  background: color-mix(in srgb, var(--red-button) 88%, #000);
+}
+.button--sm {
+  block-size: 36px;
+  padding-inline: 12px;
+  font-size: 0.875rem;
 }
 .icon-button {
   display: grid;
   place-items: center;
   inline-size: 36px;
   block-size: 36px;
-  border-radius: var(--radius);
-  color: var(--fg-dim);
+  border-radius: var(--radius-control);
+  color: var(--fg-muted);
   cursor: pointer;
+  transition:
+    color 150ms var(--ease-out),
+    background-color 150ms var(--ease-out);
 }
 .icon-button:hover {
   color: var(--fg);
-  background: var(--bg-elev);
-}
-
-:focus-visible {
-  outline: 2px solid var(--brand);
-  outline-offset: 2px;
+  background: var(--bg-raised);
 }
 
 /* Calendar */
 .calendar {
-  margin-block-start: 32px;
+  margin-block-start: 40px;
 }
 .calendar__tz {
-  color: var(--fg-dim);
-  font-size: 0.8125rem;
+  color: var(--fg-muted);
 }
 .calendar__day {
-  margin-block: 28px 8px;
+  margin-block: 40px 8px;
+  font-size: 1rem;
   font-weight: 600;
 }
 .calendar__table {
@@ -182,39 +271,46 @@ a {
   font-variant-numeric: tabular-nums;
 }
 .calendar__table th {
-  color: var(--fg-dim);
+  color: var(--fg-muted);
+  font-size: 0.8125rem;
   font-weight: 500;
+  font-stretch: 82%;
   text-align: start;
 }
 .calendar__table th,
 .calendar__table td {
-  padding: 8px 10px;
-  border-block-end: 1px solid var(--line);
+  padding: 10px 12px;
+  border-block-end: 1px solid var(--grid);
 }
+.impact {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+/* Folder-tab flag: shape + label, never colour alone. */
 .impact::before {
   content: '';
-  display: inline-block;
-  inline-size: 8px;
+  inline-size: 10px;
   block-size: 8px;
-  margin-inline-end: 6px;
-  border-radius: 2px;
   background: currentColor;
+  clip-path: polygon(0 0, 45% 0, 55% 20%, 100% 20%, 100% 100%, 0 100%);
 }
 .impact--high {
-  color: var(--brand-text);
+  color: var(--red-text);
 }
 .impact--medium {
-  color: #d9822b;
+  color: var(--impact-medium);
 }
 .impact--low {
-  color: #c9a227;
+  color: var(--impact-low);
 }
 .impact--holiday {
-  color: var(--fg-dim);
+  color: var(--impact-holiday);
 }
 .bw {
+  display: inline-block;
   margin-inline-start: 4px;
-  font-size: 0.75em;
+  vertical-align: -2px;
 }
 .bw--better {
   color: var(--better);

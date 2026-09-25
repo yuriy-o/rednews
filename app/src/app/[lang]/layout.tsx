@@ -4,6 +4,7 @@ import { getDictionary, getLocale } from '@/i18n/dictionaries';
 import { siteUrl } from '@/lib/seo';
 import { ThemeScript } from '@/components/theme-script';
 import { SiteHeader } from '@/components/site-header';
+import { archivo } from '../fonts';
 import '../globals.css';
 
 export function generateStaticParams() {
@@ -22,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export const viewport: Viewport = {
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#0b0e11' },
+    { media: '(prefers-color-scheme: dark)', color: '#0e1116' },
   ],
 };
 
@@ -32,7 +33,7 @@ export default async function RootLayout({ children }: LayoutProps<'/[lang]'>) {
 
   return (
     // data-theme is set by ThemeScript before hydration, hence the warning suppression.
-    <html lang={locale} dir={localeDir(locale)} suppressHydrationWarning>
+    <html lang={locale} dir={localeDir(locale)} className={archivo.variable} suppressHydrationWarning>
       <head>
         <ThemeScript />
       </head>

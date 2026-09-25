@@ -21,7 +21,7 @@ export default async function CalendarPage() {
 
   return (
     <div className="container page">
-      <h1>{dict.calendar.title}</h1>
+      <h1 className="h2">{dict.calendar.title}</h1>
       <p className="lead">{dict.calendar.lead}</p>
       {!data ? (
         <p role="status">{dict.calendar.unavailable}</p>

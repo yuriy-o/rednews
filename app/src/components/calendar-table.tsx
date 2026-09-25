@@ -1,6 +1,7 @@
 'use client';
 
 import { useSyncExternalStore } from 'react';
+import { ArrowDown, ArrowUp } from 'lucide-react';
 import type { CalendarEvent } from '@/lib/api';
 import type { Dictionary } from '@/i18n/dictionaries';
 
@@ -31,7 +32,7 @@ export function CalendarTable({ events, locale, t }: Props) {
 
   return (
     <div className="calendar">
-      <p className="calendar__tz">{timeZone}</p>
+      <p className="calendar__tz data">{timeZone}</p>
       {[...days].map(([day, list]) => (
         <section key={day} aria-label={day}>
           <h2 className="calendar__day">{day}</h2>
@@ -61,8 +62,16 @@ export function CalendarTable({ events, locale, t }: Props) {
                   <td>{e.title}</td>
                   <td>
                     {e.actual}
-                    {e.actualBetterWorse === 1 && <span className="bw bw--better" role="img" aria-label={t.better} title={t.better}>▲</span>}
-                    {e.actualBetterWorse === -1 && <span className="bw bw--worse" role="img" aria-label={t.worse} title={t.worse}>▼</span>}
+                    {e.outcome === 'better' && (
+                      <span className="bw bw--better" role="img" aria-label={t.better} title={t.better}>
+                        <ArrowUp size={14} strokeWidth={2} aria-hidden />
+                      </span>
+                    )}
+                    {e.outcome === 'worse' && (
+                      <span className="bw bw--worse" role="img" aria-label={t.worse} title={t.worse}>
+                        <ArrowDown size={14} strokeWidth={2} aria-hidden />
+                      </span>
+                    )}
                   </td>
                   <td>{e.forecast}</td>
                   <td>{e.previous}</td>

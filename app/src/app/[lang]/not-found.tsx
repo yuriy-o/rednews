@@ -6,7 +6,7 @@ export default async function NotFound() {
   const [locale, dict] = await Promise.all([getLocale(), getDictionary()]);
   return (
     <div className="container page">
-      <h1>{dict.notFound.title}</h1>
+      <h1 className="h2">{dict.notFound.title}</h1>
       <p>
         <Link href={localePath(locale)}>{dict.notFound.back}</Link>
       </p>
