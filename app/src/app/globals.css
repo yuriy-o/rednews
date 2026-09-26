@@ -360,6 +360,19 @@ html {
 .hero__title {
   font-size: clamp(2.25rem, 5.8cqi, 3.5rem);
 }
+/* Phones: a tighter, slightly narrower headline (3 lines instead of 4) and a smaller lead. */
+@media (max-width: 640px) {
+  .hero__title {
+    font-size: 1.9rem;
+    font-stretch: 104%;
+    letter-spacing: -0.025em;
+  }
+  .hero__lead {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+}
+
 /* Force the authored break only once the fluid size (5.8cqi) is above the 2.25rem floor. */
 @container (min-width: 39rem) {
   .hero__line {

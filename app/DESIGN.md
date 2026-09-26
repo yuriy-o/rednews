@@ -45,7 +45,7 @@ One family: **Archivo** (variable: `wdth` 62–125, `wght` 100–900), self-host
 
 | Role | Size | Weight | Width | Tracking |
 |---|---|---|---|---|
-| Display (h1) | `clamp(2.25rem, 1.4rem + 3.2vw, 4rem)`; hero h1 `clamp(2.25rem, 5.8cqi, 3.5rem)` | 620 | 112 | -0.03em |
+| Display (h1) | `clamp(2.25rem, 1.4rem + 3.2vw, 4rem)`; hero h1 `clamp(2.25rem, 5.8cqi, 3.5rem)`, phones (≤640px) 1.9rem at width 104% — 3 lines at 320–390px | 620 | 112 | -0.03em |
 | H2 | `clamp(1.5rem, 1.1rem + 1.4vw, 2.25rem)` | 600 | 108 | -0.02em |
 | H3 | 1.125rem | 600 | 100 | -0.01em |
 | Body | 1rem / 1.6 | 400 | 100 | 0 |
@@ -92,7 +92,7 @@ Principles:
 
 ## Quality gates
 
-Before a page ships: independent finish review (fresh context, not the builder); Lighthouse accessibility 100, CLS < 0.05; no horizontal overflow at 320px (including 125% zoom, i.e. ~256px); headings in order; text contrast re-measured for any new token use. Known open items: mobile Lighthouse performance varies 75–85 locally (main-thread style/layout) — re-measure on the deployed site before optimizing; calendar pages read cookies, so Next sends `Cache-Control: no-store` and they miss the back/forward cache; locally (no Vercel timezone header) a first calendar visit regroups days after hydration (CLS ≈ 0.06).
+Before a page ships: independent finish review (fresh context, not the builder); Lighthouse accessibility 100, CLS < 0.05; no horizontal overflow at 320px (including 125% zoom, i.e. ~256px); headings in order; text contrast re-measured for any new token use. Measured on the deployed site (PageSpeed Insights, 2026-09-27): home mobile performance 100, accessibility 100, best practices 100 (SEO 69 only because the Vercel address is deliberately not indexed). Local Lighthouse runs are noisier (66–85) — trust PageSpeed. Known open items: calendar pages read cookies, so Next sends `Cache-Control: no-store` and they miss the back/forward cache; locally (no Vercel timezone header) a first calendar visit regroups days after hydration (CLS ≈ 0.06).
 
 ## Do not
 
