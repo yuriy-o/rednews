@@ -15,6 +15,11 @@
   border-block-end: 1px solid var(--line);
   background: var(--bg);
 }
+/* Wide screens: chip groups and the search row flow inline in the toolbar. */
+.chips,
+.searchRow {
+  display: contents;
+}
 .group {
   display: flex;
   flex-wrap: wrap;
@@ -226,19 +231,82 @@
   color: var(--fg-muted);
 }
 
+/* Outcome arrows: user decision — better/worse than forecast, explained by a tooltip. */
+.outcome {
+  display: inline-flex;
+  cursor: help;
+}
+
+/* A busy day stays scannable: red-folder rows carry a faint tint and a stronger title. */
+.row[data-impact='HIGH'] td {
+  background: color-mix(in srgb, var(--red) 5%, transparent);
+}
+.row[data-impact='HIGH'] .event {
+  font-weight: 650;
+}
+.row[data-impact='HIGH']:hover td {
+  background: color-mix(in srgb, var(--red) 9%, transparent);
+}
+
+.emptyDay {
+  color: var(--fg-muted);
+  font-size: 0.875rem;
+}
+
+/* Day headings stay in view below the header and the sticky toolbar; #today lands below both. */
+.dayRow th {
+  position: sticky;
+  inset-block-start: calc(60px + var(--toolbar-h, 0px));
+  z-index: 1;
+  background: var(--bg);
+}
+.day {
+  scroll-margin-block-start: calc(60px + var(--toolbar-h, 0px) + 8px);
+}
+
 /*
- * Narrow screens: rows become stacked blocks, keeping table semantics.
- * Line 1: time · impact · currency; line 2: event; line 3: actual / forecast / previous.
+ * Narrow screens: rows become stacked blocks on fixed tracks (so columns line up from row to
+ * row), keeping table semantics. The toolbar stops being sticky — the day heading is pinned
+ * instead — and its chips scroll sideways in one row.
  */
 @media (max-width: 720px) {
   .toolbar {
-    inset-block-start: 60px;
-    gap: 8px;
+    position: static;
+    display: grid;
+    gap: 10px;
+  }
+  .chips {
+    display: flex;
+    gap: 10px;
+    margin-inline: -16px;
+    padding-inline: 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .chips::-webkit-scrollbar {
+    display: none;
+  }
+  .group {
+    flex-wrap: nowrap;
+  }
+  .chip {
+    flex: none;
+  }
+  .searchRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
   .search {
     max-inline-size: none;
-    flex-basis: 100%;
   }
+  .dayRow th {
+    inset-block-start: 60px;
+  }
+  .day {
+    scroll-margin-block-start: 68px;
+  }
+
   .table thead {
     position: absolute;
     inline-size: 1px;
@@ -247,18 +315,22 @@
     clip-path: inset(50%);
   }
   .table tbody,
-  .dayRow,
-  .dayRow th {
+  .dayRow {
     display: block;
   }
+  .dayRow th {
+    display: block;
+    padding-inline: 0;
+  }
   .row {
+    position: relative;
     display: grid;
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: 5.25rem 5.75rem 1fr;
     grid-template-areas:
       'time impact ccy'
       'event event event'
       'a f p';
-    gap: 4px 12px;
+    gap: 4px 8px;
     padding-block: 12px;
     border-block-end: 1px solid var(--grid);
   }
@@ -266,12 +338,20 @@
     padding: 0;
     border: 0;
   }
+  .row[data-impact='HIGH'] td {
+    background: none;
+  }
+  .row[data-impact='HIGH'] {
+    background: color-mix(in srgb, var(--red) 5%, transparent);
+  }
   .time {
     grid-area: time;
   }
+  /* Countdown sits at the end of the first line instead of widening the time track. */
   .countdown {
-    display: inline;
-    margin-inline-start: 8px;
+    position: absolute;
+    inset-block-start: 12px;
+    inset-inline-end: 0;
   }
   .impactCell {
     grid-area: impact;
@@ -289,15 +369,15 @@
   .row .num::before {
     content: attr(data-label) ' ';
     color: var(--fg-muted);
-    font-weight: 400;
     font-size: 0.75rem;
+    font-weight: 400;
   }
-  .row .num:empty,
+  /* Empty values keep their track so Forecast and Previous never shift columns. */
   .row .num[data-empty] {
-    display: none;
+    visibility: hidden;
   }
-  .dayRow th {
-    padding-inline: 0;
+  .row[data-novalues] .num {
+    display: none;
   }
   .row td:nth-child(5) {
     grid-area: a;
@@ -308,9 +388,7 @@
   .row td:nth-child(7) {
     grid-area: p;
   }
-  .nowRow {
-    display: block;
-  }
+  .nowRow,
   .nowRow td {
     display: block;
   }

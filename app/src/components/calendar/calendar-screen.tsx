@@ -49,12 +49,35 @@ async function loadWeekView(week: string | undefined) {
   }
   const prev = addDays(ws, -7);
   const next = addDays(ws, 7);
-  return { ws, current, events, premium, prev, next, prevOk: isWeekInWindow(prev, nowMs), nextOk: isWeekInWindow(next, nowMs) };
+  // An arrow exists if either end of the step is inside the window: from the edge week it leads
+  // to the Premium note (never fetched); from a Premium week only back toward the window.
+  const reach = (other: string) => {
+    const otherIn = isWeekInWindow(other, nowMs);
+    return { show: inWindow || otherIn, premium: !otherIn };
+  };
+  return { ws, current, events, premium, prev, next, prevNav: reach(prev), nextNav: reach(next), nowSec: Math.floor(nowMs / 1000) };
+}
+
+function WeekArrow({ href, label, premium, premiumNote, dir }: { href: string; label: string; premium: boolean; premiumNote: string; dir: 'prev' | 'next' }) {
+  const Icon = dir === 'prev' ? ChevronLeft : ChevronRight;
+  return (
+    <Link
+      className="icon-button"
+      href={href}
+      aria-label={premium ? `${label}: ${premiumNote}` : label}
+      title={premium ? premiumNote : label}
+      // Premium weeks are a dead end for crawlers; keep them out of the crawl.
+      rel={premium ? 'nofollow' : undefined}
+      data-premium={premium || undefined}
+    >
+      <Icon size={18} strokeWidth={1.75} aria-hidden />
+    </Link>
+  );
 }
 
 export async function CalendarScreen({ locale, dict, week }: Props) {
   const t = dict.calendar;
-  const [{ ws, current, events, premium, prev, next, prevOk, nextOk }, jar, head] = await Promise.all([
+  const [{ ws, current, events, premium, prev, next, prevNav, nextNav, nowSec }, jar, head] = await Promise.all([
     loadWeekView(week),
     cookies(),
     headers(),
@@ -75,36 +98,18 @@ export async function CalendarScreen({ locale, dict, week }: Props) {
           </p>
         </div>
         <nav className={styles.nav} aria-label={t.weekNav}>
-          {prevOk ? (
-            <Link className="icon-button" href={weekHref(locale, prev, current)} aria-label={t.prevWeek} title={t.prevWeek}>
-              <ChevronLeft size={18} strokeWidth={1.75} aria-hidden />
-            </Link>
+          {prevNav.show ? (
+            <WeekArrow href={weekHref(locale, prev, current)} label={t.prevWeek} premium={prevNav.premium} premiumNote={t.premiumRange} dir="prev" />
           ) : (
-            <span
-              className={`icon-button ${styles.disabled}`}
-              role="img"
-              aria-label={`${t.prevWeek}: ${t.premiumRange}`}
-              title={t.premiumRange}
-            >
-              <ChevronLeft size={18} strokeWidth={1.75} aria-hidden />
-            </span>
+            <span className={styles.navSpacer} aria-hidden="true" />
           )}
           <Link className="button button--sm" href={`${localePath(locale, '/calendar')}#today`}>
             {t.today}
           </Link>
-          {nextOk ? (
-            <Link className="icon-button" href={weekHref(locale, next, current)} aria-label={t.nextWeek} title={t.nextWeek}>
-              <ChevronRight size={18} strokeWidth={1.75} aria-hidden />
-            </Link>
+          {nextNav.show ? (
+            <WeekArrow href={weekHref(locale, next, current)} label={t.nextWeek} premium={nextNav.premium} premiumNote={t.premiumRange} dir="next" />
           ) : (
-            <span
-              className={`icon-button ${styles.disabled}`}
-              role="img"
-              aria-label={`${t.nextWeek}: ${t.premiumRange}`}
-              title={t.premiumRange}
-            >
-              <ChevronRight size={18} strokeWidth={1.75} aria-hidden />
-            </span>
+            <span className={styles.navSpacer} aria-hidden="true" />
           )}
         </nav>
       </div>
@@ -129,7 +134,15 @@ export async function CalendarScreen({ locale, dict, week }: Props) {
       ) : events.length === 0 ? (
         <p className={styles.notice}>{t.empty}</p>
       ) : (
-        <CalendarView events={events} initialFilters={filters} serverTimeZone={serverTimeZone} locale={locale} t={t} />
+        <CalendarView
+          events={events}
+          initialFilters={filters}
+          serverTimeZone={serverTimeZone}
+          serverNow={nowSec}
+          isCurrentWeek={ws === current}
+          locale={locale}
+          t={t}
+        />
       )}
     </div>
   );

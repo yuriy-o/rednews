@@ -288,14 +288,16 @@ export function WeekChart({ lines, domain, path, locale, t }: Props) {
                         {e.outcome === 'better' && (
                           <ArrowUp
                             className={styles.better}
-                            size={13}
+                            size={15}
+                            strokeWidth={2.25}
                             aria-label={t.better}
                           />
                         )}
                         {e.outcome === 'worse' && (
                           <ArrowDown
                             className={styles.worse}
-                            size={13}
+                            size={15}
+                            strokeWidth={2.25}
                             aria-label={t.worse}
                           />
                         )}

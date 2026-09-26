@@ -128,11 +128,14 @@
       "currencies": "Currencies",
       "impacts": "Impact",
       "search": "Search events",
-      "searchPlaceholder": "Search: CPI, Payrolls, Lagarde…",
+      "searchPlaceholder": "Search events",
       "reset": "Reset filters"
     },
     "showing": "{n} of {total} events",
     "noMatch": "No events match these filters.",
+    "noMatchToday": "No events today match these filters.",
+    "revised": "rev.",
+    "revisedTo": "Previous value revised to {v}",
     "empty": "No events for this week yet.",
     "unavailable": "The calendar is temporarily unavailable. Please try again in a minute.",
     "columns": {

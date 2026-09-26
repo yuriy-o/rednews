@@ -34,6 +34,7 @@ Strategy: **Restrained** — neutrals plus one accent. Red is never decoration: 
 
 Rules:
 - **Exception (user decision, 2026-09-25):** the *Premium* plan name is set in `--red-text` in both themes — it marks the paid tier's priority features. Keep it; do not flag it in reviews.
+- **Outcome arrows (user decision, 2026-09-26):** ↑/↓ next to Actual mean *better/worse than forecast* (not the number's direction) — green/rose, 16px, with a tooltip and an accessible name saying so. Keep them; do not flag them in reviews.
 - Impact and better/worse are **never colour alone**: impact carries a label and a flag shape; better/worse carries an up/down icon and an accessible name.
 - Candles and the price path are neutral `--ink`, never red/green: the only red on a chart is news.
 - Every text colour above is measured ≥4.5:1 on both `--bg` and `--bg-raised` (`--fg-faint` and `--red` ≥3:1, so they are for large text, strokes and axis marks only). Re-measure after any token change.
@@ -72,14 +73,14 @@ Built and reviewed (home page):
 - **Example strips** (`components/home/alert-strip.tsx`): chart-grammar illustrations labelled "Example" — reminders before a release line (reminders near the release open leftward; stacked on narrow screens) and filter toggles whose state is fill + weight + strike-through, never colour alone.
 - **Lists instead of cards:** features and "Coming up" are hairline-separated rows; no icon-tile grids.
 - **Header:** ≥721px inline nav; ≤720px a menu button (disclosure, closes on route change, Escape and outside click — use `composedPath`, since toggles inside swap their icons); ≤480px the theme switch moves into that menu; ≤319px the logo mark only (name kept for screen readers).
-- **Calendar** (`components/calendar/`, Operate mode, fixed rem type): one FF week per URL, ← → and Today; sticky filter toolbar (currency and impact toggles with `aria-pressed`, search); days grouped in the visitor's timezone with a *Today* tag, a dashed *Now* rule and a countdown on the next release (neutral colour — the next release may be low impact). Desktop is a semantic `<table>` with right-aligned numbers; ≤720px the same table re-flows into stacked rows (time · impact · currency / event / labelled values). Filters live in the `rn-cal` cookie and the timezone in `rn-tz` (Vercel's `x-vercel-ip-timezone` on a first visit), so the server renders the final list and nothing regroups after hydration. Weeks outside the free window show a Premium note and are never fetched.
+- **Calendar** (`components/calendar/`, Operate mode, fixed rem type): one FF week per URL, ← → and Today; sticky filter toolbar (currency and impact toggles with `aria-pressed`, search); defaults to **High + Medium** (user decision); days grouped in the visitor's timezone (shown as "GMT+3 · Eastern European Time") with pinned day headings, a faint red tint on High rows, a *Today* tag, a dashed *Now* rule and a countdown on the next release (neutral colour — the next release may be low impact). Desktop is a semantic `<table>` with right-aligned numbers; ≤720px the same table re-flows into stacked rows (time · impact · currency / event / labelled values). Filters live in the `rn-cal` cookie and the timezone in `rn-tz` (Vercel's `x-vercel-ip-timezone` on a first visit), so the server renders the final list and nothing regroups after hydration. Weeks outside the free window show a Premium note and are never fetched.
 - **Language switcher (planned, ships with the second language):** next to the theme switch on wide screens; inside the mobile menu on narrow ones. Shows native language names, links to the same page in the other locale and saves the choice in the `rn-locale` cookie the proxy already reads. Hidden while only English is enabled.
 
 Principles:
 
 - **News line:** 1px vertical `--red` line from the time axis to the top of the chart, with a flag (folder tab) at the top: currency + short title in the data style. Hover/focus opens a card: local time, actual vs forecast vs previous, better/worse icon.
 - **Buttons:** primary = red fill, white text; secondary = transparent with `--line` border. Height 40px (36px in the header). No gradients, no glow.
-- **Calendar:** day groups with a hairline time rail; desktop table, mobile stacked rows. Impact as a folder flag + label.
+- **Calendar:** day groups with pinned day headings; desktop table, mobile stacked rows on fixed tracks. Impact as a folder flag + label.
 - **Icons:** one drawn set (Lucide), 1.75px stroke; no Unicode glyphs or emoji as icons.
 - **Browser surfaces themed:** selection (`--red-soft`), focus ring (2px `--red-text`, 2px offset), caret, scrollbars, underline offset.
 

@@ -34,9 +34,12 @@
   align-items: center;
   gap: 4px;
 }
-.disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
+.navSpacer {
+  inline-size: 36px;
+}
+/* The step into Premium stays usable but reads as secondary. */
+.nav a[data-premium] {
+  opacity: 0.55;
 }
 .notice {
   max-inline-size: 60ch;
