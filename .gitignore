@@ -6,6 +6,7 @@ server/dist/
 *.tsbuildinfo
 .tsbuildinfo
 logs__render_com.md
+*-log-export-*.json
 build/
 
 # Environment

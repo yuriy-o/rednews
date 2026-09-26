@@ -63,7 +63,7 @@ The calendar is not a separate screen the trader has to watch: Red News puts red
 
 **Direction agreed, implement at the account-area stage:**
 - One account system: Supabase Auth (already used by the extension) is the identity provider; the site signs in through Supabase and the NestJS API verifies Supabase-issued JWTs instead of minting its own. Entitlements come from the same source.
-- Domain: launch on a subdomain of rednews.app first, move to `rednews.app` later — canonical URLs and SEO setup must make that move cheap.
+- Domain (updated 2026-09-26): test and finish the site on the Vercel address (`https://rednews-drab.vercel.app`, not indexed), then move the finished site to `rednews.app`. No separate beta subdomain. The site URL is one env var (`NEXT_PUBLIC_SITE_URL`); indexing is enabled only on `rednews.app`.
 
 **Open (do not assume):** price-data source for historical analysis; exact scope of statistics.
 
