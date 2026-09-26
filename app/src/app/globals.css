@@ -21,6 +21,7 @@
   --impact-low: #886f09;
   --impact-holiday: #58616c; /* = --fg-muted: text needs 4.5:1 */
   --better: #0e7f74;
+  --high-tint: rgb(229 53 43 / 0.05); /* red-folder rows on busy days */
   --worse: #c2255c;
 
   --font-sans: var(--font-archivo), system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -45,6 +46,7 @@
   --impact-low: #d9b53c;
   --impact-holiday: #98a2ae;
   --better: #2bb3a3;
+  --high-tint: rgb(229 53 43 / 0.11);
   --worse: #f06595;
 }
 

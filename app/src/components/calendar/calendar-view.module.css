@@ -239,13 +239,13 @@
 
 /* A busy day stays scannable: red-folder rows carry a faint tint and a stronger title. */
 .row[data-impact='HIGH'] td {
-  background: color-mix(in srgb, var(--red) 5%, transparent);
+  background: var(--high-tint);
 }
 .row[data-impact='HIGH'] .event {
   font-weight: 650;
 }
 .row[data-impact='HIGH']:hover td {
-  background: color-mix(in srgb, var(--red) 9%, transparent);
+  background: color-mix(in srgb, var(--high-tint), var(--red) 5%);
 }
 
 .emptyDay {
@@ -282,6 +282,10 @@
     padding-inline: 16px;
     overflow-x: auto;
     scrollbar-width: none;
+    mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent);
+  }
+  [dir='rtl'] .chips {
+    mask-image: linear-gradient(to left, #000 calc(100% - 40px), transparent);
   }
   .chips::-webkit-scrollbar {
     display: none;
@@ -300,8 +304,15 @@
   .search {
     max-inline-size: none;
   }
+  /* The heading row is as tall as its cell here, so the row itself sticks inside its day. */
   .dayRow th {
+    position: static;
+  }
+  .dayRow {
+    position: sticky;
     inset-block-start: 60px;
+    z-index: 1;
+    background: var(--bg);
   }
   .day {
     scroll-margin-block-start: 68px;
@@ -325,7 +336,7 @@
   .row {
     position: relative;
     display: grid;
-    grid-template-columns: 5.25rem 5.75rem 1fr;
+    grid-template-columns: 5.25rem 5.75rem minmax(0, 1fr);
     grid-template-areas:
       'time impact ccy'
       'event event event'
@@ -342,7 +353,7 @@
     background: none;
   }
   .row[data-impact='HIGH'] {
-    background: color-mix(in srgb, var(--red) 5%, transparent);
+    background: var(--high-tint);
   }
   .time {
     grid-area: time;
@@ -363,8 +374,15 @@
     grid-area: event;
   }
   .row .num {
+    min-inline-size: 0;
     text-align: start !important;
+    white-space: normal;
+    overflow-wrap: anywhere;
     color: var(--fg);
+  }
+  .event {
+    min-inline-size: 0;
+    overflow-wrap: anywhere;
   }
   .row .num::before {
     content: attr(data-label) ' ';
