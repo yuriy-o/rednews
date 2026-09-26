@@ -45,12 +45,14 @@ export default async function PricingPage() {
       />
 
       <div className="container page">
-        <h1 id="pricing-title" className="display">
-          {t.lead}
-        </h1>
-        <p className="lead">{t.intro}</p>
+        <div className="pricing-hero">
+          <h1 id="pricing-title" className="display hero__title">
+            {t.lead}
+          </h1>
+          <p className="lead">{t.intro}</p>
+        </div>
 
-        <section className="band pricing-plans" aria-labelledby="pricing-title">
+        <section className="pricing-plans" aria-labelledby="pricing-title">
           <div className="plans">
             {/* Free Plan */}
             <div className="plans__plan">

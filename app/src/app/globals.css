@@ -595,9 +595,19 @@ html {
 
 /* Pricing page — accent treatment is scoped to .pricing-plans so it never leaks into home's
    plan teaser, which shares the same .plans/[data-premium] markup at a plainer, list-only style. */
+.pricing-hero {
+  /* Establishes the query container .hero__title sizes itself from — same fluid curve and
+     phone-width override as home's h1, without pulling in .hero's own section padding. */
+  container-type: inline-size;
+}
+.pricing-hero .lead {
+  margin-block-start: 12px;
+}
 .pricing-plans .plans {
   border: 0;
   gap: 24px;
+  /* .plans already carries margin-block-start: 40px — right after the lead, not a full
+     .band (112px) section break, since there's no large block between them to separate. */
 }
 .pricing-plans .plans__plan {
   display: flex;
@@ -605,12 +615,8 @@ html {
   padding: 32px 32px 36px;
   border: 1px solid var(--line);
   border-radius: var(--radius-panel);
-}
-/* Neutralise the divider-layout rule (base .plans__plan + .plans__plan): cards get a full
-   border instead, so the leftover inline-start border and padding must not also apply. */
-.pricing-plans .plans__plan + .plans__plan {
-  padding-inline-start: 32px;
-  border-inline-start: 1px solid var(--line);
+  /* Same specificity as the base divider rule (.plans__plan + .plans__plan) but declared
+     later, so this full border/padding wins outright — no extra override rule needed. */
 }
 .pricing-plans .plans__foot {
   margin-block-start: auto;
