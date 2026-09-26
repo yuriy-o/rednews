@@ -384,8 +384,10 @@
     min-inline-size: 0;
     overflow-wrap: anywhere;
   }
+  /* Label above its value, always — so a long value never splits from its label and rows keep one shape. */
   .row .num::before {
-    content: attr(data-label) ' ';
+    content: attr(data-label);
+    display: block;
     color: var(--fg-muted);
     font-size: 0.75rem;
     font-weight: 400;
