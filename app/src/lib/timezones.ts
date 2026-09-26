@@ -126,7 +126,7 @@ export function readCookie(name: string): string | undefined {
 }
 
 /** "GMT+3" for a zone at a moment (offsets change with daylight saving). */
-export function offsetLabel(timeZone: string, atMs: number): string {
+function gmtLabel(timeZone: string, atMs: number): string {
   return (
     new Intl.DateTimeFormat('en-US', { timeZone, timeZoneName: 'shortOffset' })
       .formatToParts(atMs)
@@ -134,9 +134,15 @@ export function offsetLabel(timeZone: string, atMs: number): string {
   );
 }
 
+/** "UTC+3" / "UTC−7" / "UTC+0" — the extension's notation, with a true minus sign. */
+export function offsetLabel(timeZone: string, atMs: number): string {
+  const gmt = gmtLabel(timeZone, atMs); // "GMT", "GMT+3", "GMT-7", "GMT+5:30"
+  return gmt === 'GMT' ? 'UTC+0' : gmt.replace('GMT', 'UTC').replace('-', '−');
+}
+
 /** Offset in minutes east of UTC at a moment (GMT+5:30 → 330). */
 export function offsetMinutes(timeZone: string, atMs: number): number {
-  const m = /GMT([+-])(\d{1,2})(?::(\d{2}))?/.exec(offsetLabel(timeZone, atMs));
+  const m = /GMT([+-])(\d{1,2})(?::(\d{2}))?/.exec(gmtLabel(timeZone, atMs));
   if (!m) return 0;
   const mins = Number(m[2]) * 60 + Number(m[3] ?? 0);
   return m[1] === '-' ? -mins : mins;
