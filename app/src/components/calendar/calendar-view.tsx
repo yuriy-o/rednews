@@ -1,7 +1,7 @@
 'use client';
 
 import { Fragment, useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowDown, ArrowUp, Search, X } from 'lucide-react';
+import { ArrowDown, ArrowUp, Briefcase, ChartColumn, Landmark, Mic, Search, TrendingUp, X, type LucideIcon } from 'lucide-react';
 import type { CalendarEvent, Impact } from '@/lib/api';
 import type { Dictionary } from '@/i18n/dictionaries';
 import { formatCountdown, useNow, useTimeZone } from '@/lib/use-time';
@@ -14,12 +14,24 @@ import {
   serializeFilterCookie,
   type CalendarFilters,
 } from '@/lib/calendar-filters';
+import { CATEGORIES, KEY_EVENTS, TOPICS, topicsOk, type Topic } from '@/lib/topics';
+import { TimeZoneSelect } from '@/components/timezone-select';
 import styles from './calendar-view.module.css';
+
+const CATEGORY_ICONS: Record<(typeof CATEGORIES)[number], LucideIcon> = {
+  jobs: Briefcase,
+  inflation: TrendingUp,
+  banks: Landmark,
+  growth: ChartColumn,
+  speeches: Mic,
+};
 
 interface Props {
   events: CalendarEvent[];
   initialFilters: CalendarFilters;
   serverTimeZone: string;
+  /** Saved explicit timezone choice (null = follow the browser). */
+  serverTzPref: string | null;
   /** Request time (unix s): lets the server mark "today" so a #today link scrolls on first load. */
   serverNow: number;
   /** Whether this page shows the current FF week (only then is there a "today"). */
@@ -38,18 +50,7 @@ function toggle<T>(list: T[], item: T, order: readonly T[]): T[] {
   return order.filter((x) => x === item || list.includes(x));
 }
 
-/** "GMT+3 · Eastern European Time" — readable, and avoids exposing raw IANA ids. */
-function zoneLabel(timeZone: string, locale: string, atMs: number): string {
-  const part = (style: 'shortOffset' | 'longGeneric') =>
-    new Intl.DateTimeFormat(locale, { timeZone, timeZoneName: style })
-      .formatToParts(atMs)
-      .find((p) => p.type === 'timeZoneName')?.value;
-  const offset = part('shortOffset');
-  const name = part('longGeneric');
-  return [offset, name && name !== offset ? name : null].filter(Boolean).join(' · ');
-}
-
-export function CalendarView({ events, initialFilters, serverTimeZone, serverNow, isCurrentWeek, locale, t }: Props) {
+export function CalendarView({ events, initialFilters, serverTimeZone, serverTzPref, serverNow, isCurrentWeek, locale, t }: Props) {
   const timeZone = useTimeZone(serverTimeZone);
   const liveNow = useNow();
   const now = liveNow ?? serverNow;
@@ -92,6 +93,7 @@ export function CalendarView({ events, initialFilters, serverTimeZone, serverNow
           // Currencies outside the majors (FF uses e.g. "ALL" for some holidays) are never filtered out.
           (filters.currencies.includes(e.currency) || !(CURRENCIES as readonly string[]).includes(e.currency)) &&
           filters.impacts.includes(e.impact) &&
+          topicsOk(filters.topics, e.title) &&
           (!q || e.title.toLowerCase().includes(q) || e.currency.toLowerCase() === q),
       ),
     [events, filters, q],
@@ -149,6 +151,28 @@ export function CalendarView({ events, initialFilters, serverTimeZone, serverNow
             ))}
           </div>
         </div>
+        {/* Topics: none selected = no topic filter; any selected narrow the list (OR), as in the extension. */}
+        <div className={styles.chips}>
+          {[KEY_EVENTS, CATEGORIES].map((group, gi) => (
+            <div key={gi} className={styles.group} role="group" aria-label={gi === 0 ? t.filters.keyEvents : t.filters.categories}>
+              {group.map((topic) => {
+                const Icon = gi === 1 ? CATEGORY_ICONS[topic as (typeof CATEGORIES)[number]] : null;
+                return (
+                  <button
+                    key={topic}
+                    type="button"
+                    className={`${styles.chip} ${styles.topic}`}
+                    aria-pressed={filters.topics.includes(topic)}
+                    onClick={() => update((f) => ({ ...f, topics: toggle<Topic>(f.topics, topic, TOPICS) }))}
+                  >
+                    {Icon && <Icon size={14} strokeWidth={1.75} aria-hidden />}
+                    {t.topics[topic]}
+                  </button>
+                );
+              })}
+            </div>
+          ))}
+        </div>
         <div className={styles.searchRow}>
           <label className={styles.search}>
             <Search size={15} strokeWidth={1.75} aria-hidden />
@@ -171,10 +195,18 @@ export function CalendarView({ events, initialFilters, serverTimeZone, serverNow
         </div>
       </div>
 
-      <p className={`${styles.meta} data`} aria-live="polite">
-        {t.showing.replace('{n}', String(visible.length)).replace('{total}', String(events.length))} ·{' '}
-        {zoneLabel(timeZone, locale, now * 1000)}
-      </p>
+      <div className={styles.metaRow}>
+        <p className={`${styles.meta} data`} aria-live="polite">
+          {t.showing.replace('{n}', String(visible.length)).replace('{total}', String(events.length))}
+        </p>
+        <TimeZoneSelect
+          className={styles.tz}
+          serverPref={serverTzPref}
+          serverTimeZone={serverTimeZone}
+          atMs={now * 1000}
+          t={t.timeZone}
+        />
+      </div>
 
       {visible.length === 0 ? (
         <div className={styles.empty}>

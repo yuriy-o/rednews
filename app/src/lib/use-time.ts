@@ -1,17 +1,47 @@
 'use client';
 
 import { useSyncExternalStore } from 'react';
+import { TZ_PREF_COOKIE, parseTzPref, readCookie } from './timezones';
 
-const noopSubscribe = () => () => {};
-const browserTimeZone = () => Intl.DateTimeFormat().resolvedOptions().timeZone;
+export const TZ_CHANGE_EVENT = 'rn-tzchange';
+
+function subscribeTimeZone(onChange: () => void) {
+  window.addEventListener(TZ_CHANGE_EVENT, onChange);
+  return () => window.removeEventListener(TZ_CHANGE_EVENT, onChange);
+}
+
+/** The explicit choice (rn-tzsel cookie) if any, else the browser's zone. */
+function currentTimeZone(): string {
+  return parseTzPref(readCookie(TZ_PREF_COOKIE)) ?? Intl.DateTimeFormat().resolvedOptions().timeZone;
+}
 
 /**
- * The visitor's timezone. The server renders in `serverTimeZone` — the one remembered in the
- * `rn-tz` cookie on earlier visits, else UTC (crawlers, first visit) — and the client switches
- * to the real one after hydration.
+ * The timezone to display. The server renders in `serverTimeZone` — the saved choice, else the
+ * zone remembered in `rn-tz` / Vercel's IP guess, else UTC — and the client switches to the
+ * visitor's choice or browser zone after hydration, and again whenever the choice changes.
  */
 export function useTimeZone(serverTimeZone = 'UTC'): string {
-  return useSyncExternalStore(noopSubscribe, browserTimeZone, () => serverTimeZone);
+  return useSyncExternalStore(subscribeTimeZone, currentTimeZone, () => serverTimeZone);
+}
+
+const noop = () => () => {};
+/** The browser's own zone (what "Auto" means); null during SSR. */
+export function useBrowserTimeZone(): string | null {
+  return useSyncExternalStore(noop, () => Intl.DateTimeFormat().resolvedOptions().timeZone, () => null);
+}
+
+/** The saved explicit choice, or null when following the browser ("auto"). */
+export function useTimeZonePref(serverPref: string | null): string | null {
+  return useSyncExternalStore(
+    subscribeTimeZone,
+    () => parseTzPref(readCookie(TZ_PREF_COOKIE)),
+    () => serverPref,
+  );
+}
+
+export function setTimeZonePref(value: string) {
+  document.cookie = `${TZ_PREF_COOKIE}=${encodeURIComponent(value)}; path=/; max-age=31536000; samesite=lax`;
+  window.dispatchEvent(new Event(TZ_CHANGE_EVENT));
 }
 
 // One shared minute ticker so every "now"-aware component re-renders together.

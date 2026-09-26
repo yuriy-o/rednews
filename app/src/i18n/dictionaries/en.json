@@ -129,7 +129,25 @@
       "impacts": "Impact",
       "search": "Search events",
       "searchPlaceholder": "Search events",
-      "reset": "Reset filters"
+      "reset": "Reset filters",
+      "keyEvents": "Key events",
+      "categories": "Categories"
+    },
+    "topics": {
+      "NFP": "NFP",
+      "CPI": "CPI",
+      "FOMC": "FOMC",
+      "jobs": "Jobs",
+      "inflation": "Inflation",
+      "banks": "Central banks",
+      "growth": "Growth",
+      "speeches": "Speeches"
+    },
+    "timeZone": {
+      "label": "Times in",
+      "auto": "Auto (browser)",
+      "zones": "Time zones",
+      "offsets": "UTC offsets"
     },
     "showing": "{n} of {total} events",
     "noMatch": "No events match these filters.",

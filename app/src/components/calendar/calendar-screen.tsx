@@ -8,6 +8,7 @@ import { addDays, formatWeekRange, isWeekInWindow, weekStartOf } from '@/lib/ff-
 import { FILTER_COOKIE, parseFilterCookie } from '@/lib/calendar-filters';
 import { localePath } from '@/lib/seo';
 import { TZ_COOKIE } from '@/components/theme-script';
+import { TZ_PREF_COOKIE, parseTzPref } from '@/lib/timezones';
 import { CalendarView } from './calendar-view';
 import styles from './calendar-screen.module.css';
 
@@ -83,9 +84,11 @@ export async function CalendarScreen({ locale, dict, week }: Props) {
     headers(),
   ]);
   const filters = parseFilterCookie(jar.get(FILTER_COOKIE)?.value);
-  // Remembered timezone first; on a first visit, Vercel's IP-based guess — so days are grouped
-  // correctly before hydration and nothing regroups (layout shift) once the browser's zone is known.
-  const serverTimeZone = validTimeZone(jar.get(TZ_COOKIE)?.value ?? head.get('x-vercel-ip-timezone') ?? undefined);
+  // The visitor's explicit choice wins; else the remembered browser zone; on a first visit,
+  // Vercel's IP-based guess — so days are grouped correctly before hydration and nothing regroups.
+  const tzPref = parseTzPref(jar.get(TZ_PREF_COOKIE)?.value);
+  const serverTimeZone =
+    tzPref ?? validTimeZone(jar.get(TZ_COOKIE)?.value ?? head.get('x-vercel-ip-timezone') ?? undefined);
 
   return (
     <div className="container page">
@@ -138,6 +141,7 @@ export async function CalendarScreen({ locale, dict, week }: Props) {
           events={events}
           initialFilters={filters}
           serverTimeZone={serverTimeZone}
+          serverTzPref={tzPref}
           serverNow={nowSec}
           isCurrentWeek={ws === current}
           locale={locale}

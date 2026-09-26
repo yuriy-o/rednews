@@ -15,8 +15,12 @@
   border-block-end: 1px solid var(--line);
   background: var(--bg);
 }
-/* Wide screens: chip groups and the search row flow inline in the toolbar. */
-.chips,
+/* Wide screens: row 1 currencies + impacts; row 2 key events + categories, then search. */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
 .searchRow {
   display: contents;
 }
@@ -275,8 +279,10 @@
     display: grid;
     gap: 10px;
   }
+  /* Two sideways-scrolling rows: currencies + impacts, then topics. */
   .chips {
     display: flex;
+    flex-wrap: nowrap;
     gap: 10px;
     margin-inline: -16px;
     padding-inline: 16px;
@@ -412,4 +418,50 @@
   .nowRow td {
     display: block;
   }
+}
+
+/* Topic chips: unpressed means "not narrowing", not "excluded" — so no strike-through. */
+.topic {
+  gap: 6px;
+  text-decoration: none;
+}
+.topic[aria-pressed='false'] {
+  color: var(--fg-muted);
+}
+.topic svg {
+  flex: none;
+}
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  margin-block: 12px 4px;
+}
+.metaRow .meta {
+  margin: 0;
+}
+.tz {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--fg-muted);
+  font-size: 0.8125rem;
+}
+.tz select {
+  max-inline-size: 16rem;
+  block-size: 30px;
+  padding-inline: 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  background: var(--bg);
+  color: var(--fg);
+  font: inherit;
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+.tz select:hover {
+  border-color: var(--fg-faint);
 }
