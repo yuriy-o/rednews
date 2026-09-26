@@ -128,7 +128,7 @@ export default async function HomePage() {
         </div>
         <div className="features__body">
           <AlertStrip t={t.alerts} />
-          <FilterStrip t={t.alerts} impacts={dict.calendar.impact} />
+          <FilterStrip t={t.alerts} impacts={dict.calendar.impact} topics={dict.calendar.topics} />
           <dl className="feature-list">
           {t.features.items.map((f) => (
             <div key={f.title} className="feature-list__row">

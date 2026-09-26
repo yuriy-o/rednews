@@ -1,7 +1,7 @@
 'use client';
 
 import { Globe } from 'lucide-react';
-import { TZ_AUTO, TZ_OFFSETS, TZ_ZONES, offsetLabel } from '@/lib/timezones';
+import { TZ_AUTO, TZ_GROUPS, TZ_OFFSETS, offsetLabel, zoneName, type TzRegion } from '@/lib/timezones';
 import { setTimeZonePref, useBrowserTimeZone, useTimeZonePref } from '@/lib/use-time';
 
 interface Props {
@@ -9,12 +9,13 @@ interface Props {
   serverTimeZone: string;
   /** Reference moment for offsets (DST): request time on the server, now on the client. */
   atMs: number;
-  t: { label: string; auto: string; zones: string; offsets: string };
+  locale: string;
+  t: { label: string; auto: string; offsets: string; regions: Record<TzRegion, string> };
   className?: string;
 }
 
 /** Native select: fully accessible, and the OS picker on phones. */
-export function TimeZoneSelect({ serverPref, serverTimeZone, atMs, t, className }: Props) {
+export function TimeZoneSelect({ serverPref, serverTimeZone, atMs, locale, t, className }: Props) {
   const pref = useTimeZonePref(serverPref);
   const browser = useBrowserTimeZone();
   // Before hydration the browser zone is unknown; the server's auto guess stands in when no choice is saved.
@@ -29,13 +30,15 @@ export function TimeZoneSelect({ serverPref, serverTimeZone, atMs, t, className 
           {t.auto}
           {autoZone ? ` (${offsetLabel(autoZone, atMs)})` : ''}
         </option>
-        <optgroup label={t.zones}>
-          {TZ_ZONES.map((z) => (
-            <option key={z} value={z}>
-              {z.replace(/_/g, ' ')} ({offsetLabel(z, atMs)})
-            </option>
-          ))}
-        </optgroup>
+        {TZ_GROUPS.map((g) => (
+          <optgroup key={g.region} label={t.regions[g.region]}>
+            {g.zones.map((z) => (
+              <option key={z.id} value={z.id}>
+                {zoneName(z, locale)} ({offsetLabel(z.id, atMs)})
+              </option>
+            ))}
+          </optgroup>
+        ))}
         <optgroup label={t.offsets}>
           {TZ_OFFSETS.map((o) => (
             <option key={o.value} value={o.value}>

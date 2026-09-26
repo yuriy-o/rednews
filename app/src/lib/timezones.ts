@@ -1,28 +1,94 @@
-// Timezone choice — the same list as the extension popup (minus "Chart", which needs a chart).
-// "auto" follows the browser. The choice lives in a cookie so server renders use it too.
+// Timezone choice. "auto" follows the browser; the choice lives in a cookie so server renders
+// use it too. The list = the extension popup's zones + the main zone of every country behind the
+// site's 22 languages + the home markets of the filterable currencies (Toronto, Auckland),
+// grouped by region and sorted by city. Keep in sync with the extension (shared order).
 
 export const TZ_PREF_COOKIE = 'rn-tzsel';
 export const TZ_AUTO = 'auto';
 
-export const TZ_ZONES = [
-  'America/New_York',
-  'America/Chicago',
-  'America/Los_Angeles',
-  'Europe/London',
-  'Europe/Berlin',
-  'Europe/Zurich',
-  'Europe/Kyiv',
-  'Europe/Istanbul',
-  'Asia/Tokyo',
-  'Asia/Shanghai',
-  'Asia/Hong_Kong',
-  'Asia/Seoul',
-  'Asia/Singapore',
-  'Asia/Kolkata',
-  'Asia/Karachi',
-  'Asia/Dubai',
-  'Australia/Sydney',
-] as const;
+export type TzRegion = 'americas' | 'europe' | 'middleEastAfrica' | 'asia' | 'pacific';
+
+export interface TzZone {
+  id: string; // IANA
+  city: string;
+  country: string; // ISO 3166 region code — the name is localized by Intl.DisplayNames
+}
+
+export const TZ_GROUPS: { region: TzRegion; zones: TzZone[] }[] = [
+  {
+    region: 'americas',
+    zones: [
+      { id: 'America/Chicago', city: 'Chicago', country: 'US' },
+      { id: 'America/Los_Angeles', city: 'Los Angeles', country: 'US' },
+      { id: 'America/Mexico_City', city: 'Mexico City', country: 'MX' },
+      { id: 'America/New_York', city: 'New York', country: 'US' },
+      { id: 'America/Sao_Paulo', city: 'São Paulo', country: 'BR' },
+      { id: 'America/Toronto', city: 'Toronto', country: 'CA' },
+    ],
+  },
+  {
+    region: 'europe',
+    zones: [
+      { id: 'Europe/Amsterdam', city: 'Amsterdam', country: 'NL' },
+      { id: 'Europe/Athens', city: 'Athens', country: 'GR' },
+      { id: 'Europe/Berlin', city: 'Berlin', country: 'DE' },
+      { id: 'Europe/Bratislava', city: 'Bratislava', country: 'SK' },
+      { id: 'Europe/Istanbul', city: 'Istanbul', country: 'TR' },
+      { id: 'Europe/Kyiv', city: 'Kyiv', country: 'UA' },
+      { id: 'Europe/London', city: 'London', country: 'GB' },
+      { id: 'Europe/Madrid', city: 'Madrid', country: 'ES' },
+      { id: 'Europe/Paris', city: 'Paris', country: 'FR' },
+      { id: 'Europe/Prague', city: 'Prague', country: 'CZ' },
+      { id: 'Europe/Rome', city: 'Rome', country: 'IT' },
+      { id: 'Europe/Warsaw', city: 'Warsaw', country: 'PL' },
+      { id: 'Europe/Zurich', city: 'Zurich', country: 'CH' },
+    ],
+  },
+  {
+    region: 'middleEastAfrica',
+    zones: [
+      { id: 'Africa/Cairo', city: 'Cairo', country: 'EG' },
+      { id: 'Asia/Dubai', city: 'Dubai', country: 'AE' },
+      { id: 'Asia/Riyadh', city: 'Riyadh', country: 'SA' },
+    ],
+  },
+  {
+    region: 'asia',
+    zones: [
+      { id: 'Asia/Ho_Chi_Minh', city: 'Ho Chi Minh City', country: 'VN' },
+      { id: 'Asia/Hong_Kong', city: 'Hong Kong', country: 'HK' },
+      { id: 'Asia/Jakarta', city: 'Jakarta', country: 'ID' },
+      { id: 'Asia/Karachi', city: 'Karachi', country: 'PK' },
+      { id: 'Asia/Kolkata', city: 'Kolkata', country: 'IN' },
+      { id: 'Asia/Kuala_Lumpur', city: 'Kuala Lumpur', country: 'MY' },
+      { id: 'Asia/Seoul', city: 'Seoul', country: 'KR' },
+      { id: 'Asia/Shanghai', city: 'Shanghai', country: 'CN' },
+      { id: 'Asia/Singapore', city: 'Singapore', country: 'SG' },
+      { id: 'Asia/Tokyo', city: 'Tokyo', country: 'JP' },
+    ],
+  },
+  {
+    region: 'pacific',
+    zones: [
+      { id: 'Pacific/Auckland', city: 'Auckland', country: 'NZ' },
+      { id: 'Australia/Sydney', city: 'Sydney', country: 'AU' },
+    ],
+  },
+];
+
+// City-states read oddly as "Singapore — Singapore" / "Hong Kong — Hong Kong SAR China".
+const CITY_STATES = new Set(['HK', 'SG']);
+
+/** "Warsaw — Poland", with the country name in the page's language. */
+export function zoneName(zone: TzZone, locale: string): string {
+  if (CITY_STATES.has(zone.country)) return zone.city;
+  try {
+    const country = new Intl.DisplayNames(locale, { type: 'region' }).of(zone.country);
+    return country ? `${zone.city} — ${country}` : zone.city;
+  } catch {
+    return zone.city;
+  }
+}
 
 /**
  * Fixed offsets UTC−12…UTC+14. IANA's Etc zones use inverted signs: UTC+3 is "Etc/GMT-3".

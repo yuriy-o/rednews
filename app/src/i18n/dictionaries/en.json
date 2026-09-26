@@ -71,7 +71,7 @@
         "sound": "Sound",
         "telegram": "Telegram"
       },
-      "filtersCaption": "Pick the currencies and impact levels you trade; everything else stays off your chart."
+      "filtersCaption": "Pick the currencies, impact levels and events you trade; everything else stays off your chart."
     },
     "upcoming": {
       "title": "Coming up",
@@ -146,8 +146,14 @@
     "timeZone": {
       "label": "Times in",
       "auto": "Auto (browser)",
-      "zones": "Time zones",
-      "offsets": "UTC offsets"
+      "offsets": "UTC offsets",
+      "regions": {
+        "americas": "Americas",
+        "europe": "Europe",
+        "middleEastAfrica": "Middle East & Africa",
+        "asia": "Asia",
+        "pacific": "Pacific"
+      }
     },
     "showing": "{n} of {total} events",
     "noMatch": "No events match these filters.",

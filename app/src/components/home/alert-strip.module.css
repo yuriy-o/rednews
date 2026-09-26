@@ -161,3 +161,19 @@
     inset-block-start: 76px;
   }
 }
+
+.topicGroup {
+  display: contents;
+}
+.topicGroup + .topicGroup::before {
+  content: '';
+  inline-size: 8px;
+}
+.topic {
+  gap: 5px;
+  text-decoration: none;
+}
+.topic svg {
+  flex: none;
+  color: var(--fg-muted);
+}

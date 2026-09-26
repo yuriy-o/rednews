@@ -204,6 +204,7 @@ export function CalendarView({ events, initialFilters, serverTimeZone, serverTzP
           serverPref={serverTzPref}
           serverTimeZone={serverTimeZone}
           atMs={now * 1000}
+          locale={locale}
           t={t.timeZone}
         />
       </div>

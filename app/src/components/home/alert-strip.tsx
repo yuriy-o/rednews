@@ -1,5 +1,18 @@
-import { Bell, ChartLine, Monitor, Send, Volume2 } from 'lucide-react';
+import {
+  Bell,
+  Briefcase,
+  ChartColumn,
+  ChartLine,
+  Landmark,
+  Mic,
+  Monitor,
+  Send,
+  TrendingUp,
+  Volume2,
+  type LucideIcon,
+} from 'lucide-react';
 import type { Dictionary } from '@/i18n/dictionaries';
+import { CATEGORIES, KEY_EVENTS, type Topic } from '@/lib/topics';
 import styles from './alert-strip.module.css';
 
 // Illustrations in chart grammar for the features band (labelled as examples on the page).
@@ -68,7 +81,24 @@ export function AlertStrip({ t }: { t: Dictionary['home']['alerts'] }) {
 const CURRENCIES = ['AUD', 'CAD', 'CHF', 'EUR', 'GBP', 'JPY', 'USD'];
 const ON = new Set(['EUR', 'GBP', 'USD']);
 
-export function FilterStrip({ t, impacts }: { t: Dictionary['home']['alerts']; impacts: Dictionary['calendar']['impact'] }) {
+const TOPIC_ICONS: Partial<Record<Topic, LucideIcon>> = {
+  jobs: Briefcase,
+  inflation: TrendingUp,
+  banks: Landmark,
+  growth: ChartColumn,
+  speeches: Mic,
+};
+const TOPICS_ON = new Set<Topic>(['NFP', 'banks']);
+
+export function FilterStrip({
+  t,
+  impacts,
+  topics,
+}: {
+  t: Dictionary['home']['alerts'];
+  impacts: Dictionary['calendar']['impact'];
+  topics: Dictionary['calendar']['topics'];
+}) {
   const levels = [
     { key: 'HIGH', on: true },
     { key: 'MEDIUM', on: true },
@@ -91,6 +121,22 @@ export function FilterStrip({ t, impacts }: { t: Dictionary['home']['alerts']; i
           {levels.map((l) => (
             <span key={l.key} className={styles.chip} data-on={l.on || undefined}>
               <span className={`impact impact--${l.key.toLowerCase()}`}>{impacts[l.key]}</span>
+            </span>
+          ))}
+        </div>
+        {/* Topics: unselected ones are neutral (they don't exclude), as in the extension. */}
+        <div className={styles.chips}>
+          {[KEY_EVENTS, CATEGORIES].map((group, gi) => (
+            <span key={gi} className={styles.topicGroup}>
+              {group.map((topic) => {
+                const Icon = TOPIC_ICONS[topic];
+                return (
+                  <span key={topic} className={`${styles.chip} ${styles.topic}`} data-on={TOPICS_ON.has(topic) || undefined}>
+                    {Icon && <Icon size={13} strokeWidth={1.75} />}
+                    {topics[topic]}
+                  </span>
+                );
+              })}
             </span>
           ))}
         </div>
