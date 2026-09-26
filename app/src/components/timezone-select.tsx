@@ -1,7 +1,7 @@
 'use client';
 
 import { Globe } from 'lucide-react';
-import { TZ_AUTO, TZ_GROUPS, TZ_OFFSETS, offsetLabel, zoneName, type TzRegion } from '@/lib/timezones';
+import { TZ_AUTO, TZ_GROUPS, TZ_OFFSETS, offsetLabel, sortByOffset, zoneName, type TzRegion } from '@/lib/timezones';
 import { setTimeZonePref, useBrowserTimeZone, useTimeZonePref } from '@/lib/use-time';
 
 interface Props {
@@ -32,7 +32,7 @@ export function TimeZoneSelect({ serverPref, serverTimeZone, atMs, locale, t, cl
         </option>
         {TZ_GROUPS.map((g) => (
           <optgroup key={g.region} label={t.regions[g.region]}>
-            {g.zones.map((z) => (
+            {sortByOffset(g.zones, atMs).map((z) => (
               <option key={z.id} value={z.id}>
                 {zoneName(z, locale)} ({offsetLabel(z.id, atMs)})
               </option>

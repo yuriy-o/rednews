@@ -1,7 +1,8 @@
 // Timezone choice. "auto" follows the browser; the choice lives in a cookie so server renders
 // use it too. The list = the extension popup's zones + the main zone of every country behind the
 // site's 22 languages + the home markets of the filterable currencies (Toronto, Auckland),
-// grouped by region and sorted by city. Keep in sync with the extension (shared order).
+// grouped by region. Within a group zones are ordered by their offset at display time (DST moves
+// zones past each other on different dates), then by city. Keep in sync with the extension.
 
 export const TZ_PREF_COOKIE = 'rn-tzsel';
 export const TZ_AUTO = 'auto';
@@ -59,7 +60,7 @@ export const TZ_GROUPS: { region: TzRegion; zones: TzZone[] }[] = [
       { id: 'Asia/Hong_Kong', city: 'Hong Kong', country: 'HK' },
       { id: 'Asia/Jakarta', city: 'Jakarta', country: 'ID' },
       { id: 'Asia/Karachi', city: 'Karachi', country: 'PK' },
-      { id: 'Asia/Kolkata', city: 'Kolkata', country: 'IN' },
+      { id: 'Asia/Kolkata', city: 'Mumbai / Kolkata', country: 'IN' }, // traders look for Mumbai
       { id: 'Asia/Kuala_Lumpur', city: 'Kuala Lumpur', country: 'MY' },
       { id: 'Asia/Seoul', city: 'Seoul', country: 'KR' },
       { id: 'Asia/Shanghai', city: 'Shanghai', country: 'CN' },
@@ -131,4 +132,20 @@ export function offsetLabel(timeZone: string, atMs: number): string {
       .formatToParts(atMs)
       .find((p) => p.type === 'timeZoneName')?.value ?? ''
   );
+}
+
+/** Offset in minutes east of UTC at a moment (GMT+5:30 → 330). */
+export function offsetMinutes(timeZone: string, atMs: number): number {
+  const m = /GMT([+-])(\d{1,2})(?::(\d{2}))?/.exec(offsetLabel(timeZone, atMs));
+  if (!m) return 0;
+  const mins = Number(m[2]) * 60 + Number(m[3] ?? 0);
+  return m[1] === '-' ? -mins : mins;
+}
+
+/** A group's zones in display order: by current offset, then city. */
+export function sortByOffset(zones: TzZone[], atMs: number): TzZone[] {
+  return zones
+    .map((z) => ({ z, off: offsetMinutes(z.id, atMs) }))
+    .sort((a, b) => a.off - b.off || a.z.city.localeCompare(b.z.city))
+    .map(({ z }) => z);
 }

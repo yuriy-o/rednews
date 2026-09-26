@@ -146,7 +146,7 @@
     "timeZone": {
       "label": "Times in",
       "auto": "Auto (browser)",
-      "offsets": "UTC offsets",
+      "offsets": "Fixed offset (no DST)",
       "regions": {
         "americas": "Americas",
         "europe": "Europe",
