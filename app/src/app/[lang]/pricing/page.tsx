@@ -45,23 +45,23 @@ export default async function PricingPage() {
       />
 
       <div className="container page">
-        <h1 className="display">{t.lead}</h1>
+        <h1 id="pricing-title" className="display">
+          {t.lead}
+        </h1>
+        <p className="lead">{t.intro}</p>
 
-        <section className="band">
-          <div className="plans__title"></div>
-
+        <section className="band pricing-plans" aria-labelledby="pricing-title">
           <div className="plans">
             {/* Free Plan */}
             <div className="plans__plan">
-              <div className="plans__name">{plans.free.name}</div>
-              <div className="plans__price">
-                <div className="plans__amount">{plans.free.price}</div>
-                <div className="text-sm">{plans.free.period}</div>
-              </div>
+              <h2 className="plans__name">{plans.free.name}</h2>
+              <p className="plans__price">
+                <span className="plans__amount">{plans.free.price}</span> <span className="plans__period">{plans.free.period}</span>
+              </p>
               <ul className="plans__items">
                 {plans.free.items.map((item, i) => (
                   <li key={i}>
-                    <Check size={16} />
+                    <Check size={16} strokeWidth={2} aria-hidden />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -76,15 +76,14 @@ export default async function PricingPage() {
             {/* Premium Plan */}
             <div className="plans__plan" data-premium>
               <div className="plans__trial">{t.trial}</div>
-              <div className="plans__name">{plans.premium.name}</div>
-              <div className="plans__price">
-                <div className="plans__amount">{plans.premium.price}</div>
-                <div className="text-sm">{plans.premium.period}</div>
-              </div>
+              <h2 className="plans__name">{plans.premium.name}</h2>
+              <p className="plans__price">
+                <span className="plans__amount">{plans.premium.price}</span> <span className="plans__period">{plans.premium.period}</span>
+              </p>
               <ul className="plans__items">
                 {plans.premium.items.map((item, i) => (
                   <li key={i}>
-                    <Check size={16} />
+                    <Check size={16} strokeWidth={2} aria-hidden />
                     <span>{item}</span>
                   </li>
                 ))}

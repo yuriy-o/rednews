@@ -593,9 +593,32 @@ html {
   }
 }
 
-/* Pricing page */
-.plans__trial {
+/* Pricing page — accent treatment is scoped to .pricing-plans so it never leaks into home's
+   plan teaser, which shares the same .plans/[data-premium] markup at a plainer, list-only style. */
+.pricing-plans .plans {
+  border: 0;
+  gap: 24px;
+}
+.pricing-plans .plans__plan {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 32px 36px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+}
+/* Neutralise the divider-layout rule (base .plans__plan + .plans__plan): cards get a full
+   border instead, so the leftover inline-start border and padding must not also apply. */
+.pricing-plans .plans__plan + .plans__plan {
+  padding-inline-start: 32px;
+  border-inline-start: 1px solid var(--line);
+}
+.pricing-plans .plans__foot {
+  margin-block-start: auto;
+  padding-block-start: 20px;
+}
+.pricing-plans .plans__trial {
   display: inline-block;
+  align-self: start;
   padding: 4px 8px;
   margin-block-end: 12px;
   background: var(--red-soft);
@@ -604,19 +627,12 @@ html {
   font-weight: 600;
   border-radius: var(--radius-control);
 }
-.plans__plan[data-premium] {
-  position: relative;
-  border: 1px solid var(--red);
-  border-radius: var(--radius-panel);
-  padding: 32px;
+.pricing-plans .plans__plan[data-premium] {
+  border-color: var(--red);
   background: color-mix(in srgb, var(--red-soft), var(--bg-raised) 90%);
 }
-.plans__plan[data-premium] .plans__name {
+.pricing-plans .plans__plan[data-premium] .plans__name {
   color: var(--red-text);
-}
-.text-sm {
-  font-size: 0.875rem;
-  color: var(--fg-muted);
 }
 
 /* FAQ */
