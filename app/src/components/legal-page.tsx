@@ -21,7 +21,11 @@ export interface LegalContent {
   closing?: string;
 }
 
-/** `[label](url)` inside legal copy becomes a real link; everything else renders as plain text. */
+/**
+ * `[label](url)` inside legal copy becomes a real link; everything else renders as plain text.
+ * An http(s) link (Discord, the legacy AI guide, ...) opens in a new tab so visitors don't lose
+ * this site; `mailto:` opens the OS mail client instead, so it's left to navigate normally.
+ */
 function renderInline(text: string): ReactNode[] {
   const parts: ReactNode[] = [];
   const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
@@ -30,8 +34,10 @@ function renderInline(text: string): ReactNode[] {
   let key = 0;
   while ((match = linkPattern.exec(text))) {
     if (match.index > last) parts.push(text.slice(last, match.index));
+    const url = match[2];
+    const external = url.startsWith('http://') || url.startsWith('https://');
     parts.push(
-      <a key={key++} href={match[2]}>
+      <a key={key++} href={url} {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
         {match[1]}
       </a>,
     );
