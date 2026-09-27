@@ -33,6 +33,12 @@ export function AccountScreen({ locale, t }: Props) {
         setSession(data.session);
         setStatus(data.session ? 'signed-in' : 'signed-out');
       }
+      // The OAuth redirect lands with the session in the URL hash; supabase-js reads it but
+      // doesn't clean up after itself, so it stays in the address bar and — worse — gets a
+      // second one appended on the next sign-in, producing a URL with two #access_token runs.
+      if (window.location.hash.includes('access_token')) {
+        window.history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
     });
     const { data: sub } = supabase.auth.onAuthStateChange((_event, next) => {
       setSession(next);
@@ -64,7 +70,15 @@ export function AccountScreen({ locale, t }: Props) {
     setError(null);
     const { error: err } = await supabase.auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: window.location.href },
+      options: {
+        // Not `location.href`: any leftover #access_token from a previous session must not be
+        // carried into the next redirect (see the hash-cleanup above).
+        redirectTo: window.location.origin + window.location.pathname,
+        // Always show Google's account chooser — without it, signing out and back in silently
+        // reuses Google's own remembered session instead of letting the visitor pick a
+        // different account (the extension supports switching accounts; the site should too).
+        queryParams: { prompt: 'select_account' },
+      },
     });
     if (err) {
       setError(t.error);
@@ -125,7 +139,8 @@ export function AccountScreen({ locale, t }: Props) {
   if (status === 'signed-out') {
     return (
       <div className={styles.panel}>
-        <button className="button button--primary" onClick={signIn} disabled={busy === 'signin'}>
+        <p className="lead">{t.lead}</p>
+        <button className={`button button--primary ${styles.signIn}`} onClick={signIn} disabled={busy === 'signin'}>
           <GoogleMark />
           {busy === 'signin' ? t.signingIn : t.signIn}
         </button>
@@ -185,7 +200,7 @@ export function AccountScreen({ locale, t }: Props) {
         </p>
       )}
 
-      <button className={`text-link ${styles.signOut}`} onClick={signOut} disabled={busy === 'signout'}>
+      <button className={`button button--sm ${styles.signOut}`} onClick={signOut} disabled={busy === 'signout'}>
         {t.signOut}
       </button>
     </div>

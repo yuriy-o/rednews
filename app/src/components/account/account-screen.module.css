@@ -9,6 +9,9 @@
 .panel .button {
   gap: 10px;
 }
+.signIn {
+  margin-block-start: 20px;
+}
 .email {
   color: var(--fg-muted);
 }
@@ -41,5 +44,4 @@
 }
 .signOut {
   margin-block-start: 24px;
-  color: var(--fg-muted);
 }

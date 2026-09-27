@@ -13,7 +13,6 @@ export default async function AccountPage() {
   return (
     <div className="container page">
       <h1 className="h2">{dict.account.title}</h1>
-      <p className="lead">{dict.account.lead}</p>
       <AccountScreen locale={locale} t={dict.account} />
       <p className="account-note">{dict.account.settingsNote}</p>
     </div>
