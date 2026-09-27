@@ -56,10 +56,13 @@ export default async function PricingPage() {
           <div className="plans">
             {/* Free Plan */}
             <div className="plans__plan">
-              <h2 className="plans__name">{plans.free.name}</h2>
+              <div className="plans__head">
+                <h2 className="plans__name">{plans.free.name}</h2>
+              </div>
               <p className="plans__price">
-                <span className="plans__amount">{plans.free.price}</span> <span className="plans__period">{plans.free.period}</span>
+                <span className="plans__amount">{plans.free.price}</span>
               </p>
+              <p className="plans__period-note">{plans.free.periodNote}</p>
               <ul className="plans__items">
                 {plans.free.items.map((item, i) => (
                   <li key={i}>
@@ -77,11 +80,14 @@ export default async function PricingPage() {
 
             {/* Premium Plan */}
             <div className="plans__plan" data-premium>
-              <div className="plans__trial">{t.trial}</div>
-              <h2 className="plans__name">{plans.premium.name}</h2>
+              <div className="plans__head">
+                <h2 className="plans__name">{plans.premium.name}</h2>
+                <span className="plans__trial">{t.trial}</span>
+              </div>
               <p className="plans__price">
                 <span className="plans__amount">{plans.premium.price}</span> <span className="plans__period">{plans.premium.period}</span>
               </p>
+              <p className="plans__period-note">{plans.premium.periodNote}</p>
               <ul className="plans__items">
                 {plans.premium.items.map((item, i) => (
                   <li key={i}>

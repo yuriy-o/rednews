@@ -99,12 +99,14 @@
         "name": "Free",
         "price": "$0",
         "period": "forever",
+        "periodNote": "Forever · no account needed",
         "items": ["News lines on your chart", "Colour-coded impact levels", "Actual / forecast / previous tooltips", "Currency, impact and topic filters", "22 interface languages"]
       },
       "premium": {
         "name": "Premium",
         "price": "$4.99",
-        "period": "per month, or $39 per year",
+        "period": "per month",
+        "periodNote": "or $39 per year, about 2 months free",
         "items": ["Everything in Free", "Pre-news alerts: on-chart, desktop and sound", "Telegram alerts", "Full calendar range: extended history and future events", "Priority support", "Support continued development"]
       },
       "trial": "14-day Premium trial. No card required.",
