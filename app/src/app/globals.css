@@ -61,7 +61,14 @@ html {
   text-rendering: optimizeLegibility;
 }
 body {
+  display: flex;
+  flex-direction: column;
   min-block-size: 100dvh;
+}
+/* Pins the footer to the viewport bottom on short pages (e.g. the signed-out account screen)
+   instead of letting it float mid-page; on tall pages this has no visible effect. */
+#main {
+  flex: 1 0 auto;
 }
 a {
   color: inherit;
