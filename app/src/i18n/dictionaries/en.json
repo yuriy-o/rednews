@@ -326,7 +326,7 @@
         {
           "heading": "Contact",
           "blocks": [
-            { "type": "p", "text": "For questions about this policy or to request account deletion, email [support@rednews.app](mailto:support@rednews.app) or reach us on [Discord](https://discord.com/users/1172891214580830322)." }
+            { "type": "p", "text": "For questions about this policy or to request account deletion, email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)." }
           ]
         }
       ]
@@ -431,7 +431,7 @@
         {
           "heading": "14. Contact",
           "blocks": [
-            { "type": "p", "text": "Questions about these Terms? Email [support@rednews.app](mailto:support@rednews.app) or reach us on [Discord](https://discord.com/users/1172891214580830322)." }
+            { "type": "p", "text": "Questions about these Terms? Email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)." }
           ]
         }
       ]
@@ -464,7 +464,7 @@
           "blocks": [
             { "type": "ul", "items": [
               "Reply to the Paddle receipt email you received for the purchase, or",
-              "email [support@rednews.app](mailto:support@rednews.app) with the email address used at checkout, or",
+              "email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request) with the email address used at checkout, or",
               "reach us on [Discord](https://discord.com/users/1172891214580830322)."
             ] },
             { "type": "p", "text": "Approved refunds are processed by Paddle back to your original payment method, typically within 5 to 10 business days depending on your bank or card provider." }
@@ -477,7 +477,7 @@
           ]
         }
       ],
-      "closing": "Questions before you buy? We're happy to help: email [support@rednews.app](mailto:support@rednews.app) or message us on [Discord](https://discord.com/users/1172891214580830322)."
+      "closing": "Questions before you buy? We're happy to help: email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing) or message us on [Discord](https://discord.com/users/1172891214580830322)."
     }
   },
   "notFound": {
