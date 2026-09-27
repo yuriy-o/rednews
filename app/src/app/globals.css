@@ -757,6 +757,13 @@ html {
   max-inline-size: 70ch;
 }
 
+/* Account page */
+.account-note {
+  margin-block-start: 40px;
+  color: var(--fg-muted);
+  font-size: 0.875rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

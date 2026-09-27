@@ -219,7 +219,27 @@
   },
   "account": {
     "title": "Your account",
-    "lead": "Sign-in and settings sync with the extension are coming soon."
+    "lead": "Sign in with the same Google account you use in the extension to manage your subscription.",
+    "signIn": "Sign in with Google",
+    "signingIn": "Signing in…",
+    "signOut": "Sign out",
+    "loading": "Loading your account…",
+    "plan": {
+      "free": "Free",
+      "trial": "Premium trial",
+      "premium": "Premium",
+      "comp": "Full access"
+    },
+    "trialEnds": "Trial ends {date}",
+    "renewsOn": "Renews {date}",
+    "endsOn": "Access ends {date}",
+    "startTrial": "Start 14-day free trial",
+    "startingTrial": "Starting trial…",
+    "upgrade": "Upgrade to Premium",
+    "manage": "Manage subscription",
+    "opening": "Opening…",
+    "error": "Something went wrong. Please try again or contact support.",
+    "settingsNote": "Settings sync with the extension is coming soon."
   },
   "legal": {
     "privacy": {

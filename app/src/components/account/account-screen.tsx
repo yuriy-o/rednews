@@ -1,0 +1,214 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import type { Session } from '@supabase/supabase-js';
+import type { Dictionary } from '@/i18n/dictionaries';
+import { accountApi, supabase, type Entitlement } from '@/lib/supabase';
+import styles from './account-screen.module.css';
+
+type Status = 'loading' | 'signed-out' | 'signed-in';
+/** A plan/action request in flight, so a slow network can't double-submit a click. */
+type Busy = 'signin' | 'signout' | 'trial' | 'checkout-monthly' | 'checkout-annual' | 'portal' | null;
+
+interface Props {
+  locale: string;
+  t: Dictionary['account'];
+}
+
+function formatDate(iso: string, locale: string) {
+  return new Intl.DateTimeFormat(locale, { dateStyle: 'medium' }).format(new Date(iso));
+}
+
+export function AccountScreen({ locale, t }: Props) {
+  const [status, setStatus] = useState<Status>('loading');
+  const [session, setSession] = useState<Session | null>(null);
+  const [entitlement, setEntitlement] = useState<Entitlement | null>(null);
+  const [busy, setBusy] = useState<Busy>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let active = true;
+    supabase.auth.getSession().then(({ data }) => {
+      if (active) {
+        setSession(data.session);
+        setStatus(data.session ? 'signed-in' : 'signed-out');
+      }
+    });
+    const { data: sub } = supabase.auth.onAuthStateChange((_event, next) => {
+      setSession(next);
+      setStatus(next ? 'signed-in' : 'signed-out');
+    });
+    return () => {
+      active = false;
+      sub.subscription.unsubscribe();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!session) {
+      setEntitlement(null);
+      return;
+    }
+    let active = true;
+    accountApi
+      .entitlement(session.user.id)
+      .then((e) => active && setEntitlement(e))
+      .catch(() => active && setError(t.error));
+    return () => {
+      active = false;
+    };
+  }, [session, t.error]);
+
+  async function signIn() {
+    setBusy('signin');
+    setError(null);
+    const { error: err } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: { redirectTo: window.location.href },
+    });
+    if (err) {
+      setError(t.error);
+      setBusy(null);
+    }
+    // On success the browser navigates away to Google; no need to clear `busy`.
+  }
+
+  async function signOut() {
+    setBusy('signout');
+    await supabase.auth.signOut();
+    setBusy(null);
+  }
+
+  async function startTrial() {
+    setBusy('trial');
+    setError(null);
+    try {
+      await accountApi.startTrial();
+      if (session) setEntitlement(await accountApi.entitlement(session.user.id));
+    } catch {
+      setError(t.error);
+    } finally {
+      setBusy(null);
+    }
+  }
+
+  async function upgrade(plan: 'monthly' | 'annual') {
+    setBusy(plan === 'monthly' ? 'checkout-monthly' : 'checkout-annual');
+    setError(null);
+    try {
+      const { url } = await accountApi.checkoutUrl(plan);
+      window.open(url, '_blank', 'noopener');
+    } catch {
+      setError(t.error);
+    } finally {
+      setBusy(null);
+    }
+  }
+
+  async function manage() {
+    setBusy('portal');
+    setError(null);
+    try {
+      const { url } = await accountApi.portalUrl();
+      window.open(url, '_blank', 'noopener');
+    } catch {
+      setError(t.error);
+    } finally {
+      setBusy(null);
+    }
+  }
+
+  if (status === 'loading') {
+    return <p className={`lead ${styles.status}`}>{t.loading}</p>;
+  }
+
+  if (status === 'signed-out') {
+    return (
+      <div className={styles.panel}>
+        <button className="button button--primary" onClick={signIn} disabled={busy === 'signin'}>
+          <GoogleMark />
+          {busy === 'signin' ? t.signingIn : t.signIn}
+        </button>
+        {error && (
+          <p className={styles.error} role="alert">
+            {error}
+          </p>
+        )}
+      </div>
+    );
+  }
+
+  const plan = entitlement?.plan ?? 'free';
+  const planLabel = t.plan[plan];
+
+  return (
+    <div className={styles.panel}>
+      <p className={`data ${styles.email}`}>{session!.user.email}</p>
+      <p className={styles.plan} data-premium={plan !== 'free' || undefined}>
+        {planLabel}
+      </p>
+      {plan === 'trial' && entitlement?.trial_ends_at && (
+        <p className={styles.meta}>{t.trialEnds.replace('{date}', formatDate(entitlement.trial_ends_at, locale))}</p>
+      )}
+      {plan === 'premium' && entitlement?.current_period_end && (
+        <p className={styles.meta}>
+          {(entitlement.status === 'canceled' ? t.endsOn : t.renewsOn).replace('{date}', formatDate(entitlement.current_period_end, locale))}
+        </p>
+      )}
+
+      <div className={styles.actions}>
+        {plan === 'free' && (
+          <button className="button button--primary" onClick={startTrial} disabled={busy === 'trial'}>
+            {busy === 'trial' ? t.startingTrial : t.startTrial}
+          </button>
+        )}
+        {plan === 'free' && (
+          <button className="button" onClick={() => upgrade('monthly')} disabled={busy === 'checkout-monthly'}>
+            {busy === 'checkout-monthly' ? t.opening : t.upgrade}
+          </button>
+        )}
+        {(plan === 'trial' || plan === 'premium') && entitlement?.paddle_customer_id && (
+          <button className="button" onClick={manage} disabled={busy === 'portal'}>
+            {busy === 'portal' ? t.opening : t.manage}
+          </button>
+        )}
+        {plan === 'trial' && !entitlement?.paddle_customer_id && (
+          <button className="button" onClick={() => upgrade('annual')} disabled={busy === 'checkout-annual'}>
+            {busy === 'checkout-annual' ? t.opening : t.upgrade}
+          </button>
+        )}
+      </div>
+
+      {error && (
+        <p className={styles.error} role="alert">
+          {error}
+        </p>
+      )}
+
+      <button className={`text-link ${styles.signOut}`} onClick={signOut} disabled={busy === 'signout'}>
+        {t.signOut}
+      </button>
+    </div>
+  );
+}
+
+/** Google's own "G" mark — required by their sign-in button branding guidelines. */
+function GoogleMark() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden>
+      <path
+        fill="#4285F4"
+        d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84a4.14 4.14 0 0 1-1.8 2.72v2.26h2.9c1.7-1.57 2.7-3.88 2.7-6.62Z"
+      />
+      <path
+        fill="#34A853"
+        d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.9-2.26c-.8.54-1.83.86-3.06.86-2.35 0-4.34-1.59-5.05-3.72H.9v2.33A9 9 0 0 0 9 18Z"
+      />
+      <path fill="#FBBC05" d="M3.95 10.7A5.4 5.4 0 0 1 3.67 9c0-.59.1-1.17.28-1.7V4.97H.9A9 9 0 0 0 0 9c0 1.45.35 2.83.9 4.03l3.05-2.33Z" />
+      <path
+        fill="#EA4335"
+        d="M9 3.58c1.32 0 2.51.46 3.44 1.35l2.58-2.58C13.46.89 11.43 0 9 0A9 9 0 0 0 .9 4.97l3.05 2.33C4.66 5.17 6.65 3.58 9 3.58Z"
+      />
+    </svg>
+  );
+}

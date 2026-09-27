@@ -1,0 +1,45 @@
+/* Operate surface: fixed rem type, list-style layout, no card scaffold (DESIGN.md). */
+.status {
+  margin-block-start: 40px;
+}
+.panel {
+  margin-block-start: 40px;
+  max-inline-size: 420px;
+}
+.panel .button {
+  gap: 10px;
+}
+.email {
+  color: var(--fg-muted);
+}
+.plan {
+  margin-block-start: 12px;
+  font-size: 1.25rem;
+  font-weight: 620;
+  font-stretch: 108%;
+  letter-spacing: -0.01em;
+}
+.plan[data-premium] {
+  color: var(--red-text);
+}
+.meta {
+  margin-block-start: 4px;
+  color: var(--fg-muted);
+  font-size: 0.9375rem;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-block-start: 20px;
+}
+.error {
+  margin-block-start: 16px;
+  color: var(--worse);
+  font-size: 0.9375rem;
+}
+.signOut {
+  margin-block-start: 24px;
+  color: var(--fg-muted);
+}

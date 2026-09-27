@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getDictionary, getLocale } from '@/i18n/dictionaries';
 import { pageMetadata } from '@/lib/seo';
+import { AccountScreen } from '@/components/account/account-screen';
 
 export async function generateMetadata(): Promise<Metadata> {
   const [locale, dict] = await Promise.all([getLocale(), getDictionary()]);
@@ -8,11 +9,13 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function AccountPage() {
-  const dict = await getDictionary();
+  const [locale, dict] = await Promise.all([getLocale(), getDictionary()]);
   return (
     <div className="container page">
       <h1 className="h2">{dict.account.title}</h1>
       <p className="lead">{dict.account.lead}</p>
+      <AccountScreen locale={locale} t={dict.account} />
+      <p className="account-note">{dict.account.settingsNote}</p>
     </div>
   );
 }
