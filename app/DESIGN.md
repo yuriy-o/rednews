@@ -64,6 +64,8 @@ One family: **Archivo** (variable: `wdth` 62–125, `wght` 100–900), self-host
 - Radius: 6px controls, 10px panels. Charts and tables are square-edged like the chart pane.
 - Depth comes from the ground steps (`--bg` → `--bg-raised`) and hairlines, not shadows. Popovers only: `0 8px 24px -8px rgb(0 0 0 / 0.35)`.
 - Logical properties only (`inline`/`block`) — Arabic and Urdu are RTL.
+- **Header-to-heading gap is one value site-wide: 48px** (`.hero` and `.page` both open with it), so switching pages never shifts the h1's vertical position — even though the h1 itself still differs by mode (below). Don't reach for `.band`'s 112px rhythm directly under a page's own h1/lead; that's for separating *later*, substantial sections from each other, not the page opener from its first block.
+- **Margin direction: put spacing on the following element (`margin-block-start`), not the preceding one.** Matches "more space above a heading than below it" (Type, below) applied generally — the gap belongs to what it's protecting space for. `margin-block-end` on a heading/intro block is the wrong direction; if you find one, flip it.
 
 ## Components
 
