@@ -81,7 +81,7 @@ Built and reviewed (home page):
 Principles:
 
 - **News line:** 1px vertical `--red` line from the time axis to the top of the chart, with a flag (folder tab) at the top: currency + short title in the data style. Hover/focus opens a card: local time, actual vs forecast vs previous, better/worse icon.
-- **Buttons:** primary = red fill, white text; secondary = transparent with `--line` border. Height 40px (36px in the header). No gradients, no glow.
+- **Buttons:** primary = red fill, white text; secondary = transparent with `--line` border. Min-height 40px (36px in the header) — a floor, not a fixed height: `.button` wraps to a second line instead of overflowing when a translated label runs long (e.g. Ukrainian's "Почати 14-денну безкоштовну пробну версію" vs English's "Start 14-day free trial"). No gradients, no glow.
 - **Calendar:** day groups with pinned day headings; desktop table, mobile stacked rows on fixed tracks. Impact as a folder flag + label.
 - **Icons:** one drawn set (Lucide), 1.75px stroke; no Unicode glyphs or emoji as icons.
 - **Browser surfaces themed:** selection (`--red-soft`), focus ring (2px `--red-text`, 2px offset), caret, scrollbars, underline offset.
