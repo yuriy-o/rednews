@@ -1,4 +1,5 @@
 .list {
+  margin-block-start: 32px;
   border-block-start: 1px solid var(--line);
 }
 .row {
@@ -30,6 +31,7 @@
   font-stretch: 86%;
 }
 .empty {
+  margin-block-start: 32px;
   color: var(--fg-muted);
 }
 

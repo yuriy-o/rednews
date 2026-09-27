@@ -130,7 +130,8 @@ html {
   }
 }
 .page {
-  padding-block: 64px 96px;
+  /* Same top offset as .hero (home), so switching pages doesn't shift the heading position. */
+  padding-block: 48px 96px;
 }
 .page > .lead {
   margin-block-start: 12px;
@@ -405,7 +406,6 @@ html {
   align-items: end;
   justify-content: space-between;
   gap: 16px 32px;
-  margin-block-end: 32px;
 }
 .band__head .lead,
 .split__intro .lead {
