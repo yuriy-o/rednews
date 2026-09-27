@@ -1,7 +1,9 @@
 import type { ReactNode } from 'react';
 
 interface LegalBlock {
-  type: 'p' | 'ul';
+  // Sourced from en.json: TypeScript's JSON module inference widens this to `string`, not the
+  // literal union, once the array mixes { type, text } and { type, items } shapes.
+  type: string;
   text?: string;
   items?: string[];
 }
