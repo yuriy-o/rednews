@@ -313,7 +313,7 @@ html {
   inset-inline-end: 0;
   inset-block-start: calc(100% + 6px);
   z-index: 20;
-  min-inline-size: 190px;
+  inline-size: max-content;
   padding: 6px;
   border: 1px solid var(--line);
   border-radius: var(--radius-panel);
@@ -337,6 +337,7 @@ html {
   font: inherit;
   font-size: 0.9375rem;
   text-align: start;
+  white-space: nowrap;
   cursor: pointer;
 }
 .lang-switcher__list button:hover {
