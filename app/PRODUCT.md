@@ -61,8 +61,8 @@ The calendar is not a separate screen the trader has to watch: Red News puts red
 - Per-event AI outlook — "what to expect from this release"; already in the extension via the user's own Gemini/Groq key.
 - Historical reaction analysis — how price moved after similar past releases of the same indicator (FF `ebaseId` links releases). Needs a price-history source that is not chosen yet.
 
-**Direction agreed, implement at the account-area stage:**
-- One account system: Supabase Auth (already used by the extension) is the identity provider; the site signs in through Supabase and the NestJS API verifies Supabase-issued JWTs instead of minting its own. Entitlements come from the same source.
+**Account system (implemented 2026-09-27):**
+- One account system: Supabase Auth (already used by the extension) is the identity provider. The site is a Supabase client exactly like the extension — it signs in with Google via Supabase Auth and calls the same Edge Functions directly (`start-trial`, `paddle-checkout`, `paddle-portal`), reading `entitlements` via RLS. `server/` (NestJS) was **not** changed and does not verify Supabase JWTs; its `server/src/auth/` module predates this decision and is not used in production — don't build against it. Edge Function source lives outside this repo (`C:\Claude\Chrome Extension Red News\server\`, read-only reference).
 - Domain (updated 2026-09-26): test and finish the site on the Vercel address (`https://rednews-drab.vercel.app`, not indexed), then move the finished site to `rednews.app`. No separate beta subdomain. The site URL is one env var (`NEXT_PUBLIC_SITE_URL`); indexing is enabled only on `rednews.app`.
 
 **Open (do not assume):** price-data source for historical analysis; exact scope of statistics.
