@@ -2,245 +2,245 @@
   "meta": {
     "siteName": "Red News",
     "home": {
-      "title": "Red Folder News & Economic Calendar for TradingView",
-      "description": "High-impact economic news on your TradingView chart, with alerts before the release. Live Forex Factory calendar with actual, forecast and previous."
+      "title": "Новини червоної папки та економічний календар для TradingView",
+      "description": "Важливі економічні новини на вашому графіку TradingView, зі сповіщеннями до виходу. Календар Forex Factory наживо з фактичними, прогнозними та попередніми значеннями."
     },
     "calendar": {
-      "title": "Economic Calendar — High-Impact Forex News This Week",
-      "description": "This week's economic calendar: red folder news with actual, forecast and previous values, filterable by currency and impact, in your timezone.",
-      "weekTitle": "Economic calendar,"
+      "title": "Економічний календар — новини Forex з високим впливом цього тижня",
+      "description": "Економічний календар на цей тиждень: новини червоної папки з фактичними, прогнозними та попередніми значеннями, з фільтрами за валютою й впливом, у вашому часовому поясі.",
+      "weekTitle": "Економічний календар,"
     },
     "pricing": {
-      "title": "Pricing — Free and Premium",
-      "description": "Start free. Premium adds pre-news alerts, Telegram alerts and the full calendar range. 14-day trial, no card required."
+      "title": "Тарифи — Безкоштовно та Преміум",
+      "description": "Почніть безкоштовно. Преміум додає сповіщення до новин, сповіщення в Telegram і повний діапазон календаря. 14-денна пробна версія, картка не потрібна."
     },
     "account": {
-      "title": "Your account"
+      "title": "Ваш акаунт"
     },
     "privacy": {
-      "title": "Privacy Policy",
-      "description": "How Red News collects, stores, and protects your data — for the free extension and the optional Premium account."
+      "title": "Політика конфіденційності",
+      "description": "Як Red News збирає, зберігає та захищає ваші дані — для безкоштовного розширення та опційного Преміум-акаунту."
     },
     "terms": {
-      "title": "Terms of Service",
-      "description": "The terms that govern using the Red News browser extension, website, and Premium subscription."
+      "title": "Умови використання",
+      "description": "Умови, що регулюють використання розширення Red News для браузера, сайту та Преміум-підписки."
     },
     "refund": {
-      "title": "Refund Policy",
-      "description": "How trials, cancellations, and refunds work for Red News Premium, processed through Paddle."
+      "title": "Політика повернення коштів",
+      "description": "Як працюють пробні періоди, скасування та повернення коштів для Red News Преміум, що обробляються через Paddle."
     }
   },
   "nav": {
-    "home": "Home",
-    "calendar": "Calendar",
-    "pricing": "Pricing",
-    "account": "Account",
-    "install": "Add to Chrome",
-    "menuOpen": "Open menu",
-    "menuClose": "Close menu",
-    "skip": "Skip to content",
-    "language": "Language"
+    "home": "Головна",
+    "calendar": "Календар",
+    "pricing": "Тарифи",
+    "account": "Акаунт",
+    "install": "Додати в Chrome",
+    "menuOpen": "Відкрити меню",
+    "menuClose": "Закрити меню",
+    "skip": "Перейти до контенту",
+    "language": "Мова"
   },
   "theme": {
-    "label": "Theme",
-    "toggle": "Toggle theme",
-    "light": "Light",
-    "dark": "Dark"
+    "label": "Тема",
+    "toggle": "Перемкнути тему",
+    "light": "Світла",
+    "dark": "Темна"
   },
   "home": {
-    "titleLines": ["Red folder news alerts,", "right on your TradingView chart."],
-    "lead": "Red News draws high-impact economic releases on your chart and warns you before they land. No second screen.",
-    "cta": "Add to Chrome — it's free",
-    "ctaSecondary": "See this week's calendar",
+    "titleLines": ["Сповіщення про новини червоної папки,", "прямо на вашому графіку TradingView."],
+    "lead": "Red News малює важливі економічні релізи на вашому графіку та попереджає до їх виходу. Без другого екрана.",
+    "cta": "Додати в Chrome — безкоштовно",
+    "ctaSecondary": "Переглянути календар цього тижня",
     "chart": {
-      "caption": "High-impact releases, live from the calendar. The price line is illustrative.",
-      "unavailable": "Live releases are loading. The calendar will be back in a moment.",
-      "now": "Now",
-      "in": "in",
-      "actual": "Actual",
-      "forecast": "Forecast",
-      "previous": "Previous",
-      "better": "Better than forecast",
-      "worse": "Worse than forecast"
+      "caption": "Важливі релізи, наживо з календаря. Лінія ціни ілюстративна.",
+      "unavailable": "Дані наживо завантажуються. Календар повернеться за мить.",
+      "now": "Зараз",
+      "in": "через",
+      "actual": "Факт",
+      "forecast": "Прогноз",
+      "previous": "Попереднє",
+      "better": "Краще за прогноз",
+      "worse": "Гірше за прогноз"
     },
     "features": {
-      "title": "Everything happens on the chart",
-      "lead": "Red News works inside TradingView, where you already are.",
+      "title": "Все відбувається на графіку",
+      "lead": "Red News працює всередині TradingView, де ви вже перебуваєте.",
       "items": [
-        { "title": "News lines on your chart", "body": "Every release is drawn as a vertical line at the candle it lands on, colour-coded by impact." },
-        { "title": "Actual, forecast, previous", "body": "Hover a line to see the numbers without leaving the chart." },
-        { "title": "Multi-chart layouts", "body": "Lines appear on every pane of a multi-chart layout." },
-        { "title": "Your own AI", "body": "Connect a Gemini or Groq key and ask what to expect from a release." }
+        { "title": "Лінії новин на графіку", "body": "Кожен реліз малюється як вертикальна лінія на свічці, на якій він відбувається, кольорово позначена за впливом." },
+        { "title": "Факт, прогноз, попереднє", "body": "Наведіть курсор на лінію, щоб побачити цифри, не покидаючи графік." },
+        { "title": "Мультичарт-розкладки", "body": "Лінії з'являються на кожній панелі мультичарт-розкладки." },
+        { "title": "Власний ШІ", "body": "Підключіть ключ Gemini або Groq і дізнайтеся, чого очікувати від релізу." }
       ]
     },
     "alerts": {
-      "example": "Example",
+      "example": "Приклад",
       "release": "Non-Farm Payrolls",
-      "before": "{m} min before",
-      "caption": "Up to three reminders per release, 15 minutes before by default. Premium.",
+      "before": "за {m} хв до",
+      "caption": "До трьох нагадувань на реліз, за замовчуванням за 15 хвилин. Преміум.",
       "channels": {
-        "chart": "On the chart",
-        "desktop": "Desktop",
-        "sound": "Sound",
+        "chart": "На графіку",
+        "desktop": "На стільниці",
+        "sound": "Звук",
         "telegram": "Telegram"
       },
-      "filtersCaption": "Pick the currencies, impact levels and events you trade; everything else stays off your chart."
+      "filtersCaption": "Оберіть валюти, рівні впливу та події, якими торгуєте; усе інше залишиться поза вашим графіком."
     },
     "upcoming": {
-      "title": "Coming up",
-      "lead": "The next releases, in your timezone.",
-      "empty": "No more releases this week.",
-      "forecast": "F",
-      "in": "in",
-      "all": "Full calendar"
+      "title": "Найближчі події",
+      "lead": "Наступні релізи, у вашому часовому поясі.",
+      "empty": "Більше релізів цього тижня немає.",
+      "forecast": "П",
+      "in": "через",
+      "all": "Повний календар"
     },
     "plans": {
-      "title": "Start free. Add alerts when you're ready.",
+      "title": "Почніть безкоштовно. Додайте сповіщення, коли будете готові.",
       "free": {
-        "name": "Free",
+        "name": "Безкоштовно",
         "price": "$0",
-        "period": "forever",
-        "periodNote": "Forever · no account needed",
-        "items": ["News lines on your chart", "Colour-coded impact levels", "Actual / forecast / previous tooltips", "Currency, impact and topic filters", "22 interface languages"]
+        "period": "назавжди",
+        "periodNote": "Назавжди · акаунт не потрібен",
+        "items": ["Лінії новин на графіку", "Кольорові рівні впливу", "Підказки факт/прогноз/попереднє", "Фільтри за валютою, впливом і темою", "22 мови інтерфейсу"]
       },
       "premium": {
-        "name": "Premium",
+        "name": "Преміум",
         "price": "$4.99",
-        "period": "per month",
-        "periodNote": "or $39 per year, about 2 months free",
-        "items": ["Everything in Free", "Pre-news alerts: on-chart, desktop and sound", "Telegram alerts", "Full calendar range: extended history and future events", "Priority support", "Support continued development"]
+        "period": "на місяць",
+        "periodNote": "або $39 на рік, приблизно 2 місяці безкоштовно",
+        "items": ["Усе з Безкоштовного", "Сповіщення до новин: на графіку, на стільниці та звук", "Сповіщення в Telegram", "Повний діапазон календаря: розширена історія та майбутні події", "Пріоритетна підтримка", "Підтримка подальшої розробки"]
       },
-      "trial": "14-day Premium trial. No card required.",
-      "more": "Compare plans"
+      "trial": "14-денна Преміум пробна версія. Картка не потрібна.",
+      "more": "Порівняти тарифи"
     },
     "close": {
-      "title": "Put the calendar where you already look.",
-      "lead": "Install in under a minute. Open a chart. The week's releases are already there."
+      "title": "Розмістіть календар там, де ви вже дивитесь.",
+      "lead": "Встановіть менш ніж за хвилину. Відкрийте графік. Релізи цього тижня вже там."
     }
   },
   "footer": {
-    "source": "Calendar data: Forex Factory.",
-    "privacy": "Privacy",
-    "terms": "Terms",
-    "refund": "Refunds"
+    "source": "Дані календаря: Forex Factory.",
+    "privacy": "Конфіденційність",
+    "terms": "Умови",
+    "refund": "Повернення"
   },
   "calendar": {
-    "title": "Economic calendar",
-    "thisWeek": "This week",
-    "weekNav": "Week navigation",
-    "prevWeek": "Previous week",
-    "nextWeek": "Next week",
-    "today": "Today",
-    "now": "Now",
-    "in": "in",
-    "premiumRange": "Weeks further back or ahead come with Premium",
-    "premiumTitle": "This week is part of Premium",
-    "premiumBody": "The free calendar covers three weeks back and about a month ahead. Premium opens the extended history and future events.",
-    "premiumCta": "See Premium",
-    "backToThisWeek": "Back to this week",
+    "title": "Економічний календар",
+    "thisWeek": "Цей тиждень",
+    "weekNav": "Навігація по тижнях",
+    "prevWeek": "Попередній тиждень",
+    "nextWeek": "Наступний тиждень",
+    "today": "Сьогодні",
+    "now": "Зараз",
+    "in": "через",
+    "premiumRange": "Тижні далі назад чи вперед доступні з Преміум",
+    "premiumTitle": "Цей тиждень входить до Преміум",
+    "premiumBody": "Безкоштовний календар охоплює три тижні назад і близько місяця вперед. Преміум відкриває розширену історію та майбутні події.",
+    "premiumCta": "Дізнатись про Преміум",
+    "backToThisWeek": "Повернутись до цього тижня",
     "filters": {
-      "label": "Filters",
-      "currencies": "Currencies",
-      "impacts": "Impact",
-      "search": "Search events",
-      "searchPlaceholder": "Search events",
-      "reset": "Reset filters",
-      "keyEvents": "Key events",
-      "categories": "Categories"
+      "label": "Фільтри",
+      "currencies": "Валюти",
+      "impacts": "Вплив",
+      "search": "Пошук подій",
+      "searchPlaceholder": "Пошук подій",
+      "reset": "Скинути фільтри",
+      "keyEvents": "Ключові події",
+      "categories": "Категорії"
     },
     "topics": {
       "NFP": "NFP",
       "CPI": "CPI",
       "FOMC": "FOMC",
-      "jobs": "Jobs",
-      "inflation": "Inflation",
-      "banks": "Central banks",
-      "growth": "Growth",
-      "speeches": "Speeches"
+      "jobs": "Робочі місця",
+      "inflation": "Інфляція",
+      "banks": "Центральні банки",
+      "growth": "Зростання",
+      "speeches": "Виступи"
     },
     "timeZone": {
-      "label": "Times in",
-      "auto": "Auto (browser)",
-      "offsets": "Fixed offset (no DST)",
+      "label": "Час у",
+      "auto": "Авто (браузер)",
+      "offsets": "Фіксоване зміщення (без літнього часу)",
       "regions": {
-        "americas": "Americas",
-        "europe": "Europe",
-        "middleEastAfrica": "Middle East & Africa",
-        "asia": "Asia",
-        "pacific": "Pacific"
+        "americas": "Америка",
+        "europe": "Європа",
+        "middleEastAfrica": "Близький Схід і Африка",
+        "asia": "Азія",
+        "pacific": "Тихоокеанський регіон"
       }
     },
-    "showing": "{n} of {total} events",
-    "noMatch": "No events match these filters.",
-    "noMatchToday": "No events today match these filters.",
-    "revised": "rev.",
-    "revisedTo": "Previous value revised to {v}",
-    "empty": "No events for this week yet.",
-    "unavailable": "The calendar is temporarily unavailable. Please try again in a minute.",
+    "showing": "{n} з {total} подій",
+    "noMatch": "Жодна подія не відповідає цим фільтрам.",
+    "noMatchToday": "Сьогодні немає подій, що відповідають цим фільтрам.",
+    "revised": "перегл.",
+    "revisedTo": "Попереднє значення переглянуто до {v}",
+    "empty": "Подій на цей тиждень поки немає.",
+    "unavailable": "Календар тимчасово недоступний. Спробуйте ще раз за хвилину.",
     "columns": {
-      "time": "Time",
-      "currency": "Currency",
-      "impact": "Impact",
-      "event": "Event",
-      "actual": "Actual",
-      "forecast": "Forecast",
-      "previous": "Previous"
+      "time": "Час",
+      "currency": "Валюта",
+      "impact": "Вплив",
+      "event": "Подія",
+      "actual": "Факт",
+      "forecast": "Прогноз",
+      "previous": "Попереднє"
     },
     "impact": {
-      "HIGH": "High",
-      "MEDIUM": "Medium",
-      "LOW": "Low",
-      "HOLIDAY": "Holiday"
+      "HIGH": "Високий",
+      "MEDIUM": "Середній",
+      "LOW": "Низький",
+      "HOLIDAY": "Свято"
     },
-    "better": "Better than forecast",
-    "worse": "Worse than forecast"
+    "better": "Краще за прогноз",
+    "worse": "Гірше за прогноз"
   },
   "pricing": {
-    "title": "Pricing",
-    "lead": "Start free. Add red folder news alerts when you're ready.",
-    "intro": "The core extension is free and works without an account. Premium unlocks pre-news alerts and the full calendar range, and supports development.",
-    "trial": "14-day free trial. No card required.",
-    "cta": "Start free trial",
-    "ctaSecondary": "Add to Chrome",
-    "faq": "Questions?",
+    "title": "Тарифи",
+    "lead": "Почніть безкоштовно. Додайте сповіщення про новини червоної папки, коли будете готові.",
+    "intro": "Основне розширення безкоштовне і працює без акаунту. Преміум відкриває сповіщення до новин і повний діапазон календаря, а також підтримує розробку.",
+    "trial": "14-денна безкоштовна пробна версія. Картка не потрібна.",
+    "cta": "Почати безкоштовну пробну версію",
+    "ctaSecondary": "Додати в Chrome",
+    "faq": "Питання?",
     "faqItems": [
       {
-        "q": "What's included in the trial?",
-        "a": "The 14-day trial gives you full access to Premium features: pre-news alerts on the chart, desktop notifications and sound alerts, Telegram integration, and the extended calendar range."
+        "q": "Що входить у пробну версію?",
+        "a": "14-денна пробна версія дає повний доступ до функцій Преміум: сповіщення до новин на графіку, сповіщення на стільниці та звукові сповіщення, інтеграція з Telegram і розширений діапазон календаря."
       },
       {
-        "q": "How do I cancel?",
-        "a": "Sign in to your account and cancel anytime in Settings. No fees are charged if you cancel before the trial ends."
+        "q": "Як скасувати?",
+        "a": "Увійдіть у свій акаунт і скасуйте будь-коли в Налаштуваннях. Жодної плати не стягується, якщо скасувати до завершення пробного періоду."
       },
       {
-        "q": "What if I'm not happy?",
-        "a": "We offer a 30-day refund window if you've paid for a month or year. See our Refunds page for the details."
+        "q": "Що якщо мене щось не влаштує?",
+        "a": "Ми пропонуємо 30-денне вікно повернення коштів, якщо ви сплатили за місяць чи рік. Деталі — на сторінці Повернення коштів."
       }
     ]
   },
   "account": {
-    "title": "Your account",
-    "lead": "Sign in with the same Google account you use in the extension to manage your subscription.",
-    "signIn": "Sign in with Google",
-    "signingIn": "Signing in…",
-    "signOut": "Sign out",
-    "loading": "Loading your account…",
+    "title": "Ваш акаунт",
+    "lead": "Увійдіть тим самим акаунтом Google, яким користуєтесь у розширенні, щоб керувати підпискою.",
+    "signIn": "Увійти через Google",
+    "signingIn": "Вхід…",
+    "signOut": "Вийти",
+    "loading": "Завантаження вашого акаунту…",
     "plan": {
-      "free": "Free",
-      "trial": "Premium trial",
-      "premium": "Premium",
-      "comp": "Full access"
+      "free": "Безкоштовно",
+      "trial": "Преміум пробна версія",
+      "premium": "Преміум",
+      "comp": "Повний доступ"
     },
-    "trialEnds": "Trial ends {date}",
-    "renewsOn": "Renews {date}",
-    "endsOn": "Access ends {date}",
-    "startTrial": "Start 14-day free trial",
-    "startingTrial": "Starting trial…",
-    "upgrade": "Upgrade to Premium",
-    "manage": "Manage subscription",
-    "opening": "Opening…",
-    "error": "Something went wrong. Please try again or contact support.",
-    "settingsNote": "Settings sync with the extension is coming soon."
+    "trialEnds": "Пробний період закінчується {date}",
+    "renewsOn": "Поновлення {date}",
+    "endsOn": "Доступ закінчується {date}",
+    "startTrial": "Почати 14-денну безкоштовну пробну версію",
+    "startingTrial": "Запуск пробної версії…",
+    "upgrade": "Перейти на Преміум",
+    "manage": "Керувати підпискою",
+    "opening": "Відкриття…",
+    "error": "Щось пішло не так. Спробуйте ще раз або зверніться до підтримки.",
+    "settingsNote": "Синхронізація налаштувань із розширенням незабаром."
   },
   "legal": {
     "privacy": {
@@ -504,10 +504,10 @@
     }
   },
   "notFound": {
-    "title": "Page not found",
-    "lead": "This page dropped off the chart. It may have moved, or never existed.",
-    "flag": "Page not found",
-    "back": "Back to home",
-    "secondary": "See this week's calendar"
+    "title": "Сторінку не знайдено",
+    "lead": "Ця сторінка випала з графіка. Можливо, вона переїхала або ніколи не існувала.",
+    "flag": "Сторінку не знайдено",
+    "back": "На головну",
+    "secondary": "Переглянути календар цього тижня"
   }
 }

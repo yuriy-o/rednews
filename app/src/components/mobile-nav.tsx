@@ -3,18 +3,21 @@
 import { useEffect, useId, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
+import type { Locale } from '@/i18n/config';
 import { ThemeToggle } from './theme';
 import { NavLink } from './nav-link';
+import { LanguageSwitcher } from './language-switcher';
 
 interface Props {
   items: { href: string; label: string }[];
   openLabel: string;
   closeLabel: string;
   theme: { label: string; toggle: string };
+  lang: { locale: Locale; label: string };
 }
 
 /** Header navigation for narrow screens, where the inline nav is hidden. */
-export function MobileNav({ items, openLabel, closeLabel, theme }: Props) {
+export function MobileNav({ items, openLabel, closeLabel, theme, lang }: Props) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const listId = useId();
@@ -65,6 +68,10 @@ export function MobileNav({ items, openLabel, closeLabel, theme }: Props) {
         <li className="mobile-nav__theme">
           <span>{theme.label}</span>
           <ThemeToggle label={theme.toggle} />
+        </li>
+        <li className="mobile-nav__lang">
+          <span>{lang.label}</span>
+          <LanguageSwitcher locale={lang.locale} label={lang.label} />
         </li>
       </ul>
     </div>

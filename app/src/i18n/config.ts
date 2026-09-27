@@ -30,7 +30,10 @@ export const allLocales = {
 export type Locale = keyof typeof allLocales;
 
 export const defaultLocale: Locale = 'en';
-export const enabledLocales: readonly Locale[] = ['en'];
+export const enabledLocales: readonly Locale[] = ['en', 'uk', 'es', 'pt-br'];
+
+/** Saved locale choice (language switcher, proxy negotiation) — read by proxy.ts too. */
+export const LOCALE_COOKIE = 'rn-locale';
 
 export function isEnabledLocale(value: string): value is Locale {
   return (enabledLocales as readonly string[]).includes(value);

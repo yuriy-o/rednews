@@ -1,7 +1,5 @@
 import { NextResponse, type NextRequest } from 'next/server';
-import { allLocales, defaultLocale, enabledLocales, type Locale } from './i18n/config';
-
-export const LOCALE_COOKIE = 'rn-locale';
+import { LOCALE_COOKIE, allLocales, defaultLocale, enabledLocales, type Locale } from './i18n/config';
 
 /** Best enabled locale for an Accept-Language header: exact tag first, then base language. */
 function negotiate(header: string | null): Locale {

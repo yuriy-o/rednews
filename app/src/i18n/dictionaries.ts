@@ -8,6 +8,9 @@ export type Dictionary = typeof en;
 // English is the source of truth for keys; other locales must match its shape.
 const dictionaries: Partial<Record<Locale, () => Promise<Dictionary>>> = {
   en: () => import('./dictionaries/en.json').then((m) => m.default),
+  uk: () => import('./dictionaries/uk.json').then((m) => m.default),
+  es: () => import('./dictionaries/es.json').then((m) => m.default),
+  'pt-br': () => import('./dictionaries/pt-br.json').then((m) => m.default),
 };
 
 /** Current route's locale (from the `[lang]` root segment); 404 for unknown/disabled ones. */

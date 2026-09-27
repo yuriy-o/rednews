@@ -6,6 +6,7 @@ import { localePath } from '@/lib/seo';
 import { ThemeToggle } from './theme';
 import { MobileNav } from './mobile-nav';
 import { NavLink } from './nav-link';
+import { LanguageSwitcher } from './language-switcher';
 
 export const CHROME_STORE_URL = 'https://chromewebstore.google.com/detail/amfdnacihpdhedfadbcoeeoijnfpnllf';
 
@@ -33,6 +34,9 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
           </ul>
         </nav>
         <div className="site-header__actions">
+          <span className="header-lang">
+            <LanguageSwitcher locale={locale} label={dict.nav.language} />
+          </span>
           <span className="header-theme">
             <ThemeToggle label={dict.theme.toggle} />
           </span>
@@ -44,6 +48,7 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
             openLabel={dict.nav.menuOpen}
             closeLabel={dict.nav.menuClose}
             theme={{ label: dict.theme.label, toggle: dict.theme.toggle }}
+            lang={{ locale, label: dict.nav.language }}
           />
         </div>
       </div>

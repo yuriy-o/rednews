@@ -2,245 +2,245 @@
   "meta": {
     "siteName": "Red News",
     "home": {
-      "title": "Red Folder News & Economic Calendar for TradingView",
-      "description": "High-impact economic news on your TradingView chart, with alerts before the release. Live Forex Factory calendar with actual, forecast and previous."
+      "title": "Noticias de carpeta roja y calendario económico para TradingView",
+      "description": "Noticias económicas de alto impacto en tu gráfico de TradingView, con alertas antes de la publicación. Calendario de Forex Factory en vivo con valores real, previsto y anterior."
     },
     "calendar": {
-      "title": "Economic Calendar — High-Impact Forex News This Week",
-      "description": "This week's economic calendar: red folder news with actual, forecast and previous values, filterable by currency and impact, in your timezone.",
-      "weekTitle": "Economic calendar,"
+      "title": "Calendario económico — Noticias forex de alto impacto esta semana",
+      "description": "Calendario económico de esta semana: noticias de carpeta roja con valores real, previsto y anterior, filtrables por divisa e impacto, en tu zona horaria.",
+      "weekTitle": "Calendario económico,"
     },
     "pricing": {
-      "title": "Pricing — Free and Premium",
-      "description": "Start free. Premium adds pre-news alerts, Telegram alerts and the full calendar range. 14-day trial, no card required."
+      "title": "Precios — Gratis y Premium",
+      "description": "Empieza gratis. Premium añade alertas antes de la noticia, alertas de Telegram y el calendario completo. Prueba de 14 días, sin tarjeta."
     },
     "account": {
-      "title": "Your account"
+      "title": "Tu cuenta"
     },
     "privacy": {
-      "title": "Privacy Policy",
-      "description": "How Red News collects, stores, and protects your data — for the free extension and the optional Premium account."
+      "title": "Política de privacidad",
+      "description": "Cómo Red News recopila, almacena y protege tus datos — para la extensión gratuita y la cuenta Premium opcional."
     },
     "terms": {
-      "title": "Terms of Service",
-      "description": "The terms that govern using the Red News browser extension, website, and Premium subscription."
+      "title": "Términos de servicio",
+      "description": "Los términos que rigen el uso de la extensión de navegador, el sitio web y la suscripción Premium de Red News."
     },
     "refund": {
-      "title": "Refund Policy",
-      "description": "How trials, cancellations, and refunds work for Red News Premium, processed through Paddle."
+      "title": "Política de reembolsos",
+      "description": "Cómo funcionan las pruebas, cancelaciones y reembolsos de Red News Premium, procesados a través de Paddle."
     }
   },
   "nav": {
-    "home": "Home",
-    "calendar": "Calendar",
-    "pricing": "Pricing",
-    "account": "Account",
-    "install": "Add to Chrome",
-    "menuOpen": "Open menu",
-    "menuClose": "Close menu",
-    "skip": "Skip to content",
-    "language": "Language"
+    "home": "Inicio",
+    "calendar": "Calendario",
+    "pricing": "Precios",
+    "account": "Cuenta",
+    "install": "Añadir a Chrome",
+    "menuOpen": "Abrir menú",
+    "menuClose": "Cerrar menú",
+    "skip": "Saltar al contenido",
+    "language": "Idioma"
   },
   "theme": {
-    "label": "Theme",
-    "toggle": "Toggle theme",
-    "light": "Light",
-    "dark": "Dark"
+    "label": "Tema",
+    "toggle": "Cambiar tema",
+    "light": "Claro",
+    "dark": "Oscuro"
   },
   "home": {
-    "titleLines": ["Red folder news alerts,", "right on your TradingView chart."],
-    "lead": "Red News draws high-impact economic releases on your chart and warns you before they land. No second screen.",
-    "cta": "Add to Chrome — it's free",
-    "ctaSecondary": "See this week's calendar",
+    "titleLines": ["Alertas de noticias de carpeta roja,", "directamente en tu gráfico de TradingView."],
+    "lead": "Red News dibuja publicaciones económicas de alto impacto en tu gráfico y te avisa antes de que ocurran. Sin segunda pantalla.",
+    "cta": "Añadir a Chrome — es gratis",
+    "ctaSecondary": "Ver el calendario de esta semana",
     "chart": {
-      "caption": "High-impact releases, live from the calendar. The price line is illustrative.",
-      "unavailable": "Live releases are loading. The calendar will be back in a moment.",
-      "now": "Now",
-      "in": "in",
-      "actual": "Actual",
-      "forecast": "Forecast",
-      "previous": "Previous",
-      "better": "Better than forecast",
-      "worse": "Worse than forecast"
+      "caption": "Publicaciones de alto impacto, en vivo desde el calendario. La línea de precio es ilustrativa.",
+      "unavailable": "Las publicaciones en vivo se están cargando. El calendario volverá en un momento.",
+      "now": "Ahora",
+      "in": "en",
+      "actual": "Real",
+      "forecast": "Previsto",
+      "previous": "Anterior",
+      "better": "Mejor de lo previsto",
+      "worse": "Peor de lo previsto"
     },
     "features": {
-      "title": "Everything happens on the chart",
-      "lead": "Red News works inside TradingView, where you already are.",
+      "title": "Todo sucede en el gráfico",
+      "lead": "Red News funciona dentro de TradingView, donde ya estás.",
       "items": [
-        { "title": "News lines on your chart", "body": "Every release is drawn as a vertical line at the candle it lands on, colour-coded by impact." },
-        { "title": "Actual, forecast, previous", "body": "Hover a line to see the numbers without leaving the chart." },
-        { "title": "Multi-chart layouts", "body": "Lines appear on every pane of a multi-chart layout." },
-        { "title": "Your own AI", "body": "Connect a Gemini or Groq key and ask what to expect from a release." }
+        { "title": "Líneas de noticias en tu gráfico", "body": "Cada publicación se dibuja como una línea vertical en la vela en la que ocurre, con color según su impacto." },
+        { "title": "Real, previsto, anterior", "body": "Pasa el cursor sobre una línea para ver las cifras sin salir del gráfico." },
+        { "title": "Diseños multigráfico", "body": "Las líneas aparecen en cada panel de un diseño multigráfico." },
+        { "title": "Tu propia IA", "body": "Conecta una clave de Gemini o Groq y pregunta qué esperar de una publicación." }
       ]
     },
     "alerts": {
-      "example": "Example",
+      "example": "Ejemplo",
       "release": "Non-Farm Payrolls",
-      "before": "{m} min before",
-      "caption": "Up to three reminders per release, 15 minutes before by default. Premium.",
+      "before": "{m} min antes",
+      "caption": "Hasta tres recordatorios por publicación, 15 minutos antes por defecto. Premium.",
       "channels": {
-        "chart": "On the chart",
-        "desktop": "Desktop",
-        "sound": "Sound",
+        "chart": "En el gráfico",
+        "desktop": "Escritorio",
+        "sound": "Sonido",
         "telegram": "Telegram"
       },
-      "filtersCaption": "Pick the currencies, impact levels and events you trade; everything else stays off your chart."
+      "filtersCaption": "Elige las divisas, niveles de impacto y eventos que operas; todo lo demás queda fuera de tu gráfico."
     },
     "upcoming": {
-      "title": "Coming up",
-      "lead": "The next releases, in your timezone.",
-      "empty": "No more releases this week.",
-      "forecast": "F",
-      "in": "in",
-      "all": "Full calendar"
+      "title": "Próximamente",
+      "lead": "Las próximas publicaciones, en tu zona horaria.",
+      "empty": "No hay más publicaciones esta semana.",
+      "forecast": "P",
+      "in": "en",
+      "all": "Calendario completo"
     },
     "plans": {
-      "title": "Start free. Add alerts when you're ready.",
+      "title": "Empieza gratis. Añade alertas cuando estés listo.",
       "free": {
-        "name": "Free",
+        "name": "Gratis",
         "price": "$0",
-        "period": "forever",
-        "periodNote": "Forever · no account needed",
-        "items": ["News lines on your chart", "Colour-coded impact levels", "Actual / forecast / previous tooltips", "Currency, impact and topic filters", "22 interface languages"]
+        "period": "para siempre",
+        "periodNote": "Para siempre · sin necesidad de cuenta",
+        "items": ["Líneas de noticias en tu gráfico", "Niveles de impacto con color", "Info sobre real / previsto / anterior", "Filtros por divisa, impacto y tema", "22 idiomas de interfaz"]
       },
       "premium": {
         "name": "Premium",
         "price": "$4.99",
-        "period": "per month",
-        "periodNote": "or $39 per year, about 2 months free",
-        "items": ["Everything in Free", "Pre-news alerts: on-chart, desktop and sound", "Telegram alerts", "Full calendar range: extended history and future events", "Priority support", "Support continued development"]
+        "period": "al mes",
+        "periodNote": "o $39 al año, unos 2 meses gratis",
+        "items": ["Todo lo de Gratis", "Alertas antes de la noticia: en el gráfico, escritorio y sonido", "Alertas de Telegram", "Calendario completo: historial ampliado y eventos futuros", "Soporte prioritario", "Apoyas el desarrollo continuo"]
       },
-      "trial": "14-day Premium trial. No card required.",
-      "more": "Compare plans"
+      "trial": "Prueba Premium de 14 días. Sin tarjeta.",
+      "more": "Comparar planes"
     },
     "close": {
-      "title": "Put the calendar where you already look.",
-      "lead": "Install in under a minute. Open a chart. The week's releases are already there."
+      "title": "Pon el calendario donde ya miras.",
+      "lead": "Instálalo en menos de un minuto. Abre un gráfico. Las publicaciones de la semana ya están ahí."
     }
   },
   "footer": {
-    "source": "Calendar data: Forex Factory.",
-    "privacy": "Privacy",
-    "terms": "Terms",
-    "refund": "Refunds"
+    "source": "Datos del calendario: Forex Factory.",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "refund": "Reembolsos"
   },
   "calendar": {
-    "title": "Economic calendar",
-    "thisWeek": "This week",
-    "weekNav": "Week navigation",
-    "prevWeek": "Previous week",
-    "nextWeek": "Next week",
-    "today": "Today",
-    "now": "Now",
-    "in": "in",
-    "premiumRange": "Weeks further back or ahead come with Premium",
-    "premiumTitle": "This week is part of Premium",
-    "premiumBody": "The free calendar covers three weeks back and about a month ahead. Premium opens the extended history and future events.",
-    "premiumCta": "See Premium",
-    "backToThisWeek": "Back to this week",
+    "title": "Calendario económico",
+    "thisWeek": "Esta semana",
+    "weekNav": "Navegación semanal",
+    "prevWeek": "Semana anterior",
+    "nextWeek": "Semana siguiente",
+    "today": "Hoy",
+    "now": "Ahora",
+    "in": "en",
+    "premiumRange": "Las semanas más atrás o adelante están en Premium",
+    "premiumTitle": "Esta semana es parte de Premium",
+    "premiumBody": "El calendario gratuito cubre tres semanas atrás y cerca de un mes adelante. Premium abre el historial ampliado y los eventos futuros.",
+    "premiumCta": "Ver Premium",
+    "backToThisWeek": "Volver a esta semana",
     "filters": {
-      "label": "Filters",
-      "currencies": "Currencies",
-      "impacts": "Impact",
-      "search": "Search events",
-      "searchPlaceholder": "Search events",
-      "reset": "Reset filters",
-      "keyEvents": "Key events",
-      "categories": "Categories"
+      "label": "Filtros",
+      "currencies": "Divisas",
+      "impacts": "Impacto",
+      "search": "Buscar eventos",
+      "searchPlaceholder": "Buscar eventos",
+      "reset": "Restablecer filtros",
+      "keyEvents": "Eventos clave",
+      "categories": "Categorías"
     },
     "topics": {
       "NFP": "NFP",
       "CPI": "CPI",
       "FOMC": "FOMC",
-      "jobs": "Jobs",
-      "inflation": "Inflation",
-      "banks": "Central banks",
-      "growth": "Growth",
-      "speeches": "Speeches"
+      "jobs": "Empleo",
+      "inflation": "Inflación",
+      "banks": "Bancos centrales",
+      "growth": "Crecimiento",
+      "speeches": "Discursos"
     },
     "timeZone": {
-      "label": "Times in",
-      "auto": "Auto (browser)",
-      "offsets": "Fixed offset (no DST)",
+      "label": "Hora en",
+      "auto": "Automático (navegador)",
+      "offsets": "Desfase fijo (sin horario de verano)",
       "regions": {
-        "americas": "Americas",
-        "europe": "Europe",
-        "middleEastAfrica": "Middle East & Africa",
+        "americas": "América",
+        "europe": "Europa",
+        "middleEastAfrica": "Oriente Medio y África",
         "asia": "Asia",
-        "pacific": "Pacific"
+        "pacific": "Pacífico"
       }
     },
-    "showing": "{n} of {total} events",
-    "noMatch": "No events match these filters.",
-    "noMatchToday": "No events today match these filters.",
+    "showing": "{n} de {total} eventos",
+    "noMatch": "Ningún evento coincide con estos filtros.",
+    "noMatchToday": "Hoy no hay eventos que coincidan con estos filtros.",
     "revised": "rev.",
-    "revisedTo": "Previous value revised to {v}",
-    "empty": "No events for this week yet.",
-    "unavailable": "The calendar is temporarily unavailable. Please try again in a minute.",
+    "revisedTo": "Valor anterior revisado a {v}",
+    "empty": "Todavía no hay eventos para esta semana.",
+    "unavailable": "El calendario no está disponible temporalmente. Inténtalo de nuevo en un minuto.",
     "columns": {
-      "time": "Time",
-      "currency": "Currency",
-      "impact": "Impact",
-      "event": "Event",
-      "actual": "Actual",
-      "forecast": "Forecast",
-      "previous": "Previous"
+      "time": "Hora",
+      "currency": "Divisa",
+      "impact": "Impacto",
+      "event": "Evento",
+      "actual": "Real",
+      "forecast": "Previsto",
+      "previous": "Anterior"
     },
     "impact": {
-      "HIGH": "High",
-      "MEDIUM": "Medium",
-      "LOW": "Low",
-      "HOLIDAY": "Holiday"
+      "HIGH": "Alto",
+      "MEDIUM": "Medio",
+      "LOW": "Bajo",
+      "HOLIDAY": "Festivo"
     },
-    "better": "Better than forecast",
-    "worse": "Worse than forecast"
+    "better": "Mejor de lo previsto",
+    "worse": "Peor de lo previsto"
   },
   "pricing": {
-    "title": "Pricing",
-    "lead": "Start free. Add red folder news alerts when you're ready.",
-    "intro": "The core extension is free and works without an account. Premium unlocks pre-news alerts and the full calendar range, and supports development.",
-    "trial": "14-day free trial. No card required.",
-    "cta": "Start free trial",
-    "ctaSecondary": "Add to Chrome",
-    "faq": "Questions?",
+    "title": "Precios",
+    "lead": "Empieza gratis. Añade alertas de noticias de carpeta roja cuando estés listo.",
+    "intro": "La extensión principal es gratuita y funciona sin cuenta. Premium desbloquea alertas antes de la noticia y el calendario completo, y apoya el desarrollo.",
+    "trial": "Prueba gratuita de 14 días. Sin tarjeta.",
+    "cta": "Iniciar prueba gratuita",
+    "ctaSecondary": "Añadir a Chrome",
+    "faq": "¿Preguntas?",
     "faqItems": [
       {
-        "q": "What's included in the trial?",
-        "a": "The 14-day trial gives you full access to Premium features: pre-news alerts on the chart, desktop notifications and sound alerts, Telegram integration, and the extended calendar range."
+        "q": "¿Qué incluye la prueba?",
+        "a": "La prueba de 14 días te da acceso completo a las funciones Premium: alertas antes de la noticia en el gráfico, notificaciones de escritorio y sonido, integración con Telegram y el calendario ampliado."
       },
       {
-        "q": "How do I cancel?",
-        "a": "Sign in to your account and cancel anytime in Settings. No fees are charged if you cancel before the trial ends."
+        "q": "¿Cómo cancelo?",
+        "a": "Inicia sesión en tu cuenta y cancela cuando quieras en Ajustes. No se cobra nada si cancelas antes de que termine la prueba."
       },
       {
-        "q": "What if I'm not happy?",
-        "a": "We offer a 30-day refund window if you've paid for a month or year. See our Refunds page for the details."
+        "q": "¿Y si no estoy satisfecho?",
+        "a": "Ofrecemos un plazo de reembolso de 30 días si pagaste un mes o un año. Consulta los detalles en la página de Reembolsos."
       }
     ]
   },
   "account": {
-    "title": "Your account",
-    "lead": "Sign in with the same Google account you use in the extension to manage your subscription.",
-    "signIn": "Sign in with Google",
-    "signingIn": "Signing in…",
-    "signOut": "Sign out",
-    "loading": "Loading your account…",
+    "title": "Tu cuenta",
+    "lead": "Inicia sesión con la misma cuenta de Google que usas en la extensión para gestionar tu suscripción.",
+    "signIn": "Iniciar sesión con Google",
+    "signingIn": "Iniciando sesión…",
+    "signOut": "Cerrar sesión",
+    "loading": "Cargando tu cuenta…",
     "plan": {
-      "free": "Free",
-      "trial": "Premium trial",
+      "free": "Gratis",
+      "trial": "Prueba Premium",
       "premium": "Premium",
-      "comp": "Full access"
+      "comp": "Acceso completo"
     },
-    "trialEnds": "Trial ends {date}",
-    "renewsOn": "Renews {date}",
-    "endsOn": "Access ends {date}",
-    "startTrial": "Start 14-day free trial",
-    "startingTrial": "Starting trial…",
-    "upgrade": "Upgrade to Premium",
-    "manage": "Manage subscription",
-    "opening": "Opening…",
-    "error": "Something went wrong. Please try again or contact support.",
-    "settingsNote": "Settings sync with the extension is coming soon."
+    "trialEnds": "La prueba termina el {date}",
+    "renewsOn": "Se renueva el {date}",
+    "endsOn": "El acceso termina el {date}",
+    "startTrial": "Iniciar prueba gratuita de 14 días",
+    "startingTrial": "Iniciando prueba…",
+    "upgrade": "Pasar a Premium",
+    "manage": "Gestionar suscripción",
+    "opening": "Abriendo…",
+    "error": "Algo salió mal. Inténtalo de nuevo o contacta con soporte.",
+    "settingsNote": "La sincronización de ajustes con la extensión llegará pronto."
   },
   "legal": {
     "privacy": {
@@ -504,10 +504,10 @@
     }
   },
   "notFound": {
-    "title": "Page not found",
-    "lead": "This page dropped off the chart. It may have moved, or never existed.",
-    "flag": "Page not found",
-    "back": "Back to home",
-    "secondary": "See this week's calendar"
+    "title": "Página no encontrada",
+    "lead": "Esta página se salió del gráfico. Puede que se haya movido o que nunca haya existido.",
+    "flag": "Página no encontrada",
+    "back": "Volver al inicio",
+    "secondary": "Ver el calendario de esta semana"
   }
 }
