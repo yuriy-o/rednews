@@ -3,9 +3,6 @@ import type { Locale } from '@/i18n/config';
 import type { Dictionary } from '@/i18n/dictionaries';
 import { localePath } from '@/lib/seo';
 
-// Legal pages still live on the legacy static site until they are migrated.
-const LEGACY = 'https://rednews.app';
-
 export function SiteFooter({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   return (
     <footer className="site-footer">
@@ -22,13 +19,13 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: Dictionary 
               <Link href={localePath(locale, '/pricing')}>{dict.nav.pricing}</Link>
             </li>
             <li>
-              <a href={`${LEGACY}/privacy.html`}>{dict.footer.privacy}</a>
+              <Link href={localePath(locale, '/privacy')}>{dict.footer.privacy}</Link>
             </li>
             <li>
-              <a href={`${LEGACY}/terms.html`}>{dict.footer.terms}</a>
+              <Link href={localePath(locale, '/terms')}>{dict.footer.terms}</Link>
             </li>
             <li>
-              <a href={`${LEGACY}/refund.html`}>{dict.footer.refund}</a>
+              <Link href={localePath(locale, '/refund')}>{dict.footer.refund}</Link>
             </li>
           </ul>
         </nav>

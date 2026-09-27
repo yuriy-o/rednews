@@ -105,6 +105,13 @@ html {
   letter-spacing: -0.02em;
   line-height: 1.15;
 }
+.h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-stretch: 100%;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
 .lead {
   max-inline-size: 60ch;
   color: var(--fg-muted);
@@ -679,6 +686,45 @@ html {
 .faq__item p {
   margin-block-start: 12px;
   color: var(--fg-muted);
+}
+
+/* Legal pages (privacy, terms, refund) — Read mode: prose, comfortable measure, generous rhythm
+   between topics, tight rhythm from a heading to its own body (margin-block-start throughout). */
+.legal__updated {
+  margin-block-start: 8px;
+}
+.legal > .lead {
+  margin-block-start: 12px;
+}
+.legal section {
+  margin-block-start: 48px;
+  max-inline-size: 70ch;
+}
+.legal section > p,
+.legal section > ul {
+  margin-block-start: 12px;
+}
+.legal ul {
+  padding-inline-start: 20px;
+  display: grid;
+  gap: 8px;
+}
+.legal li {
+  color: var(--fg-muted);
+}
+.legal a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  transition: color 150ms var(--ease-out);
+}
+.legal a:hover {
+  color: var(--red-text);
+}
+/* Higher specificity than `.legal > .lead` (also 0,2,0 but declared earlier): this closing
+   note needs its own generous top margin, not the lead's tight one. */
+.legal .legal__closing {
+  margin-block-start: 48px;
+  max-inline-size: 70ch;
 }
 
 @media (prefers-reduced-motion: reduce) {
