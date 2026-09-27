@@ -5,6 +5,7 @@ import type { Dictionary } from '@/i18n/dictionaries';
 import { localePath } from '@/lib/seo';
 import { ThemeToggle } from './theme';
 import { MobileNav } from './mobile-nav';
+import { NavLink } from './nav-link';
 
 export const CHROME_STORE_URL = 'https://chromewebstore.google.com/detail/amfdnacihpdhedfadbcoeeoijnfpnllf';
 
@@ -26,7 +27,7 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
           <ul className="nav-list">
             {nav.map((item) => (
               <li key={item.href}>
-                <Link href={item.href}>{item.label}</Link>
+                <NavLink href={item.href}>{item.label}</NavLink>
               </li>
             ))}
           </ul>

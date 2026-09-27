@@ -1,10 +1,10 @@
 'use client';
 
 import { useEffect, useId, useRef, useState } from 'react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { ThemeToggle } from './theme';
+import { NavLink } from './nav-link';
 
 interface Props {
   items: { href: string; label: string }[];
@@ -58,9 +58,7 @@ export function MobileNav({ items, openLabel, closeLabel, theme }: Props) {
       <ul id={listId} className="mobile-nav__list" hidden={!open}>
         {items.map((item) => (
           <li key={item.href}>
-            <Link href={item.href} aria-current={pathname === item.href ? 'page' : undefined}>
-              {item.label}
-            </Link>
+            <NavLink href={item.href}>{item.label}</NavLink>
           </li>
         ))}
         {/* On the narrowest screens the header's theme button lives here instead. */}

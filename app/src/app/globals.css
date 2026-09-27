@@ -204,6 +204,10 @@ html {
 .nav-list a:hover {
   color: var(--fg);
 }
+.nav-list a[aria-current='page'] {
+  color: var(--fg);
+  font-weight: 650;
+}
 .site-header__actions {
   display: flex;
   align-items: center;
@@ -538,6 +542,10 @@ html {
 }
 .footer-links a:hover {
   color: var(--fg);
+}
+.footer-links a[aria-current='page'] {
+  color: var(--fg);
+  font-weight: 650;
 }
 
 @media (max-width: 860px) {
