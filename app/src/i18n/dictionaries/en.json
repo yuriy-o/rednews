@@ -504,6 +504,9 @@
   },
   "notFound": {
     "title": "Page not found",
-    "back": "Back to home"
+    "lead": "This page dropped off the chart. It may have moved, or never existed.",
+    "flag": "Page not found",
+    "back": "Back to home",
+    "secondary": "See this week's calendar"
   }
 }

@@ -771,6 +771,11 @@ html {
   font-size: 0.875rem;
 }
 
+/* 404 page */
+.not-found__title {
+  margin-block-start: 32px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
