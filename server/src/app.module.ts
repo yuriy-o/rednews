@@ -4,13 +4,13 @@ import { CalendarModule } from './calendar/calendar.module';
 import { PrismaModule } from './common/prisma/prisma.module';
 import { HealthController } from './health.controller';
 
-// AuthModule and UserModule are intentionally NOT wired in: they were an unused,
-// insecure (unverified Google ID token) auth stack — see AUDIT.md §1.1. Real
-// auth/entitlements for both the extension and the site run on Supabase, not this
-// API. The source under src/auth and src/user is disconnected here (unreachable —
-// Nest never registers their controllers) pending a decision on physically
-// deleting those files and their Prisma models (User/UserSettings/Subscription/
-// Alert/ActivityLog); that step needs a separate explicit go-ahead.
+// There is no AuthModule/UserModule: they were an unused, insecure (unverified
+// Google ID token) auth stack — see AUDIT.md §1.1. Real auth/entitlements for both
+// the extension and the site run on Supabase, not this API. The former src/auth
+// and src/user source has been deleted (git history has it if ever needed); the
+// Prisma models it used (User/UserSettings/Subscription/Alert/ActivityLog) are
+// still in schema.prisma pending a separate explicit go-ahead to drop them from
+// the live database.
 @Module({
   imports: [
     ConfigModule.forRoot({
