@@ -11,6 +11,9 @@ const dictionaries: Partial<Record<Locale, () => Promise<Dictionary>>> = {
   uk: () => import('./dictionaries/uk.json').then((m) => m.default),
   es: () => import('./dictionaries/es.json').then((m) => m.default),
   'pt-br': () => import('./dictionaries/pt-br.json').then((m) => m.default),
+  de: () => import('./dictionaries/de.json').then((m) => m.default),
+  fr: () => import('./dictionaries/fr.json').then((m) => m.default),
+  it: () => import('./dictionaries/it.json').then((m) => m.default),
 };
 
 /** Current route's locale (from the `[lang]` root segment); 404 for unknown/disabled ones. */
