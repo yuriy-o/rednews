@@ -279,395 +279,395 @@
   },
   "legal": {
     "privacy": {
-      "title": "Privacy Policy",
-      "updated": "Last updated: 19 September 2026",
-      "intro": "Red News – Economic Calendar for TradingView (\"the extension\") displays economic-calendar news from Forex Factory on TradingView charts. It offers a free tier that works without an account, and an optional Premium tier that requires signing in. This policy explains what data the extension processes.",
+      "title": "Gizlilik Politikası",
+      "updated": "Son güncelleme: 19 Eylül 2026",
+      "intro": "Red News – Economic Calendar for TradingView (\"uzantı\"), Forex Factory'nin ekonomik takvim haberlerini TradingView grafiklerinde gösterir. Hesap gerektirmeyen ücretsiz bir katman ile giriş yapmayı gerektiren isteğe bağlı bir Premium katman sunar. Bu politika, uzantının hangi verileri işlediğini açıklar.",
       "sections": [
         {
-          "heading": "Data we collect",
+          "heading": "Topladığımız veriler",
           "blocks": [
             {
               "type": "p",
-              "text": "Free tier (no account): the extension does not collect names, credentials, browsing history, or advertising identifiers. It requests economic-calendar data through our own backend (see \"Our backend\" below); as with any network request, our backend receives your IP address in the normal course of delivering the response. We do not use this for advertising, profiling, or cross-site tracking, and we do not sell your data."
+              "text": "Ücretsiz katman (hesapsız): uzantı ad, kimlik bilgisi, tarama geçmişi veya reklam kimlikleri toplamaz. Ekonomik takvim verilerini kendi arka ucumuz (backend) üzerinden ister (aşağıdaki \"Arka ucumuz\" bölümüne bakın); herhangi bir ağ isteğinde olduğu gibi, arka ucumuz yanıtı iletirken normal süreç içinde IP adresinizi alır. Bunu reklam, profil oluşturma veya siteler arası takip amacıyla kullanmayız ve verilerinizi satmayız."
             },
             {
               "type": "p",
-              "text": "Premium tier (with account): if you choose to sign in, we collect and store:"
+              "text": "Premium katman (hesaplı): giriş yapmayı seçerseniz, şunları toplar ve saklarız:"
             },
             {
               "type": "ul",
               "items": [
-                "your email address, name, and Google account identifier, obtained through Google sign-in, to create and identify your account and to show your name in the extension;",
-                "your subscription / entitlement status (free, trial, or premium);",
-                "a random per-installation identifier used to associate your installation with your account and to apply reasonable device limits."
+                "Google ile giriş yoluyla elde edilen e-posta adresiniz, adınız ve Google hesap kimliğiniz; hesabınızı oluşturmak ve tanımlamak ve uzantıda adınızı göstermek için;",
+                "abonelik / yetki durumunuz (ücretsiz, deneme veya Premium);",
+                "kurulumunuzu hesabınızla ilişkilendirmek ve makul cihaz sınırlarını uygulamak için kullanılan, her kuruluma özel rastgele bir tanımlayıcı."
               ]
             },
             {
               "type": "p",
-              "text": "We collect this only after you actively sign in, and only to provide the account and Premium functionality. You can stop this at any time by signing out."
+              "text": "Bu verileri yalnızca siz kendi isteğinizle giriş yaptıktan sonra ve yalnızca hesap ve Premium işlevselliğini sağlamak amacıyla toplarız. Oturumu kapatarak bunu istediğiniz zaman durdurabilirsiniz."
             }
           ]
         },
         {
-          "heading": "Our backend",
+          "heading": "Arka ucumuz",
           "blocks": [
             {
               "type": "p",
-              "text": "Economic-calendar data and subscription checks are served by our backend hosted on Supabase (authentication, database, and server functions). The extension communicates only with our backend and with TradingView; it does not contact Forex Factory directly. Our backend fetches the public Forex Factory calendar on the server side and returns it to the extension."
+              "text": "Ekonomik takvim verileri ve abonelik kontrolleri, Supabase üzerinde barındırılan arka ucumuz (kimlik doğrulama, veritabanı ve sunucu fonksiyonları) tarafından sağlanır. Uzantı yalnızca arka ucumuzla ve TradingView ile iletişim kurar; Forex Factory ile doğrudan iletişime geçmez. Arka ucumuz, herkese açık Forex Factory takvimini sunucu tarafında alır ve uzantıya döndürür."
             }
           ]
         },
         {
-          "heading": "What the extension accesses",
+          "heading": "Uzantının eriştiği veriler",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "TradingView chart pages (*.tradingview.com/chart/*): the extension reads the current chart symbol, timeframe, and timezone in order to draw the economic-news lines, labels, and tooltips on the chart. No other part of the site is accessed.",
-                "Our backend (hsoaqylcrmspyckkndab.supabase.co): the extension requests economic-calendar data and, if you are signed in, verifies your subscription status.",
-                "An AI provider of your choice (generativelanguage.googleapis.com, api.groq.com or openrouter.ai): only if you connect one with your own API key, and only to request an explanation of a release you asked about. These are optional permissions — the extension has no access to any of them until you press \"Connect\". See AI explanations below."
+                "TradingView grafik sayfaları (*.tradingview.com/chart/*): uzantı, ekonomik haber çizgilerini, etiketlerini ve araç ipuçlarını grafiğe çizebilmek için geçerli grafik sembolünü, zaman dilimini ve saat dilimini okur. Sitenin başka hiçbir bölümüne erişilmez.",
+                "Arka ucumuz (hsoaqylcrmspyckkndab.supabase.co): uzantı ekonomik takvim verilerini ister ve giriş yapmışsanız abonelik durumunuzu doğrular.",
+                "Seçtiğiniz bir yapay zeka sağlayıcısı (generativelanguage.googleapis.com, api.groq.com veya openrouter.ai): yalnızca kendi API anahtarınızla bir sağlayıcı bağlarsanız ve yalnızca hakkında soru sorduğunuz bir verinin açıklamasını istemek için. Bunlar isteğe bağlı izinlerdir; siz \"Bağlan\" tuşuna basana kadar uzantının bunlardan hiçbirine erişimi yoktur. Aşağıdaki Yapay zeka açıklamaları bölümüne bakın."
               ]
             }
           ]
         },
         {
-          "heading": "Local storage",
+          "heading": "Yerel depolama",
           "blocks": [
             {
               "type": "p",
-              "text": "The extension uses your browser's local storage (chrome.storage.local) to save your settings (filters, labels, alerts, timezone, language, theme), a short-lived cache of the fetched calendar data, and, if you sign in, your session tokens and account/subscription status. If you connect an AI provider, it also stores your API key and a short-lived cache of the explanations you have already received. Signing out or uninstalling removes this local data; \"Remove key\" removes the AI entries immediately."
+              "text": "Uzantı, ayarlarınızı (filtreler, etiketler, uyarılar, saat dilimi, dil, tema), alınan takvim verilerinin kısa ömürlü bir önbelleğini ve giriş yaptıysanız oturum belirteçlerinizi ve hesap/abonelik durumunuzu kaydetmek için tarayıcınızın yerel depolamasını (chrome.storage.local) kullanır. Bir yapay zeka sağlayıcısı bağlarsanız, API anahtarınızı ve halihazırda aldığınız açıklamaların kısa ömürlü bir önbelleğini de saklar. Oturumu kapatmak veya uzantıyı kaldırmak bu yerel verileri siler; \"Anahtarı kaldır\" seçeneği yapay zeka kayıtlarını hemen siler."
             }
           ]
         },
         {
-          "heading": "Payments",
+          "heading": "Ödemeler",
           "blocks": [
             {
               "type": "p",
-              "text": "If you purchase Premium, payment is processed by Paddle, which acts as the merchant of record. Your card and billing details are entered on Paddle's secure checkout and are never received or stored by us. We only receive your resulting subscription status."
+              "text": "Premium satın alırsanız, ödeme kaydı satıcısı (merchant of record) olarak hareket eden Paddle tarafından işlenir. Kart ve fatura bilgileriniz Paddle'ın güvenli ödeme ekranına girilir ve bunlar tarafımızca hiçbir zaman alınmaz veya saklanmaz. Bize yalnızca ortaya çıkan abonelik durumunuz iletilir."
             }
           ]
         },
         {
-          "heading": "Notifications",
+          "heading": "Bildirimler",
           "blocks": [
             {
               "type": "p",
-              "text": "With your permission, the extension shows an operating-system notification a chosen number of minutes before high-impact economic releases. Notifications are generated locally from calendar event times and are not used for messaging or marketing."
+              "text": "İzniniz doğrultusunda uzantı, etkisi yüksek ekonomik verilerin açıklanmasından seçtiğiniz kadar dakika önce işletim sistemi bildirimi gösterir. Bildirimler, takvim etkinlik saatlerinden yerel olarak oluşturulur ve mesajlaşma veya pazarlama amacıyla kullanılmaz."
             }
           ]
         },
         {
-          "heading": "Telegram alerts (optional, Premium)",
+          "heading": "Telegram uyarıları (isteğe bağlı, Premium)",
           "blocks": [
             {
               "type": "p",
-              "text": "Premium users can connect a Telegram account to receive news alerts on their phone, including while their computer is off. This is entirely optional and off until you connect it. When you connect, we store on our backend your Telegram chat ID and username (supplied by Telegram when you start our bot), together with your alert preferences: impact levels, currencies, how many minutes ahead to warn you, your time zone, and any quiet hours. We use them for one purpose — deciding which alerts to send you and when — and messages are delivered through Telegram's own servers, so Telegram's privacy policy applies to their delivery. We keep a short record of which events were already sent to you so the same alert is not repeated; those records are deleted after about two days. You can disconnect at any time by blocking the bot in Telegram, and we delete the stored Telegram data when you delete your account."
+              "text": "Premium kullanıcıları, bilgisayarları kapalı olsa bile telefonlarında haber uyarıları almak için bir Telegram hesabı bağlayabilir. Bu tamamen isteğe bağlıdır ve siz bağlantı kurana kadar devre dışıdır. Bağlandığınızda, arka ucumuzda Telegram sohbet kimliğinizi ve kullanıcı adınızı (botumuzu başlattığınızda Telegram tarafından sağlanır) uyarı tercihlerinizle birlikte saklarız: etki seviyeleri, para birimleri, sizi kaç dakika önceden uyaracağı, saat diliminiz ve varsa sessiz saatleriniz. Bunları tek bir amaç için kullanırız: size hangi uyarıların ne zaman gönderileceğine karar vermek; mesajlar Telegram'ın kendi sunucuları üzerinden iletilir, dolayısıyla iletim için Telegram'ın kendi gizlilik politikası geçerlidir. Aynı uyarının tekrarlanmaması için hangi etkinliklerin size zaten gönderildiğine dair kısa bir kayıt tutarız; bu kayıtlar yaklaşık iki gün sonra silinir. Telegram'da botu engelleyerek bağlantıyı istediğiniz zaman kesebilirsiniz ve hesabınızı sildiğinizde saklanan Telegram verilerini de sileriz."
             }
           ]
         },
         {
-          "heading": "AI explanations (optional, Premium, your own provider)",
+          "heading": "Yapay zeka açıklamaları (isteğe bağlı, Premium, kendi sağlayıcınız)",
           "blocks": [
             {
               "type": "p",
-              "text": "Premium users can connect their own AI provider — Google Gemini, Groq or OpenRouter — and press ✨ next to a release to get a plain-language briefing. This is entirely optional and does nothing until you paste your own API key. A step-by-step guide is at [rednews.app/ai](https://rednews.app/ai)."
+              "text": "Premium kullanıcıları kendi yapay zeka sağlayıcılarını — Google Gemini, Groq veya OpenRouter — bağlayabilir ve sade bir dille özet almak için bir veri girdisinin yanındaki ✨ tuşuna basabilir. Bu tamamen isteğe bağlıdır ve siz kendi API anahtarınızı yapıştırana kadar hiçbir şey yapmaz. Adım adım kılavuza [rednews.app/ai](https://rednews.app/ai) adresinden ulaşabilirsiniz."
             },
             {
               "type": "p",
-              "text": "Your API key stays in your browser. It is kept in local storage on this computer, is never synchronised to other devices, and is never sent to our backend. \"Remove key\" deletes the key, deletes the cached answers, and withdraws the extension's permission to contact the provider."
+              "text": "API anahtarınız tarayıcınızda kalır. Bu bilgisayardaki yerel depolamada tutulur, diğer cihazlara asla senkronize edilmez ve arka ucumuza asla gönderilmez. \"Anahtarı kaldır\" seçeneği anahtarı siler, önbelleğe alınan yanıtları siler ve uzantının sağlayıcıyla iletişim kurma iznini geri çeker."
             },
             {
               "type": "p",
-              "text": "Requests go straight from your browser to the provider you chose. They do not pass through our servers. We cannot see what you asked or what the model answered."
+              "text": "İstekler doğrudan tarayıcınızdan seçtiğiniz sağlayıcıya gider. Sunucularımızdan geçmezler. Ne sorduğunuzu ya da modelin ne yanıtladığını göremeyiz."
             },
             {
               "type": "p",
-              "text": "What is sent: the scheduled release itself — title, currency, impact level, scheduled time in UTC, and its forecast, previous and actual values — up to six earlier prints of that same release taken from the extension's own calendar history, and the language the answer should be written in. Your API key travels in the request's authorisation header, as the provider requires. Nothing else is included: no name or email, no account or subscription details, no chart symbol, no browsing history, and no text you type."
+              "text": "Gönderilenler: planlanan verinin kendisi — başlık, para birimi, etki seviyesi, UTC olarak planlanan saat ve tahmini, önceki ve gerçekleşen değerleri — uzantının kendi takvim geçmişinden alınan aynı verinin en fazla altı önceki kaydı ve yanıtın yazılması gereken dil. API anahtarınız, sağlayıcının gerektirdiği şekilde isteğin yetkilendirme başlığında (authorization header) taşınır. Başka hiçbir şey dahil edilmez: ad veya e-posta yok, hesap veya abonelik bilgisi yok, grafik sembolü yok, tarama geçmişi yok ve yazdığınız hiçbir metin yok."
             },
             {
               "type": "p",
-              "text": "The provider's own privacy policy governs what it does with that request. Providers differ: some state that they do not retain or train on API traffic by default, while others may use free-tier traffic to improve their products. The current position of each supported provider is summarised on the setup page, but you should read your provider's own terms."
+              "text": "Sağlayıcının kendi gizlilik politikası, bu istekle ne yapacağını belirler. Sağlayıcılar birbirinden farklıdır: bazıları varsayılan olarak API trafiğini saklamadıklarını veya bunun üzerinde eğitim yapmadıklarını belirtirken, diğerleri ücretsiz katman trafiğini ürünlerini geliştirmek için kullanabilir. Desteklenen her sağlayıcının güncel tutumu kurulum sayfasında özetlenmiştir, ancak sağlayıcınızın kendi koşullarını okumanızı öneririz."
             },
             {
               "type": "p",
-              "text": "Answers are cached locally for up to seven days (at most sixty of them) so that reopening the same event does not spend your quota again. The cache never leaves your browser."
+              "text": "Aynı etkinliğin yeniden açılmasının kotanızı tekrar harcamaması için yanıtlar yerel olarak en fazla yedi gün (en çok altmış adet) önbelleğe alınır. Önbellek tarayıcınızdan asla ayrılmaz."
             },
             {
               "type": "p",
-              "text": "Access is granted per provider, at the moment you connect. The three provider addresses are optional permissions: Chrome asks for your consent when you press \"Connect\", and until then the extension cannot reach any of them."
+              "text": "Erişim, bağlandığınız anda sağlayıcı bazında verilir. Üç sağlayıcı adresi isteğe bağlı izinlerdir: Chrome, \"Bağlan\" tuşuna bastığınızda onayınızı ister ve o zamana kadar uzantı bunların hiçbirine erişemez."
             }
           ]
         },
         {
-          "heading": "Feedback",
+          "heading": "Geri bildirim",
           "blocks": [
             {
               "type": "p",
-              "text": "If you send feedback through the extension (\"Report a problem, idea, or partnership\"), the message you type, an optional email address, and basic non-personal context (the extension version, your browser, and your interface language) are sent through Web3Forms, a third-party form-delivery service, which forwards them to the developer by email. This happens only when you press Send."
+              "text": "Uzantı üzerinden geri bildirim gönderirseniz (\"Bir sorun, fikir veya iş birliği bildirin\"), yazdığınız mesaj, isteğe bağlı bir e-posta adresi ve temel kişisel olmayan bağlam bilgileri (uzantı sürümü, tarayıcınız ve arayüz dilinizi) üçüncü taraf bir form iletim hizmeti olan Web3Forms üzerinden gönderilir ve geliştiriciye e-posta yoluyla iletilir. Bu, ancak Gönder tuşuna bastığınızda gerçekleşir."
             }
           ]
         },
         {
-          "heading": "Third-party services",
+          "heading": "Üçüncü taraf hizmetler",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Supabase hosts our backend (authentication, database, server functions) that serves calendar data and stores your account/subscription status.",
-                "Google provides the sign-in through which we obtain your name, email, and account identifier.",
-                "Paddle processes Premium payments as merchant of record; card data never reaches us.",
-                "Forex Factory is the source of the public economic-calendar data, fetched by our backend.",
-                "Web3Forms delivers feedback you choose to send.",
-                "Telegram delivers the optional Premium alerts to users who connect our bot.",
-                "Google (Gemini API), Groq, OpenRouter are AI providers a Premium user may connect with their own API key. We hold no account or contract with them on your behalf; your browser talks to whichever one you chose, directly, and only for the explanations you request."
+                "Supabase, takvim verilerini sunan ve hesap/abonelik durumunuzu saklayan arka ucumuzu (kimlik doğrulama, veritabanı, sunucu fonksiyonları) barındırır.",
+                "Google, adınızı, e-postanızı ve hesap kimliğinizi elde ettiğimiz girişi sağlar.",
+                "Paddle, Premium ödemelerini kayıtlı satıcı olarak işler; kart verileri bize hiçbir zaman ulaşmaz.",
+                "Forex Factory, arka ucumuz tarafından alınan herkese açık ekonomik takvim verilerinin kaynağıdır.",
+                "Web3Forms, göndermeyi tercih ettiğiniz geri bildirimleri iletir.",
+                "Telegram, botumuzu bağlayan kullanıcılara isteğe bağlı Premium uyarılarını iletir.",
+                "Google (Gemini API), Groq, OpenRouter, bir Premium kullanıcının kendi API anahtarıyla bağlayabileceği yapay zeka sağlayıcılarıdır. Sizin adınıza onlarla herhangi bir hesabımız veya sözleşmemiz yoktur; tarayıcınız doğrudan seçtiğiniz sağlayıcıyla ve yalnızca istediğiniz açıklamalar için görüşür."
               ]
             },
             {
               "type": "p",
-              "text": "Each third party processes data subject to its own privacy policy."
+              "text": "Her üçüncü taraf, verileri kendi gizlilik politikasına uygun olarak işler."
             }
           ]
         },
         {
-          "heading": "Your choices and rights",
+          "heading": "Seçimleriniz ve haklarınız",
           "blocks": [
             {
               "type": "p",
-              "text": "The free tier works without an account. If you have signed in, you can sign out at any time, and you may request deletion of your account data by contacting us (see \"Contact\"). Deleting your account removes your stored email, name, account identifier, and subscription record."
+              "text": "Ücretsiz katman hesap gerektirmeden çalışır. Giriş yaptıysanız istediğiniz zaman çıkış yapabilir ve bizimle iletişime geçerek (bkz. \"İletişim\") hesap verilerinizin silinmesini talep edebilirsiniz. Hesabınızı silmek, saklanan e-posta adresinizi, adınızı, hesap kimliğinizi ve abonelik kaydınızı kaldırır."
             }
           ]
         },
         {
-          "heading": "Changes",
+          "heading": "Değişiklikler",
           "blocks": [
             {
               "type": "p",
-              "text": "Any change that affects what data is collected or how it is processed will be reflected in an updated Privacy Policy before it takes effect. The \"Last updated\" date above will be revised."
+              "text": "Hangi verilerin toplandığını veya nasıl işlendiğini etkileyen herhangi bir değişiklik, yürürlüğe girmeden önce güncellenmiş bir Gizlilik Politikasında yansıtılacaktır. Yukarıdaki \"Son güncelleme\" tarihi buna göre güncellenecektir."
             }
           ]
         },
         {
-          "heading": "Contact",
+          "heading": "İletişim",
           "blocks": [
             {
               "type": "p",
-              "text": "For questions about this policy or to request account deletion, email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+              "text": "Bu politikayla ilgili sorularınız için veya hesap silme talebinde bulunmak için [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question) adresine e-posta gönderin veya [Discord](https://discord.com/users/1172891214580830322) üzerinden bize ulaşın."
             }
           ]
         }
       ]
     },
     "terms": {
-      "title": "Terms of Service",
-      "updated": "Last updated: 9 August 2026",
-      "intro": "These Terms of Service (\"Terms\") govern your use of the Red News – Economic Calendar for TradingView browser extension, the website at rednews.app, and any related services (together, the \"Service\"), provided by the developer of Red News (\"we\", \"us\", \"our\"). By installing or using the Service, you agree to these Terms. If you do not agree, do not use the Service.",
+      "title": "Kullanım Koşulları",
+      "updated": "Son güncelleme: 9 Ağustos 2026",
+      "intro": "Bu Kullanım Koşulları (\"Koşullar\"), Red News – Economic Calendar for TradingView tarayıcı uzantısını, rednews.app adresindeki web sitesini ve ilgili tüm hizmetleri (birlikte \"Hizmet\") kullanımınızı düzenler ve Red News'in geliştiricisi (\"biz\", \"bize\", \"bizim\") tarafından sunulur. Hizmeti kurarak veya kullanarak bu Koşulları kabul edersiniz. Kabul etmiyorsanız Hizmeti kullanmayın.",
       "sections": [
         {
-          "heading": "1. The Service",
+          "heading": "1. Hizmet",
           "blocks": [
             {
               "type": "p",
-              "text": "Red News is a browser extension that overlays scheduled economic-calendar events, sourced from the public Forex Factory calendar, onto TradingView chart pages. It draws event lines, shows event details, and can alert you before releases. Red News is an independent tool and is not affiliated with, endorsed by, or sponsored by TradingView or Forex Factory."
+              "text": "Red News, herkese açık Forex Factory takviminden alınan planlı ekonomik takvim etkinliklerini TradingView grafik sayfalarına yerleştiren bir tarayıcı uzantısıdır. Etkinlik çizgileri çizer, etkinlik ayrıntılarını gösterir ve veriler yayınlanmadan önce sizi uyarabilir. Red News bağımsız bir araçtır ve TradingView veya Forex Factory ile bağlantılı, onlar tarafından onaylanmış veya sponsor edilmiş değildir."
             }
           ]
         },
         {
-          "heading": "2. Not financial advice",
+          "heading": "2. Finansal tavsiye değildir",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service displays informational data about scheduled economic events. It does not provide trading signals, investment recommendations, or financial advice, and nothing it shows should be relied upon as such. Economic data may be delayed, incomplete, or inaccurate. Trading and investing carry risk, including the loss of capital. You are solely responsible for your own trading decisions."
+              "text": "Hizmet, planlanan ekonomik etkinliklerle ilgili bilgi amaçlı verileri gösterir. Alım satım sinyalleri, yatırım önerileri veya finansal tavsiye sağlamaz ve gösterdiği hiçbir şey bu şekilde güvenilir bir kaynak olarak kabul edilmemelidir. Ekonomik veriler gecikmiş, eksik veya hatalı olabilir. Alım satım ve yatırım, sermaye kaybı dahil risk içerir. Kendi alım satım kararlarınızdan yalnızca siz sorumlusunuz."
             }
           ]
         },
         {
-          "heading": "3. Accounts",
+          "heading": "3. Hesaplar",
           "blocks": [
             {
               "type": "p",
-              "text": "The free tier works without an account. To start a Premium trial or subscribe, you sign in with Google, which provides us your name, email address, and account identifier. You are responsible for maintaining the security of the Google account you use and for all activity under your Red News entitlement. You must be at least 18 years old, or the age of majority in your jurisdiction, to purchase Premium."
+              "text": "Ücretsiz katman hesap gerektirmeden çalışır. Premium denemesi başlatmak veya abone olmak için Google ile giriş yaparsınız; bu bize adınızı, e-posta adresinizi ve hesap kimliğinizi sağlar. Kullandığınız Google hesabının güvenliğini sağlamaktan ve Red News yetkiniz kapsamındaki tüm etkinlikten siz sorumlusunuz. Premium satın almak için en az 18 yaşında olmalı veya bulunduğunuz yargı bölgesindeki reşitlik yaşına ulaşmış olmalısınız."
             }
           ]
         },
         {
-          "heading": "4. Subscriptions, billing & trials",
+          "heading": "4. Abonelikler, faturalandırma ve denemeler",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Free tier: the core extension is free to use.",
-                "Premium: available as a monthly (US$4.99) or annual (US$39) subscription. Prices are shown at checkout and may vary by region and applicable taxes.",
-                "Free trial: new users may start a 14-day Premium trial without a payment method. If you do not subscribe, the account simply reverts to the free tier when the trial ends. One trial per user.",
-                "Merchant of record: payments are processed by Paddle (Paddle.com Market Limited), which acts as the merchant of record for all purchases. Your purchase is also subject to Paddle's buyer terms. Card and billing details are entered on Paddle's checkout and are never received or stored by us.",
-                "Auto-renewal: paid subscriptions renew automatically at the end of each billing period until cancelled. By subscribing, you authorise recurring charges through Paddle.",
-                "Price changes: we may change subscription prices. Any change to your recurring price will be communicated in advance and will apply from your next renewal."
+                "Ücretsiz katman: temel uzantı ücretsiz olarak kullanılabilir.",
+                "Premium: aylık (US$4.99) veya yıllık (US$39) abonelik olarak sunulur. Fiyatlar ödeme ekranında gösterilir ve bölgeye ve geçerli vergilere göre değişebilir.",
+                "Ücretsiz deneme: yeni kullanıcılar bir ödeme yöntemi girmeden 14 günlük bir Premium deneme başlatabilir. Abone olmazsanız, hesap deneme sona erdiğinde otomatik olarak ücretsiz katmana döner. Kullanıcı başına bir deneme.",
+                "Kayıtlı satıcı: ödemeler, tüm satın alımlar için kayıtlı satıcı olarak hareket eden Paddle (Paddle.com Market Limited) tarafından işlenir. Satın alımınız aynı zamanda Paddle'ın alıcı koşullarına da tabidir. Kart ve fatura bilgileri Paddle'ın ödeme ekranına girilir ve bunlar tarafımızca hiçbir zaman alınmaz veya saklanmaz.",
+                "Otomatik yenileme: ücretli abonelikler, iptal edilmedikçe her faturalandırma döneminin sonunda otomatik olarak yenilenir. Abone olarak, Paddle üzerinden yapılan tekrarlayan ödemelere izin verirsiniz.",
+                "Fiyat değişiklikleri: abonelik fiyatlarını değiştirebiliriz. Tekrarlayan fiyatınızdaki herhangi bir değişiklik önceden bildirilecek ve bir sonraki yenilemenizden itibaren geçerli olacaktır."
               ]
             }
           ]
         },
         {
-          "heading": "5. Cancellation & refunds",
+          "heading": "5. İptal ve geri ödemeler",
           "blocks": [
             {
               "type": "p",
-              "text": "You can cancel at any time using the Manage subscription option in the extension. On cancellation you keep Premium access until the end of the period you have already paid for; it does not renew after that. Refunds are handled as described in our Refund Policy."
+              "text": "Uzantıdaki Aboneliği Yönet seçeneğini kullanarak istediğiniz zaman iptal edebilirsiniz. İptal ettiğinizde, halihazırda ödemiş olduğunuz dönemin sonuna kadar Premium erişimini korursunuz; bu dönemden sonra yenilenmez. Geri ödemeler, Geri Ödeme Politikamızda açıklandığı şekilde işlenir."
             }
           ]
         },
         {
-          "heading": "6. Acceptable use",
+          "heading": "6. Kabul edilebilir kullanım",
           "blocks": [
             {
               "type": "p",
-              "text": "You agree not to:"
+              "text": "Aşağıdakileri yapmamayı kabul edersiniz:"
             },
             {
               "type": "ul",
               "items": [
-                "reverse engineer, decompile, or attempt to extract the source or server logic of the Service, except where permitted by law;",
-                "resell, sublicense, or redistribute the Service or the data it delivers;",
-                "circumvent entitlement checks, device limits, or use the Service without a valid entitlement;",
-                "use the Service to build a competing product, or to place undue load on our backend;",
-                "use the Service in any unlawful way or in violation of third-party rights."
+                "yasaların izin verdiği durumlar dışında, Hizmetin kaynak kodunu veya sunucu mantığını tersine mühendislik, derlemeden ayrıştırma veya çıkarmaya çalışmak;",
+                "Hizmeti veya sağladığı verileri yeniden satmak, alt lisanslamak veya yeniden dağıtmak;",
+                "yetki kontrollerini veya cihaz sınırlarını aşmak veya Hizmeti geçerli bir yetki olmadan kullanmak;",
+                "Hizmeti rakip bir ürün oluşturmak için kullanmak veya arka ucumuza aşırı yük bindirmek;",
+                "Hizmeti herhangi bir yasa dışı şekilde veya üçüncü taraf haklarını ihlal ederek kullanmak."
               ]
             }
           ]
         },
         {
-          "heading": "7. Intellectual property",
+          "heading": "7. Fikri mülkiyet",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service, including its code, design, and branding, is owned by us and protected by applicable laws. We grant you a limited, non-exclusive, non-transferable, revocable licence to use the Service for your personal trading, subject to these Terms. Economic data originates from the public Forex Factory calendar and remains subject to any rights of its source. \"TradingView\" and \"Forex Factory\" are trademarks of their respective owners."
+              "text": "Hizmet; kodu, tasarımı ve markalaşması dahil olmak üzere bize aittir ve geçerli yasalarla korunmaktadır. Size, bu Koşullara tabi olarak kişisel alım satım amaçlarınız için Hizmeti kullanmanız için sınırlı, münhasır olmayan, devredilemez, geri alınabilir bir lisans veriyoruz. Ekonomik veriler, herkese açık Forex Factory takviminden gelir ve kaynağının haklarına tabi kalır. \"TradingView\" ve \"Forex Factory\", ilgili sahiplerinin ticari markalarıdır."
             }
           ]
         },
         {
-          "heading": "8. Third-party services",
+          "heading": "8. Üçüncü taraf hizmetler",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service relies on third parties including TradingView (the host page), Forex Factory (data source), Supabase (backend and authentication), Google (sign-in), and Paddle (payments). We are not responsible for the availability, content, or practices of these third parties, and your use of them is subject to their own terms."
+              "text": "Hizmet, TradingView (barındıran sayfa), Forex Factory (veri kaynağı), Supabase (arka uç ve kimlik doğrulama), Google (giriş) ve Paddle (ödemeler) dahil olmak üzere üçüncü taraflara bağlıdır. Bu üçüncü tarafların kullanılabilirliğinden, içeriğinden veya uygulamalarından sorumlu değiliz ve onları kullanmanız kendi koşullarına tabidir."
             }
           ]
         },
         {
-          "heading": "9. Disclaimers",
+          "heading": "9. Sorumluluk reddi beyanları",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service is provided \"as is\" and \"as available\", without warranties of any kind, whether express or implied, including fitness for a particular purpose, accuracy, or uninterrupted availability. We do not warrant that event data will be timely, complete, or error-free, or that the Service will always function with TradingView."
+              "text": "Hizmet, belirli bir amaca uygunluk, doğruluk veya kesintisiz kullanılabilirlik dahil olmak üzere açık veya zımni hiçbir garanti verilmeksizin \"olduğu gibi\" ve \"mevcut olduğu şekliyle\" sunulur. Etkinlik verilerinin zamanında, eksiksiz veya hatasız olacağını ya da Hizmetin TradingView ile her zaman çalışacağını garanti etmeyiz."
             }
           ]
         },
         {
-          "heading": "10. Limitation of liability",
+          "heading": "10. Sorumluluğun sınırlandırılması",
           "blocks": [
             {
               "type": "p",
-              "text": "To the maximum extent permitted by law, we will not be liable for any indirect, incidental, special, or consequential damages, or for any trading losses, lost profits, or lost data, arising from your use of or inability to use the Service. Our total liability for any claim relating to the Service will not exceed the amount you paid us for the Service in the twelve months preceding the claim."
+              "text": "Yasaların izin verdiği azami ölçüde, Hizmeti kullanmanızdan veya kullanamamanızdan kaynaklanan hiçbir dolaylı, arızi, özel veya sonuç niteliğindeki zarardan ya da hiçbir alım satım zararından, kâr kaybından veya veri kaybından sorumlu olmayacağız. Hizmetle ilgili herhangi bir talep için toplam sorumluluğumuz, talepten önceki on iki ay içinde Hizmet için bize ödediğiniz tutarı aşmayacaktır."
             }
           ]
         },
         {
-          "heading": "11. Termination",
+          "heading": "11. Sona erdirme",
           "blocks": [
             {
               "type": "p",
-              "text": "You may stop using the Service at any time by uninstalling the extension and, if applicable, cancelling your subscription. We may suspend or terminate access if you breach these Terms or misuse the Service. You may request deletion of your account data as described in our Privacy Policy."
+              "text": "Uzantıyı kaldırarak ve varsa aboneliğinizi iptal ederek Hizmeti kullanmayı istediğiniz zaman durdurabilirsiniz. Bu Koşulları ihlal etmeniz veya Hizmeti kötüye kullanmanız durumunda erişimi askıya alabilir veya sonlandırabiliriz. Gizlilik Politikamızda açıklandığı şekilde hesap verilerinizin silinmesini talep edebilirsiniz."
             }
           ]
         },
         {
-          "heading": "12. Changes to these Terms",
+          "heading": "12. Bu Koşullardaki değişiklikler",
           "blocks": [
             {
               "type": "p",
-              "text": "We may update these Terms from time to time. Material changes will be reflected here with a revised \"Last updated\" date. Continued use of the Service after changes take effect constitutes acceptance of the updated Terms."
+              "text": "Bu Koşulları zaman zaman güncelleyebiliriz. Önemli değişiklikler, güncellenmiş bir \"Son güncelleme\" tarihiyle burada yansıtılacaktır. Değişiklikler yürürlüğe girdikten sonra Hizmeti kullanmaya devam etmeniz, güncellenmiş Koşulları kabul ettiğiniz anlamına gelir."
             }
           ]
         },
         {
-          "heading": "13. Governing law",
+          "heading": "13. Uygulanacak hukuk",
           "blocks": [
             {
               "type": "p",
-              "text": "These Terms are governed by the laws of Ukraine, without regard to conflict-of-law rules, except where mandatory consumer-protection laws of your country of residence apply. Purchases are additionally subject to the terms of Paddle as merchant of record."
+              "text": "Bu Koşullar, ikamet ettiğiniz ülkenin zorunlu tüketici koruma yasalarının geçerli olduğu durumlar hariç, kanunlar ihtilafı kurallarına bakılmaksızın Ukrayna yasalarına tabidir. Satın alımlar ayrıca kayıtlı satıcı olarak Paddle'ın koşullarına da tabidir."
             }
           ]
         },
         {
-          "heading": "14. Contact",
+          "heading": "14. İletişim",
           "blocks": [
             {
               "type": "p",
-              "text": "Questions about these Terms? Email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+              "text": "Bu Koşullar hakkında sorularınız mı var? [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question) adresine e-posta gönderin veya [Discord](https://discord.com/users/1172891214580830322) üzerinden bize ulaşın."
             }
           ]
         }
       ]
     },
     "refund": {
-      "title": "Refund Policy",
-      "updated": "Last updated: 9 August 2026",
-      "intro": "We want you to be happy with Red News Premium. This policy explains how trials, cancellations, and refunds work. Payments are processed by Paddle, our merchant of record, so refunds are issued through Paddle to your original payment method.",
+      "title": "Geri Ödeme Politikası",
+      "updated": "Son güncelleme: 9 Ağustos 2026",
+      "intro": "Red News Premium'dan memnun kalmanızı istiyoruz. Bu politika, denemelerin, iptallerin ve geri ödemelerin nasıl işlediğini açıklar. Ödemeler, kayıtlı satıcımız Paddle tarafından işlenir; bu nedenle geri ödemeler Paddle aracılığıyla orijinal ödeme yönteminize yapılır.",
       "sections": [
         {
-          "heading": "Try before you pay",
+          "heading": "Ödemeden önce deneyin",
           "blocks": [
             {
               "type": "p",
-              "text": "Every new user can start a 14-day Premium trial with no payment method required. The trial is long enough to span a major economic release, so you can fully evaluate Premium before you are ever charged. We encourage you to use it."
+              "text": "Her yeni kullanıcı, ödeme yöntemi gerektirmeden 14 günlük bir Premium deneme başlatabilir. Deneme süresi, önemli bir ekonomik veri açıklamasını kapsayacak kadar uzundur; böylece herhangi bir ücret ödemeden önce Premium'u tam olarak değerlendirebilirsiniz. Bu denemeyi kullanmanızı öneririz."
             }
           ]
         },
         {
-          "heading": "14-day money-back guarantee",
+          "heading": "14 günlük para iade garantisi",
           "blocks": [
             {
               "type": "p",
-              "text": "If you subscribe and change your mind, you can request a full refund within 14 days of your first payment, no questions asked. This applies to the initial charge on a monthly or annual plan."
+              "text": "Abone olur ve fikrinizi değiştirirseniz, ilk ödemenizden itibaren 14 gün içinde herhangi bir soru sorulmadan tam geri ödeme talep edebilirsiniz. Bu, aylık veya yıllık plandaki ilk ücretlendirme için geçerlidir."
             }
           ]
         },
         {
-          "heading": "Renewals",
+          "heading": "Yenilemeler",
           "blocks": [
             {
               "type": "p",
-              "text": "Subscriptions renew automatically. To avoid a renewal charge, cancel before your renewal date using the Manage subscription button in the extension. After cancellation you keep Premium until the end of the period you have already paid for. Renewal charges are generally non-refundable, but if you were charged for a renewal you did not intend to keep and reach out promptly, contact us. We review these case by case and aim to be fair."
+              "text": "Abonelikler otomatik olarak yenilenir. Yenileme ücretinden kaçınmak için, uzantıdaki Aboneliği Yönet düğmesini kullanarak yenileme tarihinizden önce iptal edin. İptalden sonra, halihazırda ödemiş olduğunuz dönemin sonuna kadar Premium'u korursunuz. Yenileme ücretleri genellikle geri ödenmez, ancak sürdürmek istemediğiniz bir yenileme için ücretlendirildiyseniz ve bizimle hızla iletişime geçerseniz, bize ulaşın. Bu durumları tek tek inceler ve adil olmayı hedefleriz."
             }
           ]
         },
         {
-          "heading": "How to request a refund",
+          "heading": "Geri ödeme nasıl talep edilir",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Reply to the Paddle receipt email you received for the purchase, or",
-                "email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request) with the email address used at checkout, or",
-                "reach us on [Discord](https://discord.com/users/1172891214580830322)."
+                "Satın alım için aldığınız Paddle fiş e-postasını yanıtlayın veya",
+                "ödeme sırasında kullandığınız e-posta adresiyle [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request) adresine e-posta gönderin veya",
+                "[Discord](https://discord.com/users/1172891214580830322) üzerinden bize ulaşın."
               ]
             },
             {
               "type": "p",
-              "text": "Approved refunds are processed by Paddle back to your original payment method, typically within 5 to 10 business days depending on your bank or card provider."
+              "text": "Onaylanan geri ödemeler Paddle tarafından işlenir ve orijinal ödeme yönteminize genellikle bankanıza veya kart sağlayıcınıza bağlı olarak 5 ile 10 iş günü içinde yansıtılır."
             }
           ]
         },
         {
-          "heading": "Statutory rights",
+          "heading": "Yasal haklar",
           "blocks": [
             {
               "type": "p",
-              "text": "Nothing in this policy limits any refund or cancellation rights you may have under the consumer-protection laws of your country of residence, or under Paddle's own buyer terms as merchant of record."
+              "text": "Bu politikadaki hiçbir hüküm, ikamet ettiğiniz ülkenin tüketici koruma yasaları veya kayıtlı satıcı olarak Paddle'ın kendi alıcı koşulları kapsamında sahip olabileceğiniz herhangi bir geri ödeme veya iptal hakkını sınırlamaz."
             }
           ]
         }
       ],
-      "closing": "Questions before you buy? We're happy to help: email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing) or message us on [Discord](https://discord.com/users/1172891214580830322)."
+      "closing": "Satın almadan önce sorularınız mı var? Yardımcı olmaktan memnuniyet duyarız: [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing) adresine e-posta gönderin veya [Discord](https://discord.com/users/1172891214580830322) üzerinden bize mesaj gönderin."
     }
   },
   "notFound": {
