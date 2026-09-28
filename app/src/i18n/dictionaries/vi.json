@@ -279,395 +279,395 @@
   },
   "legal": {
     "privacy": {
-      "title": "Privacy Policy",
-      "updated": "Last updated: 19 September 2026",
-      "intro": "Red News – Economic Calendar for TradingView (\"the extension\") displays economic-calendar news from Forex Factory on TradingView charts. It offers a free tier that works without an account, and an optional Premium tier that requires signing in. This policy explains what data the extension processes.",
+      "title": "Chính sách quyền riêng tư",
+      "updated": "Cập nhật lần cuối: ngày 19 tháng 9 năm 2026",
+      "intro": "Red News – Economic Calendar for TradingView (\"tiện ích mở rộng\") hiển thị tin tức lịch kinh tế từ Forex Factory trên biểu đồ TradingView. Tiện ích cung cấp một gói miễn phí hoạt động không cần tài khoản, và một gói Premium tùy chọn yêu cầu đăng nhập. Chính sách này giải thích những dữ liệu mà tiện ích xử lý.",
       "sections": [
         {
-          "heading": "Data we collect",
+          "heading": "Dữ liệu chúng tôi thu thập",
           "blocks": [
             {
               "type": "p",
-              "text": "Free tier (no account): the extension does not collect names, credentials, browsing history, or advertising identifiers. It requests economic-calendar data through our own backend (see \"Our backend\" below); as with any network request, our backend receives your IP address in the normal course of delivering the response. We do not use this for advertising, profiling, or cross-site tracking, and we do not sell your data."
+              "text": "Gói miễn phí (không cần tài khoản): tiện ích không thu thập tên, thông tin đăng nhập, lịch sử duyệt web, hoặc mã định danh quảng cáo. Tiện ích yêu cầu dữ liệu lịch kinh tế thông qua backend riêng của chúng tôi (xem \"Backend của chúng tôi\" bên dưới); như với mọi yêu cầu mạng, backend của chúng tôi nhận địa chỉ IP của bạn trong quá trình gửi phản hồi thông thường. Chúng tôi không sử dụng dữ liệu này cho mục đích quảng cáo, phân tích hồ sơ, hoặc theo dõi trên nhiều trang web, và chúng tôi không bán dữ liệu của bạn."
             },
             {
               "type": "p",
-              "text": "Premium tier (with account): if you choose to sign in, we collect and store:"
+              "text": "Gói Premium (có tài khoản): nếu bạn chọn đăng nhập, chúng tôi thu thập và lưu trữ:"
             },
             {
               "type": "ul",
               "items": [
-                "your email address, name, and Google account identifier, obtained through Google sign-in, to create and identify your account and to show your name in the extension;",
-                "your subscription / entitlement status (free, trial, or premium);",
-                "a random per-installation identifier used to associate your installation with your account and to apply reasonable device limits."
+                "địa chỉ email, tên, và mã định danh tài khoản Google của bạn, được lấy thông qua đăng nhập Google, để tạo và xác định tài khoản của bạn cũng như hiển thị tên của bạn trong tiện ích;",
+                "trạng thái đăng ký/quyền sử dụng của bạn (miễn phí, dùng thử, hoặc premium);",
+                "một mã định danh ngẫu nhiên cho từng lượt cài đặt, dùng để liên kết lượt cài đặt của bạn với tài khoản của bạn và áp dụng giới hạn thiết bị hợp lý."
               ]
             },
             {
               "type": "p",
-              "text": "We collect this only after you actively sign in, and only to provide the account and Premium functionality. You can stop this at any time by signing out."
+              "text": "Chúng tôi chỉ thu thập dữ liệu này sau khi bạn chủ động đăng nhập, và chỉ để cung cấp chức năng tài khoản và Premium. Bạn có thể dừng việc này bất cứ lúc nào bằng cách đăng xuất."
             }
           ]
         },
         {
-          "heading": "Our backend",
+          "heading": "Backend của chúng tôi",
           "blocks": [
             {
               "type": "p",
-              "text": "Economic-calendar data and subscription checks are served by our backend hosted on Supabase (authentication, database, and server functions). The extension communicates only with our backend and with TradingView; it does not contact Forex Factory directly. Our backend fetches the public Forex Factory calendar on the server side and returns it to the extension."
+              "text": "Dữ liệu lịch kinh tế và việc kiểm tra đăng ký được cung cấp bởi backend của chúng tôi, được lưu trữ trên Supabase (xác thực, cơ sở dữ liệu, và các hàm server). Tiện ích chỉ giao tiếp với backend của chúng tôi và với TradingView; nó không liên hệ trực tiếp với Forex Factory. Backend của chúng tôi lấy lịch công khai của Forex Factory ở phía server và trả về cho tiện ích."
             }
           ]
         },
         {
-          "heading": "What the extension accesses",
+          "heading": "Những gì tiện ích truy cập",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "TradingView chart pages (*.tradingview.com/chart/*): the extension reads the current chart symbol, timeframe, and timezone in order to draw the economic-news lines, labels, and tooltips on the chart. No other part of the site is accessed.",
-                "Our backend (hsoaqylcrmspyckkndab.supabase.co): the extension requests economic-calendar data and, if you are signed in, verifies your subscription status.",
-                "An AI provider of your choice (generativelanguage.googleapis.com, api.groq.com or openrouter.ai): only if you connect one with your own API key, and only to request an explanation of a release you asked about. These are optional permissions — the extension has no access to any of them until you press \"Connect\". See AI explanations below."
+                "Các trang biểu đồ TradingView (*.tradingview.com/chart/*): tiện ích đọc mã ký hiệu biểu đồ hiện tại, khung thời gian, và múi giờ để vẽ các đường tin tức kinh tế, nhãn, và chú giải trên biểu đồ. Không có phần khác của trang web nào được truy cập.",
+                "Backend của chúng tôi (hsoaqylcrmspyckkndab.supabase.co): tiện ích yêu cầu dữ liệu lịch kinh tế và, nếu bạn đã đăng nhập, xác minh trạng thái đăng ký của bạn.",
+                "Nhà cung cấp AI mà bạn chọn (generativelanguage.googleapis.com, api.groq.com hoặc openrouter.ai): chỉ khi bạn kết nối với khóa API riêng của mình, và chỉ để yêu cầu giải thích về một sự kiện bạn quan tâm. Đây là các quyền tùy chọn — tiện ích không có quyền truy cập vào bất kỳ nhà cung cấp nào trong số này cho đến khi bạn nhấn \"Connect\". Xem phần Giải thích bằng AI bên dưới."
               ]
             }
           ]
         },
         {
-          "heading": "Local storage",
+          "heading": "Lưu trữ cục bộ",
           "blocks": [
             {
               "type": "p",
-              "text": "The extension uses your browser's local storage (chrome.storage.local) to save your settings (filters, labels, alerts, timezone, language, theme), a short-lived cache of the fetched calendar data, and, if you sign in, your session tokens and account/subscription status. If you connect an AI provider, it also stores your API key and a short-lived cache of the explanations you have already received. Signing out or uninstalling removes this local data; \"Remove key\" removes the AI entries immediately."
+              "text": "Tiện ích sử dụng bộ lưu trữ cục bộ của trình duyệt của bạn (chrome.storage.local) để lưu các thiết lập của bạn (bộ lọc, nhãn, cảnh báo, múi giờ, ngôn ngữ, chủ đề), một bộ nhớ đệm ngắn hạn của dữ liệu lịch đã lấy, và, nếu bạn đăng nhập, mã thông báo phiên (session token) cùng trạng thái tài khoản/đăng ký của bạn. Nếu bạn kết nối một nhà cung cấp AI, nó cũng lưu khóa API của bạn và một bộ nhớ đệm ngắn hạn của các giải thích bạn đã nhận được. Đăng xuất hoặc gỡ cài đặt sẽ xóa dữ liệu cục bộ này; \"Remove key\" xóa ngay các mục AI."
             }
           ]
         },
         {
-          "heading": "Payments",
+          "heading": "Thanh toán",
           "blocks": [
             {
               "type": "p",
-              "text": "If you purchase Premium, payment is processed by Paddle, which acts as the merchant of record. Your card and billing details are entered on Paddle's secure checkout and are never received or stored by us. We only receive your resulting subscription status."
+              "text": "Nếu bạn mua Premium, việc thanh toán được xử lý bởi Paddle, đơn vị đóng vai trò là merchant of record (đơn vị bán hàng chính thức). Thông tin thẻ và thanh toán của bạn được nhập trên trang thanh toán an toàn của Paddle và không bao giờ được chúng tôi nhận hoặc lưu trữ. Chúng tôi chỉ nhận trạng thái đăng ký kết quả của bạn."
             }
           ]
         },
         {
-          "heading": "Notifications",
+          "heading": "Thông báo",
           "blocks": [
             {
               "type": "p",
-              "text": "With your permission, the extension shows an operating-system notification a chosen number of minutes before high-impact economic releases. Notifications are generated locally from calendar event times and are not used for messaging or marketing."
+              "text": "Với sự cho phép của bạn, tiện ích hiển thị thông báo hệ điều hành trước một số phút đã chọn trước các sự kiện kinh tế có tác động cao. Thông báo được tạo cục bộ từ thời gian sự kiện trong lịch và không được dùng cho mục đích nhắn tin hoặc tiếp thị."
             }
           ]
         },
         {
-          "heading": "Telegram alerts (optional, Premium)",
+          "heading": "Cảnh báo Telegram (tùy chọn, Premium)",
           "blocks": [
             {
               "type": "p",
-              "text": "Premium users can connect a Telegram account to receive news alerts on their phone, including while their computer is off. This is entirely optional and off until you connect it. When you connect, we store on our backend your Telegram chat ID and username (supplied by Telegram when you start our bot), together with your alert preferences: impact levels, currencies, how many minutes ahead to warn you, your time zone, and any quiet hours. We use them for one purpose — deciding which alerts to send you and when — and messages are delivered through Telegram's own servers, so Telegram's privacy policy applies to their delivery. We keep a short record of which events were already sent to you so the same alert is not repeated; those records are deleted after about two days. You can disconnect at any time by blocking the bot in Telegram, and we delete the stored Telegram data when you delete your account."
+              "text": "Người dùng Premium có thể kết nối một tài khoản Telegram để nhận cảnh báo tin tức trên điện thoại của họ, bao gồm cả khi máy tính của họ đang tắt. Đây hoàn toàn là tùy chọn và không hoạt động cho đến khi bạn kết nối nó. Khi bạn kết nối, chúng tôi lưu trên backend của mình chat ID và tên người dùng Telegram của bạn (do Telegram cung cấp khi bạn khởi động bot của chúng tôi), cùng với các tùy chọn cảnh báo của bạn: mức độ tác động, các loại tiền tệ, số phút cảnh báo trước, múi giờ của bạn, và bất kỳ giờ im lặng (quiet hours) nào. Chúng tôi sử dụng chúng cho một mục đích duy nhất — quyết định gửi cảnh báo nào cho bạn và khi nào — và tin nhắn được gửi qua các server riêng của Telegram, do đó chính sách quyền riêng tư của Telegram áp dụng cho việc gửi tin. Chúng tôi lưu một bản ghi ngắn về những sự kiện đã được gửi cho bạn để cùng một cảnh báo không bị lặp lại; các bản ghi đó bị xóa sau khoảng hai ngày. Bạn có thể ngắt kết nối bất cứ lúc nào bằng cách chặn bot trên Telegram, và chúng tôi sẽ xóa dữ liệu Telegram đã lưu khi bạn xóa tài khoản của mình."
             }
           ]
         },
         {
-          "heading": "AI explanations (optional, Premium, your own provider)",
+          "heading": "Giải thích bằng AI (tùy chọn, Premium, nhà cung cấp của riêng bạn)",
           "blocks": [
             {
               "type": "p",
-              "text": "Premium users can connect their own AI provider — Google Gemini, Groq or OpenRouter — and press ✨ next to a release to get a plain-language briefing. This is entirely optional and does nothing until you paste your own API key. A step-by-step guide is at [rednews.app/ai](https://rednews.app/ai)."
+              "text": "Người dùng Premium có thể kết nối nhà cung cấp AI riêng của họ — Google Gemini, Groq hoặc OpenRouter — và nhấn ✨ bên cạnh một sự kiện để nhận bản tóm tắt bằng ngôn ngữ dễ hiểu. Đây hoàn toàn là tùy chọn và không làm gì cả cho đến khi bạn dán khóa API của riêng bạn vào. Hướng dẫn từng bước có tại [rednews.app/ai](https://rednews.app/ai)."
             },
             {
               "type": "p",
-              "text": "Your API key stays in your browser. It is kept in local storage on this computer, is never synchronised to other devices, and is never sent to our backend. \"Remove key\" deletes the key, deletes the cached answers, and withdraws the extension's permission to contact the provider."
+              "text": "Khóa API của bạn được giữ trong trình duyệt của bạn. Nó được lưu trong bộ lưu trữ cục bộ trên máy tính này, không bao giờ được đồng bộ hóa sang các thiết bị khác, và không bao giờ được gửi đến backend của chúng tôi. \"Remove key\" sẽ xóa khóa, xóa các câu trả lời đã lưu trong bộ nhớ đệm, và rút lại quyền của tiện ích để liên hệ với nhà cung cấp đó."
             },
             {
               "type": "p",
-              "text": "Requests go straight from your browser to the provider you chose. They do not pass through our servers. We cannot see what you asked or what the model answered."
+              "text": "Các yêu cầu đi thẳng từ trình duyệt của bạn đến nhà cung cấp bạn đã chọn. Chúng không đi qua server của chúng tôi. Chúng tôi không thể thấy bạn đã hỏi gì hoặc mô hình đã trả lời gì."
             },
             {
               "type": "p",
-              "text": "What is sent: the scheduled release itself — title, currency, impact level, scheduled time in UTC, and its forecast, previous and actual values — up to six earlier prints of that same release taken from the extension's own calendar history, and the language the answer should be written in. Your API key travels in the request's authorisation header, as the provider requires. Nothing else is included: no name or email, no account or subscription details, no chart symbol, no browsing history, and no text you type."
+              "text": "Những gì được gửi: chính sự kiện đã lên lịch đó — tiêu đề, loại tiền tệ, mức độ tác động, thời gian đã lên lịch theo UTC, và các giá trị dự báo, trước đó và thực tế của nó — tối đa sáu lần công bố trước đó của cùng sự kiện đó, lấy từ lịch sử lịch riêng của tiện ích, và ngôn ngữ mà câu trả lời cần được viết. Khóa API của bạn được gửi trong tiêu đề xác thực (authorization header) của yêu cầu, theo yêu cầu của nhà cung cấp. Không có gì khác được gửi kèm: không tên hay email, không thông tin tài khoản hoặc đăng ký, không mã ký hiệu biểu đồ, không lịch sử duyệt web, và không có bất kỳ văn bản nào bạn gõ."
             },
             {
               "type": "p",
-              "text": "The provider's own privacy policy governs what it does with that request. Providers differ: some state that they do not retain or train on API traffic by default, while others may use free-tier traffic to improve their products. The current position of each supported provider is summarised on the setup page, but you should read your provider's own terms."
+              "text": "Chính sách quyền riêng tư riêng của nhà cung cấp quy định những gì họ làm với yêu cầu đó. Các nhà cung cấp khác nhau: một số nói rằng họ không lưu giữ hoặc dùng để huấn luyện dựa trên lưu lượng API theo mặc định, trong khi những nhà cung cấp khác có thể sử dụng lưu lượng gói miễn phí để cải thiện sản phẩm của họ. Vị trí hiện tại của mỗi nhà cung cấp được hỗ trợ được tóm tắt trên trang thiết lập, nhưng bạn nên đọc điều khoản riêng của nhà cung cấp mình."
             },
             {
               "type": "p",
-              "text": "Answers are cached locally for up to seven days (at most sixty of them) so that reopening the same event does not spend your quota again. The cache never leaves your browser."
+              "text": "Câu trả lời được lưu vào bộ nhớ đệm cục bộ tối đa bảy ngày (nhiều nhất sáu mươi câu trả lời) để việc mở lại cùng một sự kiện không tốn thêm hạn mức của bạn. Bộ nhớ đệm này không bao giờ rời khỏi trình duyệt của bạn."
             },
             {
               "type": "p",
-              "text": "Access is granted per provider, at the moment you connect. The three provider addresses are optional permissions: Chrome asks for your consent when you press \"Connect\", and until then the extension cannot reach any of them."
+              "text": "Quyền truy cập được cấp cho từng nhà cung cấp, vào thời điểm bạn kết nối. Ba địa chỉ nhà cung cấp là các quyền tùy chọn: Chrome sẽ hỏi sự đồng ý của bạn khi bạn nhấn \"Connect\", và trước đó tiện ích không thể liên hệ với bất kỳ nhà cung cấp nào trong số họ."
             }
           ]
         },
         {
-          "heading": "Feedback",
+          "heading": "Phản hồi",
           "blocks": [
             {
               "type": "p",
-              "text": "If you send feedback through the extension (\"Report a problem, idea, or partnership\"), the message you type, an optional email address, and basic non-personal context (the extension version, your browser, and your interface language) are sent through Web3Forms, a third-party form-delivery service, which forwards them to the developer by email. This happens only when you press Send."
+              "text": "Nếu bạn gửi phản hồi qua tiện ích (\"Report a problem, idea, or partnership\"), tin nhắn bạn gõ, một địa chỉ email tùy chọn, và thông tin cơ bản không mang tính cá nhân (phiên bản tiện ích, trình duyệt của bạn, và ngôn ngữ giao diện của bạn) được gửi qua Web3Forms, một dịch vụ gửi biểu mẫu của bên thứ ba, dịch vụ này chuyển tiếp chúng đến nhà phát triển qua email. Điều này chỉ xảy ra khi bạn nhấn Send."
             }
           ]
         },
         {
-          "heading": "Third-party services",
+          "heading": "Dịch vụ của bên thứ ba",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Supabase hosts our backend (authentication, database, server functions) that serves calendar data and stores your account/subscription status.",
-                "Google provides the sign-in through which we obtain your name, email, and account identifier.",
-                "Paddle processes Premium payments as merchant of record; card data never reaches us.",
-                "Forex Factory is the source of the public economic-calendar data, fetched by our backend.",
-                "Web3Forms delivers feedback you choose to send.",
-                "Telegram delivers the optional Premium alerts to users who connect our bot.",
-                "Google (Gemini API), Groq, OpenRouter are AI providers a Premium user may connect with their own API key. We hold no account or contract with them on your behalf; your browser talks to whichever one you chose, directly, and only for the explanations you request."
+                "Supabase lưu trữ backend của chúng tôi (xác thực, cơ sở dữ liệu, các hàm server) cung cấp dữ liệu lịch và lưu trạng thái tài khoản/đăng ký của bạn.",
+                "Google cung cấp dịch vụ đăng nhập mà qua đó chúng tôi lấy được tên, email, và mã định danh tài khoản của bạn.",
+                "Paddle xử lý các khoản thanh toán Premium với vai trò merchant of record; dữ liệu thẻ không bao giờ đến được với chúng tôi.",
+                "Forex Factory là nguồn dữ liệu lịch kinh tế công khai, được backend của chúng tôi lấy về.",
+                "Web3Forms chuyển các phản hồi mà bạn chọn gửi.",
+                "Telegram gửi các cảnh báo Premium tùy chọn đến những người dùng kết nối bot của chúng tôi.",
+                "Google (Gemini API), Groq, OpenRouter là các nhà cung cấp AI mà người dùng Premium có thể kết nối bằng khóa API riêng của họ. Chúng tôi không nắm giữ tài khoản hoặc hợp đồng nào với họ thay mặt bạn; trình duyệt của bạn giao tiếp trực tiếp với bất kỳ nhà cung cấp nào bạn chọn, và chỉ để phục vụ cho các giải thích bạn yêu cầu."
               ]
             },
             {
               "type": "p",
-              "text": "Each third party processes data subject to its own privacy policy."
+              "text": "Mỗi bên thứ ba xử lý dữ liệu theo chính sách quyền riêng tư riêng của họ."
             }
           ]
         },
         {
-          "heading": "Your choices and rights",
+          "heading": "Lựa chọn và quyền của bạn",
           "blocks": [
             {
               "type": "p",
-              "text": "The free tier works without an account. If you have signed in, you can sign out at any time, and you may request deletion of your account data by contacting us (see \"Contact\"). Deleting your account removes your stored email, name, account identifier, and subscription record."
+              "text": "Gói miễn phí hoạt động mà không cần tài khoản. Nếu bạn đã đăng nhập, bạn có thể đăng xuất bất cứ lúc nào, và bạn có thể yêu cầu xóa dữ liệu tài khoản của mình bằng cách liên hệ với chúng tôi (xem \"Liên hệ\"). Xóa tài khoản của bạn sẽ xóa email, tên, mã định danh tài khoản, và hồ sơ đăng ký đã lưu của bạn."
             }
           ]
         },
         {
-          "heading": "Changes",
+          "heading": "Thay đổi",
           "blocks": [
             {
               "type": "p",
-              "text": "Any change that affects what data is collected or how it is processed will be reflected in an updated Privacy Policy before it takes effect. The \"Last updated\" date above will be revised."
+              "text": "Mọi thay đổi ảnh hưởng đến dữ liệu được thu thập hoặc cách nó được xử lý sẽ được phản ánh trong một Chính sách quyền riêng tư đã cập nhật trước khi có hiệu lực. Ngày \"Cập nhật lần cuối\" ở trên sẽ được sửa đổi."
             }
           ]
         },
         {
-          "heading": "Contact",
+          "heading": "Liên hệ",
           "blocks": [
             {
               "type": "p",
-              "text": "For questions about this policy or to request account deletion, email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+              "text": "Nếu có thắc mắc về chính sách này hoặc để yêu cầu xóa tài khoản, hãy gửi email tới [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question) hoặc liên hệ với chúng tôi trên [Discord](https://discord.com/users/1172891214580830322)."
             }
           ]
         }
       ]
     },
     "terms": {
-      "title": "Terms of Service",
-      "updated": "Last updated: 9 August 2026",
-      "intro": "These Terms of Service (\"Terms\") govern your use of the Red News – Economic Calendar for TradingView browser extension, the website at rednews.app, and any related services (together, the \"Service\"), provided by the developer of Red News (\"we\", \"us\", \"our\"). By installing or using the Service, you agree to these Terms. If you do not agree, do not use the Service.",
+      "title": "Điều khoản dịch vụ",
+      "updated": "Cập nhật lần cuối: ngày 9 tháng 8 năm 2026",
+      "intro": "Điều khoản dịch vụ này (\"Điều khoản\") quy định việc bạn sử dụng tiện ích mở rộng trình duyệt Red News – Economic Calendar for TradingView, trang web tại rednews.app, và bất kỳ dịch vụ liên quan nào (gọi chung là \"Dịch vụ\"), do nhà phát triển Red News (\"chúng tôi\") cung cấp. Bằng việc cài đặt hoặc sử dụng Dịch vụ, bạn đồng ý với các Điều khoản này. Nếu bạn không đồng ý, vui lòng không sử dụng Dịch vụ.",
       "sections": [
         {
-          "heading": "1. The Service",
+          "heading": "1. Dịch vụ",
           "blocks": [
             {
               "type": "p",
-              "text": "Red News is a browser extension that overlays scheduled economic-calendar events, sourced from the public Forex Factory calendar, onto TradingView chart pages. It draws event lines, shows event details, and can alert you before releases. Red News is an independent tool and is not affiliated with, endorsed by, or sponsored by TradingView or Forex Factory."
+              "text": "Red News là một tiện ích mở rộng trình duyệt hiển thị các sự kiện lịch kinh tế đã lên lịch, có nguồn từ lịch công khai của Forex Factory, chồng lên các trang biểu đồ TradingView. Nó vẽ các đường sự kiện, hiển thị chi tiết sự kiện, và có thể cảnh báo bạn trước khi có công bố. Red News là một công cụ độc lập và không liên kết, không được xác nhận, và không được tài trợ bởi TradingView hoặc Forex Factory."
             }
           ]
         },
         {
-          "heading": "2. Not financial advice",
+          "heading": "2. Không phải lời khuyên tài chính",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service displays informational data about scheduled economic events. It does not provide trading signals, investment recommendations, or financial advice, and nothing it shows should be relied upon as such. Economic data may be delayed, incomplete, or inaccurate. Trading and investing carry risk, including the loss of capital. You are solely responsible for your own trading decisions."
+              "text": "Dịch vụ hiển thị dữ liệu mang tính thông tin về các sự kiện kinh tế đã lên lịch. Nó không cung cấp tín hiệu giao dịch, khuyến nghị đầu tư, hoặc lời khuyên tài chính, và không có nội dung nào nó hiển thị nên được dựa vào như vậy. Dữ liệu kinh tế có thể bị chậm, không đầy đủ, hoặc không chính xác. Giao dịch và đầu tư mang rủi ro, bao gồm mất vốn. Bạn hoàn toàn chịu trách nhiệm về các quyết định giao dịch của riêng mình."
             }
           ]
         },
         {
-          "heading": "3. Accounts",
+          "heading": "3. Tài khoản",
           "blocks": [
             {
               "type": "p",
-              "text": "The free tier works without an account. To start a Premium trial or subscribe, you sign in with Google, which provides us your name, email address, and account identifier. You are responsible for maintaining the security of the Google account you use and for all activity under your Red News entitlement. You must be at least 18 years old, or the age of majority in your jurisdiction, to purchase Premium."
+              "text": "Gói miễn phí hoạt động mà không cần tài khoản. Để bắt đầu dùng thử Premium hoặc đăng ký, bạn đăng nhập bằng Google, cung cấp cho chúng tôi tên, địa chỉ email, và mã định danh tài khoản của bạn. Bạn có trách nhiệm duy trì an toàn cho tài khoản Google mà bạn sử dụng và cho mọi hoạt động dưới quyền sử dụng Red News của bạn. Bạn phải ít nhất 18 tuổi, hoặc tuổi thành niên theo luật ở khu vực pháp lý của bạn, để mua Premium."
             }
           ]
         },
         {
-          "heading": "4. Subscriptions, billing & trials",
+          "heading": "4. Đăng ký, thanh toán & dùng thử",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Free tier: the core extension is free to use.",
-                "Premium: available as a monthly (US$4.99) or annual (US$39) subscription. Prices are shown at checkout and may vary by region and applicable taxes.",
-                "Free trial: new users may start a 14-day Premium trial without a payment method. If you do not subscribe, the account simply reverts to the free tier when the trial ends. One trial per user.",
-                "Merchant of record: payments are processed by Paddle (Paddle.com Market Limited), which acts as the merchant of record for all purchases. Your purchase is also subject to Paddle's buyer terms. Card and billing details are entered on Paddle's checkout and are never received or stored by us.",
-                "Auto-renewal: paid subscriptions renew automatically at the end of each billing period until cancelled. By subscribing, you authorise recurring charges through Paddle.",
-                "Price changes: we may change subscription prices. Any change to your recurring price will be communicated in advance and will apply from your next renewal."
+                "Gói miễn phí: tiện ích cơ bản có thể sử dụng miễn phí.",
+                "Premium: có sẵn dưới dạng đăng ký hàng tháng (US$4.99) hoặc hàng năm (US$39). Giá được hiển thị tại trang thanh toán và có thể thay đổi theo khu vực và các loại thuế áp dụng.",
+                "Dùng thử miễn phí: người dùng mới có thể bắt đầu dùng thử Premium 14 ngày mà không cần phương thức thanh toán. Nếu bạn không đăng ký, tài khoản sẽ đơn giản chuyển về gói miễn phí khi hết thời gian dùng thử. Mỗi người dùng chỉ được dùng thử một lần.",
+                "Merchant of record: các khoản thanh toán được xử lý bởi Paddle (Paddle.com Market Limited), đơn vị đóng vai trò merchant of record cho tất cả các giao dịch mua. Việc mua hàng của bạn cũng chịu sự ràng buộc của các điều khoản dành cho người mua của Paddle. Thông tin thẻ và thanh toán được nhập trên trang thanh toán của Paddle và không bao giờ được chúng tôi nhận hoặc lưu trữ.",
+                "Tự động gia hạn: các gói đăng ký có phí sẽ tự động gia hạn vào cuối mỗi kỳ thanh toán cho đến khi bị hủy. Bằng việc đăng ký, bạn cho phép các khoản phí định kỳ được xử lý qua Paddle.",
+                "Thay đổi giá: chúng tôi có thể thay đổi giá đăng ký. Bất kỳ thay đổi nào đối với giá định kỳ của bạn sẽ được thông báo trước và sẽ áp dụng từ lần gia hạn tiếp theo của bạn."
               ]
             }
           ]
         },
         {
-          "heading": "5. Cancellation & refunds",
+          "heading": "5. Hủy & hoàn tiền",
           "blocks": [
             {
               "type": "p",
-              "text": "You can cancel at any time using the Manage subscription option in the extension. On cancellation you keep Premium access until the end of the period you have already paid for; it does not renew after that. Refunds are handled as described in our Refund Policy."
+              "text": "Bạn có thể hủy bất cứ lúc nào bằng cách sử dụng tùy chọn Manage subscription trong tiện ích. Khi hủy, bạn vẫn giữ quyền truy cập Premium đến hết kỳ đã thanh toán; nó sẽ không gia hạn sau đó. Việc hoàn tiền được xử lý theo như mô tả trong Chính sách hoàn tiền của chúng tôi."
             }
           ]
         },
         {
-          "heading": "6. Acceptable use",
+          "heading": "6. Sử dụng hợp lệ",
           "blocks": [
             {
               "type": "p",
-              "text": "You agree not to:"
+              "text": "Bạn đồng ý không:"
             },
             {
               "type": "ul",
               "items": [
-                "reverse engineer, decompile, or attempt to extract the source or server logic of the Service, except where permitted by law;",
-                "resell, sublicense, or redistribute the Service or the data it delivers;",
-                "circumvent entitlement checks, device limits, or use the Service without a valid entitlement;",
-                "use the Service to build a competing product, or to place undue load on our backend;",
-                "use the Service in any unlawful way or in violation of third-party rights."
+                "thực hiện kỹ thuật đảo ngược, giải mã, hoặc cố gắng trích xuất mã nguồn hoặc logic server của Dịch vụ, ngoại trừ trường hợp được pháp luật cho phép;",
+                "bán lại, chuyển nhượng, hoặc phân phối lại Dịch vụ hoặc dữ liệu mà nó cung cấp;",
+                "lách qua các kiểm tra quyền sử dụng, giới hạn thiết bị, hoặc sử dụng Dịch vụ mà không có quyền sử dụng hợp lệ;",
+                "sử dụng Dịch vụ để xây dựng một sản phẩm cạnh tranh, hoặc tạo tải trọng quá mức lên backend của chúng tôi;",
+                "sử dụng Dịch vụ theo bất kỳ cách nào bất hợp pháp hoặc vi phạm quyền của bên thứ ba."
               ]
             }
           ]
         },
         {
-          "heading": "7. Intellectual property",
+          "heading": "7. Quyền sở hữu trí tuệ",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service, including its code, design, and branding, is owned by us and protected by applicable laws. We grant you a limited, non-exclusive, non-transferable, revocable licence to use the Service for your personal trading, subject to these Terms. Economic data originates from the public Forex Factory calendar and remains subject to any rights of its source. \"TradingView\" and \"Forex Factory\" are trademarks of their respective owners."
+              "text": "Dịch vụ, bao gồm mã, thiết kế, và thương hiệu của nó, thuộc quyền sở hữu của chúng tôi và được pháp luật hiện hành bảo vệ. Chúng tôi cấp cho bạn một giấy phép hạn chế, không độc quyền, không thể chuyển nhượng, có thể thu hồi để sử dụng Dịch vụ cho mục đích giao dịch cá nhân của bạn, tuân theo các Điều khoản này. Dữ liệu kinh tế bắt nguồn từ lịch công khai của Forex Factory và vẫn chịu sự ràng buộc của bất kỳ quyền nào của nguồn dữ liệu đó. \"TradingView\" và \"Forex Factory\" là các nhãn hiệu thuộc về chủ sở hữu tương ứng của họ."
             }
           ]
         },
         {
-          "heading": "8. Third-party services",
+          "heading": "8. Dịch vụ của bên thứ ba",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service relies on third parties including TradingView (the host page), Forex Factory (data source), Supabase (backend and authentication), Google (sign-in), and Paddle (payments). We are not responsible for the availability, content, or practices of these third parties, and your use of them is subject to their own terms."
+              "text": "Dịch vụ phụ thuộc vào các bên thứ ba bao gồm TradingView (trang chủ), Forex Factory (nguồn dữ liệu), Supabase (backend và xác thực), Google (đăng nhập), và Paddle (thanh toán). Chúng tôi không chịu trách nhiệm về tính khả dụng, nội dung, hoặc cách thực hành của các bên thứ ba này, và việc bạn sử dụng chúng chịu sự ràng buộc của các điều khoản riêng của họ."
             }
           ]
         },
         {
-          "heading": "9. Disclaimers",
+          "heading": "9. Miễn trừ trách nhiệm",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service is provided \"as is\" and \"as available\", without warranties of any kind, whether express or implied, including fitness for a particular purpose, accuracy, or uninterrupted availability. We do not warrant that event data will be timely, complete, or error-free, or that the Service will always function with TradingView."
+              "text": "Dịch vụ được cung cấp \"nguyên trạng\" (\"as is\") và \"theo tình trạng sẵn có\" (\"as available\"), không có bất kỳ bảo đảm nào, dù rõ ràng hay ngụ ý, bao gồm sự phù hợp cho một mục đích cụ thể, độ chính xác, hoặc tính sẵn có liên tục không gián đoạn. Chúng tôi không bảo đảm rằng dữ liệu sự kiện sẽ kịp thời, đầy đủ, hoặc không có lỗi, hoặc rằng Dịch vụ sẽ luôn hoạt động cùng với TradingView."
             }
           ]
         },
         {
-          "heading": "10. Limitation of liability",
+          "heading": "10. Giới hạn trách nhiệm",
           "blocks": [
             {
               "type": "p",
-              "text": "To the maximum extent permitted by law, we will not be liable for any indirect, incidental, special, or consequential damages, or for any trading losses, lost profits, or lost data, arising from your use of or inability to use the Service. Our total liability for any claim relating to the Service will not exceed the amount you paid us for the Service in the twelve months preceding the claim."
+              "text": "Trong phạm vi tối đa được pháp luật cho phép, chúng tôi sẽ không chịu trách nhiệm về bất kỳ thiệt hại gián tiếp, ngẫu nhiên, đặc biệt, hoặc do hậu quả nào, hoặc về bất kỳ tổn thất giao dịch, lợi nhuận bị mất, hoặc dữ liệu bị mất nào, phát sinh từ việc bạn sử dụng hoặc không thể sử dụng Dịch vụ. Tổng trách nhiệm của chúng tôi đối với bất kỳ khiếu nại nào liên quan đến Dịch vụ sẽ không vượt quá số tiền bạn đã thanh toán cho chúng tôi cho Dịch vụ trong mười hai tháng trước khiếu nại đó."
             }
           ]
         },
         {
-          "heading": "11. Termination",
+          "heading": "11. Chấm dứt",
           "blocks": [
             {
               "type": "p",
-              "text": "You may stop using the Service at any time by uninstalling the extension and, if applicable, cancelling your subscription. We may suspend or terminate access if you breach these Terms or misuse the Service. You may request deletion of your account data as described in our Privacy Policy."
+              "text": "Bạn có thể ngừng sử dụng Dịch vụ bất cứ lúc nào bằng cách gỡ cài đặt tiện ích và, nếu áp dụng, hủy đăng ký của bạn. Chúng tôi có thể tạm ngừng hoặc chấm dứt quyền truy cập nếu bạn vi phạm các Điều khoản này hoặc lạm dụng Dịch vụ. Bạn có thể yêu cầu xóa dữ liệu tài khoản của mình theo như mô tả trong Chính sách quyền riêng tư của chúng tôi."
             }
           ]
         },
         {
-          "heading": "12. Changes to these Terms",
+          "heading": "12. Thay đổi đối với các Điều khoản này",
           "blocks": [
             {
               "type": "p",
-              "text": "We may update these Terms from time to time. Material changes will be reflected here with a revised \"Last updated\" date. Continued use of the Service after changes take effect constitutes acceptance of the updated Terms."
+              "text": "Chúng tôi có thể cập nhật các Điều khoản này theo thời gian. Các thay đổi đáng kể sẽ được phản ánh ở đây với ngày \"Cập nhật lần cuối\" đã sửa đổi. Việc tiếp tục sử dụng Dịch vụ sau khi các thay đổi có hiệu lực đồng nghĩa với việc chấp nhận các Điều khoản đã cập nhật."
             }
           ]
         },
         {
-          "heading": "13. Governing law",
+          "heading": "13. Luật áp dụng",
           "blocks": [
             {
               "type": "p",
-              "text": "These Terms are governed by the laws of Ukraine, without regard to conflict-of-law rules, except where mandatory consumer-protection laws of your country of residence apply. Purchases are additionally subject to the terms of Paddle as merchant of record."
+              "text": "Các Điều khoản này được điều chỉnh theo luật pháp Ukraine, không tính đến các quy tắc xung đột pháp luật, ngoại trừ trường hợp luật bảo vệ người tiêu dùng bắt buộc của quốc gia nơi bạn cư trú được áp dụng. Các giao dịch mua hàng cũng chịu sự ràng buộc của các điều khoản của Paddle với vai trò merchant of record."
             }
           ]
         },
         {
-          "heading": "14. Contact",
+          "heading": "14. Liên hệ",
           "blocks": [
             {
               "type": "p",
-              "text": "Questions about these Terms? Email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+              "text": "Có thắc mắc về các Điều khoản này? Hãy gửi email tới [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question) hoặc liên hệ với chúng tôi trên [Discord](https://discord.com/users/1172891214580830322)."
             }
           ]
         }
       ]
     },
     "refund": {
-      "title": "Refund Policy",
-      "updated": "Last updated: 9 August 2026",
-      "intro": "We want you to be happy with Red News Premium. This policy explains how trials, cancellations, and refunds work. Payments are processed by Paddle, our merchant of record, so refunds are issued through Paddle to your original payment method.",
+      "title": "Chính sách hoàn tiền",
+      "updated": "Cập nhật lần cuối: ngày 9 tháng 8 năm 2026",
+      "intro": "Chúng tôi muốn bạn hài lòng với Red News Premium. Chính sách này giải thích cách các gói dùng thử, việc hủy, và việc hoàn tiền hoạt động. Các khoản thanh toán được xử lý bởi Paddle, merchant of record của chúng tôi, do đó các khoản hoàn tiền được thực hiện qua Paddle về phương thức thanh toán ban đầu của bạn.",
       "sections": [
         {
-          "heading": "Try before you pay",
+          "heading": "Dùng thử trước khi trả tiền",
           "blocks": [
             {
               "type": "p",
-              "text": "Every new user can start a 14-day Premium trial with no payment method required. The trial is long enough to span a major economic release, so you can fully evaluate Premium before you are ever charged. We encourage you to use it."
+              "text": "Mọi người dùng mới có thể bắt đầu dùng thử Premium 14 ngày mà không cần phương thức thanh toán nào. Thời gian dùng thử đủ dài để trải qua một sự kiện kinh tế quan trọng, vì vậy bạn có thể đánh giá đầy đủ Premium trước khi bị tính phí bất cứ lúc nào. Chúng tôi khuyến khích bạn sử dụng nó."
             }
           ]
         },
         {
-          "heading": "14-day money-back guarantee",
+          "heading": "Bảo đảm hoàn tiền trong 14 ngày",
           "blocks": [
             {
               "type": "p",
-              "text": "If you subscribe and change your mind, you can request a full refund within 14 days of your first payment, no questions asked. This applies to the initial charge on a monthly or annual plan."
+              "text": "Nếu bạn đăng ký và đổi ý, bạn có thể yêu cầu hoàn tiền toàn bộ trong vòng 14 ngày kể từ lần thanh toán đầu tiên của bạn, không cần lý do. Điều này áp dụng cho khoản phí đầu tiên trên gói hàng tháng hoặc hàng năm."
             }
           ]
         },
         {
-          "heading": "Renewals",
+          "heading": "Gia hạn",
           "blocks": [
             {
               "type": "p",
-              "text": "Subscriptions renew automatically. To avoid a renewal charge, cancel before your renewal date using the Manage subscription button in the extension. After cancellation you keep Premium until the end of the period you have already paid for. Renewal charges are generally non-refundable, but if you were charged for a renewal you did not intend to keep and reach out promptly, contact us. We review these case by case and aim to be fair."
+              "text": "Các gói đăng ký tự động gia hạn. Để tránh bị tính phí gia hạn, hãy hủy trước ngày gia hạn của bạn bằng nút Manage subscription trong tiện ích. Sau khi hủy, bạn vẫn giữ Premium đến hết kỳ đã thanh toán. Các khoản phí gia hạn thông thường không được hoàn lại, nhưng nếu bạn bị tính phí cho một lần gia hạn mà bạn không muốn tiếp tục và liên hệ với chúng tôi kịp thời, hãy liên hệ với chúng tôi. Chúng tôi xem xét từng trường hợp cụ thể và cố gắng công bằng."
             }
           ]
         },
         {
-          "heading": "How to request a refund",
+          "heading": "Cách yêu cầu hoàn tiền",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Reply to the Paddle receipt email you received for the purchase, or",
-                "email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request) with the email address used at checkout, or",
-                "reach us on [Discord](https://discord.com/users/1172891214580830322)."
+                "Trả lời email biên nhận (receipt) của Paddle mà bạn đã nhận cho giao dịch mua đó, hoặc",
+                "gửi email tới [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request) kèm địa chỉ email đã dùng khi thanh toán, hoặc",
+                "liên hệ với chúng tôi trên [Discord](https://discord.com/users/1172891214580830322)."
               ]
             },
             {
               "type": "p",
-              "text": "Approved refunds are processed by Paddle back to your original payment method, typically within 5 to 10 business days depending on your bank or card provider."
+              "text": "Các khoản hoàn tiền được chấp thuận sẽ được Paddle xử lý về phương thức thanh toán ban đầu của bạn, thường trong khoảng 5 đến 10 ngày làm việc tùy thuộc vào ngân hàng hoặc nhà cung cấp thẻ của bạn."
             }
           ]
         },
         {
-          "heading": "Statutory rights",
+          "heading": "Quyền theo luật định",
           "blocks": [
             {
               "type": "p",
-              "text": "Nothing in this policy limits any refund or cancellation rights you may have under the consumer-protection laws of your country of residence, or under Paddle's own buyer terms as merchant of record."
+              "text": "Không có nội dung nào trong chính sách này hạn chế bất kỳ quyền hoàn tiền hoặc hủy bỏ nào mà bạn có thể có theo luật bảo vệ người tiêu dùng của quốc gia nơi bạn cư trú, hoặc theo các điều khoản dành cho người mua của Paddle với vai trò merchant of record."
             }
           ]
         }
       ],
-      "closing": "Questions before you buy? We're happy to help: email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing) or message us on [Discord](https://discord.com/users/1172891214580830322)."
+      "closing": "Có thắc mắc trước khi mua? Chúng tôi rất sẵn lòng hỗ trợ: gửi email tới [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing) hoặc nhắn tin cho chúng tôi trên [Discord](https://discord.com/users/1172891214580830322)."
     }
   },
   "notFound": {
