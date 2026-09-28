@@ -23,6 +23,7 @@ export function AccountScreen({ locale, t }: Props) {
   const [status, setStatus] = useState<Status>('loading');
   const [session, setSession] = useState<Session | null>(null);
   const [entitlement, setEntitlement] = useState<Entitlement | null>(null);
+  const [entitlementReady, setEntitlementReady] = useState(false);
   const [busy, setBusy] = useState<Busy>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -53,13 +54,16 @@ export function AccountScreen({ locale, t }: Props) {
   useEffect(() => {
     if (!session) {
       setEntitlement(null);
+      setEntitlementReady(false);
       return;
     }
     let active = true;
+    setEntitlementReady(false);
     accountApi
       .entitlement(session.user.id)
       .then((e) => active && setEntitlement(e))
-      .catch(() => active && setError(t.error));
+      .catch(() => active && setError(t.error))
+      .finally(() => active && setEntitlementReady(true));
     return () => {
       active = false;
     };
@@ -132,7 +136,7 @@ export function AccountScreen({ locale, t }: Props) {
     }
   }
 
-  if (status === 'loading') {
+  if (status === 'loading' || (status === 'signed-in' && !entitlementReady)) {
     return <p className={`lead ${styles.status}`}>{t.loading}</p>;
   }
 
