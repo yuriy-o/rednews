@@ -279,7 +279,9 @@ function ConnectionRow({ label, value }: { label: string; value: ReactNode }) {
   return (
     <div className={styles.connectionRow}>
       <span className={styles.connectionLabel}>{label}</span>
-      {typeof value === 'string' ? <span className={styles.connectionHint}>{value}</span> : value}
+      <div className={styles.connectionValue}>
+        {typeof value === 'string' ? <span className={styles.connectionHint}>{value}</span> : value}
+      </div>
     </div>
   );
 }
