@@ -30,29 +30,31 @@ export const allLocales = {
 export type Locale = keyof typeof allLocales;
 
 export const defaultLocale: Locale = 'en';
+// Order matches the extension's language menu (not alphabetical) so the two switchers feel
+// like the same product — see the language switcher, which renders enabledLocales in this order.
 export const enabledLocales: readonly Locale[] = [
   'en',
-  'uk',
-  'es',
-  'pt-br',
   'de',
+  'es',
   'fr',
+  'id',
   'it',
-  'cs',
+  'ms',
   'nl',
   'pl',
+  'pt-br',
   'sk',
-  'el',
   'vi',
-  'id',
-  'ms',
   'tr',
+  'uk',
+  'cs',
+  'el',
+  'ur',
+  'ar',
   'hi',
+  'zh-cn',
   'ja',
   'ko',
-  'zh-cn',
-  'ar',
-  'ur',
 ];
 
 /** Saved locale choice (language switcher, proxy negotiation) — read by proxy.ts too. */
