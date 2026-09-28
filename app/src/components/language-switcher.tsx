@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useId, useRef, useState } from 'react';
+import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { Check, Globe } from 'lucide-react';
 import { LOCALE_COOKIE, allLocales, enabledLocales, type Locale } from '@/i18n/config';
@@ -20,6 +20,7 @@ interface Props {
  */
 export function LanguageSwitcher({ locale, label, className }: Props) {
   const [open, setOpen] = useState(false);
+  const [maxListHeight, setMaxListHeight] = useState<number>();
   const router = useRouter();
   const pathname = usePathname();
   const rootRef = useRef<HTMLDivElement>(null);
@@ -37,6 +38,18 @@ export function LanguageSwitcher({ locale, label, className }: Props) {
       document.removeEventListener('keydown', onKey);
       document.removeEventListener('click', onClick);
     };
+  }, [open]);
+
+  // The CSS cap (min(320px, 60vh)) assumes the trigger sits near the top of the viewport. With 11+
+  // locales and the switcher opened low on a short screen (e.g. inside the mobile menu, below a
+  // long nav list), that's not always enough room — so measure the actual space to the viewport
+  // bottom on open and tighten the cap if needed.
+  useLayoutEffect(() => {
+    if (!open || !rootRef.current) return;
+    const gap = 6; // matches .lang-switcher__list's inset-block-start offset
+    const margin = 12;
+    const top = rootRef.current.getBoundingClientRect().bottom + gap;
+    setMaxListHeight(Math.max(120, Math.min(320, window.innerHeight - top - margin)));
   }, [open]);
 
   if (enabledLocales.length <= 1) return null;
@@ -66,7 +79,12 @@ export function LanguageSwitcher({ locale, label, className }: Props) {
         <Globe size={16} strokeWidth={1.75} aria-hidden />
         <span aria-hidden>{code}</span>
       </button>
-      <ul id={listId} className="lang-switcher__list" hidden={!open}>
+      <ul
+        id={listId}
+        className="lang-switcher__list"
+        hidden={!open}
+        style={open && maxListHeight ? { maxBlockSize: maxListHeight } : undefined}
+      >
         {enabledLocales.map((l) => (
           <li key={l}>
             <button type="button" aria-current={l === locale || undefined} onClick={() => select(l)}>
