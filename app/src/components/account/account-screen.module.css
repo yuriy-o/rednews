@@ -4,7 +4,10 @@
 }
 .panel {
   margin-block-start: 40px;
-  max-inline-size: 420px;
+  /* No max-width: a fixed narrow column forced the connection rows below to wrap mid-row for
+     longer translations (German, Polish, ...) regardless of gap/font tuning. Full container width
+     fixes that for every language at once, and .lead's own 60ch cap already keeps the intro
+     paragraph from stretching into a wall of text. */
 }
 .panel .button {
   gap: 10px;
@@ -49,20 +52,20 @@
   margin-block-start: 32px;
   border-block-start: 1px solid var(--line);
 }
-/* Stacked (label, then value) at every width — a side-by-side row with justify-content:
-   space-between let a long label + button together wrap mid-row on desktop, since .panel caps at
-   420px regardless of viewport (e.g. German "Telegram-Benachrichtigungen" + "Telegram verbinden").
-   Stacking always avoids depending on which language/width combination happens to fit one line. */
 .connectionRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   padding-block: 14px;
   border-block-end: 1px solid var(--grid);
 }
 .connectionLabel {
-  display: block;
   font-weight: 550;
 }
 .connectionValue {
-  margin-block-start: 8px;
+  flex: none;
 }
 .connectionHint {
   color: var(--fg-muted);
