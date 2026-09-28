@@ -45,3 +45,23 @@
 .signOut {
   margin-block-start: 24px;
 }
+.connections {
+  margin-block-start: 32px;
+  border-block-start: 1px solid var(--line);
+}
+.connectionRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-block: 14px;
+  border-block-end: 1px solid var(--grid);
+}
+.connectionLabel {
+  font-weight: 550;
+}
+.connectionHint {
+  color: var(--fg-muted);
+  font-size: 0.9375rem;
+}

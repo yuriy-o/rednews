@@ -268,7 +268,14 @@
     "manage": "Spravovat předplatné",
     "opening": "Otevírání…",
     "error": "Něco se pokazilo. Zkus to prosím znovu nebo kontaktuj podporu.",
-    "settingsNote": "Synchronizace nastavení s rozšířením brzy přijde."
+    "settingsNote": "Synchronizace nastavení s rozšířením brzy přijde.",
+    "telegram": "Upozornění na Telegramu",
+    "telegramConnected": "Připojeno",
+    "telegramConnect": "Připojit Telegram",
+    "telegramOpening": "Otevírání Telegramu…",
+    "ai": "Vysvětlení pomocí AI",
+    "premiumFeature": "Funkce Premium",
+    "aiInExtension": "Nastav v rozšíření"
   },
   "legal": {
     "privacy": {

@@ -268,7 +268,14 @@
     "manage": "Gérer l'abonnement",
     "opening": "Ouverture…",
     "error": "Une erreur s'est produite. Merci de réessayer ou de contacter le support.",
-    "settingsNote": "La synchronisation des paramètres avec l'extension arrive bientôt."
+    "settingsNote": "La synchronisation des paramètres avec l'extension arrive bientôt.",
+    "telegram": "Alertes Telegram",
+    "telegramConnected": "Connecté",
+    "telegramConnect": "Connecter Telegram",
+    "telegramOpening": "Ouverture de Telegram…",
+    "ai": "Explications par IA",
+    "premiumFeature": "Fonctionnalité Premium",
+    "aiInExtension": "À configurer dans l'extension"
   },
   "legal": {
     "privacy": {

@@ -1,14 +1,14 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import type { Session } from '@supabase/supabase-js';
 import type { Dictionary } from '@/i18n/dictionaries';
-import { accountApi, supabase, type Entitlement } from '@/lib/supabase';
+import { accountApi, supabase, type Entitlement, type TelegramStatus } from '@/lib/supabase';
 import styles from './account-screen.module.css';
 
 type Status = 'loading' | 'signed-out' | 'signed-in';
 /** A plan/action request in flight, so a slow network can't double-submit a click. */
-type Busy = 'signin' | 'signout' | 'trial' | 'checkout-monthly' | 'checkout-annual' | 'portal' | null;
+type Busy = 'signin' | 'signout' | 'trial' | 'checkout-monthly' | 'checkout-annual' | 'portal' | 'telegram' | null;
 
 interface Props {
   locale: string;
@@ -24,8 +24,10 @@ export function AccountScreen({ locale, t }: Props) {
   const [session, setSession] = useState<Session | null>(null);
   const [entitlement, setEntitlement] = useState<Entitlement | null>(null);
   const [entitlementReady, setEntitlementReady] = useState(false);
+  const [telegram, setTelegram] = useState<TelegramStatus | null>(null);
   const [busy, setBusy] = useState<Busy>(null);
   const [error, setError] = useState<string | null>(null);
+  const isPremiumPlan = entitlement?.plan === 'trial' || entitlement?.plan === 'premium' || entitlement?.plan === 'comp';
 
   useEffect(() => {
     let active = true;
@@ -68,6 +70,33 @@ export function AccountScreen({ locale, t }: Props) {
       active = false;
     };
   }, [session, t.error]);
+
+  useEffect(() => {
+    if (!session || !isPremiumPlan) {
+      setTelegram(null);
+      return;
+    }
+    let active = true;
+    function load() {
+      accountApi
+        .telegramStatus()
+        .then((r) => active && setTelegram(r.telegram))
+        .catch(() => {
+          /* Non-fatal: the connect button below just stays available. */
+        });
+    }
+    load();
+    // The user completes linking in a Telegram tab, not this one — no webhook reaches the
+    // browser, so re-check status when they come back rather than polling in the background.
+    function onVisible() {
+      if (document.visibilityState === 'visible') load();
+    }
+    document.addEventListener('visibilitychange', onVisible);
+    return () => {
+      active = false;
+      document.removeEventListener('visibilitychange', onVisible);
+    };
+  }, [session, isPremiumPlan]);
 
   async function signIn() {
     setBusy('signin');
@@ -123,6 +152,19 @@ export function AccountScreen({ locale, t }: Props) {
     }
   }
 
+  async function connectTelegram() {
+    setBusy('telegram');
+    setError(null);
+    try {
+      const { url } = await accountApi.telegramLinkToken();
+      window.open(url, '_blank', 'noopener');
+    } catch {
+      setError(t.error);
+    } finally {
+      setBusy(null);
+    }
+  }
+
   async function manage() {
     setBusy('portal');
     setError(null);
@@ -153,6 +195,10 @@ export function AccountScreen({ locale, t }: Props) {
             {error}
           </p>
         )}
+        <div className={styles.connections}>
+          <ConnectionRow label={t.telegram} value={t.premiumFeature} />
+          <ConnectionRow label={t.ai} value={t.premiumFeature} />
+        </div>
       </div>
     );
   }
@@ -204,9 +250,36 @@ export function AccountScreen({ locale, t }: Props) {
         </p>
       )}
 
+      <div className={styles.connections}>
+        <ConnectionRow
+          label={t.telegram}
+          value={
+            !isPremiumPlan ? (
+              t.premiumFeature
+            ) : telegram?.linked ? (
+              telegram.username ? `${t.telegramConnected} · @${telegram.username}` : t.telegramConnected
+            ) : (
+              <button className="button button--sm" onClick={connectTelegram} disabled={busy === 'telegram'}>
+                {busy === 'telegram' ? t.telegramOpening : t.telegramConnect}
+              </button>
+            )
+          }
+        />
+        <ConnectionRow label={t.ai} value={isPremiumPlan ? t.aiInExtension : t.premiumFeature} />
+      </div>
+
       <button className={`button button--sm ${styles.signOut}`} onClick={signOut} disabled={busy === 'signout'}>
         {t.signOut}
       </button>
+    </div>
+  );
+}
+
+function ConnectionRow({ label, value }: { label: string; value: ReactNode }) {
+  return (
+    <div className={styles.connectionRow}>
+      <span className={styles.connectionLabel}>{label}</span>
+      {typeof value === 'string' ? <span className={styles.connectionHint}>{value}</span> : value}
     </div>
   );
 }

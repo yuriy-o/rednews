@@ -268,7 +268,14 @@
     "manage": "Quản lý gói đăng ký",
     "opening": "Đang mở…",
     "error": "Đã xảy ra lỗi. Vui lòng thử lại hoặc liên hệ hỗ trợ.",
-    "settingsNote": "Đồng bộ hóa cài đặt với tiện ích mở rộng sẽ sớm ra mắt."
+    "settingsNote": "Đồng bộ hóa cài đặt với tiện ích mở rộng sẽ sớm ra mắt.",
+    "telegram": "Cảnh báo Telegram",
+    "telegramConnected": "Đã kết nối",
+    "telegramConnect": "Kết nối Telegram",
+    "telegramOpening": "Đang mở Telegram…",
+    "ai": "Giải thích bằng AI",
+    "premiumFeature": "Tính năng Premium",
+    "aiInExtension": "Thiết lập trong tiện ích mở rộng"
   },
   "legal": {
     "privacy": {

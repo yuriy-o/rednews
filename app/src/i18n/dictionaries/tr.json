@@ -268,7 +268,14 @@
     "manage": "Aboneliği yönet",
     "opening": "Açılıyor…",
     "error": "Bir şeyler ters gitti. Lütfen tekrar dene veya destek ile iletişime geç.",
-    "settingsNote": "Uzantıyla ayar senkronizasyonu yakında geliyor."
+    "settingsNote": "Uzantıyla ayar senkronizasyonu yakında geliyor.",
+    "telegram": "Telegram bildirimleri",
+    "telegramConnected": "Bağlandı",
+    "telegramConnect": "Telegram'ı bağla",
+    "telegramOpening": "Telegram açılıyor…",
+    "ai": "Yapay zeka açıklamaları",
+    "premiumFeature": "Premium özellik",
+    "aiInExtension": "Uzantıda ayarla"
   },
   "legal": {
     "privacy": {

@@ -268,7 +268,14 @@
     "manage": "सदस्यता प्रबंधित करें",
     "opening": "खुल रहा है…",
     "error": "कुछ गलत हो गया। कृपया फिर से प्रयास करें या सहायता से संपर्क करें।",
-    "settingsNote": "एक्सटेंशन के साथ सेटिंग्स सिंक जल्द ही आ रहा है।"
+    "settingsNote": "एक्सटेंशन के साथ सेटिंग्स सिंक जल्द ही आ रहा है।",
+    "telegram": "Telegram अलर्ट",
+    "telegramConnected": "कनेक्टेड",
+    "telegramConnect": "Telegram कनेक्ट करें",
+    "telegramOpening": "Telegram खोला जा रहा है…",
+    "ai": "AI स्पष्टीकरण",
+    "premiumFeature": "Premium सुविधा",
+    "aiInExtension": "एक्सटेंशन में सेट करें"
   },
   "legal": {
     "privacy": {

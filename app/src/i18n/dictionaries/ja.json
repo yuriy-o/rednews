@@ -268,7 +268,14 @@
     "manage": "サブスクリプションを管理",
     "opening": "開いています…",
     "error": "問題が発生しました。もう一度お試しいただくか、サポートまでご連絡ください。",
-    "settingsNote": "拡張機能との設定同期は近日公開予定です。"
+    "settingsNote": "拡張機能との設定同期は近日公開予定です。",
+    "telegram": "Telegram通知",
+    "telegramConnected": "接続済み",
+    "telegramConnect": "Telegramを接続",
+    "telegramOpening": "Telegramを開いています…",
+    "ai": "AI解説",
+    "premiumFeature": "Premium機能",
+    "aiInExtension": "拡張機能で設定"
   },
   "legal": {
     "privacy": {

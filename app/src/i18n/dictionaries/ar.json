@@ -268,7 +268,14 @@
     "manage": "إدارة الاشتراك",
     "opening": "جارٍ الفتح…",
     "error": "حدث خطأ ما. يُرجى المحاولة مرة أخرى أو التواصل مع الدعم.",
-    "settingsNote": "مزامنة الإعدادات مع الإضافة قادمة قريبًا."
+    "settingsNote": "مزامنة الإعدادات مع الإضافة قادمة قريبًا.",
+    "telegram": "تنبيهات Telegram",
+    "telegramConnected": "متصل",
+    "telegramConnect": "ربط Telegram",
+    "telegramOpening": "جارٍ فتح Telegram…",
+    "ai": "تفسيرات الذكاء الاصطناعي",
+    "premiumFeature": "ميزة Premium",
+    "aiInExtension": "أعدّها في الإضافة"
   },
   "legal": {
     "privacy": {

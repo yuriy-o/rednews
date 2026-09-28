@@ -268,7 +268,14 @@
     "manage": "سبسکرپشن کا نظم کریں",
     "opening": "کھل رہا ہے…",
     "error": "کچھ غلط ہو گیا۔ براہ کرم دوبارہ کوشش کریں یا سپورٹ سے رابطہ کریں۔",
-    "settingsNote": "ایکسٹینشن کے ساتھ سیٹنگز کی مطابقت پذیری جلد آ رہی ہے۔"
+    "settingsNote": "ایکسٹینشن کے ساتھ سیٹنگز کی مطابقت پذیری جلد آ رہی ہے۔",
+    "telegram": "Telegram الرٹس",
+    "telegramConnected": "منسلک",
+    "telegramConnect": "Telegram منسلک کریں",
+    "telegramOpening": "Telegram کھل رہا ہے…",
+    "ai": "AI وضاحتیں",
+    "premiumFeature": "Premium فیچر",
+    "aiInExtension": "ایکسٹینشن میں ترتیب دیں"
   },
   "legal": {
     "privacy": {

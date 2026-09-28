@@ -268,7 +268,14 @@
     "manage": "Abonnement beheren",
     "opening": "Bezig met openen…",
     "error": "Er is iets misgegaan. Probeer het opnieuw of neem contact op met support.",
-    "settingsNote": "Synchronisatie van instellingen met de extensie komt binnenkort."
+    "settingsNote": "Synchronisatie van instellingen met de extensie komt binnenkort.",
+    "telegram": "Telegram-meldingen",
+    "telegramConnected": "Verbonden",
+    "telegramConnect": "Telegram koppelen",
+    "telegramOpening": "Telegram wordt geopend…",
+    "ai": "AI-uitleg",
+    "premiumFeature": "Premium-functie",
+    "aiInExtension": "Stel in via de extensie"
   },
   "legal": {
     "privacy": {

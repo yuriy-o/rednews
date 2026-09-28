@@ -268,7 +268,14 @@
     "manage": "Kelola langganan",
     "opening": "Membuka…",
     "error": "Terjadi kesalahan. Silakan coba lagi atau hubungi dukungan.",
-    "settingsNote": "Sinkronisasi pengaturan dengan ekstensi akan segera hadir."
+    "settingsNote": "Sinkronisasi pengaturan dengan ekstensi akan segera hadir.",
+    "telegram": "Notifikasi Telegram",
+    "telegramConnected": "Terhubung",
+    "telegramConnect": "Hubungkan Telegram",
+    "telegramOpening": "Membuka Telegram…",
+    "ai": "Penjelasan AI",
+    "premiumFeature": "Fitur Premium",
+    "aiInExtension": "Atur di ekstensi"
   },
   "legal": {
     "privacy": {

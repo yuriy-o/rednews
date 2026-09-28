@@ -268,7 +268,14 @@
     "manage": "Urus langganan",
     "opening": "Membuka…",
     "error": "Sesuatu tidak kena. Sila cuba lagi atau hubungi sokongan.",
-    "settingsNote": "Penyegerakan tetapan dengan sambungan akan hadir tidak lama lagi."
+    "settingsNote": "Penyegerakan tetapan dengan sambungan akan hadir tidak lama lagi.",
+    "telegram": "Amaran Telegram",
+    "telegramConnected": "Disambungkan",
+    "telegramConnect": "Sambungkan Telegram",
+    "telegramOpening": "Membuka Telegram…",
+    "ai": "Penjelasan AI",
+    "premiumFeature": "Ciri Premium",
+    "aiInExtension": "Sediakan dalam sambungan"
   },
   "legal": {
     "privacy": {

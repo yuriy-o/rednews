@@ -268,7 +268,14 @@
     "manage": "Gestisci abbonamento",
     "opening": "Apertura…",
     "error": "Qualcosa è andato storto. Riprova o contatta il supporto.",
-    "settingsNote": "La sincronizzazione delle impostazioni con l'estensione arriverà presto."
+    "settingsNote": "La sincronizzazione delle impostazioni con l'estensione arriverà presto.",
+    "telegram": "Avvisi Telegram",
+    "telegramConnected": "Connesso",
+    "telegramConnect": "Connetti Telegram",
+    "telegramOpening": "Apertura di Telegram…",
+    "ai": "Spiegazioni IA",
+    "premiumFeature": "Funzione Premium",
+    "aiInExtension": "Configurala nell'estensione"
   },
   "legal": {
     "privacy": {

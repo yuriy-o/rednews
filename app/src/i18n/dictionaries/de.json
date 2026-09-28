@@ -268,7 +268,14 @@
     "manage": "Abo verwalten",
     "opening": "Wird geöffnet…",
     "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut oder kontaktiere den Support.",
-    "settingsNote": "Die Synchronisierung der Einstellungen mit der Erweiterung kommt bald."
+    "settingsNote": "Die Synchronisierung der Einstellungen mit der Erweiterung kommt bald.",
+    "telegram": "Telegram-Benachrichtigungen",
+    "telegramConnected": "Verbunden",
+    "telegramConnect": "Telegram verbinden",
+    "telegramOpening": "Telegram wird geöffnet…",
+    "ai": "KI-Erklärungen",
+    "premiumFeature": "Premium-Funktion",
+    "aiInExtension": "In der Erweiterung einrichten"
   },
   "legal": {
     "privacy": {

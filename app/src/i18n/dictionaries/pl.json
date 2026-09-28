@@ -268,7 +268,14 @@
     "manage": "Zarządzaj subskrypcją",
     "opening": "Otwieranie…",
     "error": "Coś poszło nie tak. Spróbuj ponownie lub skontaktuj się z pomocą.",
-    "settingsNote": "Synchronizacja ustawień z rozszerzeniem wkrótce."
+    "settingsNote": "Synchronizacja ustawień z rozszerzeniem wkrótce.",
+    "telegram": "Powiadomienia na Telegramie",
+    "telegramConnected": "Połączono",
+    "telegramConnect": "Połącz z Telegramem",
+    "telegramOpening": "Otwieranie Telegramu…",
+    "ai": "Wyjaśnienia AI",
+    "premiumFeature": "Funkcja Premium",
+    "aiInExtension": "Skonfiguruj w rozszerzeniu"
   },
   "legal": {
     "privacy": {

@@ -268,7 +268,14 @@
     "manage": "구독 관리",
     "opening": "여는 중…",
     "error": "문제가 발생했습니다. 다시 시도하거나 지원팀에 문의해 주세요.",
-    "settingsNote": "확장 프로그램과의 설정 동기화가 곧 제공될 예정입니다."
+    "settingsNote": "확장 프로그램과의 설정 동기화가 곧 제공될 예정입니다.",
+    "telegram": "Telegram 알림",
+    "telegramConnected": "연결됨",
+    "telegramConnect": "Telegram 연결",
+    "telegramOpening": "Telegram 여는 중…",
+    "ai": "AI 설명",
+    "premiumFeature": "Premium 기능",
+    "aiInExtension": "확장 프로그램에서 설정"
   },
   "legal": {
     "privacy": {

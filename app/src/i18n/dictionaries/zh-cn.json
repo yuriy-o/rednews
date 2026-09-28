@@ -268,7 +268,14 @@
     "manage": "管理订阅",
     "opening": "正在打开…",
     "error": "出了点问题，请重试或联系支持团队。",
-    "settingsNote": "与扩展程序的设置同步即将推出。"
+    "settingsNote": "与扩展程序的设置同步即将推出。",
+    "telegram": "Telegram 通知",
+    "telegramConnected": "已连接",
+    "telegramConnect": "连接 Telegram",
+    "telegramOpening": "正在打开 Telegram…",
+    "ai": "AI 解读",
+    "premiumFeature": "Premium 功能",
+    "aiInExtension": "在扩展程序中设置"
   },
   "legal": {
     "privacy": {

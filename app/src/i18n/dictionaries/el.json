@@ -268,7 +268,14 @@
     "manage": "Διαχείριση συνδρομής",
     "opening": "Άνοιγμα…",
     "error": "Κάτι πήγε στραβά. Δοκίμασε ξανά ή επικοινώνησε με την υποστήριξη.",
-    "settingsNote": "Ο συγχρονισμός ρυθμίσεων με την επέκταση έρχεται σύντομα."
+    "settingsNote": "Ο συγχρονισμός ρυθμίσεων με την επέκταση έρχεται σύντομα.",
+    "telegram": "Ειδοποιήσεις Telegram",
+    "telegramConnected": "Συνδέθηκε",
+    "telegramConnect": "Σύνδεση Telegram",
+    "telegramOpening": "Άνοιγμα Telegram…",
+    "ai": "Επεξηγήσεις AI",
+    "premiumFeature": "Λειτουργία Premium",
+    "aiInExtension": "Ρύθμισέ το στην επέκταση"
   },
   "legal": {
     "privacy": {

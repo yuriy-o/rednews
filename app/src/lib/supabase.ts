@@ -36,6 +36,11 @@ async function callFunction<T>(name: string, opts: { method?: string; query?: Re
   return body;
 }
 
+export interface TelegramStatus {
+  linked: boolean;
+  username: string | null;
+}
+
 export const accountApi = {
   entitlement: async (userId: string) => {
     const { data, error } = await supabase.from('entitlements').select('*').eq('user_id', userId).maybeSingle();
@@ -45,4 +50,7 @@ export const accountApi = {
   startTrial: () => callFunction<{ ok: true; plan: 'trial'; trial_ends_at: string }>('start-trial', { method: 'POST' }),
   checkoutUrl: (plan: 'monthly' | 'annual') => callFunction<{ url: string }>('paddle-checkout', { query: { plan } }),
   portalUrl: () => callFunction<{ url: string }>('paddle-portal', { method: 'POST' }),
+  telegramLinkToken: () => callFunction<{ url: string; token: string; expires_at: string }>('tg-link-token'),
+  // alert-prefs also returns notification prefs; the account page only needs connection status.
+  telegramStatus: () => callFunction<{ telegram: TelegramStatus }>('alert-prefs'),
 };
