@@ -279,123 +279,123 @@
   },
   "legal": {
     "privacy": {
-      "title": "Privacy Policy",
-      "updated": "Last updated: 19 September 2026",
-      "intro": "Red News – Economic Calendar for TradingView (\"the extension\") displays economic-calendar news from Forex Factory on TradingView charts. It offers a free tier that works without an account, and an optional Premium tier that requires signing in. This policy explains what data the extension processes.",
+      "title": "Datenschutzerklärung",
+      "updated": "Zuletzt aktualisiert: 19. September 2026",
+      "intro": "Red News – Economic Calendar for TradingView („die Erweiterung“) zeigt Nachrichten aus dem Wirtschaftskalender von Forex Factory auf TradingView-Charts an. Es gibt eine kostenlose Version, die ohne Konto funktioniert, sowie eine optionale Premium-Version, für die eine Anmeldung erforderlich ist. Diese Erklärung beschreibt, welche Daten die Erweiterung verarbeitet.",
       "sections": [
         {
-          "heading": "Data we collect",
+          "heading": "Welche Daten wir erheben",
           "blocks": [
             {
               "type": "p",
-              "text": "Free tier (no account): the extension does not collect names, credentials, browsing history, or advertising identifiers. It requests economic-calendar data through our own backend (see \"Our backend\" below); as with any network request, our backend receives your IP address in the normal course of delivering the response. We do not use this for advertising, profiling, or cross-site tracking, and we do not sell your data."
+              "text": "Kostenlose Version (ohne Konto): Die Erweiterung erhebt keine Namen, Zugangsdaten, Browserverlauf oder Werbekennungen. Sie fragt Daten des Wirtschaftskalenders über unser eigenes Backend ab (siehe „Unser Backend“ unten); wie bei jeder Netzwerkanfrage erhält unser Backend dabei im normalen Rahmen der Antwortzustellung Ihre IP-Adresse. Wir verwenden diese nicht für Werbung, Profilbildung oder Cross-Site-Tracking und verkaufen Ihre Daten nicht."
             },
             {
               "type": "p",
-              "text": "Premium tier (with account): if you choose to sign in, we collect and store:"
+              "text": "Premium-Version (mit Konto): Wenn Sie sich für eine Anmeldung entscheiden, erheben und speichern wir:"
             },
             {
               "type": "ul",
               "items": [
-                "your email address, name, and Google account identifier, obtained through Google sign-in, to create and identify your account and to show your name in the extension;",
-                "your subscription / entitlement status (free, trial, or premium);",
-                "a random per-installation identifier used to associate your installation with your account and to apply reasonable device limits."
+                "Ihre E-Mail-Adresse, Ihren Namen und Ihre Google-Kontokennung, die über die Google-Anmeldung erlangt werden, um Ihr Konto zu erstellen und zu identifizieren und um Ihren Namen in der Erweiterung anzuzeigen;",
+                "Ihren Abonnement-/Berechtigungsstatus (kostenlos, Testphase oder Premium);",
+                "eine zufällige, installationsbezogene Kennung, mit der Ihre Installation Ihrem Konto zugeordnet und angemessene Gerätelimits durchgesetzt werden."
               ]
             },
             {
               "type": "p",
-              "text": "We collect this only after you actively sign in, and only to provide the account and Premium functionality. You can stop this at any time by signing out."
+              "text": "Wir erheben diese Daten erst, nachdem Sie sich aktiv angemeldet haben, und ausschließlich, um die Konto- und Premium-Funktionen bereitzustellen. Sie können dies jederzeit beenden, indem Sie sich abmelden."
             }
           ]
         },
         {
-          "heading": "Our backend",
+          "heading": "Unser Backend",
           "blocks": [
             {
               "type": "p",
-              "text": "Economic-calendar data and subscription checks are served by our backend hosted on Supabase (authentication, database, and server functions). The extension communicates only with our backend and with TradingView; it does not contact Forex Factory directly. Our backend fetches the public Forex Factory calendar on the server side and returns it to the extension."
+              "text": "Daten des Wirtschaftskalenders und Abonnementprüfungen werden von unserem Backend bereitgestellt, das auf Supabase gehostet wird (Authentifizierung, Datenbank und Server-Funktionen). Die Erweiterung kommuniziert ausschließlich mit unserem Backend und mit TradingView; sie kontaktiert Forex Factory nicht direkt. Unser Backend ruft den öffentlichen Forex-Factory-Kalender serverseitig ab und übermittelt ihn an die Erweiterung."
             }
           ]
         },
         {
-          "heading": "What the extension accesses",
+          "heading": "Worauf die Erweiterung zugreift",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "TradingView chart pages (*.tradingview.com/chart/*): the extension reads the current chart symbol, timeframe, and timezone in order to draw the economic-news lines, labels, and tooltips on the chart. No other part of the site is accessed.",
-                "Our backend (hsoaqylcrmspyckkndab.supabase.co): the extension requests economic-calendar data and, if you are signed in, verifies your subscription status.",
-                "An AI provider of your choice (generativelanguage.googleapis.com, api.groq.com or openrouter.ai): only if you connect one with your own API key, and only to request an explanation of a release you asked about. These are optional permissions — the extension has no access to any of them until you press \"Connect\". See AI explanations below."
+                "TradingView-Chart-Seiten (*.tradingview.com/chart/*): Die Erweiterung liest das aktuelle Chart-Symbol, den Zeitrahmen und die Zeitzone aus, um die Linien, Beschriftungen und Tooltips der Wirtschaftsnachrichten auf dem Chart darzustellen. Kein anderer Teil der Website wird aufgerufen.",
+                "Unser Backend (hsoaqylcrmspyckkndab.supabase.co): Die Erweiterung fragt Daten des Wirtschaftskalenders ab und prüft, sofern Sie angemeldet sind, Ihren Abonnementstatus.",
+                "Ein KI-Anbieter Ihrer Wahl (generativelanguage.googleapis.com, api.groq.com oder openrouter.ai): nur wenn Sie einen solchen mit Ihrem eigenen API-Schlüssel verbinden, und nur um eine Erklärung zu einer von Ihnen ausgewählten Veröffentlichung anzufordern. Dies sind optionale Berechtigungen – die Erweiterung hat keinen Zugriff auf einen dieser Dienste, bis Sie auf „Verbinden“ klicken. Siehe „KI-Erklärungen“ unten."
               ]
             }
           ]
         },
         {
-          "heading": "Local storage",
+          "heading": "Lokale Speicherung",
           "blocks": [
             {
               "type": "p",
-              "text": "The extension uses your browser's local storage (chrome.storage.local) to save your settings (filters, labels, alerts, timezone, language, theme), a short-lived cache of the fetched calendar data, and, if you sign in, your session tokens and account/subscription status. If you connect an AI provider, it also stores your API key and a short-lived cache of the explanations you have already received. Signing out or uninstalling removes this local data; \"Remove key\" removes the AI entries immediately."
+              "text": "Die Erweiterung verwendet den lokalen Speicher Ihres Browsers (chrome.storage.local), um Ihre Einstellungen (Filter, Beschriftungen, Warnungen, Zeitzone, Sprache, Design), einen kurzlebigen Zwischenspeicher der abgerufenen Kalenderdaten sowie – falls Sie sich anmelden – Ihre Sitzungstoken und Ihren Konto-/Abonnementstatus zu speichern. Wenn Sie einen KI-Anbieter verbinden, speichert sie außerdem Ihren API-Schlüssel und einen kurzlebigen Zwischenspeicher der Erklärungen, die Sie bereits erhalten haben. Beim Abmelden oder Deinstallieren werden diese lokalen Daten entfernt; „Schlüssel entfernen“ löscht die KI-Einträge sofort."
             }
           ]
         },
         {
-          "heading": "Payments",
+          "heading": "Zahlungen",
           "blocks": [
             {
               "type": "p",
-              "text": "If you purchase Premium, payment is processed by Paddle, which acts as the merchant of record. Your card and billing details are entered on Paddle's secure checkout and are never received or stored by us. We only receive your resulting subscription status."
+              "text": "Wenn Sie Premium erwerben, wird die Zahlung von Paddle abgewickelt, das als Vertragshändler (merchant of record) auftritt. Ihre Karten- und Rechnungsdaten werden auf der sicheren Kaufabwicklungsseite von Paddle eingegeben und niemals von uns empfangen oder gespeichert. Wir erhalten lediglich den daraus resultierenden Abonnementstatus."
             }
           ]
         },
         {
-          "heading": "Notifications",
+          "heading": "Benachrichtigungen",
           "blocks": [
             {
               "type": "p",
-              "text": "With your permission, the extension shows an operating-system notification a chosen number of minutes before high-impact economic releases. Notifications are generated locally from calendar event times and are not used for messaging or marketing."
+              "text": "Mit Ihrer Erlaubnis zeigt die Erweiterung eine Benachrichtigung des Betriebssystems eine von Ihnen gewählte Anzahl von Minuten vor wichtigen Wirtschaftsveröffentlichungen an. Benachrichtigungen werden lokal aus den Zeitangaben der Kalenderereignisse erzeugt und nicht für Messaging oder Marketing verwendet."
             }
           ]
         },
         {
-          "heading": "Telegram alerts (optional, Premium)",
+          "heading": "Telegram-Warnungen (optional, Premium)",
           "blocks": [
             {
               "type": "p",
-              "text": "Premium users can connect a Telegram account to receive news alerts on their phone, including while their computer is off. This is entirely optional and off until you connect it. When you connect, we store on our backend your Telegram chat ID and username (supplied by Telegram when you start our bot), together with your alert preferences: impact levels, currencies, how many minutes ahead to warn you, your time zone, and any quiet hours. We use them for one purpose — deciding which alerts to send you and when — and messages are delivered through Telegram's own servers, so Telegram's privacy policy applies to their delivery. We keep a short record of which events were already sent to you so the same alert is not repeated; those records are deleted after about two days. You can disconnect at any time by blocking the bot in Telegram, and we delete the stored Telegram data when you delete your account."
+              "text": "Premium-Nutzer können ein Telegram-Konto verbinden, um Nachrichten-Warnungen auf ihrem Telefon zu erhalten, auch wenn ihr Computer ausgeschaltet ist. Dies ist vollständig optional und standardmäßig deaktiviert, bis Sie es verbinden. Beim Verbinden speichern wir auf unserem Backend Ihre Telegram-Chat-ID und Ihren Benutzernamen (die von Telegram beim Start unseres Bots bereitgestellt werden) sowie Ihre Warnungseinstellungen: Wirkungsgrade, Währungen, wie viele Minuten vorher Sie gewarnt werden möchten, Ihre Zeitzone und etwaige Ruhezeiten. Wir verwenden diese Daten zu einem einzigen Zweck – der Entscheidung, welche Warnungen wir Ihnen wann senden – und Nachrichten werden über die eigenen Server von Telegram zugestellt, sodass für deren Zustellung die Datenschutzerklärung von Telegram gilt. Wir führen eine kurze Aufzeichnung darüber, welche Ereignisse Ihnen bereits gesendet wurden, damit dieselbe Warnung nicht wiederholt wird; diese Aufzeichnungen werden nach etwa zwei Tagen gelöscht. Sie können die Verbindung jederzeit trennen, indem Sie den Bot in Telegram blockieren, und wir löschen die gespeicherten Telegram-Daten, wenn Sie Ihr Konto löschen."
             }
           ]
         },
         {
-          "heading": "AI explanations (optional, Premium, your own provider)",
+          "heading": "KI-Erklärungen (optional, Premium, eigener Anbieter)",
           "blocks": [
             {
               "type": "p",
-              "text": "Premium users can connect their own AI provider — Google Gemini, Groq or OpenRouter — and press ✨ next to a release to get a plain-language briefing. This is entirely optional and does nothing until you paste your own API key. A step-by-step guide is at [rednews.app/ai](https://rednews.app/ai)."
+              "text": "Premium-Nutzer können ihren eigenen KI-Anbieter verbinden – Google Gemini, Groq oder OpenRouter – und neben einer Veröffentlichung auf ✨ klicken, um eine verständliche Kurzerklärung zu erhalten. Dies ist vollständig optional und bewirkt nichts, solange Sie nicht Ihren eigenen API-Schlüssel einfügen. Eine Schritt-für-Schritt-Anleitung finden Sie unter [rednews.app/ai](https://rednews.app/ai)."
             },
             {
               "type": "p",
-              "text": "Your API key stays in your browser. It is kept in local storage on this computer, is never synchronised to other devices, and is never sent to our backend. \"Remove key\" deletes the key, deletes the cached answers, and withdraws the extension's permission to contact the provider."
+              "text": "Ihr API-Schlüssel bleibt in Ihrem Browser. Er wird im lokalen Speicher dieses Computers aufbewahrt, niemals mit anderen Geräten synchronisiert und niemals an unser Backend gesendet. „Schlüssel entfernen“ löscht den Schlüssel, löscht die zwischengespeicherten Antworten und widerruft die Berechtigung der Erweiterung, den Anbieter zu kontaktieren."
             },
             {
               "type": "p",
-              "text": "Requests go straight from your browser to the provider you chose. They do not pass through our servers. We cannot see what you asked or what the model answered."
+              "text": "Anfragen gehen direkt von Ihrem Browser an den von Ihnen gewählten Anbieter. Sie laufen nicht über unsere Server. Wir können nicht sehen, was Sie gefragt haben oder was das Modell geantwortet hat."
             },
             {
               "type": "p",
-              "text": "What is sent: the scheduled release itself — title, currency, impact level, scheduled time in UTC, and its forecast, previous and actual values — up to six earlier prints of that same release taken from the extension's own calendar history, and the language the answer should be written in. Your API key travels in the request's authorisation header, as the provider requires. Nothing else is included: no name or email, no account or subscription details, no chart symbol, no browsing history, and no text you type."
+              "text": "Was gesendet wird: die geplante Veröffentlichung selbst – Titel, Währung, Wirkungsgrad, geplanter Zeitpunkt in UTC sowie deren Prognose-, vorherige und tatsächliche Werte – bis zu sechs frühere Werte derselben Veröffentlichung aus dem eigenen Kalenderverlauf der Erweiterung sowie die Sprache, in der die Antwort verfasst sein soll. Ihr API-Schlüssel wird, wie vom Anbieter verlangt, im Autorisierungsheader der Anfrage übermittelt. Nichts anderes wird einbezogen: kein Name, keine E-Mail-Adresse, keine Konto- oder Abonnementdaten, kein Chart-Symbol, kein Browserverlauf und kein von Ihnen eingegebener Text."
             },
             {
               "type": "p",
-              "text": "The provider's own privacy policy governs what it does with that request. Providers differ: some state that they do not retain or train on API traffic by default, while others may use free-tier traffic to improve their products. The current position of each supported provider is summarised on the setup page, but you should read your provider's own terms."
+              "text": "Die eigene Datenschutzerklärung des Anbieters regelt, was dieser mit dieser Anfrage tut. Die Anbieter unterscheiden sich: Manche geben an, API-Datenverkehr standardmäßig nicht zu speichern oder für Training zu verwenden, während andere Datenverkehr aus kostenlosen Stufen zur Verbesserung ihrer Produkte nutzen können. Die aktuelle Position jedes unterstützten Anbieters ist auf der Einrichtungsseite zusammengefasst, Sie sollten jedoch die eigenen Bedingungen Ihres Anbieters lesen."
             },
             {
               "type": "p",
-              "text": "Answers are cached locally for up to seven days (at most sixty of them) so that reopening the same event does not spend your quota again. The cache never leaves your browser."
+              "text": "Antworten werden bis zu sieben Tage lang lokal zwischengespeichert (höchstens sechzig), damit das erneute Öffnen desselben Ereignisses nicht erneut Ihr Kontingent beansprucht. Der Zwischenspeicher verlässt niemals Ihren Browser."
             },
             {
               "type": "p",
-              "text": "Access is granted per provider, at the moment you connect. The three provider addresses are optional permissions: Chrome asks for your consent when you press \"Connect\", and until then the extension cannot reach any of them."
+              "text": "Der Zugriff wird pro Anbieter gewährt, und zwar im Moment, in dem Sie die Verbindung herstellen. Die drei Anbieteradressen sind optionale Berechtigungen: Chrome fragt Sie um Zustimmung, wenn Sie auf „Verbinden“ klicken, und bis dahin kann die Erweiterung keinen von ihnen erreichen."
             }
           ]
         },
@@ -404,270 +404,270 @@
           "blocks": [
             {
               "type": "p",
-              "text": "If you send feedback through the extension (\"Report a problem, idea, or partnership\"), the message you type, an optional email address, and basic non-personal context (the extension version, your browser, and your interface language) are sent through Web3Forms, a third-party form-delivery service, which forwards them to the developer by email. This happens only when you press Send."
+              "text": "Wenn Sie über die Erweiterung Feedback senden („Problem, Idee oder Partnerschaft melden“), werden die von Ihnen eingegebene Nachricht, eine optionale E-Mail-Adresse und grundlegender, nicht personenbezogener Kontext (Version der Erweiterung, Ihr Browser und Ihre Interface-Sprache) über Web3Forms übermittelt, einen Drittanbieter-Dienst zur Formularübermittlung, der diese per E-Mail an den Entwickler weiterleitet. Dies geschieht erst, wenn Sie auf „Senden“ klicken."
             }
           ]
         },
         {
-          "heading": "Third-party services",
+          "heading": "Dienste Dritter",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Supabase hosts our backend (authentication, database, server functions) that serves calendar data and stores your account/subscription status.",
-                "Google provides the sign-in through which we obtain your name, email, and account identifier.",
-                "Paddle processes Premium payments as merchant of record; card data never reaches us.",
-                "Forex Factory is the source of the public economic-calendar data, fetched by our backend.",
-                "Web3Forms delivers feedback you choose to send.",
-                "Telegram delivers the optional Premium alerts to users who connect our bot.",
-                "Google (Gemini API), Groq, OpenRouter are AI providers a Premium user may connect with their own API key. We hold no account or contract with them on your behalf; your browser talks to whichever one you chose, directly, and only for the explanations you request."
+                "Supabase hostet unser Backend (Authentifizierung, Datenbank, Server-Funktionen), das Kalenderdaten bereitstellt und Ihren Konto-/Abonnementstatus speichert.",
+                "Google stellt die Anmeldung bereit, über die wir Ihren Namen, Ihre E-Mail-Adresse und Ihre Kontokennung erhalten.",
+                "Paddle wickelt Premium-Zahlungen als Vertragshändler (merchant of record) ab; Kartendaten erreichen uns niemals.",
+                "Forex Factory ist die Quelle der öffentlichen Wirtschaftskalenderdaten, die von unserem Backend abgerufen werden.",
+                "Web3Forms übermittelt das Feedback, das Sie zu senden entscheiden.",
+                "Telegram stellt die optionalen Premium-Warnungen für Nutzer bereit, die unseren Bot verbinden.",
+                "Google (Gemini-API), Groq und OpenRouter sind KI-Anbieter, die ein Premium-Nutzer mit seinem eigenen API-Schlüssel verbinden kann. Wir haben in Ihrem Namen kein Konto und keinen Vertrag mit ihnen; Ihr Browser kommuniziert direkt mit dem von Ihnen gewählten Anbieter, und zwar nur für die von Ihnen angeforderten Erklärungen."
               ]
             },
             {
               "type": "p",
-              "text": "Each third party processes data subject to its own privacy policy."
+              "text": "Jeder Drittanbieter verarbeitet Daten gemäß seiner eigenen Datenschutzerklärung."
             }
           ]
         },
         {
-          "heading": "Your choices and rights",
+          "heading": "Ihre Wahlmöglichkeiten und Rechte",
           "blocks": [
             {
               "type": "p",
-              "text": "The free tier works without an account. If you have signed in, you can sign out at any time, and you may request deletion of your account data by contacting us (see \"Contact\"). Deleting your account removes your stored email, name, account identifier, and subscription record."
+              "text": "Die kostenlose Version funktioniert ohne Konto. Wenn Sie sich angemeldet haben, können Sie sich jederzeit abmelden und die Löschung Ihrer Kontodaten beantragen, indem Sie uns kontaktieren (siehe „Kontakt“). Die Löschung Ihres Kontos entfernt Ihre gespeicherte E-Mail-Adresse, Ihren Namen, Ihre Kontokennung und Ihren Abonnementdatensatz."
             }
           ]
         },
         {
-          "heading": "Changes",
+          "heading": "Änderungen",
           "blocks": [
             {
               "type": "p",
-              "text": "Any change that affects what data is collected or how it is processed will be reflected in an updated Privacy Policy before it takes effect. The \"Last updated\" date above will be revised."
+              "text": "Jede Änderung, die sich auf die Art der erhobenen Daten oder deren Verarbeitung auswirkt, wird vor ihrem Wirksamwerden in einer aktualisierten Datenschutzerklärung berücksichtigt. Das oben angegebene Datum „Zuletzt aktualisiert“ wird entsprechend angepasst."
             }
           ]
         },
         {
-          "heading": "Contact",
+          "heading": "Kontakt",
           "blocks": [
             {
               "type": "p",
-              "text": "For questions about this policy or to request account deletion, email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+              "text": "Bei Fragen zu dieser Datenschutzerklärung oder um die Löschung Ihres Kontos zu beantragen, senden Sie eine E-Mail an [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question) oder kontaktieren Sie uns über [Discord](https://discord.com/users/1172891214580830322)."
             }
           ]
         }
       ]
     },
     "terms": {
-      "title": "Terms of Service",
-      "updated": "Last updated: 9 August 2026",
-      "intro": "These Terms of Service (\"Terms\") govern your use of the Red News – Economic Calendar for TradingView browser extension, the website at rednews.app, and any related services (together, the \"Service\"), provided by the developer of Red News (\"we\", \"us\", \"our\"). By installing or using the Service, you agree to these Terms. If you do not agree, do not use the Service.",
+      "title": "Nutzungsbedingungen",
+      "updated": "Zuletzt aktualisiert: 9. August 2026",
+      "intro": "Diese Nutzungsbedingungen (die „Bedingungen“) regeln Ihre Nutzung der Browser-Erweiterung Red News – Economic Calendar for TradingView, der Website rednews.app sowie aller damit verbundenen Dienste (zusammen der „Dienst“), die vom Entwickler von Red News („wir“, „uns“, „unser“) bereitgestellt werden. Durch die Installation oder Nutzung des Dienstes stimmen Sie diesen Bedingungen zu. Wenn Sie nicht zustimmen, nutzen Sie den Dienst nicht.",
       "sections": [
         {
-          "heading": "1. The Service",
+          "heading": "1. Der Dienst",
           "blocks": [
             {
               "type": "p",
-              "text": "Red News is a browser extension that overlays scheduled economic-calendar events, sourced from the public Forex Factory calendar, onto TradingView chart pages. It draws event lines, shows event details, and can alert you before releases. Red News is an independent tool and is not affiliated with, endorsed by, or sponsored by TradingView or Forex Factory."
+              "text": "Red News ist eine Browser-Erweiterung, die geplante Ereignisse des Wirtschaftskalenders, die aus dem öffentlichen Forex-Factory-Kalender stammen, über TradingView-Chart-Seiten legt. Sie zeichnet Ereignislinien, zeigt Ereignisdetails an und kann Sie vor Veröffentlichungen warnen. Red News ist ein unabhängiges Tool und steht in keiner Verbindung zu TradingView oder Forex Factory, wird von diesen nicht unterstützt und nicht gesponsert."
             }
           ]
         },
         {
-          "heading": "2. Not financial advice",
+          "heading": "2. Keine Finanzberatung",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service displays informational data about scheduled economic events. It does not provide trading signals, investment recommendations, or financial advice, and nothing it shows should be relied upon as such. Economic data may be delayed, incomplete, or inaccurate. Trading and investing carry risk, including the loss of capital. You are solely responsible for your own trading decisions."
+              "text": "Der Dienst zeigt informative Daten zu geplanten Wirtschaftsereignissen an. Er bietet keine Handelssignale, Anlageempfehlungen oder Finanzberatung, und nichts, was er anzeigt, sollte als solche verstanden werden. Wirtschaftsdaten können verzögert, unvollständig oder ungenau sein. Handel und Investitionen sind mit Risiken verbunden, einschließlich des Verlusts von Kapital. Sie sind allein für Ihre eigenen Handelsentscheidungen verantwortlich."
             }
           ]
         },
         {
-          "heading": "3. Accounts",
+          "heading": "3. Konten",
           "blocks": [
             {
               "type": "p",
-              "text": "The free tier works without an account. To start a Premium trial or subscribe, you sign in with Google, which provides us your name, email address, and account identifier. You are responsible for maintaining the security of the Google account you use and for all activity under your Red News entitlement. You must be at least 18 years old, or the age of majority in your jurisdiction, to purchase Premium."
+              "text": "Die kostenlose Version funktioniert ohne Konto. Um eine Premium-Testphase zu starten oder ein Abonnement abzuschließen, melden Sie sich mit Google an, wodurch wir Ihren Namen, Ihre E-Mail-Adresse und Ihre Kontokennung erhalten. Sie sind für die Sicherheit des von Ihnen verwendeten Google-Kontos und für alle Aktivitäten im Rahmen Ihrer Red-News-Berechtigung verantwortlich. Sie müssen mindestens 18 Jahre alt sein oder das Volljährigkeitsalter in Ihrem Rechtsgebiet erreicht haben, um Premium zu erwerben."
             }
           ]
         },
         {
-          "heading": "4. Subscriptions, billing & trials",
+          "heading": "4. Abonnements, Abrechnung und Testphasen",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Free tier: the core extension is free to use.",
-                "Premium: available as a monthly (US$4.99) or annual (US$39) subscription. Prices are shown at checkout and may vary by region and applicable taxes.",
-                "Free trial: new users may start a 14-day Premium trial without a payment method. If you do not subscribe, the account simply reverts to the free tier when the trial ends. One trial per user.",
-                "Merchant of record: payments are processed by Paddle (Paddle.com Market Limited), which acts as the merchant of record for all purchases. Your purchase is also subject to Paddle's buyer terms. Card and billing details are entered on Paddle's checkout and are never received or stored by us.",
-                "Auto-renewal: paid subscriptions renew automatically at the end of each billing period until cancelled. By subscribing, you authorise recurring charges through Paddle.",
-                "Price changes: we may change subscription prices. Any change to your recurring price will be communicated in advance and will apply from your next renewal."
+                "Kostenlose Version: Die Kernfunktionen der Erweiterung sind kostenlos nutzbar.",
+                "Premium: verfügbar als monatliches (US$4.99) oder jährliches (US$39) Abonnement. Die Preise werden beim Bezahlvorgang angezeigt und können je nach Region und geltenden Steuern variieren.",
+                "Kostenlose Testphase: Neue Nutzer können eine 14-tägige Premium-Testphase ohne Zahlungsmethode starten. Wenn Sie kein Abonnement abschließen, wechselt das Konto nach Ablauf der Testphase einfach zur kostenlosen Version. Eine Testphase pro Nutzer.",
+                "Vertragshändler: Zahlungen werden von Paddle (Paddle.com Market Limited) abgewickelt, das für alle Käufe als Vertragshändler (merchant of record) auftritt. Für Ihren Kauf gelten zusätzlich die Käuferbedingungen von Paddle. Karten- und Rechnungsdaten werden im Bezahlvorgang von Paddle eingegeben und niemals von uns empfangen oder gespeichert.",
+                "Automatische Verlängerung: Kostenpflichtige Abonnements verlängern sich am Ende jedes Abrechnungszeitraums automatisch, bis sie gekündigt werden. Mit dem Abschluss eines Abonnements genehmigen Sie wiederkehrende Abbuchungen über Paddle.",
+                "Preisänderungen: Wir können die Abonnementpreise ändern. Jede Änderung Ihres wiederkehrenden Preises wird im Voraus mitgeteilt und gilt ab Ihrer nächsten Verlängerung."
               ]
             }
           ]
         },
         {
-          "heading": "5. Cancellation & refunds",
+          "heading": "5. Kündigung & Rückerstattungen",
           "blocks": [
             {
               "type": "p",
-              "text": "You can cancel at any time using the Manage subscription option in the extension. On cancellation you keep Premium access until the end of the period you have already paid for; it does not renew after that. Refunds are handled as described in our Refund Policy."
+              "text": "Sie können jederzeit über die Option „Abonnement verwalten“ in der Erweiterung kündigen. Nach der Kündigung behalten Sie den Premium-Zugang bis zum Ende des bereits bezahlten Zeitraums; danach verlängert er sich nicht mehr. Rückerstattungen werden gemäß unserer Rückerstattungsrichtlinie abgewickelt."
             }
           ]
         },
         {
-          "heading": "6. Acceptable use",
+          "heading": "6. Zulässige Nutzung",
           "blocks": [
             {
               "type": "p",
-              "text": "You agree not to:"
+              "text": "Sie verpflichten sich, Folgendes nicht zu tun:"
             },
             {
               "type": "ul",
               "items": [
-                "reverse engineer, decompile, or attempt to extract the source or server logic of the Service, except where permitted by law;",
-                "resell, sublicense, or redistribute the Service or the data it delivers;",
-                "circumvent entitlement checks, device limits, or use the Service without a valid entitlement;",
-                "use the Service to build a competing product, or to place undue load on our backend;",
-                "use the Service in any unlawful way or in violation of third-party rights."
+                "den Dienst zurückzuentwickeln (Reverse Engineering), zu dekompilieren oder zu versuchen, den Quellcode oder die Server-Logik des Dienstes zu extrahieren, außer soweit gesetzlich zulässig;",
+                "den Dienst oder die von ihm bereitgestellten Daten weiterzuverkaufen, unterzulizenzieren oder weiterzuverteilen;",
+                "Berechtigungsprüfungen oder Gerätelimits zu umgehen oder den Dienst ohne gültige Berechtigung zu nutzen;",
+                "den Dienst zu verwenden, um ein konkurrierendes Produkt zu entwickeln, oder unser Backend übermäßig zu belasten;",
+                "den Dienst auf rechtswidrige Weise oder unter Verletzung von Rechten Dritter zu nutzen."
               ]
             }
           ]
         },
         {
-          "heading": "7. Intellectual property",
+          "heading": "7. Geistiges Eigentum",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service, including its code, design, and branding, is owned by us and protected by applicable laws. We grant you a limited, non-exclusive, non-transferable, revocable licence to use the Service for your personal trading, subject to these Terms. Economic data originates from the public Forex Factory calendar and remains subject to any rights of its source. \"TradingView\" and \"Forex Factory\" are trademarks of their respective owners."
+              "text": "Der Dienst, einschließlich seines Codes, Designs und seiner Markenzeichen, gehört uns und ist durch geltendes Recht geschützt. Wir gewähren Ihnen eine beschränkte, nicht ausschließliche, nicht übertragbare, widerrufbare Lizenz zur Nutzung des Dienstes für Ihren persönlichen Handel, vorbehaltlich dieser Bedingungen. Wirtschaftsdaten stammen aus dem öffentlichen Forex-Factory-Kalender und unterliegen weiterhin etwaigen Rechten ihrer Quelle. „TradingView“ und „Forex Factory“ sind Marken ihrer jeweiligen Inhaber."
             }
           ]
         },
         {
-          "heading": "8. Third-party services",
+          "heading": "8. Dienste Dritter",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service relies on third parties including TradingView (the host page), Forex Factory (data source), Supabase (backend and authentication), Google (sign-in), and Paddle (payments). We are not responsible for the availability, content, or practices of these third parties, and your use of them is subject to their own terms."
+              "text": "Der Dienst stützt sich auf Dritte, darunter TradingView (die Host-Seite), Forex Factory (Datenquelle), Supabase (Backend und Authentifizierung), Google (Anmeldung) und Paddle (Zahlungen). Wir sind nicht verantwortlich für die Verfügbarkeit, den Inhalt oder die Praktiken dieser Dritten, und Ihre Nutzung unterliegt deren eigenen Bedingungen."
             }
           ]
         },
         {
-          "heading": "9. Disclaimers",
+          "heading": "9. Haftungsausschlüsse",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service is provided \"as is\" and \"as available\", without warranties of any kind, whether express or implied, including fitness for a particular purpose, accuracy, or uninterrupted availability. We do not warrant that event data will be timely, complete, or error-free, or that the Service will always function with TradingView."
+              "text": "Der Dienst wird „wie besehen“ und „wie verfügbar“ bereitgestellt, ohne jegliche ausdrückliche oder stillschweigende Gewährleistung, einschließlich der Eignung für einen bestimmten Zweck, der Genauigkeit oder der unterbrechungsfreien Verfügbarkeit. Wir gewährleisten nicht, dass Ereignisdaten rechtzeitig, vollständig oder fehlerfrei sind oder dass der Dienst stets mit TradingView funktioniert."
             }
           ]
         },
         {
-          "heading": "10. Limitation of liability",
+          "heading": "10. Haftungsbeschränkung",
           "blocks": [
             {
               "type": "p",
-              "text": "To the maximum extent permitted by law, we will not be liable for any indirect, incidental, special, or consequential damages, or for any trading losses, lost profits, or lost data, arising from your use of or inability to use the Service. Our total liability for any claim relating to the Service will not exceed the amount you paid us for the Service in the twelve months preceding the claim."
+              "text": "Soweit gesetzlich zulässig, haften wir nicht für indirekte, beiläufige, besondere oder Folgeschäden oder für Handelsverluste, entgangenen Gewinn oder Datenverlust, die aus der Nutzung oder der Unmöglichkeit der Nutzung des Dienstes entstehen. Unsere Gesamthaftung für Ansprüche im Zusammenhang mit dem Dienst übersteigt nicht den Betrag, den Sie uns in den zwölf Monaten vor dem Anspruch für den Dienst gezahlt haben."
             }
           ]
         },
         {
-          "heading": "11. Termination",
+          "heading": "11. Beendigung",
           "blocks": [
             {
               "type": "p",
-              "text": "You may stop using the Service at any time by uninstalling the extension and, if applicable, cancelling your subscription. We may suspend or terminate access if you breach these Terms or misuse the Service. You may request deletion of your account data as described in our Privacy Policy."
+              "text": "Sie können die Nutzung des Dienstes jederzeit beenden, indem Sie die Erweiterung deinstallieren und, falls zutreffend, Ihr Abonnement kündigen. Wir können den Zugang aussetzen oder beenden, wenn Sie gegen diese Bedingungen verstoßen oder den Dienst missbrauchen. Sie können die Löschung Ihrer Kontodaten beantragen, wie in unserer Datenschutzerklärung beschrieben."
             }
           ]
         },
         {
-          "heading": "12. Changes to these Terms",
+          "heading": "12. Änderungen dieser Bedingungen",
           "blocks": [
             {
               "type": "p",
-              "text": "We may update these Terms from time to time. Material changes will be reflected here with a revised \"Last updated\" date. Continued use of the Service after changes take effect constitutes acceptance of the updated Terms."
+              "text": "Wir können diese Bedingungen von Zeit zu Zeit aktualisieren. Wesentliche Änderungen werden hier mit einem aktualisierten Datum „Zuletzt aktualisiert“ ausgewiesen. Die fortgesetzte Nutzung des Dienstes nach Inkrafttreten von Änderungen gilt als Annahme der aktualisierten Bedingungen."
             }
           ]
         },
         {
-          "heading": "13. Governing law",
+          "heading": "13. Anwendbares Recht",
           "blocks": [
             {
               "type": "p",
-              "text": "These Terms are governed by the laws of Ukraine, without regard to conflict-of-law rules, except where mandatory consumer-protection laws of your country of residence apply. Purchases are additionally subject to the terms of Paddle as merchant of record."
+              "text": "Diese Bedingungen unterliegen dem Recht der Ukraine, ohne Rücksicht auf Kollisionsnormen, außer soweit zwingende verbraucherschutzrechtliche Vorschriften Ihres Wohnsitzlandes Anwendung finden. Für Käufe gelten zusätzlich die Bedingungen von Paddle als Vertragshändler."
             }
           ]
         },
         {
-          "heading": "14. Contact",
+          "heading": "14. Kontakt",
           "blocks": [
             {
               "type": "p",
-              "text": "Questions about these Terms? Email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+              "text": "Fragen zu diesen Bedingungen? Senden Sie eine E-Mail an [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question) oder kontaktieren Sie uns über [Discord](https://discord.com/users/1172891214580830322)."
             }
           ]
         }
       ]
     },
     "refund": {
-      "title": "Refund Policy",
-      "updated": "Last updated: 9 August 2026",
-      "intro": "We want you to be happy with Red News Premium. This policy explains how trials, cancellations, and refunds work. Payments are processed by Paddle, our merchant of record, so refunds are issued through Paddle to your original payment method.",
+      "title": "Rückerstattungsrichtlinie",
+      "updated": "Zuletzt aktualisiert: 9. August 2026",
+      "intro": "Wir möchten, dass Sie mit Red News Premium zufrieden sind. Diese Richtlinie erläutert, wie Testphasen, Kündigungen und Rückerstattungen funktionieren. Zahlungen werden von Paddle, unserem Vertragshändler (merchant of record), abgewickelt, sodass Rückerstattungen über Paddle auf Ihre ursprüngliche Zahlungsmethode erfolgen.",
       "sections": [
         {
-          "heading": "Try before you pay",
+          "heading": "Testen, bevor Sie zahlen",
           "blocks": [
             {
               "type": "p",
-              "text": "Every new user can start a 14-day Premium trial with no payment method required. The trial is long enough to span a major economic release, so you can fully evaluate Premium before you are ever charged. We encourage you to use it."
+              "text": "Jeder neue Nutzer kann eine 14-tägige Premium-Testphase starten, ohne dass eine Zahlungsmethode erforderlich ist. Die Testphase ist lang genug, um eine wichtige Wirtschaftsveröffentlichung zu umfassen, sodass Sie Premium vollständig bewerten können, bevor Ihnen jemals etwas berechnet wird. Wir empfehlen Ihnen, sie zu nutzen."
             }
           ]
         },
         {
-          "heading": "14-day money-back guarantee",
+          "heading": "14-tägige Geld-zurück-Garantie",
           "blocks": [
             {
               "type": "p",
-              "text": "If you subscribe and change your mind, you can request a full refund within 14 days of your first payment, no questions asked. This applies to the initial charge on a monthly or annual plan."
+              "text": "Wenn Sie ein Abonnement abschließen und Ihre Meinung ändern, können Sie innerhalb von 14 Tagen nach Ihrer ersten Zahlung ohne Angabe von Gründen eine vollständige Rückerstattung verlangen. Dies gilt für die erste Abbuchung eines monatlichen oder jährlichen Plans."
             }
           ]
         },
         {
-          "heading": "Renewals",
+          "heading": "Verlängerungen",
           "blocks": [
             {
               "type": "p",
-              "text": "Subscriptions renew automatically. To avoid a renewal charge, cancel before your renewal date using the Manage subscription button in the extension. After cancellation you keep Premium until the end of the period you have already paid for. Renewal charges are generally non-refundable, but if you were charged for a renewal you did not intend to keep and reach out promptly, contact us. We review these case by case and aim to be fair."
+              "text": "Abonnements verlängern sich automatisch. Um eine Verlängerungsgebühr zu vermeiden, kündigen Sie vor Ihrem Verlängerungsdatum über die Schaltfläche „Abonnement verwalten“ in der Erweiterung. Nach der Kündigung behalten Sie Premium bis zum Ende des bereits bezahlten Zeitraums. Verlängerungsgebühren sind im Allgemeinen nicht erstattungsfähig, aber wenn Ihnen eine Verlängerung berechnet wurde, die Sie nicht beibehalten wollten, und Sie sich umgehend melden, kontaktieren Sie uns. Wir prüfen dies von Fall zu Fall und bemühen uns um Fairness."
             }
           ]
         },
         {
-          "heading": "How to request a refund",
+          "heading": "So beantragen Sie eine Rückerstattung",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Reply to the Paddle receipt email you received for the purchase, or",
-                "email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request) with the email address used at checkout, or",
-                "reach us on [Discord](https://discord.com/users/1172891214580830322)."
+                "Antworten Sie auf die Paddle-Quittungs-E-Mail, die Sie für den Kauf erhalten haben, oder",
+                "senden Sie eine E-Mail an [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request) mit der beim Bezahlvorgang verwendeten E-Mail-Adresse, oder",
+                "kontaktieren Sie uns über [Discord](https://discord.com/users/1172891214580830322)."
               ]
             },
             {
               "type": "p",
-              "text": "Approved refunds are processed by Paddle back to your original payment method, typically within 5 to 10 business days depending on your bank or card provider."
+              "text": "Genehmigte Rückerstattungen werden von Paddle auf Ihre ursprüngliche Zahlungsmethode zurückverarbeitet, in der Regel innerhalb von 5 bis 10 Werktagen, abhängig von Ihrer Bank oder Ihrem Kartenanbieter."
             }
           ]
         },
         {
-          "heading": "Statutory rights",
+          "heading": "Gesetzliche Rechte",
           "blocks": [
             {
               "type": "p",
-              "text": "Nothing in this policy limits any refund or cancellation rights you may have under the consumer-protection laws of your country of residence, or under Paddle's own buyer terms as merchant of record."
+              "text": "Diese Richtlinie schränkt keine Rückerstattungs- oder Kündigungsrechte ein, die Ihnen möglicherweise nach den verbraucherschutzrechtlichen Vorschriften Ihres Wohnsitzlandes oder nach den eigenen Käuferbedingungen von Paddle als Vertragshändler zustehen."
             }
           ]
         }
       ],
-      "closing": "Questions before you buy? We're happy to help: email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing) or message us on [Discord](https://discord.com/users/1172891214580830322)."
+      "closing": "Fragen vor dem Kauf? Wir helfen gerne: Senden Sie eine E-Mail an [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing) oder schreiben Sie uns über [Discord](https://discord.com/users/1172891214580830322)."
     }
   },
   "notFound": {
