@@ -9,6 +9,6 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function PrivacyPage() {
-  const dict = await getDictionary();
-  return <LegalPage content={dict.legal.privacy} />;
+  const [locale, dict] = await Promise.all([getLocale(), getDictionary()]);
+  return <LegalPage content={dict.legal.privacy} locale={locale} />;
 }

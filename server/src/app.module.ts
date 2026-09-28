@@ -1,11 +1,16 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { AuthModule } from './auth/auth.module';
 import { CalendarModule } from './calendar/calendar.module';
-import { UserModule } from './user/user.module';
 import { PrismaModule } from './common/prisma/prisma.module';
 import { HealthController } from './health.controller';
 
+// AuthModule and UserModule are intentionally NOT wired in: they were an unused,
+// insecure (unverified Google ID token) auth stack — see AUDIT.md §1.1. Real
+// auth/entitlements for both the extension and the site run on Supabase, not this
+// API. The source under src/auth and src/user is disconnected here (unreachable —
+// Nest never registers their controllers) pending a decision on physically
+// deleting those files and their Prisma models (User/UserSettings/Subscription/
+// Alert/ActivityLog); that step needs a separate explicit go-ahead.
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -16,9 +21,7 @@ import { HealthController } from './health.controller';
       expandVariables: true,
     }),
     PrismaModule,
-    AuthModule,
     CalendarModule,
-    UserModule,
   ],
   controllers: [HealthController],
   providers: [],

@@ -1,4 +1,6 @@
 import type { ReactNode } from 'react';
+import type { Locale } from '@/i18n/config';
+import { localeDir } from '@/i18n/config';
 
 interface LegalBlock {
   // Sourced from en.json: TypeScript's JSON module inference widens this to `string`, not the
@@ -47,12 +49,11 @@ function renderInline(text: string): ReactNode[] {
   return parts;
 }
 
-export function LegalPage({ content }: { content: LegalContent }) {
+export function LegalPage({ content, locale }: { content: LegalContent; locale: Locale }) {
   return (
-    // dir="ltr": this content is untranslated English in every locale (see dictionaries.ts), so it
-    // needs to render left-to-right even on an ar/ur page — the document's dir="rtl" would
-    // otherwise right-align genuinely-English prose and move list bullets to the wrong side.
-    <div className="container page legal" dir="ltr">
+    // Now genuinely translated per locale (see dictionaries/*.json), so it follows the
+    // locale's own direction — rtl for ar/ur — instead of a hardcoded ltr.
+    <div className="container page legal" dir={localeDir(locale)}>
       <h1 className="h2">{content.title}</h1>
       <p className="legal__updated data">{content.updated}</p>
       <p className="lead">{content.intro}</p>
