@@ -18,6 +18,11 @@ const dictionaries: Partial<Record<Locale, () => Promise<Dictionary>>> = {
   nl: () => import('./dictionaries/nl.json').then((m) => m.default),
   pl: () => import('./dictionaries/pl.json').then((m) => m.default),
   sk: () => import('./dictionaries/sk.json').then((m) => m.default),
+  el: () => import('./dictionaries/el.json').then((m) => m.default),
+  vi: () => import('./dictionaries/vi.json').then((m) => m.default),
+  id: () => import('./dictionaries/id.json').then((m) => m.default),
+  ms: () => import('./dictionaries/ms.json').then((m) => m.default),
+  tr: () => import('./dictionaries/tr.json').then((m) => m.default),
 };
 
 /** Current route's locale (from the `[lang]` root segment); 404 for unknown/disabled ones. */
