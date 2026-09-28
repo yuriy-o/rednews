@@ -49,7 +49,10 @@ function renderInline(text: string): ReactNode[] {
 
 export function LegalPage({ content }: { content: LegalContent }) {
   return (
-    <div className="container page legal">
+    // dir="ltr": this content is untranslated English in every locale (see dictionaries.ts), so it
+    // needs to render left-to-right even on an ar/ur page — the document's dir="rtl" would
+    // otherwise right-align genuinely-English prose and move list bullets to the wrong side.
+    <div className="container page legal" dir="ltr">
       <h1 className="h2">{content.title}</h1>
       <p className="legal__updated data">{content.updated}</p>
       <p className="lead">{content.intro}</p>

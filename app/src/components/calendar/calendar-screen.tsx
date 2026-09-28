@@ -100,7 +100,9 @@ export async function CalendarScreen({ locale, dict, week }: Props) {
             {ws === current && <span className={styles.thisWeek}>{t.thisWeek}</span>}
           </p>
         </div>
-        <nav className={styles.nav} aria-label={t.weekNav}>
+        {/* dir="ltr": time runs left to right site-wide (see WeekChart) — without this, RTL's
+            automatic row-mirroring would put the "next week" arrow physically on the left. */}
+        <nav className={styles.nav} aria-label={t.weekNav} dir="ltr">
           {prevNav.show ? (
             <WeekArrow href={weekHref(locale, prev, current)} label={t.prevWeek} premium={prevNav.premium} premiumNote={t.premiumRange} dir="prev" />
           ) : (

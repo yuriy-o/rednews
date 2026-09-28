@@ -469,6 +469,12 @@ html {
 [dir='rtl'] .text-link svg {
   scale: -1 1;
 }
+/* translate() runs in the page's own axes regardless of the scale() mirror above, so the hover
+   nudge needs its own sign flip too — otherwise the now-left-pointing arrow slides right on
+   hover, away from where it points. */
+[dir='rtl'] .text-link:hover svg {
+  translate: -3px 0;
+}
 
 /* Home */
 .hero {
