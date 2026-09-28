@@ -15,6 +15,15 @@
 .signIn {
   margin-block-start: 20px;
 }
+/* Email + sign-out share a row so it reads as "your Google session", distinct from the
+   Telegram/AI connections below — signing out only ends this session, not those. */
+.identity {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
 .email {
   color: var(--fg-muted);
 }
@@ -44,9 +53,6 @@
   margin-block-start: 16px;
   color: var(--worse);
   font-size: 0.9375rem;
-}
-.signOut {
-  margin-block-start: 24px;
 }
 .connections {
   margin-block-start: 32px;

@@ -208,7 +208,12 @@ export function AccountScreen({ locale, t }: Props) {
 
   return (
     <div className={styles.panel}>
-      <p className={`data ${styles.email}`}>{session!.user.email}</p>
+      <div className={styles.identity}>
+        <p className={`data ${styles.email}`}>{session!.user.email}</p>
+        <button className="button button--sm" onClick={signOut} disabled={busy === 'signout'}>
+          {t.signOut}
+        </button>
+      </div>
       <p className={styles.plan} data-premium={plan !== 'free' || undefined}>
         {planLabel}
       </p>
@@ -267,10 +272,6 @@ export function AccountScreen({ locale, t }: Props) {
         />
         <ConnectionRow label={t.ai} value={isPremiumPlan ? t.aiInExtension : t.premiumFeature} />
       </div>
-
-      <button className={`button button--sm ${styles.signOut}`} onClick={signOut} disabled={busy === 'signout'}>
-        {t.signOut}
-      </button>
     </div>
   );
 }
