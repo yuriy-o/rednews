@@ -242,7 +242,7 @@
       },
       {
         "q": "اگر میں مطمئن نہ ہوا تو؟",
-        "a": "اگر آپ نے مہینے یا سال کے لیے ادائیگی کی ہے تو ہم 30 دن کی رقم کی واپسی کی مدت پیش کرتے ہیں۔ تفصیلات کے لیے ہمارا رقم کی واپسی کا صفحہ دیکھیں۔"
+        "a": "اگر آپ نے مہینے یا سال کے لیے ادائیگی کی ہے تو ہم 14 دن کی رقم کی واپسی کی مدت پیش کرتے ہیں۔ تفصیلات کے لیے ہمارا رقم کی واپسی کا صفحہ دیکھیں۔"
       }
     ]
   },
@@ -279,395 +279,395 @@
   },
   "legal": {
     "privacy": {
-      "title": "Privacy Policy",
-      "updated": "Last updated: 19 September 2026",
-      "intro": "Red News – Economic Calendar for TradingView (\"the extension\") displays economic-calendar news from Forex Factory on TradingView charts. It offers a free tier that works without an account, and an optional Premium tier that requires signing in. This policy explains what data the extension processes.",
+      "title": "پرائیویسی پالیسی",
+      "updated": "آخری تجدید: 19 ستمبر 2026",
+      "intro": "Red News – Economic Calendar for TradingView (\"ایکسٹینشن\") TradingView کے چارٹس پر Forex Factory کے اکنامک کیلنڈر کی خبریں دکھاتا ہے۔ یہ ایک فری ٹیئر پیش کرتا ہے جو بغیر اکاؤنٹ کے کام کرتا ہے، اور ایک اختیاری Premium ٹیئر جس کے لیے سائن اِن ضروری ہے۔ یہ پالیسی وضاحت کرتی ہے کہ ایکسٹینشن کون سا ڈیٹا پراسیس کرتا ہے۔",
       "sections": [
         {
-          "heading": "Data we collect",
+          "heading": "وہ ڈیٹا جو ہم جمع کرتے ہیں",
           "blocks": [
             {
               "type": "p",
-              "text": "Free tier (no account): the extension does not collect names, credentials, browsing history, or advertising identifiers. It requests economic-calendar data through our own backend (see \"Our backend\" below); as with any network request, our backend receives your IP address in the normal course of delivering the response. We do not use this for advertising, profiling, or cross-site tracking, and we do not sell your data."
+              "text": "فری ٹیئر (بغیر اکاؤنٹ کے): ایکسٹینشن نام، کریڈینشلز، براؤزنگ ہسٹری، یا ایڈورٹائزنگ آئیڈینٹیفائرز جمع نہیں کرتا۔ یہ ہمارے اپنے بیک اینڈ کے ذریعے اکنامک کیلنڈر ڈیٹا کی درخواست کرتا ہے (نیچے \"ہمارا بیک اینڈ\" دیکھیں)؛ جیسا کہ کسی بھی نیٹ ورک ریکویسٹ کی صورت میں ہوتا ہے، ہمارا بیک اینڈ جواب پہنچانے کے معمول کے عمل میں آپ کا IP ایڈریس وصول کرتا ہے۔ ہم اسے اشتہارات، پروفائلنگ، یا کراس سائٹ ٹریکنگ کے لیے استعمال نہیں کرتے، اور نہ ہی آپ کا ڈیٹا فروخت کرتے ہیں۔"
             },
             {
               "type": "p",
-              "text": "Premium tier (with account): if you choose to sign in, we collect and store:"
+              "text": "Premium ٹیئر (اکاؤنٹ کے ساتھ): اگر آپ سائن اِن کرنے کا انتخاب کرتے ہیں، تو ہم درج ذیل جمع اور محفوظ کرتے ہیں:"
             },
             {
               "type": "ul",
               "items": [
-                "your email address, name, and Google account identifier, obtained through Google sign-in, to create and identify your account and to show your name in the extension;",
-                "your subscription / entitlement status (free, trial, or premium);",
-                "a random per-installation identifier used to associate your installation with your account and to apply reasonable device limits."
+                "آپ کا ای میل ایڈریس، نام، اور Google اکاؤنٹ آئیڈینٹیفائر، جو Google سائن اِن کے ذریعے حاصل کیا جاتا ہے، تاکہ آپ کا اکاؤنٹ بنایا اور شناخت کیا جا سکے اور ایکسٹینشن میں آپ کا نام دکھایا جا سکے؛",
+                "آپ کی سبسکرپشن / انٹائٹلمنٹ کی حیثیت (فری، ٹرائل، یا پریمیم)؛",
+                "ہر انسٹالیشن کے لیے ایک منفرد رینڈم آئیڈینٹیفائر، جو آپ کی انسٹالیشن کو آپ کے اکاؤنٹ سے جوڑنے اور آلات کی معقول حد نافذ کرنے کے لیے استعمال ہوتا ہے۔"
               ]
             },
             {
               "type": "p",
-              "text": "We collect this only after you actively sign in, and only to provide the account and Premium functionality. You can stop this at any time by signing out."
+              "text": "ہم یہ ڈیٹا صرف اس وقت جمع کرتے ہیں جب آپ خود سائن اِن کرتے ہیں، اور صرف اکاؤنٹ اور Premium فعالیت فراہم کرنے کے لیے۔ آپ کسی بھی وقت سائن آؤٹ کر کے اسے روک سکتے ہیں۔"
             }
           ]
         },
         {
-          "heading": "Our backend",
+          "heading": "ہمارا بیک اینڈ",
           "blocks": [
             {
               "type": "p",
-              "text": "Economic-calendar data and subscription checks are served by our backend hosted on Supabase (authentication, database, and server functions). The extension communicates only with our backend and with TradingView; it does not contact Forex Factory directly. Our backend fetches the public Forex Factory calendar on the server side and returns it to the extension."
+              "text": "اکنامک کیلنڈر ڈیٹا اور سبسکرپشن چیکس ہمارے اس بیک اینڈ کے ذریعے فراہم کیے جاتے ہیں جو Supabase پر میزبانی کیا گیا ہے (آتھینٹیکیشن، ڈیٹابیس، اور سرور فنکشنز)۔ ایکسٹینشن صرف ہمارے بیک اینڈ اور TradingView سے رابطہ کرتا ہے؛ یہ Forex Factory سے براہ راست رابطہ نہیں کرتا۔ ہمارا بیک اینڈ عوامی Forex Factory کیلنڈر سرور کی جانب سے حاصل کرتا ہے اور اسے ایکسٹینشن کو واپس بھیجتا ہے۔"
             }
           ]
         },
         {
-          "heading": "What the extension accesses",
+          "heading": "ایکسٹینشن کیا رسائی حاصل کرتا ہے",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "TradingView chart pages (*.tradingview.com/chart/*): the extension reads the current chart symbol, timeframe, and timezone in order to draw the economic-news lines, labels, and tooltips on the chart. No other part of the site is accessed.",
-                "Our backend (hsoaqylcrmspyckkndab.supabase.co): the extension requests economic-calendar data and, if you are signed in, verifies your subscription status.",
-                "An AI provider of your choice (generativelanguage.googleapis.com, api.groq.com or openrouter.ai): only if you connect one with your own API key, and only to request an explanation of a release you asked about. These are optional permissions — the extension has no access to any of them until you press \"Connect\". See AI explanations below."
+                "TradingView چارٹ صفحات (*.tradingview.com/chart/*): ایکسٹینشن چارٹ پر اکنامک نیوز لائنز، لیبلز، اور ٹول ٹپس بنانے کے لیے موجودہ چارٹ سمبل، ٹائم فریم، اور ٹائم زون پڑھتا ہے۔ سائٹ کے کسی اور حصے تک رسائی حاصل نہیں کی جاتی۔",
+                "ہمارا بیک اینڈ (hsoaqylcrmspyckkndab.supabase.co): ایکسٹینشن اکنامک کیلنڈر ڈیٹا کی درخواست کرتا ہے، اور اگر آپ سائن اِن ہیں تو آپ کی سبسکرپشن کی حیثیت کی تصدیق کرتا ہے۔",
+                "آپ کی پسند کا کوئی AI فراہم کنندہ (generativelanguage.googleapis.com، api.groq.com، یا openrouter.ai): صرف اس صورت میں جب آپ اپنی API کلید کے ساتھ اسے کنیکٹ کریں، اور صرف اس ریلیز کی وضاحت طلب کرنے کے لیے جس کے بارے میں آپ نے پوچھا ہے۔ یہ اختیاری اجازتیں ہیں — جب تک آپ \"Connect\" نہیں دباتے، ایکسٹینشن کو ان میں سے کسی تک رسائی حاصل نہیں ہوتی۔ نیچے AI وضاحتیں دیکھیں۔"
               ]
             }
           ]
         },
         {
-          "heading": "Local storage",
+          "heading": "لوکل اسٹوریج",
           "blocks": [
             {
               "type": "p",
-              "text": "The extension uses your browser's local storage (chrome.storage.local) to save your settings (filters, labels, alerts, timezone, language, theme), a short-lived cache of the fetched calendar data, and, if you sign in, your session tokens and account/subscription status. If you connect an AI provider, it also stores your API key and a short-lived cache of the explanations you have already received. Signing out or uninstalling removes this local data; \"Remove key\" removes the AI entries immediately."
+              "text": "ایکسٹینشن آپ کی سیٹنگز (فلٹرز، لیبلز، الرٹس، ٹائم زون، زبان، تھیم) کو محفوظ کرنے، حاصل کردہ کیلنڈر ڈیٹا کا ایک قلیل مدتی کیشے رکھنے، اور اگر آپ سائن اِن ہیں تو آپ کے سیشن ٹوکنز اور اکاؤنٹ/سبسکرپشن کی حیثیت کو محفوظ کرنے کے لیے آپ کے براؤزر کے لوکل اسٹوریج (chrome.storage.local) کا استعمال کرتا ہے۔ اگر آپ کوئی AI فراہم کنندہ کنیکٹ کرتے ہیں، تو یہ آپ کی API کلید اور آپ کو مل چکی وضاحتوں کا ایک قلیل مدتی کیشے بھی محفوظ کرتا ہے۔ سائن آؤٹ کرنے یا ایکسٹینشن ان انسٹال کرنے سے یہ لوکل ڈیٹا حذف ہو جاتا ہے؛ \"Remove key\" فوری طور پر AI سے متعلق اندراجات حذف کر دیتا ہے۔"
             }
           ]
         },
         {
-          "heading": "Payments",
+          "heading": "ادائیگیاں",
           "blocks": [
             {
               "type": "p",
-              "text": "If you purchase Premium, payment is processed by Paddle, which acts as the merchant of record. Your card and billing details are entered on Paddle's secure checkout and are never received or stored by us. We only receive your resulting subscription status."
+              "text": "اگر آپ Premium خریدتے ہیں، تو ادائیگی Paddle کے ذریعے پراسیس کی جاتی ہے، جو مرچنٹ آف ریکارڈ کے طور پر کام کرتا ہے۔ آپ کے کارڈ اور بلنگ کی تفصیلات Paddle کے محفوظ چیک آؤٹ پر درج کی جاتی ہیں اور یہ کبھی بھی ہمیں موصول یا ہمارے پاس محفوظ نہیں ہوتیں۔ ہمیں صرف آپ کی نتیجاتی سبسکرپشن حیثیت موصول ہوتی ہے۔"
             }
           ]
         },
         {
-          "heading": "Notifications",
+          "heading": "نوٹیفیکیشنز",
           "blocks": [
             {
               "type": "p",
-              "text": "With your permission, the extension shows an operating-system notification a chosen number of minutes before high-impact economic releases. Notifications are generated locally from calendar event times and are not used for messaging or marketing."
+              "text": "آپ کی اجازت سے، ایکسٹینشن اعلیٰ اثر والی اکنامک ریلیزز سے آپ کے منتخب کردہ منٹوں پہلے آپریٹنگ سسٹم کا نوٹیفیکیشن دکھاتا ہے۔ نوٹیفیکیشنز کیلنڈر ایونٹ کے اوقات سے مقامی طور پر تیار کیے جاتے ہیں اور انہیں میسجنگ یا مارکیٹنگ کے لیے استعمال نہیں کیا جاتا۔"
             }
           ]
         },
         {
-          "heading": "Telegram alerts (optional, Premium)",
+          "heading": "Telegram الرٹس (اختیاری، Premium)",
           "blocks": [
             {
               "type": "p",
-              "text": "Premium users can connect a Telegram account to receive news alerts on their phone, including while their computer is off. This is entirely optional and off until you connect it. When you connect, we store on our backend your Telegram chat ID and username (supplied by Telegram when you start our bot), together with your alert preferences: impact levels, currencies, how many minutes ahead to warn you, your time zone, and any quiet hours. We use them for one purpose — deciding which alerts to send you and when — and messages are delivered through Telegram's own servers, so Telegram's privacy policy applies to their delivery. We keep a short record of which events were already sent to you so the same alert is not repeated; those records are deleted after about two days. You can disconnect at any time by blocking the bot in Telegram, and we delete the stored Telegram data when you delete your account."
+              "text": "Premium صارفین اپنے فون پر نیوز الرٹس وصول کرنے کے لیے Telegram اکاؤنٹ کنیکٹ کر سکتے ہیں، جن میں ان کا کمپیوٹر بند ہونے کی صورت بھی شامل ہے۔ یہ مکمل طور پر اختیاری ہے اور آپ کے کنیکٹ کرنے تک بند رہتا ہے۔ جب آپ کنیکٹ کرتے ہیں، تو ہم اپنے بیک اینڈ پر آپ کا Telegram چیٹ ID اور یوزر نیم (جو Telegram کی جانب سے ہمارے بوٹ کو شروع کرنے پر فراہم کیے جاتے ہیں) آپ کی الرٹ ترجیحات کے ساتھ محفوظ کرتے ہیں: اثر کی سطحیں، کرنسیاں، آپ کو کتنے منٹ پہلے خبردار کیا جائے، آپ کا ٹائم زون، اور کوئی خاموش اوقات۔ ہم انہیں صرف ایک مقصد کے لیے استعمال کرتے ہیں — یہ فیصلہ کرنے کے لیے کہ آپ کو کون سے الرٹس اور کب بھیجے جائیں — اور پیغامات Telegram کے اپنے سرورز کے ذریعے پہنچائے جاتے ہیں، اس لیے ان کی ترسیل پر Telegram کی اپنی پرائیویسی پالیسی لاگو ہوتی ہے۔ ہم ایک مختصر ریکارڈ رکھتے ہیں کہ کون سے ایونٹس آپ کو پہلے ہی بھیجے جا چکے ہیں تاکہ ایک ہی الرٹ دوبارہ نہ بھیجا جائے؛ یہ ریکارڈ تقریباً دو دن بعد حذف کر دیے جاتے ہیں۔ آپ Telegram میں بوٹ کو بلاک کر کے کسی بھی وقت رابطہ منقطع کر سکتے ہیں، اور جب آپ اپنا اکاؤنٹ حذف کرتے ہیں تو ہم محفوظ کردہ Telegram ڈیٹا بھی حذف کر دیتے ہیں۔"
             }
           ]
         },
         {
-          "heading": "AI explanations (optional, Premium, your own provider)",
+          "heading": "AI وضاحتیں (اختیاری، Premium، آپ کا اپنا فراہم کنندہ)",
           "blocks": [
             {
               "type": "p",
-              "text": "Premium users can connect their own AI provider — Google Gemini, Groq or OpenRouter — and press ✨ next to a release to get a plain-language briefing. This is entirely optional and does nothing until you paste your own API key. A step-by-step guide is at [rednews.app/ai](https://rednews.app/ai)."
+              "text": "Premium صارفین اپنا خود کا AI فراہم کنندہ — Google Gemini، Groq، یا OpenRouter — کنیکٹ کر سکتے ہیں اور کسی ریلیز کے ساتھ ✨ دبا کر سادہ زبان میں وضاحت حاصل کر سکتے ہیں۔ یہ مکمل طور پر اختیاری ہے اور جب تک آپ اپنی API کلید پیسٹ نہیں کرتے، کچھ نہیں کرتا۔ مرحلہ وار گائیڈ [rednews.app/ai](https://rednews.app/ai) پر دستیاب ہے۔"
             },
             {
               "type": "p",
-              "text": "Your API key stays in your browser. It is kept in local storage on this computer, is never synchronised to other devices, and is never sent to our backend. \"Remove key\" deletes the key, deletes the cached answers, and withdraws the extension's permission to contact the provider."
+              "text": "آپ کی API کلید آپ کے براؤزر میں ہی رہتی ہے۔ یہ اس کمپیوٹر پر لوکل اسٹوریج میں رکھی جاتی ہے، کبھی دیگر آلات کے ساتھ سنکرونائز نہیں ہوتی، اور کبھی ہمارے بیک اینڈ کو نہیں بھیجی جاتی۔ \"Remove key\" کلید کو حذف کرتا ہے، کیشے شدہ جوابات کو حذف کرتا ہے، اور فراہم کنندہ سے رابطہ کرنے کی ایکسٹینشن کی اجازت واپس لے لیتا ہے۔"
             },
             {
               "type": "p",
-              "text": "Requests go straight from your browser to the provider you chose. They do not pass through our servers. We cannot see what you asked or what the model answered."
+              "text": "درخواستیں براہ راست آپ کے براؤزر سے آپ کے منتخب کردہ فراہم کنندہ کو جاتی ہیں۔ یہ ہمارے سرورز سے نہیں گزرتیں۔ ہم یہ نہیں دیکھ سکتے کہ آپ نے کیا پوچھا یا ماڈل نے کیا جواب دیا۔"
             },
             {
               "type": "p",
-              "text": "What is sent: the scheduled release itself — title, currency, impact level, scheduled time in UTC, and its forecast, previous and actual values — up to six earlier prints of that same release taken from the extension's own calendar history, and the language the answer should be written in. Your API key travels in the request's authorisation header, as the provider requires. Nothing else is included: no name or email, no account or subscription details, no chart symbol, no browsing history, and no text you type."
+              "text": "کیا بھیجا جاتا ہے: خود شیڈول شدہ ریلیز — عنوان، کرنسی، اثر کی سطح، UTC میں شیڈول شدہ وقت، اور اس کی متوقع، سابقہ اور حقیقی قدریں — اسی ریلیز کی زیادہ سے زیادہ چھ سابقہ قدریں جو ایکسٹینشن کی اپنی کیلنڈر ہسٹری سے لی گئی ہیں، اور وہ زبان جس میں جواب لکھا جانا چاہیے۔ آپ کی API کلید درخواست کے authorization header میں بھیجی جاتی ہے، جیسا کہ فراہم کنندہ کو ضرورت ہوتی ہے۔ اس کے علاوہ کچھ بھی شامل نہیں: نہ نام یا ای میل، نہ اکاؤنٹ یا سبسکرپشن کی تفصیلات، نہ چارٹ سمبل، نہ براؤزنگ ہسٹری، اور نہ آپ کی جانب سے ٹائپ کیا گیا کوئی متن۔"
             },
             {
               "type": "p",
-              "text": "The provider's own privacy policy governs what it does with that request. Providers differ: some state that they do not retain or train on API traffic by default, while others may use free-tier traffic to improve their products. The current position of each supported provider is summarised on the setup page, but you should read your provider's own terms."
+              "text": "فراہم کنندہ کی اپنی پرائیویسی پالیسی یہ طے کرتی ہے کہ وہ اس درخواست کے ساتھ کیا کرتا ہے۔ فراہم کنندگان مختلف ہیں: کچھ بیان کرتے ہیں کہ وہ بطور ڈیفالٹ API ٹریفک کو محفوظ نہیں رکھتے یا اس پر تربیت نہیں دیتے، جبکہ دیگر اپنی مصنوعات کو بہتر بنانے کے لیے فری ٹیئر ٹریفک استعمال کر سکتے ہیں۔ ہر تعاون یافتہ فراہم کنندہ کی موجودہ پوزیشن سیٹ اپ صفحے پر مختصراً بیان کی گئی ہے، لیکن آپ کو اپنے فراہم کنندہ کی اپنی شرائط پڑھنی چاہئیں۔"
             },
             {
               "type": "p",
-              "text": "Answers are cached locally for up to seven days (at most sixty of them) so that reopening the same event does not spend your quota again. The cache never leaves your browser."
+              "text": "جوابات مقامی طور پر زیادہ سے زیادہ سات دنوں (زیادہ سے زیادہ ساٹھ) کے لیے کیشے کیے جاتے ہیں تاکہ ایک ہی ایونٹ دوبارہ کھولنے پر آپ کا کوٹا دوبارہ خرچ نہ ہو۔ کیشے آپ کے براؤزر سے کبھی باہر نہیں جاتا۔"
             },
             {
               "type": "p",
-              "text": "Access is granted per provider, at the moment you connect. The three provider addresses are optional permissions: Chrome asks for your consent when you press \"Connect\", and until then the extension cannot reach any of them."
+              "text": "رسائی ہر فراہم کنندہ کے لیے علیحدہ طور پر، کنیکٹ کرنے کے لمحے پر دی جاتی ہے۔ تین فراہم کنندہ ایڈریسز اختیاری اجازتیں ہیں: Chrome آپ کی رضامندی طلب کرتا ہے جب آپ \"Connect\" دباتے ہیں، اور اس سے پہلے ایکسٹینشن ان میں سے کسی تک رسائی حاصل نہیں کر سکتا۔"
             }
           ]
         },
         {
-          "heading": "Feedback",
+          "heading": "رائے / فیڈبیک",
           "blocks": [
             {
               "type": "p",
-              "text": "If you send feedback through the extension (\"Report a problem, idea, or partnership\"), the message you type, an optional email address, and basic non-personal context (the extension version, your browser, and your interface language) are sent through Web3Forms, a third-party form-delivery service, which forwards them to the developer by email. This happens only when you press Send."
+              "text": "اگر آپ ایکسٹینشن کے ذریعے فیڈبیک بھیجتے ہیں (\"کسی مسئلے، آئیڈیا، یا پارٹنرشپ کی اطلاع دیں\")، تو آپ کا ٹائپ کیا گیا پیغام، ایک اختیاری ای میل ایڈریس، اور بنیادی غیر ذاتی معلومات (ایکسٹینشن کا ورژن، آپ کا براؤزر، اور آپ کے انٹرفیس کی زبان) ایک تھرڈ پارٹی فارم ڈیلیوری سروس Web3Forms کے ذریعے بھیجے جاتے ہیں، جو انہیں ای میل کے ذریعے ڈیویلپر کو منتقل کرتی ہے۔ یہ صرف اس وقت ہوتا ہے جب آپ Send دباتے ہیں۔"
             }
           ]
         },
         {
-          "heading": "Third-party services",
+          "heading": "تھرڈ پارٹی سروسز",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Supabase hosts our backend (authentication, database, server functions) that serves calendar data and stores your account/subscription status.",
-                "Google provides the sign-in through which we obtain your name, email, and account identifier.",
-                "Paddle processes Premium payments as merchant of record; card data never reaches us.",
-                "Forex Factory is the source of the public economic-calendar data, fetched by our backend.",
-                "Web3Forms delivers feedback you choose to send.",
-                "Telegram delivers the optional Premium alerts to users who connect our bot.",
-                "Google (Gemini API), Groq, OpenRouter are AI providers a Premium user may connect with their own API key. We hold no account or contract with them on your behalf; your browser talks to whichever one you chose, directly, and only for the explanations you request."
+                "Supabase ہمارے بیک اینڈ (آتھینٹیکیشن، ڈیٹابیس، سرور فنکشنز) کی میزبانی کرتا ہے جو کیلنڈر ڈیٹا فراہم کرتا ہے اور آپ کی اکاؤنٹ/سبسکرپشن حیثیت محفوظ کرتا ہے۔",
+                "Google وہ سائن اِن فراہم کرتا ہے جس کے ذریعے ہم آپ کا نام، ای میل، اور اکاؤنٹ آئیڈینٹیفائر حاصل کرتے ہیں۔",
+                "Paddle مرچنٹ آف ریکارڈ کے طور پر Premium ادائیگیاں پراسیس کرتا ہے؛ کارڈ کا ڈیٹا کبھی ہمیں نہیں پہنچتا۔",
+                "Forex Factory عوامی اکنامک کیلنڈر ڈیٹا کا ذریعہ ہے، جو ہمارا بیک اینڈ حاصل کرتا ہے۔",
+                "Web3Forms وہ فیڈبیک پہنچاتا ہے جو آپ بھیجنے کا انتخاب کرتے ہیں۔",
+                "Telegram ہمارے بوٹ کو کنیکٹ کرنے والے صارفین کو اختیاری Premium الرٹس پہنچاتا ہے۔",
+                "Google (Gemini API)، Groq، OpenRouter وہ AI فراہم کنندگان ہیں جن سے Premium صارف اپنی API کلید کے ساتھ کنیکٹ کر سکتا ہے۔ ہمارا آپ کی جانب سے ان کے ساتھ کوئی اکاؤنٹ یا معاہدہ نہیں ہے؛ آپ کا براؤزر براہ راست اس فراہم کنندہ سے بات کرتا ہے جسے آپ نے منتخب کیا ہے، اور صرف ان وضاحتوں کے لیے جو آپ درخواست کرتے ہیں۔"
               ]
             },
             {
               "type": "p",
-              "text": "Each third party processes data subject to its own privacy policy."
+              "text": "ہر تھرڈ پارٹی اپنی اپنی پرائیویسی پالیسی کے مطابق ڈیٹا پراسیس کرتی ہے۔"
             }
           ]
         },
         {
-          "heading": "Your choices and rights",
+          "heading": "آپ کے اختیارات اور حقوق",
           "blocks": [
             {
               "type": "p",
-              "text": "The free tier works without an account. If you have signed in, you can sign out at any time, and you may request deletion of your account data by contacting us (see \"Contact\"). Deleting your account removes your stored email, name, account identifier, and subscription record."
+              "text": "فری ٹیئر بغیر اکاؤنٹ کے کام کرتا ہے۔ اگر آپ نے سائن اِن کیا ہے، تو آپ کسی بھی وقت سائن آؤٹ کر سکتے ہیں، اور ہم سے رابطہ کر کے (\"رابطہ\" دیکھیں) اپنے اکاؤنٹ ڈیٹا کو حذف کرنے کی درخواست کر سکتے ہیں۔ اکاؤنٹ حذف کرنے سے آپ کا محفوظ کردہ ای میل، نام، اکاؤنٹ آئیڈینٹیفائر، اور سبسکرپشن ریکارڈ ختم ہو جاتا ہے۔"
             }
           ]
         },
         {
-          "heading": "Changes",
+          "heading": "تبدیلیاں",
           "blocks": [
             {
               "type": "p",
-              "text": "Any change that affects what data is collected or how it is processed will be reflected in an updated Privacy Policy before it takes effect. The \"Last updated\" date above will be revised."
+              "text": "کوئی بھی تبدیلی جو یہ متاثر کرے کہ کون سا ڈیٹا جمع کیا جاتا ہے یا اسے کیسے پراسیس کیا جاتا ہے، نافذ العمل ہونے سے پہلے ایک تجدید شدہ پرائیویسی پالیسی میں ظاہر کی جائے گی۔ اوپر دی گئی \"آخری تجدید\" کی تاریخ اسی مطابق نظرثانی کی جائے گی۔"
             }
           ]
         },
         {
-          "heading": "Contact",
+          "heading": "رابطہ",
           "blocks": [
             {
               "type": "p",
-              "text": "For questions about this policy or to request account deletion, email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+              "text": "اس پالیسی کے بارے میں سوالات کے لیے یا اکاؤنٹ حذف کرنے کی درخواست کے لیے، [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question) پر ای میل کریں یا [Discord](https://discord.com/users/1172891214580830322) پر ہم سے رابطہ کریں۔"
             }
           ]
         }
       ]
     },
     "terms": {
-      "title": "Terms of Service",
-      "updated": "Last updated: 9 August 2026",
-      "intro": "These Terms of Service (\"Terms\") govern your use of the Red News – Economic Calendar for TradingView browser extension, the website at rednews.app, and any related services (together, the \"Service\"), provided by the developer of Red News (\"we\", \"us\", \"our\"). By installing or using the Service, you agree to these Terms. If you do not agree, do not use the Service.",
+      "title": "شرائط استعمال",
+      "updated": "آخری تجدید: 9 اگست 2026",
+      "intro": "یہ شرائط استعمال (\"شرائط\") Red News – Economic Calendar for TradingView براؤزر ایکسٹینشن، rednews.app پر ویب سائٹ، اور کسی بھی متعلقہ سروس (مجموعی طور پر \"سروس\") کے آپ کے استعمال کو کنٹرول کرتی ہیں، جو Red News کے ڈیویلپر (\"ہم\"، \"ہمیں\"، \"ہمارا\") کی جانب سے فراہم کی جاتی ہے۔ سروس کو انسٹال یا استعمال کر کے، آپ اِن شرائط سے اتفاق کرتے ہیں۔ اگر آپ اتفاق نہیں کرتے، تو سروس استعمال نہ کریں۔",
       "sections": [
         {
-          "heading": "1. The Service",
+          "heading": "1. سروس",
           "blocks": [
             {
               "type": "p",
-              "text": "Red News is a browser extension that overlays scheduled economic-calendar events, sourced from the public Forex Factory calendar, onto TradingView chart pages. It draws event lines, shows event details, and can alert you before releases. Red News is an independent tool and is not affiliated with, endorsed by, or sponsored by TradingView or Forex Factory."
+              "text": "Red News ایک براؤزر ایکسٹینشن ہے جو Forex Factory کے عوامی کیلنڈر سے حاصل شدہ شیڈول شدہ اکنامک کیلنڈر ایونٹس کو TradingView کے چارٹ صفحات پر اوورلے کرتا ہے۔ یہ ایونٹ لائنز کھینچتا ہے، ایونٹ کی تفصیلات دکھاتا ہے، اور ریلیزز سے پہلے آپ کو خبردار کر سکتا ہے۔ Red News ایک آزاد ٹول ہے اور TradingView یا Forex Factory سے وابستہ، ان کی جانب سے منظور شدہ، یا ان کے زیرِ سرپرستی نہیں ہے۔"
             }
           ]
         },
         {
-          "heading": "2. Not financial advice",
+          "heading": "2. مالی مشورہ نہیں",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service displays informational data about scheduled economic events. It does not provide trading signals, investment recommendations, or financial advice, and nothing it shows should be relied upon as such. Economic data may be delayed, incomplete, or inaccurate. Trading and investing carry risk, including the loss of capital. You are solely responsible for your own trading decisions."
+              "text": "سروس شیڈول شدہ اکنامک ایونٹس کے بارے میں معلوماتی ڈیٹا دکھاتی ہے۔ یہ کوئی ٹریڈنگ سگنلز، سرمایہ کاری کی سفارشات، یا مالی مشورہ فراہم نہیں کرتی، اور جو کچھ یہ دکھاتی ہے اس پر اُس طرح انحصار نہیں کیا جانا چاہیے۔ اکنامک ڈیٹا میں تاخیر، نامکملیت، یا غلطی ہو سکتی ہے۔ ٹریڈنگ اور سرمایہ کاری میں خطرہ شامل ہے، بشمول سرمائے کے نقصان کا۔ اپنے ٹریڈنگ فیصلوں کی مکمل ذمہ داری صرف آپ پر ہے۔"
             }
           ]
         },
         {
-          "heading": "3. Accounts",
+          "heading": "3. اکاؤنٹس",
           "blocks": [
             {
               "type": "p",
-              "text": "The free tier works without an account. To start a Premium trial or subscribe, you sign in with Google, which provides us your name, email address, and account identifier. You are responsible for maintaining the security of the Google account you use and for all activity under your Red News entitlement. You must be at least 18 years old, or the age of majority in your jurisdiction, to purchase Premium."
+              "text": "فری ٹیئر بغیر اکاؤنٹ کے کام کرتا ہے۔ Premium ٹرائل شروع کرنے یا سبسکرائب کرنے کے لیے، آپ Google کے ذریعے سائن اِن کرتے ہیں، جو ہمیں آپ کا نام، ای میل ایڈریس، اور اکاؤنٹ آئیڈینٹیفائر فراہم کرتا ہے۔ آپ اپنے استعمال کردہ Google اکاؤنٹ کی حفاظت برقرار رکھنے اور اپنی Red News انٹائٹلمنٹ کے تحت ہونے والی تمام سرگرمی کے ذمہ دار ہیں۔ Premium خریدنے کے لیے آپ کی عمر کم از کم 18 سال، یا آپ کے دائرہ اختیار میں بلوغت کی قانونی عمر ہونی چاہیے۔"
             }
           ]
         },
         {
-          "heading": "4. Subscriptions, billing & trials",
+          "heading": "4. سبسکرپشنز، بلنگ، اور ٹرائلز",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Free tier: the core extension is free to use.",
-                "Premium: available as a monthly (US$4.99) or annual (US$39) subscription. Prices are shown at checkout and may vary by region and applicable taxes.",
-                "Free trial: new users may start a 14-day Premium trial without a payment method. If you do not subscribe, the account simply reverts to the free tier when the trial ends. One trial per user.",
-                "Merchant of record: payments are processed by Paddle (Paddle.com Market Limited), which acts as the merchant of record for all purchases. Your purchase is also subject to Paddle's buyer terms. Card and billing details are entered on Paddle's checkout and are never received or stored by us.",
-                "Auto-renewal: paid subscriptions renew automatically at the end of each billing period until cancelled. By subscribing, you authorise recurring charges through Paddle.",
-                "Price changes: we may change subscription prices. Any change to your recurring price will be communicated in advance and will apply from your next renewal."
+                "فری ٹیئر: بنیادی ایکسٹینشن مفت استعمال کے لیے دستیاب ہے۔",
+                "Premium: ماہانہ (US$4.99) یا سالانہ (US$39) سبسکرپشن کے طور پر دستیاب ہے۔ قیمتیں چیک آؤٹ پر دکھائی جاتی ہیں اور علاقے اور لاگو ٹیکسوں کے مطابق مختلف ہو سکتی ہیں۔",
+                "فری ٹرائل: نئے صارفین بغیر کسی ادائیگی کے طریقے کے 14 دن کا Premium ٹرائل شروع کر سکتے ہیں۔ اگر آپ سبسکرائب نہیں کرتے، تو ٹرائل ختم ہونے پر اکاؤنٹ خود بخود فری ٹیئر پر واپس چلا جاتا ہے۔ فی صارف ایک ٹرائل۔",
+                "مرچنٹ آف ریکارڈ: ادائیگیاں Paddle (Paddle.com Market Limited) کے ذریعے پراسیس کی جاتی ہیں، جو تمام خریداریوں کے لیے مرچنٹ آف ریکارڈ کے طور پر کام کرتا ہے۔ آپ کی خریداری Paddle کی بائر شرائط سے بھی مشروط ہے۔ کارڈ اور بلنگ کی تفصیلات Paddle کے چیک آؤٹ پر درج کی جاتی ہیں اور کبھی بھی ہمیں موصول یا ہمارے پاس محفوظ نہیں ہوتیں۔",
+                "خودکار تجدید: ادا شدہ سبسکرپشنز منسوخ ہونے تک ہر بلنگ مدت کے اختتام پر خودکار طور پر تجدید ہوتی ہیں۔ سبسکرائب کر کے، آپ Paddle کے ذریعے بار بار ہونے والے چارجز کی اجازت دیتے ہیں۔",
+                "قیمت میں تبدیلیاں: ہم سبسکرپشن کی قیمتوں میں تبدیلی کر سکتے ہیں۔ آپ کی بار بار وصول کی جانے والی قیمت میں کوئی بھی تبدیلی پہلے سے مطلع کی جائے گی اور آپ کی اگلی تجدید سے لاگو ہو گی۔"
               ]
             }
           ]
         },
         {
-          "heading": "5. Cancellation & refunds",
+          "heading": "5. منسوخی اور رقم کی واپسی",
           "blocks": [
             {
               "type": "p",
-              "text": "You can cancel at any time using the Manage subscription option in the extension. On cancellation you keep Premium access until the end of the period you have already paid for; it does not renew after that. Refunds are handled as described in our Refund Policy."
+              "text": "آپ ایکسٹینشن میں Manage subscription آپشن استعمال کر کے کسی بھی وقت منسوخ کر سکتے ہیں۔ منسوخی پر، آپ اس مدت کے اختتام تک Premium رسائی برقرار رکھتے ہیں جس کی ادائیگی آپ پہلے ہی کر چکے ہیں؛ اس کے بعد یہ تجدید نہیں ہوتی۔ رقم کی واپسی ہماری رقم واپسی کی پالیسی میں بیان کیے گئے طریقے سے کی جاتی ہے۔"
             }
           ]
         },
         {
-          "heading": "6. Acceptable use",
+          "heading": "6. قابل قبول استعمال",
           "blocks": [
             {
               "type": "p",
-              "text": "You agree not to:"
+              "text": "آپ درج ذیل نہ کرنے پر رضامند ہوتے ہیں:"
             },
             {
               "type": "ul",
               "items": [
-                "reverse engineer, decompile, or attempt to extract the source or server logic of the Service, except where permitted by law;",
-                "resell, sublicense, or redistribute the Service or the data it delivers;",
-                "circumvent entitlement checks, device limits, or use the Service without a valid entitlement;",
-                "use the Service to build a competing product, or to place undue load on our backend;",
-                "use the Service in any unlawful way or in violation of third-party rights."
+                "قانون کی اجازت کے سوا، سروس کی سورس یا سرور لاجک کو ریورس انجینئر کرنا، ڈی کمپائل کرنا، یا نکالنے کی کوشش کرنا؛",
+                "سروس یا اس کے فراہم کردہ ڈیٹا کو دوبارہ فروخت کرنا، سب لائسنس دینا، یا دوبارہ تقسیم کرنا؛",
+                "انٹائٹلمنٹ چیکس یا آلات کی حدود کو نظرانداز کرنا، یا کسی درست انٹائٹلمنٹ کے بغیر سروس استعمال کرنا؛",
+                "سروس کو کسی مسابقتی مصنوع بنانے کے لیے استعمال کرنا، یا ہمارے بیک اینڈ پر غیر ضروری بوجھ ڈالنا؛",
+                "سروس کو کسی غیر قانونی طریقے سے یا تھرڈ پارٹی حقوق کی خلاف ورزی میں استعمال کرنا۔"
               ]
             }
           ]
         },
         {
-          "heading": "7. Intellectual property",
+          "heading": "7. دانشورانہ املاک",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service, including its code, design, and branding, is owned by us and protected by applicable laws. We grant you a limited, non-exclusive, non-transferable, revocable licence to use the Service for your personal trading, subject to these Terms. Economic data originates from the public Forex Factory calendar and remains subject to any rights of its source. \"TradingView\" and \"Forex Factory\" are trademarks of their respective owners."
+              "text": "سروس، بشمول اس کا کوڈ، ڈیزائن، اور برانڈنگ، ہماری ملکیت ہے اور لاگو قوانین کے تحت محفوظ ہے۔ ہم آپ کو ان شرائط کے تابع اپنی ذاتی ٹریڈنگ کے لیے سروس استعمال کرنے کا ایک محدود، غیر خصوصی، غیر منتقل پذیر، اور منسوخ کیے جا سکنے والا لائسنس دیتے ہیں۔ اکنامک ڈیٹا عوامی Forex Factory کیلنڈر سے حاصل ہوتا ہے اور اپنے ماخذ کے کسی بھی حق کے تابع رہتا ہے۔ \"TradingView\" اور \"Forex Factory\" ان کے متعلقہ مالکان کے ٹریڈ مارکس ہیں۔"
             }
           ]
         },
         {
-          "heading": "8. Third-party services",
+          "heading": "8. تھرڈ پارٹی سروسز",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service relies on third parties including TradingView (the host page), Forex Factory (data source), Supabase (backend and authentication), Google (sign-in), and Paddle (payments). We are not responsible for the availability, content, or practices of these third parties, and your use of them is subject to their own terms."
+              "text": "سروس تھرڈ پارٹیز پر انحصار کرتی ہے، جن میں TradingView (میزبان صفحہ)، Forex Factory (ڈیٹا کا ماخذ)، Supabase (بیک اینڈ اور آتھینٹیکیشن)، Google (سائن اِن)، اور Paddle (ادائیگیاں) شامل ہیں۔ ہم اِن تھرڈ پارٹیز کی دستیابی، مواد، یا طریقہ کار کے ذمہ دار نہیں ہیں، اور اِن کے استعمال پر اُن کی اپنی شرائط لاگو ہوتی ہیں۔"
             }
           ]
         },
         {
-          "heading": "9. Disclaimers",
+          "heading": "9. دستبرداری بیانات",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service is provided \"as is\" and \"as available\", without warranties of any kind, whether express or implied, including fitness for a particular purpose, accuracy, or uninterrupted availability. We do not warrant that event data will be timely, complete, or error-free, or that the Service will always function with TradingView."
+              "text": "سروس \"جیسی ہے\" اور \"جیسی دستیاب ہے\" کی بنیاد پر فراہم کی جاتی ہے، بغیر کسی قسم کی ضمانت کے، خواہ واضح ہو یا مضمر، بشمول کسی خاص مقصد کے لیے موزونیت، درستگی، یا بلا تعطل دستیابی۔ ہم اس کی ضمانت نہیں دیتے کہ ایونٹ ڈیٹا بروقت، مکمل، یا غلطیوں سے پاک ہو گا، یا کہ سروس ہمیشہ TradingView کے ساتھ کام کرے گی۔"
             }
           ]
         },
         {
-          "heading": "10. Limitation of liability",
+          "heading": "10. ذمہ داری کی حد",
           "blocks": [
             {
               "type": "p",
-              "text": "To the maximum extent permitted by law, we will not be liable for any indirect, incidental, special, or consequential damages, or for any trading losses, lost profits, or lost data, arising from your use of or inability to use the Service. Our total liability for any claim relating to the Service will not exceed the amount you paid us for the Service in the twelve months preceding the claim."
+              "text": "قانون کی اجازت کی زیادہ سے زیادہ حد تک، ہم آپ کے سروس کے استعمال یا استعمال نہ کر سکنے کی وجہ سے پیدا ہونے والے کسی بھی بلاواسطہ، حادثاتی، خاص، یا نتیجاتی نقصان، یا کسی ٹریڈنگ نقصان، منافع کے نقصان، یا ڈیٹا کے نقصان کے ذمہ دار نہیں ہوں گے۔ سروس سے متعلق کسی بھی دعوے کے لیے ہماری مجموعی ذمہ داری، دعوے سے پہلے کے بارہ مہینوں میں آپ کی جانب سے سروس کے لیے ہمیں ادا کی گئی رقم سے زیادہ نہیں ہو گی۔"
             }
           ]
         },
         {
-          "heading": "11. Termination",
+          "heading": "11. خدمت کا خاتمہ",
           "blocks": [
             {
               "type": "p",
-              "text": "You may stop using the Service at any time by uninstalling the extension and, if applicable, cancelling your subscription. We may suspend or terminate access if you breach these Terms or misuse the Service. You may request deletion of your account data as described in our Privacy Policy."
+              "text": "آپ ایکسٹینشن کو ان انسٹال کر کے اور، اگر لاگو ہو تو اپنی سبسکرپشن منسوخ کر کے کسی بھی وقت سروس کا استعمال بند کر سکتے ہیں۔ اگر آپ اِن شرائط کی خلاف ورزی کرتے ہیں یا سروس کا غلط استعمال کرتے ہیں تو ہم رسائی معطل یا ختم کر سکتے ہیں۔ آپ ہماری پرائیویسی پالیسی میں بیان کیے گئے طریقے سے اپنے اکاؤنٹ ڈیٹا کو حذف کرنے کی درخواست کر سکتے ہیں۔"
             }
           ]
         },
         {
-          "heading": "12. Changes to these Terms",
+          "heading": "12. اِن شرائط میں تبدیلیاں",
           "blocks": [
             {
               "type": "p",
-              "text": "We may update these Terms from time to time. Material changes will be reflected here with a revised \"Last updated\" date. Continued use of the Service after changes take effect constitutes acceptance of the updated Terms."
+              "text": "ہم وقتاً فوقتاً اِن شرائط کو تجدید کر سکتے ہیں۔ اہم تبدیلیاں یہاں ایک نظرثانی شدہ \"آخری تجدید\" کی تاریخ کے ساتھ ظاہر کی جائیں گی۔ تبدیلیوں کے نافذ العمل ہونے کے بعد سروس کا مستقل استعمال تجدید شدہ شرائط کی قبولیت تصور کیا جائے گا۔"
             }
           ]
         },
         {
-          "heading": "13. Governing law",
+          "heading": "13. حاکم قانون",
           "blocks": [
             {
               "type": "p",
-              "text": "These Terms are governed by the laws of Ukraine, without regard to conflict-of-law rules, except where mandatory consumer-protection laws of your country of residence apply. Purchases are additionally subject to the terms of Paddle as merchant of record."
+              "text": "یہ شرائط یوکرین کے قوانین کے تحت چلتی ہیں، بغیر تنازعہ قوانین کے قواعد کو مدنظر رکھے، سوائے اُن صورتوں کے جہاں آپ کے ملک رہائش کے لازمی صارف تحفظ قوانین لاگو ہوتے ہیں۔ خریداریاں اضافی طور پر مرچنٹ آف ریکارڈ کے طور پر Paddle کی شرائط سے بھی مشروط ہیں۔"
             }
           ]
         },
         {
-          "heading": "14. Contact",
+          "heading": "14. رابطہ",
           "blocks": [
             {
               "type": "p",
-              "text": "Questions about these Terms? Email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+              "text": "اِن شرائط کے بارے میں سوالات ہیں؟ [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question) پر ای میل کریں یا [Discord](https://discord.com/users/1172891214580830322) پر ہم سے رابطہ کریں۔"
             }
           ]
         }
       ]
     },
     "refund": {
-      "title": "Refund Policy",
-      "updated": "Last updated: 9 August 2026",
-      "intro": "We want you to be happy with Red News Premium. This policy explains how trials, cancellations, and refunds work. Payments are processed by Paddle, our merchant of record, so refunds are issued through Paddle to your original payment method.",
+      "title": "رقم واپسی کی پالیسی",
+      "updated": "آخری تجدید: 9 اگست 2026",
+      "intro": "ہم چاہتے ہیں کہ آپ Red News Premium سے مطمئن رہیں۔ یہ پالیسی وضاحت کرتی ہے کہ ٹرائلز، منسوخیاں، اور رقم کی واپسی کیسے کام کرتی ہیں۔ ادائیگیاں ہمارے مرچنٹ آف ریکارڈ Paddle کے ذریعے پراسیس کی جاتی ہیں، اس لیے رقم کی واپسی Paddle کے ذریعے آپ کے اصل ادائیگی کے طریقے پر جاری کی جاتی ہے۔",
       "sections": [
         {
-          "heading": "Try before you pay",
+          "heading": "ادائیگی سے پہلے آزمائیں",
           "blocks": [
             {
               "type": "p",
-              "text": "Every new user can start a 14-day Premium trial with no payment method required. The trial is long enough to span a major economic release, so you can fully evaluate Premium before you are ever charged. We encourage you to use it."
+              "text": "ہر نیا صارف بغیر کسی ادائیگی کے طریقے کی ضرورت کے 14 دن کا Premium ٹرائل شروع کر سکتا ہے۔ ٹرائل ایک بڑے اکنامک ریلیز کا احاطہ کرنے کے لیے کافی طویل ہے، تاکہ آپ کبھی چارج ہونے سے پہلے Premium کا مکمل جائزہ لے سکیں۔ ہم آپ کو اسے استعمال کرنے کی ترغیب دیتے ہیں۔"
             }
           ]
         },
         {
-          "heading": "14-day money-back guarantee",
+          "heading": "14 دن کی رقم واپسی کی ضمانت",
           "blocks": [
             {
               "type": "p",
-              "text": "If you subscribe and change your mind, you can request a full refund within 14 days of your first payment, no questions asked. This applies to the initial charge on a monthly or annual plan."
+              "text": "اگر آپ سبسکرائب کرتے ہیں اور اپنا ارادہ تبدیل کرتے ہیں، تو آپ اپنی پہلی ادائیگی کے 14 دنوں کے اندر، بغیر کوئی سوال پوچھے، مکمل رقم کی واپسی کی درخواست کر سکتے ہیں۔ یہ ماہانہ یا سالانہ پلان پر ابتدائی چارج پر لاگو ہوتا ہے۔"
             }
           ]
         },
         {
-          "heading": "Renewals",
+          "heading": "تجدیدات",
           "blocks": [
             {
               "type": "p",
-              "text": "Subscriptions renew automatically. To avoid a renewal charge, cancel before your renewal date using the Manage subscription button in the extension. After cancellation you keep Premium until the end of the period you have already paid for. Renewal charges are generally non-refundable, but if you were charged for a renewal you did not intend to keep and reach out promptly, contact us. We review these case by case and aim to be fair."
+              "text": "سبسکرپشنز خودکار طور پر تجدید ہوتی ہیں۔ تجدیدی چارج سے بچنے کے لیے، اپنی تجدید کی تاریخ سے پہلے ایکسٹینشن میں Manage subscription بٹن استعمال کر کے منسوخ کریں۔ منسوخی کے بعد آپ اس مدت کے اختتام تک Premium برقرار رکھتے ہیں جس کی ادائیگی آپ پہلے ہی کر چکے ہیں۔ تجدیدی چارجز عموماً ناقابلِ واپسی ہوتے ہیں، لیکن اگر آپ سے کسی ایسی تجدید کا چارج لیا گیا جسے آپ برقرار رکھنے کا ارادہ نہیں رکھتے تھے اور آپ فوری طور پر ہم سے رابطہ کرتے ہیں، تو ہم سے رابطہ کریں۔ ہم ایسے معاملات کا انفرادی طور پر جائزہ لیتے ہیں اور انصاف پسندی کا مقصد رکھتے ہیں۔"
             }
           ]
         },
         {
-          "heading": "How to request a refund",
+          "heading": "رقم کی واپسی کی درخواست کیسے کریں",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Reply to the Paddle receipt email you received for the purchase, or",
-                "email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request) with the email address used at checkout, or",
-                "reach us on [Discord](https://discord.com/users/1172891214580830322)."
+                "خریداری کے لیے آپ کو موصول ہونے والی Paddle رسید ای میل کا جواب دیں، یا",
+                "چیک آؤٹ پر استعمال کیے گئے ای میل ایڈریس کے ساتھ [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request) پر ای میل کریں، یا",
+                "[Discord](https://discord.com/users/1172891214580830322) پر ہم سے رابطہ کریں۔"
               ]
             },
             {
               "type": "p",
-              "text": "Approved refunds are processed by Paddle back to your original payment method, typically within 5 to 10 business days depending on your bank or card provider."
+              "text": "منظور شدہ رقم کی واپسی Paddle کے ذریعے آپ کے اصل ادائیگی کے طریقے پر پراسیس کی جاتی ہے، عام طور پر آپ کے بینک یا کارڈ فراہم کنندہ کے لحاظ سے 5 سے 10 کاروباری دنوں کے اندر۔"
             }
           ]
         },
         {
-          "heading": "Statutory rights",
+          "heading": "قانونی حقوق",
           "blocks": [
             {
               "type": "p",
-              "text": "Nothing in this policy limits any refund or cancellation rights you may have under the consumer-protection laws of your country of residence, or under Paddle's own buyer terms as merchant of record."
+              "text": "اس پالیسی میں کوئی بھی چیز آپ کے ملک رہائش کے صارف تحفظ قوانین کے تحت، یا Paddle کی اپنی بائر شرائط کے تحت مرچنٹ آف ریکارڈ کے طور پر، آپ کے پاس موجود کسی بھی رقم واپسی یا منسوخی کے حق کو محدود نہیں کرتی۔"
             }
           ]
         }
       ],
-      "closing": "Questions before you buy? We're happy to help: email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing) or message us on [Discord](https://discord.com/users/1172891214580830322)."
+      "closing": "خریداری سے پہلے کوئی سوالات ہیں؟ ہمیں مدد کرنے میں خوشی ہوگی: [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing) پر ای میل کریں یا [Discord](https://discord.com/users/1172891214580830322) پر ہمیں پیغام بھیجیں۔"
     }
   },
   "notFound": {

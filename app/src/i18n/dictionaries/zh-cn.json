@@ -242,7 +242,7 @@
       },
       {
         "q": "如果我不满意怎么办？",
-        "a": "如果您已按月或按年付费，我们提供 30 天退款期。详情请查看我们的退款页面。"
+        "a": "如果您已按月或按年付费，我们提供 14 天退款期。详情请查看我们的退款页面。"
       }
     ]
   },
@@ -279,395 +279,395 @@
   },
   "legal": {
     "privacy": {
-      "title": "Privacy Policy",
-      "updated": "Last updated: 19 September 2026",
-      "intro": "Red News – Economic Calendar for TradingView (\"the extension\") displays economic-calendar news from Forex Factory on TradingView charts. It offers a free tier that works without an account, and an optional Premium tier that requires signing in. This policy explains what data the extension processes.",
+      "title": "隐私政策",
+      "updated": "最后更新：2026年9月19日",
+      "intro": "Red News – Economic Calendar for TradingView（以下简称\"本扩展程序\"）在 TradingView 图表上显示来自 Forex Factory 的经济日历新闻。本扩展程序提供无需账户即可使用的免费版本，以及需要登录的可选 Premium（高级）版本。本政策说明本扩展程序会处理哪些数据。",
       "sections": [
         {
-          "heading": "Data we collect",
+          "heading": "我们收集的数据",
           "blocks": [
             {
               "type": "p",
-              "text": "Free tier (no account): the extension does not collect names, credentials, browsing history, or advertising identifiers. It requests economic-calendar data through our own backend (see \"Our backend\" below); as with any network request, our backend receives your IP address in the normal course of delivering the response. We do not use this for advertising, profiling, or cross-site tracking, and we do not sell your data."
+              "text": "免费版本（无账户）：本扩展程序不会收集姓名、账户凭证、浏览历史或广告标识符。它通过我们自有的后端（见下文\"我们的后端\"）请求经济日历数据；与任何网络请求一样，我们的后端在返回响应的正常过程中会收到您的 IP 地址。我们不会将其用于广告投放、用户画像分析或跨网站跟踪，也不会出售您的数据。"
             },
             {
               "type": "p",
-              "text": "Premium tier (with account): if you choose to sign in, we collect and store:"
+              "text": "Premium 版本（需账户）：如果您选择登录，我们会收集并存储以下信息："
             },
             {
               "type": "ul",
               "items": [
-                "your email address, name, and Google account identifier, obtained through Google sign-in, to create and identify your account and to show your name in the extension;",
-                "your subscription / entitlement status (free, trial, or premium);",
-                "a random per-installation identifier used to associate your installation with your account and to apply reasonable device limits."
+                "通过 Google 登录获取的您的电子邮箱地址、姓名及 Google 账户标识符，用于创建和识别您的账户，以及在扩展程序中显示您的姓名；",
+                "您的订阅/使用权限状态（免费、试用或 Premium）；",
+                "为每次安装分配的随机标识符，用于将您的安装与您的账户关联，并合理限制可使用的设备数量。"
               ]
             },
             {
               "type": "p",
-              "text": "We collect this only after you actively sign in, and only to provide the account and Premium functionality. You can stop this at any time by signing out."
+              "text": "我们仅在您主动登录后才会收集这些数据，且仅用于提供账户和 Premium 功能。您可以随时通过退出登录来停止此操作。"
             }
           ]
         },
         {
-          "heading": "Our backend",
+          "heading": "我们的后端",
           "blocks": [
             {
               "type": "p",
-              "text": "Economic-calendar data and subscription checks are served by our backend hosted on Supabase (authentication, database, and server functions). The extension communicates only with our backend and with TradingView; it does not contact Forex Factory directly. Our backend fetches the public Forex Factory calendar on the server side and returns it to the extension."
+              "text": "经济日历数据及订阅状态检查由托管在 Supabase 上的我们的后端提供（包括身份验证、数据库和服务器函数）。本扩展程序仅与我们的后端及 TradingView 通信，不会直接联系 Forex Factory。我们的后端会在服务器端获取 Forex Factory 的公开日历数据，并将其返回给扩展程序。"
             }
           ]
         },
         {
-          "heading": "What the extension accesses",
+          "heading": "本扩展程序访问的内容",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "TradingView chart pages (*.tradingview.com/chart/*): the extension reads the current chart symbol, timeframe, and timezone in order to draw the economic-news lines, labels, and tooltips on the chart. No other part of the site is accessed.",
-                "Our backend (hsoaqylcrmspyckkndab.supabase.co): the extension requests economic-calendar data and, if you are signed in, verifies your subscription status.",
-                "An AI provider of your choice (generativelanguage.googleapis.com, api.groq.com or openrouter.ai): only if you connect one with your own API key, and only to request an explanation of a release you asked about. These are optional permissions — the extension has no access to any of them until you press \"Connect\". See AI explanations below."
+                "TradingView 图表页面（*.tradingview.com/chart/*）：本扩展程序会读取当前图表的交易品种符号、时间周期和时区，以便在图表上绘制经济新闻线条、标签和提示框。不会访问网站的其他任何部分。",
+                "我们的后端（hsoaqylcrmspyckkndab.supabase.co）：本扩展程序会请求经济日历数据，并在您已登录的情况下验证您的订阅状态。",
+                "您选择的 AI 服务提供商（generativelanguage.googleapis.com、api.groq.com 或 openrouter.ai）：仅当您使用自己的 API 密钥连接该服务时才会访问，且仅用于请求对您查询的经济事件的解读说明。这些均为可选权限——在您点击\"Connect\"之前，本扩展程序不会访问其中任何一个。详情见下文\"AI 解读\"部分。"
               ]
             }
           ]
         },
         {
-          "heading": "Local storage",
+          "heading": "本地存储",
           "blocks": [
             {
               "type": "p",
-              "text": "The extension uses your browser's local storage (chrome.storage.local) to save your settings (filters, labels, alerts, timezone, language, theme), a short-lived cache of the fetched calendar data, and, if you sign in, your session tokens and account/subscription status. If you connect an AI provider, it also stores your API key and a short-lived cache of the explanations you have already received. Signing out or uninstalling removes this local data; \"Remove key\" removes the AI entries immediately."
+              "text": "本扩展程序使用您浏览器的本地存储（chrome.storage.local）来保存您的设置（筛选条件、标签、提醒、时区、语言、主题）、已获取日历数据的短期缓存，以及在您登录后的会话令牌和账户/订阅状态。如果您连接了某个 AI 服务提供商，还会存储您的 API 密钥以及您已收到解读内容的短期缓存。退出登录或卸载扩展程序会删除这些本地数据；点击\"Remove key\"会立即删除 AI 相关条目。"
             }
           ]
         },
         {
-          "heading": "Payments",
+          "heading": "支付",
           "blocks": [
             {
               "type": "p",
-              "text": "If you purchase Premium, payment is processed by Paddle, which acts as the merchant of record. Your card and billing details are entered on Paddle's secure checkout and are never received or stored by us. We only receive your resulting subscription status."
+              "text": "如果您购买 Premium，支付将由担任记录商户（merchant of record）的 Paddle 处理。您的银行卡及账单信息会在 Paddle 的安全结账页面中输入，我们不会接收或存储这些信息。我们仅会收到相应生成的订阅状态。"
             }
           ]
         },
         {
-          "heading": "Notifications",
+          "heading": "通知",
           "blocks": [
             {
               "type": "p",
-              "text": "With your permission, the extension shows an operating-system notification a chosen number of minutes before high-impact economic releases. Notifications are generated locally from calendar event times and are not used for messaging or marketing."
+              "text": "在获得您的许可后，本扩展程序会在高影响力经济数据公布前的指定分钟数显示操作系统通知。通知是根据日历事件时间在本地生成的，不会用于消息推送或营销目的。"
             }
           ]
         },
         {
-          "heading": "Telegram alerts (optional, Premium)",
+          "heading": "Telegram 提醒（可选，Premium）",
           "blocks": [
             {
               "type": "p",
-              "text": "Premium users can connect a Telegram account to receive news alerts on their phone, including while their computer is off. This is entirely optional and off until you connect it. When you connect, we store on our backend your Telegram chat ID and username (supplied by Telegram when you start our bot), together with your alert preferences: impact levels, currencies, how many minutes ahead to warn you, your time zone, and any quiet hours. We use them for one purpose — deciding which alerts to send you and when — and messages are delivered through Telegram's own servers, so Telegram's privacy policy applies to their delivery. We keep a short record of which events were already sent to you so the same alert is not repeated; those records are deleted after about two days. You can disconnect at any time by blocking the bot in Telegram, and we delete the stored Telegram data when you delete your account."
+              "text": "Premium 用户可以连接 Telegram 账户，即使在电脑关机的情况下，也能在手机上接收新闻提醒。该功能完全是可选的，在您连接之前处于关闭状态。连接后，我们会在后端存储您的 Telegram 聊天 ID 和用户名（这些信息由 Telegram 在您启动我们的机器人时提供），以及您的提醒偏好设置：影响力级别、货币种类、提前提醒的分钟数、您的时区，以及您设置的任何免打扰时段。我们仅将这些信息用于一个目的——决定向您发送哪些提醒以及何时发送——消息通过 Telegram 自己的服务器发送，因此其发送过程适用 Telegram 的隐私政策。我们会保留一份简短记录，记录哪些事件已经发送给您，以避免重复发送相同的提醒；这些记录会在大约两天后被删除。您可以随时通过在 Telegram 中屏蔽该机器人来断开连接，删除账户后，我们也会删除已存储的 Telegram 数据。"
             }
           ]
         },
         {
-          "heading": "AI explanations (optional, Premium, your own provider)",
+          "heading": "AI 解读（可选，Premium，使用您自己的服务提供商）",
           "blocks": [
             {
               "type": "p",
-              "text": "Premium users can connect their own AI provider — Google Gemini, Groq or OpenRouter — and press ✨ next to a release to get a plain-language briefing. This is entirely optional and does nothing until you paste your own API key. A step-by-step guide is at [rednews.app/ai](https://rednews.app/ai)."
+              "text": "Premium 用户可以连接自己选择的 AI 服务提供商——Google Gemini、Groq 或 OpenRouter——并点击某个经济事件旁的 ✨ 图标，获取通俗易懂的解读说明。该功能完全是可选的,在您粘贴自己的 API 密钥之前不会执行任何操作。分步指南请见 [rednews.app/ai](https://rednews.app/ai)。"
             },
             {
               "type": "p",
-              "text": "Your API key stays in your browser. It is kept in local storage on this computer, is never synchronised to other devices, and is never sent to our backend. \"Remove key\" deletes the key, deletes the cached answers, and withdraws the extension's permission to contact the provider."
+              "text": "您的 API 密钥保留在您的浏览器中。它保存在这台电脑的本地存储中,永远不会同步到其他设备,也永远不会发送到我们的后端。点击\"Remove key\"会删除该密钥、删除已缓存的回答,并撤销扩展程序联系该服务提供商的权限。"
             },
             {
               "type": "p",
-              "text": "Requests go straight from your browser to the provider you chose. They do not pass through our servers. We cannot see what you asked or what the model answered."
+              "text": "请求会直接从您的浏览器发送到您选择的服务提供商,不会经过我们的服务器。我们无法看到您提出的问题,也无法看到模型给出的回答。"
             },
             {
               "type": "p",
-              "text": "What is sent: the scheduled release itself — title, currency, impact level, scheduled time in UTC, and its forecast, previous and actual values — up to six earlier prints of that same release taken from the extension's own calendar history, and the language the answer should be written in. Your API key travels in the request's authorisation header, as the provider requires. Nothing else is included: no name or email, no account or subscription details, no chart symbol, no browsing history, and no text you type."
+              "text": "发送的内容包括:该预定发布事件本身(标题、货币、影响力级别、UTC 时区下的预定时间,以及其预测值、前值和实际值)、取自本扩展程序自身日历历史记录中同一事件此前最多六次的数据,以及回答应使用的语言。您的 API 密钥会按照服务提供商的要求,包含在请求的授权（authorization）标头中发送。不会包含其他任何内容:不含姓名或电子邮箱,不含账户或订阅信息,不含图表交易品种符号,不含浏览历史,也不含您输入的任何文本。"
             },
             {
               "type": "p",
-              "text": "The provider's own privacy policy governs what it does with that request. Providers differ: some state that they do not retain or train on API traffic by default, while others may use free-tier traffic to improve their products. The current position of each supported provider is summarised on the setup page, but you should read your provider's own terms."
+              "text": "该服务提供商如何处理此类请求,受其自身隐私政策约束。不同服务提供商的做法存在差异:部分提供商声明默认不会保留 API 流量数据或将其用于模型训练,而另一些提供商则可能将免费额度下的流量用于改进其产品。各受支持服务提供商目前的政策已在设置页面中作了概述,但您仍应阅读您所使用的服务提供商自身的条款。"
             },
             {
               "type": "p",
-              "text": "Answers are cached locally for up to seven days (at most sixty of them) so that reopening the same event does not spend your quota again. The cache never leaves your browser."
+              "text": "回答会在本地缓存最多七天(最多六十条),以便再次打开同一事件时无需再次消耗您的使用额度。该缓存永远不会离开您的浏览器。"
             },
             {
               "type": "p",
-              "text": "Access is granted per provider, at the moment you connect. The three provider addresses are optional permissions: Chrome asks for your consent when you press \"Connect\", and until then the extension cannot reach any of them."
+              "text": "访问权限按服务提供商逐一授予,在您连接时生效。这三个服务提供商的地址均为可选权限:Chrome 会在您点击\"Connect\"时请求您的同意,在此之前,本扩展程序无法访问其中任何一个。"
             }
           ]
         },
         {
-          "heading": "Feedback",
+          "heading": "反馈",
           "blocks": [
             {
               "type": "p",
-              "text": "If you send feedback through the extension (\"Report a problem, idea, or partnership\"), the message you type, an optional email address, and basic non-personal context (the extension version, your browser, and your interface language) are sent through Web3Forms, a third-party form-delivery service, which forwards them to the developer by email. This happens only when you press Send."
+              "text": "如果您通过本扩展程序发送反馈（\"Report a problem, idea, or partnership\"）,您输入的消息、可选填写的电子邮箱地址,以及基本的非个人背景信息(扩展程序版本、您的浏览器及界面语言)会通过第三方表单发送服务 Web3Forms 发送,该服务会通过电子邮件将其转发给开发者。此操作仅在您点击 Send 时发生。"
             }
           ]
         },
         {
-          "heading": "Third-party services",
+          "heading": "第三方服务",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Supabase hosts our backend (authentication, database, server functions) that serves calendar data and stores your account/subscription status.",
-                "Google provides the sign-in through which we obtain your name, email, and account identifier.",
-                "Paddle processes Premium payments as merchant of record; card data never reaches us.",
-                "Forex Factory is the source of the public economic-calendar data, fetched by our backend.",
-                "Web3Forms delivers feedback you choose to send.",
-                "Telegram delivers the optional Premium alerts to users who connect our bot.",
-                "Google (Gemini API), Groq, OpenRouter are AI providers a Premium user may connect with their own API key. We hold no account or contract with them on your behalf; your browser talks to whichever one you chose, directly, and only for the explanations you request."
+                "Supabase 托管我们的后端(身份验证、数据库、服务器函数),负责提供日历数据并存储您的账户/订阅状态。",
+                "Google 提供登录服务,我们通过该服务获取您的姓名、电子邮箱及账户标识符。",
+                "Paddle 作为记录商户处理 Premium 支付;银行卡数据永远不会传送给我们。",
+                "Forex Factory 是公开经济日历数据的来源,由我们的后端获取。",
+                "Web3Forms 负责传递您选择发送的反馈信息。",
+                "Telegram 向连接了我们机器人的用户传递可选的 Premium 提醒。",
+                "Google(Gemini API)、Groq、OpenRouter 是 Premium 用户可以使用自己的 API 密钥连接的 AI 服务提供商。我们不代表您与这些服务提供商建立任何账户或合同关系;您的浏览器会直接与您选择的服务提供商通信,且仅用于获取您请求的解读内容。"
               ]
             },
             {
               "type": "p",
-              "text": "Each third party processes data subject to its own privacy policy."
+              "text": "每个第三方均依据其自身的隐私政策处理数据。"
             }
           ]
         },
         {
-          "heading": "Your choices and rights",
+          "heading": "您的选择与权利",
           "blocks": [
             {
               "type": "p",
-              "text": "The free tier works without an account. If you have signed in, you can sign out at any time, and you may request deletion of your account data by contacting us (see \"Contact\"). Deleting your account removes your stored email, name, account identifier, and subscription record."
+              "text": "免费版本无需账户即可使用。如果您已登录,可以随时退出登录,也可以通过联系我们(见\"联系方式\")请求删除您的账户数据。删除账户会删除已存储的电子邮箱、姓名、账户标识符及订阅记录。"
             }
           ]
         },
         {
-          "heading": "Changes",
+          "heading": "变更",
           "blocks": [
             {
               "type": "p",
-              "text": "Any change that affects what data is collected or how it is processed will be reflected in an updated Privacy Policy before it takes effect. The \"Last updated\" date above will be revised."
+              "text": "任何影响所收集数据或数据处理方式的变更,都会在生效前反映在更新后的隐私政策中。上述\"最后更新\"日期也将随之更新。"
             }
           ]
         },
         {
-          "heading": "Contact",
+          "heading": "联系方式",
           "blocks": [
             {
               "type": "p",
-              "text": "For questions about this policy or to request account deletion, email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+              "text": "如对本政策有任何疑问,或希望请求删除账户,请发送电子邮件至 [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question),或通过 [Discord](https://discord.com/users/1172891214580830322) 与我们联系。"
             }
           ]
         }
       ]
     },
     "terms": {
-      "title": "Terms of Service",
-      "updated": "Last updated: 9 August 2026",
-      "intro": "These Terms of Service (\"Terms\") govern your use of the Red News – Economic Calendar for TradingView browser extension, the website at rednews.app, and any related services (together, the \"Service\"), provided by the developer of Red News (\"we\", \"us\", \"our\"). By installing or using the Service, you agree to these Terms. If you do not agree, do not use the Service.",
+      "title": "服务条款",
+      "updated": "最后更新：2026年8月9日",
+      "intro": "本服务条款（以下简称\"本条款\"）规范您对 Red News – Economic Calendar for TradingView 浏览器扩展程序、rednews.app 网站以及任何相关服务(合称\"本服务\")的使用,本服务由 Red News 的开发者(\"我们\")提供。安装或使用本服务即表示您同意本条款。如果您不同意,请不要使用本服务。",
       "sections": [
         {
-          "heading": "1. The Service",
+          "heading": "1. 本服务",
           "blocks": [
             {
               "type": "p",
-              "text": "Red News is a browser extension that overlays scheduled economic-calendar events, sourced from the public Forex Factory calendar, onto TradingView chart pages. It draws event lines, shows event details, and can alert you before releases. Red News is an independent tool and is not affiliated with, endorsed by, or sponsored by TradingView or Forex Factory."
+              "text": "Red News 是一款浏览器扩展程序,它将来自 Forex Factory 公开经济日历的预定经济事件,叠加显示在 TradingView 图表页面上。它会绘制事件线、显示事件详情,并可在数据公布前向您发出提醒。Red News 是一款独立工具,与 TradingView 或 Forex Factory 无任何关联、认可或赞助关系。"
             }
           ]
         },
         {
-          "heading": "2. Not financial advice",
+          "heading": "2. 非财务建议",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service displays informational data about scheduled economic events. It does not provide trading signals, investment recommendations, or financial advice, and nothing it shows should be relied upon as such. Economic data may be delayed, incomplete, or inaccurate. Trading and investing carry risk, including the loss of capital. You are solely responsible for your own trading decisions."
+              "text": "本服务显示有关预定经济事件的信息性数据。它不提供交易信号、投资建议或财务咨询意见,其所展示的任何内容均不应被视为此类依据。经济数据可能存在延迟、不完整或不准确的情况。交易和投资存在风险,包括本金损失的风险。您应对自己的交易决策承担全部责任。"
             }
           ]
         },
         {
-          "heading": "3. Accounts",
+          "heading": "3. 账户",
           "blocks": [
             {
               "type": "p",
-              "text": "The free tier works without an account. To start a Premium trial or subscribe, you sign in with Google, which provides us your name, email address, and account identifier. You are responsible for maintaining the security of the Google account you use and for all activity under your Red News entitlement. You must be at least 18 years old, or the age of majority in your jurisdiction, to purchase Premium."
+              "text": "免费版本无需账户即可使用。要开始 Premium 试用或订阅,您需要使用 Google 账户登录,该操作会向我们提供您的姓名、电子邮箱地址及账户标识符。您有责任维护您所使用 Google 账户的安全,并对在您 Red News 使用权限下发生的所有活动负责。购买 Premium 要求您年满 18 周岁,或达到您所在司法管辖区的法定成年年龄。"
             }
           ]
         },
         {
-          "heading": "4. Subscriptions, billing & trials",
+          "heading": "4. 订阅、计费及试用",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Free tier: the core extension is free to use.",
-                "Premium: available as a monthly (US$4.99) or annual (US$39) subscription. Prices are shown at checkout and may vary by region and applicable taxes.",
-                "Free trial: new users may start a 14-day Premium trial without a payment method. If you do not subscribe, the account simply reverts to the free tier when the trial ends. One trial per user.",
-                "Merchant of record: payments are processed by Paddle (Paddle.com Market Limited), which acts as the merchant of record for all purchases. Your purchase is also subject to Paddle's buyer terms. Card and billing details are entered on Paddle's checkout and are never received or stored by us.",
-                "Auto-renewal: paid subscriptions renew automatically at the end of each billing period until cancelled. By subscribing, you authorise recurring charges through Paddle.",
-                "Price changes: we may change subscription prices. Any change to your recurring price will be communicated in advance and will apply from your next renewal."
+                "免费版本:核心扩展程序功能可免费使用。",
+                "Premium:提供按月(US$4.99)或按年(US$39)的订阅方式。价格会在结账时显示,并可能因地区及适用税费而有所不同。",
+                "免费试用:新用户可以在无需提供支付方式的情况下开始 14 天的 Premium 试用。若您未订阅,账户将在试用结束时自动恢复为免费版本。每位用户仅可试用一次。",
+                "记录商户:所有购买的支付均由 Paddle(Paddle.com Market Limited)处理,Paddle 担任所有购买的记录商户。您的购买行为同时也受 Paddle 买方条款的约束。银行卡及账单信息会在 Paddle 的结账页面中输入,我们不会接收或存储这些信息。",
+                "自动续订:付费订阅将在每个计费周期结束时自动续订,直至取消。订阅即表示您授权通过 Paddle 进行的周期性扣款。",
+                "价格变更:我们可能会更改订阅价格。您的周期性价格如有任何变更,将提前通知您,并从您的下一个续订周期开始生效。"
               ]
             }
           ]
         },
         {
-          "heading": "5. Cancellation & refunds",
+          "heading": "5. 取消与退款",
           "blocks": [
             {
               "type": "p",
-              "text": "You can cancel at any time using the Manage subscription option in the extension. On cancellation you keep Premium access until the end of the period you have already paid for; it does not renew after that. Refunds are handled as described in our Refund Policy."
+              "text": "您可以随时使用扩展程序内的 Manage subscription(管理订阅)选项取消订阅。取消后,您将保留 Premium 使用权限直至您已付费期限结束;此后订阅不会再续订。退款按照我们退款政策中所述的方式处理。"
             }
           ]
         },
         {
-          "heading": "6. Acceptable use",
+          "heading": "6. 可接受的使用方式",
           "blocks": [
             {
               "type": "p",
-              "text": "You agree not to:"
+              "text": "您同意不进行以下行为:"
             },
             {
               "type": "ul",
               "items": [
-                "reverse engineer, decompile, or attempt to extract the source or server logic of the Service, except where permitted by law;",
-                "resell, sublicense, or redistribute the Service or the data it delivers;",
-                "circumvent entitlement checks, device limits, or use the Service without a valid entitlement;",
-                "use the Service to build a competing product, or to place undue load on our backend;",
-                "use the Service in any unlawful way or in violation of third-party rights."
+                "对本服务进行反向工程、反编译,或试图提取其源代码或服务器逻辑,除非法律允许;",
+                "转售、再授权或再分发本服务或其提供的数据;",
+                "规避使用权限检查、设备数量限制,或在没有有效使用权限的情况下使用本服务;",
+                "利用本服务构建竞争性产品,或对我们的后端造成不当负载;",
+                "以任何非法方式或侵犯第三方权利的方式使用本服务。"
               ]
             }
           ]
         },
         {
-          "heading": "7. Intellectual property",
+          "heading": "7. 知识产权",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service, including its code, design, and branding, is owned by us and protected by applicable laws. We grant you a limited, non-exclusive, non-transferable, revocable licence to use the Service for your personal trading, subject to these Terms. Economic data originates from the public Forex Factory calendar and remains subject to any rights of its source. \"TradingView\" and \"Forex Factory\" are trademarks of their respective owners."
+              "text": "本服务(包括其代码、设计及品牌标识)归我们所有,并受适用法律保护。根据本条款,我们授予您一项有限的、非独占的、不可转让且可撤销的许可,允许您为个人交易目的使用本服务。经济数据来源于 Forex Factory 的公开日历,并继续受其数据源所享有的任何权利约束。\"TradingView\"及\"Forex Factory\"分别为其各自所有者的商标。"
             }
           ]
         },
         {
-          "heading": "8. Third-party services",
+          "heading": "8. 第三方服务",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service relies on third parties including TradingView (the host page), Forex Factory (data source), Supabase (backend and authentication), Google (sign-in), and Paddle (payments). We are not responsible for the availability, content, or practices of these third parties, and your use of them is subject to their own terms."
+              "text": "本服务依赖包括 TradingView(宿主页面)、Forex Factory(数据来源)、Supabase(后端及身份验证)、Google(登录)以及 Paddle(支付)等第三方服务。我们不对这些第三方的可用性、内容或行为承担责任,您对其的使用将受各自条款的约束。"
             }
           ]
         },
         {
-          "heading": "9. Disclaimers",
+          "heading": "9. 免责声明",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service is provided \"as is\" and \"as available\", without warranties of any kind, whether express or implied, including fitness for a particular purpose, accuracy, or uninterrupted availability. We do not warrant that event data will be timely, complete, or error-free, or that the Service will always function with TradingView."
+              "text": "本服务按\"现状\"(as is)及\"现有可用状态\"(as available)提供,不附带任何明示或暗示的保证,包括特定用途适用性、准确性或不间断可用性方面的保证。我们不保证事件数据将及时、完整或无误,也不保证本服务将始终与 TradingView 正常配合运行。"
             }
           ]
         },
         {
-          "heading": "10. Limitation of liability",
+          "heading": "10. 责任限制",
           "blocks": [
             {
               "type": "p",
-              "text": "To the maximum extent permitted by law, we will not be liable for any indirect, incidental, special, or consequential damages, or for any trading losses, lost profits, or lost data, arising from your use of or inability to use the Service. Our total liability for any claim relating to the Service will not exceed the amount you paid us for the Service in the twelve months preceding the claim."
+              "text": "在法律允许的最大范围内,我们对因您使用或无法使用本服务而产生的任何间接、附带、特殊或后果性损害,或任何交易损失、利润损失或数据丢失,均不承担责任。就与本服务相关的任何索赔,我们的总责任不超过您在索赔发生前十二个月内为本服务向我们支付的金额。"
             }
           ]
         },
         {
-          "heading": "11. Termination",
+          "heading": "11. 终止",
           "blocks": [
             {
               "type": "p",
-              "text": "You may stop using the Service at any time by uninstalling the extension and, if applicable, cancelling your subscription. We may suspend or terminate access if you breach these Terms or misuse the Service. You may request deletion of your account data as described in our Privacy Policy."
+              "text": "您可以随时通过卸载本扩展程序并(如适用)取消订阅,来停止使用本服务。如果您违反本条款或滥用本服务,我们可以暂停或终止您的访问权限。您可以按照我们隐私政策中所述的方式,请求删除您的账户数据。"
             }
           ]
         },
         {
-          "heading": "12. Changes to these Terms",
+          "heading": "12. 本条款的变更",
           "blocks": [
             {
               "type": "p",
-              "text": "We may update these Terms from time to time. Material changes will be reflected here with a revised \"Last updated\" date. Continued use of the Service after changes take effect constitutes acceptance of the updated Terms."
+              "text": "我们可能会不定期更新本条款。重大变更将以更新后的\"最后更新\"日期反映在此处。变更生效后继续使用本服务即视为您接受更新后的条款。"
             }
           ]
         },
         {
-          "heading": "13. Governing law",
+          "heading": "13. 适用法律",
           "blocks": [
             {
               "type": "p",
-              "text": "These Terms are governed by the laws of Ukraine, without regard to conflict-of-law rules, except where mandatory consumer-protection laws of your country of residence apply. Purchases are additionally subject to the terms of Paddle as merchant of record."
+              "text": "本条款受乌克兰法律管辖,不适用法律冲突规则,但您居住国家/地区强制性消费者保护法律另有规定的除外。购买行为还将进一步受 Paddle 作为记录商户所适用条款的约束。"
             }
           ]
         },
         {
-          "heading": "14. Contact",
+          "heading": "14. 联系方式",
           "blocks": [
             {
               "type": "p",
-              "text": "Questions about these Terms? Email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+              "text": "对本条款有疑问?请发送电子邮件至 [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question),或通过 [Discord](https://discord.com/users/1172891214580830322) 与我们联系。"
             }
           ]
         }
       ]
     },
     "refund": {
-      "title": "Refund Policy",
-      "updated": "Last updated: 9 August 2026",
-      "intro": "We want you to be happy with Red News Premium. This policy explains how trials, cancellations, and refunds work. Payments are processed by Paddle, our merchant of record, so refunds are issued through Paddle to your original payment method.",
+      "title": "退款政策",
+      "updated": "最后更新：2026年8月9日",
+      "intro": "我们希望您对 Red News Premium 感到满意。本政策说明了试用、取消及退款的运作方式。支付由我们的记录商户 Paddle 处理,因此退款将通过 Paddle 退回至您原始的支付方式。",
       "sections": [
         {
-          "heading": "Try before you pay",
+          "heading": "先试用,后付费",
           "blocks": [
             {
               "type": "p",
-              "text": "Every new user can start a 14-day Premium trial with no payment method required. The trial is long enough to span a major economic release, so you can fully evaluate Premium before you are ever charged. We encourage you to use it."
+              "text": "每位新用户都可以在无需提供支付方式的情况下开始 14 天的 Premium 试用。该试用期足够长,可以覆盖一次重要的经济数据公布,因此您可以在被收取任何费用之前充分评估 Premium 功能。我们建议您善加利用这段试用期。"
             }
           ]
         },
         {
-          "heading": "14-day money-back guarantee",
+          "heading": "14 天无条件退款保证",
           "blocks": [
             {
               "type": "p",
-              "text": "If you subscribe and change your mind, you can request a full refund within 14 days of your first payment, no questions asked. This applies to the initial charge on a monthly or annual plan."
+              "text": "如果您订阅后改变主意,可以在首次付款后 14 天内申请全额退款,无需说明理由。此项政策适用于月度或年度套餐的首次收费。"
             }
           ]
         },
         {
-          "heading": "Renewals",
+          "heading": "续订",
           "blocks": [
             {
               "type": "p",
-              "text": "Subscriptions renew automatically. To avoid a renewal charge, cancel before your renewal date using the Manage subscription button in the extension. After cancellation you keep Premium until the end of the period you have already paid for. Renewal charges are generally non-refundable, but if you were charged for a renewal you did not intend to keep and reach out promptly, contact us. We review these case by case and aim to be fair."
+              "text": "订阅会自动续订。为避免续订收费,请在续订日期前使用扩展程序内的 Manage subscription(管理订阅)按钮取消订阅。取消后,您将保留 Premium 权限直至已付费期限结束。续订费用通常不予退款,但如果您被收取了并不打算继续使用的续订费用,并及时与我们联系,请与我们取得联系。我们会针对每个案例逐一审核,并力求公平处理。"
             }
           ]
         },
         {
-          "heading": "How to request a refund",
+          "heading": "如何申请退款",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Reply to the Paddle receipt email you received for the purchase, or",
-                "email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request) with the email address used at checkout, or",
-                "reach us on [Discord](https://discord.com/users/1172891214580830322)."
+                "回复您购买时收到的 Paddle 收据邮件,或",
+                "使用结账时所用的电子邮箱地址,发送电子邮件至 [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request),或",
+                "通过 [Discord](https://discord.com/users/1172891214580830322) 与我们联系。"
               ]
             },
             {
               "type": "p",
-              "text": "Approved refunds are processed by Paddle back to your original payment method, typically within 5 to 10 business days depending on your bank or card provider."
+              "text": "获批的退款将由 Paddle 处理并退回至您原始的支付方式,具体到账时间通常为 5 至 10 个工作日,视您的银行或发卡机构而定。"
             }
           ]
         },
         {
-          "heading": "Statutory rights",
+          "heading": "法定权利",
           "blocks": [
             {
               "type": "p",
-              "text": "Nothing in this policy limits any refund or cancellation rights you may have under the consumer-protection laws of your country of residence, or under Paddle's own buyer terms as merchant of record."
+              "text": "本政策中的任何内容均不会限制您依据所居住国家/地区消费者保护法律,或依据 Paddle 作为记录商户自身的买方条款,所可能享有的任何退款或取消权利。"
             }
           ]
         }
       ],
-      "closing": "Questions before you buy? We're happy to help: email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing) or message us on [Discord](https://discord.com/users/1172891214580830322)."
+      "closing": "购买前有疑问吗?我们很乐意为您提供帮助:请发送电子邮件至 [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing),或通过 [Discord](https://discord.com/users/1172891214580830322) 给我们留言。"
     }
   },
   "notFound": {

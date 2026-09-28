@@ -242,7 +242,7 @@
       },
       {
         "q": "満足できなかった場合は？",
-        "a": "月額または年額でお支払いいただいた場合、30日間の返金期間をご用意しています。詳細は返金ページをご覧ください。"
+        "a": "月額または年額でお支払いいただいた場合、14日間の返金期間をご用意しています。詳細は返金ページをご覧ください。"
       }
     ]
   },
@@ -279,395 +279,395 @@
   },
   "legal": {
     "privacy": {
-      "title": "Privacy Policy",
-      "updated": "Last updated: 19 September 2026",
-      "intro": "Red News – Economic Calendar for TradingView (\"the extension\") displays economic-calendar news from Forex Factory on TradingView charts. It offers a free tier that works without an account, and an optional Premium tier that requires signing in. This policy explains what data the extension processes.",
+      "title": "プライバシーポリシー",
+      "updated": "最終更新日：2026年9月19日",
+      "intro": "Red News – Economic Calendar for TradingView（以下「本拡張機能」）は、Forex Factoryの経済カレンダー情報をTradingViewのチャート上に表示します。本拡張機能には、アカウント登録なしで利用できる無料プランと、サインインが必要な任意のPremiumプランがあります。本ポリシーでは、本拡張機能が処理するデータについて説明します。",
       "sections": [
         {
-          "heading": "Data we collect",
+          "heading": "収集する情報",
           "blocks": [
             {
               "type": "p",
-              "text": "Free tier (no account): the extension does not collect names, credentials, browsing history, or advertising identifiers. It requests economic-calendar data through our own backend (see \"Our backend\" below); as with any network request, our backend receives your IP address in the normal course of delivering the response. We do not use this for advertising, profiling, or cross-site tracking, and we do not sell your data."
+              "text": "無料プラン（アカウント登録なし）：本拡張機能は、氏名、認証情報、閲覧履歴、広告識別子を収集しません。本拡張機能は当社独自のバックエンド（下記「当社のバックエンド」参照）を通じて経済カレンダーのデータを取得します。通常のネットワークリクエストと同様に、当社のバックエンドは応答を返す通常の過程でお客様のIPアドレスを受信します。当社はこの情報を広告、プロファイリング、またはクロスサイトトラッキングに使用せず、お客様のデータを販売することもありません。"
             },
             {
               "type": "p",
-              "text": "Premium tier (with account): if you choose to sign in, we collect and store:"
+              "text": "Premiumプラン（アカウント登録あり）：サインインを選択された場合、当社は以下を収集・保存します。"
             },
             {
               "type": "ul",
               "items": [
-                "your email address, name, and Google account identifier, obtained through Google sign-in, to create and identify your account and to show your name in the extension;",
-                "your subscription / entitlement status (free, trial, or premium);",
-                "a random per-installation identifier used to associate your installation with your account and to apply reasonable device limits."
+                "Googleサインインを通じて取得される、お客様のメールアドレス、氏名、Googleアカウント識別子（アカウントの作成・識別、および拡張機能内での氏名表示のために使用します）",
+                "お客様のサブスクリプション／利用資格の状態（無料、トライアル、またはPremium）",
+                "インストールごとに割り当てられるランダムな識別子（お客様のインストールをアカウントに関連付け、合理的な範囲でデバイス数の制限を適用するために使用します）"
               ]
             },
             {
               "type": "p",
-              "text": "We collect this only after you actively sign in, and only to provide the account and Premium functionality. You can stop this at any time by signing out."
+              "text": "これらの情報は、お客様が自ら能動的にサインインした後にのみ、かつアカウント機能およびPremium機能を提供する目的でのみ収集します。サインアウトすることで、いつでも収集を停止できます。"
             }
           ]
         },
         {
-          "heading": "Our backend",
+          "heading": "当社のバックエンド",
           "blocks": [
             {
               "type": "p",
-              "text": "Economic-calendar data and subscription checks are served by our backend hosted on Supabase (authentication, database, and server functions). The extension communicates only with our backend and with TradingView; it does not contact Forex Factory directly. Our backend fetches the public Forex Factory calendar on the server side and returns it to the extension."
+              "text": "経済カレンダーのデータおよびサブスクリプションの確認は、Supabase上（認証、データベース、サーバー機能）でホストされている当社のバックエンドによって提供されます。本拡張機能は当社のバックエンドおよびTradingViewとのみ通信し、Forex Factoryに直接アクセスすることはありません。当社のバックエンドがサーバー側でForex Factoryの公開カレンダーを取得し、これを本拡張機能に返します。"
             }
           ]
         },
         {
-          "heading": "What the extension accesses",
+          "heading": "本拡張機能がアクセスする範囲",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "TradingView chart pages (*.tradingview.com/chart/*): the extension reads the current chart symbol, timeframe, and timezone in order to draw the economic-news lines, labels, and tooltips on the chart. No other part of the site is accessed.",
-                "Our backend (hsoaqylcrmspyckkndab.supabase.co): the extension requests economic-calendar data and, if you are signed in, verifies your subscription status.",
-                "An AI provider of your choice (generativelanguage.googleapis.com, api.groq.com or openrouter.ai): only if you connect one with your own API key, and only to request an explanation of a release you asked about. These are optional permissions — the extension has no access to any of them until you press \"Connect\". See AI explanations below."
+                "TradingViewのチャートページ（*.tradingview.com/chart/*）：本拡張機能は、経済ニュースの線・ラベル・ツールチップをチャート上に描画するために、現在のチャートのシンボル、時間枠、タイムゾーンを読み取ります。サイトの他の部分にはアクセスしません。",
+                "当社のバックエンド（hsoaqylcrmspyckkndab.supabase.co）：本拡張機能は経済カレンダーのデータをリクエストし、サインイン済みの場合はお客様のサブスクリプション状態を確認します。",
+                "お客様が選択したAIプロバイダー（generativelanguage.googleapis.com、api.groq.com、またはopenrouter.ai）：お客様が自身のAPIキーで接続した場合に限り、お問い合わせのあったイベントの説明をリクエストする目的でのみ使用します。これらは任意の権限であり、お客様が「Connect」を押すまで本拡張機能はこれらのいずれにもアクセスできません。詳細は下記「AIによる解説」をご覧ください。"
               ]
             }
           ]
         },
         {
-          "heading": "Local storage",
+          "heading": "ローカルストレージ",
           "blocks": [
             {
               "type": "p",
-              "text": "The extension uses your browser's local storage (chrome.storage.local) to save your settings (filters, labels, alerts, timezone, language, theme), a short-lived cache of the fetched calendar data, and, if you sign in, your session tokens and account/subscription status. If you connect an AI provider, it also stores your API key and a short-lived cache of the explanations you have already received. Signing out or uninstalling removes this local data; \"Remove key\" removes the AI entries immediately."
+              "text": "本拡張機能は、お使いのブラウザのローカルストレージ（chrome.storage.local）を使用して、お客様の設定（フィルター、ラベル、アラート、タイムゾーン、言語、テーマ）、取得したカレンダーデータの短期キャッシュ、およびサインイン時にはセッショントークンとアカウント／サブスクリプションの状態を保存します。AIプロバイダーを接続した場合は、APIキーと、すでに受け取った解説の短期キャッシュも保存します。サインアウトまたはアンインストールにより、これらのローカルデータは削除されます。「Remove key」を押すと、AI関連のデータは直ちに削除されます。"
             }
           ]
         },
         {
-          "heading": "Payments",
+          "heading": "お支払い",
           "blocks": [
             {
               "type": "p",
-              "text": "If you purchase Premium, payment is processed by Paddle, which acts as the merchant of record. Your card and billing details are entered on Paddle's secure checkout and are never received or stored by us. We only receive your resulting subscription status."
+              "text": "Premiumをご購入いただく場合、決済はPaddleが処理し、Paddleが販売者（merchant of record）として機能します。カード情報およびお支払い情報はPaddleの安全なチェックアウト画面で入力され、当社が受け取ったり保存したりすることは一切ありません。当社が受け取るのは、その結果としてのサブスクリプション状態のみです。"
             }
           ]
         },
         {
-          "heading": "Notifications",
+          "heading": "通知",
           "blocks": [
             {
               "type": "p",
-              "text": "With your permission, the extension shows an operating-system notification a chosen number of minutes before high-impact economic releases. Notifications are generated locally from calendar event times and are not used for messaging or marketing."
+              "text": "お客様の許可のもとで、本拡張機能は、影響度の高い経済指標の発表前、指定した分数前にオペレーティングシステムの通知を表示します。通知はカレンダーのイベント時刻からローカルで生成されるものであり、メッセージ送信やマーケティングには使用されません。"
             }
           ]
         },
         {
-          "heading": "Telegram alerts (optional, Premium)",
+          "heading": "Telegramアラート（任意、Premium）",
           "blocks": [
             {
               "type": "p",
-              "text": "Premium users can connect a Telegram account to receive news alerts on their phone, including while their computer is off. This is entirely optional and off until you connect it. When you connect, we store on our backend your Telegram chat ID and username (supplied by Telegram when you start our bot), together with your alert preferences: impact levels, currencies, how many minutes ahead to warn you, your time zone, and any quiet hours. We use them for one purpose — deciding which alerts to send you and when — and messages are delivered through Telegram's own servers, so Telegram's privacy policy applies to their delivery. We keep a short record of which events were already sent to you so the same alert is not repeated; those records are deleted after about two days. You can disconnect at any time by blocking the bot in Telegram, and we delete the stored Telegram data when you delete your account."
+              "text": "Premiumユーザーは、Telegramアカウントを接続することで、パソコンの電源が入っていない場合でも、スマートフォンでニュースアラートを受け取ることができます。この機能は完全に任意であり、接続するまでは無効です。接続すると、当社のバックエンドにお客様のTelegramのチャットIDとユーザー名（当社のボットを開始した際にTelegramから提供されるもの）に加え、アラートの設定内容（影響度レベル、通貨、事前通知の分数、タイムゾーン、および設定した通知しない時間帯）を保存します。これらは、お客様にいつどのアラートを送信するかを判断するという単一の目的にのみ使用され、メッセージ自体はTelegram自身のサーバーを通じて配信されるため、その配信にはTelegramのプライバシーポリシーが適用されます。同じアラートが繰り返し送信されないよう、送信済みのイベントについて簡単な記録を保持しますが、これらの記録は約2日後に削除されます。Telegram上でボットをブロックすることでいつでも接続を解除でき、アカウントを削除した場合には保存されたTelegramデータも削除されます。"
             }
           ]
         },
         {
-          "heading": "AI explanations (optional, Premium, your own provider)",
+          "heading": "AIによる解説（任意、Premium、ご自身で選択するプロバイダー）",
           "blocks": [
             {
               "type": "p",
-              "text": "Premium users can connect their own AI provider — Google Gemini, Groq or OpenRouter — and press ✨ next to a release to get a plain-language briefing. This is entirely optional and does nothing until you paste your own API key. A step-by-step guide is at [rednews.app/ai](https://rednews.app/ai)."
+              "text": "Premiumユーザーは、Google Gemini、Groq、またはOpenRouterといった任意のAIプロバイダーを自ら接続し、イベントの横にある✨を押すことで、平易な言葉による解説を得ることができます。この機能は完全に任意であり、お客様自身のAPIキーを貼り付けるまでは何も行いません。手順の詳細は[rednews.app/ai](https://rednews.app/ai)をご覧ください。"
             },
             {
               "type": "p",
-              "text": "Your API key stays in your browser. It is kept in local storage on this computer, is never synchronised to other devices, and is never sent to our backend. \"Remove key\" deletes the key, deletes the cached answers, and withdraws the extension's permission to contact the provider."
+              "text": "APIキーはお客様のブラウザ内に保持されます。このパソコンのローカルストレージに保存され、他のデバイスと同期されることはなく、当社のバックエンドに送信されることもありません。「Remove key」を押すと、キーが削除され、キャッシュされた回答も削除され、拡張機能がそのプロバイダーと通信する権限も取り消されます。"
             },
             {
               "type": "p",
-              "text": "Requests go straight from your browser to the provider you chose. They do not pass through our servers. We cannot see what you asked or what the model answered."
+              "text": "リクエストは、お客様のブラウザから選択したプロバイダーへ直接送信されます。当社のサーバーを経由することはありません。当社は、お客様が何を尋ねたか、またモデルが何を回答したかを確認することはできません。"
             },
             {
               "type": "p",
-              "text": "What is sent: the scheduled release itself — title, currency, impact level, scheduled time in UTC, and its forecast, previous and actual values — up to six earlier prints of that same release taken from the extension's own calendar history, and the language the answer should be written in. Your API key travels in the request's authorisation header, as the provider requires. Nothing else is included: no name or email, no account or subscription details, no chart symbol, no browsing history, and no text you type."
+              "text": "送信される内容：対象となる予定発表そのもの（タイトル、通貨、影響度レベル、UTCでの発表予定時刻、および予想値・前回値・実際値）、本拡張機能自身のカレンダー履歴から取得した、同じ発表項目の直近最大6回分のデータ、そして回答を作成すべき言語です。お客様のAPIキーは、プロバイダーが求める方式に従い、リクエストの認証ヘッダーに含めて送信されます。それ以外の情報は一切含まれません。氏名やメールアドレス、アカウントやサブスクリプションの詳細、チャートのシンボル、閲覧履歴、お客様が入力したテキストなどは送信されません。"
             },
             {
               "type": "p",
-              "text": "The provider's own privacy policy governs what it does with that request. Providers differ: some state that they do not retain or train on API traffic by default, while others may use free-tier traffic to improve their products. The current position of each supported provider is summarised on the setup page, but you should read your provider's own terms."
+              "text": "そのリクエストに対して各プロバイダーが何を行うかは、各プロバイダー自身のプライバシーポリシーによって定められます。プロバイダーによって方針は異なり、一部はデフォルトでAPI通信のデータを保持または学習に使用しないとしていますが、他のプロバイダーは無料プランでの通信を製品改善に利用する場合があります。対応する各プロバイダーの現時点での方針は設定ページにまとめていますが、実際にはご自身が利用するプロバイダーの規約をご確認ください。"
             },
             {
               "type": "p",
-              "text": "Answers are cached locally for up to seven days (at most sixty of them) so that reopening the same event does not spend your quota again. The cache never leaves your browser."
+              "text": "回答は最長7日間（最大60件まで）ローカルにキャッシュされ、同じイベントを再度開いた際に利用枠を再度消費しないようにしています。このキャッシュはお客様のブラウザの外に出ることはありません。"
             },
             {
               "type": "p",
-              "text": "Access is granted per provider, at the moment you connect. The three provider addresses are optional permissions: Chrome asks for your consent when you press \"Connect\", and until then the extension cannot reach any of them."
+              "text": "アクセス権限はプロバイダーごとに、接続した時点で付与されます。3つのプロバイダーのアドレスはいずれも任意の権限であり、Chromeは「Connect」を押した際にお客様の同意を求め、それまで本拡張機能はいずれにもアクセスできません。"
             }
           ]
         },
         {
-          "heading": "Feedback",
+          "heading": "フィードバック",
           "blocks": [
             {
               "type": "p",
-              "text": "If you send feedback through the extension (\"Report a problem, idea, or partnership\"), the message you type, an optional email address, and basic non-personal context (the extension version, your browser, and your interface language) are sent through Web3Forms, a third-party form-delivery service, which forwards them to the developer by email. This happens only when you press Send."
+              "text": "本拡張機能を通じてフィードバック（「Report a problem, idea, or partnership」）を送信された場合、入力されたメッセージ、任意で入力されたメールアドレス、および個人を特定しない基本的な情報（拡張機能のバージョン、ブラウザ、インターフェースの言語）が、サードパーティのフォーム送信サービスであるWeb3Formsを通じて送信され、開発者にメールで転送されます。これは、お客様がSendを押した場合にのみ発生します。"
             }
           ]
         },
         {
-          "heading": "Third-party services",
+          "heading": "サードパーティサービス",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Supabase hosts our backend (authentication, database, server functions) that serves calendar data and stores your account/subscription status.",
-                "Google provides the sign-in through which we obtain your name, email, and account identifier.",
-                "Paddle processes Premium payments as merchant of record; card data never reaches us.",
-                "Forex Factory is the source of the public economic-calendar data, fetched by our backend.",
-                "Web3Forms delivers feedback you choose to send.",
-                "Telegram delivers the optional Premium alerts to users who connect our bot.",
-                "Google (Gemini API), Groq, OpenRouter are AI providers a Premium user may connect with their own API key. We hold no account or contract with them on your behalf; your browser talks to whichever one you chose, directly, and only for the explanations you request."
+                "Supabase：カレンダーデータの提供およびアカウント／サブスクリプション状態の保存を行う当社のバックエンド（認証、データベース、サーバー機能）をホストしています。",
+                "Google：当社が氏名、メールアドレス、アカウント識別子を取得するためのサインイン機能を提供しています。",
+                "Paddle：merchant of recordとしてPremiumの決済を処理します。カード情報が当社に届くことはありません。",
+                "Forex Factory：公開されている経済カレンダーデータの提供元であり、当社のバックエンドがこれを取得します。",
+                "Web3Forms：お客様が送信を選択したフィードバックを配信します。",
+                "Telegram：当社のボットを接続したユーザーに対し、任意のPremiumアラートを配信します。",
+                "Google（Gemini API）、Groq、OpenRouter：Premiumユーザーが自身のAPIキーで接続できるAIプロバイダーです。当社はお客様に代わってこれらとアカウントや契約を持つことはありません。お客様のブラウザは、選択したプロバイダーと直接通信し、リクエストした解説の取得のみを目的として通信します。"
               ]
             },
             {
               "type": "p",
-              "text": "Each third party processes data subject to its own privacy policy."
+              "text": "各サードパーティは、それぞれ自身のプライバシーポリシーに従ってデータを処理します。"
             }
           ]
         },
         {
-          "heading": "Your choices and rights",
+          "heading": "お客様の選択と権利",
           "blocks": [
             {
               "type": "p",
-              "text": "The free tier works without an account. If you have signed in, you can sign out at any time, and you may request deletion of your account data by contacting us (see \"Contact\"). Deleting your account removes your stored email, name, account identifier, and subscription record."
+              "text": "無料プランはアカウントなしでご利用いただけます。サインイン済みの場合、いつでもサインアウトすることができ、当社に連絡することでアカウントデータの削除を依頼することができます（「お問い合わせ」参照）。アカウントを削除すると、保存されているメールアドレス、氏名、アカウント識別子、およびサブスクリプション記録が削除されます。"
             }
           ]
         },
         {
-          "heading": "Changes",
+          "heading": "変更",
           "blocks": [
             {
               "type": "p",
-              "text": "Any change that affects what data is collected or how it is processed will be reflected in an updated Privacy Policy before it takes effect. The \"Last updated\" date above will be revised."
+              "text": "収集するデータの内容またはその処理方法に影響を与える変更は、効力を生じる前に更新後のプライバシーポリシーに反映されます。上記の「最終更新日」の日付も更新されます。"
             }
           ]
         },
         {
-          "heading": "Contact",
+          "heading": "お問い合わせ",
           "blocks": [
             {
               "type": "p",
-              "text": "For questions about this policy or to request account deletion, email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+              "text": "本ポリシーに関するご質問、またはアカウント削除のご依頼は、[support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question)宛にメールでご連絡いただくか、[Discord](https://discord.com/users/1172891214580830322)にてお問い合わせください。"
             }
           ]
         }
       ]
     },
     "terms": {
-      "title": "Terms of Service",
-      "updated": "Last updated: 9 August 2026",
-      "intro": "These Terms of Service (\"Terms\") govern your use of the Red News – Economic Calendar for TradingView browser extension, the website at rednews.app, and any related services (together, the \"Service\"), provided by the developer of Red News (\"we\", \"us\", \"our\"). By installing or using the Service, you agree to these Terms. If you do not agree, do not use the Service.",
+      "title": "利用規約",
+      "updated": "最終更新日：2026年8月9日",
+      "intro": "本利用規約（以下「本規約」）は、Red News – Economic Calendar for TradingViewブラウザ拡張機能、rednews.appのウェブサイト、および関連するその他のサービス（総称して「本サービス」）の利用条件を定めるものであり、Red Newsの開発者（以下「当社」）により提供されます。本サービスをインストールまたは利用することにより、お客様は本規約に同意したものとみなされます。同意されない場合は、本サービスをご利用いただけません。",
       "sections": [
         {
-          "heading": "1. The Service",
+          "heading": "1. 本サービス",
           "blocks": [
             {
               "type": "p",
-              "text": "Red News is a browser extension that overlays scheduled economic-calendar events, sourced from the public Forex Factory calendar, onto TradingView chart pages. It draws event lines, shows event details, and can alert you before releases. Red News is an independent tool and is not affiliated with, endorsed by, or sponsored by TradingView or Forex Factory."
+              "text": "Red Newsは、Forex Factoryの公開経済カレンダーに基づく予定された経済指標イベントを、TradingViewのチャートページ上に重ねて表示するブラウザ拡張機能です。イベントの発表時刻を示す線を描画し、イベントの詳細を表示し、発表前にアラートを送ることができます。Red Newsは独立したツールであり、TradingViewまたはForex Factoryと提携、承認、またはスポンサー関係にあるものではありません。"
             }
           ]
         },
         {
-          "heading": "2. Not financial advice",
+          "heading": "2. 投資助言ではないこと",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service displays informational data about scheduled economic events. It does not provide trading signals, investment recommendations, or financial advice, and nothing it shows should be relied upon as such. Economic data may be delayed, incomplete, or inaccurate. Trading and investing carry risk, including the loss of capital. You are solely responsible for your own trading decisions."
+              "text": "本サービスは、予定された経済イベントに関する情報を表示するものです。取引シグナル、投資推奨、または金融に関する助言を提供するものではなく、表示される内容をそのようなものとして依拠すべきではありません。経済データには遅延、不完全、または不正確な点が含まれる可能性があります。取引および投資には、資本の損失を含むリスクが伴います。お客様自身の取引判断については、お客様が単独で責任を負います。"
             }
           ]
         },
         {
-          "heading": "3. Accounts",
+          "heading": "3. アカウント",
           "blocks": [
             {
               "type": "p",
-              "text": "The free tier works without an account. To start a Premium trial or subscribe, you sign in with Google, which provides us your name, email address, and account identifier. You are responsible for maintaining the security of the Google account you use and for all activity under your Red News entitlement. You must be at least 18 years old, or the age of majority in your jurisdiction, to purchase Premium."
+              "text": "無料プランはアカウントなしでご利用いただけます。Premiumのトライアルを開始したり、サブスクリプションを申し込む際には、Googleでサインインする必要があり、これによって当社はお客様の氏名、メールアドレス、アカウント識別子を取得します。お客様は、ご自身が使用するGoogleアカウントのセキュリティを維持する責任、およびRed Newsの利用資格の下で行われるすべての活動について責任を負います。Premiumを購入するには、18歳以上、またはお客様の管轄地域における成年年齢以上である必要があります。"
             }
           ]
         },
         {
-          "heading": "4. Subscriptions, billing & trials",
+          "heading": "4. サブスクリプション、決済およびトライアル",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Free tier: the core extension is free to use.",
-                "Premium: available as a monthly (US$4.99) or annual (US$39) subscription. Prices are shown at checkout and may vary by region and applicable taxes.",
-                "Free trial: new users may start a 14-day Premium trial without a payment method. If you do not subscribe, the account simply reverts to the free tier when the trial ends. One trial per user.",
-                "Merchant of record: payments are processed by Paddle (Paddle.com Market Limited), which acts as the merchant of record for all purchases. Your purchase is also subject to Paddle's buyer terms. Card and billing details are entered on Paddle's checkout and are never received or stored by us.",
-                "Auto-renewal: paid subscriptions renew automatically at the end of each billing period until cancelled. By subscribing, you authorise recurring charges through Paddle.",
-                "Price changes: we may change subscription prices. Any change to your recurring price will be communicated in advance and will apply from your next renewal."
+                "無料プラン：拡張機能の基本機能は無料でご利用いただけます。",
+                "Premium：月額（US$4.99）または年額（US$39）のサブスクリプションとして提供されます。価格はチェックアウト時に表示され、地域や適用される税により異なる場合があります。",
+                "無料トライアル：新規ユーザーは、お支払い方法の登録なしで14日間のPremiumトライアルを開始できます。トライアル期間中に申し込みをしない場合、トライアル終了時にアカウントは自動的に無料プランに戻ります。トライアルは1ユーザーにつき1回限りです。",
+                "Merchant of record：決済はPaddle（Paddle.com Market Limited）が処理し、すべての購入についてmerchant of recordとして機能します。お客様の購入は、Paddleの購入者向け規約にも従うものとします。カード情報およびお支払い情報はPaddleのチェックアウト画面で入力され、当社が受け取ったり保存したりすることは一切ありません。",
+                "自動更新：有料サブスクリプションは、解約されない限り、各支払い期間の終了時に自動的に更新されます。サブスクリプションに申し込むことにより、お客様はPaddleを通じた継続的な課金を承認したものとみなされます。",
+                "価格変更：当社はサブスクリプションの価格を変更することがあります。継続課金の価格に変更がある場合は、事前に通知され、お客様の次回更新時から適用されます。"
               ]
             }
           ]
         },
         {
-          "heading": "5. Cancellation & refunds",
+          "heading": "5. 解約および返金",
           "blocks": [
             {
               "type": "p",
-              "text": "You can cancel at any time using the Manage subscription option in the extension. On cancellation you keep Premium access until the end of the period you have already paid for; it does not renew after that. Refunds are handled as described in our Refund Policy."
+              "text": "お客様は、拡張機能内のManage subscriptionオプションを使用して、いつでも解約することができます。解約後も、お客様はすでにお支払い済みの期間の終了時までPremiumへのアクセスを維持でき、それ以降は更新されません。返金については、当社の返金ポリシーに記載の方法により処理されます。"
             }
           ]
         },
         {
-          "heading": "6. Acceptable use",
+          "heading": "6. 禁止事項",
           "blocks": [
             {
               "type": "p",
-              "text": "You agree not to:"
+              "text": "お客様は、以下のいずれの行為も行わないことに同意します。"
             },
             {
               "type": "ul",
               "items": [
-                "reverse engineer, decompile, or attempt to extract the source or server logic of the Service, except where permitted by law;",
-                "resell, sublicense, or redistribute the Service or the data it delivers;",
-                "circumvent entitlement checks, device limits, or use the Service without a valid entitlement;",
-                "use the Service to build a competing product, or to place undue load on our backend;",
-                "use the Service in any unlawful way or in violation of third-party rights."
+                "法律で許容される場合を除き、本サービスのソースコードまたはサーバーのロジックをリバースエンジニアリング、逆コンパイル、または抽出しようとする行為",
+                "本サービスまたはそれによって提供されるデータを再販、サブライセンス、または再配布する行為",
+                "利用資格の確認やデバイス数の制限を回避する行為、または有効な利用資格なしに本サービスを利用する行為",
+                "本サービスを利用して競合製品を構築する行為、または当社のバックエンドに不当な負荷をかける行為",
+                "本サービスを違法な方法で、または第三者の権利を侵害する方法で利用する行為"
               ]
             }
           ]
         },
         {
-          "heading": "7. Intellectual property",
+          "heading": "7. 知的財産権",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service, including its code, design, and branding, is owned by us and protected by applicable laws. We grant you a limited, non-exclusive, non-transferable, revocable licence to use the Service for your personal trading, subject to these Terms. Economic data originates from the public Forex Factory calendar and remains subject to any rights of its source. \"TradingView\" and \"Forex Factory\" are trademarks of their respective owners."
+              "text": "本サービス（そのコード、デザイン、ブランドを含む）は当社が所有し、適用される法律により保護されています。当社は、本規約に従い、お客様個人の取引目的のために本サービスを利用できる、限定的、非独占的、譲渡不可、かつ取消可能なライセンスをお客様に付与します。経済データはForex Factoryの公開カレンダーに由来し、その出典が有する権利に引き続き従うものとします。「TradingView」および「Forex Factory」は、それぞれの所有者の商標です。"
             }
           ]
         },
         {
-          "heading": "8. Third-party services",
+          "heading": "8. サードパーティサービス",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service relies on third parties including TradingView (the host page), Forex Factory (data source), Supabase (backend and authentication), Google (sign-in), and Paddle (payments). We are not responsible for the availability, content, or practices of these third parties, and your use of them is subject to their own terms."
+              "text": "本サービスは、TradingView（ホストページ）、Forex Factory（データソース）、Supabase（バックエンドおよび認証）、Google（サインイン）、Paddle（決済）を含む第三者サービスに依存しています。当社は、これら第三者サービスの可用性、内容、または取り扱いについて責任を負わず、これらの利用にはそれぞれ独自の規約が適用されます。"
             }
           ]
         },
         {
-          "heading": "9. Disclaimers",
+          "heading": "9. 免責事項",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service is provided \"as is\" and \"as available\", without warranties of any kind, whether express or implied, including fitness for a particular purpose, accuracy, or uninterrupted availability. We do not warrant that event data will be timely, complete, or error-free, or that the Service will always function with TradingView."
+              "text": "本サービスは、「現状有姿」（as is）および「提供可能な状態」（as available）で提供され、特定目的への適合性、正確性、または中断のない可用性を含め、明示または黙示のいかなる保証もありません。当社は、イベントデータが常に時宜を得たものであること、完全であること、誤りがないこと、または本サービスが常にTradingViewとともに機能することを保証しません。"
             }
           ]
         },
         {
-          "heading": "10. Limitation of liability",
+          "heading": "10. 責任の制限",
           "blocks": [
             {
               "type": "p",
-              "text": "To the maximum extent permitted by law, we will not be liable for any indirect, incidental, special, or consequential damages, or for any trading losses, lost profits, or lost data, arising from your use of or inability to use the Service. Our total liability for any claim relating to the Service will not exceed the amount you paid us for the Service in the twelve months preceding the claim."
+              "text": "法律で許容される最大限の範囲において、当社は、お客様が本サービスを利用したこと、または利用できなかったことから生じるいかなる間接的、偶発的、特別、または結果的損害、取引上の損失、利益の損失、またはデータの損失についても責任を負いません。本サービスに関連するいかなる請求についても、当社の責任総額は、当該請求が発生した日から遡って12か月間にお客様が本サービスに対して当社に支払った金額を超えないものとします。"
             }
           ]
         },
         {
-          "heading": "11. Termination",
+          "heading": "11. 契約の終了",
           "blocks": [
             {
               "type": "p",
-              "text": "You may stop using the Service at any time by uninstalling the extension and, if applicable, cancelling your subscription. We may suspend or terminate access if you breach these Terms or misuse the Service. You may request deletion of your account data as described in our Privacy Policy."
+              "text": "お客様は、拡張機能をアンインストールし、該当する場合はサブスクリプションを解約することで、いつでも本サービスの利用を停止することができます。当社は、お客様が本規約に違反した場合、または本サービスを不正に利用した場合、アクセスを停止または終了することができます。お客様は、当社のプライバシーポリシーに記載の方法により、アカウントデータの削除を依頼することができます。"
             }
           ]
         },
         {
-          "heading": "12. Changes to these Terms",
+          "heading": "12. 本規約の変更",
           "blocks": [
             {
               "type": "p",
-              "text": "We may update these Terms from time to time. Material changes will be reflected here with a revised \"Last updated\" date. Continued use of the Service after changes take effect constitutes acceptance of the updated Terms."
+              "text": "当社は、本規約を随時更新することがあります。重要な変更がある場合は、更新後の「最終更新日」とともに本ページに反映されます。変更の効力発生後も本サービスを継続してご利用いただいた場合、更新後の規約に同意したものとみなされます。"
             }
           ]
         },
         {
-          "heading": "13. Governing law",
+          "heading": "13. 適用法",
           "blocks": [
             {
               "type": "p",
-              "text": "These Terms are governed by the laws of Ukraine, without regard to conflict-of-law rules, except where mandatory consumer-protection laws of your country of residence apply. Purchases are additionally subject to the terms of Paddle as merchant of record."
+              "text": "本規約は、法の抵触に関する規則にかかわらず、ウクライナの法律に準拠します。ただし、お客様の居住国の強制的な消費者保護法が適用される場合はその法律が優先されます。購入には、merchant of recordとしてのPaddleの規約も別途適用されます。"
             }
           ]
         },
         {
-          "heading": "14. Contact",
+          "heading": "14. お問い合わせ",
           "blocks": [
             {
               "type": "p",
-              "text": "Questions about these Terms? Email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+              "text": "本規約に関するご質問は、[support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question)宛にメールでご連絡いただくか、[Discord](https://discord.com/users/1172891214580830322)にてお問い合わせください。"
             }
           ]
         }
       ]
     },
     "refund": {
-      "title": "Refund Policy",
-      "updated": "Last updated: 9 August 2026",
-      "intro": "We want you to be happy with Red News Premium. This policy explains how trials, cancellations, and refunds work. Payments are processed by Paddle, our merchant of record, so refunds are issued through Paddle to your original payment method.",
+      "title": "返金ポリシー",
+      "updated": "最終更新日：2026年8月9日",
+      "intro": "当社は、お客様にRed News Premiumをご満足いただきたいと考えています。本ポリシーでは、トライアル、解約、および返金の仕組みについて説明します。決済はmerchant of recordである当社のPaddleが処理するため、返金はPaddleを通じてお客様が使用した元のお支払い方法に対して行われます。",
       "sections": [
         {
-          "heading": "Try before you pay",
+          "heading": "お支払い前にお試しください",
           "blocks": [
             {
               "type": "p",
-              "text": "Every new user can start a 14-day Premium trial with no payment method required. The trial is long enough to span a major economic release, so you can fully evaluate Premium before you are ever charged. We encourage you to use it."
+              "text": "すべての新規ユーザーは、お支払い方法の登録を必要とせず、14日間のPremiumトライアルを開始できます。このトライアル期間は、主要な経済指標の発表を含むのに十分な長さがあるため、実際に課金される前にPremiumを十分に評価することができます。ぜひご利用ください。"
             }
           ]
         },
         {
-          "heading": "14-day money-back guarantee",
+          "heading": "14日間の返金保証",
           "blocks": [
             {
               "type": "p",
-              "text": "If you subscribe and change your mind, you can request a full refund within 14 days of your first payment, no questions asked. This applies to the initial charge on a monthly or annual plan."
+              "text": "サブスクリプションに申し込んだ後にお考えが変わった場合、初回のお支払いから14日以内であれば、理由を問わず全額の返金をご請求いただけます。これは、月額または年額プランにおける初回課金に適用されます。"
             }
           ]
         },
         {
-          "heading": "Renewals",
+          "heading": "更新について",
           "blocks": [
             {
               "type": "p",
-              "text": "Subscriptions renew automatically. To avoid a renewal charge, cancel before your renewal date using the Manage subscription button in the extension. After cancellation you keep Premium until the end of the period you have already paid for. Renewal charges are generally non-refundable, but if you were charged for a renewal you did not intend to keep and reach out promptly, contact us. We review these case by case and aim to be fair."
+              "text": "サブスクリプションは自動的に更新されます。更新に伴う課金を避けるには、拡張機能内のManage subscriptionボタンを使用して、更新日より前に解約してください。解約後も、すでにお支払い済みの期間の終了時までPremiumをご利用いただけます。更新時の課金は原則として返金対象外ですが、継続を意図していなかった更新について課金され、速やかにご連絡いただいた場合は、当社にご連絡ください。当社は個別に状況を確認し、公平な対応を心がけます。"
             }
           ]
         },
         {
-          "heading": "How to request a refund",
+          "heading": "返金の請求方法",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Reply to the Paddle receipt email you received for the purchase, or",
-                "email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request) with the email address used at checkout, or",
-                "reach us on [Discord](https://discord.com/users/1172891214580830322)."
+                "ご購入時に受け取ったPaddleの受領メールに返信する、または",
+                "チェックアウト時に使用したメールアドレスを記載して[support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request)宛にメールする、または",
+                "[Discord](https://discord.com/users/1172891214580830322)にてお問い合わせください。"
               ]
             },
             {
               "type": "p",
-              "text": "Approved refunds are processed by Paddle back to your original payment method, typically within 5 to 10 business days depending on your bank or card provider."
+              "text": "承認された返金は、Paddleを通じて元のお支払い方法に対して処理され、通常はご利用の銀行またはカード発行会社により5～10営業日程度かかります。"
             }
           ]
         },
         {
-          "heading": "Statutory rights",
+          "heading": "法定上の権利",
           "blocks": [
             {
               "type": "p",
-              "text": "Nothing in this policy limits any refund or cancellation rights you may have under the consumer-protection laws of your country of residence, or under Paddle's own buyer terms as merchant of record."
+              "text": "本ポリシーのいかなる内容も、お客様の居住国の消費者保護法、またはmerchant of recordとしてのPaddle自身の購入者向け規約に基づいてお客様が有する返金または解約に関する権利を制限するものではありません。"
             }
           ]
         }
       ],
-      "closing": "Questions before you buy? We're happy to help: email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing) or message us on [Discord](https://discord.com/users/1172891214580830322)."
+      "closing": "ご購入前にご質問がありますか。お気軽にお問い合わせください。[support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing)宛にメールをお送りいただくか、[Discord](https://discord.com/users/1172891214580830322)にてメッセージをお送りください。"
     }
   },
   "notFound": {

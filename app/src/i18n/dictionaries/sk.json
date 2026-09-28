@@ -242,7 +242,7 @@
       },
       {
         "q": "Čo ak nebudem spokojný?",
-        "a": "Ponúkame 30-dňovú lehotu na vrátenie peňazí, ak si zaplatil za mesiac alebo rok. Podrobnosti nájdeš na našej stránke Vrátenie peňazí."
+        "a": "Ponúkame 14-dňovú lehotu na vrátenie peňazí, ak si zaplatil za mesiac alebo rok. Podrobnosti nájdeš na našej stránke Vrátenie peňazí."
       }
     ]
   },
@@ -279,395 +279,395 @@
   },
   "legal": {
     "privacy": {
-      "title": "Privacy Policy",
-      "updated": "Last updated: 19 September 2026",
-      "intro": "Red News – Economic Calendar for TradingView (\"the extension\") displays economic-calendar news from Forex Factory on TradingView charts. It offers a free tier that works without an account, and an optional Premium tier that requires signing in. This policy explains what data the extension processes.",
+      "title": "Zásady ochrany osobných údajov",
+      "updated": "Posledná aktualizácia: 19. septembra 2026",
+      "intro": "Red News – Economic Calendar for TradingView (\"rozšírenie\") zobrazuje na grafoch TradingView správy z ekonomického kalendára Forex Factory. Ponúka bezplatnú verziu, ktorá funguje bez účtu, a voliteľnú verziu Premium, ktorá vyžaduje prihlásenie. Tieto zásady vysvetľujú, aké údaje rozšírenie spracúva.",
       "sections": [
         {
-          "heading": "Data we collect",
+          "heading": "Údaje, ktoré zhromažďujeme",
           "blocks": [
             {
               "type": "p",
-              "text": "Free tier (no account): the extension does not collect names, credentials, browsing history, or advertising identifiers. It requests economic-calendar data through our own backend (see \"Our backend\" below); as with any network request, our backend receives your IP address in the normal course of delivering the response. We do not use this for advertising, profiling, or cross-site tracking, and we do not sell your data."
+              "text": "Bezplatná verzia (bez účtu): rozšírenie nezhromažďuje mená, prihlasovacie údaje, históriu prehliadania ani reklamné identifikátory. Údaje ekonomického kalendára vyžaduje prostredníctvom vlastného backendu (pozri \"Náš backend\" nižšie); ako pri každej sieťovej požiadavke, náš backend pri bežnom doručovaní odpovede získa vašu IP adresu. Nepoužívame ju na reklamu, profilovanie ani sledovanie medzi stránkami a vaše údaje nepredávame."
             },
             {
               "type": "p",
-              "text": "Premium tier (with account): if you choose to sign in, we collect and store:"
+              "text": "Verzia Premium (s účtom): ak sa rozhodnete prihlásiť, zhromažďujeme a uchovávame:"
             },
             {
               "type": "ul",
               "items": [
-                "your email address, name, and Google account identifier, obtained through Google sign-in, to create and identify your account and to show your name in the extension;",
-                "your subscription / entitlement status (free, trial, or premium);",
-                "a random per-installation identifier used to associate your installation with your account and to apply reasonable device limits."
+                "vašu e-mailovú adresu, meno a identifikátor účtu Google, získané prostredníctvom prihlásenia Google, na účely vytvorenia a identifikácie vášho účtu a zobrazenia vášho mena v rozšírení;",
+                "stav vášho predplatného / nároku (bezplatný, skúšobný alebo premium);",
+                "náhodný identifikátor jednotlivej inštalácie, používaný na spojenie vašej inštalácie s vaším účtom a na uplatnenie primeraných limitov na počet zariadení."
               ]
             },
             {
               "type": "p",
-              "text": "We collect this only after you actively sign in, and only to provide the account and Premium functionality. You can stop this at any time by signing out."
+              "text": "Tieto údaje zhromažďujeme len po tom, čo sa aktívne prihlásite, a len na účely poskytovania funkcií účtu a Premium. Kedykoľvek to môžete zastaviť odhlásením."
             }
           ]
         },
         {
-          "heading": "Our backend",
+          "heading": "Náš backend",
           "blocks": [
             {
               "type": "p",
-              "text": "Economic-calendar data and subscription checks are served by our backend hosted on Supabase (authentication, database, and server functions). The extension communicates only with our backend and with TradingView; it does not contact Forex Factory directly. Our backend fetches the public Forex Factory calendar on the server side and returns it to the extension."
+              "text": "Údaje ekonomického kalendára a kontroly predplatného poskytuje náš backend hostovaný na Supabase (autentifikácia, databáza a serverové funkcie). Rozšírenie komunikuje iba s naším backendom a s TradingView; s Forex Factory nekomunikuje priamo. Náš backend získava verejný kalendár Forex Factory na strane servera a vracia ho rozšíreniu."
             }
           ]
         },
         {
-          "heading": "What the extension accesses",
+          "heading": "K čomu má rozšírenie prístup",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "TradingView chart pages (*.tradingview.com/chart/*): the extension reads the current chart symbol, timeframe, and timezone in order to draw the economic-news lines, labels, and tooltips on the chart. No other part of the site is accessed.",
-                "Our backend (hsoaqylcrmspyckkndab.supabase.co): the extension requests economic-calendar data and, if you are signed in, verifies your subscription status.",
-                "An AI provider of your choice (generativelanguage.googleapis.com, api.groq.com or openrouter.ai): only if you connect one with your own API key, and only to request an explanation of a release you asked about. These are optional permissions — the extension has no access to any of them until you press \"Connect\". See AI explanations below."
+                "Stránky grafov TradingView (*.tradingview.com/chart/*): rozšírenie číta aktuálny symbol grafu, časový rámec a časové pásmo, aby na graf vykreslilo čiary, popisky a nápovede k ekonomickým správam. K žiadnej inej časti stránky sa nepristupuje.",
+                "Náš backend (hsoaqylcrmspyckkndab.supabase.co): rozšírenie vyžaduje údaje ekonomického kalendára a, ak ste prihlásení, overuje stav vášho predplatného.",
+                "Poskytovateľ AI podľa vášho výberu (generativelanguage.googleapis.com, api.groq.com alebo openrouter.ai): iba ak ho pripojíte s vlastným API kľúčom, a iba na účely vyžiadania vysvetlenia zverejnenia, na ktoré ste sa pýtali. Ide o voliteľné oprávnenia – rozšírenie k žiadnemu z nich nemá prístup, kým nestlačíte \"Pripojiť\". Pozri Vysvetlenia AI nižšie."
               ]
             }
           ]
         },
         {
-          "heading": "Local storage",
+          "heading": "Miestne úložisko",
           "blocks": [
             {
               "type": "p",
-              "text": "The extension uses your browser's local storage (chrome.storage.local) to save your settings (filters, labels, alerts, timezone, language, theme), a short-lived cache of the fetched calendar data, and, if you sign in, your session tokens and account/subscription status. If you connect an AI provider, it also stores your API key and a short-lived cache of the explanations you have already received. Signing out or uninstalling removes this local data; \"Remove key\" removes the AI entries immediately."
+              "text": "Rozšírenie využíva miestne úložisko vášho prehliadača (chrome.storage.local) na uloženie vašich nastavení (filtre, popisky, upozornenia, časové pásmo, jazyk, téma), krátkodobej vyrovnávacej pamäte stiahnutých údajov kalendára a, ak sa prihlásite, vašich relačných tokenov a stavu účtu/predplatného. Ak pripojíte poskytovateľa AI, uloží sa aj váš API kľúč a krátkodobá vyrovnávacia pamäť už získaných vysvetlení. Odhlásením alebo odinštalovaním sa tieto miestne údaje odstránia; \"Odstrániť kľúč\" okamžite odstráni záznamy AI."
             }
           ]
         },
         {
-          "heading": "Payments",
+          "heading": "Platby",
           "blocks": [
             {
               "type": "p",
-              "text": "If you purchase Premium, payment is processed by Paddle, which acts as the merchant of record. Your card and billing details are entered on Paddle's secure checkout and are never received or stored by us. We only receive your resulting subscription status."
+              "text": "Ak si kúpite Premium, platbu spracúva Paddle, ktorý vystupuje ako zmluvný predajca (merchant of record). Údaje o vašej karte a fakturácii sa zadávajú na zabezpečenej platobnej stránke Paddle a nikdy ich nezískavame ani neuchovávame. Získavame iba výsledný stav vášho predplatného."
             }
           ]
         },
         {
-          "heading": "Notifications",
+          "heading": "Upozornenia",
           "blocks": [
             {
               "type": "p",
-              "text": "With your permission, the extension shows an operating-system notification a chosen number of minutes before high-impact economic releases. Notifications are generated locally from calendar event times and are not used for messaging or marketing."
+              "text": "S vaším súhlasom rozšírenie zobrazí systémové upozornenie zvolený počet minút pred ekonomickými zverejneniami s vysokým dopadom. Upozornenia sa generujú lokálne na základe časov kalendárnych udalostí a nepoužívajú sa na zasielanie správ ani na marketing."
             }
           ]
         },
         {
-          "heading": "Telegram alerts (optional, Premium)",
+          "heading": "Upozornenia cez Telegram (voliteľné, Premium)",
           "blocks": [
             {
               "type": "p",
-              "text": "Premium users can connect a Telegram account to receive news alerts on their phone, including while their computer is off. This is entirely optional and off until you connect it. When you connect, we store on our backend your Telegram chat ID and username (supplied by Telegram when you start our bot), together with your alert preferences: impact levels, currencies, how many minutes ahead to warn you, your time zone, and any quiet hours. We use them for one purpose — deciding which alerts to send you and when — and messages are delivered through Telegram's own servers, so Telegram's privacy policy applies to their delivery. We keep a short record of which events were already sent to you so the same alert is not repeated; those records are deleted after about two days. You can disconnect at any time by blocking the bot in Telegram, and we delete the stored Telegram data when you delete your account."
+              "text": "Používatelia Premium môžu pripojiť účet Telegram, aby dostávali upozornenia na správy na telefóne, aj keď je ich počítač vypnutý. Je to úplne voliteľné a vypnuté, kým ho nepripojíte. Po pripojení uložíme na našom backende vaše chatovacie ID a používateľské meno Telegram (poskytnuté Telegramom pri spustení nášho bota), spolu s vašimi preferenciami upozornení: úrovňami dopadu, menami, počtom minút predstihu upozornenia, vaším časovým pásmom a prípadnými hodinami pokoja. Používame ich na jediný účel – rozhodovanie, aké upozornenia vám poslať a kedy – a správy sa doručujú prostredníctvom vlastných serverov Telegramu, takže sa na ich doručenie vzťahujú zásady ochrany osobných údajov Telegramu. Uchovávame krátky záznam o tom, ktoré udalosti vám už boli zaslané, aby sa rovnaké upozornenie neopakovalo; tieto záznamy sa mažú približne po dvoch dňoch. Kedykoľvek sa môžete odpojiť zablokovaním bota v Telegrame a pri vymazaní vášho účtu vymažeme aj uložené údaje Telegramu."
             }
           ]
         },
         {
-          "heading": "AI explanations (optional, Premium, your own provider)",
+          "heading": "Vysvetlenia AI (voliteľné, Premium, váš vlastný poskytovateľ)",
           "blocks": [
             {
               "type": "p",
-              "text": "Premium users can connect their own AI provider — Google Gemini, Groq or OpenRouter — and press ✨ next to a release to get a plain-language briefing. This is entirely optional and does nothing until you paste your own API key. A step-by-step guide is at [rednews.app/ai](https://rednews.app/ai)."
+              "text": "Používatelia Premium môžu pripojiť vlastného poskytovateľa AI – Google Gemini, Groq alebo OpenRouter – a stlačením ✨ pri zverejnení získať vysvetlenie v jednoduchom jazyku. Je to úplne voliteľné a nič sa nestane, kým nevložíte vlastný API kľúč. Návod krok za krokom nájdete na [rednews.app/ai](https://rednews.app/ai)."
             },
             {
               "type": "p",
-              "text": "Your API key stays in your browser. It is kept in local storage on this computer, is never synchronised to other devices, and is never sent to our backend. \"Remove key\" deletes the key, deletes the cached answers, and withdraws the extension's permission to contact the provider."
+              "text": "Váš API kľúč zostáva vo vašom prehliadači. Je uložený v miestnom úložisku tohto počítača, nikdy sa nesynchronizuje s inými zariadeniami a nikdy sa neodosiela na náš backend. \"Odstrániť kľúč\" vymaže kľúč, vymaže uložené odpovede vo vyrovnávacej pamäti a odoberie rozšíreniu oprávnenie kontaktovať poskytovateľa."
             },
             {
               "type": "p",
-              "text": "Requests go straight from your browser to the provider you chose. They do not pass through our servers. We cannot see what you asked or what the model answered."
+              "text": "Požiadavky idú priamo z vášho prehliadača k vybranému poskytovateľovi. Neprechádzajú cez naše servery. Nevidíme, na čo ste sa pýtali ani čo model odpovedal."
             },
             {
               "type": "p",
-              "text": "What is sent: the scheduled release itself — title, currency, impact level, scheduled time in UTC, and its forecast, previous and actual values — up to six earlier prints of that same release taken from the extension's own calendar history, and the language the answer should be written in. Your API key travels in the request's authorisation header, as the provider requires. Nothing else is included: no name or email, no account or subscription details, no chart symbol, no browsing history, and no text you type."
+              "text": "Čo sa odosiela: samotné plánované zverejnenie – názov, mena, úroveň dopadu, plánovaný čas v UTC a jeho prognózované, predchádzajúce a skutočné hodnoty – až šesť predchádzajúcich výsledkov toho istého zverejnenia z vlastnej histórie kalendára rozšírenia a jazyk, v ktorom má byť odpoveď napísaná. Váš API kľúč sa prenáša v autorizačnom hlavičkovom poli požiadavky, ako to vyžaduje poskytovateľ. Nič iné sa neposiela: žiadne meno ani e-mail, žiadne údaje o účte či predplatnom, žiadny symbol grafu, žiadna história prehliadania a žiadny text, ktorý napíšete."
             },
             {
               "type": "p",
-              "text": "The provider's own privacy policy governs what it does with that request. Providers differ: some state that they do not retain or train on API traffic by default, while others may use free-tier traffic to improve their products. The current position of each supported provider is summarised on the setup page, but you should read your provider's own terms."
+              "text": "Vlastné zásady ochrany osobných údajov poskytovateľa určujú, čo s touto požiadavkou robí. Poskytovatelia sa líšia: niektorí uvádzajú, že prevádzku API štandardne neuchovávajú ani na nej netrénujú, zatiaľ čo iní môžu prevádzku z bezplatnej úrovne používať na zlepšovanie svojich produktov. Aktuálny postoj každého podporovaného poskytovateľa je zhrnutý na stránke nastavenia, ale mali by ste si prečítať vlastné podmienky svojho poskytovateľa."
             },
             {
               "type": "p",
-              "text": "Answers are cached locally for up to seven days (at most sixty of them) so that reopening the same event does not spend your quota again. The cache never leaves your browser."
+              "text": "Odpovede sa lokálne uchovávajú vo vyrovnávacej pamäti až sedem dní (najviac šesťdesiat z nich), aby opätovné otvorenie tej istej udalosti znova nespotrebovalo vašu kvótu. Vyrovnávacia pamäť nikdy neopustí váš prehliadač."
             },
             {
               "type": "p",
-              "text": "Access is granted per provider, at the moment you connect. The three provider addresses are optional permissions: Chrome asks for your consent when you press \"Connect\", and until then the extension cannot reach any of them."
+              "text": "Prístup sa udeľuje pre každého poskytovateľa samostatne, v okamihu pripojenia. Tri adresy poskytovateľov sú voliteľné oprávnenia: Chrome si vyžiada váš súhlas, keď stlačíte \"Pripojiť\", a do toho okamihu sa rozšírenie k žiadnemu z nich nemôže pripojiť."
             }
           ]
         },
         {
-          "heading": "Feedback",
+          "heading": "Spätná väzba",
           "blocks": [
             {
               "type": "p",
-              "text": "If you send feedback through the extension (\"Report a problem, idea, or partnership\"), the message you type, an optional email address, and basic non-personal context (the extension version, your browser, and your interface language) are sent through Web3Forms, a third-party form-delivery service, which forwards them to the developer by email. This happens only when you press Send."
+              "text": "Ak odošlete spätnú väzbu prostredníctvom rozšírenia (\"Nahlásiť problém, nápad alebo spoluprácu\"), vami napísaná správa, voliteľná e-mailová adresa a základný neosobný kontext (verzia rozšírenia, váš prehliadač a jazyk rozhrania) sa odošlú prostredníctvom Web3Forms, služby na doručovanie formulárov tretej strany, ktorá ich e-mailom postúpi vývojárovi. K tomu dôjde iba vtedy, keď stlačíte Odoslať."
             }
           ]
         },
         {
-          "heading": "Third-party services",
+          "heading": "Služby tretích strán",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Supabase hosts our backend (authentication, database, server functions) that serves calendar data and stores your account/subscription status.",
-                "Google provides the sign-in through which we obtain your name, email, and account identifier.",
-                "Paddle processes Premium payments as merchant of record; card data never reaches us.",
-                "Forex Factory is the source of the public economic-calendar data, fetched by our backend.",
-                "Web3Forms delivers feedback you choose to send.",
-                "Telegram delivers the optional Premium alerts to users who connect our bot.",
-                "Google (Gemini API), Groq, OpenRouter are AI providers a Premium user may connect with their own API key. We hold no account or contract with them on your behalf; your browser talks to whichever one you chose, directly, and only for the explanations you request."
+                "Supabase hostuje náš backend (autentifikácia, databáza, serverové funkcie), ktorý poskytuje údaje kalendára a uchováva stav vášho účtu/predplatného.",
+                "Google poskytuje prihlásenie, prostredníctvom ktorého získavame vaše meno, e-mail a identifikátor účtu.",
+                "Paddle spracúva platby Premium ako zmluvný predajca (merchant of record); údaje o karte sa k nám nikdy nedostanú.",
+                "Forex Factory je zdrojom verejných údajov ekonomického kalendára, ktoré získava náš backend.",
+                "Web3Forms doručuje spätnú väzbu, ktorú sa rozhodnete odoslať.",
+                "Telegram doručuje voliteľné upozornenia Premium používateľom, ktorí pripoja nášho bota.",
+                "Google (Gemini API), Groq a OpenRouter sú poskytovatelia AI, ku ktorým sa používateľ Premium môže pripojiť vlastným API kľúčom. Nemáme u nich vo vašom mene žiadny účet ani zmluvu; váš prehliadač komunikuje priamo s tým, ktorého si zvolíte, a iba pre vysvetlenia, o ktoré požiadate."
               ]
             },
             {
               "type": "p",
-              "text": "Each third party processes data subject to its own privacy policy."
+              "text": "Každá tretia strana spracúva údaje podľa svojich vlastných zásad ochrany osobných údajov."
             }
           ]
         },
         {
-          "heading": "Your choices and rights",
+          "heading": "Vaše možnosti a práva",
           "blocks": [
             {
               "type": "p",
-              "text": "The free tier works without an account. If you have signed in, you can sign out at any time, and you may request deletion of your account data by contacting us (see \"Contact\"). Deleting your account removes your stored email, name, account identifier, and subscription record."
+              "text": "Bezplatná verzia funguje bez účtu. Ak ste sa prihlásili, môžete sa kedykoľvek odhlásiť a môžete požiadať o vymazanie údajov svojho účtu tým, že nás kontaktujete (pozri \"Kontakt\"). Vymazaním účtu sa odstráni uložený e-mail, meno, identifikátor účtu a záznam o predplatnom."
             }
           ]
         },
         {
-          "heading": "Changes",
+          "heading": "Zmeny",
           "blocks": [
             {
               "type": "p",
-              "text": "Any change that affects what data is collected or how it is processed will be reflected in an updated Privacy Policy before it takes effect. The \"Last updated\" date above will be revised."
+              "text": "Akákoľvek zmena, ktorá ovplyvňuje rozsah zhromažďovaných údajov alebo spôsob ich spracovania, sa prejaví v aktualizovaných Zásadách ochrany osobných údajov skôr, než nadobudne účinnosť. Vyššie uvedený dátum \"Posledná aktualizácia\" bude následne upravený."
             }
           ]
         },
         {
-          "heading": "Contact",
+          "heading": "Kontakt",
           "blocks": [
             {
               "type": "p",
-              "text": "For questions about this policy or to request account deletion, email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+              "text": "S otázkami k týmto zásadám alebo so žiadosťou o vymazanie účtu sa obráťte na [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question) alebo nás kontaktujte na [Discorde](https://discord.com/users/1172891214580830322)."
             }
           ]
         }
       ]
     },
     "terms": {
-      "title": "Terms of Service",
-      "updated": "Last updated: 9 August 2026",
-      "intro": "These Terms of Service (\"Terms\") govern your use of the Red News – Economic Calendar for TradingView browser extension, the website at rednews.app, and any related services (together, the \"Service\"), provided by the developer of Red News (\"we\", \"us\", \"our\"). By installing or using the Service, you agree to these Terms. If you do not agree, do not use the Service.",
+      "title": "Podmienky služby",
+      "updated": "Posledná aktualizácia: 9. augusta 2026",
+      "intro": "Tieto Podmienky služby (\"Podmienky\") upravujú vaše používanie rozšírenia prehliadača Red News – Economic Calendar for TradingView, webovej stránky rednews.app a všetkých súvisiacich služieb (spolu \"Služba\"), poskytovaných vývojárom Red News (\"my\", \"nás\", \"naše\"). Inštaláciou alebo používaním Služby vyjadrujete súhlas s týmito Podmienkami. Ak nesúhlasíte, Službu nepoužívajte.",
       "sections": [
         {
-          "heading": "1. The Service",
+          "heading": "1. Služba",
           "blocks": [
             {
               "type": "p",
-              "text": "Red News is a browser extension that overlays scheduled economic-calendar events, sourced from the public Forex Factory calendar, onto TradingView chart pages. It draws event lines, shows event details, and can alert you before releases. Red News is an independent tool and is not affiliated with, endorsed by, or sponsored by TradingView or Forex Factory."
+              "text": "Red News je rozšírenie prehliadača, ktoré na stránky grafov TradingView premieta plánované udalosti ekonomického kalendára pochádzajúce z verejného kalendára Forex Factory. Vykresľuje čiary udalostí, zobrazuje ich podrobnosti a môže vás upozorniť pred zverejnením. Red News je nezávislý nástroj a nie je spojený s TradingView ani Forex Factory, ani nimi schválený či sponzorovaný."
             }
           ]
         },
         {
-          "heading": "2. Not financial advice",
+          "heading": "2. Nejde o finančné poradenstvo",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service displays informational data about scheduled economic events. It does not provide trading signals, investment recommendations, or financial advice, and nothing it shows should be relied upon as such. Economic data may be delayed, incomplete, or inaccurate. Trading and investing carry risk, including the loss of capital. You are solely responsible for your own trading decisions."
+              "text": "Služba zobrazuje informatívne údaje o plánovaných ekonomických udalostiach. Neposkytuje obchodné signály, investičné odporúčania ani finančné poradenstvo a nič z toho, čo zobrazuje, by sa za také nemalo považovať. Ekonomické údaje môžu byť oneskorené, neúplné alebo nepresné. Obchodovanie a investovanie nesú riziko, vrátane straty kapitálu. Za svoje vlastné obchodné rozhodnutia zodpovedáte výlučne vy."
             }
           ]
         },
         {
-          "heading": "3. Accounts",
+          "heading": "3. Účty",
           "blocks": [
             {
               "type": "p",
-              "text": "The free tier works without an account. To start a Premium trial or subscribe, you sign in with Google, which provides us your name, email address, and account identifier. You are responsible for maintaining the security of the Google account you use and for all activity under your Red News entitlement. You must be at least 18 years old, or the age of majority in your jurisdiction, to purchase Premium."
+              "text": "Bezplatná verzia funguje bez účtu. Na začatie skúšobnej verzie Premium alebo predplatného sa prihlasujete cez Google, ktoré nám poskytne vaše meno, e-mailovú adresu a identifikátor účtu. Zodpovedáte za zabezpečenie účtu Google, ktorý používate, a za všetku aktivitu v rámci vášho nároku Red News. Na zakúpenie Premium musíte mať aspoň 18 rokov alebo dosiahnuť plnoletosť podľa práva vašej jurisdikcie."
             }
           ]
         },
         {
-          "heading": "4. Subscriptions, billing & trials",
+          "heading": "4. Predplatné, fakturácia a skúšobné verzie",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Free tier: the core extension is free to use.",
-                "Premium: available as a monthly (US$4.99) or annual (US$39) subscription. Prices are shown at checkout and may vary by region and applicable taxes.",
-                "Free trial: new users may start a 14-day Premium trial without a payment method. If you do not subscribe, the account simply reverts to the free tier when the trial ends. One trial per user.",
-                "Merchant of record: payments are processed by Paddle (Paddle.com Market Limited), which acts as the merchant of record for all purchases. Your purchase is also subject to Paddle's buyer terms. Card and billing details are entered on Paddle's checkout and are never received or stored by us.",
-                "Auto-renewal: paid subscriptions renew automatically at the end of each billing period until cancelled. By subscribing, you authorise recurring charges through Paddle.",
-                "Price changes: we may change subscription prices. Any change to your recurring price will be communicated in advance and will apply from your next renewal."
+                "Bezplatná verzia: základné rozšírenie je bezplatné.",
+                "Premium: dostupné ako mesačné (US$4.99) alebo ročné (US$39) predplatné. Ceny sa zobrazujú pri platbe a môžu sa líšiť podľa regiónu a príslušných daní.",
+                "Bezplatná skúšobná verzia: noví používatelia môžu začať 14-dňovú skúšobnú verziu Premium bez zadania platobnej metódy. Ak si predplatné nezaložíte, účet sa po skončení skúšobnej verzie jednoducho vráti na bezplatnú verziu. Jedna skúšobná verzia na používateľa.",
+                "Zmluvný predajca (merchant of record): platby spracúva Paddle (Paddle.com Market Limited), ktorý vystupuje ako zmluvný predajca pre všetky nákupy. Váš nákup sa ďalej riadi kupujúcimi podmienkami Paddle. Údaje o karte a fakturácii sa zadávajú na platobnej stránke Paddle a nikdy ich nezískavame ani neuchovávame.",
+                "Automatické obnovenie: platené predplatné sa automaticky obnovuje na konci každého fakturačného obdobia, kým nie je zrušené. Predplatením autorizujete opakované platby prostredníctvom Paddle.",
+                "Zmeny cien: ceny predplatného môžeme zmeniť. Akákoľvek zmena vašej opakujúcej sa ceny bude oznámená vopred a nadobudne účinnosť od vášho ďalšieho obnovenia."
               ]
             }
           ]
         },
         {
-          "heading": "5. Cancellation & refunds",
+          "heading": "5. Zrušenie a vrátenie peňazí",
           "blocks": [
             {
               "type": "p",
-              "text": "You can cancel at any time using the Manage subscription option in the extension. On cancellation you keep Premium access until the end of the period you have already paid for; it does not renew after that. Refunds are handled as described in our Refund Policy."
+              "text": "Predplatné môžete kedykoľvek zrušiť pomocou možnosti Správa predplatného v rozšírení. Po zrušení si zachováte prístup k Premium do konca obdobia, ktoré ste už zaplatili; potom sa predplatné neobnoví. Vrátenie peňazí sa riadi našimi Zásadami vracania peňazí."
             }
           ]
         },
         {
-          "heading": "6. Acceptable use",
+          "heading": "6. Prijateľné použitie",
           "blocks": [
             {
               "type": "p",
-              "text": "You agree not to:"
+              "text": "Súhlasíte, že nebudete:"
             },
             {
               "type": "ul",
               "items": [
-                "reverse engineer, decompile, or attempt to extract the source or server logic of the Service, except where permitted by law;",
-                "resell, sublicense, or redistribute the Service or the data it delivers;",
-                "circumvent entitlement checks, device limits, or use the Service without a valid entitlement;",
-                "use the Service to build a competing product, or to place undue load on our backend;",
-                "use the Service in any unlawful way or in violation of third-party rights."
+                "vykonávať reverzné inžinierstvo, dekompilovať ani sa pokúšať extrahovať zdrojový kód alebo serverovú logiku Služby, s výnimkou prípadov povolených zákonom;",
+                "predávať, poskytovať sublicenciu ani ďalej šíriť Službu alebo údaje, ktoré poskytuje;",
+                "obchádzať kontroly nároku, limity zariadení, ani používať Službu bez platného nároku;",
+                "používať Službu na vytvorenie konkurenčného produktu, ani neprimerane zaťažovať náš backend;",
+                "používať Službu akýmkoľvek nezákonným spôsobom alebo v rozpore s právami tretích strán."
               ]
             }
           ]
         },
         {
-          "heading": "7. Intellectual property",
+          "heading": "7. Duševné vlastníctvo",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service, including its code, design, and branding, is owned by us and protected by applicable laws. We grant you a limited, non-exclusive, non-transferable, revocable licence to use the Service for your personal trading, subject to these Terms. Economic data originates from the public Forex Factory calendar and remains subject to any rights of its source. \"TradingView\" and \"Forex Factory\" are trademarks of their respective owners."
+              "text": "Služba, vrátane jej kódu, dizajnu a značky, je naším vlastníctvom a je chránená príslušnými zákonmi. Udeľujeme vám obmedzenú, nevýhradnú, neprenosnú a odvolateľnú licenciu na používanie Služby na vaše osobné obchodovanie, v súlade s týmito Podmienkami. Ekonomické údaje pochádzajú z verejného kalendára Forex Factory a naďalej sa na ne vzťahujú všetky práva ich zdroja. \"TradingView\" a \"Forex Factory\" sú ochranné známky svojich príslušných vlastníkov."
             }
           ]
         },
         {
-          "heading": "8. Third-party services",
+          "heading": "8. Služby tretích strán",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service relies on third parties including TradingView (the host page), Forex Factory (data source), Supabase (backend and authentication), Google (sign-in), and Paddle (payments). We are not responsible for the availability, content, or practices of these third parties, and your use of them is subject to their own terms."
+              "text": "Služba sa spolieha na tretie strany, vrátane TradingView (hostiteľská stránka), Forex Factory (zdroj údajov), Supabase (backend a autentifikácia), Google (prihlásenie) a Paddle (platby). Nezodpovedáme za dostupnosť, obsah ani postupy týchto tretích strán a vaše používanie sa riadi ich vlastnými podmienkami."
             }
           ]
         },
         {
-          "heading": "9. Disclaimers",
+          "heading": "9. Vylúčenie zodpovednosti",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service is provided \"as is\" and \"as available\", without warranties of any kind, whether express or implied, including fitness for a particular purpose, accuracy, or uninterrupted availability. We do not warrant that event data will be timely, complete, or error-free, or that the Service will always function with TradingView."
+              "text": "Služba je poskytovaná \"tak, ako je\" a \"podľa dostupnosti\", bez akýchkoľvek záruk, výslovných či predpokladaných, vrátane vhodnosti na určitý účel, presnosti alebo neprerušenej dostupnosti. Nezaručujeme, že údaje o udalostiach budú včasné, úplné alebo bezchybné, ani že Služba bude vždy funkčná s TradingView."
             }
           ]
         },
         {
-          "heading": "10. Limitation of liability",
+          "heading": "10. Obmedzenie zodpovednosti",
           "blocks": [
             {
               "type": "p",
-              "text": "To the maximum extent permitted by law, we will not be liable for any indirect, incidental, special, or consequential damages, or for any trading losses, lost profits, or lost data, arising from your use of or inability to use the Service. Our total liability for any claim relating to the Service will not exceed the amount you paid us for the Service in the twelve months preceding the claim."
+              "text": "V maximálnom rozsahu povolenom zákonom nezodpovedáme za žiadne nepriame, náhodné, osobitné alebo následné škody, ani za obchodné straty, ušlý zisk alebo stratu údajov vyplývajúce z používania Služby alebo z nemožnosti ju používať. Naša celková zodpovednosť za akýkoľvek nárok súvisiaci so Službou nepresiahne sumu, ktorú ste nám za Službu zaplatili počas dvanástich mesiacov predchádzajúcich nároku."
             }
           ]
         },
         {
-          "heading": "11. Termination",
+          "heading": "11. Ukončenie",
           "blocks": [
             {
               "type": "p",
-              "text": "You may stop using the Service at any time by uninstalling the extension and, if applicable, cancelling your subscription. We may suspend or terminate access if you breach these Terms or misuse the Service. You may request deletion of your account data as described in our Privacy Policy."
+              "text": "Používanie Služby môžete kedykoľvek zastaviť odinštalovaním rozšírenia a prípadne zrušením predplatného. Prístup môžeme pozastaviť alebo ukončiť, ak porušíte tieto Podmienky alebo Službu zneužijete. O vymazanie údajov svojho účtu môžete požiadať podľa našich Zásad ochrany osobných údajov."
             }
           ]
         },
         {
-          "heading": "12. Changes to these Terms",
+          "heading": "12. Zmeny týchto Podmienok",
           "blocks": [
             {
               "type": "p",
-              "text": "We may update these Terms from time to time. Material changes will be reflected here with a revised \"Last updated\" date. Continued use of the Service after changes take effect constitutes acceptance of the updated Terms."
+              "text": "Tieto Podmienky môžeme z času na čas aktualizovať. Podstatné zmeny sa tu prejavia s upraveným dátumom \"Posledná aktualizácia\". Ďalšie používanie Služby po nadobudnutí účinnosti zmien predstavuje súhlas s aktualizovanými Podmienkami."
             }
           ]
         },
         {
-          "heading": "13. Governing law",
+          "heading": "13. Rozhodné právo",
           "blocks": [
             {
               "type": "p",
-              "text": "These Terms are governed by the laws of Ukraine, without regard to conflict-of-law rules, except where mandatory consumer-protection laws of your country of residence apply. Purchases are additionally subject to the terms of Paddle as merchant of record."
+              "text": "Tieto Podmienky sa riadia právom Ukrajiny, bez ohľadu na kolízne normy, s výnimkou prípadov, keď sa uplatňujú kogentné zákony na ochranu spotrebiteľa krajiny vášho bydliska. Na nákupy sa ďalej vzťahujú podmienky Paddle ako zmluvného predajcu."
             }
           ]
         },
         {
-          "heading": "14. Contact",
+          "heading": "14. Kontakt",
           "blocks": [
             {
               "type": "p",
-              "text": "Questions about these Terms? Email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+              "text": "Máte otázky k týmto Podmienkam? Napíšte na [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question) alebo nás kontaktujte na [Discorde](https://discord.com/users/1172891214580830322)."
             }
           ]
         }
       ]
     },
     "refund": {
-      "title": "Refund Policy",
-      "updated": "Last updated: 9 August 2026",
-      "intro": "We want you to be happy with Red News Premium. This policy explains how trials, cancellations, and refunds work. Payments are processed by Paddle, our merchant of record, so refunds are issued through Paddle to your original payment method.",
+      "title": "Zásady vracania peňazí",
+      "updated": "Posledná aktualizácia: 9. augusta 2026",
+      "intro": "Chceme, aby ste boli s Red News Premium spokojní. Tieto zásady vysvetľujú, ako funguje skúšobná verzia, zrušenie a vrátenie peňazí. Platby spracúva Paddle, náš zmluvný predajca, takže vrátenie peňazí prebieha prostredníctvom Paddle na váš pôvodný spôsob platby.",
       "sections": [
         {
-          "heading": "Try before you pay",
+          "heading": "Vyskúšajte pred zaplatením",
           "blocks": [
             {
               "type": "p",
-              "text": "Every new user can start a 14-day Premium trial with no payment method required. The trial is long enough to span a major economic release, so you can fully evaluate Premium before you are ever charged. We encourage you to use it."
+              "text": "Každý nový používateľ môže začať 14-dňovú skúšobnú verziu Premium bez toho, aby musel zadať platobnú metódu. Skúšobná doba je dostatočne dlhá, aby zahŕňala významné ekonomické zverejnenie, takže si Premium môžete plne vyskúšať, skôr než vám bude čokoľvek naúčtované. Odporúčame vám ju využiť."
             }
           ]
         },
         {
-          "heading": "14-day money-back guarantee",
+          "heading": "14-dňová záruka vrátenia peňazí",
           "blocks": [
             {
               "type": "p",
-              "text": "If you subscribe and change your mind, you can request a full refund within 14 days of your first payment, no questions asked. This applies to the initial charge on a monthly or annual plan."
+              "text": "Ak si založíte predplatné a rozmyslíte si to, môžete do 14 dní od prvej platby požiadať o úplné vrátenie peňazí, bez udania dôvodu. Vzťahuje sa to na prvú platbu mesačného alebo ročného plánu."
             }
           ]
         },
         {
-          "heading": "Renewals",
+          "heading": "Obnovenia",
           "blocks": [
             {
               "type": "p",
-              "text": "Subscriptions renew automatically. To avoid a renewal charge, cancel before your renewal date using the Manage subscription button in the extension. After cancellation you keep Premium until the end of the period you have already paid for. Renewal charges are generally non-refundable, but if you were charged for a renewal you did not intend to keep and reach out promptly, contact us. We review these case by case and aim to be fair."
+              "text": "Predplatné sa obnovuje automaticky. Aby ste sa vyhli poplatku za obnovenie, zrušte predplatné pred dátumom obnovenia pomocou tlačidla Správa predplatného v rozšírení. Po zrušení si zachováte Premium do konca obdobia, ktoré ste už zaplatili. Poplatky za obnovenie sú vo všeobecnosti nevratné, ale ak vám bola naúčtovaná platba za obnovenie, ktoré ste si nechceli udržať, a bezodkladne sa na nás obrátite, kontaktujte nás. Každý prípad posudzujeme individuálne a snažíme sa postupovať spravodlivo."
             }
           ]
         },
         {
-          "heading": "How to request a refund",
+          "heading": "Ako požiadať o vrátenie peňazí",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Reply to the Paddle receipt email you received for the purchase, or",
-                "email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request) with the email address used at checkout, or",
-                "reach us on [Discord](https://discord.com/users/1172891214580830322)."
+                "Odpovedzte na e-mail s potvrdením od Paddle, ktorý ste dostali pri nákupe, alebo",
+                "napíšte na [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request) s uvedením e-mailovej adresy použitej pri platbe, alebo",
+                "kontaktujte nás na [Discorde](https://discord.com/users/1172891214580830322)."
               ]
             },
             {
               "type": "p",
-              "text": "Approved refunds are processed by Paddle back to your original payment method, typically within 5 to 10 business days depending on your bank or card provider."
+              "text": "Schválené vrátenie peňazí spracúva Paddle späť na váš pôvodný spôsob platby, obvykle do 5 až 10 pracovných dní, v závislosti od vašej banky alebo poskytovateľa karty."
             }
           ]
         },
         {
-          "heading": "Statutory rights",
+          "heading": "Zákonné práva",
           "blocks": [
             {
               "type": "p",
-              "text": "Nothing in this policy limits any refund or cancellation rights you may have under the consumer-protection laws of your country of residence, or under Paddle's own buyer terms as merchant of record."
+              "text": "Nič v týchto zásadách neobmedzuje žiadne práva na vrátenie peňazí alebo zrušenie, ktoré môžete mať podľa zákonov na ochranu spotrebiteľa krajiny vášho bydliska, alebo podľa vlastných kupujúcich podmienok Paddle ako zmluvného predajcu."
             }
           ]
         }
       ],
-      "closing": "Questions before you buy? We're happy to help: email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing) or message us on [Discord](https://discord.com/users/1172891214580830322)."
+      "closing": "Máte otázky pred nákupom? Rádi pomôžeme: napíšte na [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing) alebo nám napíšte na [Discorde](https://discord.com/users/1172891214580830322)."
     }
   },
   "notFound": {

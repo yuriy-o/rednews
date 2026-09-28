@@ -9,6 +9,6 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function TermsPage() {
-  const dict = await getDictionary();
-  return <LegalPage content={dict.legal.terms} />;
+  const [locale, dict] = await Promise.all([getLocale(), getDictionary()]);
+  return <LegalPage content={dict.legal.terms} locale={locale} />;
 }
