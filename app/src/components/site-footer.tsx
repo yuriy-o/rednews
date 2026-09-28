@@ -18,15 +18,18 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: Dictionary 
             <li>
               <NavLink href={localePath(locale, '/pricing')}>{dict.nav.pricing}</NavLink>
             </li>
-            {/* Not yet translated: always English, regardless of the site's current locale. */}
+            {/* dict.legal is an untranslated (English) copy in every locale's dictionary, so the
+                content itself doesn't change here — only the URL segment does, keeping the header/
+                footer chrome and further navigation in the visitor's chosen locale instead of
+                stranding them on English after one visit to a legal page. */}
             <li>
-              <NavLink href={localePath('en', '/privacy')}>{dict.footer.privacy}</NavLink>
+              <NavLink href={localePath(locale, '/privacy')}>{dict.footer.privacy}</NavLink>
             </li>
             <li>
-              <NavLink href={localePath('en', '/terms')}>{dict.footer.terms}</NavLink>
+              <NavLink href={localePath(locale, '/terms')}>{dict.footer.terms}</NavLink>
             </li>
             <li>
-              <NavLink href={localePath('en', '/refund')}>{dict.footer.refund}</NavLink>
+              <NavLink href={localePath(locale, '/refund')}>{dict.footer.refund}</NavLink>
             </li>
           </ul>
         </nav>
