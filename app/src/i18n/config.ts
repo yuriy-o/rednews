@@ -47,6 +47,10 @@ export const enabledLocales: readonly Locale[] = [
   'id',
   'ms',
   'tr',
+  'hi',
+  'ja',
+  'ko',
+  'zh-cn',
 ];
 
 /** Saved locale choice (language switcher, proxy negotiation) — read by proxy.ts too. */

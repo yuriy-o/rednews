@@ -55,7 +55,7 @@ One family: **Archivo** (variable: `wdth` 62–125, `wght` 100–900), self-host
 - **Fluid vs fixed type by mode.** Persuade surfaces (home, pricing) may use fluid display sizes. Size an authored multi-line headline from its **container** (`cqi` + `container-type: inline-size`), never from `vw`: page zoom, OS scaling and a larger browser font otherwise push a line past the container (a two-line hero broke into three this way). Apply authored breaks with a container query at the width where the fluid size clears its floor. Operate surfaces (calendar, account) use the fixed rem scale — no fluid headings.
 - All numerals in data (times, values, prices) use `font-variant-numeric: tabular-nums`.
 - Body measure 65–75ch; more space above a heading than below it.
-- **Non-Latin scripts:** Archivo covers Latin and Vietnamese only. When uk, el, ar, ur, hi, ja, ko or zh-CN ship, each gets a matching script font (e.g. a Noto family per script) in the stack; until then the OS font renders them.
+- **Non-Latin scripts:** Archivo covers Latin and Vietnamese only. uk, el, hi, ja, ko and zh-CN render their script through the font-family fallback stack's OS font instead of a per-script webfont — verified legible in testing across all six, so this is the settled approach, not a stopgap. ar and ur will need the same plus RTL layout (`dir="rtl"`, mirrored icons) when they ship.
 
 ## Space, shape, depth
 

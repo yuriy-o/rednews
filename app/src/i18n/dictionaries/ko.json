@@ -1,0 +1,673 @@
+{
+  "meta": {
+    "siteName": "Red News",
+    "home": {
+      "title": "TradingView를 위한 레드 폴더 뉴스 및 경제 캘린더",
+      "description": "TradingView 차트에 고영향 경제 뉴스를 표시하고, 발표 전에 알림을 보내드립니다. 실제, 예상, 이전 값을 포함한 실시간 Forex Factory 캘린더."
+    },
+    "calendar": {
+      "title": "경제 캘린더 — 이번 주 고영향 포렉스 뉴스",
+      "description": "이번 주 경제 캘린더: 실제, 예상, 이전 값을 포함한 레드 폴더 뉴스를 통화 및 영향도별로 필터링하고, 사용자의 시간대로 확인하세요.",
+      "weekTitle": "경제 캘린더,"
+    },
+    "pricing": {
+      "title": "요금제 — 무료 및 Premium",
+      "description": "무료로 시작하세요. Premium은 뉴스 발표 전 알림, Telegram 알림, 전체 캘린더를 추가합니다. 14일 무료 체험, 카드 불필요."
+    },
+    "account": {
+      "title": "계정"
+    },
+    "privacy": {
+      "title": "개인정보 처리방침",
+      "description": "Red News가 무료 확장 프로그램 및 선택적 Premium 계정을 위해 데이터를 수집, 저장, 보호하는 방법."
+    },
+    "terms": {
+      "title": "서비스 이용약관",
+      "description": "Red News 브라우저 확장 프로그램, 웹사이트, Premium 구독 이용을 규율하는 약관."
+    },
+    "refund": {
+      "title": "환불 정책",
+      "description": "Paddle을 통해 처리되는 Red News Premium의 체험, 취소, 환불 방식."
+    }
+  },
+  "nav": {
+    "home": "홈",
+    "calendar": "캘린더",
+    "pricing": "요금제",
+    "account": "계정",
+    "install": "Chrome에 추가",
+    "menuOpen": "메뉴 열기",
+    "menuClose": "메뉴 닫기",
+    "skip": "본문으로 건너뛰기",
+    "language": "언어"
+  },
+  "theme": {
+    "label": "테마",
+    "toggle": "테마 전환",
+    "light": "라이트",
+    "dark": "다크"
+  },
+  "home": {
+    "titleLines": [
+      "레드 폴더 뉴스 알림을,",
+      "TradingView 차트에 바로."
+    ],
+    "lead": "Red News는 고영향 경제 발표를 차트에 표시하고 발표 전에 미리 알려드립니다. 두 번째 화면이 필요 없습니다.",
+    "cta": "Chrome에 추가 — 무료",
+    "ctaSecondary": "이번 주 캘린더 보기",
+    "chart": {
+      "caption": "고영향 발표를 캘린더에서 실시간으로 확인하세요. 가격선은 예시용입니다.",
+      "unavailable": "실시간 발표를 불러오는 중입니다. 잠시 후 캘린더가 다시 표시됩니다.",
+      "now": "지금",
+      "in": "후",
+      "actual": "실제",
+      "forecast": "예상",
+      "previous": "이전",
+      "better": "예상보다 좋음",
+      "worse": "예상보다 나쁨"
+    },
+    "features": {
+      "title": "모든 것이 차트에서 일어납니다",
+      "lead": "Red News는 이미 사용 중인 TradingView 안에서 바로 작동합니다.",
+      "items": [
+        {
+          "title": "차트의 뉴스 라인",
+          "body": "각 발표는 해당 캔들에 세로선으로 표시되며, 영향도에 따라 색상으로 구분됩니다."
+        },
+        {
+          "title": "실제, 예상, 이전",
+          "body": "차트를 벗어나지 않고도 라인에 마우스를 올려 수치를 확인할 수 있습니다."
+        },
+        {
+          "title": "멀티 차트 레이아웃",
+          "body": "멀티 차트 레이아웃의 모든 패널에 라인이 표시됩니다."
+        },
+        {
+          "title": "나만의 AI",
+          "body": "Gemini 또는 Groq 키를 연결하여 발표에서 무엇을 예상할지 물어보세요."
+        }
+      ]
+    },
+    "alerts": {
+      "example": "예시",
+      "release": "Non-Farm Payrolls",
+      "before": "{m}분 전",
+      "caption": "발표당 최대 세 번의 알림, 기본값은 15분 전. Premium.",
+      "channels": {
+        "chart": "차트에서",
+        "desktop": "데스크톱",
+        "sound": "소리",
+        "telegram": "Telegram"
+      },
+      "filtersCaption": "거래하는 통화, 영향도, 이벤트를 선택하세요. 나머지는 차트에 표시되지 않습니다."
+    },
+    "upcoming": {
+      "title": "예정된 발표",
+      "lead": "다음 발표, 사용자의 시간대로.",
+      "empty": "이번 주에는 더 이상 발표가 없습니다.",
+      "forecast": "예",
+      "in": "후",
+      "all": "전체 캘린더 보기"
+    },
+    "plans": {
+      "title": "무료로 시작하고, 준비되면 알림을 추가하세요.",
+      "free": {
+        "name": "무료",
+        "price": "$0",
+        "period": "영구",
+        "periodNote": "영구 · 계정 불필요",
+        "items": [
+          "차트의 뉴스 라인",
+          "색상으로 구분된 영향도",
+          "실제 / 예상 / 이전 툴팁",
+          "통화, 영향도, 주제별 필터",
+          "22개 인터페이스 언어"
+        ]
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "$4.99",
+        "period": "월",
+        "periodNote": "또는 연 $39, 약 2개월 무료",
+        "items": [
+          "무료 플랜의 모든 기능",
+          "발표 전 알림: 차트, 데스크톱, 소리",
+          "Telegram 알림",
+          "전체 캘린더: 확장된 기록과 향후 이벤트",
+          "우선 지원",
+          "지속적인 개발을 지원합니다"
+        ]
+      },
+      "trial": "14일 Premium 무료 체험. 카드 불필요.",
+      "more": "요금제 비교"
+    },
+    "close": {
+      "title": "이미 보고 있는 곳에 캘린더를 두세요.",
+      "lead": "1분도 안 되어 설치할 수 있습니다. 차트를 열면 이번 주 발표가 이미 그곳에 있습니다."
+    }
+  },
+  "footer": {
+    "source": "캘린더 데이터: Forex Factory.",
+    "privacy": "개인정보",
+    "terms": "이용약관",
+    "refund": "환불"
+  },
+  "calendar": {
+    "title": "경제 캘린더",
+    "thisWeek": "이번 주",
+    "weekNav": "주간 탐색",
+    "prevWeek": "이전 주",
+    "nextWeek": "다음 주",
+    "today": "오늘",
+    "now": "지금",
+    "in": "후",
+    "premiumRange": "더 과거나 미래의 주는 Premium에서 제공됩니다",
+    "premiumTitle": "이번 주는 Premium에 포함되어 있습니다",
+    "premiumBody": "무료 캘린더는 과거 3주와 미래 약 한 달을 제공합니다. Premium은 확장된 기록과 향후 이벤트를 제공합니다.",
+    "premiumCta": "Premium 보기",
+    "backToThisWeek": "이번 주로 돌아가기",
+    "filters": {
+      "label": "필터",
+      "currencies": "통화",
+      "impacts": "영향도",
+      "search": "이벤트 검색",
+      "searchPlaceholder": "이벤트 검색",
+      "reset": "필터 초기화",
+      "keyEvents": "주요 이벤트",
+      "categories": "카테고리"
+    },
+    "topics": {
+      "NFP": "NFP",
+      "CPI": "CPI",
+      "FOMC": "FOMC",
+      "jobs": "고용",
+      "inflation": "인플레이션",
+      "banks": "중앙은행",
+      "growth": "성장",
+      "speeches": "연설"
+    },
+    "timeZone": {
+      "label": "표시 시간",
+      "auto": "자동 (브라우저)",
+      "offsets": "고정 오프셋 (서머타임 없음)",
+      "regions": {
+        "americas": "아메리카",
+        "europe": "유럽",
+        "middleEastAfrica": "중동 및 아프리카",
+        "asia": "아시아",
+        "pacific": "태평양"
+      }
+    },
+    "showing": "{total}개 중 {n}개 이벤트",
+    "noMatch": "이 필터와 일치하는 이벤트가 없습니다.",
+    "noMatchToday": "오늘은 이 필터와 일치하는 이벤트가 없습니다.",
+    "revised": "수정",
+    "revisedTo": "이전 값이 {v}로 수정됨",
+    "empty": "이번 주 이벤트가 아직 없습니다.",
+    "unavailable": "캘린더를 일시적으로 사용할 수 없습니다. 잠시 후 다시 시도해 주세요.",
+    "columns": {
+      "time": "시간",
+      "currency": "통화",
+      "impact": "영향도",
+      "event": "이벤트",
+      "actual": "실제",
+      "forecast": "예상",
+      "previous": "이전"
+    },
+    "impact": {
+      "HIGH": "높음",
+      "MEDIUM": "중간",
+      "LOW": "낮음",
+      "HOLIDAY": "휴일"
+    },
+    "better": "예상보다 좋음",
+    "worse": "예상보다 나쁨"
+  },
+  "pricing": {
+    "title": "요금제",
+    "lead": "무료로 시작하고, 준비되면 레드 폴더 뉴스 알림을 추가하세요.",
+    "intro": "핵심 확장 프로그램은 무료이며 계정 없이 사용할 수 있습니다. Premium은 발표 전 알림과 전체 캘린더를 제공하며 개발을 지원합니다.",
+    "trial": "14일 무료 체험. 카드 불필요.",
+    "cta": "무료 체험 시작",
+    "ctaSecondary": "Chrome에 추가",
+    "faq": "질문이 있으신가요?",
+    "faqItems": [
+      {
+        "q": "체험판에는 무엇이 포함되나요?",
+        "a": "14일 체험판은 Premium 기능에 대한 전체 접근 권한을 제공합니다: 차트의 발표 전 알림, 데스크톱 및 소리 알림, Telegram 연동, 확장된 캘린더."
+      },
+      {
+        "q": "어떻게 취소하나요?",
+        "a": "계정에 로그인하여 설정에서 언제든지 취소할 수 있습니다. 체험 기간이 끝나기 전에 취소하면 요금이 청구되지 않습니다."
+      },
+      {
+        "q": "만족스럽지 않다면 어떻게 하나요?",
+        "a": "월 또는 연 단위로 결제하신 경우 30일 환불 기간을 제공합니다. 자세한 내용은 환불 페이지를 확인하세요."
+      }
+    ]
+  },
+  "account": {
+    "title": "계정",
+    "lead": "구독을 관리하려면 확장 프로그램에서 사용 중인 동일한 Google 계정으로 로그인하세요.",
+    "signIn": "Google로 로그인",
+    "signingIn": "로그인 중…",
+    "signOut": "로그아웃",
+    "loading": "계정 정보를 불러오는 중…",
+    "plan": {
+      "free": "무료",
+      "trial": "Premium 체험 중",
+      "premium": "Premium",
+      "comp": "전체 접근"
+    },
+    "trialEnds": "체험은 {date}에 종료됩니다",
+    "renewsOn": "{date}에 갱신됩니다",
+    "endsOn": "{date}에 접근이 종료됩니다",
+    "startTrial": "14일 무료 체험 시작",
+    "startingTrial": "체험을 시작하는 중…",
+    "upgrade": "Premium으로 업그레이드",
+    "manage": "구독 관리",
+    "opening": "여는 중…",
+    "error": "문제가 발생했습니다. 다시 시도하거나 지원팀에 문의해 주세요.",
+    "settingsNote": "확장 프로그램과의 설정 동기화가 곧 제공될 예정입니다."
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "updated": "Last updated: 19 September 2026",
+      "intro": "Red News – Economic Calendar for TradingView (\"the extension\") displays economic-calendar news from Forex Factory on TradingView charts. It offers a free tier that works without an account, and an optional Premium tier that requires signing in. This policy explains what data the extension processes.",
+      "sections": [
+        {
+          "heading": "Data we collect",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Free tier (no account): the extension does not collect names, credentials, browsing history, or advertising identifiers. It requests economic-calendar data through our own backend (see \"Our backend\" below); as with any network request, our backend receives your IP address in the normal course of delivering the response. We do not use this for advertising, profiling, or cross-site tracking, and we do not sell your data."
+            },
+            {
+              "type": "p",
+              "text": "Premium tier (with account): if you choose to sign in, we collect and store:"
+            },
+            {
+              "type": "ul",
+              "items": [
+                "your email address, name, and Google account identifier, obtained through Google sign-in, to create and identify your account and to show your name in the extension;",
+                "your subscription / entitlement status (free, trial, or premium);",
+                "a random per-installation identifier used to associate your installation with your account and to apply reasonable device limits."
+              ]
+            },
+            {
+              "type": "p",
+              "text": "We collect this only after you actively sign in, and only to provide the account and Premium functionality. You can stop this at any time by signing out."
+            }
+          ]
+        },
+        {
+          "heading": "Our backend",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Economic-calendar data and subscription checks are served by our backend hosted on Supabase (authentication, database, and server functions). The extension communicates only with our backend and with TradingView; it does not contact Forex Factory directly. Our backend fetches the public Forex Factory calendar on the server side and returns it to the extension."
+            }
+          ]
+        },
+        {
+          "heading": "What the extension accesses",
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "TradingView chart pages (*.tradingview.com/chart/*): the extension reads the current chart symbol, timeframe, and timezone in order to draw the economic-news lines, labels, and tooltips on the chart. No other part of the site is accessed.",
+                "Our backend (hsoaqylcrmspyckkndab.supabase.co): the extension requests economic-calendar data and, if you are signed in, verifies your subscription status.",
+                "An AI provider of your choice (generativelanguage.googleapis.com, api.groq.com or openrouter.ai): only if you connect one with your own API key, and only to request an explanation of a release you asked about. These are optional permissions — the extension has no access to any of them until you press \"Connect\". See AI explanations below."
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Local storage",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The extension uses your browser's local storage (chrome.storage.local) to save your settings (filters, labels, alerts, timezone, language, theme), a short-lived cache of the fetched calendar data, and, if you sign in, your session tokens and account/subscription status. If you connect an AI provider, it also stores your API key and a short-lived cache of the explanations you have already received. Signing out or uninstalling removes this local data; \"Remove key\" removes the AI entries immediately."
+            }
+          ]
+        },
+        {
+          "heading": "Payments",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "If you purchase Premium, payment is processed by Paddle, which acts as the merchant of record. Your card and billing details are entered on Paddle's secure checkout and are never received or stored by us. We only receive your resulting subscription status."
+            }
+          ]
+        },
+        {
+          "heading": "Notifications",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "With your permission, the extension shows an operating-system notification a chosen number of minutes before high-impact economic releases. Notifications are generated locally from calendar event times and are not used for messaging or marketing."
+            }
+          ]
+        },
+        {
+          "heading": "Telegram alerts (optional, Premium)",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Premium users can connect a Telegram account to receive news alerts on their phone, including while their computer is off. This is entirely optional and off until you connect it. When you connect, we store on our backend your Telegram chat ID and username (supplied by Telegram when you start our bot), together with your alert preferences: impact levels, currencies, how many minutes ahead to warn you, your time zone, and any quiet hours. We use them for one purpose — deciding which alerts to send you and when — and messages are delivered through Telegram's own servers, so Telegram's privacy policy applies to their delivery. We keep a short record of which events were already sent to you so the same alert is not repeated; those records are deleted after about two days. You can disconnect at any time by blocking the bot in Telegram, and we delete the stored Telegram data when you delete your account."
+            }
+          ]
+        },
+        {
+          "heading": "AI explanations (optional, Premium, your own provider)",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Premium users can connect their own AI provider — Google Gemini, Groq or OpenRouter — and press ✨ next to a release to get a plain-language briefing. This is entirely optional and does nothing until you paste your own API key. A step-by-step guide is at [rednews.app/ai](https://rednews.app/ai)."
+            },
+            {
+              "type": "p",
+              "text": "Your API key stays in your browser. It is kept in local storage on this computer, is never synchronised to other devices, and is never sent to our backend. \"Remove key\" deletes the key, deletes the cached answers, and withdraws the extension's permission to contact the provider."
+            },
+            {
+              "type": "p",
+              "text": "Requests go straight from your browser to the provider you chose. They do not pass through our servers. We cannot see what you asked or what the model answered."
+            },
+            {
+              "type": "p",
+              "text": "What is sent: the scheduled release itself — title, currency, impact level, scheduled time in UTC, and its forecast, previous and actual values — up to six earlier prints of that same release taken from the extension's own calendar history, and the language the answer should be written in. Your API key travels in the request's authorisation header, as the provider requires. Nothing else is included: no name or email, no account or subscription details, no chart symbol, no browsing history, and no text you type."
+            },
+            {
+              "type": "p",
+              "text": "The provider's own privacy policy governs what it does with that request. Providers differ: some state that they do not retain or train on API traffic by default, while others may use free-tier traffic to improve their products. The current position of each supported provider is summarised on the setup page, but you should read your provider's own terms."
+            },
+            {
+              "type": "p",
+              "text": "Answers are cached locally for up to seven days (at most sixty of them) so that reopening the same event does not spend your quota again. The cache never leaves your browser."
+            },
+            {
+              "type": "p",
+              "text": "Access is granted per provider, at the moment you connect. The three provider addresses are optional permissions: Chrome asks for your consent when you press \"Connect\", and until then the extension cannot reach any of them."
+            }
+          ]
+        },
+        {
+          "heading": "Feedback",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "If you send feedback through the extension (\"Report a problem, idea, or partnership\"), the message you type, an optional email address, and basic non-personal context (the extension version, your browser, and your interface language) are sent through Web3Forms, a third-party form-delivery service, which forwards them to the developer by email. This happens only when you press Send."
+            }
+          ]
+        },
+        {
+          "heading": "Third-party services",
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "Supabase hosts our backend (authentication, database, server functions) that serves calendar data and stores your account/subscription status.",
+                "Google provides the sign-in through which we obtain your name, email, and account identifier.",
+                "Paddle processes Premium payments as merchant of record; card data never reaches us.",
+                "Forex Factory is the source of the public economic-calendar data, fetched by our backend.",
+                "Web3Forms delivers feedback you choose to send.",
+                "Telegram delivers the optional Premium alerts to users who connect our bot.",
+                "Google (Gemini API), Groq, OpenRouter are AI providers a Premium user may connect with their own API key. We hold no account or contract with them on your behalf; your browser talks to whichever one you chose, directly, and only for the explanations you request."
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Each third party processes data subject to its own privacy policy."
+            }
+          ]
+        },
+        {
+          "heading": "Your choices and rights",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The free tier works without an account. If you have signed in, you can sign out at any time, and you may request deletion of your account data by contacting us (see \"Contact\"). Deleting your account removes your stored email, name, account identifier, and subscription record."
+            }
+          ]
+        },
+        {
+          "heading": "Changes",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Any change that affects what data is collected or how it is processed will be reflected in an updated Privacy Policy before it takes effect. The \"Last updated\" date above will be revised."
+            }
+          ]
+        },
+        {
+          "heading": "Contact",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "For questions about this policy or to request account deletion, email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+            }
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "updated": "Last updated: 9 August 2026",
+      "intro": "These Terms of Service (\"Terms\") govern your use of the Red News – Economic Calendar for TradingView browser extension, the website at rednews.app, and any related services (together, the \"Service\"), provided by the developer of Red News (\"we\", \"us\", \"our\"). By installing or using the Service, you agree to these Terms. If you do not agree, do not use the Service.",
+      "sections": [
+        {
+          "heading": "1. The Service",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Red News is a browser extension that overlays scheduled economic-calendar events, sourced from the public Forex Factory calendar, onto TradingView chart pages. It draws event lines, shows event details, and can alert you before releases. Red News is an independent tool and is not affiliated with, endorsed by, or sponsored by TradingView or Forex Factory."
+            }
+          ]
+        },
+        {
+          "heading": "2. Not financial advice",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The Service displays informational data about scheduled economic events. It does not provide trading signals, investment recommendations, or financial advice, and nothing it shows should be relied upon as such. Economic data may be delayed, incomplete, or inaccurate. Trading and investing carry risk, including the loss of capital. You are solely responsible for your own trading decisions."
+            }
+          ]
+        },
+        {
+          "heading": "3. Accounts",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The free tier works without an account. To start a Premium trial or subscribe, you sign in with Google, which provides us your name, email address, and account identifier. You are responsible for maintaining the security of the Google account you use and for all activity under your Red News entitlement. You must be at least 18 years old, or the age of majority in your jurisdiction, to purchase Premium."
+            }
+          ]
+        },
+        {
+          "heading": "4. Subscriptions, billing & trials",
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "Free tier: the core extension is free to use.",
+                "Premium: available as a monthly (US$4.99) or annual (US$39) subscription. Prices are shown at checkout and may vary by region and applicable taxes.",
+                "Free trial: new users may start a 14-day Premium trial without a payment method. If you do not subscribe, the account simply reverts to the free tier when the trial ends. One trial per user.",
+                "Merchant of record: payments are processed by Paddle (Paddle.com Market Limited), which acts as the merchant of record for all purchases. Your purchase is also subject to Paddle's buyer terms. Card and billing details are entered on Paddle's checkout and are never received or stored by us.",
+                "Auto-renewal: paid subscriptions renew automatically at the end of each billing period until cancelled. By subscribing, you authorise recurring charges through Paddle.",
+                "Price changes: we may change subscription prices. Any change to your recurring price will be communicated in advance and will apply from your next renewal."
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "5. Cancellation & refunds",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "You can cancel at any time using the Manage subscription option in the extension. On cancellation you keep Premium access until the end of the period you have already paid for; it does not renew after that. Refunds are handled as described in our Refund Policy."
+            }
+          ]
+        },
+        {
+          "heading": "6. Acceptable use",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "You agree not to:"
+            },
+            {
+              "type": "ul",
+              "items": [
+                "reverse engineer, decompile, or attempt to extract the source or server logic of the Service, except where permitted by law;",
+                "resell, sublicense, or redistribute the Service or the data it delivers;",
+                "circumvent entitlement checks, device limits, or use the Service without a valid entitlement;",
+                "use the Service to build a competing product, or to place undue load on our backend;",
+                "use the Service in any unlawful way or in violation of third-party rights."
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "7. Intellectual property",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The Service, including its code, design, and branding, is owned by us and protected by applicable laws. We grant you a limited, non-exclusive, non-transferable, revocable licence to use the Service for your personal trading, subject to these Terms. Economic data originates from the public Forex Factory calendar and remains subject to any rights of its source. \"TradingView\" and \"Forex Factory\" are trademarks of their respective owners."
+            }
+          ]
+        },
+        {
+          "heading": "8. Third-party services",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The Service relies on third parties including TradingView (the host page), Forex Factory (data source), Supabase (backend and authentication), Google (sign-in), and Paddle (payments). We are not responsible for the availability, content, or practices of these third parties, and your use of them is subject to their own terms."
+            }
+          ]
+        },
+        {
+          "heading": "9. Disclaimers",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The Service is provided \"as is\" and \"as available\", without warranties of any kind, whether express or implied, including fitness for a particular purpose, accuracy, or uninterrupted availability. We do not warrant that event data will be timely, complete, or error-free, or that the Service will always function with TradingView."
+            }
+          ]
+        },
+        {
+          "heading": "10. Limitation of liability",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "To the maximum extent permitted by law, we will not be liable for any indirect, incidental, special, or consequential damages, or for any trading losses, lost profits, or lost data, arising from your use of or inability to use the Service. Our total liability for any claim relating to the Service will not exceed the amount you paid us for the Service in the twelve months preceding the claim."
+            }
+          ]
+        },
+        {
+          "heading": "11. Termination",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "You may stop using the Service at any time by uninstalling the extension and, if applicable, cancelling your subscription. We may suspend or terminate access if you breach these Terms or misuse the Service. You may request deletion of your account data as described in our Privacy Policy."
+            }
+          ]
+        },
+        {
+          "heading": "12. Changes to these Terms",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "We may update these Terms from time to time. Material changes will be reflected here with a revised \"Last updated\" date. Continued use of the Service after changes take effect constitutes acceptance of the updated Terms."
+            }
+          ]
+        },
+        {
+          "heading": "13. Governing law",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "These Terms are governed by the laws of Ukraine, without regard to conflict-of-law rules, except where mandatory consumer-protection laws of your country of residence apply. Purchases are additionally subject to the terms of Paddle as merchant of record."
+            }
+          ]
+        },
+        {
+          "heading": "14. Contact",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Questions about these Terms? Email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+            }
+          ]
+        }
+      ]
+    },
+    "refund": {
+      "title": "Refund Policy",
+      "updated": "Last updated: 9 August 2026",
+      "intro": "We want you to be happy with Red News Premium. This policy explains how trials, cancellations, and refunds work. Payments are processed by Paddle, our merchant of record, so refunds are issued through Paddle to your original payment method.",
+      "sections": [
+        {
+          "heading": "Try before you pay",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Every new user can start a 14-day Premium trial with no payment method required. The trial is long enough to span a major economic release, so you can fully evaluate Premium before you are ever charged. We encourage you to use it."
+            }
+          ]
+        },
+        {
+          "heading": "14-day money-back guarantee",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "If you subscribe and change your mind, you can request a full refund within 14 days of your first payment, no questions asked. This applies to the initial charge on a monthly or annual plan."
+            }
+          ]
+        },
+        {
+          "heading": "Renewals",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Subscriptions renew automatically. To avoid a renewal charge, cancel before your renewal date using the Manage subscription button in the extension. After cancellation you keep Premium until the end of the period you have already paid for. Renewal charges are generally non-refundable, but if you were charged for a renewal you did not intend to keep and reach out promptly, contact us. We review these case by case and aim to be fair."
+            }
+          ]
+        },
+        {
+          "heading": "How to request a refund",
+          "blocks": [
+            {
+              "type": "ul",
+              "items": [
+                "Reply to the Paddle receipt email you received for the purchase, or",
+                "email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request) with the email address used at checkout, or",
+                "reach us on [Discord](https://discord.com/users/1172891214580830322)."
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Approved refunds are processed by Paddle back to your original payment method, typically within 5 to 10 business days depending on your bank or card provider."
+            }
+          ]
+        },
+        {
+          "heading": "Statutory rights",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Nothing in this policy limits any refund or cancellation rights you may have under the consumer-protection laws of your country of residence, or under Paddle's own buyer terms as merchant of record."
+            }
+          ]
+        }
+      ],
+      "closing": "Questions before you buy? We're happy to help: email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing) or message us on [Discord](https://discord.com/users/1172891214580830322)."
+    }
+  },
+  "notFound": {
+    "title": "페이지를 찾을 수 없습니다",
+    "lead": "이 페이지는 차트에서 사라졌습니다. 이동되었거나 처음부터 존재하지 않았을 수 있습니다.",
+    "flag": "페이지를 찾을 수 없습니다",
+    "back": "홈으로 돌아가기",
+    "secondary": "이번 주 캘린더 보기"
+  }
+}

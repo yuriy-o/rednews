@@ -119,6 +119,21 @@ html {
   letter-spacing: -0.01em;
   line-height: 1.3;
 }
+/* Devanagari's vowel signs sit above/below the consonant, taller than Archivo's Latin metrics
+   assume — at 1.05/1.15 line-height, wrapped headings collided with the line above. font-stretch
+   and negative tracking are Latin-only concerns too (meaningless on the OS fallback font Hindi
+   renders through — see Type in DESIGN.md), so drop them here rather than let them crowd conjuncts. */
+:lang(hi) .display,
+:lang(hi) .h2 {
+  font-stretch: 100%;
+  letter-spacing: normal;
+  line-height: 1.4;
+}
+:lang(hi) .h3 {
+  font-stretch: 100%;
+  letter-spacing: normal;
+  line-height: 1.5;
+}
 .lead {
   max-inline-size: 60ch;
   color: var(--fg-muted);

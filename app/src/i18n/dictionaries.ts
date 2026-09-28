@@ -23,6 +23,10 @@ const dictionaries: Partial<Record<Locale, () => Promise<Dictionary>>> = {
   id: () => import('./dictionaries/id.json').then((m) => m.default),
   ms: () => import('./dictionaries/ms.json').then((m) => m.default),
   tr: () => import('./dictionaries/tr.json').then((m) => m.default),
+  hi: () => import('./dictionaries/hi.json').then((m) => m.default),
+  ja: () => import('./dictionaries/ja.json').then((m) => m.default),
+  ko: () => import('./dictionaries/ko.json').then((m) => m.default),
+  'zh-cn': () => import('./dictionaries/zh-cn.json').then((m) => m.default),
 };
 
 /** Current route's locale (from the `[lang]` root segment); 404 for unknown/disabled ones. */
