@@ -279,395 +279,395 @@
   },
   "legal": {
     "privacy": {
-      "title": "Privacy Policy",
-      "updated": "Last updated: 19 September 2026",
-      "intro": "Red News – Economic Calendar for TradingView (\"the extension\") displays economic-calendar news from Forex Factory on TradingView charts. It offers a free tier that works without an account, and an optional Premium tier that requires signing in. This policy explains what data the extension processes.",
+      "title": "개인정보 보호정책",
+      "updated": "최종 업데이트: 2026년 9월 19일",
+      "intro": "Red News – Economic Calendar for TradingView(이하 \"본 확장 프로그램\")는 TradingView 차트에 Forex Factory의 경제 캘린더 뉴스를 표시합니다. 본 확장 프로그램은 계정 없이도 이용할 수 있는 무료 요금제와, 로그인이 필요한 선택적 Premium 요금제를 제공합니다. 본 정책은 본 확장 프로그램이 처리하는 데이터에 대해 설명합니다.",
       "sections": [
         {
-          "heading": "Data we collect",
+          "heading": "당사가 수집하는 정보",
           "blocks": [
             {
               "type": "p",
-              "text": "Free tier (no account): the extension does not collect names, credentials, browsing history, or advertising identifiers. It requests economic-calendar data through our own backend (see \"Our backend\" below); as with any network request, our backend receives your IP address in the normal course of delivering the response. We do not use this for advertising, profiling, or cross-site tracking, and we do not sell your data."
+              "text": "무료 요금제(계정 없음): 본 확장 프로그램은 이름, 인증 정보, 방문 기록, 광고 식별자를 수집하지 않습니다. 본 확장 프로그램은 당사 자체 백엔드(아래 \"당사의 백엔드\" 참조)를 통해 경제 캘린더 데이터를 요청합니다. 다른 모든 네트워크 요청과 마찬가지로, 당사 백엔드는 응답을 전달하는 통상적인 과정에서 귀하의 IP 주소를 수신합니다. 당사는 이를 광고, 프로파일링, 또는 사이트 간 추적에 사용하지 않으며, 귀하의 데이터를 판매하지 않습니다."
             },
             {
               "type": "p",
-              "text": "Premium tier (with account): if you choose to sign in, we collect and store:"
+              "text": "Premium 요금제(계정 있음): 로그인을 선택하실 경우, 당사는 다음을 수집 및 저장합니다."
             },
             {
               "type": "ul",
               "items": [
-                "your email address, name, and Google account identifier, obtained through Google sign-in, to create and identify your account and to show your name in the extension;",
-                "your subscription / entitlement status (free, trial, or premium);",
-                "a random per-installation identifier used to associate your installation with your account and to apply reasonable device limits."
+                "Google 로그인을 통해 얻는 귀하의 이메일 주소, 이름, Google 계정 식별자 — 계정을 생성 및 식별하고 확장 프로그램 내에서 귀하의 이름을 표시하기 위해 사용됩니다.",
+                "귀하의 구독/이용 권한 상태(무료, 체험판, 또는 Premium).",
+                "설치별로 부여되는 임의의 식별자 — 귀하의 설치를 계정과 연결하고 합리적인 기기 수 제한을 적용하기 위해 사용됩니다."
               ]
             },
             {
               "type": "p",
-              "text": "We collect this only after you actively sign in, and only to provide the account and Premium functionality. You can stop this at any time by signing out."
+              "text": "당사는 귀하가 자발적으로 로그인한 이후에만, 그리고 계정 및 Premium 기능을 제공하기 위한 목적으로만 이 정보를 수집합니다. 로그아웃을 통해 언제든지 이를 중단할 수 있습니다."
             }
           ]
         },
         {
-          "heading": "Our backend",
+          "heading": "당사의 백엔드",
           "blocks": [
             {
               "type": "p",
-              "text": "Economic-calendar data and subscription checks are served by our backend hosted on Supabase (authentication, database, and server functions). The extension communicates only with our backend and with TradingView; it does not contact Forex Factory directly. Our backend fetches the public Forex Factory calendar on the server side and returns it to the extension."
+              "text": "경제 캘린더 데이터 및 구독 확인은 Supabase에서 호스팅되는(인증, 데이터베이스, 서버 함수) 당사 백엔드를 통해 제공됩니다. 본 확장 프로그램은 당사 백엔드 및 TradingView와만 통신하며, Forex Factory에 직접 접속하지 않습니다. 당사 백엔드는 서버 측에서 Forex Factory의 공개 캘린더를 가져와 확장 프로그램에 반환합니다."
             }
           ]
         },
         {
-          "heading": "What the extension accesses",
+          "heading": "본 확장 프로그램이 접근하는 항목",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "TradingView chart pages (*.tradingview.com/chart/*): the extension reads the current chart symbol, timeframe, and timezone in order to draw the economic-news lines, labels, and tooltips on the chart. No other part of the site is accessed.",
-                "Our backend (hsoaqylcrmspyckkndab.supabase.co): the extension requests economic-calendar data and, if you are signed in, verifies your subscription status.",
-                "An AI provider of your choice (generativelanguage.googleapis.com, api.groq.com or openrouter.ai): only if you connect one with your own API key, and only to request an explanation of a release you asked about. These are optional permissions — the extension has no access to any of them until you press \"Connect\". See AI explanations below."
+                "TradingView 차트 페이지(*.tradingview.com/chart/*): 본 확장 프로그램은 차트에 경제 뉴스 라인, 라벨, 툴팁을 표시하기 위해 현재 차트 심볼, 시간대(타임프레임), 표준시간대를 읽습니다. 사이트의 다른 부분에는 접근하지 않습니다.",
+                "당사 백엔드(hsoaqylcrmspyckkndab.supabase.co): 본 확장 프로그램은 경제 캘린더 데이터를 요청하며, 로그인한 경우 귀하의 구독 상태를 확인합니다.",
+                "귀하가 선택한 AI 제공업체(generativelanguage.googleapis.com, api.groq.com, 또는 openrouter.ai): 귀하가 본인의 API 키로 연결한 경우에만, 그리고 문의한 발표에 대한 설명을 요청하는 목적으로만 사용됩니다. 이는 선택적 권한이며, 귀하가 \"Connect\"를 누르기 전까지 본 확장 프로그램은 이들 중 어느 것에도 접근할 수 없습니다. 자세한 내용은 아래 \"AI 설명\"을 참조하세요."
               ]
             }
           ]
         },
         {
-          "heading": "Local storage",
+          "heading": "로컬 저장소",
           "blocks": [
             {
               "type": "p",
-              "text": "The extension uses your browser's local storage (chrome.storage.local) to save your settings (filters, labels, alerts, timezone, language, theme), a short-lived cache of the fetched calendar data, and, if you sign in, your session tokens and account/subscription status. If you connect an AI provider, it also stores your API key and a short-lived cache of the explanations you have already received. Signing out or uninstalling removes this local data; \"Remove key\" removes the AI entries immediately."
+              "text": "본 확장 프로그램은 귀하의 브라우저 로컬 저장소(chrome.storage.local)를 사용하여 설정(필터, 라벨, 알림, 표준시간대, 언어, 테마), 가져온 캘린더 데이터의 단기 캐시, 그리고 로그인한 경우 세션 토큰 및 계정/구독 상태를 저장합니다. AI 제공업체를 연결한 경우, API 키와 이미 받은 설명의 단기 캐시도 저장됩니다. 로그아웃하거나 확장 프로그램을 제거하면 이 로컬 데이터가 삭제됩니다. \"Remove key\"를 누르면 AI 관련 항목이 즉시 삭제됩니다."
             }
           ]
         },
         {
-          "heading": "Payments",
+          "heading": "결제",
           "blocks": [
             {
               "type": "p",
-              "text": "If you purchase Premium, payment is processed by Paddle, which acts as the merchant of record. Your card and billing details are entered on Paddle's secure checkout and are never received or stored by us. We only receive your resulting subscription status."
+              "text": "Premium을 구매하시면, 결제는 판매자(merchant of record) 역할을 하는 Paddle이 처리합니다. 카드 및 청구 정보는 Paddle의 안전한 결제 페이지에서 입력되며, 당사가 이를 수신하거나 저장하는 일은 결코 없습니다. 당사는 그 결과로 생성되는 구독 상태만을 전달받습니다."
             }
           ]
         },
         {
-          "heading": "Notifications",
+          "heading": "알림",
           "blocks": [
             {
               "type": "p",
-              "text": "With your permission, the extension shows an operating-system notification a chosen number of minutes before high-impact economic releases. Notifications are generated locally from calendar event times and are not used for messaging or marketing."
+              "text": "귀하의 동의 하에, 본 확장 프로그램은 영향력이 높은 경제 지표 발표 전 지정한 분(分) 수만큼 운영체제 알림을 표시합니다. 알림은 캘린더 이벤트 시간을 기반으로 로컬에서 생성되며, 메시징이나 마케팅 목적으로는 사용되지 않습니다."
             }
           ]
         },
         {
-          "heading": "Telegram alerts (optional, Premium)",
+          "heading": "Telegram 알림(선택 사항, Premium)",
           "blocks": [
             {
               "type": "p",
-              "text": "Premium users can connect a Telegram account to receive news alerts on their phone, including while their computer is off. This is entirely optional and off until you connect it. When you connect, we store on our backend your Telegram chat ID and username (supplied by Telegram when you start our bot), together with your alert preferences: impact levels, currencies, how many minutes ahead to warn you, your time zone, and any quiet hours. We use them for one purpose — deciding which alerts to send you and when — and messages are delivered through Telegram's own servers, so Telegram's privacy policy applies to their delivery. We keep a short record of which events were already sent to you so the same alert is not repeated; those records are deleted after about two days. You can disconnect at any time by blocking the bot in Telegram, and we delete the stored Telegram data when you delete your account."
+              "text": "Premium 사용자는 Telegram 계정을 연결하여, 컴퓨터가 꺼져 있는 동안에도 휴대폰으로 뉴스 알림을 받을 수 있습니다. 이 기능은 전적으로 선택 사항이며, 연결하기 전까지는 비활성 상태입니다. 연결하면, 당사는 백엔드에 귀하의 Telegram 채팅 ID 및 사용자명(당사의 봇을 시작할 때 Telegram이 제공하는 정보)과 함께, 귀하의 알림 설정(영향도 수준, 통화, 사전 알림 시간(분), 표준시간대, 그리고 알림을 받지 않는 시간대)을 저장합니다. 당사는 이를 오직 한 가지 목적—어떤 알림을 언제 보낼지 결정하는 것—으로만 사용하며, 메시지는 Telegram 자체 서버를 통해 전달되므로 그 전달에는 Telegram의 개인정보 보호정책이 적용됩니다. 동일한 알림이 반복되지 않도록 이미 전송된 이벤트에 대한 간단한 기록을 보관하며, 해당 기록은 약 2일 후 삭제됩니다. Telegram에서 봇을 차단하여 언제든지 연결을 해제할 수 있으며, 계정을 삭제하면 저장된 Telegram 데이터도 함께 삭제됩니다."
             }
           ]
         },
         {
-          "heading": "AI explanations (optional, Premium, your own provider)",
+          "heading": "AI 설명(선택 사항, Premium, 귀하가 직접 선택하는 제공업체)",
           "blocks": [
             {
               "type": "p",
-              "text": "Premium users can connect their own AI provider — Google Gemini, Groq or OpenRouter — and press ✨ next to a release to get a plain-language briefing. This is entirely optional and does nothing until you paste your own API key. A step-by-step guide is at [rednews.app/ai](https://rednews.app/ai)."
+              "text": "Premium 사용자는 Google Gemini, Groq, 또는 OpenRouter와 같은 AI 제공업체를 직접 연결하고, 발표 항목 옆의 ✨를 눌러 쉬운 언어로 된 설명을 받을 수 있습니다. 이 기능은 전적으로 선택 사항이며, 귀하가 본인의 API 키를 입력하기 전까지는 아무 동작도 하지 않습니다. 단계별 안내는 [rednews.app/ai](https://rednews.app/ai)에서 확인할 수 있습니다."
             },
             {
               "type": "p",
-              "text": "Your API key stays in your browser. It is kept in local storage on this computer, is never synchronised to other devices, and is never sent to our backend. \"Remove key\" deletes the key, deletes the cached answers, and withdraws the extension's permission to contact the provider."
+              "text": "귀하의 API 키는 귀하의 브라우저 내에 유지됩니다. 이 컴퓨터의 로컬 저장소에 보관되며, 다른 기기와 동기화되지 않고, 당사 백엔드로 전송되지도 않습니다. \"Remove key\"를 누르면 키가 삭제되고, 캐시된 답변도 삭제되며, 해당 제공업체와 통신할 수 있는 확장 프로그램의 권한도 철회됩니다."
             },
             {
               "type": "p",
-              "text": "Requests go straight from your browser to the provider you chose. They do not pass through our servers. We cannot see what you asked or what the model answered."
+              "text": "요청은 귀하의 브라우저에서 귀하가 선택한 제공업체로 직접 전송됩니다. 이는 당사 서버를 거치지 않습니다. 당사는 귀하가 무엇을 질문했는지, 또는 모델이 무엇을 답변했는지 확인할 수 없습니다."
             },
             {
               "type": "p",
-              "text": "What is sent: the scheduled release itself — title, currency, impact level, scheduled time in UTC, and its forecast, previous and actual values — up to six earlier prints of that same release taken from the extension's own calendar history, and the language the answer should be written in. Your API key travels in the request's authorisation header, as the provider requires. Nothing else is included: no name or email, no account or subscription details, no chart symbol, no browsing history, and no text you type."
+              "text": "전송되는 정보: 해당 예정된 발표 자체(제목, 통화, 영향도 수준, UTC 기준 예정 시간, 그리고 예상치, 이전치, 실제치), 본 확장 프로그램 자체의 캘린더 기록에서 가져온 동일 항목의 이전 발표치 최대 6회분, 그리고 답변이 작성되어야 할 언어입니다. 귀하의 API 키는 제공업체가 요구하는 방식에 따라 요청의 인증 헤더에 포함되어 전송됩니다. 그 외의 정보는 전혀 포함되지 않습니다. 이름이나 이메일, 계정 또는 구독 정보, 차트 심볼, 방문 기록, 귀하가 입력한 텍스트 등은 전송되지 않습니다."
             },
             {
               "type": "p",
-              "text": "The provider's own privacy policy governs what it does with that request. Providers differ: some state that they do not retain or train on API traffic by default, while others may use free-tier traffic to improve their products. The current position of each supported provider is summarised on the setup page, but you should read your provider's own terms."
+              "text": "해당 요청에 대해 각 제공업체가 어떻게 처리하는지는 각 제공업체 자체의 개인정보 보호정책에 따라 정해집니다. 제공업체마다 방침이 다르며, 일부는 기본적으로 API 트래픽을 보관하거나 학습에 사용하지 않는다고 명시하는 반면, 다른 제공업체는 무료 등급 트래픽을 제품 개선에 사용할 수도 있습니다. 지원되는 각 제공업체의 현재 방침은 설정 페이지에 요약되어 있지만, 실제로는 이용하시는 제공업체 자체의 약관을 확인하시기 바랍니다."
             },
             {
               "type": "p",
-              "text": "Answers are cached locally for up to seven days (at most sixty of them) so that reopening the same event does not spend your quota again. The cache never leaves your browser."
+              "text": "답변은 최대 7일간(최대 60건까지) 로컬에 캐시되어, 동일한 이벤트를 다시 열었을 때 이용 한도를 다시 소진하지 않도록 합니다. 이 캐시는 귀하의 브라우저를 벗어나지 않습니다."
             },
             {
               "type": "p",
-              "text": "Access is granted per provider, at the moment you connect. The three provider addresses are optional permissions: Chrome asks for your consent when you press \"Connect\", and until then the extension cannot reach any of them."
+              "text": "접근 권한은 제공업체별로, 귀하가 연결하는 시점에 부여됩니다. 세 제공업체의 주소는 모두 선택적 권한이며, Chrome은 귀하가 \"Connect\"를 누를 때 동의를 요청하며, 그 전까지는 본 확장 프로그램이 이들 중 어느 곳에도 접근할 수 없습니다."
             }
           ]
         },
         {
-          "heading": "Feedback",
+          "heading": "피드백",
           "blocks": [
             {
               "type": "p",
-              "text": "If you send feedback through the extension (\"Report a problem, idea, or partnership\"), the message you type, an optional email address, and basic non-personal context (the extension version, your browser, and your interface language) are sent through Web3Forms, a third-party form-delivery service, which forwards them to the developer by email. This happens only when you press Send."
+              "text": "본 확장 프로그램을 통해 피드백(\"Report a problem, idea, or partnership\")을 보내시는 경우, 입력하신 메시지, 선택적으로 입력한 이메일 주소, 그리고 개인을 특정하지 않는 기본 정보(확장 프로그램 버전, 브라우저, 인터페이스 언어)가 제3자 양식 전송 서비스인 Web3Forms를 통해 전송되며, 이는 이메일로 개발자에게 전달됩니다. 이는 귀하가 Send를 누른 경우에만 발생합니다."
             }
           ]
         },
         {
-          "heading": "Third-party services",
+          "heading": "제3자 서비스",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Supabase hosts our backend (authentication, database, server functions) that serves calendar data and stores your account/subscription status.",
-                "Google provides the sign-in through which we obtain your name, email, and account identifier.",
-                "Paddle processes Premium payments as merchant of record; card data never reaches us.",
-                "Forex Factory is the source of the public economic-calendar data, fetched by our backend.",
-                "Web3Forms delivers feedback you choose to send.",
-                "Telegram delivers the optional Premium alerts to users who connect our bot.",
-                "Google (Gemini API), Groq, OpenRouter are AI providers a Premium user may connect with their own API key. We hold no account or contract with them on your behalf; your browser talks to whichever one you chose, directly, and only for the explanations you request."
+                "Supabase는 캘린더 데이터를 제공하고 귀하의 계정/구독 상태를 저장하는 당사 백엔드(인증, 데이터베이스, 서버 함수)를 호스팅합니다.",
+                "Google은 당사가 귀하의 이름, 이메일, 계정 식별자를 얻는 로그인 기능을 제공합니다.",
+                "Paddle은 merchant of record로서 Premium 결제를 처리하며, 카드 데이터는 당사에 전달되지 않습니다.",
+                "Forex Factory는 공개 경제 캘린더 데이터의 출처이며, 당사 백엔드가 이를 가져옵니다.",
+                "Web3Forms는 귀하가 전송을 선택한 피드백을 전달합니다.",
+                "Telegram은 당사의 봇을 연결한 사용자에게 선택적인 Premium 알림을 전달합니다.",
+                "Google(Gemini API), Groq, OpenRouter는 Premium 사용자가 본인의 API 키로 연결할 수 있는 AI 제공업체입니다. 당사는 귀하를 대신하여 이들과 계정이나 계약을 보유하지 않으며, 귀하의 브라우저는 귀하가 선택한 제공업체와 직접 통신하며, 오직 귀하가 요청한 설명을 얻기 위한 목적으로만 통신합니다."
               ]
             },
             {
               "type": "p",
-              "text": "Each third party processes data subject to its own privacy policy."
+              "text": "각 제3자는 자체 개인정보 보호정책에 따라 데이터를 처리합니다."
             }
           ]
         },
         {
-          "heading": "Your choices and rights",
+          "heading": "귀하의 선택 및 권리",
           "blocks": [
             {
               "type": "p",
-              "text": "The free tier works without an account. If you have signed in, you can sign out at any time, and you may request deletion of your account data by contacting us (see \"Contact\"). Deleting your account removes your stored email, name, account identifier, and subscription record."
+              "text": "무료 요금제는 계정 없이도 이용할 수 있습니다. 로그인하신 경우, 언제든지 로그아웃할 수 있으며, 당사에 연락하여 계정 데이터의 삭제를 요청할 수 있습니다(\"문의하기\" 참조). 계정을 삭제하면 저장된 이메일, 이름, 계정 식별자, 그리고 구독 기록이 삭제됩니다."
             }
           ]
         },
         {
-          "heading": "Changes",
+          "heading": "변경 사항",
           "blocks": [
             {
               "type": "p",
-              "text": "Any change that affects what data is collected or how it is processed will be reflected in an updated Privacy Policy before it takes effect. The \"Last updated\" date above will be revised."
+              "text": "수집되는 데이터 또는 처리 방식에 영향을 미치는 모든 변경 사항은 효력이 발생하기 전에 업데이트된 개인정보 보호정책에 반영됩니다. 위의 \"최종 업데이트\" 날짜도 함께 갱신됩니다."
             }
           ]
         },
         {
-          "heading": "Contact",
+          "heading": "문의하기",
           "blocks": [
             {
               "type": "p",
-              "text": "For questions about this policy or to request account deletion, email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+              "text": "본 정책에 대한 문의 또는 계정 삭제 요청은 [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question)로 이메일을 보내시거나, [Discord](https://discord.com/users/1172891214580830322)를 통해 문의해 주세요."
             }
           ]
         }
       ]
     },
     "terms": {
-      "title": "Terms of Service",
-      "updated": "Last updated: 9 August 2026",
-      "intro": "These Terms of Service (\"Terms\") govern your use of the Red News – Economic Calendar for TradingView browser extension, the website at rednews.app, and any related services (together, the \"Service\"), provided by the developer of Red News (\"we\", \"us\", \"our\"). By installing or using the Service, you agree to these Terms. If you do not agree, do not use the Service.",
+      "title": "이용약관",
+      "updated": "최종 업데이트: 2026년 8월 9일",
+      "intro": "본 이용약관(이하 \"본 약관\")은 Red News – Economic Calendar for TradingView 브라우저 확장 프로그램, rednews.app 웹사이트, 그리고 이와 관련된 모든 서비스(총칭하여 \"본 서비스\")의 이용에 적용되며, Red News의 개발자(이하 \"당사\")가 제공합니다. 본 서비스를 설치하거나 이용함으로써, 귀하는 본 약관에 동의하는 것으로 간주됩니다. 동의하지 않으시는 경우, 본 서비스를 이용하지 마시기 바랍니다.",
       "sections": [
         {
-          "heading": "1. The Service",
+          "heading": "1. 본 서비스",
           "blocks": [
             {
               "type": "p",
-              "text": "Red News is a browser extension that overlays scheduled economic-calendar events, sourced from the public Forex Factory calendar, onto TradingView chart pages. It draws event lines, shows event details, and can alert you before releases. Red News is an independent tool and is not affiliated with, endorsed by, or sponsored by TradingView or Forex Factory."
+              "text": "Red News는 Forex Factory의 공개 경제 캘린더를 출처로 하는 예정된 경제 지표 이벤트를 TradingView 차트 페이지 위에 오버레이로 표시하는 브라우저 확장 프로그램입니다. 이벤트 발표 시점을 나타내는 선을 그리고, 이벤트 세부 정보를 표시하며, 발표 전에 알림을 보낼 수 있습니다. Red News는 독립적인 도구이며, TradingView 또는 Forex Factory와 제휴, 승인, 후원 관계에 있지 않습니다."
             }
           ]
         },
         {
-          "heading": "2. Not financial advice",
+          "heading": "2. 투자 자문이 아님",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service displays informational data about scheduled economic events. It does not provide trading signals, investment recommendations, or financial advice, and nothing it shows should be relied upon as such. Economic data may be delayed, incomplete, or inaccurate. Trading and investing carry risk, including the loss of capital. You are solely responsible for your own trading decisions."
+              "text": "본 서비스는 예정된 경제 이벤트에 관한 정보성 데이터를 표시합니다. 본 서비스는 거래 신호, 투자 권고, 또는 금융 자문을 제공하지 않으며, 표시되는 어떠한 내용도 그러한 목적으로 신뢰해서는 안 됩니다. 경제 데이터는 지연, 불완전, 또는 부정확할 수 있습니다. 거래 및 투자에는 자본 손실을 포함한 위험이 따릅니다. 귀하의 거래 판단에 대한 책임은 전적으로 귀하에게 있습니다."
             }
           ]
         },
         {
-          "heading": "3. Accounts",
+          "heading": "3. 계정",
           "blocks": [
             {
               "type": "p",
-              "text": "The free tier works without an account. To start a Premium trial or subscribe, you sign in with Google, which provides us your name, email address, and account identifier. You are responsible for maintaining the security of the Google account you use and for all activity under your Red News entitlement. You must be at least 18 years old, or the age of majority in your jurisdiction, to purchase Premium."
+              "text": "무료 요금제는 계정 없이도 이용할 수 있습니다. Premium 체험판을 시작하거나 구독을 신청하려면 Google로 로그인해야 하며, 이를 통해 당사는 귀하의 이름, 이메일 주소, 계정 식별자를 제공받습니다. 귀하는 본인이 사용하는 Google 계정의 보안을 유지할 책임이 있으며, 귀하의 Red News 이용 권한 하에서 이루어지는 모든 활동에 대해 책임을 집니다. Premium을 구매하려면 만 18세 이상이거나, 귀하가 거주하는 관할 지역의 법정 성년 연령 이상이어야 합니다."
             }
           ]
         },
         {
-          "heading": "4. Subscriptions, billing & trials",
+          "heading": "4. 구독, 결제 및 체험판",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Free tier: the core extension is free to use.",
-                "Premium: available as a monthly (US$4.99) or annual (US$39) subscription. Prices are shown at checkout and may vary by region and applicable taxes.",
-                "Free trial: new users may start a 14-day Premium trial without a payment method. If you do not subscribe, the account simply reverts to the free tier when the trial ends. One trial per user.",
-                "Merchant of record: payments are processed by Paddle (Paddle.com Market Limited), which acts as the merchant of record for all purchases. Your purchase is also subject to Paddle's buyer terms. Card and billing details are entered on Paddle's checkout and are never received or stored by us.",
-                "Auto-renewal: paid subscriptions renew automatically at the end of each billing period until cancelled. By subscribing, you authorise recurring charges through Paddle.",
-                "Price changes: we may change subscription prices. Any change to your recurring price will be communicated in advance and will apply from your next renewal."
+                "무료 요금제: 핵심 확장 프로그램 기능은 무료로 이용할 수 있습니다.",
+                "Premium: 월간(US$4.99) 또는 연간(US$39) 구독으로 제공됩니다. 가격은 결제 시 표시되며, 지역 및 적용되는 세금에 따라 다를 수 있습니다.",
+                "무료 체험판: 신규 사용자는 결제 수단 등록 없이 14일간의 Premium 체험판을 시작할 수 있습니다. 구독을 신청하지 않으면, 체험판 종료 시 계정은 자동으로 무료 요금제로 전환됩니다. 체험판은 사용자 1인당 1회로 제한됩니다.",
+                "Merchant of record: 결제는 모든 구매에 대해 merchant of record 역할을 하는 Paddle(Paddle.com Market Limited)이 처리합니다. 귀하의 구매는 Paddle의 구매자 약관도 함께 적용받습니다. 카드 및 청구 정보는 Paddle의 결제 페이지에서 입력되며, 당사가 이를 수신하거나 저장하는 일은 결코 없습니다.",
+                "자동 갱신: 유료 구독은 취소되지 않는 한 각 결제 주기가 끝날 때 자동으로 갱신됩니다. 구독함으로써, 귀하는 Paddle을 통한 반복 결제를 승인하는 것으로 간주됩니다.",
+                "가격 변경: 당사는 구독 가격을 변경할 수 있습니다. 반복 결제 가격에 변경이 있는 경우 사전에 공지되며, 귀하의 다음 갱신부터 적용됩니다."
               ]
             }
           ]
         },
         {
-          "heading": "5. Cancellation & refunds",
+          "heading": "5. 취소 및 환불",
           "blocks": [
             {
               "type": "p",
-              "text": "You can cancel at any time using the Manage subscription option in the extension. On cancellation you keep Premium access until the end of the period you have already paid for; it does not renew after that. Refunds are handled as described in our Refund Policy."
+              "text": "귀하는 확장 프로그램 내의 Manage subscription 옵션을 통해 언제든지 구독을 취소할 수 있습니다. 취소하더라도, 귀하는 이미 결제한 기간이 끝날 때까지 Premium 이용 권한을 유지하며, 그 이후에는 갱신되지 않습니다. 환불은 당사의 환불 정책에 설명된 방식으로 처리됩니다."
             }
           ]
         },
         {
-          "heading": "6. Acceptable use",
+          "heading": "6. 허용되는 이용",
           "blocks": [
             {
               "type": "p",
-              "text": "You agree not to:"
+              "text": "귀하는 다음 행위를 하지 않을 것에 동의합니다."
             },
             {
               "type": "ul",
               "items": [
-                "reverse engineer, decompile, or attempt to extract the source or server logic of the Service, except where permitted by law;",
-                "resell, sublicense, or redistribute the Service or the data it delivers;",
-                "circumvent entitlement checks, device limits, or use the Service without a valid entitlement;",
-                "use the Service to build a competing product, or to place undue load on our backend;",
-                "use the Service in any unlawful way or in violation of third-party rights."
+                "법률에서 허용하는 경우를 제외하고, 본 서비스의 소스 코드 또는 서버 로직을 리버스 엔지니어링, 디컴파일, 또는 추출하려는 행위",
+                "본 서비스 또는 그것이 제공하는 데이터를 재판매, 재라이선스, 또는 재배포하는 행위",
+                "이용 권한 확인 또는 기기 수 제한을 회피하거나, 유효한 이용 권한 없이 본 서비스를 이용하는 행위",
+                "본 서비스를 이용하여 경쟁 제품을 구축하거나, 당사 백엔드에 부당한 부하를 발생시키는 행위",
+                "본 서비스를 불법적인 방식으로, 또는 제3자의 권리를 침해하는 방식으로 이용하는 행위"
               ]
             }
           ]
         },
         {
-          "heading": "7. Intellectual property",
+          "heading": "7. 지적재산권",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service, including its code, design, and branding, is owned by us and protected by applicable laws. We grant you a limited, non-exclusive, non-transferable, revocable licence to use the Service for your personal trading, subject to these Terms. Economic data originates from the public Forex Factory calendar and remains subject to any rights of its source. \"TradingView\" and \"Forex Factory\" are trademarks of their respective owners."
+              "text": "본 서비스(코드, 디자인, 브랜딩을 포함)는 당사가 소유하며 관련 법률에 의해 보호됩니다. 당사는 본 약관에 따라 귀하 개인의 거래 목적을 위해 본 서비스를 이용할 수 있는 제한적, 비독점적, 양도 불가능하며 철회 가능한 라이선스를 귀하에게 부여합니다. 경제 데이터는 Forex Factory의 공개 캘린더에서 유래하며, 그 출처가 보유한 권리에 계속 따르게 됩니다. \"TradingView\" 및 \"Forex Factory\"는 각 소유자의 상표입니다."
             }
           ]
         },
         {
-          "heading": "8. Third-party services",
+          "heading": "8. 제3자 서비스",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service relies on third parties including TradingView (the host page), Forex Factory (data source), Supabase (backend and authentication), Google (sign-in), and Paddle (payments). We are not responsible for the availability, content, or practices of these third parties, and your use of them is subject to their own terms."
+              "text": "본 서비스는 TradingView(호스트 페이지), Forex Factory(데이터 소스), Supabase(백엔드 및 인증), Google(로그인), Paddle(결제)을 포함한 제3자에 의존합니다. 당사는 이러한 제3자의 가용성, 콘텐츠, 또는 관행에 대해 책임을 지지 않으며, 이들의 이용에는 각 제3자 자체의 약관이 적용됩니다."
             }
           ]
         },
         {
-          "heading": "9. Disclaimers",
+          "heading": "9. 면책조항",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service is provided \"as is\" and \"as available\", without warranties of any kind, whether express or implied, including fitness for a particular purpose, accuracy, or uninterrupted availability. We do not warrant that event data will be timely, complete, or error-free, or that the Service will always function with TradingView."
+              "text": "본 서비스는 \"있는 그대로\"(as is) 및 \"제공 가능한 상태로\"(as available) 제공되며, 특정 목적에의 적합성, 정확성, 또는 중단 없는 이용 가능성을 포함하여 명시적이든 묵시적이든 어떠한 종류의 보증도 제공하지 않습니다. 당사는 이벤트 데이터가 항상 시기적절하고, 완전하며, 오류가 없을 것이라거나, 본 서비스가 항상 TradingView와 함께 정상적으로 작동할 것임을 보증하지 않습니다."
             }
           ]
         },
         {
-          "heading": "10. Limitation of liability",
+          "heading": "10. 책임의 제한",
           "blocks": [
             {
               "type": "p",
-              "text": "To the maximum extent permitted by law, we will not be liable for any indirect, incidental, special, or consequential damages, or for any trading losses, lost profits, or lost data, arising from your use of or inability to use the Service. Our total liability for any claim relating to the Service will not exceed the amount you paid us for the Service in the twelve months preceding the claim."
+              "text": "법률이 허용하는 최대 범위 내에서, 당사는 귀하의 본 서비스 이용 또는 이용 불능으로 인해 발생하는 어떠한 간접적, 부수적, 특별, 또는 결과적 손해, 또는 거래 손실, 이익 손실, 데이터 손실에 대해서도 책임을 지지 않습니다. 본 서비스와 관련된 모든 청구에 대한 당사의 총 책임은 해당 청구가 발생하기 전 12개월 동안 귀하가 본 서비스에 대해 당사에 지불한 금액을 초과하지 않습니다."
             }
           ]
         },
         {
-          "heading": "11. Termination",
+          "heading": "11. 이용 종료",
           "blocks": [
             {
               "type": "p",
-              "text": "You may stop using the Service at any time by uninstalling the extension and, if applicable, cancelling your subscription. We may suspend or terminate access if you breach these Terms or misuse the Service. You may request deletion of your account data as described in our Privacy Policy."
+              "text": "귀하는 확장 프로그램을 제거하고, 해당하는 경우 구독을 취소함으로써 언제든지 본 서비스 이용을 중단할 수 있습니다. 당사는 귀하가 본 약관을 위반하거나 본 서비스를 오용하는 경우 접근을 정지하거나 종료할 수 있습니다. 귀하는 당사의 개인정보 보호정책에 설명된 방식으로 계정 데이터의 삭제를 요청할 수 있습니다."
             }
           ]
         },
         {
-          "heading": "12. Changes to these Terms",
+          "heading": "12. 본 약관의 변경",
           "blocks": [
             {
               "type": "p",
-              "text": "We may update these Terms from time to time. Material changes will be reflected here with a revised \"Last updated\" date. Continued use of the Service after changes take effect constitutes acceptance of the updated Terms."
+              "text": "당사는 본 약관을 수시로 업데이트할 수 있습니다. 중대한 변경 사항은 갱신된 \"최종 업데이트\" 날짜와 함께 여기에 반영됩니다. 변경 사항이 효력을 발생한 이후에도 본 서비스를 계속 이용하는 것은 업데이트된 약관에 대한 동의로 간주됩니다."
             }
           ]
         },
         {
-          "heading": "13. Governing law",
+          "heading": "13. 준거법",
           "blocks": [
             {
               "type": "p",
-              "text": "These Terms are governed by the laws of Ukraine, without regard to conflict-of-law rules, except where mandatory consumer-protection laws of your country of residence apply. Purchases are additionally subject to the terms of Paddle as merchant of record."
+              "text": "본 약관은 법 충돌 규칙과 관계없이 우크라이나 법률을 준거법으로 하며, 다만 귀하의 거주 국가에서 적용되는 강제적인 소비자 보호법이 있는 경우에는 그 법률이 우선합니다. 구매에는 merchant of record로서의 Paddle 약관도 추가로 적용됩니다."
             }
           ]
         },
         {
-          "heading": "14. Contact",
+          "heading": "14. 문의하기",
           "blocks": [
             {
               "type": "p",
-              "text": "Questions about these Terms? Email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+              "text": "본 약관에 대해 궁금하신 점이 있으신가요? [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question)로 이메일을 보내시거나, [Discord](https://discord.com/users/1172891214580830322)를 통해 문의해 주세요."
             }
           ]
         }
       ]
     },
     "refund": {
-      "title": "Refund Policy",
-      "updated": "Last updated: 9 August 2026",
-      "intro": "We want you to be happy with Red News Premium. This policy explains how trials, cancellations, and refunds work. Payments are processed by Paddle, our merchant of record, so refunds are issued through Paddle to your original payment method.",
+      "title": "환불 정책",
+      "updated": "최종 업데이트: 2026년 8월 9일",
+      "intro": "당사는 귀하가 Red News Premium에 만족하시길 바랍니다. 본 정책은 체험판, 취소, 그리고 환불이 어떻게 이루어지는지 설명합니다. 결제는 당사의 merchant of record인 Paddle이 처리하므로, 환불은 Paddle을 통해 귀하의 원래 결제 수단으로 이루어집니다.",
       "sections": [
         {
-          "heading": "Try before you pay",
+          "heading": "결제 전에 먼저 체험해 보세요",
           "blocks": [
             {
               "type": "p",
-              "text": "Every new user can start a 14-day Premium trial with no payment method required. The trial is long enough to span a major economic release, so you can fully evaluate Premium before you are ever charged. We encourage you to use it."
+              "text": "모든 신규 사용자는 결제 수단 등록 없이 14일간의 Premium 체험판을 시작할 수 있습니다. 이 체험 기간은 주요 경제 지표 발표를 포함할 만큼 충분히 길기 때문에, 실제로 결제되기 전에 Premium을 충분히 평가해 보실 수 있습니다. 꼭 활용해 보시기를 권장합니다."
             }
           ]
         },
         {
-          "heading": "14-day money-back guarantee",
+          "heading": "14일 환불 보장",
           "blocks": [
             {
               "type": "p",
-              "text": "If you subscribe and change your mind, you can request a full refund within 14 days of your first payment, no questions asked. This applies to the initial charge on a monthly or annual plan."
+              "text": "구독을 신청한 후 마음이 바뀌신 경우, 첫 결제일로부터 14일 이내에 별도의 이유 없이 전액 환불을 요청하실 수 있습니다. 이는 월간 또는 연간 요금제의 최초 결제에 적용됩니다."
             }
           ]
         },
         {
-          "heading": "Renewals",
+          "heading": "갱신",
           "blocks": [
             {
               "type": "p",
-              "text": "Subscriptions renew automatically. To avoid a renewal charge, cancel before your renewal date using the Manage subscription button in the extension. After cancellation you keep Premium until the end of the period you have already paid for. Renewal charges are generally non-refundable, but if you were charged for a renewal you did not intend to keep and reach out promptly, contact us. We review these case by case and aim to be fair."
+              "text": "구독은 자동으로 갱신됩니다. 갱신에 따른 결제를 원하지 않으시는 경우, 갱신일 이전에 확장 프로그램 내의 Manage subscription 버튼을 사용하여 취소해 주세요. 취소 후에도 이미 결제한 기간이 끝날 때까지 Premium을 이용할 수 있습니다. 갱신 결제는 일반적으로 환불되지 않지만, 계속 이용할 의사가 없었던 갱신 결제가 발생하여 신속히 연락을 주시는 경우에는 당사에 문의해 주시기 바랍니다. 당사는 각 사례를 개별적으로 검토하며 공정하게 처리하고자 노력합니다."
             }
           ]
         },
         {
-          "heading": "How to request a refund",
+          "heading": "환불 요청 방법",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Reply to the Paddle receipt email you received for the purchase, or",
-                "email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request) with the email address used at checkout, or",
-                "reach us on [Discord](https://discord.com/users/1172891214580830322)."
+                "구매 시 받으신 Paddle 영수증 이메일에 답장하시거나,",
+                "결제 시 사용한 이메일 주소를 명시하여 [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request)로 이메일을 보내시거나,",
+                "[Discord](https://discord.com/users/1172891214580830322)를 통해 문의해 주세요."
               ]
             },
             {
               "type": "p",
-              "text": "Approved refunds are processed by Paddle back to your original payment method, typically within 5 to 10 business days depending on your bank or card provider."
+              "text": "승인된 환불은 Paddle을 통해 귀하의 원래 결제 수단으로 처리되며, 이용 중인 은행 또는 카드사에 따라 일반적으로 영업일 기준 5일에서 10일 정도 소요됩니다."
             }
           ]
         },
         {
-          "heading": "Statutory rights",
+          "heading": "법적 권리",
           "blocks": [
             {
               "type": "p",
-              "text": "Nothing in this policy limits any refund or cancellation rights you may have under the consumer-protection laws of your country of residence, or under Paddle's own buyer terms as merchant of record."
+              "text": "본 정책의 어떠한 내용도 귀하가 거주하는 국가의 소비자 보호법에 따라, 또는 merchant of record로서의 Paddle 자체 구매자 약관에 따라 귀하가 가질 수 있는 환불 또는 취소 권리를 제한하지 않습니다."
             }
           ]
         }
       ],
-      "closing": "Questions before you buy? We're happy to help: email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing) or message us on [Discord](https://discord.com/users/1172891214580830322)."
+      "closing": "구매 전에 궁금하신 점이 있으신가요? 언제든지 도와드리겠습니다. [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing)로 이메일을 보내시거나, [Discord](https://discord.com/users/1172891214580830322)로 메시지를 보내주세요."
     }
   },
   "notFound": {
