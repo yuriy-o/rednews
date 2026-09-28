@@ -279,395 +279,395 @@
   },
   "legal": {
     "privacy": {
-      "title": "Privacy Policy",
-      "updated": "Last updated: 19 September 2026",
-      "intro": "Red News – Economic Calendar for TradingView (\"the extension\") displays economic-calendar news from Forex Factory on TradingView charts. It offers a free tier that works without an account, and an optional Premium tier that requires signing in. This policy explains what data the extension processes.",
+      "title": "Політика конфіденційності",
+      "updated": "Останнє оновлення: 19 вересня 2026 р.",
+      "intro": "Red News – Economic Calendar for TradingView (\"розширення\") відображає новини економічного календаря Forex Factory на графіках TradingView. Розширення пропонує безкоштовний тариф, який працює без облікового запису, і опціональний тариф Premium, що потребує входу в систему. Ця політика пояснює, які дані обробляє розширення.",
       "sections": [
         {
-          "heading": "Data we collect",
+          "heading": "Дані, які ми збираємо",
           "blocks": [
             {
               "type": "p",
-              "text": "Free tier (no account): the extension does not collect names, credentials, browsing history, or advertising identifiers. It requests economic-calendar data through our own backend (see \"Our backend\" below); as with any network request, our backend receives your IP address in the normal course of delivering the response. We do not use this for advertising, profiling, or cross-site tracking, and we do not sell your data."
+              "text": "Безкоштовний тариф (без облікового запису): розширення не збирає імена, облікові дані, історію перегляду чи рекламні ідентифікатори. Воно запитує дані економічного календаря через наш власний бекенд (див. \"Наш бекенд\" нижче); як і при будь-якому мережевому запиті, наш бекенд отримує вашу IP-адресу у звичайному порядку надання відповіді. Ми не використовуємо цю адресу для реклами, профілювання чи міжсайтового відстеження і не продаємо ваші дані."
             },
             {
               "type": "p",
-              "text": "Premium tier (with account): if you choose to sign in, we collect and store:"
+              "text": "Тариф Premium (з обліковим записом): якщо ви обираєте увійти в систему, ми збираємо та зберігаємо:"
             },
             {
               "type": "ul",
               "items": [
-                "your email address, name, and Google account identifier, obtained through Google sign-in, to create and identify your account and to show your name in the extension;",
-                "your subscription / entitlement status (free, trial, or premium);",
-                "a random per-installation identifier used to associate your installation with your account and to apply reasonable device limits."
+                "вашу електронну адресу, ім'я та ідентифікатор облікового запису Google, отримані через вхід через Google, для створення та ідентифікації вашого облікового запису і для показу вашого імені в розширенні;",
+                "статус вашої підписки / права доступу (безкоштовний, пробний або Premium);",
+                "випадковий ідентифікатор кожної інсталяції, який використовується для зв'язування вашої інсталяції з вашим обліковим записом і для застосування обґрунтованих обмежень на кількість пристроїв."
               ]
             },
             {
               "type": "p",
-              "text": "We collect this only after you actively sign in, and only to provide the account and Premium functionality. You can stop this at any time by signing out."
+              "text": "Ми збираємо ці дані лише після того, як ви самостійно увійдете в систему, і лише для надання функціональності облікового запису та Premium. Ви можете зупинити це в будь-який момент, вийшовши з облікового запису."
             }
           ]
         },
         {
-          "heading": "Our backend",
+          "heading": "Наш бекенд",
           "blocks": [
             {
               "type": "p",
-              "text": "Economic-calendar data and subscription checks are served by our backend hosted on Supabase (authentication, database, and server functions). The extension communicates only with our backend and with TradingView; it does not contact Forex Factory directly. Our backend fetches the public Forex Factory calendar on the server side and returns it to the extension."
+              "text": "Дані економічного календаря та перевірки підписки надаються нашим бекендом, розміщеним на Supabase (автентифікація, база даних і серверні функції). Розширення взаємодіє лише з нашим бекендом і з TradingView; воно не звертається безпосередньо до Forex Factory. Наш бекенд отримує публічний календар Forex Factory на стороні сервера і повертає його розширенню."
             }
           ]
         },
         {
-          "heading": "What the extension accesses",
+          "heading": "До чого має доступ розширення",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "TradingView chart pages (*.tradingview.com/chart/*): the extension reads the current chart symbol, timeframe, and timezone in order to draw the economic-news lines, labels, and tooltips on the chart. No other part of the site is accessed.",
-                "Our backend (hsoaqylcrmspyckkndab.supabase.co): the extension requests economic-calendar data and, if you are signed in, verifies your subscription status.",
-                "An AI provider of your choice (generativelanguage.googleapis.com, api.groq.com or openrouter.ai): only if you connect one with your own API key, and only to request an explanation of a release you asked about. These are optional permissions — the extension has no access to any of them until you press \"Connect\". See AI explanations below."
+                "Сторінки графіків TradingView (*.tradingview.com/chart/*): розширення зчитує поточний символ графіка, таймфрейм і часовий пояс, щоб малювати лінії, підписи та підказки економічних новин на графіку. Жодна інша частина сайту не використовується.",
+                "Наш бекенд (hsoaqylcrmspyckkndab.supabase.co): розширення запитує дані економічного календаря і, якщо ви увійшли в систему, перевіряє статус вашої підписки.",
+                "Обраний вами провайдер AI (generativelanguage.googleapis.com, api.groq.com або openrouter.ai): лише якщо ви підключите його за допомогою власного API-ключа, і лише для запиту пояснення релізу, про який ви запитали. Це опціональні дозволи — розширення не має доступу до жодного з них, доки ви не натиснете \"Підключити\". Див. розділ \"Пояснення на основі AI\" нижче."
               ]
             }
           ]
         },
         {
-          "heading": "Local storage",
+          "heading": "Локальне зберігання",
           "blocks": [
             {
               "type": "p",
-              "text": "The extension uses your browser's local storage (chrome.storage.local) to save your settings (filters, labels, alerts, timezone, language, theme), a short-lived cache of the fetched calendar data, and, if you sign in, your session tokens and account/subscription status. If you connect an AI provider, it also stores your API key and a short-lived cache of the explanations you have already received. Signing out or uninstalling removes this local data; \"Remove key\" removes the AI entries immediately."
+              "text": "Розширення використовує локальне сховище вашого браузера (chrome.storage.local) для збереження ваших налаштувань (фільтри, підписи, сповіщення, часовий пояс, мова, тема), короткочасного кешу отриманих даних календаря, а також, якщо ви увійшли в систему, токенів вашої сесії та статусу облікового запису/підписки. Якщо ви підключите провайдера AI, розширення також зберігає ваш API-ключ і короткочасний кеш уже отриманих пояснень. Вихід з облікового запису або видалення розширення видаляє ці локальні дані; \"Видалити ключ\" негайно видаляє записи, пов'язані з AI."
             }
           ]
         },
         {
-          "heading": "Payments",
+          "heading": "Платежі",
           "blocks": [
             {
               "type": "p",
-              "text": "If you purchase Premium, payment is processed by Paddle, which acts as the merchant of record. Your card and billing details are entered on Paddle's secure checkout and are never received or stored by us. We only receive your resulting subscription status."
+              "text": "Якщо ви придбаєте Premium, платіж обробляється компанією Paddle, яка виступає офіційним продавцем (merchant of record). Дані вашої картки та платіжні реквізити вводяться на захищеній сторінці оплати Paddle і ніколи не надходять і не зберігаються нами. Ми отримуємо лише результуючий статус вашої підписки."
             }
           ]
         },
         {
-          "heading": "Notifications",
+          "heading": "Сповіщення",
           "blocks": [
             {
               "type": "p",
-              "text": "With your permission, the extension shows an operating-system notification a chosen number of minutes before high-impact economic releases. Notifications are generated locally from calendar event times and are not used for messaging or marketing."
+              "text": "За вашим дозволом розширення показує сповіщення операційної системи за обрану кількість хвилин до економічних релізів із високим впливом. Сповіщення генеруються локально на основі часу подій календаря і не використовуються для повідомлень чи маркетингу."
             }
           ]
         },
         {
-          "heading": "Telegram alerts (optional, Premium)",
+          "heading": "Сповіщення Telegram (опціонально, Premium)",
           "blocks": [
             {
               "type": "p",
-              "text": "Premium users can connect a Telegram account to receive news alerts on their phone, including while their computer is off. This is entirely optional and off until you connect it. When you connect, we store on our backend your Telegram chat ID and username (supplied by Telegram when you start our bot), together with your alert preferences: impact levels, currencies, how many minutes ahead to warn you, your time zone, and any quiet hours. We use them for one purpose — deciding which alerts to send you and when — and messages are delivered through Telegram's own servers, so Telegram's privacy policy applies to their delivery. We keep a short record of which events were already sent to you so the same alert is not repeated; those records are deleted after about two days. You can disconnect at any time by blocking the bot in Telegram, and we delete the stored Telegram data when you delete your account."
+              "text": "Користувачі Premium можуть підключити обліковий запис Telegram, щоб отримувати сповіщення про новини на телефоні, навіть коли їхній комп'ютер вимкнено. Це повністю опціонально і вимкнено, доки ви його не підключите. Коли ви підключаєтеся, ми зберігаємо на нашому бекенді ваш chat ID і ім'я користувача Telegram (надані Telegram, коли ви запускаєте нашого бота), разом із вашими налаштуваннями сповіщень: рівні впливу, валюти, за скільки хвилин попереджати вас, ваш часовий пояс і будь-які \"тихі\" години. Ми використовуємо ці дані з однією метою — щоб вирішити, які сповіщення надсилати вам і коли, — а повідомлення доставляються через власні сервери Telegram, тож до їхньої доставки застосовується політика конфіденційності Telegram. Ми зберігаємо короткий запис про те, які події вже було надіслано вам, щоб те саме сповіщення не повторювалося; ці записи видаляються приблизно через два дні. Ви можете відключитися в будь-який момент, заблокувавши бота в Telegram, і ми видаляємо збережені дані Telegram, коли ви видаляєте свій обліковий запис."
             }
           ]
         },
         {
-          "heading": "AI explanations (optional, Premium, your own provider)",
+          "heading": "Пояснення на основі AI (опціонально, Premium, ваш власний провайдер)",
           "blocks": [
             {
               "type": "p",
-              "text": "Premium users can connect their own AI provider — Google Gemini, Groq or OpenRouter — and press ✨ next to a release to get a plain-language briefing. This is entirely optional and does nothing until you paste your own API key. A step-by-step guide is at [rednews.app/ai](https://rednews.app/ai)."
+              "text": "Користувачі Premium можуть підключити власного провайдера AI — Google Gemini, Groq або OpenRouter — і натиснути ✨ поруч із релізом, щоб отримати пояснення простою мовою. Це повністю опціонально і нічого не робить, доки ви не вставите власний API-ключ. Покроковий посібник доступний на [rednews.app/ai](https://rednews.app/ai)."
             },
             {
               "type": "p",
-              "text": "Your API key stays in your browser. It is kept in local storage on this computer, is never synchronised to other devices, and is never sent to our backend. \"Remove key\" deletes the key, deletes the cached answers, and withdraws the extension's permission to contact the provider."
+              "text": "Ваш API-ключ залишається у вашому браузері. Він зберігається в локальному сховищі на цьому комп'ютері, ніколи не синхронізується з іншими пристроями і ніколи не надсилається на наш бекенд. \"Видалити ключ\" видаляє ключ, видаляє кешовані відповіді і відкликає дозвіл розширення на звернення до провайдера."
             },
             {
               "type": "p",
-              "text": "Requests go straight from your browser to the provider you chose. They do not pass through our servers. We cannot see what you asked or what the model answered."
+              "text": "Запити надходять безпосередньо з вашого браузера до обраного вами провайдера. Вони не проходять через наші сервери. Ми не бачимо, що ви запитували і що відповіла модель."
             },
             {
               "type": "p",
-              "text": "What is sent: the scheduled release itself — title, currency, impact level, scheduled time in UTC, and its forecast, previous and actual values — up to six earlier prints of that same release taken from the extension's own calendar history, and the language the answer should be written in. Your API key travels in the request's authorisation header, as the provider requires. Nothing else is included: no name or email, no account or subscription details, no chart symbol, no browsing history, and no text you type."
+              "text": "Що надсилається: сам запланований реліз — назва, валюта, рівень впливу, запланований час у UTC, а також його прогнозне, попереднє й фактичне значення — до шести попередніх значень цього самого релізу, взятих з власної історії календаря розширення, і мова, якою має бути написана відповідь. Ваш API-ключ передається в заголовку авторизації запиту, як цього вимагає провайдер. Більше нічого не включається: ні ім'я чи електронна адреса, ні дані облікового запису чи підписки, ні символ графіка, ні історія перегляду, ні текст, який ви вводите."
             },
             {
               "type": "p",
-              "text": "The provider's own privacy policy governs what it does with that request. Providers differ: some state that they do not retain or train on API traffic by default, while others may use free-tier traffic to improve their products. The current position of each supported provider is summarised on the setup page, but you should read your provider's own terms."
+              "text": "Власна політика конфіденційності провайдера визначає, що він робить із цим запитом. Провайдери відрізняються: деякі заявляють, що за умовчанням не зберігають і не використовують трафік API для навчання, тоді як інші можуть використовувати трафік безкоштовного тарифу для вдосконалення своїх продуктів. Поточна позиція кожного підтримуваного провайдера підсумована на сторінці налаштувань, але вам варто ознайомитися з умовами вашого провайдера."
             },
             {
               "type": "p",
-              "text": "Answers are cached locally for up to seven days (at most sixty of them) so that reopening the same event does not spend your quota again. The cache never leaves your browser."
+              "text": "Відповіді кешуються локально до семи днів (максимум шістдесят відповідей), щоб повторне відкриття тієї самої події не витрачало вашу квоту знову. Кеш ніколи не залишає ваш браузер."
             },
             {
               "type": "p",
-              "text": "Access is granted per provider, at the moment you connect. The three provider addresses are optional permissions: Chrome asks for your consent when you press \"Connect\", and until then the extension cannot reach any of them."
+              "text": "Доступ надається для кожного провайдера окремо, у момент підключення. Три адреси провайдерів є опціональними дозволами: Chrome запитує вашу згоду, коли ви натискаєте \"Підключити\", і до цього моменту розширення не може звернутися до жодного з них."
             }
           ]
         },
         {
-          "heading": "Feedback",
+          "heading": "Зворотний зв'язок",
           "blocks": [
             {
               "type": "p",
-              "text": "If you send feedback through the extension (\"Report a problem, idea, or partnership\"), the message you type, an optional email address, and basic non-personal context (the extension version, your browser, and your interface language) are sent through Web3Forms, a third-party form-delivery service, which forwards them to the developer by email. This happens only when you press Send."
+              "text": "Якщо ви надсилаєте зворотний зв'язок через розширення (\"Повідомити про проблему, ідею чи партнерство\"), введене вами повідомлення, опціональна електронна адреса та базовий неособовий контекст (версія розширення, ваш браузер і мова інтерфейсу) надсилаються через Web3Forms, стороній сервіс доставки форм, який передає їх розробнику електронною поштою. Це відбувається лише тоді, коли ви натискаєте \"Надіслати\"."
             }
           ]
         },
         {
-          "heading": "Third-party services",
+          "heading": "Сторонні сервіси",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Supabase hosts our backend (authentication, database, server functions) that serves calendar data and stores your account/subscription status.",
-                "Google provides the sign-in through which we obtain your name, email, and account identifier.",
-                "Paddle processes Premium payments as merchant of record; card data never reaches us.",
-                "Forex Factory is the source of the public economic-calendar data, fetched by our backend.",
-                "Web3Forms delivers feedback you choose to send.",
-                "Telegram delivers the optional Premium alerts to users who connect our bot.",
-                "Google (Gemini API), Groq, OpenRouter are AI providers a Premium user may connect with their own API key. We hold no account or contract with them on your behalf; your browser talks to whichever one you chose, directly, and only for the explanations you request."
+                "Supabase розміщує наш бекенд (автентифікація, база даних, серверні функції), який надає дані календаря і зберігає статус вашого облікового запису/підписки.",
+                "Google надає вхід у систему, через який ми отримуємо ваше ім'я, електронну адресу та ідентифікатор облікового запису.",
+                "Paddle обробляє платежі Premium як офіційний продавець; дані картки ніколи не надходять до нас.",
+                "Forex Factory є джерелом публічних даних економічного календаря, які отримує наш бекенд.",
+                "Web3Forms доставляє зворотний зв'язок, який ви обираєте надіслати.",
+                "Telegram доставляє опціональні сповіщення Premium користувачам, які підключили нашого бота.",
+                "Google (Gemini API), Groq, OpenRouter — це провайдери AI, яких користувач Premium може підключити за допомогою власного API-ключа. Ми не маємо облікового запису чи договору з ними від вашого імені; ваш браузер спілкується безпосередньо з обраним вами провайдером, і лише для запитаних вами пояснень."
               ]
             },
             {
               "type": "p",
-              "text": "Each third party processes data subject to its own privacy policy."
+              "text": "Кожна стороння сторона обробляє дані відповідно до власної політики конфіденційності."
             }
           ]
         },
         {
-          "heading": "Your choices and rights",
+          "heading": "Ваш вибір і права",
           "blocks": [
             {
               "type": "p",
-              "text": "The free tier works without an account. If you have signed in, you can sign out at any time, and you may request deletion of your account data by contacting us (see \"Contact\"). Deleting your account removes your stored email, name, account identifier, and subscription record."
+              "text": "Безкоштовний тариф працює без облікового запису. Якщо ви увійшли в систему, ви можете вийти в будь-який момент, а також можете запросити видалення даних вашого облікового запису, зв'язавшись з нами (див. \"Контакти\"). Видалення облікового запису усуває збережену електронну адресу, ім'я, ідентифікатор облікового запису та запис про підписку."
             }
           ]
         },
         {
-          "heading": "Changes",
+          "heading": "Зміни",
           "blocks": [
             {
               "type": "p",
-              "text": "Any change that affects what data is collected or how it is processed will be reflected in an updated Privacy Policy before it takes effect. The \"Last updated\" date above will be revised."
+              "text": "Будь-яка зміна, що впливає на те, які дані збираються або як вони обробляються, буде відображена в оновленій Політиці конфіденційності до того, як вона набере чинності. Дата \"Останнє оновлення\" вище буде змінена."
             }
           ]
         },
         {
-          "heading": "Contact",
+          "heading": "Контакти",
           "blocks": [
             {
               "type": "p",
-              "text": "For questions about this policy or to request account deletion, email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+              "text": "Якщо у вас є питання щодо цієї політики або ви бажаєте запросити видалення облікового запису, напишіть на [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Privacy%20question) або зв'яжіться з нами в [Discord](https://discord.com/users/1172891214580830322)."
             }
           ]
         }
       ]
     },
     "terms": {
-      "title": "Terms of Service",
-      "updated": "Last updated: 9 August 2026",
-      "intro": "These Terms of Service (\"Terms\") govern your use of the Red News – Economic Calendar for TradingView browser extension, the website at rednews.app, and any related services (together, the \"Service\"), provided by the developer of Red News (\"we\", \"us\", \"our\"). By installing or using the Service, you agree to these Terms. If you do not agree, do not use the Service.",
+      "title": "Умови використання",
+      "updated": "Останнє оновлення: 9 серпня 2026 р.",
+      "intro": "Ці Умови використання (\"Умови\") регулюють ваше використання розширення для браузера Red News – Economic Calendar for TradingView, веб-сайту rednews.app та будь-яких пов'язаних сервісів (разом — \"Сервіс\"), що надаються розробником Red News (\"ми\", \"нас\", \"наш\"). Установлюючи або використовуючи Сервіс, ви погоджуєтеся з цими Умовами. Якщо ви не погоджуєтеся, не використовуйте Сервіс.",
       "sections": [
         {
-          "heading": "1. The Service",
+          "heading": "1. Сервіс",
           "blocks": [
             {
               "type": "p",
-              "text": "Red News is a browser extension that overlays scheduled economic-calendar events, sourced from the public Forex Factory calendar, onto TradingView chart pages. It draws event lines, shows event details, and can alert you before releases. Red News is an independent tool and is not affiliated with, endorsed by, or sponsored by TradingView or Forex Factory."
+              "text": "Red News — це розширення для браузера, яке накладає запланові події економічного календаря, отримані з публічного календаря Forex Factory, на сторінки графіків TradingView. Воно малює лінії подій, показує деталі подій і може попереджати вас перед релізами. Red News є незалежним інструментом і не пов'язане з TradingView чи Forex Factory, не схвалене і не спонсоване ними."
             }
           ]
         },
         {
-          "heading": "2. Not financial advice",
+          "heading": "2. Не є фінансовою консультацією",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service displays informational data about scheduled economic events. It does not provide trading signals, investment recommendations, or financial advice, and nothing it shows should be relied upon as such. Economic data may be delayed, incomplete, or inaccurate. Trading and investing carry risk, including the loss of capital. You are solely responsible for your own trading decisions."
+              "text": "Сервіс відображає інформаційні дані про запланові економічні події. Він не надає торгових сигналів, інвестиційних рекомендацій чи фінансових консультацій, і на жодну інформацію, яку він показує, не слід покладатися як на таку. Економічні дані можуть бути затримані, неповні або неточні. Торгівля та інвестування пов'язані з ризиком, включно з утратою капіталу. Ви самостійно несете відповідальність за власні торгові рішення."
             }
           ]
         },
         {
-          "heading": "3. Accounts",
+          "heading": "3. Облікові записи",
           "blocks": [
             {
               "type": "p",
-              "text": "The free tier works without an account. To start a Premium trial or subscribe, you sign in with Google, which provides us your name, email address, and account identifier. You are responsible for maintaining the security of the Google account you use and for all activity under your Red News entitlement. You must be at least 18 years old, or the age of majority in your jurisdiction, to purchase Premium."
+              "text": "Безкоштовний тариф працює без облікового запису. Щоб розпочати пробний період Premium або оформити підписку, ви входите через Google, який надає нам ваше ім'я, електронну адресу та ідентифікатор облікового запису. Ви несете відповідальність за забезпечення безпеки облікового запису Google, який ви використовуєте, і за всю активність у рамках вашого права доступу Red News. Вам має бути щонайменше 18 років або вік повноліття у вашій юрисдикції, щоб придбати Premium."
             }
           ]
         },
         {
-          "heading": "4. Subscriptions, billing & trials",
+          "heading": "4. Підписки, оплата та пробні періоди",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Free tier: the core extension is free to use.",
-                "Premium: available as a monthly (US$4.99) or annual (US$39) subscription. Prices are shown at checkout and may vary by region and applicable taxes.",
-                "Free trial: new users may start a 14-day Premium trial without a payment method. If you do not subscribe, the account simply reverts to the free tier when the trial ends. One trial per user.",
-                "Merchant of record: payments are processed by Paddle (Paddle.com Market Limited), which acts as the merchant of record for all purchases. Your purchase is also subject to Paddle's buyer terms. Card and billing details are entered on Paddle's checkout and are never received or stored by us.",
-                "Auto-renewal: paid subscriptions renew automatically at the end of each billing period until cancelled. By subscribing, you authorise recurring charges through Paddle.",
-                "Price changes: we may change subscription prices. Any change to your recurring price will be communicated in advance and will apply from your next renewal."
+                "Безкоштовний тариф: основне розширення можна використовувати безкоштовно.",
+                "Premium: доступний у вигляді щомісячної (US$4.99) або річної (US$39) підписки. Ціни показуються під час оформлення замовлення і можуть відрізнятися залежно від регіону та застосовних податків.",
+                "Безкоштовний пробний період: нові користувачі можуть розпочати 14-денний пробний період Premium без способу оплати. Якщо ви не оформите підписку, облiковий запис просто повертається до безкоштовного тарифу після завершення пробного періоду. Один пробний період на користувача.",
+                "Офіційний продавець: платежі обробляються Paddle (Paddle.com Market Limited), яка виступає офіційним продавцем для всіх покупок. Ваша покупка також підпадає під умови покупця Paddle. Дані картки та платіжні реквізити вводяться на сторінці оплати Paddle і ніколи не надходять і не зберігаються нами.",
+                "Автоматичне продовження: платні підписки автоматично продовжуються в кінці кожного платіжного періоду, доки не будуть скасовані. Оформлюючи підписку, ви уповноважуєте регулярні платежі через Paddle.",
+                "Зміни цін: ми можемо змінювати ціни підписки. Про будь-яку зміну вашої регулярної ціни буде повідомлено заздалегідь, і вона застосовуватиметься з наступного продовження підписки."
               ]
             }
           ]
         },
         {
-          "heading": "5. Cancellation & refunds",
+          "heading": "5. Скасування та повернення коштів",
           "blocks": [
             {
               "type": "p",
-              "text": "You can cancel at any time using the Manage subscription option in the extension. On cancellation you keep Premium access until the end of the period you have already paid for; it does not renew after that. Refunds are handled as described in our Refund Policy."
+              "text": "Ви можете скасувати підписку в будь-який момент, скориставшись опцією \"Керувати підпискою\" в розширенні. Після скасування ви зберігаєте доступ до Premium до кінця вже сплаченого періоду; після цього підписка не продовжується. Повернення коштів обробляється відповідно до нашої Політики повернення коштів."
             }
           ]
         },
         {
-          "heading": "6. Acceptable use",
+          "heading": "6. Прийнятне використання",
           "blocks": [
             {
               "type": "p",
-              "text": "You agree not to:"
+              "text": "Ви погоджуєтеся не:"
             },
             {
               "type": "ul",
               "items": [
-                "reverse engineer, decompile, or attempt to extract the source or server logic of the Service, except where permitted by law;",
-                "resell, sublicense, or redistribute the Service or the data it delivers;",
-                "circumvent entitlement checks, device limits, or use the Service without a valid entitlement;",
-                "use the Service to build a competing product, or to place undue load on our backend;",
-                "use the Service in any unlawful way or in violation of third-party rights."
+                "здійснювати зворотну розробку, декомпіляцію або спроби витягти вихідний код чи серверну логіку Сервісу, окрім випадків, дозволених законом;",
+                "перепродавати, надавати субліцензію або поширювати Сервіс чи дані, які він надає;",
+                "обходити перевірки прав доступу, обмеження на кількість пристроїв або використовувати Сервіс без дійсного права доступу;",
+                "використовувати Сервіс для створення конкуруючого продукту або для створення надмірного навантаження на наш бекенд;",
+                "використовувати Сервіс у будь-який незаконний спосіб або з порушенням прав третіх осіб."
               ]
             }
           ]
         },
         {
-          "heading": "7. Intellectual property",
+          "heading": "7. Інтелектуальна власність",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service, including its code, design, and branding, is owned by us and protected by applicable laws. We grant you a limited, non-exclusive, non-transferable, revocable licence to use the Service for your personal trading, subject to these Terms. Economic data originates from the public Forex Factory calendar and remains subject to any rights of its source. \"TradingView\" and \"Forex Factory\" are trademarks of their respective owners."
+              "text": "Сервіс, включно з його кодом, дизайном і брендингом, належить нам і захищений застосовним законодавством. Ми надаємо вам обмежену, невиключну, невідчужувану, відкличну ліцензію на використання Сервісу для вашої особистої торгівлі відповідно до цих Умов. Економічні дані походять з публічного календаря Forex Factory і залишаються об'єктом будь-яких прав їхнього джерела. \"TradingView\" і \"Forex Factory\" є торговими марками їхніх відповідних власників."
             }
           ]
         },
         {
-          "heading": "8. Third-party services",
+          "heading": "8. Сторонні сервіси",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service relies on third parties including TradingView (the host page), Forex Factory (data source), Supabase (backend and authentication), Google (sign-in), and Paddle (payments). We are not responsible for the availability, content, or practices of these third parties, and your use of them is subject to their own terms."
+              "text": "Сервіс залежить від сторонніх постачальників, включно з TradingView (хост-сторінка), Forex Factory (джерело даних), Supabase (бекенд і автентифікація), Google (вхід у систему) та Paddle (платежі). Ми не несемо відповідальності за доступність, зміст чи практики цих третіх осіб, і ваше використання їхніх сервісів підпадає під їхні власні умови."
             }
           ]
         },
         {
-          "heading": "9. Disclaimers",
+          "heading": "9. Відмова від гарантій",
           "blocks": [
             {
               "type": "p",
-              "text": "The Service is provided \"as is\" and \"as available\", without warranties of any kind, whether express or implied, including fitness for a particular purpose, accuracy, or uninterrupted availability. We do not warrant that event data will be timely, complete, or error-free, or that the Service will always function with TradingView."
+              "text": "Сервіс надається \"як є\" та \"у міру доступності\", без будь-яких гарантій, явних чи неявних, включно з гарантіями придатності для конкретної мети, точності чи безперервної доступності. Ми не гарантуємо, що дані про події будуть своєчасними, повними чи безпомилковими, або що Сервіс завжди буде функціонувати з TradingView."
             }
           ]
         },
         {
-          "heading": "10. Limitation of liability",
+          "heading": "10. Обмеження відповідальності",
           "blocks": [
             {
               "type": "p",
-              "text": "To the maximum extent permitted by law, we will not be liable for any indirect, incidental, special, or consequential damages, or for any trading losses, lost profits, or lost data, arising from your use of or inability to use the Service. Our total liability for any claim relating to the Service will not exceed the amount you paid us for the Service in the twelve months preceding the claim."
+              "text": "У максимальному обсязі, дозволеному законом, ми не несемо відповідальності за будь-які непрямі, випадкові, особливі чи похідні збитки, а також за будь-які торгові збитки, втрачений прибуток чи втрачені дані, що виникають унаслідок вашого використання Сервісу або неможливості його використання. Наша загальна відповідальність за будь-яку претензію, пов'язану з Сервісом, не перевищуватиме суми, яку ви сплатили нам за Сервіс протягом дванадцяти місяців, що передують претензії."
             }
           ]
         },
         {
-          "heading": "11. Termination",
+          "heading": "11. Припинення",
           "blocks": [
             {
               "type": "p",
-              "text": "You may stop using the Service at any time by uninstalling the extension and, if applicable, cancelling your subscription. We may suspend or terminate access if you breach these Terms or misuse the Service. You may request deletion of your account data as described in our Privacy Policy."
+              "text": "Ви можете припинити використання Сервісу в будь-який момент, видаливши розширення і, за необхідності, скасувавши підписку. Ми можемо призупинити або припинити доступ, якщо ви порушите ці Умови або зловживатимете Сервісом. Ви можете запросити видалення даних свого облікового запису, як описано в нашій Політиці конфіденційності."
             }
           ]
         },
         {
-          "heading": "12. Changes to these Terms",
+          "heading": "12. Зміни до цих Умов",
           "blocks": [
             {
               "type": "p",
-              "text": "We may update these Terms from time to time. Material changes will be reflected here with a revised \"Last updated\" date. Continued use of the Service after changes take effect constitutes acceptance of the updated Terms."
+              "text": "Ми можемо періодично оновлювати ці Умови. Суттєві зміни будуть відображені тут із зміненою датою \"Останнє оновлення\". Подальше використання Сервісу після набуття змінами чинності означає прийняття оновлених Умов."
             }
           ]
         },
         {
-          "heading": "13. Governing law",
+          "heading": "13. Застосовне право",
           "blocks": [
             {
               "type": "p",
-              "text": "These Terms are governed by the laws of Ukraine, without regard to conflict-of-law rules, except where mandatory consumer-protection laws of your country of residence apply. Purchases are additionally subject to the terms of Paddle as merchant of record."
+              "text": "Ці Умови регулюються законодавством України, без урахування норм колізійного права, крім випадків, коли застосовуються обов'язкові закони про захист прав споживачів країни вашого проживання. Покупки також підпадають під умови Paddle як офіційного продавця."
             }
           ]
         },
         {
-          "heading": "14. Contact",
+          "heading": "14. Контакти",
           "blocks": [
             {
               "type": "p",
-              "text": "Questions about these Terms? Email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question) or reach us on [Discord](https://discord.com/users/1172891214580830322)."
+              "text": "Маєте питання щодо цих Умов? Напишіть на [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Terms%20question) або зв'яжіться з нами в [Discord](https://discord.com/users/1172891214580830322)."
             }
           ]
         }
       ]
     },
     "refund": {
-      "title": "Refund Policy",
-      "updated": "Last updated: 9 August 2026",
-      "intro": "We want you to be happy with Red News Premium. This policy explains how trials, cancellations, and refunds work. Payments are processed by Paddle, our merchant of record, so refunds are issued through Paddle to your original payment method.",
+      "title": "Політика повернення коштів",
+      "updated": "Останнє оновлення: 9 серпня 2026 р.",
+      "intro": "Ми хочемо, щоб ви були задоволені Red News Premium. Ця політика пояснює, як працюють пробні періоди, скасування та повернення коштів. Платежі обробляються Paddle, нашим офіційним продавцем, тому повернення коштів здійснюється через Paddle на ваш початковий спосіб оплати.",
       "sections": [
         {
-          "heading": "Try before you pay",
+          "heading": "Спробуйте перед оплатою",
           "blocks": [
             {
               "type": "p",
-              "text": "Every new user can start a 14-day Premium trial with no payment method required. The trial is long enough to span a major economic release, so you can fully evaluate Premium before you are ever charged. We encourage you to use it."
+              "text": "Кожен новий користувач може розпочати 14-денний пробний період Premium без потреби вказувати спосіб оплати. Пробний період достатньо довгий, щоб охопити значний економічний реліз, тож ви можете повністю оцінити Premium до того, як з вас буде стягнуто оплату. Ми рекомендуємо ним скористатися."
             }
           ]
         },
         {
-          "heading": "14-day money-back guarantee",
+          "heading": "14-денна гарантія повернення коштів",
           "blocks": [
             {
               "type": "p",
-              "text": "If you subscribe and change your mind, you can request a full refund within 14 days of your first payment, no questions asked. This applies to the initial charge on a monthly or annual plan."
+              "text": "Якщо ви оформили підписку і змінили своє рішення, ви можете запросити повне повернення коштів протягом 14 днів після першого платежу, без будь-яких запитань. Це стосується першого платежу за щомісячним або річним планом."
             }
           ]
         },
         {
-          "heading": "Renewals",
+          "heading": "Продовження підписки",
           "blocks": [
             {
               "type": "p",
-              "text": "Subscriptions renew automatically. To avoid a renewal charge, cancel before your renewal date using the Manage subscription button in the extension. After cancellation you keep Premium until the end of the period you have already paid for. Renewal charges are generally non-refundable, but if you were charged for a renewal you did not intend to keep and reach out promptly, contact us. We review these case by case and aim to be fair."
+              "text": "Підписки автоматично продовжуються. Щоб уникнути платежу за продовження, скасуйте підписку до дати продовження за допомогою кнопки \"Керувати підпискою\" в розширенні. Після скасування ви зберігаєте Premium до кінця вже сплаченого періоду. Платежі за продовження зазвичай не підлягають поверненню, але якщо з вас стягнули оплату за продовження, яке ви не мали намір зберігати, і ви оперативно зв'яжетеся з нами, напишіть нам. Ми розглядаємо такі випадки індивідуально і намагаємося бути справедливими."
             }
           ]
         },
         {
-          "heading": "How to request a refund",
+          "heading": "Як запросити повернення коштів",
           "blocks": [
             {
               "type": "ul",
               "items": [
-                "Reply to the Paddle receipt email you received for the purchase, or",
-                "email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request) with the email address used at checkout, or",
-                "reach us on [Discord](https://discord.com/users/1172891214580830322)."
+                "Відповісти на електронний лист із квитанцією Paddle, який ви отримали за покупку, або",
+                "написати на [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Refund%20request) із зазначенням електронної адреси, використаної під час оформлення замовлення, або",
+                "зв'язатися з нами в [Discord](https://discord.com/users/1172891214580830322)."
               ]
             },
             {
               "type": "p",
-              "text": "Approved refunds are processed by Paddle back to your original payment method, typically within 5 to 10 business days depending on your bank or card provider."
+              "text": "Схвалені повернення коштів обробляються Paddle і повертаються на ваш початковий спосіб оплати, зазвичай протягом 5–10 робочих днів залежно від вашого банку чи платіжної системи."
             }
           ]
         },
         {
-          "heading": "Statutory rights",
+          "heading": "Законні права",
           "blocks": [
             {
               "type": "p",
-              "text": "Nothing in this policy limits any refund or cancellation rights you may have under the consumer-protection laws of your country of residence, or under Paddle's own buyer terms as merchant of record."
+              "text": "Ніщо в цій політиці не обмежує будь-яких прав на повернення коштів чи скасування, які ви можете мати відповідно до законів про захист прав споживачів країни вашого проживання або відповідно до власних умов покупця Paddle як офіційного продавця."
             }
           ]
         }
       ],
-      "closing": "Questions before you buy? We're happy to help: email [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing) or message us on [Discord](https://discord.com/users/1172891214580830322)."
+      "closing": "Маєте питання до покупки? Ми будемо раді допомогти: напишіть на [support@rednews.app](mailto:support@rednews.app?subject=Red%20News%3A%20Question%20before%20purchasing) або напишіть нам у [Discord](https://discord.com/users/1172891214580830322)."
     }
   },
   "notFound": {
