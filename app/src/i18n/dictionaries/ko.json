@@ -28,6 +28,12 @@
     "refund": {
       "title": "환불 정책",
       "description": "Paddle을 통해 처리되는 Red News Premium의 체험, 취소, 환불 방식."
+    },
+    "checkout": {
+      "title": "Checkout"
+    },
+    "thanks": {
+      "title": "Thank you"
     }
   },
   "nav": {
@@ -276,6 +282,18 @@
     "ai": "AI 설명",
     "premiumFeature": "Premium 기능",
     "aiInExtension": "확장 프로그램에서 설정"
+  },
+  "checkout": {
+    "title": "Red News Premium",
+    "opening": "Opening secure checkout…",
+    "missingReference": "Missing checkout reference. Please return to the extension and try again.",
+    "loadError": "Could not load checkout: {error}"
+  },
+  "thanks": {
+    "title": "Thank you! 🎉",
+    "body": "Your Red News Premium is now active. You can close this tab and head back to your TradingView chart. The extension will pick up your new plan automatically.",
+    "back": "Back to home",
+    "help": "Need help?"
   },
   "legal": {
     "privacy": {

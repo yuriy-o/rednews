@@ -8,7 +8,9 @@ export default function robots(): MetadataRoute.Robots {
     return { rules: { userAgent: '*', disallow: '/' } };
   }
   return {
-    rules: { userAgent: '*', allow: '/', disallow: ['/*/account'] },
+    // $ anchors each pattern to the exact path — without it, robots.txt matching is a prefix
+    // match, so `/*/account` would also block a future `/en/account-help` (AUDIT.md §5.4).
+    rules: { userAgent: '*', allow: '/', disallow: ['/*/account$', '/*/checkout$', '/*/thanks$'] },
     sitemap: `${siteUrl}/sitemap.xml`,
   };
 }

@@ -883,6 +883,13 @@ html {
   font-size: 0.875rem;
 }
 
+/* Checkout / Thank-you pages */
+.thanks__help {
+  margin-block-start: 24px;
+  color: var(--fg-muted);
+  font-size: 0.9375rem;
+}
+
 /* 404 page */
 .not-found__title {
   margin-block-start: 32px;

@@ -28,6 +28,12 @@
     "refund": {
       "title": "İade Politikası",
       "description": "Paddle üzerinden işlenen Red News Premium için deneme süreleri, iptaller ve iadelerin nasıl çalıştığı."
+    },
+    "checkout": {
+      "title": "Checkout"
+    },
+    "thanks": {
+      "title": "Thank you"
     }
   },
   "nav": {
@@ -276,6 +282,18 @@
     "ai": "Yapay zeka açıklamaları",
     "premiumFeature": "Premium özellik",
     "aiInExtension": "Uzantıda ayarla"
+  },
+  "checkout": {
+    "title": "Red News Premium",
+    "opening": "Opening secure checkout…",
+    "missingReference": "Missing checkout reference. Please return to the extension and try again.",
+    "loadError": "Could not load checkout: {error}"
+  },
+  "thanks": {
+    "title": "Thank you! 🎉",
+    "body": "Your Red News Premium is now active. You can close this tab and head back to your TradingView chart. The extension will pick up your new plan automatically.",
+    "back": "Back to home",
+    "help": "Need help?"
   },
   "legal": {
     "privacy": {

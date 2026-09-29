@@ -28,6 +28,12 @@
     "refund": {
       "title": "Kebijakan Pengembalian Dana",
       "description": "Cara kerja uji coba, pembatalan, dan pengembalian dana untuk Red News Premium, diproses melalui Paddle."
+    },
+    "checkout": {
+      "title": "Checkout"
+    },
+    "thanks": {
+      "title": "Thank you"
     }
   },
   "nav": {
@@ -276,6 +282,18 @@
     "ai": "Penjelasan AI",
     "premiumFeature": "Fitur Premium",
     "aiInExtension": "Atur di ekstensi"
+  },
+  "checkout": {
+    "title": "Red News Premium",
+    "opening": "Opening secure checkout…",
+    "missingReference": "Missing checkout reference. Please return to the extension and try again.",
+    "loadError": "Could not load checkout: {error}"
+  },
+  "thanks": {
+    "title": "Thank you! 🎉",
+    "body": "Your Red News Premium is now active. You can close this tab and head back to your TradingView chart. The extension will pick up your new plan automatically.",
+    "back": "Back to home",
+    "help": "Need help?"
   },
   "legal": {
     "privacy": {

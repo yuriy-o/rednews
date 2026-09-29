@@ -28,6 +28,12 @@
     "refund": {
       "title": "退款政策",
       "description": "Red News Premium 的试用、取消和退款如何运作，通过 Paddle 处理。"
+    },
+    "checkout": {
+      "title": "Checkout"
+    },
+    "thanks": {
+      "title": "Thank you"
     }
   },
   "nav": {
@@ -276,6 +282,18 @@
     "ai": "AI 解读",
     "premiumFeature": "Premium 功能",
     "aiInExtension": "在扩展程序中设置"
+  },
+  "checkout": {
+    "title": "Red News Premium",
+    "opening": "Opening secure checkout…",
+    "missingReference": "Missing checkout reference. Please return to the extension and try again.",
+    "loadError": "Could not load checkout: {error}"
+  },
+  "thanks": {
+    "title": "Thank you! 🎉",
+    "body": "Your Red News Premium is now active. You can close this tab and head back to your TradingView chart. The extension will pick up your new plan automatically.",
+    "back": "Back to home",
+    "help": "Need help?"
   },
   "legal": {
     "privacy": {
