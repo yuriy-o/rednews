@@ -884,6 +884,10 @@ html {
 }
 
 /* Checkout / Thank-you pages */
+.thanks__community {
+  color: var(--fg-muted);
+}
+
 .thanks__help {
   margin-block-start: 24px;
   color: var(--fg-muted);

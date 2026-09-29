@@ -1,0 +1,48 @@
+.hero {
+  position: relative;
+}
+
+.confetti {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-start: -8px;
+  block-size: 180px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.piece {
+  position: absolute;
+  inset-block-start: -16px;
+  inline-size: 7px;
+  block-size: 13px;
+  border-radius: 2px;
+  opacity: 0.85;
+  animation: confetti-fall 900ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes confetti-fall {
+  to {
+    transform: translateY(190px) rotate(200deg);
+    opacity: 0;
+  }
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-block-end: 16px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--red-text);
+  color: var(--red-text);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .confetti {
+    display: none;
+  }
+}

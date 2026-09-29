@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getDictionary, getLocale } from '@/i18n/dictionaries';
 import { localePath, pageMetadata } from '@/lib/seo';
 import { localeDir } from '@/i18n/config';
+import { ThanksHero } from '@/components/thanks/thanks-hero';
 
 export async function generateMetadata(): Promise<Metadata> {
   const [locale, dict] = await Promise.all([getLocale(), getDictionary()]);
@@ -17,8 +18,10 @@ export default async function ThanksPage() {
     // locale anyway so ar/ur read right-to-left as soon as real translations land, not just
     // whenever someone remembers to flip this.
     <div className="container page thanks" dir={localeDir(locale)}>
-      <h1 className="h2">{t.title}</h1>
+      <ThanksHero badge={t.badge} titleGeneric={t.titleGeneric} titleNamed={t.titleNamed} />
       <p className="lead">{t.body}</p>
+      <p className="thanks__community">{t.community}</p>
+      <p className="lead">{t.instruction}</p>
       <p className="actions">
         <Link className="button button--primary" href={localePath(locale)}>
           {t.back}
