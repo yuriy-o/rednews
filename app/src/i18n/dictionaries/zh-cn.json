@@ -30,10 +30,10 @@
       "description": "Red News Premium 的试用、取消和退款如何运作，通过 Paddle 处理。"
     },
     "checkout": {
-      "title": "Checkout"
+      "title": "结账"
     },
     "thanks": {
-      "title": "Welcome to the club"
+      "title": "欢迎加入俱乐部"
     }
   },
   "nav": {
@@ -285,19 +285,19 @@
   },
   "checkout": {
     "title": "Red News Premium",
-    "opening": "Opening secure checkout…",
-    "missingReference": "Missing checkout reference. Please return to the extension and try again.",
-    "loadError": "Could not load checkout: {error}"
+    "opening": "正在打开安全结账页面…",
+    "missingReference": "缺少结账参考信息。请返回扩展程序并重试。",
+    "loadError": "无法加载结账页面：{error}"
   },
   "thanks": {
-    "badge": "Premium member",
-    "titleGeneric": "Welcome aboard — you're officially in the club! 🎉",
-    "titleNamed": "Welcome aboard, {name} — you're officially in the club! 🎉",
-    "body": "Your Red News Premium is live: pre-news alerts, the full economic calendar, and priority support are all working on your chart right now.",
-    "community": "You've joined traders who see red-folder news before it moves the market.",
-    "instruction": "Your TradingView chart is already waiting — the extension picked up your new plan automatically. Close this tab and get back to it.",
-    "back": "Back to trading",
-    "help": "Questions? We’re here:"
+    "badge": "Premium 会员",
+    "titleGeneric": "欢迎加入 — 您现在正式成为俱乐部的一员！🎉",
+    "titleNamed": "欢迎加入，{name} — 您现在正式成为俱乐部的一员！🎉",
+    "body": "您的 Red News Premium 已生效：发布前提醒、完整的经济日历以及优先支持现已在您的图表上运行。",
+    "community": "您已加入那些在消息影响市场之前就看到红色文件夹新闻的交易者行列。",
+    "instruction": "您的 TradingView 图表已经就位——扩展程序已自动应用您的新套餐。关闭此标签页，返回图表即可。",
+    "back": "返回交易",
+    "help": "有疑问？我们随时为您解答："
   },
   "legal": {
     "privacy": {

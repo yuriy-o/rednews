@@ -30,10 +30,10 @@
       "description": "Cómo funcionan las pruebas, cancelaciones y reembolsos de Red News Premium, procesados a través de Paddle."
     },
     "checkout": {
-      "title": "Checkout"
+      "title": "Pago"
     },
     "thanks": {
-      "title": "Welcome to the club"
+      "title": "Bienvenido al club"
     }
   },
   "nav": {
@@ -285,19 +285,19 @@
   },
   "checkout": {
     "title": "Red News Premium",
-    "opening": "Opening secure checkout…",
-    "missingReference": "Missing checkout reference. Please return to the extension and try again.",
-    "loadError": "Could not load checkout: {error}"
+    "opening": "Abriendo pago seguro…",
+    "missingReference": "Falta la referencia de pago. Vuelve a la extensión e inténtalo de nuevo.",
+    "loadError": "No se pudo cargar el pago: {error}"
   },
   "thanks": {
-    "badge": "Premium member",
-    "titleGeneric": "Welcome aboard — you're officially in the club! 🎉",
-    "titleNamed": "Welcome aboard, {name} — you're officially in the club! 🎉",
-    "body": "Your Red News Premium is live: pre-news alerts, the full economic calendar, and priority support are all working on your chart right now.",
-    "community": "You've joined traders who see red-folder news before it moves the market.",
-    "instruction": "Your TradingView chart is already waiting — the extension picked up your new plan automatically. Close this tab and get back to it.",
-    "back": "Back to trading",
-    "help": "Questions? We’re here:"
+    "badge": "Miembro Premium",
+    "titleGeneric": "¡Bienvenido a bordo — ya eres oficialmente parte del club! 🎉",
+    "titleNamed": "¡Bienvenido a bordo, {name} — ya eres oficialmente parte del club! 🎉",
+    "body": "Tu Red News Premium ya está activo: las alertas antes de las noticias, el calendario económico completo y el soporte prioritario ya funcionan en tu gráfico.",
+    "community": "Te has unido a los traders que ven las noticias de carpeta roja antes de que muevan el mercado.",
+    "instruction": "Tu gráfico de TradingView ya te espera — la extensión detectó tu nuevo plan automáticamente. Cierra esta pestaña y vuelve a él.",
+    "back": "Volver al trading",
+    "help": "¿Tienes preguntas? Estamos aquí:"
   },
   "legal": {
     "privacy": {

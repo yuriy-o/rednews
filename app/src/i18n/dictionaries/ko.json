@@ -30,10 +30,10 @@
       "description": "Paddle을 통해 처리되는 Red News Premium의 체험, 취소, 환불 방식."
     },
     "checkout": {
-      "title": "Checkout"
+      "title": "결제"
     },
     "thanks": {
-      "title": "Welcome to the club"
+      "title": "클럽에 오신 것을 환영합니다"
     }
   },
   "nav": {
@@ -285,19 +285,19 @@
   },
   "checkout": {
     "title": "Red News Premium",
-    "opening": "Opening secure checkout…",
-    "missingReference": "Missing checkout reference. Please return to the extension and try again.",
-    "loadError": "Could not load checkout: {error}"
+    "opening": "안전한 결제 페이지를 여는 중…",
+    "missingReference": "결제 참조 정보가 없습니다. 확장 프로그램으로 돌아가서 다시 시도해 주세요.",
+    "loadError": "결제 페이지를 불러올 수 없습니다: {error}"
   },
   "thanks": {
-    "badge": "Premium member",
-    "titleGeneric": "Welcome aboard — you're officially in the club! 🎉",
-    "titleNamed": "Welcome aboard, {name} — you're officially in the club! 🎉",
-    "body": "Your Red News Premium is live: pre-news alerts, the full economic calendar, and priority support are all working on your chart right now.",
-    "community": "You've joined traders who see red-folder news before it moves the market.",
-    "instruction": "Your TradingView chart is already waiting — the extension picked up your new plan automatically. Close this tab and get back to it.",
-    "back": "Back to trading",
-    "help": "Questions? We’re here:"
+    "badge": "Premium 회원",
+    "titleGeneric": "환영합니다 — 이제 정식으로 클럽의 일원이 되셨습니다! 🎉",
+    "titleNamed": "환영합니다, {name}님 — 이제 정식으로 클럽의 일원이 되셨습니다! 🎉",
+    "body": "Red News Premium이 활성화되었습니다. 발표 전 알림, 전체 경제 캘린더, 우선 지원이 지금 바로 차트에서 작동합니다.",
+    "community": "시장이 움직이기 전에 레드 폴더 뉴스를 확인하는 트레이더들과 함께하게 되셨습니다.",
+    "instruction": "TradingView 차트가 이미 준비되어 있습니다 — 확장 프로그램이 새 요금제를 자동으로 반영했습니다. 이 탭을 닫고 차트로 돌아가세요.",
+    "back": "트레이딩으로 돌아가기",
+    "help": "궁금한 점이 있으신가요? 언제든 문의해 주세요:"
   },
   "legal": {
     "privacy": {

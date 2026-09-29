@@ -30,10 +30,10 @@
       "description": "Cách hoạt động của dùng thử, hủy và hoàn tiền cho Red News Premium, được xử lý qua Paddle."
     },
     "checkout": {
-      "title": "Checkout"
+      "title": "Thanh toán"
     },
     "thanks": {
-      "title": "Welcome to the club"
+      "title": "Chào mừng bạn đến với hội"
     }
   },
   "nav": {
@@ -285,19 +285,19 @@
   },
   "checkout": {
     "title": "Red News Premium",
-    "opening": "Opening secure checkout…",
-    "missingReference": "Missing checkout reference. Please return to the extension and try again.",
-    "loadError": "Could not load checkout: {error}"
+    "opening": "Đang mở trang thanh toán an toàn…",
+    "missingReference": "Thiếu mã tham chiếu thanh toán. Vui lòng quay lại tiện ích và thử lại.",
+    "loadError": "Không thể tải trang thanh toán: {error}"
   },
   "thanks": {
-    "badge": "Premium member",
-    "titleGeneric": "Welcome aboard — you're officially in the club! 🎉",
-    "titleNamed": "Welcome aboard, {name} — you're officially in the club! 🎉",
-    "body": "Your Red News Premium is live: pre-news alerts, the full economic calendar, and priority support are all working on your chart right now.",
-    "community": "You've joined traders who see red-folder news before it moves the market.",
-    "instruction": "Your TradingView chart is already waiting — the extension picked up your new plan automatically. Close this tab and get back to it.",
-    "back": "Back to trading",
-    "help": "Questions? We’re here:"
+    "badge": "Thành viên Premium",
+    "titleGeneric": "Chào mừng bạn — bạn đã chính thức là thành viên của hội! 🎉",
+    "titleNamed": "Chào mừng bạn, {name} — bạn đã chính thức là thành viên của hội! 🎉",
+    "body": "Red News Premium của bạn đã hoạt động: cảnh báo trước khi có tin tức, lịch kinh tế đầy đủ, và hỗ trợ ưu tiên đều đang chạy ngay trên biểu đồ của bạn.",
+    "community": "Bạn đã gia nhập cùng các trader nhìn thấy tin tức thư mục đỏ trước khi nó tác động đến thị trường.",
+    "instruction": "Biểu đồ TradingView của bạn đã sẵn sàng chờ — tiện ích đã tự động áp dụng gói mới của bạn. Đóng tab này và quay lại biểu đồ.",
+    "back": "Quay lại giao dịch",
+    "help": "Có thắc mắc? Chúng tôi luôn ở đây:"
   },
   "legal": {
     "privacy": {

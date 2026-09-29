@@ -30,10 +30,10 @@
       "description": "كيفية عمل الفترات التجريبية والإلغاء واسترداد الأموال لـ Red News Premium، عبر Paddle."
     },
     "checkout": {
-      "title": "Checkout"
+      "title": "الدفع"
     },
     "thanks": {
-      "title": "Welcome to the club"
+      "title": "مرحبًا بك في النادي"
     }
   },
   "nav": {
@@ -285,19 +285,19 @@
   },
   "checkout": {
     "title": "Red News Premium",
-    "opening": "Opening secure checkout…",
-    "missingReference": "Missing checkout reference. Please return to the extension and try again.",
-    "loadError": "Could not load checkout: {error}"
+    "opening": "جارٍ فتح صفحة الدفع الآمنة…",
+    "missingReference": "مرجع الدفع مفقود. يرجى العودة إلى الإضافة والمحاولة مرة أخرى.",
+    "loadError": "تعذّر تحميل صفحة الدفع: {error}"
   },
   "thanks": {
-    "badge": "Premium member",
-    "titleGeneric": "Welcome aboard — you're officially in the club! 🎉",
-    "titleNamed": "Welcome aboard, {name} — you're officially in the club! 🎉",
-    "body": "Your Red News Premium is live: pre-news alerts, the full economic calendar, and priority support are all working on your chart right now.",
-    "community": "You've joined traders who see red-folder news before it moves the market.",
-    "instruction": "Your TradingView chart is already waiting — the extension picked up your new plan automatically. Close this tab and get back to it.",
-    "back": "Back to trading",
-    "help": "Questions? We’re here:"
+    "badge": "عضو Premium",
+    "titleGeneric": "مرحبًا بك على متن السفينة — أنت الآن رسميًا عضو في النادي! 🎉",
+    "titleNamed": "مرحبًا بك، {name} — أنت الآن رسميًا عضو في النادي! 🎉",
+    "body": "خطتك Premium في Red News أصبحت مفعّلة الآن: التنبيهات قبل صدور الأخبار، والتقويم الاقتصادي الكامل، والدعم ذو الأولوية، كل ذلك يعمل الآن على رسمك البياني.",
+    "community": "لقد انضممت إلى المتداولين الذين يرون أخبار الملف الأحمر قبل أن تُحرّك السوق.",
+    "instruction": "رسمك البياني على TradingView في انتظارك — التقطت الإضافة خطتك الجديدة تلقائيًا. أغلق هذا التبويب وعُد إليه.",
+    "back": "العودة إلى التداول",
+    "help": "لديك أسئلة؟ نحن هنا:"
   },
   "legal": {
     "privacy": {

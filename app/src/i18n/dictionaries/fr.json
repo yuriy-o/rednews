@@ -30,10 +30,10 @@
       "description": "Comment fonctionnent les essais, annulations et remboursements pour Red News Premium, traités via Paddle."
     },
     "checkout": {
-      "title": "Checkout"
+      "title": "Paiement"
     },
     "thanks": {
-      "title": "Welcome to the club"
+      "title": "Bienvenue dans le club"
     }
   },
   "nav": {
@@ -285,19 +285,19 @@
   },
   "checkout": {
     "title": "Red News Premium",
-    "opening": "Opening secure checkout…",
-    "missingReference": "Missing checkout reference. Please return to the extension and try again.",
-    "loadError": "Could not load checkout: {error}"
+    "opening": "Ouverture du paiement sécurisé…",
+    "missingReference": "Référence de paiement manquante. Veuillez retourner à l'extension et réessayer.",
+    "loadError": "Impossible de charger le paiement : {error}"
   },
   "thanks": {
-    "badge": "Premium member",
-    "titleGeneric": "Welcome aboard — you're officially in the club! 🎉",
-    "titleNamed": "Welcome aboard, {name} — you're officially in the club! 🎉",
-    "body": "Your Red News Premium is live: pre-news alerts, the full economic calendar, and priority support are all working on your chart right now.",
-    "community": "You've joined traders who see red-folder news before it moves the market.",
-    "instruction": "Your TradingView chart is already waiting — the extension picked up your new plan automatically. Close this tab and get back to it.",
-    "back": "Back to trading",
-    "help": "Questions? We’re here:"
+    "badge": "Membre Premium",
+    "titleGeneric": "Bienvenue à bord — vous faites officiellement partie du club ! 🎉",
+    "titleNamed": "Bienvenue à bord, {name} — vous faites officiellement partie du club ! 🎉",
+    "body": "Votre Red News Premium est actif : les alertes avant les publications, le calendrier économique complet et le support prioritaire fonctionnent déjà sur votre graphique.",
+    "community": "Vous avez rejoint les traders qui voient les actualités dossier rouge avant qu'elles ne bougent le marché.",
+    "instruction": "Votre graphique TradingView vous attend déjà — l'extension a automatiquement pris en compte votre nouveau forfait. Fermez cet onglet et retournez-y.",
+    "back": "Retour au trading",
+    "help": "Des questions ? Nous sommes là :"
   },
   "legal": {
     "privacy": {

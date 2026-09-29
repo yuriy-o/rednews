@@ -30,10 +30,10 @@
       "description": "Як працюють пробні періоди, скасування та повернення коштів для Red News Преміум, що обробляються через Paddle."
     },
     "checkout": {
-      "title": "Checkout"
+      "title": "Оплата"
     },
     "thanks": {
-      "title": "Welcome to the club"
+      "title": "Вітаємо в клубі"
     }
   },
   "nav": {
@@ -285,19 +285,19 @@
   },
   "checkout": {
     "title": "Red News Premium",
-    "opening": "Opening secure checkout…",
-    "missingReference": "Missing checkout reference. Please return to the extension and try again.",
-    "loadError": "Could not load checkout: {error}"
+    "opening": "Відкриваємо безпечну оплату…",
+    "missingReference": "Відсутнє посилання на оплату. Будь ласка, поверніться до розширення і спробуйте ще раз.",
+    "loadError": "Не вдалося завантажити оплату: {error}"
   },
   "thanks": {
-    "badge": "Premium member",
-    "titleGeneric": "Welcome aboard — you're officially in the club! 🎉",
-    "titleNamed": "Welcome aboard, {name} — you're officially in the club! 🎉",
-    "body": "Your Red News Premium is live: pre-news alerts, the full economic calendar, and priority support are all working on your chart right now.",
-    "community": "You've joined traders who see red-folder news before it moves the market.",
-    "instruction": "Your TradingView chart is already waiting — the extension picked up your new plan automatically. Close this tab and get back to it.",
-    "back": "Back to trading",
-    "help": "Questions? We’re here:"
+    "badge": "Учасник Premium",
+    "titleGeneric": "Вітаємо на борту — ви офіційно в клубі! 🎉",
+    "titleNamed": "Вітаємо на борту, {name} — ви офіційно в клубі! 🎉",
+    "body": "Ваш Red News Premium уже активний: сповіщення перед новинами, повний економічний календар і пріоритетна підтримка вже працюють на вашому графіку.",
+    "community": "Ви приєдналися до трейдерів, які бачать новини червоної папки ще до того, як вони зрушать ринок.",
+    "instruction": "Ваш графік TradingView вже чекає — розширення автоматично підхопило ваш новий план. Закрийте цю вкладку й поверніться до нього.",
+    "back": "Повернутися до трейдингу",
+    "help": "Є питання? Ми тут:"
   },
   "legal": {
     "privacy": {

@@ -30,10 +30,10 @@
       "description": "Wie Testphasen, Kündigungen und Rückerstattungen bei Red News Premium funktionieren, abgewickelt über Paddle."
     },
     "checkout": {
-      "title": "Checkout"
+      "title": "Kasse"
     },
     "thanks": {
-      "title": "Welcome to the club"
+      "title": "Willkommen im Club"
     }
   },
   "nav": {
@@ -285,19 +285,19 @@
   },
   "checkout": {
     "title": "Red News Premium",
-    "opening": "Opening secure checkout…",
-    "missingReference": "Missing checkout reference. Please return to the extension and try again.",
-    "loadError": "Could not load checkout: {error}"
+    "opening": "Sichere Kasse wird geöffnet …",
+    "missingReference": "Checkout-Referenz fehlt. Bitte kehre zur Erweiterung zurück und versuche es erneut.",
+    "loadError": "Checkout konnte nicht geladen werden: {error}"
   },
   "thanks": {
-    "badge": "Premium member",
-    "titleGeneric": "Welcome aboard — you're officially in the club! 🎉",
-    "titleNamed": "Welcome aboard, {name} — you're officially in the club! 🎉",
-    "body": "Your Red News Premium is live: pre-news alerts, the full economic calendar, and priority support are all working on your chart right now.",
-    "community": "You've joined traders who see red-folder news before it moves the market.",
-    "instruction": "Your TradingView chart is already waiting — the extension picked up your new plan automatically. Close this tab and get back to it.",
-    "back": "Back to trading",
-    "help": "Questions? We’re here:"
+    "badge": "Premium-Mitglied",
+    "titleGeneric": "Willkommen an Bord — du bist jetzt offiziell im Club! 🎉",
+    "titleNamed": "Willkommen an Bord, {name} — du bist jetzt offiziell im Club! 🎉",
+    "body": "Dein Red News Premium ist aktiv: Alerts vor den News, der vollständige Wirtschaftskalender und priorisierter Support laufen jetzt direkt in deinem Chart.",
+    "community": "Du gehörst jetzt zu den Tradern, die Rote-Ordner-News sehen, bevor sie den Markt bewegen.",
+    "instruction": "Dein TradingView-Chart wartet schon — die Erweiterung hat deinen neuen Plan automatisch übernommen. Schließe diesen Tab und geh zurück.",
+    "back": "Zurück zum Trading",
+    "help": "Fragen? Wir sind hier:"
   },
   "legal": {
     "privacy": {
