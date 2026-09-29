@@ -30,10 +30,10 @@
       "description": "Come funzionano prove, cancellazioni e rimborsi per Red News Premium, gestiti tramite Paddle."
     },
     "checkout": {
-      "title": "Checkout"
+      "title": "Pagamento"
     },
     "thanks": {
-      "title": "Welcome to the club"
+      "title": "Benvenuto nel club"
     }
   },
   "nav": {
@@ -285,19 +285,19 @@
   },
   "checkout": {
     "title": "Red News Premium",
-    "opening": "Opening secure checkout…",
-    "missingReference": "Missing checkout reference. Please return to the extension and try again.",
-    "loadError": "Could not load checkout: {error}"
+    "opening": "Apertura del pagamento sicuro…",
+    "missingReference": "Riferimento di pagamento mancante. Torna all'estensione e riprova.",
+    "loadError": "Impossibile caricare il pagamento: {error}"
   },
   "thanks": {
-    "badge": "Premium member",
-    "titleGeneric": "Welcome aboard — you're officially in the club! 🎉",
-    "titleNamed": "Welcome aboard, {name} — you're officially in the club! 🎉",
-    "body": "Your Red News Premium is live: pre-news alerts, the full economic calendar, and priority support are all working on your chart right now.",
-    "community": "You've joined traders who see red-folder news before it moves the market.",
-    "instruction": "Your TradingView chart is already waiting — the extension picked up your new plan automatically. Close this tab and get back to it.",
-    "back": "Back to trading",
-    "help": "Questions? We’re here:"
+    "badge": "Membro Premium",
+    "titleGeneric": "Benvenuto a bordo — sei ufficialmente nel club! 🎉",
+    "titleNamed": "Benvenuto a bordo, {name} — sei ufficialmente nel club! 🎉",
+    "body": "Il tuo Red News Premium è attivo: gli avvisi prima delle notizie, il calendario economico completo e il supporto prioritario funzionano già sul tuo grafico.",
+    "community": "Ti sei unito ai trader che vedono le notizie cartella rossa prima che muovano il mercato.",
+    "instruction": "Il tuo grafico TradingView ti aspetta già — l'estensione ha rilevato automaticamente il tuo nuovo piano. Chiudi questa scheda e torna al grafico.",
+    "back": "Torna al trading",
+    "help": "Domande? Siamo qui:"
   },
   "legal": {
     "privacy": {

@@ -30,10 +30,10 @@
       "description": "Red News Premium کے لیے ٹرائل، منسوخی اور رقم کی واپسی کیسے کام کرتی ہے، Paddle کے ذریعے پراسیس کی جاتی ہے۔"
     },
     "checkout": {
-      "title": "Checkout"
+      "title": "ادائیگی"
     },
     "thanks": {
-      "title": "Welcome to the club"
+      "title": "کلب میں خوش آمدید"
     }
   },
   "nav": {
@@ -285,19 +285,19 @@
   },
   "checkout": {
     "title": "Red News Premium",
-    "opening": "Opening secure checkout…",
-    "missingReference": "Missing checkout reference. Please return to the extension and try again.",
-    "loadError": "Could not load checkout: {error}"
+    "opening": "محفوظ ادائیگی کھولی جا رہی ہے…",
+    "missingReference": "چیک آؤٹ ریفرنس موجود نہیں۔ براہ کرم ایکسٹینشن پر واپس جائیں اور دوبارہ کوشش کریں۔",
+    "loadError": "ادائیگی لوڈ نہیں ہو سکی: {error}"
   },
   "thanks": {
-    "badge": "Premium member",
-    "titleGeneric": "Welcome aboard — you're officially in the club! 🎉",
-    "titleNamed": "Welcome aboard, {name} — you're officially in the club! 🎉",
-    "body": "Your Red News Premium is live: pre-news alerts, the full economic calendar, and priority support are all working on your chart right now.",
-    "community": "You've joined traders who see red-folder news before it moves the market.",
-    "instruction": "Your TradingView chart is already waiting — the extension picked up your new plan automatically. Close this tab and get back to it.",
-    "back": "Back to trading",
-    "help": "Questions? We’re here:"
+    "badge": "Premium رکن",
+    "titleGeneric": "خوش آمدید — آپ اب باضابطہ طور پر کلب کا حصہ ہیں! 🎉",
+    "titleNamed": "خوش آمدید، {name} — آپ اب باضابطہ طور پر کلب کا حصہ ہیں! 🎉",
+    "body": "آپ کا Red News Premium فعال ہو گیا ہے: خبروں سے پہلے الرٹس، مکمل اقتصادی کیلنڈر، اور ترجیحی سپورٹ ابھی آپ کے چارٹ پر کام کر رہے ہیں۔",
+    "community": "آپ ان ٹریڈرز میں شامل ہو گئے ہیں جو ریڈ فولڈر خبریں مارکیٹ ہلانے سے پہلے دیکھتے ہیں۔",
+    "instruction": "آپ کا TradingView چارٹ پہلے سے منتظر ہے — ایکسٹینشن نے آپ کا نیا پلان خود بخود شامل کر لیا ہے۔ اس ٹیب کو بند کریں اور واپس جائیں۔",
+    "back": "ٹریڈنگ پر واپس جائیں",
+    "help": "سوالات ہیں؟ ہم یہاں ہیں:"
   },
   "legal": {
     "privacy": {

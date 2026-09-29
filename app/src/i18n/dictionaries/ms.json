@@ -30,10 +30,10 @@
       "description": "Cara percubaan, pembatalan dan bayaran balik berfungsi untuk Red News Premium, diproses melalui Paddle."
     },
     "checkout": {
-      "title": "Checkout"
+      "title": "Pembayaran"
     },
     "thanks": {
-      "title": "Welcome to the club"
+      "title": "Selamat datang ke kelab"
     }
   },
   "nav": {
@@ -285,19 +285,19 @@
   },
   "checkout": {
     "title": "Red News Premium",
-    "opening": "Opening secure checkout…",
-    "missingReference": "Missing checkout reference. Please return to the extension and try again.",
-    "loadError": "Could not load checkout: {error}"
+    "opening": "Membuka pembayaran selamat…",
+    "missingReference": "Rujukan checkout tidak dijumpai. Sila kembali ke sambungan dan cuba lagi.",
+    "loadError": "Checkout tidak dapat dimuatkan: {error}"
   },
   "thanks": {
-    "badge": "Premium member",
-    "titleGeneric": "Welcome aboard — you're officially in the club! 🎉",
-    "titleNamed": "Welcome aboard, {name} — you're officially in the club! 🎉",
-    "body": "Your Red News Premium is live: pre-news alerts, the full economic calendar, and priority support are all working on your chart right now.",
-    "community": "You've joined traders who see red-folder news before it moves the market.",
-    "instruction": "Your TradingView chart is already waiting — the extension picked up your new plan automatically. Close this tab and get back to it.",
-    "back": "Back to trading",
-    "help": "Questions? We’re here:"
+    "badge": "Ahli Premium",
+    "titleGeneric": "Selamat datang — anda kini secara rasmi ahli kelab! 🎉",
+    "titleNamed": "Selamat datang, {name} — anda kini secara rasmi ahli kelab! 🎉",
+    "body": "Red News Premium anda kini aktif: amaran sebelum berita, kalendar ekonomi penuh, dan sokongan keutamaan kini berfungsi terus pada carta anda.",
+    "community": "Anda kini menyertai peniaga yang melihat berita folder merah sebelum ia menggerakkan pasaran.",
+    "instruction": "Carta TradingView anda sudah menunggu — sambungan secara automatik mengambil pelan baharu anda. Tutup tab ini dan kembali kepadanya.",
+    "back": "Kembali ke dagangan",
+    "help": "Ada soalan? Kami di sini:"
   },
   "legal": {
     "privacy": {

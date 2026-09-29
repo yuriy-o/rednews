@@ -30,10 +30,10 @@
       "description": "Jak działają okresy próbne, anulowania i zwroty dla Red News Premium, realizowane przez Paddle."
     },
     "checkout": {
-      "title": "Checkout"
+      "title": "Płatność"
     },
     "thanks": {
-      "title": "Welcome to the club"
+      "title": "Witamy w klubie"
     }
   },
   "nav": {
@@ -285,19 +285,19 @@
   },
   "checkout": {
     "title": "Red News Premium",
-    "opening": "Opening secure checkout…",
-    "missingReference": "Missing checkout reference. Please return to the extension and try again.",
-    "loadError": "Could not load checkout: {error}"
+    "opening": "Otwieranie bezpiecznej płatności…",
+    "missingReference": "Brak referencji płatności. Wróć do rozszerzenia i spróbuj ponownie.",
+    "loadError": "Nie udało się wczytać płatności: {error}"
   },
   "thanks": {
-    "badge": "Premium member",
-    "titleGeneric": "Welcome aboard — you're officially in the club! 🎉",
-    "titleNamed": "Welcome aboard, {name} — you're officially in the club! 🎉",
-    "body": "Your Red News Premium is live: pre-news alerts, the full economic calendar, and priority support are all working on your chart right now.",
-    "community": "You've joined traders who see red-folder news before it moves the market.",
-    "instruction": "Your TradingView chart is already waiting — the extension picked up your new plan automatically. Close this tab and get back to it.",
-    "back": "Back to trading",
-    "help": "Questions? We’re here:"
+    "badge": "Członek Premium",
+    "titleGeneric": "Witamy na pokładzie — jesteś już oficjalnie w klubie! 🎉",
+    "titleNamed": "Witamy na pokładzie, {name} — jesteś już oficjalnie w klubie! 🎉",
+    "body": "Twój Red News Premium jest już aktywny: alerty przed publikacją newsów, pełny kalendarz ekonomiczny i priorytetowe wsparcie działają teraz na Twoim wykresie.",
+    "community": "Jesteś teraz w gronie traderów, którzy widzą newsy z czerwonej teczki, zanim poruszą rynkiem.",
+    "instruction": "Twój wykres TradingView już czeka — rozszerzenie automatycznie uwzględniło Twój nowy plan. Zamknij tę kartę i wróć do wykresu.",
+    "back": "Powrót do tradingu",
+    "help": "Masz pytania? Jesteśmy tutaj:"
   },
   "legal": {
     "privacy": {

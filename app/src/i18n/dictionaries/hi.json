@@ -30,10 +30,10 @@
       "description": "Red News Premium के लिए ट्रायल, रद्दीकरण और धनवापसी कैसे काम करती है, Paddle के माध्यम से संसाधित।"
     },
     "checkout": {
-      "title": "Checkout"
+      "title": "चेकआउट"
     },
     "thanks": {
-      "title": "Welcome to the club"
+      "title": "क्लब में आपका स्वागत है"
     }
   },
   "nav": {
@@ -285,19 +285,19 @@
   },
   "checkout": {
     "title": "Red News Premium",
-    "opening": "Opening secure checkout…",
-    "missingReference": "Missing checkout reference. Please return to the extension and try again.",
-    "loadError": "Could not load checkout: {error}"
+    "opening": "सुरक्षित चेकआउट खोला जा रहा है…",
+    "missingReference": "चेकआउट संदर्भ गुम है। कृपया एक्सटेंशन पर वापस जाएं और फिर से प्रयास करें।",
+    "loadError": "चेकआउट लोड नहीं हो सका: {error}"
   },
   "thanks": {
-    "badge": "Premium member",
-    "titleGeneric": "Welcome aboard — you're officially in the club! 🎉",
-    "titleNamed": "Welcome aboard, {name} — you're officially in the club! 🎉",
-    "body": "Your Red News Premium is live: pre-news alerts, the full economic calendar, and priority support are all working on your chart right now.",
-    "community": "You've joined traders who see red-folder news before it moves the market.",
-    "instruction": "Your TradingView chart is already waiting — the extension picked up your new plan automatically. Close this tab and get back to it.",
-    "back": "Back to trading",
-    "help": "Questions? We’re here:"
+    "badge": "Premium सदस्य",
+    "titleGeneric": "स्वागत है — अब आप आधिकारिक तौर पर क्लब का हिस्सा हैं! 🎉",
+    "titleNamed": "स्वागत है, {name} — अब आप आधिकारिक तौर पर क्लब का हिस्सा हैं! 🎉",
+    "body": "आपका Red News Premium अब सक्रिय है: न्यूज़ से पहले अलर्ट, पूरा आर्थिक कैलेंडर, और प्राथमिकता सहायता — सभी अभी आपके चार्ट पर काम कर रहे हैं।",
+    "community": "आप उन ट्रेडर्स में शामिल हो गए हैं जो रेड-फोल्डर न्यूज़ को मार्केट हिलाने से पहले देखते हैं।",
+    "instruction": "आपका TradingView चार्ट पहले से इंतज़ार कर रहा है — एक्सटेंशन ने आपका नया प्लान स्वचालित रूप से ले लिया है। यह टैब बंद करें और वापस लौटें।",
+    "back": "ट्रेडिंग पर वापस जाएं",
+    "help": "सवाल हैं? हम यहाँ हैं:"
   },
   "legal": {
     "privacy": {

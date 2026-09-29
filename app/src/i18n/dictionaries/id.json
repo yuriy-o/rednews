@@ -30,10 +30,10 @@
       "description": "Cara kerja uji coba, pembatalan, dan pengembalian dana untuk Red News Premium, diproses melalui Paddle."
     },
     "checkout": {
-      "title": "Checkout"
+      "title": "Pembayaran"
     },
     "thanks": {
-      "title": "Welcome to the club"
+      "title": "Selamat datang di klub"
     }
   },
   "nav": {
@@ -285,19 +285,19 @@
   },
   "checkout": {
     "title": "Red News Premium",
-    "opening": "Opening secure checkout…",
-    "missingReference": "Missing checkout reference. Please return to the extension and try again.",
-    "loadError": "Could not load checkout: {error}"
+    "opening": "Membuka pembayaran aman…",
+    "missingReference": "Referensi checkout tidak ditemukan. Silakan kembali ke ekstensi dan coba lagi.",
+    "loadError": "Checkout tidak dapat dimuat: {error}"
   },
   "thanks": {
-    "badge": "Premium member",
-    "titleGeneric": "Welcome aboard — you're officially in the club! 🎉",
-    "titleNamed": "Welcome aboard, {name} — you're officially in the club! 🎉",
-    "body": "Your Red News Premium is live: pre-news alerts, the full economic calendar, and priority support are all working on your chart right now.",
-    "community": "You've joined traders who see red-folder news before it moves the market.",
-    "instruction": "Your TradingView chart is already waiting — the extension picked up your new plan automatically. Close this tab and get back to it.",
-    "back": "Back to trading",
-    "help": "Questions? We’re here:"
+    "badge": "Anggota Premium",
+    "titleGeneric": "Selamat datang — Anda resmi menjadi bagian dari klub! 🎉",
+    "titleNamed": "Selamat datang, {name} — Anda resmi menjadi bagian dari klub! 🎉",
+    "body": "Red News Premium Anda sudah aktif: peringatan sebelum rilis berita, kalender ekonomi lengkap, dan dukungan prioritas kini berjalan langsung di chart Anda.",
+    "community": "Anda kini bergabung dengan trader yang melihat berita folder merah sebelum menggerakkan pasar.",
+    "instruction": "Chart TradingView Anda sudah menunggu — ekstensi secara otomatis menerapkan paket baru Anda. Tutup tab ini dan kembali ke chart Anda.",
+    "back": "Kembali ke trading",
+    "help": "Ada pertanyaan? Kami di sini:"
   },
   "legal": {
     "privacy": {

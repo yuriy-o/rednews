@@ -30,10 +30,10 @@
       "description": "Hoe proefperiodes, opzeggingen en terugbetalingen werken voor Red News Premium, verwerkt via Paddle."
     },
     "checkout": {
-      "title": "Checkout"
+      "title": "Afrekenen"
     },
     "thanks": {
-      "title": "Welcome to the club"
+      "title": "Welkom bij de club"
     }
   },
   "nav": {
@@ -285,19 +285,19 @@
   },
   "checkout": {
     "title": "Red News Premium",
-    "opening": "Opening secure checkout…",
-    "missingReference": "Missing checkout reference. Please return to the extension and try again.",
-    "loadError": "Could not load checkout: {error}"
+    "opening": "Beveiligde afrekenpagina wordt geopend…",
+    "missingReference": "Checkout-referentie ontbreekt. Ga terug naar de extensie en probeer het opnieuw.",
+    "loadError": "Kon de checkout niet laden: {error}"
   },
   "thanks": {
-    "badge": "Premium member",
-    "titleGeneric": "Welcome aboard — you're officially in the club! 🎉",
-    "titleNamed": "Welcome aboard, {name} — you're officially in the club! 🎉",
-    "body": "Your Red News Premium is live: pre-news alerts, the full economic calendar, and priority support are all working on your chart right now.",
-    "community": "You've joined traders who see red-folder news before it moves the market.",
-    "instruction": "Your TradingView chart is already waiting — the extension picked up your new plan automatically. Close this tab and get back to it.",
-    "back": "Back to trading",
-    "help": "Questions? We’re here:"
+    "badge": "Premium-lid",
+    "titleGeneric": "Welkom aan boord — je bent nu officieel lid van de club! 🎉",
+    "titleNamed": "Welkom aan boord, {name} — je bent nu officieel lid van de club! 🎉",
+    "body": "Je Red News Premium is actief: meldingen vóór het nieuws, de volledige economische kalender en prioritaire support werken nu direct op je grafiek.",
+    "community": "Je hebt je aangesloten bij traders die rode-map-nieuws zien voordat het de markt beweegt.",
+    "instruction": "Je TradingView-grafiek staat al te wachten — de extensie heeft je nieuwe abonnement automatisch overgenomen. Sluit dit tabblad en ga terug.",
+    "back": "Terug naar traden",
+    "help": "Vragen? We zijn er voor je:"
   },
   "legal": {
     "privacy": {
