@@ -31,6 +31,9 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: Dictionary 
             <li>
               <NavLink href={localePath(locale, '/refund')}>{dict.footer.refund}</NavLink>
             </li>
+            <li>
+              <NavLink href={localePath(locale, '/ai')}>{dict.footer.aiSetup}</NavLink>
+            </li>
           </ul>
         </nav>
       </div>

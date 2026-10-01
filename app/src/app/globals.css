@@ -850,10 +850,12 @@ html {
   max-inline-size: 70ch;
 }
 .legal section > p,
-.legal section > ul {
+.legal section > ul,
+.legal section > ol {
   margin-block-start: 12px;
 }
-.legal ul {
+.legal ul,
+.legal ol {
   padding-inline-start: 20px;
   display: grid;
   gap: 8px;
@@ -868,6 +870,17 @@ html {
 }
 .legal a:hover {
   color: var(--red-text);
+}
+.legal code {
+  font-size: 0.9em;
+  background: var(--bg-raised);
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+}
+.legal__note {
+  border-inline-start: 2px solid var(--line);
+  padding-inline-start: 16px;
+  color: var(--fg-muted);
 }
 /* Higher specificity than `.legal > .lead` (also 0,2,0 but declared earlier): this closing
    note needs its own generous top margin, not the lead's tight one. */

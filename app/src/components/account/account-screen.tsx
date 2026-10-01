@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, type ReactNode } from 'react';
+import Link from 'next/link';
 import type { Session } from '@supabase/supabase-js';
 import type { Dictionary } from '@/i18n/dictionaries';
 import { accountApi, supabase, type Entitlement, type TelegramStatus } from '@/lib/supabase';
@@ -270,7 +271,18 @@ export function AccountScreen({ locale, t }: Props) {
             )
           }
         />
-        <ConnectionRow label={t.ai} value={isPremiumPlan ? t.aiInExtension : t.premiumFeature} />
+        <ConnectionRow
+          label={t.ai}
+          value={
+            isPremiumPlan ? (
+              <>
+                {t.aiInExtension} · <Link href={`/${locale}/ai`}>{t.aiGuide}</Link>
+              </>
+            ) : (
+              t.premiumFeature
+            )
+          }
+        />
       </div>
     </div>
   );

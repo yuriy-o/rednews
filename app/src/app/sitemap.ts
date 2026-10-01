@@ -7,6 +7,7 @@ const pages: { path: string; changeFrequency: 'daily' | 'weekly' | 'monthly'; pr
   { path: '/', changeFrequency: 'weekly', priority: 1 },
   { path: '/calendar', changeFrequency: 'daily', priority: 0.9 },
   { path: '/pricing', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/ai', changeFrequency: 'monthly', priority: 0.4 },
   { path: '/privacy', changeFrequency: 'monthly', priority: 0.3 },
   { path: '/terms', changeFrequency: 'monthly', priority: 0.3 },
   { path: '/refund', changeFrequency: 'monthly', priority: 0.3 },
