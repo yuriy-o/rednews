@@ -36,8 +36,8 @@
       "title": "Chào mừng bạn đến với hội"
     },
     "ai": {
-      "title": "Connect your own AI",
-      "description": "How to get a free API key from Google Gemini, Groq or OpenRouter and connect it to the Red News extension for AI explanations of economic releases."
+      "title": "Kết nối AI của riêng bạn",
+      "description": "Cách lấy khóa API miễn phí từ Google Gemini, Groq hoặc OpenRouter và kết nối nó với tiện ích Red News để nhận giải thích bằng AI cho các dữ liệu kinh tế được công bố."
     }
   },
   "nav": {
@@ -706,100 +706,100 @@
     "secondary": "Xem lịch tuần này"
   },
   "ai": {
-    "title": "Connect your own AI",
-    "updated": "Last updated: 2 October 2026",
-    "intro": "Red News can explain any economic release in plain language, in your own interface language. Open the extension, find an event in the list and press the ✨ button next to it. You get a short briefing: what the indicator measures, what the forecast and the previous prints were, and what a higher or lower than expected result usually means for that currency.",
+    "title": "Kết nối AI của riêng bạn",
+    "updated": "Cập nhật lần cuối: 2 tháng 10 năm 2026",
+    "intro": "Red News có thể giải thích bất kỳ dữ liệu kinh tế nào bằng ngôn ngữ đơn giản, bằng chính ngôn ngữ giao diện của bạn. Mở tiện ích, tìm một sự kiện trong danh sách và nhấn nút ✨ bên cạnh nó. Bạn sẽ nhận được một bản tóm tắt ngắn: chỉ số này đo lường điều gì, dự báo và số liệu trước đó là bao nhiêu, và kết quả cao hơn hay thấp hơn dự báo thường có ý nghĩa gì đối với loại tiền tệ đó.",
     "sections": [
       {
-        "heading": "How it works",
+        "heading": "Cách hoạt động",
         "blocks": [
           {
             "type": "p",
-            "text": "The explanation is written by an AI provider that **you** choose and connect with your own **API key**. Red News never sees your key and never sees the answers — your browser talks to the provider directly. Today you can connect **Google Gemini**, **Groq** or **OpenRouter**, and all three have a free tier that is more than enough for reading a few releases a day."
+            "text": "Phần giải thích này được viết bởi một nhà cung cấp AI do **chính bạn** chọn và kết nối bằng **khóa API** của riêng bạn. Red News không bao giờ thấy khóa của bạn và không bao giờ thấy các câu trả lời — trình duyệt của bạn liên hệ trực tiếp với nhà cung cấp đó. Hiện tại bạn có thể kết nối **Google Gemini**, **Groq** hoặc **OpenRouter**, và cả ba đều có gói miễn phí nhiều hơn mức cần thiết để đọc vài dữ liệu công bố mỗi ngày."
           },
           {
             "type": "note",
-            "text": "An API key is not a ChatGPT or Gemini subscription. A paid chatbot plan (ChatGPT Plus, Gemini Advanced, Claude Pro…) only unlocks the chat website or app — it gives you nothing to paste here. An API key is a separate, free-to-create string of characters, taken from the provider’s developer console, that lets your own software send requests. It looks something like `AIza…`, `gsk_…` or `sk-or-v1-…`."
+            "text": "Khóa API không phải là một gói subscription của ChatGPT hay Gemini. Một gói chatbot trả phí (ChatGPT Plus, Gemini Advanced, Claude Pro…) chỉ mở khóa trang web hoặc ứng dụng chat — nó không cho bạn thứ gì để dán vào đây. Khóa API là một chuỗi ký tự riêng biệt, được tạo miễn phí, lấy từ bảng điều khiển dành cho nhà phát triển của nhà cung cấp, cho phép phần mềm của riêng bạn gửi yêu cầu. Nó có dạng gần giống `AIza…`, `gsk_…` hoặc `sk-or-v1-…`."
           }
         ]
       },
       {
-        "heading": "What you need",
+        "heading": "Những gì bạn cần",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The Red News extension, signed in with **Premium** (or an active trial) — AI explanations are a Premium feature.",
-              "A free account with one of the three providers below, and an API key created in its console."
+              "Tiện ích Red News, đã đăng nhập với **Premium** (hoặc bản thử nghiệm đang hoạt động) — giải thích bằng AI là một tính năng Premium.",
+              "Một tài khoản miễn phí với một trong ba nhà cung cấp dưới đây, và một khóa API được tạo trong bảng điều khiển của nhà cung cấp đó."
             ]
           }
         ]
       },
       {
-        "heading": "1. Get a key from Google Gemini",
+        "heading": "1. Lấy khóa từ Google Gemini",
         "blocks": [
           {
             "type": "p",
-            "text": "The easiest start: no card required, and Google’s fast \"Flash\" models answer in a second or two."
+            "text": "Cách bắt đầu dễ nhất: không cần thẻ, và các mô hình \"Flash\" tốc độ cao của Google trả lời chỉ trong một hoặc hai giây."
           },
           {
             "type": "ol",
             "items": [
-              "Open [aistudio.google.com/apikey](https://aistudio.google.com/apikey) and sign in with a Google account.",
-              "Press **Create API key** and pick (or let Google create) a project.",
-              "Copy the key — it begins with `AIza`. You can always come back to this page to copy it again."
+              "Mở [aistudio.google.com/apikey](https://aistudio.google.com/apikey) và đăng nhập bằng tài khoản Google.",
+              "Nhấn **Create API key** và chọn (hoặc để Google tạo) một dự án.",
+              "Sao chép khóa — nó bắt đầu bằng `AIza`. Bạn luôn có thể trở lại trang này để sao chép lại."
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: on Google’s **free** tier, your prompts and the answers may be used by Google to improve its products and may be reviewed by humans. On the paid tier they are not. If that matters to you, use Groq, or add billing to the Google project. Current limits and prices: [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)."
+            "text": "Điều cần biết: ở gói **miễn phí** của Google, các prompt và câu trả lời của bạn có thể được Google sử dụng để cải thiện sản phẩm và có thể được con người xem xét. Ở gói trả phí thì không. Nếu điều này quan trọng với bạn, hãy dùng Groq, hoặc thêm thanh toán vào dự án Google của bạn. Giới hạn và giá hiện tại: [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)."
           }
         ]
       },
       {
-        "heading": "2. Get a key from Groq",
+        "heading": "2. Lấy khóa từ Groq",
         "blocks": [
           {
             "type": "p",
-            "text": "**Groq is not Grok.** Groq (spelled with a q) is an inference company that runs open models such as Llama extremely fast; Grok (spelled with a k) is xAI’s chatbot and is not supported here."
+            "text": "**Groq không phải là Grok.** Groq (viết bằng q) là một công ty suy luận (inference) chạy các mô hình mở như Llama với tốc độ cực nhanh; Grok (viết bằng k) là chatbot của xAI và không được hỗ trợ ở đây."
           },
           {
             "type": "ol",
             "items": [
-              "Open [console.groq.com/keys](https://console.groq.com/keys) and sign in (Google, GitHub or email).",
-              "Press **Create API Key**, give it a name such as Red News.",
-              "Copy the key — it begins with `gsk_`. Groq shows it **only once**, so paste it into the extension straight away."
+              "Mở [console.groq.com/keys](https://console.groq.com/keys) và đăng nhập (Google, GitHub hoặc email).",
+              "Nhấn **Create API Key**, đặt tên như Red News.",
+              "Sao chép khóa — nó bắt đầu bằng `gsk_`. Groq chỉ hiển thị nó **một lần duy nhất**, vì vậy hãy dán ngay vào tiện ích."
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: Groq states that it does not retain or train on API prompts and outputs by default. Free-tier request limits are published here: [Groq rate limits](https://console.groq.com/docs/rate-limits)."
+            "text": "Điều cần biết: Groq cho biết theo mặc định họ không lưu giữ hoặc huấn luyện mô hình từ các prompt và kết quả API. Giới hạn yêu cầu của gói miễn phí được công bố tại đây: [Groq rate limits](https://console.groq.com/docs/rate-limits)."
           }
         ]
       },
       {
-        "heading": "3. Get a key from OpenRouter",
+        "heading": "3. Lấy khóa từ OpenRouter",
         "blocks": [
           {
             "type": "p",
-            "text": "OpenRouter is a single door to hundreds of models from many vendors: one key, one account, and you switch models from a dropdown instead of signing up everywhere. Some models are free to use; the rest are pay-as-you-go from a prepaid balance. The trade-off is that your request passes through OpenRouter on its way to the model vendor."
+            "text": "OpenRouter là một cửa ngõ duy nhất tới hàng trăm mô hình từ nhiều nhà cung cấp: một khóa, một tài khoản, và bạn chuyển đổi mô hình từ một danh sách thả xuống thay vì phải đăng ký ở khắp nơi. Một số mô hình miễn phí sử dụng; số còn lại trả theo mức sử dụng từ số dư trả trước. Sự đánh đổi là yêu cầu của bạn sẽ đi qua OpenRouter trên đường đến nhà cung cấp mô hình."
           },
           {
             "type": "ol",
             "items": [
-              "Open [openrouter.ai/keys](https://openrouter.ai/keys) and sign in.",
-              "Press **Create key** and copy it — it begins with `sk-or-v1-`.",
-              "Optional but recommended: in your OpenRouter account privacy settings, decide whether requests may be routed to providers that train on your data ([privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging))."
+              "Mở [openrouter.ai/keys](https://openrouter.ai/keys) và đăng nhập.",
+              "Nhấn **Create key** và sao chép nó — nó bắt đầu bằng `sk-or-v1-`.",
+              "Không bắt buộc nhưng được khuyến nghị: trong phần cài đặt quyền riêng tư của tài khoản OpenRouter, hãy quyết định liệu yêu cầu có thể được định tuyến tới các nhà cung cấp huấn luyện mô hình từ dữ liệu của bạn hay không ([privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging))."
             ]
           }
         ]
       },
       {
-        "heading": "Which model should I choose?",
+        "heading": "Tôi nên chọn mô hình nào?",
         "blocks": [
           {
             "type": "p",
-            "text": "When you press **Connect**, Red News asks your provider which models your key can use and preselects a sensible one, so you can simply leave the dropdown alone. If you want to change it, the job here is small — a short, grounded explanation of one economic release — so a **small, fast, cheap** model is the right choice. Big \"reasoning\", \"pro\" or \"deep research\" models are slower, cost far more and do not write a better three-paragraph briefing."
+            "text": "Khi bạn nhấn **Connect**, Red News sẽ hỏi nhà cung cấp của bạn xem khóa của bạn có thể sử dụng những mô hình nào và chọn sẵn một mô hình hợp lý, vì vậy bạn có thể để danh sách thả xuống như vậy. Nếu bạn muốn thay đổi nó, hãy nhớ rằng công việc ở đây rất nhỏ — một lời giải thích ngắn, dựa trên dữ kiện cho một dữ liệu kinh tế — vì vậy một mô hình **nhỏ, nhanh, rẻ** là lựa chọn đúng đắn. Các mô hình \"reasoning\", \"pro\" hoặc \"deep research\" lớn thì chậm hơn, tốn phí cao hơn nhiều và không viết được bản tóm tắt ba đoạn tốt hơn."
           },
           {
             "type": "p",
@@ -808,9 +808,9 @@
           {
             "type": "ul",
             "items": [
-              "`gemini-2.5-flash-lite` — recommended. Fastest and cheapest; ideal for this task. Preselected by the extension.",
-              "`gemini-2.5-flash` — a little slower, slightly richer wording. Good second choice.",
-              "Avoid `…-pro`, and anything with `preview`, `exp`, `thinking`, `deep-research` or `antigravity` in the name: slow, expensive, and preview models can disappear without warning."
+              "`gemini-2.5-flash-lite` — được khuyến nghị. Nhanh nhất và rẻ nhất; lý tưởng cho công việc này. Được tiện ích chọn sẵn.",
+              "`gemini-2.5-flash` — chậm hơn một chút, lời văn phong phú hơn một chút. Lựa chọn thứ hai tốt.",
+              "Tránh `…-pro`, và bất kỳ tên nào có chứa `preview`, `exp`, `thinking`, `deep-research` hoặc `antigravity`: chậm, đắt, và các mô hình preview có thể biến mất mà không báo trước."
             ]
           },
           {
@@ -820,9 +820,9 @@
           {
             "type": "ul",
             "items": [
-              "A Llama 3.3 70B model (e.g. `llama-3.3-70b-versatile`) — recommended. Strong general knowledge, answers in a second. Preselected by the extension.",
-              "A smaller Llama 8B model — even faster and with more generous free limits, but noticeably shallower explanations.",
-              "Avoid speech, vision and guard models — they are filtered out of the dropdown anyway."
+              "Một mô hình Llama 3.3 70B (ví dụ `llama-3.3-70b-versatile`) — được khuyến nghị. Kiến thức tổng quát tốt, trả lời trong một giây. Được tiện ích chọn sẵn.",
+              "Một mô hình Llama 8B nhỏ hơn — còn nhanh hơn nữa và có giới hạn miễn phí hào phóng hơn, nhưng các giải thích rõ ràng là nông hơn.",
+              "Tránh các mô hình speech, vision và guard — chúng dù sao cũng bị lọc khỏi danh sách thả xuống."
             ]
           },
           {
@@ -832,94 +832,94 @@
           {
             "type": "ul",
             "items": [
-              "Any model whose name ends in `:free` — recommended to start. No balance needed. The extension preselects a free Llama or Gemini variant when one is available.",
-              "A paid small model (a \"flash\", \"mini\" or \"lite\" variant of any vendor) if you top up your balance and want higher limits and steadier availability.",
-              "Avoid flagship and reasoning models — you would pay several times more per explanation for no benefit here."
+              "Bất kỳ mô hình nào có tên kết thúc bằng `:free` — được khuyến nghị để bắt đầu. Không cần số dư. Tiện ích sẽ chọn sẵn một biến thể Llama hoặc Gemini miễn phí khi có sẵn.",
+              "Một mô hình nhỏ trả phí (biến thể \"flash\", \"mini\" hoặc \"lite\" của bất kỳ nhà cung cấp nào) nếu bạn nạp thêm số dư và muốn giới hạn cao hơn cùng khả năng khả dụng ổn định hơn.",
+              "Tránh các mô hình flagship và reasoning — bạn sẽ phải trả nhiều lần hơn cho mỗi lời giải thích mà không có lợi ích gì ở đây."
             ]
           },
           {
             "type": "note",
-            "text": "Free tiers are rate-limited, not unlimited. If you read a lot of releases in one sitting you may see \"Too many requests — try again in a minute.\" Red News keeps each answer for 7 days, so re-opening the same event costs nothing."
+            "text": "Các gói miễn phí bị giới hạn tốc độ, không phải vô hạn. Nếu bạn đọc nhiều dữ liệu công bố trong một lần, bạn có thể thấy \"Quá nhiều yêu cầu — hãy thử lại sau một phút.\" Red News lưu giữ mỗi câu trả lời trong 7 ngày, vì vậy việc mở lại cùng một sự kiện không tốn thêm gì."
           }
         ]
       },
       {
-        "heading": "Connect it in the extension",
+        "heading": "Kết nối trong tiện ích",
         "blocks": [
           {
             "type": "ol",
             "items": [
-              "Click the Red News icon in Chrome and scroll down to **✨ AI explanations**.",
-              "Pick your **Provider**.",
-              "Paste the key into **API key** (the 👁 button shows or hides what you typed).",
-              "Press **Connect**. Chrome asks for permission to contact that provider’s address — allow it. This is the one-off permission the extension needs to send your requests; if the popup closes while the Chrome prompt is open, just open the extension again and press Connect once more.",
-              "The status turns **Connected ✓** and the **Model** dropdown fills up. Pick another model if you like.",
-              "Open the news list and press **✨** next to any event."
+              "Nhấp vào biểu tượng Red News trong Chrome và cuộn xuống đến **✨ AI explanations**.",
+              "Chọn **Provider** của bạn.",
+              "Dán khóa vào **API key** (nút 👁 hiện hoặc ẩn những gì bạn đã nhập).",
+              "Nhấn **Connect**. Chrome sẽ hỏi quyền để liên hệ với địa chỉ của nhà cung cấp đó — hãy cho phép. Đây là quyền cấp một lần mà tiện ích cần để gửi các yêu cầu của bạn; nếu popup đóng lại khi hộp thoại của Chrome vẫn đang mở, chỉ cần mở lại tiện ích và nhấn Connect một lần nữa.",
+              "Trạng thái chuyển thành **Connected ✓** và danh sách thả xuống **Model** được điền đầy. Chọn mô hình khác nếu bạn muốn.",
+              "Mở danh sách tin tức và nhấn **✨** bên cạnh bất kỳ sự kiện nào."
             ]
           },
           {
             "type": "p",
-            "text": "To disconnect, press **Remove key**. The key is deleted from your browser immediately. Chrome keeps the site permission you granted; you can revoke it in `chrome://extensions` → Red News → Details → Site access, or simply leave it, as nothing is sent without a key."
+            "text": "Để ngắt kết nối, nhấn **Remove key**. Khóa sẽ bị xóa khỏi trình duyệt của bạn ngay lập tức. Chrome vẫn giữ quyền truy cập trang web mà bạn đã cấp; bạn có thể gỡ quyền này trong `chrome://extensions` → Red News → Details → Site access, hoặc đơn giản là để như vậy, vì không có gì được gửi đi nếu không có khóa."
           }
         ]
       },
       {
-        "heading": "What is sent, and where",
+        "heading": "Những gì được gửi đi, và gửi đến đâu",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**Your key never leaves your browser.** It is stored in the extension’s local storage on this computer only — never synced, never sent to Red News servers.",
-              "**Requests go straight from your browser to the provider you chose.** They do not pass through our backend, and we cannot read the questions or the answers.",
-              "**What the request contains:** the event title, its currency, impact level and scheduled time, its forecast, previous and actual values, up to a handful of earlier prints of the same release, and the language you want the answer in. No account details, no email, no chart data, no browsing history.",
-              "**Your provider’s own privacy policy applies** to what it does with that request — see the notes for each provider above. Our own policy is in the [Privacy Policy](/privacy)."
+              "**Khóa của bạn không bao giờ rời khỏi trình duyệt của bạn.** Nó được lưu trong bộ nhớ cục bộ của tiện ích chỉ trên máy tính này — không bao giờ được đồng bộ hóa, không bao giờ được gửi đến máy chủ của Red News.",
+              "**Các yêu cầu đi trực tiếp từ trình duyệt của bạn đến nhà cung cấp mà bạn chọn.** Chúng không đi qua hệ thống backend của chúng tôi, và chúng tôi không thể đọc được câu hỏi hay câu trả lời.",
+              "**Nội dung yêu cầu bao gồm:** tiêu đề sự kiện, loại tiền tệ của nó, mức độ ảnh hưởng và thời gian đã lên lịch, dự báo, giá trị trước đó và giá trị thực tế, một số dữ liệu công bố trước đó của cùng loại dữ liệu đó, và ngôn ngữ bạn muốn nhận câu trả lời. Không có thông tin tài khoản, không có email, không có dữ liệu biểu đồ, không có lịch sử trình duyệt.",
+              "**Chính sách quyền riêng tư của nhà cung cấp của bạn sẽ áp dụng** cho những gì họ làm với yêu cầu đó — xem các ghi chú cho từng nhà cung cấp ở trên. Chính sách của chúng tôi có trong [Chính sách quyền riêng tư](/privacy)."
             ]
           }
         ]
       },
       {
-        "heading": "What will it cost?",
+        "heading": "Chi phí sẽ là bao nhiêu?",
         "blocks": [
           {
             "type": "p",
-            "text": "One explanation is a very small request — roughly a page of text in, a short paragraph out. On a free tier it costs nothing; on a paid small model it is a fraction of a cent. You pay your AI provider directly, if at all — never through Red News. Your Red News Premium subscription does not include AI usage, and does not charge for it either."
+            "text": "Một lời giải thích là một yêu cầu rất nhỏ — khoảng một trang văn bản đầu vào, một đoạn văn ngắn đầu ra. Ở gói miễn phí, nó không tốn gì cả; ở một mô hình nhỏ trả phí, nó chỉ là một phần nhỏ của một cent. Bạn trả tiền trực tiếp cho nhà cung cấp AI của mình, nếu có phải trả — không bao giờ thông qua Red News. Gói subscription Red News Premium của bạn không bao gồm việc sử dụng AI, và cũng không tính phí cho việc đó."
           }
         ]
       },
       {
-        "heading": "If something goes wrong",
+        "heading": "Nếu có sự cố xảy ra",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**\"The provider rejected this key.\"** — The key was mistyped, truncated or deleted in the console, or the wrong provider is selected in the dropdown. Create a fresh key and paste it again. For Gemini, also check that the Generative Language API is enabled on the project the key belongs to.",
-              "**\"Too many requests — try again in a minute.\"** — You hit the free-tier rate limit. Wait a minute, switch to a smaller model, or add billing at your provider.",
-              "**\"Could not reach the AI provider.\"** — No connection, or the provider’s API is blocked on your network (corporate proxy, VPN, firewall) or temporarily down.",
-              "**\"Access to the provider was not allowed.\"** — The Chrome permission prompt was dismissed. Press Connect again and allow it.",
-              "**\"This key has no suitable chat models.\"** — The key is restricted, or the account has no model access yet. Check the provider console; on OpenRouter, some models require a topped-up balance.",
-              "**The ✨ buttons are not there.** AI explanations are Premium — sign in and make sure your plan is active, then reopen the extension."
+              "**\"Nhà cung cấp đã từ chối khóa này.\"** — Khóa đã bị gõ sai, bị cắt ngắn hoặc đã bị xóa trong bảng điều khiển, hoặc nhà cung cấp sai đã được chọn trong danh sách thả xuống. Hãy tạo một khóa mới và dán lại. Đối với Gemini, hãy kiểm tra thêm xem Generative Language API đã được bật trên dự án mà khóa đó thuộc về chưa.",
+              "**\"Quá nhiều yêu cầu — hãy thử lại sau một phút.\"** — Bạn đã đạt giới hạn tốc độ của gói miễn phí. Hãy chờ một phút, chuyển sang một mô hình nhỏ hơn, hoặc thêm thanh toán tại nhà cung cấp của bạn.",
+              "**\"Không thể kết nối với nhà cung cấp AI.\"** — Không có kết nối, hoặc API của nhà cung cấp bị chặn trên mạng của bạn (proxy công ty, VPN, tường lửa) hoặc tạm thời ngừng hoạt động.",
+              "**\"Quyền truy cập vào nhà cung cấp không được cho phép.\"** — Hộp thoại xin quyền của Chrome đã bị từ chối. Nhấn Connect lần nữa và cho phép.",
+              "**\"Khóa này không có mô hình trò chuyện phù hợp.\"** — Khóa bị hạn chế, hoặc tài khoản chưa có quyền truy cập mô hình nào. Hãy kiểm tra bảng điều khiển của nhà cung cấp; trên OpenRouter, một số mô hình yêu cầu số dư đã được nạp.",
+              "**Các nút ✨ không xuất hiện.** Giải thích bằng AI là tính năng Premium — hãy đăng nhập và đảm bảo gói của bạn đang hoạt động, sau đó mở lại tiện ích."
             ]
           }
         ]
       },
       {
-        "heading": "Limits worth knowing",
+        "heading": "Những giới hạn cần biết",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The AI only sees the calendar data we hand it, and it is instructed never to invent figures. It still can be wrong about general context, like any language model. Always check the numbers on the chart.",
-              "**It will not tell you what to trade.** The extension explicitly asks the model for explanation only — no entries, exits, targets or position sizes. Red News does not provide financial, investment or trading advice."
+              "AI chỉ thấy dữ liệu lịch mà chúng tôi cung cấp cho nó, và nó được chỉ dẫn là không bao giờ bịa đặt số liệu. Nó vẫn có thể sai về bối cảnh tổng quát, như bất kỳ mô hình ngôn ngữ nào khác. Luôn kiểm tra các số liệu trên biểu đồ.",
+              "**Nó sẽ không cho bạn biết nên giao dịch gì.** Tiện ích yêu cầu rõ ràng mô hình chỉ đưa ra giải thích — không có điểm vào, điểm ra, mục tiêu hay kích thước vị thế. Red News không cung cấp lời khuyên tài chính, đầu tư hoặc giao dịch."
             ]
           }
         ]
       },
       {
-        "heading": "Still stuck?",
+        "heading": "Vẫn chưa giải quyết được?",
         "blocks": [
           {
             "type": "p",
-            "text": "Write to [support@rednews.app](mailto:support@rednews.app) or reach us on [Discord](https://discord.com/users/1172891214580830322) — tell us which provider you used and what the extension showed, and we will sort it out."
+            "text": "Hãy viết thư đến [support@rednews.app](mailto:support@rednews.app) hoặc liên hệ với chúng tôi trên [Discord](https://discord.com/users/1172891214580830322) — cho chúng tôi biết bạn đã dùng nhà cung cấp nào và tiện ích đã hiển thị gì, và chúng tôi sẽ giải quyết."
           }
         ]
       }
