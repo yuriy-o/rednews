@@ -36,8 +36,8 @@
       "title": "クラブへようこそ"
     },
     "ai": {
-      "title": "Connect your own AI",
-      "description": "How to get a free API key from Google Gemini, Groq or OpenRouter and connect it to the Red News extension for AI explanations of economic releases."
+      "title": "独自のAIを接続する",
+      "description": "Google Gemini、Groq、OpenRouterの無料APIキーを取得し、Red News拡張機能に接続して経済指標発表のAI解説を利用する方法。"
     }
   },
   "nav": {
@@ -706,100 +706,100 @@
     "secondary": "今週のカレンダーを見る"
   },
   "ai": {
-    "title": "Connect your own AI",
-    "updated": "Last updated: 2 October 2026",
-    "intro": "Red News can explain any economic release in plain language, in your own interface language. Open the extension, find an event in the list and press the ✨ button next to it. You get a short briefing: what the indicator measures, what the forecast and the previous prints were, and what a higher or lower than expected result usually means for that currency.",
+    "title": "独自のAIを接続する",
+    "updated": "最終更新日：2026年10月2日",
+    "intro": "Red Newsは、どの経済指標発表についても、お使いのインターフェース言語でわかりやすく解説します。拡張機能を開き、リストからイベントを見つけて、その横にある✨ボタンを押してください。その指標が何を測定しているか、予想値と前回値が何であったか、そして予想より高い・低い結果が通常その通貨にとって何を意味するかを簡潔にまとめたブリーフィングが表示されます。",
     "sections": [
       {
-        "heading": "How it works",
+        "heading": "仕組み",
         "blocks": [
           {
             "type": "p",
-            "text": "The explanation is written by an AI provider that **you** choose and connect with your own **API key**. Red News never sees your key and never sees the answers — your browser talks to the provider directly. Today you can connect **Google Gemini**, **Groq** or **OpenRouter**, and all three have a free tier that is more than enough for reading a few releases a day."
+            "text": "解説文は、**あなた**が選んで独自の**APIキー**で接続したAIプロバイダーによって生成されます。Red Newsはあなたのキーも回答内容も一切見ることはありません——お使いのブラウザがプロバイダーと直接通信します。現在接続できるのは**Google Gemini**、**Groq**、**OpenRouter**の3社で、いずれも無料枠だけで1日数件の指標発表を読むには十分です。"
           },
           {
             "type": "note",
-            "text": "An API key is not a ChatGPT or Gemini subscription. A paid chatbot plan (ChatGPT Plus, Gemini Advanced, Claude Pro…) only unlocks the chat website or app — it gives you nothing to paste here. An API key is a separate, free-to-create string of characters, taken from the provider’s developer console, that lets your own software send requests. It looks something like `AIza…`, `gsk_…` or `sk-or-v1-…`."
+            "text": "APIキーはChatGPTやGeminiのサブスクリプションではありません。有料のチャットボットプラン（ChatGPT Plus、Gemini Advanced、Claude Proなど）は、チャット用のウェブサイトやアプリを利用できるようにするだけで、ここに貼り付けられるものは何も提供しません。APIキーは、プロバイダーの開発者コンソールから取得する、無料で作成できる別個の文字列で、お使いのソフトウェアがリクエストを送信できるようにするものです。`AIza…`、`gsk_…`、`sk-or-v1-…`のような形をしています。"
           }
         ]
       },
       {
-        "heading": "What you need",
+        "heading": "必要なもの",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The Red News extension, signed in with **Premium** (or an active trial) — AI explanations are a Premium feature.",
-              "A free account with one of the three providers below, and an API key created in its console."
+              "**Premium**（または有効な体験版）でサインインしたRed News拡張機能——AI解説はPremium機能です。",
+              "以下の3社のいずれかの無料アカウント、およびそのコンソールで作成したAPIキー。"
             ]
           }
         ]
       },
       {
-        "heading": "1. Get a key from Google Gemini",
+        "heading": "1. Google Geminiでキーを取得する",
         "blocks": [
           {
             "type": "p",
-            "text": "The easiest start: no card required, and Google’s fast \"Flash\" models answer in a second or two."
+            "text": "最も簡単に始められる方法です。カード登録は不要で、Googleの高速な「Flash」モデルは1～2秒で回答します。"
           },
           {
             "type": "ol",
             "items": [
-              "Open [aistudio.google.com/apikey](https://aistudio.google.com/apikey) and sign in with a Google account.",
-              "Press **Create API key** and pick (or let Google create) a project.",
-              "Copy the key — it begins with `AIza`. You can always come back to this page to copy it again."
+              "[aistudio.google.com/apikey](https://aistudio.google.com/apikey)を開き、Googleアカウントでサインインします。",
+              "**Create API key**を押し、プロジェクトを選択します（またはGoogleに作成させます）。",
+              "キーをコピーします——`AIza`で始まります。このページにはいつでも戻ってきて再度コピーできます。"
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: on Google’s **free** tier, your prompts and the answers may be used by Google to improve its products and may be reviewed by humans. On the paid tier they are not. If that matters to you, use Groq, or add billing to the Google project. Current limits and prices: [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)."
+            "text": "知っておくべきこと：Googleの**無料**枠では、入力内容と回答がGoogleによって製品改善のために使用されたり、人間によるレビューの対象となったりすることがあります。有料枠ではこれは行われません。これが気になる場合は、Groqを使用するか、Googleプロジェクトに課金設定を追加してください。現在の制限と料金：[Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)。"
           }
         ]
       },
       {
-        "heading": "2. Get a key from Groq",
+        "heading": "2. Groqでキーを取得する",
         "blocks": [
           {
             "type": "p",
-            "text": "**Groq is not Grok.** Groq (spelled with a q) is an inference company that runs open models such as Llama extremely fast; Grok (spelled with a k) is xAI’s chatbot and is not supported here."
+            "text": "**GroqはGrokではありません。** Groq（qのつづり）は、Llamaなどのオープンモデルを極めて高速に実行する推論専門企業です。Grok（kのつづり）はxAIのチャットボットであり、ここではサポートされていません。"
           },
           {
             "type": "ol",
             "items": [
-              "Open [console.groq.com/keys](https://console.groq.com/keys) and sign in (Google, GitHub or email).",
-              "Press **Create API Key**, give it a name such as Red News.",
-              "Copy the key — it begins with `gsk_`. Groq shows it **only once**, so paste it into the extension straight away."
+              "[console.groq.com/keys](https://console.groq.com/keys)を開き、サインインします（Google、GitHub、またはメール）。",
+              "**Create API Key**を押し、Red Newsなどの名前を付けます。",
+              "キーをコピーします——`gsk_`で始まります。Groqはこのキーを**一度しか表示しません**ので、すぐに拡張機能に貼り付けてください。"
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: Groq states that it does not retain or train on API prompts and outputs by default. Free-tier request limits are published here: [Groq rate limits](https://console.groq.com/docs/rate-limits)."
+            "text": "知っておくべきこと：Groqは、デフォルトではAPIの入力内容や出力を保持したり、学習に使用したりしないと明言しています。無料枠のリクエスト制限はこちらで公開されています：[Groq rate limits](https://console.groq.com/docs/rate-limits)。"
           }
         ]
       },
       {
-        "heading": "3. Get a key from OpenRouter",
+        "heading": "3. OpenRouterでキーを取得する",
         "blocks": [
           {
             "type": "p",
-            "text": "OpenRouter is a single door to hundreds of models from many vendors: one key, one account, and you switch models from a dropdown instead of signing up everywhere. Some models are free to use; the rest are pay-as-you-go from a prepaid balance. The trade-off is that your request passes through OpenRouter on its way to the model vendor."
+            "text": "OpenRouterは、多数のベンダーが提供する数百のモデルへの単一の入口です。1つのキー、1つのアカウントで、あちこちに登録する代わりにドロップダウンからモデルを切り替えられます。一部のモデルは無料で利用でき、それ以外はプリペイド残高からの従量課金制です。その代わり、リクエストはモデルのベンダーに届くまでにOpenRouterを経由します。"
           },
           {
             "type": "ol",
             "items": [
-              "Open [openrouter.ai/keys](https://openrouter.ai/keys) and sign in.",
-              "Press **Create key** and copy it — it begins with `sk-or-v1-`.",
-              "Optional but recommended: in your OpenRouter account privacy settings, decide whether requests may be routed to providers that train on your data ([privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging))."
+              "[openrouter.ai/keys](https://openrouter.ai/keys)を開き、サインインします。",
+              "**Create key**を押してコピーします——`sk-or-v1-`で始まります。",
+              "任意ですが推奨：OpenRouterアカウントのプライバシー設定で、データを学習に使用するプロバイダーにリクエストをルーティングしてよいかどうかを決めてください（[privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging)）。"
             ]
           }
         ]
       },
       {
-        "heading": "Which model should I choose?",
+        "heading": "どのモデルを選ぶべきか？",
         "blocks": [
           {
             "type": "p",
-            "text": "When you press **Connect**, Red News asks your provider which models your key can use and preselects a sensible one, so you can simply leave the dropdown alone. If you want to change it, the job here is small — a short, grounded explanation of one economic release — so a **small, fast, cheap** model is the right choice. Big \"reasoning\", \"pro\" or \"deep research\" models are slower, cost far more and do not write a better three-paragraph briefing."
+            "text": "**Connect**を押すと、Red Newsはあなたのプロバイダーに対し、そのキーで使用できるモデルを問い合わせ、適切なものを自動的に選択します。そのため、ドロップダウンはそのままにしておいて構いません。変更したい場合、ここで行う作業は小さなもの——1件の経済指標発表についての短く事実に基づいた解説——なので、**小型・高速・低コスト**なモデルが適しています。「推論（reasoning）」「pro」「deep research」といった大型モデルは、動作が遅く、コストもはるかに高い上、3段落程度のブリーフィングの質が向上するわけでもありません。"
           },
           {
             "type": "p",
@@ -808,9 +808,9 @@
           {
             "type": "ul",
             "items": [
-              "`gemini-2.5-flash-lite` — recommended. Fastest and cheapest; ideal for this task. Preselected by the extension.",
-              "`gemini-2.5-flash` — a little slower, slightly richer wording. Good second choice.",
-              "Avoid `…-pro`, and anything with `preview`, `exp`, `thinking`, `deep-research` or `antigravity` in the name: slow, expensive, and preview models can disappear without warning."
+              "`gemini-2.5-flash-lite`——推奨。最速かつ最も低コストで、この用途に最適です。拡張機能によってあらかじめ選択されています。",
+              "`gemini-2.5-flash`——やや低速ですが、表現がわずかに豊かになります。次善の選択肢です。",
+              "`…-pro`、および名前に`preview`、`exp`、`thinking`、`deep-research`、`antigravity`が含まれるものは避けてください。動作が遅く、コストが高いうえ、プレビュー版のモデルは予告なく利用できなくなることがあります。"
             ]
           },
           {
@@ -820,9 +820,9 @@
           {
             "type": "ul",
             "items": [
-              "A Llama 3.3 70B model (e.g. `llama-3.3-70b-versatile`) — recommended. Strong general knowledge, answers in a second. Preselected by the extension.",
-              "A smaller Llama 8B model — even faster and with more generous free limits, but noticeably shallower explanations.",
-              "Avoid speech, vision and guard models — they are filtered out of the dropdown anyway."
+              "Llama 3.3 70Bモデル（例：`llama-3.3-70b-versatile`）——推奨。一般知識に強く、1秒ほどで回答します。拡張機能によってあらかじめ選択されています。",
+              "より小型のLlama 8Bモデル——さらに高速で無料枠の制限も緩やかですが、解説の深さは明らかに劣ります。",
+              "音声系、画像認識系、ガード系のモデルは避けてください——これらはいずれにせよドロップダウンから除外されています。"
             ]
           },
           {
@@ -832,94 +832,94 @@
           {
             "type": "ul",
             "items": [
-              "Any model whose name ends in `:free` — recommended to start. No balance needed. The extension preselects a free Llama or Gemini variant when one is available.",
-              "A paid small model (a \"flash\", \"mini\" or \"lite\" variant of any vendor) if you top up your balance and want higher limits and steadier availability.",
-              "Avoid flagship and reasoning models — you would pay several times more per explanation for no benefit here."
+              "名前が`:free`で終わるモデル——最初はこれがおすすめです。残高は不要です。利用可能な場合、拡張機能は無料のLlamaまたはGeminiのバリアントをあらかじめ選択します。",
+              "残高をチャージし、より高い制限と安定した利用可能性を求める場合は、有料の小型モデル（いずれかのベンダーの「flash」「mini」「lite」バリアント）。",
+              "フラッグシップモデルや推論モデルは避けてください——この用途では利点がないまま、解説1件あたり数倍のコストがかかります。"
             ]
           },
           {
             "type": "note",
-            "text": "Free tiers are rate-limited, not unlimited. If you read a lot of releases in one sitting you may see \"Too many requests — try again in a minute.\" Red News keeps each answer for 7 days, so re-opening the same event costs nothing."
+            "text": "無料枠には利用回数の制限があり、無制限ではありません。一度に多くの指標発表を読むと、「リクエストが多すぎます——1分後にもう一度お試しください。」と表示されることがあります。Red Newsは各回答を7日間保持するため、同じイベントを再度開いてもコストはかかりません。"
           }
         ]
       },
       {
-        "heading": "Connect it in the extension",
+        "heading": "拡張機能で接続する",
         "blocks": [
           {
             "type": "ol",
             "items": [
-              "Click the Red News icon in Chrome and scroll down to **✨ AI explanations**.",
-              "Pick your **Provider**.",
-              "Paste the key into **API key** (the 👁 button shows or hides what you typed).",
-              "Press **Connect**. Chrome asks for permission to contact that provider’s address — allow it. This is the one-off permission the extension needs to send your requests; if the popup closes while the Chrome prompt is open, just open the extension again and press Connect once more.",
-              "The status turns **Connected ✓** and the **Model** dropdown fills up. Pick another model if you like.",
-              "Open the news list and press **✨** next to any event."
+              "ChromeでRed Newsのアイコンをクリックし、**✨ AI explanations**までスクロールします。",
+              "**Provider**を選択します。",
+              "**API key**にキーを貼り付けます（👁ボタンで入力内容の表示・非表示を切り替えられます）。",
+              "**Connect**を押します。Chromeがそのプロバイダーのアドレスへのアクセス許可を求めてきますので、許可してください。これは拡張機能がリクエストを送信するために必要な一回限りの許可です。Chromeの確認画面が表示されている間にポップアップが閉じてしまった場合は、拡張機能を再度開いて**Connect**をもう一度押してください。",
+              "ステータスが**Connected ✓**に変わり、**Model**のドロップダウンにモデルの一覧が表示されます。お好みで別のモデルを選択してください。",
+              "ニュースリストを開き、任意のイベントの横にある**✨**を押してください。"
             ]
           },
           {
             "type": "p",
-            "text": "To disconnect, press **Remove key**. The key is deleted from your browser immediately. Chrome keeps the site permission you granted; you can revoke it in `chrome://extensions` → Red News → Details → Site access, or simply leave it, as nothing is sent without a key."
+            "text": "接続を解除するには、**Remove key**を押してください。キーはただちにブラウザから削除されます。Chromeに付与したサイトの許可は保持されますが、`chrome://extensions` → Red News → Details → Site accessから取り消すこともできますし、キーがなければ何も送信されないため、そのままにしておいても問題ありません。"
           }
         ]
       },
       {
-        "heading": "What is sent, and where",
+        "heading": "送信される内容と送信先",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**Your key never leaves your browser.** It is stored in the extension’s local storage on this computer only — never synced, never sent to Red News servers.",
-              "**Requests go straight from your browser to the provider you chose.** They do not pass through our backend, and we cannot read the questions or the answers.",
-              "**What the request contains:** the event title, its currency, impact level and scheduled time, its forecast, previous and actual values, up to a handful of earlier prints of the same release, and the language you want the answer in. No account details, no email, no chart data, no browsing history.",
-              "**Your provider’s own privacy policy applies** to what it does with that request — see the notes for each provider above. Our own policy is in the [Privacy Policy](/privacy)."
+              "**お使いのキーはブラウザの外に出ることはありません。** このコンピューター上の拡張機能のローカルストレージにのみ保存され、同期されることも、Red Newsのサーバーに送信されることもありません。",
+              "**リクエストは、お使いのブラウザから選択したプロバイダーへ直接送られます。** 当社のバックエンドを経由することはなく、当社が質問や回答の内容を読むことはできません。",
+              "**リクエストに含まれる内容：** イベント名、その通貨、重要度および発表予定時刻、予想値・前回値・実際値、同じ指標の過去数回分の発表値、そして回答を希望する言語です。アカウント情報、メールアドレス、チャートデータ、閲覧履歴は含まれません。",
+              "そのリクエストの取り扱いには**ご利用のプロバイダー自身のプライバシーポリシーが適用されます**——各プロバイダーについては上記の注記をご覧ください。当社自身のポリシーは[プライバシーポリシー](/privacy)に記載されています。"
             ]
           }
         ]
       },
       {
-        "heading": "What will it cost?",
+        "heading": "料金はどのくらいかかりますか？",
         "blocks": [
           {
             "type": "p",
-            "text": "One explanation is a very small request — roughly a page of text in, a short paragraph out. On a free tier it costs nothing; on a paid small model it is a fraction of a cent. You pay your AI provider directly, if at all — never through Red News. Your Red News Premium subscription does not include AI usage, and does not charge for it either."
+            "text": "1件の解説は非常に小さなリクエストです——入力は1ページ程度のテキスト、出力は短い段落1つです。無料枠であれば費用はかかりません。有料の小型モデルでも1円に満たない金額です。料金が発生する場合は、Red Newsを経由せず、ご利用のAIプロバイダーに直接支払うことになります。Red News PremiumのサブスクリプションにはAI利用は含まれておらず、その分の課金も行われません。"
           }
         ]
       },
       {
-        "heading": "If something goes wrong",
+        "heading": "うまくいかない場合",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**\"The provider rejected this key.\"** — The key was mistyped, truncated or deleted in the console, or the wrong provider is selected in the dropdown. Create a fresh key and paste it again. For Gemini, also check that the Generative Language API is enabled on the project the key belongs to.",
-              "**\"Too many requests — try again in a minute.\"** — You hit the free-tier rate limit. Wait a minute, switch to a smaller model, or add billing at your provider.",
-              "**\"Could not reach the AI provider.\"** — No connection, or the provider’s API is blocked on your network (corporate proxy, VPN, firewall) or temporarily down.",
-              "**\"Access to the provider was not allowed.\"** — The Chrome permission prompt was dismissed. Press Connect again and allow it.",
-              "**\"This key has no suitable chat models.\"** — The key is restricted, or the account has no model access yet. Check the provider console; on OpenRouter, some models require a topped-up balance.",
-              "**The ✨ buttons are not there.** AI explanations are Premium — sign in and make sure your plan is active, then reopen the extension."
+              "**「プロバイダーがこのキーを拒否しました。」**——キーの入力ミス、一部が欠けている、コンソールで削除された、またはドロップダウンで選択しているプロバイダーが間違っている可能性があります。新しいキーを作成して再度貼り付けてください。Geminiの場合は、そのキーが属するプロジェクトでGenerative Language APIが有効になっているかも確認してください。",
+              "**「リクエストが多すぎます——1分後にもう一度お試しください。」**——無料枠の利用制限に達しています。1分ほど待つか、より小型のモデルに切り替える、またはプロバイダーで課金設定を追加してください。",
+              "**「AIプロバイダーに接続できませんでした。」**——接続がない、またはお使いのネットワーク（社内プロキシ、VPN、ファイアウォールなど）でプロバイダーのAPIがブロックされている、あるいは一時的に利用できない状態です。",
+              "**「プロバイダーへのアクセスが許可されませんでした。」**——Chromeの許可の確認画面が閉じられてしまいました。もう一度**Connect**を押して許可してください。",
+              "**「このキーには適切なチャットモデルがありません。」**——キーに制限がかけられている、またはアカウントがまだモデルへのアクセス権を持っていません。プロバイダーのコンソールを確認してください。OpenRouterでは、一部のモデルの利用に残高のチャージが必要です。",
+              "**✨ボタンが表示されない。** AI解説はPremium機能です。サインインしてプランが有効になっていることを確認し、拡張機能を再度開いてください。"
             ]
           }
         ]
       },
       {
-        "heading": "Limits worth knowing",
+        "heading": "知っておくべき制限",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The AI only sees the calendar data we hand it, and it is instructed never to invent figures. It still can be wrong about general context, like any language model. Always check the numbers on the chart.",
-              "**It will not tell you what to trade.** The extension explicitly asks the model for explanation only — no entries, exits, targets or position sizes. Red News does not provide financial, investment or trading advice."
+              "AIは当社が渡したカレンダーデータのみを参照し、数値を創作しないよう指示されています。ただし、他の言語モデルと同様に、一般的な文脈について誤った説明をする可能性は残ります。数値は必ずチャート上で確認してください。",
+              "**何を取引すべきかを教えることはありません。** 拡張機能はモデルに対して解説のみを明示的に求めており、エントリー、エグジット、目標値、ポジションサイズなどは求めません。Red Newsは金融、投資、または取引に関する助言を提供するものではありません。"
             ]
           }
         ]
       },
       {
-        "heading": "Still stuck?",
+        "heading": "それでも解決しない場合",
         "blocks": [
           {
             "type": "p",
-            "text": "Write to [support@rednews.app](mailto:support@rednews.app) or reach us on [Discord](https://discord.com/users/1172891214580830322) — tell us which provider you used and what the extension showed, and we will sort it out."
+            "text": "[support@rednews.app](mailto:support@rednews.app)宛にご連絡いただくか、[Discord](https://discord.com/users/1172891214580830322)でお問い合わせください——ご利用のプロバイダーと、拡張機能に表示された内容をお知らせいただければ、対応いたします。"
           }
         ]
       }

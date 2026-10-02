@@ -36,8 +36,8 @@
       "title": "مرحبًا بك في النادي"
     },
     "ai": {
-      "title": "Connect your own AI",
-      "description": "How to get a free API key from Google Gemini, Groq or OpenRouter and connect it to the Red News extension for AI explanations of economic releases."
+      "title": "ربط ذكائك الاصطناعي الخاص",
+      "description": "كيفية الحصول على مفتاح API مجاني من Google Gemini أو Groq أو OpenRouter وربطه بإضافة Red News للحصول على شروحات بالذكاء الاصطناعي للبيانات الاقتصادية."
     }
   },
   "nav": {
@@ -706,100 +706,100 @@
     "secondary": "عرض تقويم هذا الأسبوع"
   },
   "ai": {
-    "title": "Connect your own AI",
-    "updated": "Last updated: 2 October 2026",
-    "intro": "Red News can explain any economic release in plain language, in your own interface language. Open the extension, find an event in the list and press the ✨ button next to it. You get a short briefing: what the indicator measures, what the forecast and the previous prints were, and what a higher or lower than expected result usually means for that currency.",
+    "title": "ربط ذكائك الاصطناعي الخاص",
+    "updated": "آخر تحديث: 2 أكتوبر 2026",
+    "intro": "يمكن لـ Red News أن يشرح أي بيان اقتصادي بلغة واضحة وبلغة واجهتك الخاصة. افتح الإضافة، وابحث عن حدث في القائمة، واضغط على زر ✨ المجاور له. ستحصل على ملخص قصير: ماذا يقيس هذا المؤشر، وما كانت التوقعات والقراءة السابقة، وماذا يعني غالبًا أن تكون النتيجة أعلى أو أقل من المتوقع بالنسبة لتلك العملة.",
     "sections": [
       {
-        "heading": "How it works",
+        "heading": "كيف يعمل ذلك",
         "blocks": [
           {
             "type": "p",
-            "text": "The explanation is written by an AI provider that **you** choose and connect with your own **API key**. Red News never sees your key and never sees the answers — your browser talks to the provider directly. Today you can connect **Google Gemini**, **Groq** or **OpenRouter**, and all three have a free tier that is more than enough for reading a few releases a day."
+            "text": "يكتب الشرح مزوّد ذكاء اصطناعي تختاره **أنت** وتربطه بـ **مفتاح API** الخاص بك. لا يرى Red News مفتاحك مطلقًا ولا يرى الإجابات مطلقًا — يتواصل متصفحك مع المزوّد مباشرة. يمكنك اليوم ربط **Google Gemini** أو **Groq** أو **OpenRouter**، وتوفّر الثلاثة جميعًا مستوى مجانيًا يكفي بسهولة لقراءة عدة بيانات اقتصادية في اليوم."
           },
           {
             "type": "note",
-            "text": "An API key is not a ChatGPT or Gemini subscription. A paid chatbot plan (ChatGPT Plus, Gemini Advanced, Claude Pro…) only unlocks the chat website or app — it gives you nothing to paste here. An API key is a separate, free-to-create string of characters, taken from the provider’s developer console, that lets your own software send requests. It looks something like `AIza…`, `gsk_…` or `sk-or-v1-…`."
+            "text": "مفتاح API ليس اشتراكًا في ChatGPT أو Gemini. فالباقة المدفوعة لروبوت المحادثة (ChatGPT Plus أو Gemini Advanced أو Claude Pro…) لا تفتح إلا موقع أو تطبيق المحادثة نفسه — ولا تمنحك شيئًا تلصقه هنا. أما مفتاح API فهو سلسلة أحرف مستقلة، مجانية الإنشاء، تُؤخذ من لوحة تحكم المطوّرين الخاصة بالمزوّد، وتتيح لبرنامجك الخاص إرسال الطلبات. يبدو شكله شيئًا كـ `AIza…` أو `gsk_…` أو `sk-or-v1-…`."
           }
         ]
       },
       {
-        "heading": "What you need",
+        "heading": "ما الذي تحتاجه",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The Red News extension, signed in with **Premium** (or an active trial) — AI explanations are a Premium feature.",
-              "A free account with one of the three providers below, and an API key created in its console."
+              "إضافة Red News، مسجّلاً الدخول باشتراك **Premium** (أو نسخة تجريبية فعّالة) — فشروحات الذكاء الاصطناعي ميزة خاصة بـ Premium.",
+              "حساب مجاني مع أحد المزوّدين الثلاثة أدناه، ومفتاح API تم إنشاؤه من لوحة تحكمه."
             ]
           }
         ]
       },
       {
-        "heading": "1. Get a key from Google Gemini",
+        "heading": "1. الحصول على مفتاح من Google Gemini",
         "blocks": [
           {
             "type": "p",
-            "text": "The easiest start: no card required, and Google’s fast \"Flash\" models answer in a second or two."
+            "text": "أسهل طريقة للبدء: لا حاجة لبطاقة، وتجيب نماذج \"Flash\" السريعة من Google في ثانية أو ثانيتين."
           },
           {
             "type": "ol",
             "items": [
-              "Open [aistudio.google.com/apikey](https://aistudio.google.com/apikey) and sign in with a Google account.",
-              "Press **Create API key** and pick (or let Google create) a project.",
-              "Copy the key — it begins with `AIza`. You can always come back to this page to copy it again."
+              "افتح [aistudio.google.com/apikey](https://aistudio.google.com/apikey) وسجّل الدخول بحساب Google.",
+              "اضغط على **Create API key** واختر مشروعًا (أو اترك Google تنشئ واحدًا).",
+              "انسخ المفتاح — يبدأ بـ `AIza`. يمكنك دائمًا العودة إلى هذه الصفحة لنسخه مرة أخرى."
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: on Google’s **free** tier, your prompts and the answers may be used by Google to improve its products and may be reviewed by humans. On the paid tier they are not. If that matters to you, use Groq, or add billing to the Google project. Current limits and prices: [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)."
+            "text": "يجدر معرفته: في مستوى Google **المجاني**، يجوز لـ Google استخدام طلباتك وإجاباتها لتحسين منتجاتها، وقد يراجعها بشر. أما في المستوى المدفوع فلا يحدث ذلك. إن كان هذا يهمك، فاستخدم Groq، أو أضف طريقة دفع إلى مشروع Google. الحدود والأسعار الحالية: [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)."
           }
         ]
       },
       {
-        "heading": "2. Get a key from Groq",
+        "heading": "2. الحصول على مفتاح من Groq",
         "blocks": [
           {
             "type": "p",
-            "text": "**Groq is not Grok.** Groq (spelled with a q) is an inference company that runs open models such as Llama extremely fast; Grok (spelled with a k) is xAI’s chatbot and is not supported here."
+            "text": "**Groq ليست Grok.** فـ Groq (بحرف q) شركة استدلال تُشغّل نماذج مفتوحة مثل Llama بسرعة فائقة؛ أما Grok (بحرف k) فهو روبوت محادثة تابع لشركة xAI وغير مدعوم هنا."
           },
           {
             "type": "ol",
             "items": [
-              "Open [console.groq.com/keys](https://console.groq.com/keys) and sign in (Google, GitHub or email).",
-              "Press **Create API Key**, give it a name such as Red News.",
-              "Copy the key — it begins with `gsk_`. Groq shows it **only once**, so paste it into the extension straight away."
+              "افتح [console.groq.com/keys](https://console.groq.com/keys) وسجّل الدخول (Google أو GitHub أو البريد الإلكتروني).",
+              "اضغط على **Create API Key**، وأعطه اسمًا مثل Red News.",
+              "انسخ المفتاح — يبدأ بـ `gsk_`. تعرضه Groq **مرة واحدة فقط**، فالصقه في الإضافة فورًا."
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: Groq states that it does not retain or train on API prompts and outputs by default. Free-tier request limits are published here: [Groq rate limits](https://console.groq.com/docs/rate-limits)."
+            "text": "يجدر معرفته: تذكر Groq أنها لا تحتفظ بطلبات ومخرجات API ولا تستخدمها للتدريب بشكل افتراضي. حدود الطلبات في المستوى المجاني منشورة هنا: [Groq rate limits](https://console.groq.com/docs/rate-limits)."
           }
         ]
       },
       {
-        "heading": "3. Get a key from OpenRouter",
+        "heading": "3. الحصول على مفتاح من OpenRouter",
         "blocks": [
           {
             "type": "p",
-            "text": "OpenRouter is a single door to hundreds of models from many vendors: one key, one account, and you switch models from a dropdown instead of signing up everywhere. Some models are free to use; the rest are pay-as-you-go from a prepaid balance. The trade-off is that your request passes through OpenRouter on its way to the model vendor."
+            "text": "يُعد OpenRouter بابًا واحدًا لمئات النماذج من عدة مزوّدين: مفتاح واحد وحساب واحد، وتبدّل النماذج من قائمة منسدلة بدل التسجيل في كل مكان. بعض النماذج مجانية الاستخدام؛ والبقية تُدفع حسب الاستخدام من رصيد مسبق الدفع. والمقابل هو أن طلبك يمرّ عبر OpenRouter في طريقه إلى مزوّد النموذج."
           },
           {
             "type": "ol",
             "items": [
-              "Open [openrouter.ai/keys](https://openrouter.ai/keys) and sign in.",
-              "Press **Create key** and copy it — it begins with `sk-or-v1-`.",
-              "Optional but recommended: in your OpenRouter account privacy settings, decide whether requests may be routed to providers that train on your data ([privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging))."
+              "افتح [openrouter.ai/keys](https://openrouter.ai/keys) وسجّل الدخول.",
+              "اضغط على **Create key** وانسخه — يبدأ بـ `sk-or-v1-`.",
+              "اختياري وموصى به: في إعدادات الخصوصية لحساب OpenRouter، حدّد ما إذا كان يمكن توجيه الطلبات إلى مزوّدين يستخدمون بياناتك للتدريب ([privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging))."
             ]
           }
         ]
       },
       {
-        "heading": "Which model should I choose?",
+        "heading": "أي نموذج يجب أن أختار؟",
         "blocks": [
           {
             "type": "p",
-            "text": "When you press **Connect**, Red News asks your provider which models your key can use and preselects a sensible one, so you can simply leave the dropdown alone. If you want to change it, the job here is small — a short, grounded explanation of one economic release — so a **small, fast, cheap** model is the right choice. Big \"reasoning\", \"pro\" or \"deep research\" models are slower, cost far more and do not write a better three-paragraph briefing."
+            "text": "عند الضغط على **Connect**، يسأل Red News مزوّدك عن النماذج التي يمكن لمفتاحك استخدامها، ويختار مسبقًا نموذجًا مناسبًا، فيمكنك ببساطة ترك القائمة المنسدلة كما هي. إن أردت تغييره، فتذكّر أن المهمة هنا صغيرة — شرح قصير ومستند إلى الوقائع لبيان اقتصادي واحد — لذا فالنموذج **الصغير والسريع والرخيص** هو الخيار الصحيح. أما النماذج الكبيرة ذات \"الاستدلال\" أو \"pro\" أو \"deep research\" فهي أبطأ وأغلى بكثير ولا تكتب ملخصًا من ثلاث فقرات أفضل."
           },
           {
             "type": "p",
@@ -808,9 +808,9 @@
           {
             "type": "ul",
             "items": [
-              "`gemini-2.5-flash-lite` — recommended. Fastest and cheapest; ideal for this task. Preselected by the extension.",
-              "`gemini-2.5-flash` — a little slower, slightly richer wording. Good second choice.",
-              "Avoid `…-pro`, and anything with `preview`, `exp`, `thinking`, `deep-research` or `antigravity` in the name: slow, expensive, and preview models can disappear without warning."
+              "`gemini-2.5-flash-lite` — موصى به. الأسرع والأرخص؛ مثالي لهذه المهمة. تختاره الإضافة مسبقًا.",
+              "`gemini-2.5-flash` — أبطأ قليلًا، وصياغته أغنى بعض الشيء. خيار ثانٍ جيد.",
+              "تجنّب `…-pro`، وأي اسم يحتوي على `preview` أو `exp` أو `thinking` أو `deep-research` أو `antigravity`: فهي بطيئة ومكلفة، وقد تختفي نماذج preview دون إشعار."
             ]
           },
           {
@@ -820,9 +820,9 @@
           {
             "type": "ul",
             "items": [
-              "A Llama 3.3 70B model (e.g. `llama-3.3-70b-versatile`) — recommended. Strong general knowledge, answers in a second. Preselected by the extension.",
-              "A smaller Llama 8B model — even faster and with more generous free limits, but noticeably shallower explanations.",
-              "Avoid speech, vision and guard models — they are filtered out of the dropdown anyway."
+              "نموذج Llama 3.3 70B (مثل `llama-3.3-70b-versatile`) — موصى به. معرفة عامة قوية، ويجيب في ثانية. تختاره الإضافة مسبقًا.",
+              "نموذج Llama 8B أصغر — أسرع وبحدود مجانية أكثر سخاءً، لكن شروحاته أقل عمقًا بشكل واضح.",
+              "تجنّب نماذج الكلام والرؤية والحماية (guard) — فهي مستبعدة من القائمة المنسدلة على أي حال."
             ]
           },
           {
@@ -832,94 +832,94 @@
           {
             "type": "ul",
             "items": [
-              "Any model whose name ends in `:free` — recommended to start. No balance needed. The extension preselects a free Llama or Gemini variant when one is available.",
-              "A paid small model (a \"flash\", \"mini\" or \"lite\" variant of any vendor) if you top up your balance and want higher limits and steadier availability.",
-              "Avoid flagship and reasoning models — you would pay several times more per explanation for no benefit here."
+              "أي نموذج ينتهي اسمه بـ `:free` — موصى به للبدء. لا حاجة إلى رصيد. تختار الإضافة مسبقًا نسخة مجانية من Llama أو Gemini إن توفّرت.",
+              "نموذج صغير مدفوع (نسخة \"flash\" أو \"mini\" أو \"lite\" من أي مزوّد) إن شحنت رصيدك وأردت حدودًا أعلى وتوفرًا أكثر استقرارًا.",
+              "تجنّب النماذج الرائدة ونماذج الاستدلال — فستدفع عدة أضعاف السعر لكل شرح دون أي فائدة هنا."
             ]
           },
           {
             "type": "note",
-            "text": "Free tiers are rate-limited, not unlimited. If you read a lot of releases in one sitting you may see \"Too many requests — try again in a minute.\" Red News keeps each answer for 7 days, so re-opening the same event costs nothing."
+            "text": "المستويات المجانية محدودة بمعدل الطلبات، لا غير محدودة. إن قرأت عددًا كبيرًا من البيانات الاقتصادية في جلسة واحدة فقد ترى رسالة \"عدد كبير جدًا من الطلبات — حاول مرة أخرى بعد دقيقة.\" يحتفظ Red News بكل إجابة لمدة 7 أيام، لذا فإعادة فتح الحدث نفسه لا تكلّف شيئًا."
           }
         ]
       },
       {
-        "heading": "Connect it in the extension",
+        "heading": "ربطه داخل الإضافة",
         "blocks": [
           {
             "type": "ol",
             "items": [
-              "Click the Red News icon in Chrome and scroll down to **✨ AI explanations**.",
-              "Pick your **Provider**.",
-              "Paste the key into **API key** (the 👁 button shows or hides what you typed).",
-              "Press **Connect**. Chrome asks for permission to contact that provider’s address — allow it. This is the one-off permission the extension needs to send your requests; if the popup closes while the Chrome prompt is open, just open the extension again and press Connect once more.",
-              "The status turns **Connected ✓** and the **Model** dropdown fills up. Pick another model if you like.",
-              "Open the news list and press **✨** next to any event."
+              "اضغط على أيقونة Red News في Chrome ثم مرّر للأسفل إلى **✨ AI explanations**.",
+              "اختر **Provider** الخاص بك.",
+              "الصق المفتاح في **API key** (يُظهر زر 👁 أو يخفي ما كتبته).",
+              "اضغط على **Connect**. سيطلب Chrome إذنًا للاتصال بعنوان ذلك المزوّد — اسمح به. هذا إذن يُطلب مرة واحدة فقط تحتاجه الإضافة لإرسال طلباتك؛ وإذا أُغلقت النافذة المنبثقة أثناء ظهور طلب Chrome، فما عليك إلا فتح الإضافة من جديد والضغط على Connect مرة أخرى.",
+              "تتحول الحالة إلى **Connected ✓** وتُملأ قائمة **Model** المنسدلة. اختر نموذجًا آخر إن أردت.",
+              "افتح قائمة الأخبار واضغط على **✨** بجانب أي حدث."
             ]
           },
           {
             "type": "p",
-            "text": "To disconnect, press **Remove key**. The key is deleted from your browser immediately. Chrome keeps the site permission you granted; you can revoke it in `chrome://extensions` → Red News → Details → Site access, or simply leave it, as nothing is sent without a key."
+            "text": "لقطع الربط، اضغط على **Remove key**. يُحذف المفتاح من متصفحك فورًا. يحتفظ Chrome بإذن الموقع الذي منحته؛ يمكنك سحبه من `chrome://extensions` ← Red News ← Details ← Site access، أو تركه كما هو ببساطة، فلا يُرسل شيء دون مفتاح."
           }
         ]
       },
       {
-        "heading": "What is sent, and where",
+        "heading": "ما الذي يُرسل، وإلى أين",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**Your key never leaves your browser.** It is stored in the extension’s local storage on this computer only — never synced, never sent to Red News servers.",
-              "**Requests go straight from your browser to the provider you chose.** They do not pass through our backend, and we cannot read the questions or the answers.",
-              "**What the request contains:** the event title, its currency, impact level and scheduled time, its forecast, previous and actual values, up to a handful of earlier prints of the same release, and the language you want the answer in. No account details, no email, no chart data, no browsing history.",
-              "**Your provider’s own privacy policy applies** to what it does with that request — see the notes for each provider above. Our own policy is in the [Privacy Policy](/privacy)."
+              "**مفتاحك لا يغادر متصفحك أبدًا.** يُخزَّن في مساحة التخزين المحلية للإضافة على هذا الحاسوب فقط — لا تتم مزامنته أبدًا، ولا يُرسل أبدًا إلى خوادم Red News.",
+              "**تذهب الطلبات مباشرة من متصفحك إلى المزوّد الذي اخترته.** فلا تمر عبر خوادمنا، ولا يمكننا قراءة الأسئلة أو الإجابات.",
+              "**ما يحتويه الطلب:** عنوان الحدث، وعملته، ومستوى تأثيره وتوقيته المجدول، وتوقعاته، وقيمته السابقة والفعلية، وعددًا قليلًا من القراءات السابقة لنفس البيان، واللغة التي تريد الإجابة بها. لا تفاصيل حساب، ولا بريد إلكتروني، ولا بيانات رسم بياني، ولا سجل تصفّح.",
+              "**تنطبق سياسة الخصوصية الخاصة بمزوّدك** على ما يفعله بذلك الطلب — راجع الملاحظات المذكورة أعلاه لكل مزوّد. سياستنا موجودة في [سياسة الخصوصية](/privacy)."
             ]
           }
         ]
       },
       {
-        "heading": "What will it cost?",
+        "heading": "كم ستكون التكلفة؟",
         "blocks": [
           {
             "type": "p",
-            "text": "One explanation is a very small request — roughly a page of text in, a short paragraph out. On a free tier it costs nothing; on a paid small model it is a fraction of a cent. You pay your AI provider directly, if at all — never through Red News. Your Red News Premium subscription does not include AI usage, and does not charge for it either."
+            "text": "الشرح الواحد طلب صغير جدًا — صفحة نص تقريبًا تدخل، وفقرة قصيرة تخرج. في المستوى المجاني لا يكلّف شيئًا؛ وفي نموذج صغير مدفوع يكلّف جزءًا من السنت. تدفع لمزوّد الذكاء الاصطناعي مباشرة، إن وُجدت تكلفة أصلًا — وليس عبر Red News مطلقًا. اشتراكك في Red News Premium لا يشمل استخدام الذكاء الاصطناعي، ولا يُحاسبك عليه أيضًا."
           }
         ]
       },
       {
-        "heading": "If something goes wrong",
+        "heading": "إذا حدث خطأ ما",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**\"The provider rejected this key.\"** — The key was mistyped, truncated or deleted in the console, or the wrong provider is selected in the dropdown. Create a fresh key and paste it again. For Gemini, also check that the Generative Language API is enabled on the project the key belongs to.",
-              "**\"Too many requests — try again in a minute.\"** — You hit the free-tier rate limit. Wait a minute, switch to a smaller model, or add billing at your provider.",
-              "**\"Could not reach the AI provider.\"** — No connection, or the provider’s API is blocked on your network (corporate proxy, VPN, firewall) or temporarily down.",
-              "**\"Access to the provider was not allowed.\"** — The Chrome permission prompt was dismissed. Press Connect again and allow it.",
-              "**\"This key has no suitable chat models.\"** — The key is restricted, or the account has no model access yet. Check the provider console; on OpenRouter, some models require a topped-up balance.",
-              "**The ✨ buttons are not there.** AI explanations are Premium — sign in and make sure your plan is active, then reopen the extension."
+              "**\"رفض المزوّد هذا المفتاح.\"** — كُتب المفتاح خطأً، أو اقتُطع، أو حُذف من لوحة التحكم، أو تم اختيار المزوّد الخطأ في القائمة المنسدلة. أنشئ مفتاحًا جديدًا والصقه مرة أخرى. بالنسبة إلى Gemini، تحقق أيضًا من أن Generative Language API مفعّلة في المشروع الذي يتبع له المفتاح.",
+              "**\"عدد كبير جدًا من الطلبات — حاول مرة أخرى بعد دقيقة.\"** — بلغت حد المعدل في المستوى المجاني. انتظر دقيقة، أو بدّل إلى نموذج أصغر، أو أضف طريقة دفع عند مزوّدك.",
+              "**\"تعذّر الوصول إلى مزوّد الذكاء الاصطناعي.\"** — لا يوجد اتصال، أو أن واجهة برمجة المزوّد محظورة على شبكتك (وكيل شركة، أو VPN، أو جدار حماية) أو متوقفة مؤقتًا.",
+              "**\"لم يُسمح بالوصول إلى المزوّد.\"** — تم تجاهل طلب إذن Chrome. اضغط على Connect مرة أخرى واسمح به.",
+              "**\"لا يملك هذا المفتاح نماذج محادثة مناسبة.\"** — المفتاح مقيَّد، أو لا يملك الحساب صلاحية الوصول إلى أي نموذج بعد. تحقق من لوحة تحكم المزوّد؛ وفي OpenRouter، تتطلب بعض النماذج رصيدًا مشحونًا.",
+              "**أزرار ✨ غير موجودة.** شروحات الذكاء الاصطناعي خاصة بـ Premium — سجّل الدخول وتأكد من أن باقتك فعّالة، ثم أعد فتح الإضافة."
             ]
           }
         ]
       },
       {
-        "heading": "Limits worth knowing",
+        "heading": "حدود يجدر معرفتها",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The AI only sees the calendar data we hand it, and it is instructed never to invent figures. It still can be wrong about general context, like any language model. Always check the numbers on the chart.",
-              "**It will not tell you what to trade.** The extension explicitly asks the model for explanation only — no entries, exits, targets or position sizes. Red News does not provide financial, investment or trading advice."
+              "لا يرى الذكاء الاصطناعي إلا بيانات التقويم التي نزوّده بها، وهو مُوجَّه لعدم اختراع أي أرقام مطلقًا. ومع ذلك فقد يخطئ في السياق العام، كأي نموذج لغوي آخر. تحقّق دائمًا من الأرقام على الرسم البياني.",
+              "**لن يخبرك بما يجب أن تتداوله.** تطلب الإضافة من النموذج صراحةً تقديم الشرح فقط — بلا نقاط دخول أو خروج أو أهداف أو حجم مركز. لا يقدّم Red News أي نصيحة مالية أو استثمارية أو تداولية."
             ]
           }
         ]
       },
       {
-        "heading": "Still stuck?",
+        "heading": "ما زلت بحاجة إلى مساعدة؟",
         "blocks": [
           {
             "type": "p",
-            "text": "Write to [support@rednews.app](mailto:support@rednews.app) or reach us on [Discord](https://discord.com/users/1172891214580830322) — tell us which provider you used and what the extension showed, and we will sort it out."
+            "text": "اكتب إلى [support@rednews.app](mailto:support@rednews.app) أو تواصل معنا على [Discord](https://discord.com/users/1172891214580830322) — أخبرنا بالمزوّد الذي استخدمته وبما أظهرته الإضافة، وسنحلّ الأمر."
           }
         ]
       }

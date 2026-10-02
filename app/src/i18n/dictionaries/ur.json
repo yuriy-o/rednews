@@ -36,8 +36,8 @@
       "title": "کلب میں خوش آمدید"
     },
     "ai": {
-      "title": "Connect your own AI",
-      "description": "How to get a free API key from Google Gemini, Groq or OpenRouter and connect it to the Red News extension for AI explanations of economic releases."
+      "title": "اپنا AI منسلک کریں",
+      "description": "Google Gemini، Groq یا OpenRouter سے مفت API کلید حاصل کرنے اور اسے معاشی اعداد و شمار کی AI وضاحتوں کے لیے Red News ایکسٹینشن سے منسلک کرنے کا طریقہ۔"
     }
   },
   "nav": {
@@ -706,100 +706,100 @@
     "secondary": "اس ہفتے کا کیلنڈر دیکھیں"
   },
   "ai": {
-    "title": "Connect your own AI",
-    "updated": "Last updated: 2 October 2026",
-    "intro": "Red News can explain any economic release in plain language, in your own interface language. Open the extension, find an event in the list and press the ✨ button next to it. You get a short briefing: what the indicator measures, what the forecast and the previous prints were, and what a higher or lower than expected result usually means for that currency.",
+    "title": "اپنا AI منسلک کریں",
+    "updated": "آخری تجدید: 2 اکتوبر 2026",
+    "intro": "Red News کسی بھی معاشی اعداد و شمار کو سادہ زبان میں، آپ کی اپنی انٹرفیس زبان میں بیان کر سکتا ہے۔ ایکسٹینشن کھولیں، فہرست میں کوئی ایونٹ تلاش کریں اور اس کے ساتھ ✨ بٹن دبائیں۔ آپ کو ایک مختصر بریفنگ ملے گی: یہ انڈیکیٹر کیا ماپتا ہے، پیش گوئی اور پچھلی ریڈنگ کیا تھی، اور متوقع سے زیادہ یا کم نتیجہ عام طور پر اس کرنسی کے لیے کیا معنی رکھتا ہے۔",
     "sections": [
       {
-        "heading": "How it works",
+        "heading": "یہ کیسے کام کرتا ہے",
         "blocks": [
           {
             "type": "p",
-            "text": "The explanation is written by an AI provider that **you** choose and connect with your own **API key**. Red News never sees your key and never sees the answers — your browser talks to the provider directly. Today you can connect **Google Gemini**, **Groq** or **OpenRouter**, and all three have a free tier that is more than enough for reading a few releases a day."
+            "text": "یہ وضاحت ایک AI فراہم کنندہ (provider) لکھتا ہے جسے **آپ** خود منتخب کرتے ہیں اور اپنی **API key** سے منسلک کرتے ہیں۔ Red News کبھی آپ کی کلید نہیں دیکھتا اور کبھی جوابات نہیں دیکھتا — آپ کا براؤزر براہ راست فراہم کنندہ سے بات کرتا ہے۔ آج آپ **Google Gemini**، **Groq** یا **OpenRouter** منسلک کر سکتے ہیں، اور تینوں کا ایک مفت ٹیئر روزانہ چند اعداد و شمار پڑھنے کے لیے کافی سے زیادہ ہے۔"
           },
           {
             "type": "note",
-            "text": "An API key is not a ChatGPT or Gemini subscription. A paid chatbot plan (ChatGPT Plus, Gemini Advanced, Claude Pro…) only unlocks the chat website or app — it gives you nothing to paste here. An API key is a separate, free-to-create string of characters, taken from the provider’s developer console, that lets your own software send requests. It looks something like `AIza…`, `gsk_…` or `sk-or-v1-…`."
+            "text": "ایک API کلید ChatGPT یا Gemini کی سبسکرپشن نہیں ہے۔ ایک پیڈ چیٹ بوٹ پلان (ChatGPT Plus، Gemini Advanced، Claude Pro…) صرف چیٹ ویب سائٹ یا ایپ کھولتا ہے — یہ آپ کو یہاں پیسٹ کرنے کے لیے کچھ نہیں دیتا۔ API کلید حروف کی ایک علیحدہ، مفت بننے والی تار ہے، جو فراہم کنندہ کے ڈیویلپر کنسول سے لی جاتی ہے، اور آپ کے اپنے سافٹ ویئر کو درخواستیں بھیجنے دیتی ہے۔ یہ کچھ اس طرح نظر آتی ہے: `AIza…`، `gsk_…` یا `sk-or-v1-…`۔"
           }
         ]
       },
       {
-        "heading": "What you need",
+        "heading": "آپ کو کس چیز کی ضرورت ہے",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The Red News extension, signed in with **Premium** (or an active trial) — AI explanations are a Premium feature.",
-              "A free account with one of the three providers below, and an API key created in its console."
+              "Red News ایکسٹینشن، جس میں **Premium** (یا فعال ٹرائل) کے ساتھ سائن اِن کیا گیا ہو — AI وضاحتیں Premium کی سہولت ہیں۔",
+              "ذیل میں دیے گئے تین فراہم کنندگان میں سے کسی ایک کے ساتھ ایک مفت اکاؤنٹ، اور اس کے کنسول میں بنائی گئی ایک API کلید۔"
             ]
           }
         ]
       },
       {
-        "heading": "1. Get a key from Google Gemini",
+        "heading": "1. Google Gemini سے کلید حاصل کریں",
         "blocks": [
           {
             "type": "p",
-            "text": "The easiest start: no card required, and Google’s fast \"Flash\" models answer in a second or two."
+            "text": "شروع کرنے کا سب سے آسان طریقہ: کسی کارڈ کی ضرورت نہیں، اور Google کے تیز رفتار \"Flash\" ماڈلز ایک یا دو سیکنڈ میں جواب دیتے ہیں۔"
           },
           {
             "type": "ol",
             "items": [
-              "Open [aistudio.google.com/apikey](https://aistudio.google.com/apikey) and sign in with a Google account.",
-              "Press **Create API key** and pick (or let Google create) a project.",
-              "Copy the key — it begins with `AIza`. You can always come back to this page to copy it again."
+              "[aistudio.google.com/apikey](https://aistudio.google.com/apikey) کھولیں اور Google اکاؤنٹ سے سائن ان کریں۔",
+              "**Create API key** دبائیں اور ایک پروجیکٹ منتخب کریں (یا Google کو خود بنانے دیں)۔",
+              "کلید کاپی کریں — یہ `AIza` سے شروع ہوتی ہے۔ آپ اسے دوبارہ کاپی کرنے کے لیے کسی بھی وقت اس صفحے پر واپس آ سکتے ہیں۔"
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: on Google’s **free** tier, your prompts and the answers may be used by Google to improve its products and may be reviewed by humans. On the paid tier they are not. If that matters to you, use Groq, or add billing to the Google project. Current limits and prices: [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)."
+            "text": "جاننا ضروری ہے: Google کے **مفت** ٹیئر پر، آپ کے پرامپٹس اور جوابات Google اپنی مصنوعات بہتر بنانے کے لیے استعمال کر سکتا ہے اور ان کا جائزہ انسانوں کی طرف سے لیا جا سکتا ہے۔ پیڈ ٹیئر پر ایسا نہیں ہوتا۔ اگر یہ آپ کے لیے اہم ہے تو Groq استعمال کریں، یا Google پروجیکٹ میں بلنگ شامل کریں۔ موجودہ حدود اور قیمتیں: [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)۔"
           }
         ]
       },
       {
-        "heading": "2. Get a key from Groq",
+        "heading": "2. Groq سے کلید حاصل کریں",
         "blocks": [
           {
             "type": "p",
-            "text": "**Groq is not Grok.** Groq (spelled with a q) is an inference company that runs open models such as Llama extremely fast; Grok (spelled with a k) is xAI’s chatbot and is not supported here."
+            "text": "**Groq، Grok نہیں ہے۔** Groq (حرف q کے ساتھ) ایک انفرنس کمپنی ہے جو Llama جیسے اوپن ماڈلز کو انتہائی تیزی سے چلاتی ہے؛ Grok (حرف k کے ساتھ) xAI کا چیٹ بوٹ ہے اور یہاں سپورٹڈ نہیں ہے۔"
           },
           {
             "type": "ol",
             "items": [
-              "Open [console.groq.com/keys](https://console.groq.com/keys) and sign in (Google, GitHub or email).",
-              "Press **Create API Key**, give it a name such as Red News.",
-              "Copy the key — it begins with `gsk_`. Groq shows it **only once**, so paste it into the extension straight away."
+              "[console.groq.com/keys](https://console.groq.com/keys) کھولیں اور سائن ان کریں (Google، GitHub یا ای میل)۔",
+              "**Create API Key** دبائیں، اسے Red News جیسا کوئی نام دیں۔",
+              "کلید کاپی کریں — یہ `gsk_` سے شروع ہوتی ہے۔ Groq اسے **صرف ایک بار** دکھاتا ہے، لہٰذا اسے فوراً ایکسٹینشن میں پیسٹ کریں۔"
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: Groq states that it does not retain or train on API prompts and outputs by default. Free-tier request limits are published here: [Groq rate limits](https://console.groq.com/docs/rate-limits)."
+            "text": "جاننا ضروری ہے: Groq کا کہنا ہے کہ وہ بطور ڈیفالٹ API پرامپٹس اور آؤٹ پٹس کو برقرار یا ان پر تربیت نہیں رکھتا۔ مفت ٹیئر کی درخواست کی حدیں یہاں شائع کی گئی ہیں: [Groq rate limits](https://console.groq.com/docs/rate-limits)۔"
           }
         ]
       },
       {
-        "heading": "3. Get a key from OpenRouter",
+        "heading": "3. OpenRouter سے کلید حاصل کریں",
         "blocks": [
           {
             "type": "p",
-            "text": "OpenRouter is a single door to hundreds of models from many vendors: one key, one account, and you switch models from a dropdown instead of signing up everywhere. Some models are free to use; the rest are pay-as-you-go from a prepaid balance. The trade-off is that your request passes through OpenRouter on its way to the model vendor."
+            "text": "OpenRouter بہت سے وینڈرز کے سینکڑوں ماڈلز تک پہنچنے کا ایک ہی دروازہ ہے: ایک کلید، ایک اکاؤنٹ، اور آپ ہر جگہ سائن اپ کرنے کے بجائے ڈراپ ڈاؤن سے ماڈلز تبدیل کرتے ہیں۔ کچھ ماڈلز استعمال کے لیے مفت ہیں؛ باقی پری پیڈ بیلنس سے پے-ایز-یو-گو ہیں۔ اس کے بدلے میں آپ کی درخواست ماڈل وینڈر تک جاتے ہوئے OpenRouter سے گزرتی ہے۔"
           },
           {
             "type": "ol",
             "items": [
-              "Open [openrouter.ai/keys](https://openrouter.ai/keys) and sign in.",
-              "Press **Create key** and copy it — it begins with `sk-or-v1-`.",
-              "Optional but recommended: in your OpenRouter account privacy settings, decide whether requests may be routed to providers that train on your data ([privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging))."
+              "[openrouter.ai/keys](https://openrouter.ai/keys) کھولیں اور سائن ان کریں۔",
+              "**Create key** دبائیں اور اسے کاپی کریں — یہ `sk-or-v1-` سے شروع ہوتی ہے۔",
+              "اختیاری مگر تجویز کردہ: اپنے OpenRouter اکاؤنٹ کی پرائیویسی سیٹنگز میں، یہ فیصلہ کریں کہ آیا درخواستیں ایسے فراہم کنندگان کو بھیجی جا سکتی ہیں جو آپ کے ڈیٹا پر تربیت کرتے ہیں ([privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging))۔"
             ]
           }
         ]
       },
       {
-        "heading": "Which model should I choose?",
+        "heading": "مجھے کون سا ماڈل منتخب کرنا چاہیے؟",
         "blocks": [
           {
             "type": "p",
-            "text": "When you press **Connect**, Red News asks your provider which models your key can use and preselects a sensible one, so you can simply leave the dropdown alone. If you want to change it, the job here is small — a short, grounded explanation of one economic release — so a **small, fast, cheap** model is the right choice. Big \"reasoning\", \"pro\" or \"deep research\" models are slower, cost far more and do not write a better three-paragraph briefing."
+            "text": "جب آپ **Connect** دباتے ہیں، تو Red News آپ کے فراہم کنندہ سے پوچھتا ہے کہ آپ کی کلید کون سے ماڈلز استعمال کر سکتی ہے اور ایک مناسب ماڈل پہلے سے منتخب کر دیتا ہے، تاکہ آپ ڈراپ ڈاؤن کو ایسے ہی چھوڑ سکیں۔ اگر آپ اسے بدلنا چاہیں تو یاد رکھیں کہ یہاں کام چھوٹا ہے — ایک معاشی اعداد و شمار کی مختصر اور حقائق پر مبنی وضاحت — لہٰذا ایک **چھوٹا، تیز اور سستا** ماڈل درست انتخاب ہے۔ بڑے \"ریزننگ\"، \"pro\" یا \"deep research\" ماڈلز سست ہوتے ہیں، کہیں زیادہ خرچ کرتے ہیں اور تین پیراگراف کی بریفنگ کو بہتر نہیں بناتے۔"
           },
           {
             "type": "p",
@@ -808,9 +808,9 @@
           {
             "type": "ul",
             "items": [
-              "`gemini-2.5-flash-lite` — recommended. Fastest and cheapest; ideal for this task. Preselected by the extension.",
-              "`gemini-2.5-flash` — a little slower, slightly richer wording. Good second choice.",
-              "Avoid `…-pro`, and anything with `preview`, `exp`, `thinking`, `deep-research` or `antigravity` in the name: slow, expensive, and preview models can disappear without warning."
+              "`gemini-2.5-flash-lite` — تجویز کردہ۔ سب سے تیز اور سستا؛ اس کام کے لیے مثالی۔ ایکسٹینشن کی طرف سے پہلے سے منتخب۔",
+              "`gemini-2.5-flash` — کچھ سست، تھوڑی زیادہ بہتر زبان۔ ایک اچھا دوسرا انتخاب۔",
+              "`…-pro` سے اور نام میں `preview`، `exp`، `thinking`، `deep-research` یا `antigravity` والی کسی بھی چیز سے گریز کریں: یہ سست، مہنگے ہیں، اور preview ماڈلز بغیر اطلاع کے غائب ہو سکتے ہیں۔"
             ]
           },
           {
@@ -820,9 +820,9 @@
           {
             "type": "ul",
             "items": [
-              "A Llama 3.3 70B model (e.g. `llama-3.3-70b-versatile`) — recommended. Strong general knowledge, answers in a second. Preselected by the extension.",
-              "A smaller Llama 8B model — even faster and with more generous free limits, but noticeably shallower explanations.",
-              "Avoid speech, vision and guard models — they are filtered out of the dropdown anyway."
+              "ایک Llama 3.3 70B ماڈل (مثلاً `llama-3.3-70b-versatile`) — تجویز کردہ۔ مضبوط عمومی معلومات، ایک سیکنڈ میں جواب۔ ایکسٹینشن کی طرف سے پہلے سے منتخب۔",
+              "ایک چھوٹا Llama 8B ماڈل — اور بھی تیز اور زیادہ وسیع مفت حدوں کے ساتھ، مگر واضح طور پر کم گہری وضاحتیں۔",
+              "اسپیچ، ویژن اور گارڈ ماڈلز سے گریز کریں — ویسے بھی وہ ڈراپ ڈاؤن سے فلٹر کر دیے جاتے ہیں۔"
             ]
           },
           {
@@ -832,94 +832,94 @@
           {
             "type": "ul",
             "items": [
-              "Any model whose name ends in `:free` — recommended to start. No balance needed. The extension preselects a free Llama or Gemini variant when one is available.",
-              "A paid small model (a \"flash\", \"mini\" or \"lite\" variant of any vendor) if you top up your balance and want higher limits and steadier availability.",
-              "Avoid flagship and reasoning models — you would pay several times more per explanation for no benefit here."
+              "کوئی بھی ماڈل جس کا نام `:free` پر ختم ہوتا ہے — شروع کرنے کے لیے تجویز کردہ۔ کسی بیلنس کی ضرورت نہیں۔ دستیاب ہونے پر ایکسٹینشن ایک مفت Llama یا Gemini ورژن پہلے سے منتخب کر دیتا ہے۔",
+              "ایک پیڈ چھوٹا ماڈل (کسی بھی وینڈر کا \"flash\"، \"mini\" یا \"lite\" ورژن) اگر آپ اپنا بیلنس بھریں اور زیادہ حدیں اور زیادہ مستحکم دستیابی چاہیں۔",
+              "فلیگ شپ اور ریزننگ ماڈلز سے گریز کریں — آپ ہر وضاحت کے لیے کئی گنا زیادہ ادائیگی کریں گے بغیر یہاں کسی فائدے کے۔"
             ]
           },
           {
             "type": "note",
-            "text": "Free tiers are rate-limited, not unlimited. If you read a lot of releases in one sitting you may see \"Too many requests — try again in a minute.\" Red News keeps each answer for 7 days, so re-opening the same event costs nothing."
+            "text": "مفت ٹیئرز کی شرح محدود ہے، لامحدود نہیں۔ اگر آپ ایک ہی وقت میں بہت سے اعداد و شمار پڑھتے ہیں تو آپ کو \"بہت زیادہ درخواستیں — ایک منٹ میں دوبارہ کوشش کریں۔\" نظر آ سکتا ہے۔ Red News ہر جواب کو 7 دن تک محفوظ رکھتا ہے، لہٰذا وہی ایونٹ دوبارہ کھولنے پر کچھ خرچ نہیں ہوتا۔"
           }
         ]
       },
       {
-        "heading": "Connect it in the extension",
+        "heading": "اسے ایکسٹینشن میں منسلک کریں",
         "blocks": [
           {
             "type": "ol",
             "items": [
-              "Click the Red News icon in Chrome and scroll down to **✨ AI explanations**.",
-              "Pick your **Provider**.",
-              "Paste the key into **API key** (the 👁 button shows or hides what you typed).",
-              "Press **Connect**. Chrome asks for permission to contact that provider’s address — allow it. This is the one-off permission the extension needs to send your requests; if the popup closes while the Chrome prompt is open, just open the extension again and press Connect once more.",
-              "The status turns **Connected ✓** and the **Model** dropdown fills up. Pick another model if you like.",
-              "Open the news list and press **✨** next to any event."
+              "Chrome میں Red News آئیکن پر کلک کریں اور نیچے **✨ AI explanations** تک سکرول کریں۔",
+              "اپنا **Provider** منتخب کریں۔",
+              "کلید کو **API key** میں پیسٹ کریں (👁 بٹن آپ کے لکھے ہوئے کو دکھاتا یا چھپاتا ہے)۔",
+              "**Connect** دبائیں۔ Chrome اس فراہم کنندہ کے پتے سے رابطہ کرنے کی اجازت مانگے گا — اسے اجازت دیں۔ یہ ایک بار کی اجازت ہے جس کی ضرورت ایکسٹینشن کو آپ کی درخواستیں بھیجنے کے لیے ہوتی ہے؛ اگر Chrome کا پرامپٹ کھلے رہتے ہوئے پاپ اَپ بند ہو جائے، تو صرف ایکسٹینشن دوبارہ کھولیں اور Connect دوبارہ دبائیں۔",
+              "اسٹیٹس **Connected ✓** بن جاتا ہے اور **Model** ڈراپ ڈاؤن بھر جاتا ہے۔ اگر چاہیں تو کوئی اور ماڈل منتخب کریں۔",
+              "نیوز لسٹ کھولیں اور کسی بھی ایونٹ کے ساتھ **✨** دبائیں۔"
             ]
           },
           {
             "type": "p",
-            "text": "To disconnect, press **Remove key**. The key is deleted from your browser immediately. Chrome keeps the site permission you granted; you can revoke it in `chrome://extensions` → Red News → Details → Site access, or simply leave it, as nothing is sent without a key."
+            "text": "منسلکی ختم کرنے کے لیے، **Remove key** دبائیں۔ کلید فوراً آپ کے براؤزر سے حذف ہو جاتی ہے۔ Chrome آپ کی دی گئی سائٹ اجازت کو برقرار رکھتا ہے؛ آپ اسے `chrome://extensions` → Red News → Details → Site access میں منسوخ کر سکتے ہیں، یا اسے ایسے ہی چھوڑ سکتے ہیں، کیونکہ کلید کے بغیر کچھ نہیں بھیجا جاتا۔"
           }
         ]
       },
       {
-        "heading": "What is sent, and where",
+        "heading": "کیا بھیجا جاتا ہے، اور کہاں",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**Your key never leaves your browser.** It is stored in the extension’s local storage on this computer only — never synced, never sent to Red News servers.",
-              "**Requests go straight from your browser to the provider you chose.** They do not pass through our backend, and we cannot read the questions or the answers.",
-              "**What the request contains:** the event title, its currency, impact level and scheduled time, its forecast, previous and actual values, up to a handful of earlier prints of the same release, and the language you want the answer in. No account details, no email, no chart data, no browsing history.",
-              "**Your provider’s own privacy policy applies** to what it does with that request — see the notes for each provider above. Our own policy is in the [Privacy Policy](/privacy)."
+              "**آپ کی کلید کبھی آپ کے براؤزر سے باہر نہیں جاتی۔** یہ صرف اس کمپیوٹر پر ایکسٹینشن کے لوکل اسٹوریج میں محفوظ ہوتی ہے — کبھی سینک نہیں ہوتی، کبھی Red News کے سرورز کو نہیں بھیجی جاتی۔",
+              "**درخواستیں براہ راست آپ کے براؤزر سے آپ کے منتخب کردہ فراہم کنندہ تک جاتی ہیں۔** وہ ہمارے بیک اینڈ سے نہیں گزرتیں، اور ہم سوالات یا جوابات نہیں پڑھ سکتے۔",
+              "**درخواست میں کیا شامل ہوتا ہے:** ایونٹ کا عنوان، اس کی کرنسی، اثر کی سطح اور مقررہ وقت، اس کی پیش گوئی، پچھلی اور حقیقی قدریں، اسی اعداد و شمار کی چند پچھلی ریڈنگز، اور وہ زبان جس میں آپ جواب چاہتے ہیں۔ نہ اکاؤنٹ کی تفصیلات، نہ ای میل، نہ چارٹ کا ڈیٹا، نہ براؤزنگ ہسٹری۔",
+              "**آپ کے فراہم کنندہ کی اپنی پرائیویسی پالیسی** اس درخواست کے ساتھ اس کے رویے پر لاگو ہوتی ہے — اوپر ہر فراہم کنندہ کے نوٹس دیکھیں۔ ہماری اپنی پالیسی [پرائیویسی پالیسی](/privacy) میں ہے۔"
             ]
           }
         ]
       },
       {
-        "heading": "What will it cost?",
+        "heading": "اس کی قیمت کیا ہوگی؟",
         "blocks": [
           {
             "type": "p",
-            "text": "One explanation is a very small request — roughly a page of text in, a short paragraph out. On a free tier it costs nothing; on a paid small model it is a fraction of a cent. You pay your AI provider directly, if at all — never through Red News. Your Red News Premium subscription does not include AI usage, and does not charge for it either."
+            "text": "ایک وضاحت ایک بہت چھوٹی درخواست ہے — تقریباً ایک صفحہ متن اندر، اور ایک مختصر پیراگراف باہر۔ مفت ٹیئر پر اس کی کوئی قیمت نہیں؛ ایک پیڈ چھوٹے ماڈل پر یہ ایک سینٹ کا ایک حصہ ہے۔ آپ اپنے AI فراہم کنندہ کو براہ راست ادائیگی کرتے ہیں، اگر کرتے ہیں تو — کبھی Red News کے ذریعے نہیں۔ آپ کی Red News Premium سبسکرپشن میں AI استعمال شامل نہیں ہے، اور یہ اس کے لیے چارج بھی نہیں کرتی۔"
           }
         ]
       },
       {
-        "heading": "If something goes wrong",
+        "heading": "اگر کچھ غلط ہو جائے",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**\"The provider rejected this key.\"** — The key was mistyped, truncated or deleted in the console, or the wrong provider is selected in the dropdown. Create a fresh key and paste it again. For Gemini, also check that the Generative Language API is enabled on the project the key belongs to.",
-              "**\"Too many requests — try again in a minute.\"** — You hit the free-tier rate limit. Wait a minute, switch to a smaller model, or add billing at your provider.",
-              "**\"Could not reach the AI provider.\"** — No connection, or the provider’s API is blocked on your network (corporate proxy, VPN, firewall) or temporarily down.",
-              "**\"Access to the provider was not allowed.\"** — The Chrome permission prompt was dismissed. Press Connect again and allow it.",
-              "**\"This key has no suitable chat models.\"** — The key is restricted, or the account has no model access yet. Check the provider console; on OpenRouter, some models require a topped-up balance.",
-              "**The ✨ buttons are not there.** AI explanations are Premium — sign in and make sure your plan is active, then reopen the extension."
+              "**\"فراہم کنندہ نے یہ کلید مسترد کر دی۔\"** — کلید غلط ٹائپ ہوئی، کٹی ہوئی تھی، یا کنسول سے حذف کر دی گئی، یا ڈراپ ڈاؤن میں غلط فراہم کنندہ منتخب ہے۔ ایک نئی کلید بنائیں اور دوبارہ پیسٹ کریں۔ Gemini کے لیے، یہ بھی چیک کریں کہ جس پروجیکٹ سے کلید تعلق رکھتی ہے اس پر Generative Language API فعال ہے۔",
+              "**\"بہت زیادہ درخواستیں — ایک منٹ میں دوبارہ کوشش کریں۔\"** — آپ مفت ٹیئر کی شرح کی حد تک پہنچ گئے۔ ایک منٹ انتظار کریں، یا چھوٹے ماڈل پر تبدیل ہوں، یا اپنے فراہم کنندہ پر بلنگ شامل کریں۔",
+              "**\"AI فراہم کنندہ تک رسائی نہیں ہو سکی۔\"** — کوئی کنکشن نہیں ہے، یا فراہم کنندہ کا API آپ کے نیٹ ورک پر بلاک ہے (کارپوریٹ پراکسی، VPN، فائر وال) یا عارضی طور پر بند ہے۔",
+              "**\"فراہم کنندہ تک رسائی کی اجازت نہیں دی گئی۔\"** — Chrome کے اجازت پرامپٹ کو مسترد کر دیا گیا۔ دوبارہ Connect دبائیں اور اجازت دیں۔",
+              "**\"اس کلید کے پاس موزوں چیٹ ماڈلز نہیں ہیں۔\"** — کلید محدود ہے، یا اکاؤنٹ کو ابھی تک کسی ماڈل تک رسائی نہیں ہے۔ فراہم کنندہ کا کنسول چیک کریں؛ OpenRouter پر، کچھ ماڈلز کو بھرے ہوئے بیلنس کی ضرورت ہوتی ہے۔",
+              "**✨ بٹن موجود نہیں ہیں۔** AI وضاحتیں Premium ہیں — سائن ان کریں اور یقینی بنائیں کہ آپ کا پلان فعال ہے، پھر ایکسٹینشن دوبارہ کھولیں۔"
             ]
           }
         ]
       },
       {
-        "heading": "Limits worth knowing",
+        "heading": "جاننے کے قابل حدیں",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The AI only sees the calendar data we hand it, and it is instructed never to invent figures. It still can be wrong about general context, like any language model. Always check the numbers on the chart.",
-              "**It will not tell you what to trade.** The extension explicitly asks the model for explanation only — no entries, exits, targets or position sizes. Red News does not provide financial, investment or trading advice."
+              "AI صرف وہ کیلنڈر ڈیٹا دیکھتا ہے جو ہم اسے دیتے ہیں، اور اسے ہدایت دی گئی ہے کہ وہ کبھی اعداد نہ بنائے۔ پھر بھی یہ عمومی سیاق و سباق کے بارے میں غلط ہو سکتا ہے، جیسا کہ کوئی بھی زبان ماڈل۔ چارٹ پر موجود اعداد ہمیشہ خود چیک کریں۔",
+              "**یہ آپ کو نہیں بتائے گا کہ کیا ٹریڈ کریں۔** ایکسٹینشن واضح طور پر ماڈل سے صرف وضاحت طلب کرتی ہے — نہ انٹریز، نہ ایگزٹس، نہ ٹارگٹس، نہ پوزیشن سائز۔ Red News کوئی مالیاتی، سرمایہ کاری یا ٹریڈنگ مشورہ فراہم نہیں کرتا۔"
             ]
           }
         ]
       },
       {
-        "heading": "Still stuck?",
+        "heading": "پھر بھی مسئلہ حل نہیں ہوا؟",
         "blocks": [
           {
             "type": "p",
-            "text": "Write to [support@rednews.app](mailto:support@rednews.app) or reach us on [Discord](https://discord.com/users/1172891214580830322) — tell us which provider you used and what the extension showed, and we will sort it out."
+            "text": "[support@rednews.app](mailto:support@rednews.app) پر لکھیں یا ہم سے [Discord](https://discord.com/users/1172891214580830322) پر رابطہ کریں — ہمیں بتائیں کہ آپ نے کون سا فراہم کنندہ استعمال کیا اور ایکسٹینشن نے کیا دکھایا، اور ہم اسے حل کر دیں گے۔"
           }
         ]
       }

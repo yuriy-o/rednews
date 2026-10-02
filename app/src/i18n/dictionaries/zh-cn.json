@@ -36,8 +36,8 @@
       "title": "欢迎加入俱乐部"
     },
     "ai": {
-      "title": "Connect your own AI",
-      "description": "How to get a free API key from Google Gemini, Groq or OpenRouter and connect it to the Red News extension for AI explanations of economic releases."
+      "title": "连接您自己的AI",
+      "description": "了解如何从 Google Gemini、Groq 或 OpenRouter 获取免费 API 密钥，并将其连接到 Red News 扩展程序，以获得经济数据发布的 AI 讲解。"
     }
   },
   "nav": {
@@ -706,100 +706,100 @@
     "secondary": "查看本周日历"
   },
   "ai": {
-    "title": "Connect your own AI",
-    "updated": "Last updated: 2 October 2026",
-    "intro": "Red News can explain any economic release in plain language, in your own interface language. Open the extension, find an event in the list and press the ✨ button next to it. You get a short briefing: what the indicator measures, what the forecast and the previous prints were, and what a higher or lower than expected result usually means for that currency.",
+    "title": "连接您自己的AI",
+    "updated": "最后更新：2026年10月2日",
+    "intro": "Red News 可以用您的界面语言，以通俗易懂的方式讲解任何经济数据发布。打开扩展程序，在列表中找到相应事件，点击旁边的 ✨ 按钮。您将获得一段简短的说明：该指标衡量的是什么、预测值和前值分别是多少，以及高于或低于预期的结果通常对该货币意味着什么。",
     "sections": [
       {
-        "heading": "How it works",
+        "heading": "工作原理",
         "blocks": [
           {
             "type": "p",
-            "text": "The explanation is written by an AI provider that **you** choose and connect with your own **API key**. Red News never sees your key and never sees the answers — your browser talks to the provider directly. Today you can connect **Google Gemini**, **Groq** or **OpenRouter**, and all three have a free tier that is more than enough for reading a few releases a day."
+            "text": "解读内容由**您**自行选择并通过您自己的**API 密钥**连接的 AI 提供商生成。Red News 永远不会看到您的密钥，也永远不会看到回答内容——您的浏览器会直接与该提供商通信。目前您可以连接 **Google Gemini**、**Groq** 或 **OpenRouter**，这三家都提供免费额度，足以满足每天阅读几条数据发布的需求。"
           },
           {
             "type": "note",
-            "text": "An API key is not a ChatGPT or Gemini subscription. A paid chatbot plan (ChatGPT Plus, Gemini Advanced, Claude Pro…) only unlocks the chat website or app — it gives you nothing to paste here. An API key is a separate, free-to-create string of characters, taken from the provider’s developer console, that lets your own software send requests. It looks something like `AIza…`, `gsk_…` or `sk-or-v1-…`."
+            "text": "API 密钥并不是 ChatGPT 或 Gemini 的订阅服务。付费聊天机器人套餐（ChatGPT Plus、Gemini Advanced、Claude Pro 等）只能解锁聊天网站或应用程序，并不能提供可粘贴到此处的内容。API 密钥是另一种可以免费创建的字符串，从提供商的开发者控制台获取，用于让您自己的软件发送请求。它的样子大致是 `AIza…`、`gsk_…` 或 `sk-or-v1-…`。"
           }
         ]
       },
       {
-        "heading": "What you need",
+        "heading": "您需要准备什么",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The Red News extension, signed in with **Premium** (or an active trial) — AI explanations are a Premium feature.",
-              "A free account with one of the three providers below, and an API key created in its console."
+              "已使用 **Premium**（或有效试用）登录的 Red News 扩展程序——AI 解读是 Premium 功能。",
+              "下列三家提供商之一的免费账户，以及在其控制台中创建的 API 密钥。"
             ]
           }
         ]
       },
       {
-        "heading": "1. Get a key from Google Gemini",
+        "heading": "1. 从 Google Gemini 获取密钥",
         "blocks": [
           {
             "type": "p",
-            "text": "The easiest start: no card required, and Google’s fast \"Flash\" models answer in a second or two."
+            "text": "最简单的入门方式：无需绑定银行卡，Google 速度飞快的\"Flash\"模型能在一两秒内给出回答。"
           },
           {
             "type": "ol",
             "items": [
-              "Open [aistudio.google.com/apikey](https://aistudio.google.com/apikey) and sign in with a Google account.",
-              "Press **Create API key** and pick (or let Google create) a project.",
-              "Copy the key — it begins with `AIza`. You can always come back to this page to copy it again."
+              "打开 [aistudio.google.com/apikey](https://aistudio.google.com/apikey) 并使用 Google 账户登录。",
+              "点击 **Create API key**，选择一个项目（或让 Google 自动创建）。",
+              "复制密钥——以 `AIza` 开头。您可以随时返回此页面再次复制。"
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: on Google’s **free** tier, your prompts and the answers may be used by Google to improve its products and may be reviewed by humans. On the paid tier they are not. If that matters to you, use Groq, or add billing to the Google project. Current limits and prices: [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)."
+            "text": "需要了解的是：在 Google 的**免费**额度下，您的提问和回答内容可能会被 Google 用于改进其产品，也可能由人工审核。付费额度下则不会。如果您对此有顾虑，可以使用 Groq，或为 Google 项目添加账单信息。当前的限额和价格请参阅：[Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)。"
           }
         ]
       },
       {
-        "heading": "2. Get a key from Groq",
+        "heading": "2. 从 Groq 获取密钥",
         "blocks": [
           {
             "type": "p",
-            "text": "**Groq is not Grok.** Groq (spelled with a q) is an inference company that runs open models such as Llama extremely fast; Grok (spelled with a k) is xAI’s chatbot and is not supported here."
+            "text": "**Groq 不是 Grok。** Groq（拼写中有字母 q）是一家推理服务公司，能以极快的速度运行 Llama 等开源模型；Grok（拼写中有字母 k）是 xAI 的聊天机器人，本扩展程序不支持它。"
           },
           {
             "type": "ol",
             "items": [
-              "Open [console.groq.com/keys](https://console.groq.com/keys) and sign in (Google, GitHub or email).",
-              "Press **Create API Key**, give it a name such as Red News.",
-              "Copy the key — it begins with `gsk_`. Groq shows it **only once**, so paste it into the extension straight away."
+              "打开 [console.groq.com/keys](https://console.groq.com/keys) 并登录（可使用 Google、GitHub 或邮箱）。",
+              "点击 **Create API Key**，为其命名，例如 Red News。",
+              "复制密钥——以 `gsk_` 开头。Groq **只会显示一次**该密钥，因此请立即将其粘贴到扩展程序中。"
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: Groq states that it does not retain or train on API prompts and outputs by default. Free-tier request limits are published here: [Groq rate limits](https://console.groq.com/docs/rate-limits)."
+            "text": "需要了解的是：Groq 表示，默认情况下它不会保留 API 的输入和输出内容，也不会用其进行训练。免费额度的请求限制公布于此：[Groq rate limits](https://console.groq.com/docs/rate-limits)。"
           }
         ]
       },
       {
-        "heading": "3. Get a key from OpenRouter",
+        "heading": "3. 从 OpenRouter 获取密钥",
         "blocks": [
           {
             "type": "p",
-            "text": "OpenRouter is a single door to hundreds of models from many vendors: one key, one account, and you switch models from a dropdown instead of signing up everywhere. Some models are free to use; the rest are pay-as-you-go from a prepaid balance. The trade-off is that your request passes through OpenRouter on its way to the model vendor."
+            "text": "OpenRouter 相当于通向众多厂商数百种模型的单一入口：只需一个密钥、一个账户，您就可以从下拉菜单中切换模型，而不必在每家平台分别注册。部分模型可以免费使用，其余则按预付余额按量计费。代价是您的请求在到达模型厂商之前会先经过 OpenRouter。"
           },
           {
             "type": "ol",
             "items": [
-              "Open [openrouter.ai/keys](https://openrouter.ai/keys) and sign in.",
-              "Press **Create key** and copy it — it begins with `sk-or-v1-`.",
-              "Optional but recommended: in your OpenRouter account privacy settings, decide whether requests may be routed to providers that train on your data ([privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging))."
+              "打开 [openrouter.ai/keys](https://openrouter.ai/keys) 并登录。",
+              "点击 **Create key** 并复制密钥——以 `sk-or-v1-` 开头。",
+              "可选但推荐：在您的 OpenRouter 账户隐私设置中，决定是否允许请求被路由到会用您的数据进行训练的提供商（[privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging)）。"
             ]
           }
         ]
       },
       {
-        "heading": "Which model should I choose?",
+        "heading": "该选择哪种模型？",
         "blocks": [
           {
             "type": "p",
-            "text": "When you press **Connect**, Red News asks your provider which models your key can use and preselects a sensible one, so you can simply leave the dropdown alone. If you want to change it, the job here is small — a short, grounded explanation of one economic release — so a **small, fast, cheap** model is the right choice. Big \"reasoning\", \"pro\" or \"deep research\" models are slower, cost far more and do not write a better three-paragraph briefing."
+            "text": "当您点击 **Connect** 时，Red News 会询问您的提供商该密钥可以使用哪些模型，并自动预先选择一个合适的模型，因此您完全可以不去动这个下拉菜单。如果您想自行更改，请注意这里要完成的任务很简单——只是对一条经济数据发布做出简短且有依据的解读——因此**小型、快速、低成本**的模型才是正确的选择。而\"推理（reasoning）\"、\"pro\" 或 \"deep research\" 等大型模型速度更慢、成本高得多，也并不能把一段三段式简报写得更好。"
           },
           {
             "type": "p",
@@ -808,9 +808,9 @@
           {
             "type": "ul",
             "items": [
-              "`gemini-2.5-flash-lite` — recommended. Fastest and cheapest; ideal for this task. Preselected by the extension.",
-              "`gemini-2.5-flash` — a little slower, slightly richer wording. Good second choice.",
-              "Avoid `…-pro`, and anything with `preview`, `exp`, `thinking`, `deep-research` or `antigravity` in the name: slow, expensive, and preview models can disappear without warning."
+              "`gemini-2.5-flash-lite`——推荐。速度最快、成本最低，非常适合此任务。扩展程序会默认预先选中它。",
+              "`gemini-2.5-flash`——稍慢一些，措辞略微更丰富。是不错的第二选择。",
+              "请避免使用 `…-pro`，以及名称中包含 `preview`、`exp`、`thinking`、`deep-research` 或 `antigravity` 的模型：它们速度慢、成本高，而且预览版模型可能毫无预警地被下线。"
             ]
           },
           {
@@ -820,9 +820,9 @@
           {
             "type": "ul",
             "items": [
-              "A Llama 3.3 70B model (e.g. `llama-3.3-70b-versatile`) — recommended. Strong general knowledge, answers in a second. Preselected by the extension.",
-              "A smaller Llama 8B model — even faster and with more generous free limits, but noticeably shallower explanations.",
-              "Avoid speech, vision and guard models — they are filtered out of the dropdown anyway."
+              "Llama 3.3 70B 模型（例如 `llama-3.3-70b-versatile`）——推荐。通用知识扎实，一秒内即可回答。扩展程序会默认预先选中它。",
+              "更小的 Llama 8B 模型——速度更快，免费额度也更宽松，但解读内容明显更浅。",
+              "请避免语音、视觉和安全防护（guard）模型——它们本来就会被从下拉菜单中过滤掉。"
             ]
           },
           {
@@ -832,94 +832,94 @@
           {
             "type": "ul",
             "items": [
-              "Any model whose name ends in `:free` — recommended to start. No balance needed. The extension preselects a free Llama or Gemini variant when one is available.",
-              "A paid small model (a \"flash\", \"mini\" or \"lite\" variant of any vendor) if you top up your balance and want higher limits and steadier availability.",
-              "Avoid flagship and reasoning models — you would pay several times more per explanation for no benefit here."
+              "名称以 `:free` 结尾的任何模型——建议作为起点使用。无需任何余额。如果有可用的免费 Llama 或 Gemini 变体，扩展程序会自动预先选中。",
+              "如果您为账户充值并希望获得更高的限额和更稳定的可用性，可以选择付费的小型模型（任意厂商的\"flash\"、\"mini\"或\"lite\"变体）。",
+              "请避免旗舰模型和推理模型——在这里使用它们并无任何好处，却要为每条解读多付好几倍的费用。"
             ]
           },
           {
             "type": "note",
-            "text": "Free tiers are rate-limited, not unlimited. If you read a lot of releases in one sitting you may see \"Too many requests — try again in a minute.\" Red News keeps each answer for 7 days, so re-opening the same event costs nothing."
+            "text": "免费额度是有速率限制的，并非无限使用。如果您在短时间内阅读大量数据发布，可能会看到\"请求过多——请在一分钟后重试。\"的提示。Red News 会将每条回答保留 7 天，因此重新打开同一事件不会产生任何费用。"
           }
         ]
       },
       {
-        "heading": "Connect it in the extension",
+        "heading": "在扩展程序中完成连接",
         "blocks": [
           {
             "type": "ol",
             "items": [
-              "Click the Red News icon in Chrome and scroll down to **✨ AI explanations**.",
-              "Pick your **Provider**.",
-              "Paste the key into **API key** (the 👁 button shows or hides what you typed).",
-              "Press **Connect**. Chrome asks for permission to contact that provider’s address — allow it. This is the one-off permission the extension needs to send your requests; if the popup closes while the Chrome prompt is open, just open the extension again and press Connect once more.",
-              "The status turns **Connected ✓** and the **Model** dropdown fills up. Pick another model if you like.",
-              "Open the news list and press **✨** next to any event."
+              "在 Chrome 中点击 Red News 图标，向下滚动到 **✨ AI explanations**。",
+              "选择您的 **Provider**。",
+              "将密钥粘贴到 **API key** 中（👁 按钮可以显示或隐藏您输入的内容）。",
+              "点击 **Connect**。Chrome 会请求访问该提供商地址的权限——请允许。这是扩展程序发送请求所需的一次性权限；如果在 Chrome 的提示窗口打开时弹出窗口关闭了，只需重新打开扩展程序，再次点击 Connect 即可。",
+              "状态会变为 **Connected ✓**，**Model** 下拉菜单也会填充相应选项。如果您愿意，可以选择其他模型。",
+              "打开新闻列表，点击任意事件旁边的 **✨**。"
             ]
           },
           {
             "type": "p",
-            "text": "To disconnect, press **Remove key**. The key is deleted from your browser immediately. Chrome keeps the site permission you granted; you can revoke it in `chrome://extensions` → Red News → Details → Site access, or simply leave it, as nothing is sent without a key."
+            "text": "要断开连接，请点击 **Remove key**。密钥会立即从您的浏览器中删除。Chrome 会保留您此前授予的网站权限；您可以在 `chrome://extensions` → Red News → Details → Site access 中撤销该权限，也可以不做任何处理，因为没有密钥就不会发送任何内容。"
           }
         ]
       },
       {
-        "heading": "What is sent, and where",
+        "heading": "发送的内容及发送目的地",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**Your key never leaves your browser.** It is stored in the extension’s local storage on this computer only — never synced, never sent to Red News servers.",
-              "**Requests go straight from your browser to the provider you chose.** They do not pass through our backend, and we cannot read the questions or the answers.",
-              "**What the request contains:** the event title, its currency, impact level and scheduled time, its forecast, previous and actual values, up to a handful of earlier prints of the same release, and the language you want the answer in. No account details, no email, no chart data, no browsing history.",
-              "**Your provider’s own privacy policy applies** to what it does with that request — see the notes for each provider above. Our own policy is in the [Privacy Policy](/privacy)."
+              "**您的密钥永远不会离开您的浏览器。** 它仅存储在此计算机上扩展程序的本地存储中——不会同步，也不会发送到 Red News 的服务器。",
+              "**请求会直接从您的浏览器发送到您所选择的提供商。** 它们不会经过我们的后端，我们也无法读取其中的问题或回答内容。",
+              "**请求中包含的内容：** 事件标题、其货币、重要程度及预定时间，预测值、前值和实际值，同一数据发布的最近几次历史数值，以及您希望使用的回答语言。不包含账户信息、电子邮箱、图表数据或浏览历史。",
+              "该请求的处理方式**适用您所使用提供商自身的隐私政策**——请参阅上文各提供商的相关说明。我们自己的政策见[隐私政策](/privacy)。"
             ]
           }
         ]
       },
       {
-        "heading": "What will it cost?",
+        "heading": "会产生多少费用？",
         "blocks": [
           {
             "type": "p",
-            "text": "One explanation is a very small request — roughly a page of text in, a short paragraph out. On a free tier it costs nothing; on a paid small model it is a fraction of a cent. You pay your AI provider directly, if at all — never through Red News. Your Red News Premium subscription does not include AI usage, and does not charge for it either."
+            "text": "一次解读只是一个非常小的请求——输入大约相当于一页文字，输出则是一小段文字。在免费额度下不会产生任何费用；使用付费小型模型时，费用也只是几分钱的一小部分。如果产生费用，您将直接向您的 AI 提供商支付——绝不会通过 Red News 收取。您的 Red News Premium 订阅不包含 AI 使用额度，也不会就此额外收费。"
           }
         ]
       },
       {
-        "heading": "If something goes wrong",
+        "heading": "遇到问题时",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**\"The provider rejected this key.\"** — The key was mistyped, truncated or deleted in the console, or the wrong provider is selected in the dropdown. Create a fresh key and paste it again. For Gemini, also check that the Generative Language API is enabled on the project the key belongs to.",
-              "**\"Too many requests — try again in a minute.\"** — You hit the free-tier rate limit. Wait a minute, switch to a smaller model, or add billing at your provider.",
-              "**\"Could not reach the AI provider.\"** — No connection, or the provider’s API is blocked on your network (corporate proxy, VPN, firewall) or temporarily down.",
-              "**\"Access to the provider was not allowed.\"** — The Chrome permission prompt was dismissed. Press Connect again and allow it.",
-              "**\"This key has no suitable chat models.\"** — The key is restricted, or the account has no model access yet. Check the provider console; on OpenRouter, some models require a topped-up balance.",
-              "**The ✨ buttons are not there.** AI explanations are Premium — sign in and make sure your plan is active, then reopen the extension."
+              "**\"提供商拒绝了此密钥。\"**——密钥输入有误、被截断，或已在控制台中被删除，也可能是下拉菜单中选择了错误的提供商。请创建一个新密钥并重新粘贴。使用 Gemini 时，还请检查该密钥所属项目是否已启用 Generative Language API。",
+              "**\"请求过多——请在一分钟后重试。\"**——您已达到免费额度的速率限制。请等待一分钟，切换到更小的模型，或在您的提供商处添加账单信息。",
+              "**\"无法连接到 AI 提供商。\"**——没有网络连接，或该提供商的 API 在您的网络中被屏蔽（企业代理、VPN、防火墙等），也可能是服务暂时中断。",
+              "**\"未获得访问提供商的权限。\"**——Chrome 的权限提示被关闭了。请再次点击 Connect 并允许该权限。",
+              "**\"此密钥没有合适的聊天模型。\"**——密钥受到限制，或该账户尚未获得模型访问权限。请检查提供商的控制台；在 OpenRouter 上，部分模型需要账户余额充值后才能使用。",
+              "**找不到 ✨ 按钮。** AI 解读是 Premium 功能——请登录并确认您的订阅计划处于有效状态，然后重新打开扩展程序。"
             ]
           }
         ]
       },
       {
-        "heading": "Limits worth knowing",
+        "heading": "需要了解的限制",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The AI only sees the calendar data we hand it, and it is instructed never to invent figures. It still can be wrong about general context, like any language model. Always check the numbers on the chart.",
-              "**It will not tell you what to trade.** The extension explicitly asks the model for explanation only — no entries, exits, targets or position sizes. Red News does not provide financial, investment or trading advice."
+              "AI 只会看到我们提供给它的日历数据，并被要求绝不杜撰数字。但与任何语言模型一样，它在一般性背景信息上仍可能出错。请始终以图表上的数值为准进行核实。",
+              "**它不会告诉您该如何交易。** 扩展程序明确要求模型只提供解读——不涉及进场点、离场点、目标价位或仓位大小。Red News 不提供任何金融、投资或交易建议。"
             ]
           }
         ]
       },
       {
-        "heading": "Still stuck?",
+        "heading": "仍未解决问题？",
         "blocks": [
           {
             "type": "p",
-            "text": "Write to [support@rednews.app](mailto:support@rednews.app) or reach us on [Discord](https://discord.com/users/1172891214580830322) — tell us which provider you used and what the extension showed, and we will sort it out."
+            "text": "请发邮件至 [support@rednews.app](mailto:support@rednews.app)，或通过 [Discord](https://discord.com/users/1172891214580830322) 联系我们——告诉我们您使用的提供商以及扩展程序显示的内容，我们会帮您解决问题。"
           }
         ]
       }

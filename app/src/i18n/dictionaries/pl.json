@@ -36,8 +36,8 @@
       "title": "Witamy w klubie"
     },
     "ai": {
-      "title": "Connect your own AI",
-      "description": "How to get a free API key from Google Gemini, Groq or OpenRouter and connect it to the Red News extension for AI explanations of economic releases."
+      "title": "Podłącz własne AI",
+      "description": "Jak uzyskać bezpłatny klucz API od Google Gemini, Groq lub OpenRouter i połączyć go z rozszerzeniem Red News, aby otrzymywać wyjaśnienia danych ekonomicznych generowane przez AI."
     }
   },
   "nav": {
@@ -706,100 +706,100 @@
     "secondary": "Zobacz kalendarz na ten tydzień"
   },
   "ai": {
-    "title": "Connect your own AI",
-    "updated": "Last updated: 2 October 2026",
-    "intro": "Red News can explain any economic release in plain language, in your own interface language. Open the extension, find an event in the list and press the ✨ button next to it. You get a short briefing: what the indicator measures, what the forecast and the previous prints were, and what a higher or lower than expected result usually means for that currency.",
+    "title": "Podłącz własne AI",
+    "updated": "Ostatnia aktualizacja: 2 października 2026",
+    "intro": "Red News może wyjaśnić każdą publikację danych ekonomicznych prostym językiem, w Twoim własnym języku interfejsu. Otwórz rozszerzenie, znajdź wydarzenie na liście i naciśnij przycisk ✨ znajdujący się przy nim. Otrzymasz krótkie podsumowanie: co mierzy dany wskaźnik, jakie były prognoza i poprzedni odczyt, oraz co zazwyczaj oznacza wynik wyższy lub niższy od oczekiwanego dla danej waluty.",
     "sections": [
       {
-        "heading": "How it works",
+        "heading": "Jak to działa",
         "blocks": [
           {
             "type": "p",
-            "text": "The explanation is written by an AI provider that **you** choose and connect with your own **API key**. Red News never sees your key and never sees the answers — your browser talks to the provider directly. Today you can connect **Google Gemini**, **Groq** or **OpenRouter**, and all three have a free tier that is more than enough for reading a few releases a day."
+            "text": "Wyjaśnienie jest tworzone przez dostawcę AI, którego wybierasz **Ty** i łączysz za pomocą własnego **klucza API**. Red News nigdy nie widzi Twojego klucza i nigdy nie widzi odpowiedzi — Twoja przeglądarka komunikuje się z dostawcą bezpośrednio. Obecnie możesz połączyć **Google Gemini**, **Groq** lub **OpenRouter** — wszystkie trzy mają bezpłatny plan, który w pełni wystarcza do odczytywania kilku publikacji dziennie."
           },
           {
             "type": "note",
-            "text": "An API key is not a ChatGPT or Gemini subscription. A paid chatbot plan (ChatGPT Plus, Gemini Advanced, Claude Pro…) only unlocks the chat website or app — it gives you nothing to paste here. An API key is a separate, free-to-create string of characters, taken from the provider’s developer console, that lets your own software send requests. It looks something like `AIza…`, `gsk_…` or `sk-or-v1-…`."
+            "text": "Klucz API to nie to samo co subskrypcja ChatGPT lub Gemini. Płatny plan czatbota (ChatGPT Plus, Gemini Advanced, Claude Pro…) odblokowuje tylko witrynę lub aplikację czatu — nie daje Ci niczego, co można tu wkleić. Klucz API to odrębny, bezpłatny do wygenerowania ciąg znaków, pobrany z konsoli dewelopera dostawcy, który pozwala Twojemu oprogramowaniu wysyłać zapytania. Wygląda to podobnie do `AIza…`, `gsk_…` lub `sk-or-v1-…`."
           }
         ]
       },
       {
-        "heading": "What you need",
+        "heading": "Czego potrzebujesz",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The Red News extension, signed in with **Premium** (or an active trial) — AI explanations are a Premium feature.",
-              "A free account with one of the three providers below, and an API key created in its console."
+              "Rozszerzenia Red News z zalogowanym kontem **Premium** (lub aktywnym okresem próbnym) — wyjaśnienia AI są funkcją Premium.",
+              "Bezpłatnego konta u jednego z trzech dostawców poniżej oraz klucza API wygenerowanego w jego konsoli."
             ]
           }
         ]
       },
       {
-        "heading": "1. Get a key from Google Gemini",
+        "heading": "1. Uzyskaj klucz od Google Gemini",
         "blocks": [
           {
             "type": "p",
-            "text": "The easiest start: no card required, and Google’s fast \"Flash\" models answer in a second or two."
+            "text": "Najłatwiejszy start: nie wymaga podania karty, a szybkie modele Google „Flash” odpowiadają w jedną lub dwie sekundy."
           },
           {
             "type": "ol",
             "items": [
-              "Open [aistudio.google.com/apikey](https://aistudio.google.com/apikey) and sign in with a Google account.",
-              "Press **Create API key** and pick (or let Google create) a project.",
-              "Copy the key — it begins with `AIza`. You can always come back to this page to copy it again."
+              "Otwórz [aistudio.google.com/apikey](https://aistudio.google.com/apikey) i zaloguj się kontem Google.",
+              "Naciśnij **Utwórz klucz API** i wybierz projekt (lub pozwól Google go utworzyć).",
+              "Skopiuj klucz — zaczyna się od `AIza`. Możesz zawsze wrócić do tej strony, aby skopiować go ponownie."
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: on Google’s **free** tier, your prompts and the answers may be used by Google to improve its products and may be reviewed by humans. On the paid tier they are not. If that matters to you, use Groq, or add billing to the Google project. Current limits and prices: [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)."
+            "text": "Warto wiedzieć: w **bezpłatnym** planie Google Twoje zapytania i odpowiedzi mogą być wykorzystywane przez Google do ulepszania swoich produktów i mogą być przeglądane przez ludzi. W płatnym planie tak się nie dzieje. Jeśli to dla Ciebie istotne, użyj Groq lub dodaj rozliczenia do projektu Google. Aktualne limity i ceny: [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)."
           }
         ]
       },
       {
-        "heading": "2. Get a key from Groq",
+        "heading": "2. Uzyskaj klucz od Groq",
         "blocks": [
           {
             "type": "p",
-            "text": "**Groq is not Grok.** Groq (spelled with a q) is an inference company that runs open models such as Llama extremely fast; Grok (spelled with a k) is xAI’s chatbot and is not supported here."
+            "text": "**Groq to nie Grok.** Groq (przez „q”) to firma zajmująca się inferencją, która błyskawicznie uruchamia otwarte modele, takie jak Llama; Grok (przez „k”) to czatbot xAI i nie jest tutaj obsługiwany."
           },
           {
             "type": "ol",
             "items": [
-              "Open [console.groq.com/keys](https://console.groq.com/keys) and sign in (Google, GitHub or email).",
-              "Press **Create API Key**, give it a name such as Red News.",
-              "Copy the key — it begins with `gsk_`. Groq shows it **only once**, so paste it into the extension straight away."
+              "Otwórz [console.groq.com/keys](https://console.groq.com/keys) i zaloguj się (Google, GitHub lub e-mail).",
+              "Naciśnij **Utwórz klucz API**, nadaj mu nazwę, np. Red News.",
+              "Skopiuj klucz — zaczyna się od `gsk_`. Groq wyświetla go **tylko raz**, więc wklej go do rozszerzenia od razu."
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: Groq states that it does not retain or train on API prompts and outputs by default. Free-tier request limits are published here: [Groq rate limits](https://console.groq.com/docs/rate-limits)."
+            "text": "Warto wiedzieć: Groq deklaruje, że domyślnie nie zachowuje zapytań i odpowiedzi API ani nie wykorzystuje ich do trenowania modeli. Limity zapytań w bezpłatnym planie są opublikowane tutaj: [Groq rate limits](https://console.groq.com/docs/rate-limits)."
           }
         ]
       },
       {
-        "heading": "3. Get a key from OpenRouter",
+        "heading": "3. Uzyskaj klucz od OpenRouter",
         "blocks": [
           {
             "type": "p",
-            "text": "OpenRouter is a single door to hundreds of models from many vendors: one key, one account, and you switch models from a dropdown instead of signing up everywhere. Some models are free to use; the rest are pay-as-you-go from a prepaid balance. The trade-off is that your request passes through OpenRouter on its way to the model vendor."
+            "text": "OpenRouter to jedno wejście do setek modeli od wielu dostawców: jeden klucz, jedno konto, a modele zmieniasz z listy rozwijanej, zamiast rejestrować się wszędzie z osobna. Niektóre modele są bezpłatne; pozostałe rozliczane są na bieżąco z przedpłaconego salda. Cena tej wygody to fakt, że Twoje zapytanie przechodzi przez OpenRouter w drodze do dostawcy modelu."
           },
           {
             "type": "ol",
             "items": [
-              "Open [openrouter.ai/keys](https://openrouter.ai/keys) and sign in.",
-              "Press **Create key** and copy it — it begins with `sk-or-v1-`.",
-              "Optional but recommended: in your OpenRouter account privacy settings, decide whether requests may be routed to providers that train on your data ([privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging))."
+              "Otwórz [openrouter.ai/keys](https://openrouter.ai/keys) i zaloguj się.",
+              "Naciśnij **Utwórz klucz** i skopiuj go — zaczyna się od `sk-or-v1-`.",
+              "Opcjonalnie, ale zalecane: w ustawieniach prywatności konta OpenRouter zdecyduj, czy zapytania mogą być kierowane do dostawców, którzy trenują modele na Twoich danych ([privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging))."
             ]
           }
         ]
       },
       {
-        "heading": "Which model should I choose?",
+        "heading": "Który model wybrać?",
         "blocks": [
           {
             "type": "p",
-            "text": "When you press **Connect**, Red News asks your provider which models your key can use and preselects a sensible one, so you can simply leave the dropdown alone. If you want to change it, the job here is small — a short, grounded explanation of one economic release — so a **small, fast, cheap** model is the right choice. Big \"reasoning\", \"pro\" or \"deep research\" models are slower, cost far more and do not write a better three-paragraph briefing."
+            "text": "Po naciśnięciu **Połącz** Red News pyta Twojego dostawcę, jakie modele może wykorzystać Twój klucz, i wybiera z góry sensowny model, więc możesz po prostu nie dotykać listy rozwijanej. Jeśli chcesz to zmienić — zadanie jest tu niewielkie: krótkie, oparte na faktach wyjaśnienie jednej publikacji ekonomicznej — więc właściwym wyborem jest model **mały, szybki i tani**. Duże modele typu „reasoning”, „pro” czy „deep research” są wolniejsze, kosztują znacznie więcej i nie napiszą lepszego trzyparagrafowego podsumowania."
           },
           {
             "type": "p",
@@ -808,9 +808,9 @@
           {
             "type": "ul",
             "items": [
-              "`gemini-2.5-flash-lite` — recommended. Fastest and cheapest; ideal for this task. Preselected by the extension.",
-              "`gemini-2.5-flash` — a little slower, slightly richer wording. Good second choice.",
-              "Avoid `…-pro`, and anything with `preview`, `exp`, `thinking`, `deep-research` or `antigravity` in the name: slow, expensive, and preview models can disappear without warning."
+              "`gemini-2.5-flash-lite` — zalecany. Najszybszy i najtańszy; idealny do tego zadania. Wybierany domyślnie przez rozszerzenie.",
+              "`gemini-2.5-flash` — nieco wolniejszy, z trochę bogatszym językiem. Dobra druga opcja.",
+              "Unikaj `…-pro` oraz wszystkiego z `preview`, `exp`, `thinking`, `deep-research` lub `antigravity` w nazwie: są wolne, drogie, a modele preview mogą zniknąć bez ostrzeżenia."
             ]
           },
           {
@@ -820,9 +820,9 @@
           {
             "type": "ul",
             "items": [
-              "A Llama 3.3 70B model (e.g. `llama-3.3-70b-versatile`) — recommended. Strong general knowledge, answers in a second. Preselected by the extension.",
-              "A smaller Llama 8B model — even faster and with more generous free limits, but noticeably shallower explanations.",
-              "Avoid speech, vision and guard models — they are filtered out of the dropdown anyway."
+              "Model Llama 3.3 70B (np. `llama-3.3-70b-versatile`) — zalecany. Szeroka wiedza ogólna, odpowiedź w ciągu sekundy. Wybierany domyślnie przez rozszerzenie.",
+              "Mniejszy model Llama 8B — jeszcze szybszy i z bardziej hojnymi bezpłatnymi limitami, ale zauważalnie powierzchowniejsze wyjaśnienia.",
+              "Unikaj modeli mowy, wizji i „guard” — i tak są odfiltrowane z listy rozwijanej."
             ]
           },
           {
@@ -832,94 +832,94 @@
           {
             "type": "ul",
             "items": [
-              "Any model whose name ends in `:free` — recommended to start. No balance needed. The extension preselects a free Llama or Gemini variant when one is available.",
-              "A paid small model (a \"flash\", \"mini\" or \"lite\" variant of any vendor) if you top up your balance and want higher limits and steadier availability.",
-              "Avoid flagship and reasoning models — you would pay several times more per explanation for no benefit here."
+              "Każdy model, którego nazwa kończy się na `:free` — zalecany na start. Nie wymaga salda. Rozszerzenie wybiera domyślnie bezpłatny wariant Llama lub Gemini, jeśli jest dostępny.",
+              "Płatny mały model (wariant „flash”, „mini” lub „lite” od któregokolwiek dostawcy), jeśli doładujesz saldo i chcesz wyższych limitów oraz stabilniejszej dostępności.",
+              "Unikaj modeli flagowych i „reasoning” — zapłacisz kilka razy więcej za wyjaśnienie, bez żadnej korzyści."
             ]
           },
           {
             "type": "note",
-            "text": "Free tiers are rate-limited, not unlimited. If you read a lot of releases in one sitting you may see \"Too many requests — try again in a minute.\" Red News keeps each answer for 7 days, so re-opening the same event costs nothing."
+            "text": "Bezpłatne plany mają limity zapytań, a nie są nieograniczone. Jeśli czytasz dużo publikacji podczas jednej sesji, może pojawić się komunikat „Za dużo zapytań — spróbuj ponownie za minutę.” Red News przechowuje każdą odpowiedź przez 7 dni, więc ponowne otwarcie tego samego wydarzenia nic nie kosztuje."
           }
         ]
       },
       {
-        "heading": "Connect it in the extension",
+        "heading": "Połącz je w rozszerzeniu",
         "blocks": [
           {
             "type": "ol",
             "items": [
-              "Click the Red News icon in Chrome and scroll down to **✨ AI explanations**.",
-              "Pick your **Provider**.",
-              "Paste the key into **API key** (the 👁 button shows or hides what you typed).",
-              "Press **Connect**. Chrome asks for permission to contact that provider’s address — allow it. This is the one-off permission the extension needs to send your requests; if the popup closes while the Chrome prompt is open, just open the extension again and press Connect once more.",
-              "The status turns **Connected ✓** and the **Model** dropdown fills up. Pick another model if you like.",
-              "Open the news list and press **✨** next to any event."
+              "Kliknij ikonę Red News w Chrome i przewiń do **✨ Wyjaśnienia AI**.",
+              "Wybierz swojego **Dostawcę**.",
+              "Wklej klucz w pole **Klucz API** (przycisk 👁 pokazuje lub ukrywa wpisany tekst).",
+              "Naciśnij **Połącz**. Chrome poprosi o zgodę na kontakt z adresem tego dostawcy — zezwól na to. To jednorazowe uprawnienie, którego rozszerzenie potrzebuje, aby wysyłać Twoje zapytania; jeśli okno rozszerzenia zamknie się, gdy monit Chrome jest jeszcze otwarty, po prostu otwórz rozszerzenie ponownie i naciśnij Połącz jeszcze raz.",
+              "Status zmieni się na **Połączono ✓**, a lista rozwijana **Model** zostanie wypełniona. Możesz wybrać inny model, jeśli chcesz.",
+              "Otwórz listę wiadomości i naciśnij **✨** przy wybranym wydarzeniu."
             ]
           },
           {
             "type": "p",
-            "text": "To disconnect, press **Remove key**. The key is deleted from your browser immediately. Chrome keeps the site permission you granted; you can revoke it in `chrome://extensions` → Red News → Details → Site access, or simply leave it, as nothing is sent without a key."
+            "text": "Aby się rozłączyć, naciśnij **Usuń klucz**. Klucz jest natychmiast usuwany z Twojej przeglądarki. Chrome zachowuje udzielone uprawnienie do witryny; możesz je wycofać w `chrome://extensions` → Red News → Details → Site access, lub po prostu je zachować, ponieważ bez klucza nic nie jest wysyłane."
           }
         ]
       },
       {
-        "heading": "What is sent, and where",
+        "heading": "Co jest wysyłane i dokąd",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**Your key never leaves your browser.** It is stored in the extension’s local storage on this computer only — never synced, never sent to Red News servers.",
-              "**Requests go straight from your browser to the provider you chose.** They do not pass through our backend, and we cannot read the questions or the answers.",
-              "**What the request contains:** the event title, its currency, impact level and scheduled time, its forecast, previous and actual values, up to a handful of earlier prints of the same release, and the language you want the answer in. No account details, no email, no chart data, no browsing history.",
-              "**Your provider’s own privacy policy applies** to what it does with that request — see the notes for each provider above. Our own policy is in the [Privacy Policy](/privacy)."
+              "**Twój klucz nigdy nie opuszcza Twojej przeglądarki.** Jest przechowywany w lokalnej pamięci rozszerzenia tylko na tym komputerze — nigdy nie jest synchronizowany, nigdy nie jest wysyłany na serwery Red News.",
+              "**Zapytania idą bezpośrednio z Twojej przeglądarki do wybranego dostawcy.** Nie przechodzą przez nasz backend i nie możemy odczytać ani pytań, ani odpowiedzi.",
+              "**Co zawiera zapytanie:** tytuł wydarzenia, jego walutę, poziom wpływu i zaplanowany czas, prognozę, poprzednią i rzeczywistą wartość, do kilku wcześniejszych odczytów tej samej publikacji oraz język, w którym chcesz otrzymać odpowiedź. Żadnych danych konta, żadnego adresu e-mail, żadnych danych wykresu, żadnej historii przeglądania.",
+              "**Do tego, co dostawca robi z tym zapytaniem, ma zastosowanie jego własna polityka prywatności** — zobacz uwagi dotyczące każdego dostawcy powyżej. Nasza własna polityka znajduje się w dokumencie [Polityka prywatności](/privacy)."
             ]
           }
         ]
       },
       {
-        "heading": "What will it cost?",
+        "heading": "Ile to będzie kosztować?",
         "blocks": [
           {
             "type": "p",
-            "text": "One explanation is a very small request — roughly a page of text in, a short paragraph out. On a free tier it costs nothing; on a paid small model it is a fraction of a cent. You pay your AI provider directly, if at all — never through Red News. Your Red News Premium subscription does not include AI usage, and does not charge for it either."
+            "text": "Jedno wyjaśnienie to bardzo niewielkie zapytanie — z grubsza strona tekstu na wejściu, krótki paragraf na wyjściu. W bezpłatnym planie nie kosztuje nic; w płatnym, małym modelu to ułamek centa. Płacisz bezpośrednio swojemu dostawcy AI, jeśli w ogóle płacisz — nigdy przez Red News. Twoja subskrypcja Red News Premium nie obejmuje korzystania z AI i nie naliczamy za to żadnych opłat."
           }
         ]
       },
       {
-        "heading": "If something goes wrong",
+        "heading": "Jeśli coś pójdzie nie tak",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**\"The provider rejected this key.\"** — The key was mistyped, truncated or deleted in the console, or the wrong provider is selected in the dropdown. Create a fresh key and paste it again. For Gemini, also check that the Generative Language API is enabled on the project the key belongs to.",
-              "**\"Too many requests — try again in a minute.\"** — You hit the free-tier rate limit. Wait a minute, switch to a smaller model, or add billing at your provider.",
-              "**\"Could not reach the AI provider.\"** — No connection, or the provider’s API is blocked on your network (corporate proxy, VPN, firewall) or temporarily down.",
-              "**\"Access to the provider was not allowed.\"** — The Chrome permission prompt was dismissed. Press Connect again and allow it.",
-              "**\"This key has no suitable chat models.\"** — The key is restricted, or the account has no model access yet. Check the provider console; on OpenRouter, some models require a topped-up balance.",
-              "**The ✨ buttons are not there.** AI explanations are Premium — sign in and make sure your plan is active, then reopen the extension."
+              "**„Dostawca odrzucił ten klucz.”** — Klucz został błędnie wpisany, obcięty lub usunięty w konsoli, albo na liście rozwijanej wybrano niewłaściwego dostawcę. Utwórz nowy klucz i wklej go ponownie. W przypadku Gemini sprawdź też, czy w projekcie, do którego należy klucz, włączone jest Generative Language API.",
+              "**„Za dużo zapytań — spróbuj ponownie za minutę.”** — Osiągnięto limit zapytań bezpłatnego planu. Zaczekaj minutę, przełącz się na mniejszy model lub dodaj rozliczenia u swojego dostawcy.",
+              "**„Nie udało się połączyć z dostawcą AI.”** — Brak połączenia, albo API dostawcy jest blokowane w Twojej sieci (firmowe proxy, VPN, zapora sieciowa) lub tymczasowo niedostępne.",
+              "**„Dostęp do dostawcy nie został dozwolony.”** — Monit Chrome o uprawnienia został zamknięty. Naciśnij ponownie Połącz i zezwól na dostęp.",
+              "**„Ten klucz nie ma odpowiednich modeli czatu.”** — Klucz jest ograniczony albo konto nie ma jeszcze dostępu do modeli. Sprawdź konsolę dostawcy; w OpenRouter niektóre modele wymagają doładowanego salda.",
+              "**Przyciski ✨ nie są widoczne.** Wyjaśnienia AI są funkcją Premium — zaloguj się i sprawdź, czy Twój plan jest aktywny, a następnie otwórz rozszerzenie ponownie."
             ]
           }
         ]
       },
       {
-        "heading": "Limits worth knowing",
+        "heading": "Warto znać te ograniczenia",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The AI only sees the calendar data we hand it, and it is instructed never to invent figures. It still can be wrong about general context, like any language model. Always check the numbers on the chart.",
-              "**It will not tell you what to trade.** The extension explicitly asks the model for explanation only — no entries, exits, targets or position sizes. Red News does not provide financial, investment or trading advice."
+              "AI widzi tylko dane kalendarza, które mu przekazujemy, i ma polecenie nigdy nie wymyślać liczb. Mimo to może się mylić w ogólnym kontekście, jak każdy model językowy. Zawsze sprawdzaj liczby na wykresie.",
+              "**Nie powie Ci, co handlować.** Rozszerzenie wyraźnie prosi model jedynie o wyjaśnienie — bez wejść, wyjść, celów czy wielkości pozycji. Red News nie udziela porad finansowych, inwestycyjnych ani dotyczących handlu."
             ]
           }
         ]
       },
       {
-        "heading": "Still stuck?",
+        "heading": "Wciąż masz problem?",
         "blocks": [
           {
             "type": "p",
-            "text": "Write to [support@rednews.app](mailto:support@rednews.app) or reach us on [Discord](https://discord.com/users/1172891214580830322) — tell us which provider you used and what the extension showed, and we will sort it out."
+            "text": "Napisz na [support@rednews.app](mailto:support@rednews.app) lub skontaktuj się z nami na [Discord](https://discord.com/users/1172891214580830322) — napisz, z jakiego dostawcy korzystasz i co pokazało rozszerzenie, a my to rozwiążemy."
           }
         ]
       }

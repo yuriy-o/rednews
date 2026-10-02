@@ -36,8 +36,8 @@
       "title": "Vitaj v klube"
     },
     "ai": {
-      "title": "Connect your own AI",
-      "description": "How to get a free API key from Google Gemini, Groq or OpenRouter and connect it to the Red News extension for AI explanations of economic releases."
+      "title": "Pripoj si vlastné AI",
+      "description": "Ako získať bezplatný API kľúč od Google Gemini, Groq alebo OpenRouter a pripojiť ho k rozšíreniu Red News, a získať tak AI vysvetlenia ekonomických správ."
     }
   },
   "nav": {
@@ -706,100 +706,100 @@
     "secondary": "Zobraziť kalendár tohto týždňa"
   },
   "ai": {
-    "title": "Connect your own AI",
-    "updated": "Last updated: 2 October 2026",
-    "intro": "Red News can explain any economic release in plain language, in your own interface language. Open the extension, find an event in the list and press the ✨ button next to it. You get a short briefing: what the indicator measures, what the forecast and the previous prints were, and what a higher or lower than expected result usually means for that currency.",
+    "title": "Pripoj si vlastné AI",
+    "updated": "Posledná aktualizácia: 2. októbra 2026",
+    "intro": "Red News vie vysvetliť akúkoľvek ekonomickú správu jednoduchým jazykom, priamo v jazyku tvojho rozhrania. Otvor rozšírenie, nájdi udalosť v zozname a stlač tlačidlo ✨ vedľa nej. Dostaneš krátke zhrnutie: čo indikátor meria, aká bola prognóza a predchádzajúca hodnota, a čo výsledok vyšší alebo nižší než očakávaný obvykle znamená pre danú menu.",
     "sections": [
       {
-        "heading": "How it works",
+        "heading": "Ako to funguje",
         "blocks": [
           {
             "type": "p",
-            "text": "The explanation is written by an AI provider that **you** choose and connect with your own **API key**. Red News never sees your key and never sees the answers — your browser talks to the provider directly. Today you can connect **Google Gemini**, **Groq** or **OpenRouter**, and all three have a free tier that is more than enough for reading a few releases a day."
+            "text": "Vysvetlenie píše poskytovateľ AI, ktorého si **ty** vyberieš a pripojíš vlastným **API kľúčom**. Red News tvoj kľúč nikdy nevidí a nevidí ani odpovede — tvoj prehliadač komunikuje s poskytovateľom priamo. Dnes môžeš pripojiť **Google Gemini**, **Groq** alebo **OpenRouter** a všetky tri majú bezplatnú úroveň, ktorá bohato stačí na čítanie niekoľkých správ denne."
           },
           {
             "type": "note",
-            "text": "An API key is not a ChatGPT or Gemini subscription. A paid chatbot plan (ChatGPT Plus, Gemini Advanced, Claude Pro…) only unlocks the chat website or app — it gives you nothing to paste here. An API key is a separate, free-to-create string of characters, taken from the provider’s developer console, that lets your own software send requests. It looks something like `AIza…`, `gsk_…` or `sk-or-v1-…`."
+            "text": "API kľúč nie je to isté ako predplatné ChatGPT alebo Gemini. Platený plán chatbota (ChatGPT Plus, Gemini Advanced, Claude Pro…) odomkne len webovú stránku alebo aplikáciu chatu — nedá ti nič, čo by sa sem vložilo. API kľúč je samostatný, zadarmo vytvoriteľný reťazec znakov, získaný z vývojárskej konzoly poskytovateľa, ktorý umožní tvojmu softvéru odosielať požiadavky. Vyzerá približne takto: `AIza…`, `gsk_…` alebo `sk-or-v1-…`."
           }
         ]
       },
       {
-        "heading": "What you need",
+        "heading": "Čo budeš potrebovať",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The Red News extension, signed in with **Premium** (or an active trial) — AI explanations are a Premium feature.",
-              "A free account with one of the three providers below, and an API key created in its console."
+              "Rozšírenie Red News prihlásené s **Premium** (alebo aktívnou skúšobnou verziou) — AI vysvetlenia sú funkcia Premium.",
+              "Bezplatný účet u jedného z troch poskytovateľov nižšie a API kľúč vytvorený v jeho konzole."
             ]
           }
         ]
       },
       {
-        "heading": "1. Get a key from Google Gemini",
+        "heading": "1. Získaj kľúč od Google Gemini",
         "blocks": [
           {
             "type": "p",
-            "text": "The easiest start: no card required, and Google’s fast \"Flash\" models answer in a second or two."
+            "text": "Najjednoduchší začiatok: karta sa nevyžaduje a rýchle modely Google „Flash“ odpovedajú za sekundu či dve."
           },
           {
             "type": "ol",
             "items": [
-              "Open [aistudio.google.com/apikey](https://aistudio.google.com/apikey) and sign in with a Google account.",
-              "Press **Create API key** and pick (or let Google create) a project.",
-              "Copy the key — it begins with `AIza`. You can always come back to this page to copy it again."
+              "Otvor [aistudio.google.com/apikey](https://aistudio.google.com/apikey) a prihlás sa účtom Google.",
+              "Stlač **Vytvoriť API kľúč** a vyber (alebo necháš Google vytvoriť) projekt.",
+              "Skopíruj kľúč — začína na `AIza`. Na túto stránku sa môžeš kedykoľvek vrátiť a skopírovať ho znova."
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: on Google’s **free** tier, your prompts and the answers may be used by Google to improve its products and may be reviewed by humans. On the paid tier they are not. If that matters to you, use Groq, or add billing to the Google project. Current limits and prices: [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)."
+            "text": "Oplatí sa vedieť: v **bezplatnej** úrovni Google môže tvoje požiadavky a odpovede využívať na zlepšovanie svojich produktov a môžu ich kontrolovať ľudia. V platenej úrovni to tak nie je. Ak ti na tom záleží, použi Groq, alebo k projektu Google pridaj fakturáciu. Aktuálne limity a ceny: [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)."
           }
         ]
       },
       {
-        "heading": "2. Get a key from Groq",
+        "heading": "2. Získaj kľúč od Groq",
         "blocks": [
           {
             "type": "p",
-            "text": "**Groq is not Grok.** Groq (spelled with a q) is an inference company that runs open models such as Llama extremely fast; Grok (spelled with a k) is xAI’s chatbot and is not supported here."
+            "text": "**Groq nie je Grok.** Groq (s „q“) je firma zameraná na inferenciu, ktorá extrémne rýchlo prevádzkuje otvorené modely ako Llama; Grok (s „k“) je chatbot od xAI a tu podporovaný nie je."
           },
           {
             "type": "ol",
             "items": [
-              "Open [console.groq.com/keys](https://console.groq.com/keys) and sign in (Google, GitHub or email).",
-              "Press **Create API Key**, give it a name such as Red News.",
-              "Copy the key — it begins with `gsk_`. Groq shows it **only once**, so paste it into the extension straight away."
+              "Otvor [console.groq.com/keys](https://console.groq.com/keys) a prihlás sa (Google, GitHub alebo e-mail).",
+              "Stlač **Vytvoriť API kľúč**, daj mu názov, napríklad Red News.",
+              "Skopíruj kľúč — začína na `gsk_`. Groq ho zobrazí **len raz**, takže ho hneď vlož do rozšírenia."
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: Groq states that it does not retain or train on API prompts and outputs by default. Free-tier request limits are published here: [Groq rate limits](https://console.groq.com/docs/rate-limits)."
+            "text": "Oplatí sa vedieť: Groq uvádza, že v predvolenom nastavení neuchováva ani nepoužíva na trénovanie požiadavky a odpovede z API. Limity požiadaviek v bezplatnej úrovni sú zverejnené tu: [Groq rate limits](https://console.groq.com/docs/rate-limits)."
           }
         ]
       },
       {
-        "heading": "3. Get a key from OpenRouter",
+        "heading": "3. Získaj kľúč od OpenRouter",
         "blocks": [
           {
             "type": "p",
-            "text": "OpenRouter is a single door to hundreds of models from many vendors: one key, one account, and you switch models from a dropdown instead of signing up everywhere. Some models are free to use; the rest are pay-as-you-go from a prepaid balance. The trade-off is that your request passes through OpenRouter on its way to the model vendor."
+            "text": "OpenRouter sú jedny dvere k stovkám modelov od mnohých dodávateľov: jeden kľúč, jeden účet, a modely prepínaš z rozbaľovacej ponuky namiesto registrácie všade osobitne. Niektoré modely sú zadarmo; ostatné sa platia podľa spotreby z predplateného zostatku. Daň za to je, že tvoja požiadavka cestou k dodávateľovi modelu prejde cez OpenRouter."
           },
           {
             "type": "ol",
             "items": [
-              "Open [openrouter.ai/keys](https://openrouter.ai/keys) and sign in.",
-              "Press **Create key** and copy it — it begins with `sk-or-v1-`.",
-              "Optional but recommended: in your OpenRouter account privacy settings, decide whether requests may be routed to providers that train on your data ([privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging))."
+              "Otvor [openrouter.ai/keys](https://openrouter.ai/keys) a prihlás sa.",
+              "Stlač **Vytvoriť kľúč** a skopíruj ho — začína na `sk-or-v1-`.",
+              "Nepovinné, ale odporúčané: v nastaveniach súkromia svojho účtu OpenRouter rozhodni, či môžu byť požiadavky smerované k poskytovateľom, ktorí na tvojich dátach trénujú ([privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging))."
             ]
           }
         ]
       },
       {
-        "heading": "Which model should I choose?",
+        "heading": "Aký model si vybrať?",
         "blocks": [
           {
             "type": "p",
-            "text": "When you press **Connect**, Red News asks your provider which models your key can use and preselects a sensible one, so you can simply leave the dropdown alone. If you want to change it, the job here is small — a short, grounded explanation of one economic release — so a **small, fast, cheap** model is the right choice. Big \"reasoning\", \"pro\" or \"deep research\" models are slower, cost far more and do not write a better three-paragraph briefing."
+            "text": "Po stlačení **Pripojiť** sa Red News spýta tvojho poskytovateľa, aké modely tvoj kľúč môže používať, a vopred vyberie rozumný model, takže rozbaľovaciu ponuku môžeš nechať tak, ako je. Ak ju chceš zmeniť: úloha je tu malá — krátke, na faktoch postavené vysvetlenie jednej ekonomickej správy — takže správnou voľbou je model **malý, rýchly a lacný**. Veľké modely typu „reasoning“, „pro“ alebo „deep research“ sú pomalšie, stoja oveľa viac a lepšie trojodsekové zhrnutie nenapíšu."
           },
           {
             "type": "p",
@@ -808,9 +808,9 @@
           {
             "type": "ul",
             "items": [
-              "`gemini-2.5-flash-lite` — recommended. Fastest and cheapest; ideal for this task. Preselected by the extension.",
-              "`gemini-2.5-flash` — a little slower, slightly richer wording. Good second choice.",
-              "Avoid `…-pro`, and anything with `preview`, `exp`, `thinking`, `deep-research` or `antigravity` in the name: slow, expensive, and preview models can disappear without warning."
+              "`gemini-2.5-flash-lite` — odporúčané. Najrýchlejší a najlevnejší; na túto úlohu ideálny. Rozšírenie ho vopred vyberá.",
+              "`gemini-2.5-flash` — o niečo pomalší, s trochu bohatšou formuláciou. Dobrá druhá voľba.",
+              "Vyhýbaj sa `…-pro` a čomukoľvek s `preview`, `exp`, `thinking`, `deep-research` alebo `antigravity` v názve: je to pomalé, drahé, a modely preview môžu zmiznúť bez varovania."
             ]
           },
           {
@@ -820,9 +820,9 @@
           {
             "type": "ul",
             "items": [
-              "A Llama 3.3 70B model (e.g. `llama-3.3-70b-versatile`) — recommended. Strong general knowledge, answers in a second. Preselected by the extension.",
-              "A smaller Llama 8B model — even faster and with more generous free limits, but noticeably shallower explanations.",
-              "Avoid speech, vision and guard models — they are filtered out of the dropdown anyway."
+              "Model Llama 3.3 70B (napr. `llama-3.3-70b-versatile`) — odporúčané. Silné všeobecné znalosti, odpoveď za sekundu. Rozšírenie ho vopred vyberá.",
+              "Menší model Llama 8B — ešte rýchlejší a so štedrejšími bezplatnými limitmi, ale výrazne povrchnejšie vysvetlenia.",
+              "Vyhýbaj sa modelom pre reč, videnie a „guard“ modelom — z rozbaľovacej ponuky sú tak či tak odfiltrované."
             ]
           },
           {
@@ -832,94 +832,94 @@
           {
             "type": "ul",
             "items": [
-              "Any model whose name ends in `:free` — recommended to start. No balance needed. The extension preselects a free Llama or Gemini variant when one is available.",
-              "A paid small model (a \"flash\", \"mini\" or \"lite\" variant of any vendor) if you top up your balance and want higher limits and steadier availability.",
-              "Avoid flagship and reasoning models — you would pay several times more per explanation for no benefit here."
+              "Akýkoľvek model, ktorého názov končí na `:free` — na začiatok odporúčané. Nevyžaduje zostatok. Rozšírenie vopred vyberie bezplatný variant Llama alebo Gemini, ak je dostupný.",
+              "Platený malý model (variant „flash“, „mini“ alebo „lite“ od ktorejkoľvek firmy), ak si doplníš zostatok a chceš vyššie limity a stabilnejšiu dostupnosť.",
+              "Vyhýbaj sa vlajkovým a „reasoning“ modelom — za vysvetlenie by sa platilo niekoľkonásobne viac, bez akéhokoľvek prínosu."
             ]
           },
           {
             "type": "note",
-            "text": "Free tiers are rate-limited, not unlimited. If you read a lot of releases in one sitting you may see \"Too many requests — try again in a minute.\" Red News keeps each answer for 7 days, so re-opening the same event costs nothing."
+            "text": "Bezplatné úrovne majú obmedzenú rýchlosť požiadaviek, nie sú neobmedzené. Keď počas jedného sedenia prečítaš veľa správ, môže sa zobraziť „Príliš veľa požiadaviek — skús to znova o minútu.“ Red News uchováva každú odpoveď 7 dní, takže znova otvoriť rovnakú udalosť nič nestojí."
           }
         ]
       },
       {
-        "heading": "Connect it in the extension",
+        "heading": "Pripoj ho v rozšírení",
         "blocks": [
           {
             "type": "ol",
             "items": [
-              "Click the Red News icon in Chrome and scroll down to **✨ AI explanations**.",
-              "Pick your **Provider**.",
-              "Paste the key into **API key** (the 👁 button shows or hides what you typed).",
-              "Press **Connect**. Chrome asks for permission to contact that provider’s address — allow it. This is the one-off permission the extension needs to send your requests; if the popup closes while the Chrome prompt is open, just open the extension again and press Connect once more.",
-              "The status turns **Connected ✓** and the **Model** dropdown fills up. Pick another model if you like.",
-              "Open the news list and press **✨** next to any event."
+              "Klikni na ikonu Red News v Chrome a zíď dole na **✨ AI vysvetlenia**.",
+              "Vyber svojho **poskytovateľa**.",
+              "Vlož kľúč do poľa **API kľúč** (tlačidlo 👁 zobrazí alebo skryje napísaný text).",
+              "Stlač **Pripojiť**. Chrome požiada o povolenie kontaktovať adresu daného poskytovateľa — povoľ to. Ide o jednorazové povolenie, ktoré rozšírenie potrebuje na odosielanie tvojich požiadaviek; ak sa okno rozšírenia zavrie, zatiaľ čo je výzva Chrome ešte otvorená, jednoducho rozšírenie znova otvor a stlač Pripojiť ešte raz.",
+              "Stav sa zmení na **Pripojené ✓** a rozbaľovacia ponuka **Model** sa naplní. Ak chceš, vyber iný model.",
+              "Otvor zoznam správ a stlač **✨** vedľa ľubovoľnej udalosti."
             ]
           },
           {
             "type": "p",
-            "text": "To disconnect, press **Remove key**. The key is deleted from your browser immediately. Chrome keeps the site permission you granted; you can revoke it in `chrome://extensions` → Red News → Details → Site access, or simply leave it, as nothing is sent without a key."
+            "text": "Na odpojenie stlač **Odstrániť kľúč**. Kľúč sa z tvojho prehliadača vymaže okamžite. Chrome si udelené povolenie k webu ponechá; môžeš ho zrušiť v `chrome://extensions` → Red News → Details → Site access, alebo ho jednoducho ponechať, pretože bez kľúča sa nič neodosiela."
           }
         ]
       },
       {
-        "heading": "What is sent, and where",
+        "heading": "Čo sa odosiela a kam",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**Your key never leaves your browser.** It is stored in the extension’s local storage on this computer only — never synced, never sent to Red News servers.",
-              "**Requests go straight from your browser to the provider you chose.** They do not pass through our backend, and we cannot read the questions or the answers.",
-              "**What the request contains:** the event title, its currency, impact level and scheduled time, its forecast, previous and actual values, up to a handful of earlier prints of the same release, and the language you want the answer in. No account details, no email, no chart data, no browsing history.",
-              "**Your provider’s own privacy policy applies** to what it does with that request — see the notes for each provider above. Our own policy is in the [Privacy Policy](/privacy)."
+              "**Tvoj kľúč nikdy neopustí tvoj prehliadač.** Je uložený v lokálnom úložisku rozšírenia len na tomto počítači — nikdy sa nesynchronizuje, nikdy sa neodosiela na servery Red News.",
+              "**Požiadavky idú priamo z tvojho prehliadača k vybranému poskytovateľovi.** Neprechádzajú cez náš backend a my nemôžeme čítať ani otázky, ani odpovede.",
+              "**Čo požiadavka obsahuje:** názov udalosti, jej menu, úroveň dopadu a plánovaný čas, prognózu, predchádzajúcu a aktuálnu hodnotu, až niekoľko predchádzajúcich hodnôt tej istej správy a jazyk, v ktorom chceš odpoveď. Žiadne údaje o účte, žiadny e-mail, žiadne dáta grafu, žiadna história prehliadania.",
+              "**Platia vlastné zásady ochrany osobných údajov tvojho poskytovateľa** — podľa toho, čo s danou požiadavkou robí; pozri poznámky k jednotlivým poskytovateľom vyššie. Naše vlastné zásady nájdeš v dokumente [Zásady ochrany osobných údajov](/privacy)."
             ]
           }
         ]
       },
       {
-        "heading": "What will it cost?",
+        "heading": "Koľko to bude stáť?",
         "blocks": [
           {
             "type": "p",
-            "text": "One explanation is a very small request — roughly a page of text in, a short paragraph out. On a free tier it costs nothing; on a paid small model it is a fraction of a cent. You pay your AI provider directly, if at all — never through Red News. Your Red News Premium subscription does not include AI usage, and does not charge for it either."
+            "text": "Jedno vysvetlenie je veľmi malá požiadavka — na vstupe približne strana textu, na výstupe krátky odsek. V bezplatnej úrovni nestojí nič; pri platenom malom modeli je to zlomok centu. Platíš priamo svojmu poskytovateľovi AI, ak vôbec — nikdy cez Red News. Predplatné Red News Premium využívanie AI nezahŕňa, a ani za to neúčtuje žiadny poplatok."
           }
         ]
       },
       {
-        "heading": "If something goes wrong",
+        "heading": "Ak sa niečo nepodarí",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**\"The provider rejected this key.\"** — The key was mistyped, truncated or deleted in the console, or the wrong provider is selected in the dropdown. Create a fresh key and paste it again. For Gemini, also check that the Generative Language API is enabled on the project the key belongs to.",
-              "**\"Too many requests — try again in a minute.\"** — You hit the free-tier rate limit. Wait a minute, switch to a smaller model, or add billing at your provider.",
-              "**\"Could not reach the AI provider.\"** — No connection, or the provider’s API is blocked on your network (corporate proxy, VPN, firewall) or temporarily down.",
-              "**\"Access to the provider was not allowed.\"** — The Chrome permission prompt was dismissed. Press Connect again and allow it.",
-              "**\"This key has no suitable chat models.\"** — The key is restricted, or the account has no model access yet. Check the provider console; on OpenRouter, some models require a topped-up balance.",
-              "**The ✨ buttons are not there.** AI explanations are Premium — sign in and make sure your plan is active, then reopen the extension."
+              "**„Poskytovateľ tento kľúč odmietol.“** — Kľúč bol prepísaný, skrátený alebo zmazaný v konzole, alebo je v rozbaľovacej ponuke vybraný nesprávny poskytovateľ. Vytvor nový kľúč a vlož ho znova. Pri Gemini ešte over, že je v projekte, ku ktorému kľúč patrí, zapnuté Generative Language API.",
+              "**„Príliš veľa požiadaviek — skús to znova o minútu.“** — Bol prekročený limit požiadaviek bezplatnej úrovne. Počkaj minútu, prepni na menší model, alebo si u poskytovateľa nastav fakturáciu.",
+              "**„Nepodarilo sa spojiť s AI poskytovateľom.“** — Žiadne pripojenie, alebo je API poskytovateľa na tvojej sieti blokované (firemné proxy, VPN, firewall) či dočasne nedostupné.",
+              "**„Prístup k poskytovateľovi nebol povolený.“** — Výzva Chrome na povolenie bola zavretá. Stlač Pripojiť znova a povoľ ju.",
+              "**„Tento kľúč nemá vhodné chatovacie modely.“** — Kľúč je obmedzený, alebo účet ešte nemá prístup k žiadnemu modelu. Skontroluj konzolu poskytovateľa; pri OpenRouter niektoré modely vyžadujú doplnený zostatok.",
+              "**Tlačidlá ✨ chýbajú.** AI vysvetlenia sú funkcia Premium — prihlás sa a over, že je tvoj plán aktívny, potom rozšírenie znova otvor."
             ]
           }
         ]
       },
       {
-        "heading": "Limits worth knowing",
+        "heading": "Oplatí sa vedieť",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The AI only sees the calendar data we hand it, and it is instructed never to invent figures. It still can be wrong about general context, like any language model. Always check the numbers on the chart.",
-              "**It will not tell you what to trade.** The extension explicitly asks the model for explanation only — no entries, exits, targets or position sizes. Red News does not provide financial, investment or trading advice."
+              "AI vidí len dáta kalendára, ktoré jej odovzdáme, a má príkaz nikdy nevymýšľať čísla. Napriek tomu sa, ako každý jazykový model, môže pomýliť v celkovom kontexte. Čísla na grafe si vždy over.",
+              "**Nepovie ti, čo obchodovať.** Rozšírenie od modelu výslovne žiada len vysvetlenie — žiadne vstupy, výstupy, ciele ani veľkosti pozícií. Red News neposkytuje finančné, investičné ani obchodné poradenstvo."
             ]
           }
         ]
       },
       {
-        "heading": "Still stuck?",
+        "heading": "Stále to nejde?",
         "blocks": [
           {
             "type": "p",
-            "text": "Write to [support@rednews.app](mailto:support@rednews.app) or reach us on [Discord](https://discord.com/users/1172891214580830322) — tell us which provider you used and what the extension showed, and we will sort it out."
+            "text": "Napíš na [support@rednews.app](mailto:support@rednews.app) alebo nás zastihni na [Discord](https://discord.com/users/1172891214580830322) — napíš nám, akého poskytovateľa používaš a čo rozšírenie zobrazilo, a vyriešime to."
           }
         ]
       }

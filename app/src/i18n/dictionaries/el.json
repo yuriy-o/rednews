@@ -36,8 +36,8 @@
       "title": "Καλώς ήρθες στο κλαμπ"
     },
     "ai": {
-      "title": "Connect your own AI",
-      "description": "How to get a free API key from Google Gemini, Groq or OpenRouter and connect it to the Red News extension for AI explanations of economic releases."
+      "title": "Σύνδεσε το δικό σου AI",
+      "description": "Πώς να αποκτήσεις ένα δωρεάν κλειδί API από το Google Gemini, το Groq ή το OpenRouter και να το συνδέσεις με την επέκταση Red News για εξηγήσεις οικονομικών δεδομένων από AI."
     }
   },
   "nav": {
@@ -706,100 +706,100 @@
     "secondary": "Δες το ημερολόγιο αυτής της εβδομάδας"
   },
   "ai": {
-    "title": "Connect your own AI",
-    "updated": "Last updated: 2 October 2026",
-    "intro": "Red News can explain any economic release in plain language, in your own interface language. Open the extension, find an event in the list and press the ✨ button next to it. You get a short briefing: what the indicator measures, what the forecast and the previous prints were, and what a higher or lower than expected result usually means for that currency.",
+    "title": "Σύνδεσε το δικό σου AI",
+    "updated": "Τελευταία ενημέρωση: 2 Οκτωβρίου 2026",
+    "intro": "Το Red News μπορεί να εξηγήσει κάθε οικονομική ανακοίνωση με απλά λόγια, στη γλώσσα διεπαφής που έχεις επιλέξει. Άνοιξε την επέκταση, βρες ένα γεγονός στη λίστα και πάτησε το κουμπί ✨ δίπλα του. Θα πάρεις μια σύντομη ενημέρωση: τι μετρά ο δείκτης, ποια ήταν η πρόβλεψη και η προηγούμενη τιμή, και τι σημαίνει συνήθως για το αντίστοιχο νόμισμα ένα αποτέλεσμα υψηλότερο ή χαμηλότερο από το αναμενόμενο.",
     "sections": [
       {
-        "heading": "How it works",
+        "heading": "Πώς λειτουργεί",
         "blocks": [
           {
             "type": "p",
-            "text": "The explanation is written by an AI provider that **you** choose and connect with your own **API key**. Red News never sees your key and never sees the answers — your browser talks to the provider directly. Today you can connect **Google Gemini**, **Groq** or **OpenRouter**, and all three have a free tier that is more than enough for reading a few releases a day."
+            "text": "Η εξήγηση γράφεται από έναν πάροχο AI που επιλέγεις **εσύ** και συνδέεις με το δικό σου **κλειδί API**. Το Red News δεν βλέπει ποτέ το κλειδί σου και δεν βλέπει ποτέ τις απαντήσεις — ο browser σου μιλά απευθείας με τον πάροχο. Σήμερα μπορείς να συνδέσεις **Google Gemini**, **Groq** ή **OpenRouter**, και όλα τα τρία έχουν δωρεάν πλάνο που επαρκεί άνετα για να διαβάζεις λίγες ανακοινώσεις την ημέρα."
           },
           {
             "type": "note",
-            "text": "An API key is not a ChatGPT or Gemini subscription. A paid chatbot plan (ChatGPT Plus, Gemini Advanced, Claude Pro…) only unlocks the chat website or app — it gives you nothing to paste here. An API key is a separate, free-to-create string of characters, taken from the provider’s developer console, that lets your own software send requests. It looks something like `AIza…`, `gsk_…` or `sk-or-v1-…`."
+            "text": "Ένα κλειδί API δεν είναι συνδρομή ChatGPT ή Gemini. Ένα επί πληρωμή πλάνο chatbot (ChatGPT Plus, Gemini Advanced, Claude Pro…) ξεκλειδώνει μόνο την ιστοσελίδα ή την εφαρμογή συνομιλίας — δεν σου δίνει τίποτα που να μπορείς να επικολλήσεις εδώ. Ένα κλειδί API είναι μια ξεχωριστή, δωρεάν προς δημιουργία συμβολοσειρά χαρακτήρων, που παίρνεις από την κονσόλα προγραμματιστή του παρόχου, και επιτρέπει στο δικό σου λογισμικό να στέλνει αιτήματα. Μοιάζει κάπως έτσι: `AIza…`, `gsk_…` ή `sk-or-v1-…`."
           }
         ]
       },
       {
-        "heading": "What you need",
+        "heading": "Τι χρειάζεσαι",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The Red News extension, signed in with **Premium** (or an active trial) — AI explanations are a Premium feature.",
-              "A free account with one of the three providers below, and an API key created in its console."
+              "Την επέκταση Red News, συνδεδεμένη με **Premium** (ή ενεργή δοκιμαστική περίοδο) — οι εξηγήσεις AI είναι λειτουργία Premium.",
+              "Έναν δωρεάν λογαριασμό σε έναν από τους τρεις παρόχους παρακάτω, και ένα κλειδί API που θα δημιουργήσεις στην κονσόλα του."
             ]
           }
         ]
       },
       {
-        "heading": "1. Get a key from Google Gemini",
+        "heading": "1. Απόκτησε κλειδί από το Google Gemini",
         "blocks": [
           {
             "type": "p",
-            "text": "The easiest start: no card required, and Google’s fast \"Flash\" models answer in a second or two."
+            "text": "Η πιο εύκολη αρχή: δεν απαιτείται κάρτα, και τα ταχύτατα μοντέλα «Flash» της Google απαντούν σε ένα ή δύο δευτερόλεπτα."
           },
           {
             "type": "ol",
             "items": [
-              "Open [aistudio.google.com/apikey](https://aistudio.google.com/apikey) and sign in with a Google account.",
-              "Press **Create API key** and pick (or let Google create) a project.",
-              "Copy the key — it begins with `AIza`. You can always come back to this page to copy it again."
+              "Άνοιξε το [aistudio.google.com/apikey](https://aistudio.google.com/apikey) και συνδέσου με λογαριασμό Google.",
+              "Πάτησε **Δημιουργία κλειδιού API** και επίλεξε (ή άφησε την Google να δημιουργήσει) ένα project.",
+              "Αντιγράψε το κλειδί — ξεκινά με `AIza`. Μπορείς πάντα να επιστρέψεις σε αυτή τη σελίδα για να το αντιγράψεις ξανά."
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: on Google’s **free** tier, your prompts and the answers may be used by Google to improve its products and may be reviewed by humans. On the paid tier they are not. If that matters to you, use Groq, or add billing to the Google project. Current limits and prices: [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)."
+            "text": "Αξίζει να το ξέρεις: στο **δωρεάν** πλάνο της Google, οι ερωτήσεις σου και οι απαντήσεις μπορεί να χρησιμοποιηθούν από την Google για τη βελτίωση των προϊόντων της και μπορεί να εξεταστούν από ανθρώπους. Στο επί πληρωμή πλάνο δεν συμβαίνει αυτό. Αν αυτό σε απασχολεί, χρησιμοποίησε το Groq, ή πρόσθεσε χρέωση στο project της Google. Τρέχοντα όρια και τιμές: [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)."
           }
         ]
       },
       {
-        "heading": "2. Get a key from Groq",
+        "heading": "2. Απόκτησε κλειδί από το Groq",
         "blocks": [
           {
             "type": "p",
-            "text": "**Groq is not Grok.** Groq (spelled with a q) is an inference company that runs open models such as Llama extremely fast; Grok (spelled with a k) is xAI’s chatbot and is not supported here."
+            "text": "**Το Groq δεν είναι το Grok.** Το Groq (με «q») είναι μια εταιρεία inference που τρέχει ανοιχτά μοντέλα όπως το Llama εξαιρετικά γρήγορα· το Grok (με «k») είναι το chatbot της xAI και δεν υποστηρίζεται εδώ."
           },
           {
             "type": "ol",
             "items": [
-              "Open [console.groq.com/keys](https://console.groq.com/keys) and sign in (Google, GitHub or email).",
-              "Press **Create API Key**, give it a name such as Red News.",
-              "Copy the key — it begins with `gsk_`. Groq shows it **only once**, so paste it into the extension straight away."
+              "Άνοιξε το [console.groq.com/keys](https://console.groq.com/keys) και συνδέσου (Google, GitHub ή email).",
+              "Πάτησε **Δημιουργία κλειδιού API** και δώσε του ένα όνομα, π.χ. Red News.",
+              "Αντιγράψε το κλειδί — ξεκινά με `gsk_`. Το Groq το δείχνει **μόνο μία φορά**, γι' αυτό επικόλλησέ το στην επέκταση αμέσως."
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: Groq states that it does not retain or train on API prompts and outputs by default. Free-tier request limits are published here: [Groq rate limits](https://console.groq.com/docs/rate-limits)."
+            "text": "Αξίζει να το ξέρεις: το Groq δηλώνει ότι εξ ορισμού δεν διατηρεί ούτε εκπαιδεύει μοντέλα πάνω σε prompts και αποτελέσματα του API. Τα όρια αιτημάτων του δωρεάν πλάνου είναι δημοσιευμένα εδώ: [Groq rate limits](https://console.groq.com/docs/rate-limits)."
           }
         ]
       },
       {
-        "heading": "3. Get a key from OpenRouter",
+        "heading": "3. Απόκτησε κλειδί από το OpenRouter",
         "blocks": [
           {
             "type": "p",
-            "text": "OpenRouter is a single door to hundreds of models from many vendors: one key, one account, and you switch models from a dropdown instead of signing up everywhere. Some models are free to use; the rest are pay-as-you-go from a prepaid balance. The trade-off is that your request passes through OpenRouter on its way to the model vendor."
+            "text": "Το OpenRouter είναι μία και μόνη πόρτα σε εκατοντάδες μοντέλα από πολλούς παρόχους: ένα κλειδί, ένας λογαριασμός, και αλλάζεις μοντέλα από ένα dropdown αντί να εγγράφεσαι παντού ξεχωριστά. Μερικά μοντέλα είναι δωρεάν· τα υπόλοιπα χρεώνονται ανάλογα με τη χρήση από ένα προπληρωμένο υπόλοιπο. Το αντίτιμο είναι ότι το αίτημά σου περνά μέσα από το OpenRouter στον δρόμο του προς τον πάροχο του μοντέλου."
           },
           {
             "type": "ol",
             "items": [
-              "Open [openrouter.ai/keys](https://openrouter.ai/keys) and sign in.",
-              "Press **Create key** and copy it — it begins with `sk-or-v1-`.",
-              "Optional but recommended: in your OpenRouter account privacy settings, decide whether requests may be routed to providers that train on your data ([privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging))."
+              "Άνοιξε το [openrouter.ai/keys](https://openrouter.ai/keys) και συνδέσου.",
+              "Πάτησε **Δημιουργία κλειδιού** και αντιγράψε το — ξεκινά με `sk-or-v1-`.",
+              "Προαιρετικό αλλά συνιστάται: στις ρυθμίσεις απορρήτου του λογαριασμού σου στο OpenRouter, αποφάσισε αν τα αιτήματα μπορούν να δρομολογηθούν σε παρόχους που εκπαιδεύουν μοντέλα πάνω στα δεδομένα σου ([privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging))."
             ]
           }
         ]
       },
       {
-        "heading": "Which model should I choose?",
+        "heading": "Ποιο μοντέλο να επιλέξω;",
         "blocks": [
           {
             "type": "p",
-            "text": "When you press **Connect**, Red News asks your provider which models your key can use and preselects a sensible one, so you can simply leave the dropdown alone. If you want to change it, the job here is small — a short, grounded explanation of one economic release — so a **small, fast, cheap** model is the right choice. Big \"reasoning\", \"pro\" or \"deep research\" models are slower, cost far more and do not write a better three-paragraph briefing."
+            "text": "Όταν πατάς **Σύνδεση**, το Red News ρωτά τον πάροχό σου ποια μοντέλα μπορεί να χρησιμοποιήσει το κλειδί σου και προεπιλέγει ένα λογικό μοντέλο, οπότε μπορείς απλά να αφήσεις το dropdown ως έχει. Αν θέλεις να το αλλάξεις, η δουλειά εδώ είναι μικρή — μια σύντομη, τεκμηριωμένη εξήγηση μιας οικονομικής ανακοίνωσης — οπότε η σωστή επιλογή είναι ένα **μικρό, γρήγορο και φθηνό** μοντέλο. Τα μεγάλα μοντέλα «reasoning», «pro» ή «deep research» είναι πιο αργά, κοστίζουν πολύ περισσότερο και δεν γράφουν καλύτερη ενημέρωση τριών παραγράφων."
           },
           {
             "type": "p",
@@ -808,9 +808,9 @@
           {
             "type": "ul",
             "items": [
-              "`gemini-2.5-flash-lite` — recommended. Fastest and cheapest; ideal for this task. Preselected by the extension.",
-              "`gemini-2.5-flash` — a little slower, slightly richer wording. Good second choice.",
-              "Avoid `…-pro`, and anything with `preview`, `exp`, `thinking`, `deep-research` or `antigravity` in the name: slow, expensive, and preview models can disappear without warning."
+              "`gemini-2.5-flash-lite` — συνιστάται. Το ταχύτερο και πιο φθηνό· ιδανικό για αυτή τη δουλειά. Προεπιλέγεται από την επέκταση.",
+              "`gemini-2.5-flash` — λίγο πιο αργό, με ελαφρώς πλουσιότερη διατύπωση. Καλή δεύτερη επιλογή.",
+              "Αποφεύγεις `…-pro`, και οτιδήποτε με `preview`, `exp`, `thinking`, `deep-research` ή `antigravity` στο όνομα: είναι αργά, ακριβά, και τα μοντέλα preview μπορούν να εξαφανιστούν χωρίς προειδοποίηση."
             ]
           },
           {
@@ -820,9 +820,9 @@
           {
             "type": "ul",
             "items": [
-              "A Llama 3.3 70B model (e.g. `llama-3.3-70b-versatile`) — recommended. Strong general knowledge, answers in a second. Preselected by the extension.",
-              "A smaller Llama 8B model — even faster and with more generous free limits, but noticeably shallower explanations.",
-              "Avoid speech, vision and guard models — they are filtered out of the dropdown anyway."
+              "Ένα μοντέλο Llama 3.3 70B (π.χ. `llama-3.3-70b-versatile`) — συνιστάται. Ισχυρές γενικές γνώσεις, απάντηση σε ένα δευτερόλεπτο. Προεπιλέγεται από την επέκταση.",
+              "Ένα μικρότερο μοντέλο Llama 8B — ακόμα πιο γρήγορο και με πιο γενναιόδωρα δωρεάν όρια, αλλά αισθητά πιο επιφανειακές εξηγήσεις.",
+              "Αποφεύγεις μοντέλα ομιλίας, όρασης και «guard» — έτσι κι αλλιώς φιλτράρονται έξω από το dropdown."
             ]
           },
           {
@@ -832,94 +832,94 @@
           {
             "type": "ul",
             "items": [
-              "Any model whose name ends in `:free` — recommended to start. No balance needed. The extension preselects a free Llama or Gemini variant when one is available.",
-              "A paid small model (a \"flash\", \"mini\" or \"lite\" variant of any vendor) if you top up your balance and want higher limits and steadier availability.",
-              "Avoid flagship and reasoning models — you would pay several times more per explanation for no benefit here."
+              "Οποιοδήποτε μοντέλο με όνομα που τελειώνει σε `:free` — συνιστάται για αρχή. Δεν απαιτείται υπόλοιπο. Η επέκταση προεπιλέγει μια δωρεάν παραλλαγή Llama ή Gemini όταν υπάρχει διαθέσιμη.",
+              "Ένα επί πληρωμή μικρό μοντέλο (παραλλαγή «flash», «mini» ή «lite» από οποιονδήποτε πάροχο) αν φορτίσεις το υπόλοιπό σου και θέλεις υψηλότερα όρια και πιο σταθερή διαθεσιμότητα.",
+              "Αποφεύγεις τα κορυφαία και τα «reasoning» μοντέλα — θα πλήρωνες πολλαπλάσια για κάθε εξήγηση χωρίς κανένα όφελος."
             ]
           },
           {
             "type": "note",
-            "text": "Free tiers are rate-limited, not unlimited. If you read a lot of releases in one sitting you may see \"Too many requests — try again in a minute.\" Red News keeps each answer for 7 days, so re-opening the same event costs nothing."
+            "text": "Τα δωρεάν πλάνα έχουν όριο ρυθμού αιτημάτων, δεν είναι απεριόριστα. Αν διαβάσεις πολλές ανακοινώσεις σε μία συνεδρία, μπορεί να δεις το μήνυμα «Πάρα πολλά αιτήματα — δοκίμασε ξανά σε ένα λεπτό.» Το Red News κρατά κάθε απάντηση για 7 ημέρες, οπότε το ξανάνοιγμα του ίδιου γεγονότος δεν κοστίζει τίποτα."
           }
         ]
       },
       {
-        "heading": "Connect it in the extension",
+        "heading": "Σύνδεσέ το στην επέκταση",
         "blocks": [
           {
             "type": "ol",
             "items": [
-              "Click the Red News icon in Chrome and scroll down to **✨ AI explanations**.",
-              "Pick your **Provider**.",
-              "Paste the key into **API key** (the 👁 button shows or hides what you typed).",
-              "Press **Connect**. Chrome asks for permission to contact that provider’s address — allow it. This is the one-off permission the extension needs to send your requests; if the popup closes while the Chrome prompt is open, just open the extension again and press Connect once more.",
-              "The status turns **Connected ✓** and the **Model** dropdown fills up. Pick another model if you like.",
-              "Open the news list and press **✨** next to any event."
+              "Κάνε κλικ στο εικονίδιο του Red News στο Chrome και κατέβα στο **✨ Εξηγήσεις AI**.",
+              "Επίλεξε τον **Πάροχό** σου.",
+              "Επικόλλησε το κλειδί στο **Κλειδί API** (το κουμπί 👁 δείχνει ή κρύβει ό,τι έγραψες).",
+              "Πάτησε **Σύνδεση**. Το Chrome θα ζητήσει άδεια να επικοινωνήσει με τη διεύθυνση αυτού του παρόχου — επίτρεψέ το. Αυτή είναι η εφάπαξ άδεια που χρειάζεται η επέκταση για να στέλνει τα αιτήματά σου· αν το popup κλείσει όσο το παράθυρο του Chrome είναι ακόμα ανοιχτό, απλά άνοιξε ξανά την επέκταση και πάτησε Σύνδεση μία φορά ακόμα.",
+              "Η κατάσταση γίνεται **Συνδέθηκε ✓** και το αναπτυσσόμενο μενού **Μοντέλο** γεμίζει. Διάλεξε άλλο μοντέλο αν θέλεις.",
+              "Άνοιξε τη λίστα ειδήσεων και πάτησε **✨** δίπλα σε οποιοδήποτε γεγονός."
             ]
           },
           {
             "type": "p",
-            "text": "To disconnect, press **Remove key**. The key is deleted from your browser immediately. Chrome keeps the site permission you granted; you can revoke it in `chrome://extensions` → Red News → Details → Site access, or simply leave it, as nothing is sent without a key."
+            "text": "Για αποσύνδεση, πάτησε **Αφαίρεση κλειδιού**. Το κλειδί διαγράφεται αμέσως από τον browser σου. Το Chrome διατηρεί την άδεια ιστοσελίδας που έδωσες· μπορείς να την ανακαλέσεις στο `chrome://extensions` → Red News → Details → Site access, ή απλά να την αφήσεις όπως είναι, καθώς χωρίς κλειδί δεν στέλνεται τίποτα."
           }
         ]
       },
       {
-        "heading": "What is sent, and where",
+        "heading": "Τι στέλνεται, και πού",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**Your key never leaves your browser.** It is stored in the extension’s local storage on this computer only — never synced, never sent to Red News servers.",
-              "**Requests go straight from your browser to the provider you chose.** They do not pass through our backend, and we cannot read the questions or the answers.",
-              "**What the request contains:** the event title, its currency, impact level and scheduled time, its forecast, previous and actual values, up to a handful of earlier prints of the same release, and the language you want the answer in. No account details, no email, no chart data, no browsing history.",
-              "**Your provider’s own privacy policy applies** to what it does with that request — see the notes for each provider above. Our own policy is in the [Privacy Policy](/privacy)."
+              "**Το κλειδί σου δεν βγαίνει ποτέ από τον browser σου.** Αποθηκεύεται στην τοπική μνήμη της επέκτασης μόνο σε αυτόν τον υπολογιστή — ποτέ δεν συγχρονίζεται, ποτέ δεν στέλνεται στους servers του Red News.",
+              "**Τα αιτήματα πηγαίνουν κατευθείαν από τον browser σου στον πάροχο που επέλεξες.** Δεν περνούν από το backend μας, και δεν μπορούμε να διαβάσουμε ούτε τις ερωτήσεις ούτε τις απαντήσεις.",
+              "**Τι περιέχει το αίτημα:** τον τίτλο του γεγονότος, το νόμισμά του, το επίπεδο επίδρασης και την προγραμματισμένη ώρα του, την πρόβλεψη, την προηγούμενη και την πραγματική τιμή, μέχρι μερικές προηγούμενες τιμές της ίδιας ανακοίνωσης, και τη γλώσσα στην οποία θέλεις την απάντηση. Καμία πληροφορία λογαριασμού, κανένα email, κανένα δεδομένο γραφήματος, κανένα ιστορικό περιήγησης.",
+              "**Εφαρμόζεται η δική σου πολιτική απορρήτου του παρόχου σου** για ό,τι κάνει με αυτό το αίτημα — δες τις σημειώσεις για κάθε πάροχο παραπάνω. Η δική μας πολιτική βρίσκεται στην [Πολιτική Απορρήτου](/privacy)."
             ]
           }
         ]
       },
       {
-        "heading": "What will it cost?",
+        "heading": "Πόσο θα κοστίσει;",
         "blocks": [
           {
             "type": "p",
-            "text": "One explanation is a very small request — roughly a page of text in, a short paragraph out. On a free tier it costs nothing; on a paid small model it is a fraction of a cent. You pay your AI provider directly, if at all — never through Red News. Your Red News Premium subscription does not include AI usage, and does not charge for it either."
+            "text": "Μια εξήγηση είναι ένα πολύ μικρό αίτημα — περίπου μία σελίδα κειμένου στην είσοδο, μια σύντομη παράγραφος στην έξοδο. Σε δωρεάν πλάνο δεν κοστίζει τίποτα· σε επί πληρωμή μικρό μοντέλο είναι ένα μικρό κλάσμα του σεντ. Πληρώνεις απευθείας τον πάροχο AI σου, αν πληρώνεις καθόλου — ποτέ μέσω του Red News. Η συνδρομή σου Red News Premium δεν περιλαμβάνει χρήση AI, ούτε χρεώνει για αυτό."
           }
         ]
       },
       {
-        "heading": "If something goes wrong",
+        "heading": "Αν κάτι πάει στραβά",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**\"The provider rejected this key.\"** — The key was mistyped, truncated or deleted in the console, or the wrong provider is selected in the dropdown. Create a fresh key and paste it again. For Gemini, also check that the Generative Language API is enabled on the project the key belongs to.",
-              "**\"Too many requests — try again in a minute.\"** — You hit the free-tier rate limit. Wait a minute, switch to a smaller model, or add billing at your provider.",
-              "**\"Could not reach the AI provider.\"** — No connection, or the provider’s API is blocked on your network (corporate proxy, VPN, firewall) or temporarily down.",
-              "**\"Access to the provider was not allowed.\"** — The Chrome permission prompt was dismissed. Press Connect again and allow it.",
-              "**\"This key has no suitable chat models.\"** — The key is restricted, or the account has no model access yet. Check the provider console; on OpenRouter, some models require a topped-up balance.",
-              "**The ✨ buttons are not there.** AI explanations are Premium — sign in and make sure your plan is active, then reopen the extension."
+              "**«Ο πάροχος απέρριψε αυτό το κλειδί.»** — Το κλειδί γράφτηκε λάθος, περικόπηκε ή διαγράφηκε στην κονσόλα, ή είναι επιλεγμένος ο λάθος πάροχος στο dropdown. Δημιούργησε ένα νέο κλειδί και επικόλλησέ το ξανά. Για το Gemini, έλεγξε επίσης ότι το Generative Language API είναι ενεργοποιημένο στο project στο οποίο ανήκει το κλειδί.",
+              "**«Πάρα πολλά αιτήματα — δοκίμασε ξανά σε ένα λεπτό.»** — Έφτασες το όριο ρυθμού του δωρεάν πλάνου. Περίμενε ένα λεπτό, πέρασε σε μικρότερο μοντέλο, ή πρόσθεσε χρέωση στον πάροχό σου.",
+              "**«Δεν ήταν δυνατή η σύνδεση με τον πάροχο AI.»** — Δεν υπάρχει σύνδεση, ή το API του παρόχου είναι μπλοκαρισμένο στο δίκτυό σου (εταιρικό proxy, VPN, firewall) ή είναι προσωρινά εκτός λειτουργίας.",
+              "**«Η πρόσβαση στον πάροχο δεν επιτράπηκε.»** — Το παράθυρο άδειας του Chrome έκλεισε χωρίς αποδοχή. Πάτησε Σύνδεση ξανά και επίτρεψέ το.",
+              "**«Αυτό το κλειδί δεν έχει κατάλληλα μοντέλα συνομιλίας.»** — Το κλειδί είναι περιορισμένο, ή ο λογαριασμός δεν έχει ακόμα πρόσβαση σε κανένα μοντέλο. Έλεγξε την κονσόλα του παρόχου· στο OpenRouter, ορισμένα μοντέλα απαιτούν φορτισμένο υπόλοιπο.",
+              "**Τα κουμπιά ✨ δεν εμφανίζονται.** Οι εξηγήσεις AI είναι λειτουργία Premium — συνδέσου και βεβαιώσου ότι το πλάνο σου είναι ενεργό, έπειτα ξανάνοιξε την επέκταση."
             ]
           }
         ]
       },
       {
-        "heading": "Limits worth knowing",
+        "heading": "Όρια που αξίζει να ξέρεις",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The AI only sees the calendar data we hand it, and it is instructed never to invent figures. It still can be wrong about general context, like any language model. Always check the numbers on the chart.",
-              "**It will not tell you what to trade.** The extension explicitly asks the model for explanation only — no entries, exits, targets or position sizes. Red News does not provide financial, investment or trading advice."
+              "Το AI βλέπει μόνο τα δεδομένα του οικονομικού καλεντάρ που του δίνουμε, και έχει εντολή να μην επινοεί ποτέ αριθμούς. Μπορεί ακόμα να κάνει λάθος σε γενικό πλαίσιο, όπως κάθε γλωσσικό μοντέλο. Έλεγχε πάντα τους αριθμούς στο γράφημα.",
+              "**Δεν θα σου πει τι να κάνεις trade.** Η επέκταση ζητά ρητά από το μοντέλο μόνο εξήγηση — καμία είσοδος, έξοδος, στόχος ή μέγεθος θέσης. Το Red News δεν παρέχει χρηματοοικονομικές, επενδυτικές ή συναλλακτικές συμβουλές."
             ]
           }
         ]
       },
       {
-        "heading": "Still stuck?",
+        "heading": "Έχεις ακόμα πρόβλημα;",
         "blocks": [
           {
             "type": "p",
-            "text": "Write to [support@rednews.app](mailto:support@rednews.app) or reach us on [Discord](https://discord.com/users/1172891214580830322) — tell us which provider you used and what the extension showed, and we will sort it out."
+            "text": "Γράψε στο [support@rednews.app](mailto:support@rednews.app) ή βρες μας στο [Discord](https://discord.com/users/1172891214580830322) — πες μας ποιον πάροχο χρησιμοποίησες και τι έδειξε η επέκταση, και θα το λύσουμε."
           }
         ]
       }

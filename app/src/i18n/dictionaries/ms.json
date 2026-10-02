@@ -36,8 +36,8 @@
       "title": "Selamat datang ke kelab"
     },
     "ai": {
-      "title": "Connect your own AI",
-      "description": "How to get a free API key from Google Gemini, Groq or OpenRouter and connect it to the Red News extension for AI explanations of economic releases."
+      "title": "Sambungkan AI anda sendiri",
+      "description": "Cara mendapatkan kunci API percuma daripada Google Gemini, Groq atau OpenRouter dan menyambungkannya ke sambungan Red News untuk penjelasan AI bagi keluaran data ekonomi."
     }
   },
   "nav": {
@@ -706,100 +706,100 @@
     "secondary": "Lihat kalendar minggu ini"
   },
   "ai": {
-    "title": "Connect your own AI",
-    "updated": "Last updated: 2 October 2026",
-    "intro": "Red News can explain any economic release in plain language, in your own interface language. Open the extension, find an event in the list and press the ✨ button next to it. You get a short briefing: what the indicator measures, what the forecast and the previous prints were, and what a higher or lower than expected result usually means for that currency.",
+    "title": "Sambungkan AI anda sendiri",
+    "updated": "Kemas kini terakhir: 2 Oktober 2026",
+    "intro": "Red News boleh menjelaskan sebarang keluaran data ekonomi dalam bahasa yang mudah, dalam bahasa antara muka anda sendiri. Buka sambungan tersebut, cari satu acara dalam senarai dan tekan butang ✨ di sebelahnya. Anda akan mendapat ringkasan ringkas: apa yang diukur oleh penunjuk tersebut, apa ramalan dan bacaan sebelumnya, dan apa maksudnya biasanya bagi mata wang tersebut jika keputusan lebih tinggi atau lebih rendah daripada jangkaan.",
     "sections": [
       {
-        "heading": "How it works",
+        "heading": "Cara ia berfungsi",
         "blocks": [
           {
             "type": "p",
-            "text": "The explanation is written by an AI provider that **you** choose and connect with your own **API key**. Red News never sees your key and never sees the answers — your browser talks to the provider directly. Today you can connect **Google Gemini**, **Groq** or **OpenRouter**, and all three have a free tier that is more than enough for reading a few releases a day."
+            "text": "Penjelasan ini ditulis oleh penyedia AI yang **anda** pilih dan sambungkan sendiri dengan **kunci API** anda. Red News tidak pernah melihat kunci anda dan tidak pernah melihat jawapannya — pelayar anda berkomunikasi terus dengan penyedia tersebut. Hari ini anda boleh menyambungkan **Google Gemini**, **Groq** atau **OpenRouter**, dan ketiga-tiganya mempunyai tingkat percuma yang lebih daripada cukup untuk membaca beberapa keluaran data sehari."
           },
           {
             "type": "note",
-            "text": "An API key is not a ChatGPT or Gemini subscription. A paid chatbot plan (ChatGPT Plus, Gemini Advanced, Claude Pro…) only unlocks the chat website or app — it gives you nothing to paste here. An API key is a separate, free-to-create string of characters, taken from the provider’s developer console, that lets your own software send requests. It looks something like `AIza…`, `gsk_…` or `sk-or-v1-…`."
+            "text": "Kunci API bukanlah subscription ChatGPT atau Gemini. Pelan chatbot berbayar (ChatGPT Plus, Gemini Advanced, Claude Pro…) hanya membuka akses ke laman web atau aplikasi chat — ia tidak memberikan apa-apa untuk anda tampal di sini. Kunci API ialah rentetan aksara yang berasingan dan percuma untuk dicipta, diambil daripada konsol pembangun penyedia tersebut, yang membolehkan perisian anda sendiri menghantar permintaan. Bentuknya kira-kira seperti `AIza…`, `gsk_…` atau `sk-or-v1-…`."
           }
         ]
       },
       {
-        "heading": "What you need",
+        "heading": "Apa yang anda perlukan",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The Red News extension, signed in with **Premium** (or an active trial) — AI explanations are a Premium feature.",
-              "A free account with one of the three providers below, and an API key created in its console."
+              "Sambungan Red News, log masuk dengan **Premium** (atau percubaan yang aktif) — penjelasan AI adalah ciri Premium.",
+              "Akaun percuma dengan salah satu daripada tiga penyedia di bawah, dan kunci API yang dicipta dalam konsolnya."
             ]
           }
         ]
       },
       {
-        "heading": "1. Get a key from Google Gemini",
+        "heading": "1. Dapatkan kunci daripada Google Gemini",
         "blocks": [
           {
             "type": "p",
-            "text": "The easiest start: no card required, and Google’s fast \"Flash\" models answer in a second or two."
+            "text": "Permulaan paling mudah: tiada kad diperlukan, dan model \"Flash\" Google yang pantas menjawab dalam satu atau dua saat."
           },
           {
             "type": "ol",
             "items": [
-              "Open [aistudio.google.com/apikey](https://aistudio.google.com/apikey) and sign in with a Google account.",
-              "Press **Create API key** and pick (or let Google create) a project.",
-              "Copy the key — it begins with `AIza`. You can always come back to this page to copy it again."
+              "Buka [aistudio.google.com/apikey](https://aistudio.google.com/apikey) dan log masuk dengan akaun Google.",
+              "Tekan **Create API key** dan pilih (atau biarkan Google mencipta) satu projek.",
+              "Salin kunci tersebut — ia bermula dengan `AIza`. Anda boleh sentiasa kembali ke halaman ini untuk menyalinnya semula."
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: on Google’s **free** tier, your prompts and the answers may be used by Google to improve its products and may be reviewed by humans. On the paid tier they are not. If that matters to you, use Groq, or add billing to the Google project. Current limits and prices: [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)."
+            "text": "Perlu diketahui: pada tingkat **percuma** Google, gesaan dan jawapan anda mungkin digunakan oleh Google untuk menambah baik produknya dan mungkin disemak oleh manusia. Pada tingkat berbayar, ini tidak berlaku. Jika ini penting bagi anda, gunakan Groq, atau tambahkan pengebilan pada projek Google anda. Had dan harga semasa: [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)."
           }
         ]
       },
       {
-        "heading": "2. Get a key from Groq",
+        "heading": "2. Dapatkan kunci daripada Groq",
         "blocks": [
           {
             "type": "p",
-            "text": "**Groq is not Grok.** Groq (spelled with a q) is an inference company that runs open models such as Llama extremely fast; Grok (spelled with a k) is xAI’s chatbot and is not supported here."
+            "text": "**Groq bukan Grok.** Groq (dieja dengan q) ialah syarikat inferens yang menjalankan model terbuka seperti Llama dengan sangat pantas; Grok (dieja dengan k) ialah chatbot milik xAI dan tidak disokong di sini."
           },
           {
             "type": "ol",
             "items": [
-              "Open [console.groq.com/keys](https://console.groq.com/keys) and sign in (Google, GitHub or email).",
-              "Press **Create API Key**, give it a name such as Red News.",
-              "Copy the key — it begins with `gsk_`. Groq shows it **only once**, so paste it into the extension straight away."
+              "Buka [console.groq.com/keys](https://console.groq.com/keys) dan log masuk (Google, GitHub atau e-mel).",
+              "Tekan **Create API Key**, berikan nama seperti Red News.",
+              "Salin kunci tersebut — ia bermula dengan `gsk_`. Groq hanya memaparkannya **sekali sahaja**, jadi tampalkannya ke dalam sambungan dengan segera."
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: Groq states that it does not retain or train on API prompts and outputs by default. Free-tier request limits are published here: [Groq rate limits](https://console.groq.com/docs/rate-limits)."
+            "text": "Perlu diketahui: Groq menyatakan bahawa secara lalai ia tidak menyimpan atau melatih model menggunakan gesaan dan output API. Had permintaan tingkat percuma diterbitkan di sini: [Groq rate limits](https://console.groq.com/docs/rate-limits)."
           }
         ]
       },
       {
-        "heading": "3. Get a key from OpenRouter",
+        "heading": "3. Dapatkan kunci daripada OpenRouter",
         "blocks": [
           {
             "type": "p",
-            "text": "OpenRouter is a single door to hundreds of models from many vendors: one key, one account, and you switch models from a dropdown instead of signing up everywhere. Some models are free to use; the rest are pay-as-you-go from a prepaid balance. The trade-off is that your request passes through OpenRouter on its way to the model vendor."
+            "text": "OpenRouter ialah satu pintu kepada beratus-ratus model daripada pelbagai vendor: satu kunci, satu akaun, dan anda menukar model daripada senarai lungsur dan bukan mendaftar di merata tempat. Sesetengah model percuma digunakan; selebihnya bayar-mengikut-guna daripada baki prabayar. Pertukarannya ialah permintaan anda melalui OpenRouter dalam perjalanannya ke vendor model tersebut."
           },
           {
             "type": "ol",
             "items": [
-              "Open [openrouter.ai/keys](https://openrouter.ai/keys) and sign in.",
-              "Press **Create key** and copy it — it begins with `sk-or-v1-`.",
-              "Optional but recommended: in your OpenRouter account privacy settings, decide whether requests may be routed to providers that train on your data ([privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging))."
+              "Buka [openrouter.ai/keys](https://openrouter.ai/keys) dan log masuk.",
+              "Tekan **Create key** dan salinnya — ia bermula dengan `sk-or-v1-`.",
+              "Pilihan tetapi disyorkan: dalam tetapan privasi akaun OpenRouter anda, tentukan sama ada permintaan boleh dihalakan kepada penyedia yang melatih model menggunakan data anda ([privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging))."
             ]
           }
         ]
       },
       {
-        "heading": "Which model should I choose?",
+        "heading": "Model yang mana patut saya pilih?",
         "blocks": [
           {
             "type": "p",
-            "text": "When you press **Connect**, Red News asks your provider which models your key can use and preselects a sensible one, so you can simply leave the dropdown alone. If you want to change it, the job here is small — a short, grounded explanation of one economic release — so a **small, fast, cheap** model is the right choice. Big \"reasoning\", \"pro\" or \"deep research\" models are slower, cost far more and do not write a better three-paragraph briefing."
+            "text": "Apabila anda menekan **Connect**, Red News bertanya kepada penyedia anda model yang boleh digunakan oleh kunci anda dan memilih terlebih dahulu satu yang sesuai, jadi anda boleh terus membiarkan senarai lungsur tersebut tanpa diubah. Jika anda mahu menukarnya, tugas di sini kecil — penjelasan ringkas dan berasaskan fakta bagi satu keluaran data ekonomi — jadi model yang **kecil, pantas dan murah** adalah pilihan yang betul. Model besar \"reasoning\", \"pro\" atau \"deep research\" lebih perlahan, kosnya jauh lebih tinggi dan tidak menghasilkan ringkasan tiga perenggan yang lebih baik."
           },
           {
             "type": "p",
@@ -808,9 +808,9 @@
           {
             "type": "ul",
             "items": [
-              "`gemini-2.5-flash-lite` — recommended. Fastest and cheapest; ideal for this task. Preselected by the extension.",
-              "`gemini-2.5-flash` — a little slower, slightly richer wording. Good second choice.",
-              "Avoid `…-pro`, and anything with `preview`, `exp`, `thinking`, `deep-research` or `antigravity` in the name: slow, expensive, and preview models can disappear without warning."
+              "`gemini-2.5-flash-lite` — disyorkan. Paling pantas dan paling murah; sesuai untuk tugas ini. Dipilih terlebih dahulu oleh sambungan.",
+              "`gemini-2.5-flash` — sedikit lebih perlahan, bahasanya sedikit lebih kaya. Pilihan kedua yang baik.",
+              "Elakkan `…-pro`, dan apa-apa yang mengandungi `preview`, `exp`, `thinking`, `deep-research` atau `antigravity` dalam namanya: perlahan, mahal, dan model preview boleh hilang tanpa amaran."
             ]
           },
           {
@@ -820,9 +820,9 @@
           {
             "type": "ul",
             "items": [
-              "A Llama 3.3 70B model (e.g. `llama-3.3-70b-versatile`) — recommended. Strong general knowledge, answers in a second. Preselected by the extension.",
-              "A smaller Llama 8B model — even faster and with more generous free limits, but noticeably shallower explanations.",
-              "Avoid speech, vision and guard models — they are filtered out of the dropdown anyway."
+              "Model Llama 3.3 70B (contohnya `llama-3.3-70b-versatile`) — disyorkan. Pengetahuan umum yang kukuh, menjawab dalam satu saat. Dipilih terlebih dahulu oleh sambungan.",
+              "Model Llama 8B yang lebih kecil — lebih pantas lagi dan dengan had percuma yang lebih longgar, tetapi penjelasannya jelas kurang mendalam.",
+              "Elakkan model pertuturan, penglihatan dan guard — model ini tetap ditapis daripada senarai lungsur."
             ]
           },
           {
@@ -832,94 +832,94 @@
           {
             "type": "ul",
             "items": [
-              "Any model whose name ends in `:free` — recommended to start. No balance needed. The extension preselects a free Llama or Gemini variant when one is available.",
-              "A paid small model (a \"flash\", \"mini\" or \"lite\" variant of any vendor) if you top up your balance and want higher limits and steadier availability.",
-              "Avoid flagship and reasoning models — you would pay several times more per explanation for no benefit here."
+              "Mana-mana model yang namanya berakhir dengan `:free` — disyorkan untuk permulaan. Tidak perlu baki. Sambungan akan memilih terlebih dahulu varian Llama atau Gemini percuma jika tersedia.",
+              "Model kecil berbayar (varian \"flash\", \"mini\" atau \"lite\" daripada mana-mana vendor) jika anda menambah baki dan mahukan had yang lebih tinggi serta ketersediaan yang lebih stabil.",
+              "Elakkan model unggulan dan reasoning — anda akan membayar beberapa kali ganda lebih mahal bagi setiap penjelasan tanpa sebarang faedah di sini."
             ]
           },
           {
             "type": "note",
-            "text": "Free tiers are rate-limited, not unlimited. If you read a lot of releases in one sitting you may see \"Too many requests — try again in a minute.\" Red News keeps each answer for 7 days, so re-opening the same event costs nothing."
+            "text": "Tingkat percuma dihadkan kadar, bukan tanpa had. Jika anda membaca banyak keluaran data dalam satu masa, anda mungkin melihat \"Terlalu banyak permintaan — cuba lagi dalam seminit.\" Red News menyimpan setiap jawapan selama 7 hari, jadi membuka semula acara yang sama tidak memerlukan apa-apa kos."
           }
         ]
       },
       {
-        "heading": "Connect it in the extension",
+        "heading": "Sambungkannya dalam sambungan tersebut",
         "blocks": [
           {
             "type": "ol",
             "items": [
-              "Click the Red News icon in Chrome and scroll down to **✨ AI explanations**.",
-              "Pick your **Provider**.",
-              "Paste the key into **API key** (the 👁 button shows or hides what you typed).",
-              "Press **Connect**. Chrome asks for permission to contact that provider’s address — allow it. This is the one-off permission the extension needs to send your requests; if the popup closes while the Chrome prompt is open, just open the extension again and press Connect once more.",
-              "The status turns **Connected ✓** and the **Model** dropdown fills up. Pick another model if you like.",
-              "Open the news list and press **✨** next to any event."
+              "Klik ikon Red News dalam Chrome dan tatal ke bawah ke **✨ AI explanations**.",
+              "Pilih **Provider** anda.",
+              "Tampal kunci ke dalam **API key** (butang 👁 memaparkan atau menyembunyikan apa yang anda taip).",
+              "Tekan **Connect**. Chrome akan meminta kebenaran untuk menghubungi alamat penyedia tersebut — benarkannya. Ini adalah kebenaran sekali sahaja yang diperlukan oleh sambungan untuk menghantar permintaan anda; jika pop-up tertutup semasa gesaan Chrome masih terbuka, buka sambungan sekali lagi dan tekan Connect sekali lagi.",
+              "Status bertukar kepada **Connected ✓** dan senarai lungsur **Model** terisi. Pilih model lain jika anda mahu.",
+              "Buka senarai berita dan tekan **✨** di sebelah mana-mana acara."
             ]
           },
           {
             "type": "p",
-            "text": "To disconnect, press **Remove key**. The key is deleted from your browser immediately. Chrome keeps the site permission you granted; you can revoke it in `chrome://extensions` → Red News → Details → Site access, or simply leave it, as nothing is sent without a key."
+            "text": "Untuk memutuskan sambungan, tekan **Remove key**. Kunci tersebut dipadam daripada pelayar anda dengan segera. Chrome mengekalkan kebenaran laman yang anda berikan; anda boleh menariknya balik dalam `chrome://extensions` → Red News → Details → Site access, atau biarkan saja, kerana tiada apa-apa dihantar tanpa kunci."
           }
         ]
       },
       {
-        "heading": "What is sent, and where",
+        "heading": "Apa yang dihantar, dan ke mana",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**Your key never leaves your browser.** It is stored in the extension’s local storage on this computer only — never synced, never sent to Red News servers.",
-              "**Requests go straight from your browser to the provider you chose.** They do not pass through our backend, and we cannot read the questions or the answers.",
-              "**What the request contains:** the event title, its currency, impact level and scheduled time, its forecast, previous and actual values, up to a handful of earlier prints of the same release, and the language you want the answer in. No account details, no email, no chart data, no browsing history.",
-              "**Your provider’s own privacy policy applies** to what it does with that request — see the notes for each provider above. Our own policy is in the [Privacy Policy](/privacy)."
+              "**Kunci anda tidak pernah meninggalkan pelayar anda.** Ia disimpan dalam storan tempatan sambungan pada komputer ini sahaja — tidak pernah disegerakkan, tidak pernah dihantar ke pelayan Red News.",
+              "**Permintaan pergi terus daripada pelayar anda ke penyedia yang anda pilih.** Ia tidak melalui bahagian belakang (backend) kami, dan kami tidak dapat membaca soalan atau jawapannya.",
+              "**Apa yang terkandung dalam permintaan:** tajuk acara, mata wangnya, tahap impak dan masa berjadualnya, ramalannya, nilai sebelumnya dan sebenar, sehingga beberapa bacaan terdahulu bagi keluaran data yang sama, dan bahasa yang anda mahukan untuk jawapan. Tiada butiran akaun, tiada e-mel, tiada data carta, tiada sejarah penyemakan imbas.",
+              "**Dasar privasi penyedia anda sendiri terpakai** terhadap apa yang dilakukannya dengan permintaan tersebut — lihat nota untuk setiap penyedia di atas. Dasar kami sendiri terdapat dalam [Dasar Privasi](/privacy)."
             ]
           }
         ]
       },
       {
-        "heading": "What will it cost?",
+        "heading": "Berapakah kosnya?",
         "blocks": [
           {
             "type": "p",
-            "text": "One explanation is a very small request — roughly a page of text in, a short paragraph out. On a free tier it costs nothing; on a paid small model it is a fraction of a cent. You pay your AI provider directly, if at all — never through Red News. Your Red News Premium subscription does not include AI usage, and does not charge for it either."
+            "text": "Satu penjelasan adalah permintaan yang sangat kecil — lebih kurang satu halaman teks masuk, satu perenggan ringkas keluar. Pada tingkat percuma, ia tidak dikenakan kos; pada model kecil berbayar, ia adalah sebahagian kecil daripada satu sen. Anda membayar penyedia AI anda secara terus, jika ada pembayaran pun — tidak sekali-kali melalui Red News. Subscription Red News Premium anda tidak termasuk penggunaan AI, dan juga tidak mengenakan bayaran untuknya."
           }
         ]
       },
       {
-        "heading": "If something goes wrong",
+        "heading": "Jika sesuatu tidak berjalan lancar",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**\"The provider rejected this key.\"** — The key was mistyped, truncated or deleted in the console, or the wrong provider is selected in the dropdown. Create a fresh key and paste it again. For Gemini, also check that the Generative Language API is enabled on the project the key belongs to.",
-              "**\"Too many requests — try again in a minute.\"** — You hit the free-tier rate limit. Wait a minute, switch to a smaller model, or add billing at your provider.",
-              "**\"Could not reach the AI provider.\"** — No connection, or the provider’s API is blocked on your network (corporate proxy, VPN, firewall) or temporarily down.",
-              "**\"Access to the provider was not allowed.\"** — The Chrome permission prompt was dismissed. Press Connect again and allow it.",
-              "**\"This key has no suitable chat models.\"** — The key is restricted, or the account has no model access yet. Check the provider console; on OpenRouter, some models require a topped-up balance.",
-              "**The ✨ buttons are not there.** AI explanations are Premium — sign in and make sure your plan is active, then reopen the extension."
+              "**\"Penyedia menolak kunci ini.\"** — Kunci tersebut salah ditaip, terpotong atau dipadam dalam konsol, atau penyedia yang salah dipilih dalam senarai lungsur. Cipta kunci baharu dan tampal semula. Untuk Gemini, periksa juga sama ada Generative Language API diaktifkan pada projek yang kunci tersebut dimiliki.",
+              "**\"Terlalu banyak permintaan — cuba lagi dalam seminit.\"** — Anda mencapai had kadar tingkat percuma. Tunggu seminit, tukar kepada model yang lebih kecil, atau tambahkan pengebilan pada penyedia anda.",
+              "**\"Tidak dapat menghubungi penyedia AI.\"** — Tiada sambungan, atau API penyedia disekat pada rangkaian anda (proksi korporat, VPN, firewall) atau mati sementara.",
+              "**\"Akses kepada penyedia tidak dibenarkan.\"** — Gesaan kebenaran Chrome telah ditolak. Tekan Connect sekali lagi dan benarkannya.",
+              "**\"Kunci ini tiada model sembang yang sesuai.\"** — Kunci tersebut dihadkan, atau akaun masih belum mempunyai akses model. Periksa konsol penyedia; pada OpenRouter, sesetengah model memerlukan baki yang telah ditambah.",
+              "**Butang ✨ tiada.** Penjelasan AI adalah ciri Premium — log masuk dan pastikan pelan anda aktif, kemudian buka semula sambungan tersebut."
             ]
           }
         ]
       },
       {
-        "heading": "Limits worth knowing",
+        "heading": "Had yang perlu diketahui",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The AI only sees the calendar data we hand it, and it is instructed never to invent figures. It still can be wrong about general context, like any language model. Always check the numbers on the chart.",
-              "**It will not tell you what to trade.** The extension explicitly asks the model for explanation only — no entries, exits, targets or position sizes. Red News does not provide financial, investment or trading advice."
+              "AI hanya melihat data kalendar yang kami berikan, dan ia diarahkan untuk tidak sekali-kali mereka-reka angka. Ia masih boleh tersilap tentang konteks umum, seperti mana-mana model bahasa. Sentiasa semak nombor pada carta.",
+              "**Ia tidak akan memberitahu anda apa yang perlu didagangkan.** Sambungan secara jelas meminta model untuk penjelasan sahaja — tiada kemasukan, keluar, sasaran atau saiz kedudukan. Red News tidak menyediakan nasihat kewangan, pelaburan atau dagangan."
             ]
           }
         ]
       },
       {
-        "heading": "Still stuck?",
+        "heading": "Masih tersekat?",
         "blocks": [
           {
             "type": "p",
-            "text": "Write to [support@rednews.app](mailto:support@rednews.app) or reach us on [Discord](https://discord.com/users/1172891214580830322) — tell us which provider you used and what the extension showed, and we will sort it out."
+            "text": "Tulis kepada [support@rednews.app](mailto:support@rednews.app) atau hubungi kami di [Discord](https://discord.com/users/1172891214580830322) — beritahu kami penyedia yang anda gunakan dan apa yang dipaparkan oleh sambungan, dan kami akan membantu menyelesaikannya."
           }
         ]
       }

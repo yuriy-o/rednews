@@ -36,8 +36,8 @@
       "title": "Kulübe hoş geldin"
     },
     "ai": {
-      "title": "Connect your own AI",
-      "description": "How to get a free API key from Google Gemini, Groq or OpenRouter and connect it to the Red News extension for AI explanations of economic releases."
+      "title": "Kendi AI'ını bağla",
+      "description": "Google Gemini, Groq veya OpenRouter'dan ücretsiz bir API anahtarı nasıl alınır ve ekonomik veri açıklamalarını AI ile görmek için Red News uzantısına nasıl bağlanır."
     }
   },
   "nav": {
@@ -706,100 +706,100 @@
     "secondary": "Bu haftanın takvimine bak"
   },
   "ai": {
-    "title": "Connect your own AI",
-    "updated": "Last updated: 2 October 2026",
-    "intro": "Red News can explain any economic release in plain language, in your own interface language. Open the extension, find an event in the list and press the ✨ button next to it. You get a short briefing: what the indicator measures, what the forecast and the previous prints were, and what a higher or lower than expected result usually means for that currency.",
+    "title": "Kendi AI'ını bağla",
+    "updated": "Son güncelleme: 2 Ekim 2026",
+    "intro": "Red News, herhangi bir ekonomik veriyi kendi arayüz dilinde, sade bir dille açıklayabilir. Uzantıyı aç, listeden bir olay bul ve yanındaki ✨ düğmesine bas. Göstergenin ne ölçtüğü, tahmin ve önceki değerin ne olduğu ve beklenenden yüksek veya düşük bir sonucun o para birimi için genellikle ne anlama geldiğine dair kısa bir özet alırsın.",
     "sections": [
       {
-        "heading": "How it works",
+        "heading": "Nasıl çalışır",
         "blocks": [
           {
             "type": "p",
-            "text": "The explanation is written by an AI provider that **you** choose and connect with your own **API key**. Red News never sees your key and never sees the answers — your browser talks to the provider directly. Today you can connect **Google Gemini**, **Groq** or **OpenRouter**, and all three have a free tier that is more than enough for reading a few releases a day."
+            "text": "Açıklamayı, **senin** seçip kendi **API anahtarın** ile bağladığın bir AI sağlayıcısı yazar. Red News anahtarını hiçbir zaman görmez ve yanıtları da hiçbir zaman görmez — tarayıcın sağlayıcıyla doğrudan konuşur. Şu an **Google Gemini**, **Groq** veya **OpenRouter** bağlayabilirsin; üçünün de günde birkaç veriyi okumak için gayet yeterli ücretsiz bir katmanı var."
           },
           {
             "type": "note",
-            "text": "An API key is not a ChatGPT or Gemini subscription. A paid chatbot plan (ChatGPT Plus, Gemini Advanced, Claude Pro…) only unlocks the chat website or app — it gives you nothing to paste here. An API key is a separate, free-to-create string of characters, taken from the provider’s developer console, that lets your own software send requests. It looks something like `AIza…`, `gsk_…` or `sk-or-v1-…`."
+            "text": "API anahtarı, ChatGPT veya Gemini aboneliği değildir. Ücretli bir sohbet botu planı (ChatGPT Plus, Gemini Advanced, Claude Pro…) sadece sohbet sitesini veya uygulamasını açar — buraya yapıştırabileceğin hiçbir şey vermez. API anahtarı, sağlayıcının geliştirici konsolundan alınan, ücretsiz oluşturulan, kendi yazılımının istek göndermesini sağlayan ayrı bir karakter dizisidir. Şuna benzer bir şey görürsün: `AIza…`, `gsk_…` veya `sk-or-v1-…`."
           }
         ]
       },
       {
-        "heading": "What you need",
+        "heading": "Neye ihtiyacın var",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The Red News extension, signed in with **Premium** (or an active trial) — AI explanations are a Premium feature.",
-              "A free account with one of the three providers below, and an API key created in its console."
+              "**Premium** ile (veya aktif bir deneme süresiyle) giriş yapılmış Red News uzantısı — AI açıklamaları bir Premium özelliğidir.",
+              "Aşağıdaki üç sağlayıcıdan birinde ücretsiz bir hesap ve o sağlayıcının konsolunda oluşturulmuş bir API anahtarı."
             ]
           }
         ]
       },
       {
-        "heading": "1. Get a key from Google Gemini",
+        "heading": "1. Google Gemini'dan anahtar al",
         "blocks": [
           {
             "type": "p",
-            "text": "The easiest start: no card required, and Google’s fast \"Flash\" models answer in a second or two."
+            "text": "En kolay başlangıç: kart gerekmez, ve Google'ın hızlı \"Flash\" modelleri bir iki saniye içinde yanıt verir."
           },
           {
             "type": "ol",
             "items": [
-              "Open [aistudio.google.com/apikey](https://aistudio.google.com/apikey) and sign in with a Google account.",
-              "Press **Create API key** and pick (or let Google create) a project.",
-              "Copy the key — it begins with `AIza`. You can always come back to this page to copy it again."
+              "[aistudio.google.com/apikey](https://aistudio.google.com/apikey) adresini aç ve bir Google hesabıyla giriş yap.",
+              "**API Anahtarı Oluştur**'a bas ve bir proje seç (veya Google'ın oluşturmasına izin ver).",
+              "Anahtarı kopyala — `AIza` ile başlar. Bu sayfaya her zaman geri gelip tekrar kopyalayabilirsin."
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: on Google’s **free** tier, your prompts and the answers may be used by Google to improve its products and may be reviewed by humans. On the paid tier they are not. If that matters to you, use Groq, or add billing to the Google project. Current limits and prices: [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)."
+            "text": "Bilmekte fayda var: Google'ın **ücretsiz** katmanında, istemlerin ve yanıtların Google tarafından ürünlerini geliştirmek için kullanılabilir ve insanlar tarafından incelenebilir. Ücretli katmanda bu geçerli değildir. Bu senin için önemliyse, Groq kullan veya Google projene faturalandırma ekle. Güncel limitler ve fiyatlar: [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing)."
           }
         ]
       },
       {
-        "heading": "2. Get a key from Groq",
+        "heading": "2. Groq'tan anahtar al",
         "blocks": [
           {
             "type": "p",
-            "text": "**Groq is not Grok.** Groq (spelled with a q) is an inference company that runs open models such as Llama extremely fast; Grok (spelled with a k) is xAI’s chatbot and is not supported here."
+            "text": "**Groq, Grok değildir.** Groq (q ile yazılır) Llama gibi açık modelleri son derece hızlı çalıştıran bir çıkarım (inference) şirketidir; Grok (k ile yazılır) ise xAI'nin sohbet botudur ve burada desteklenmez."
           },
           {
             "type": "ol",
             "items": [
-              "Open [console.groq.com/keys](https://console.groq.com/keys) and sign in (Google, GitHub or email).",
-              "Press **Create API Key**, give it a name such as Red News.",
-              "Copy the key — it begins with `gsk_`. Groq shows it **only once**, so paste it into the extension straight away."
+              "[console.groq.com/keys](https://console.groq.com/keys) adresini aç ve giriş yap (Google, GitHub veya e-posta).",
+              "**API Anahtarı Oluştur**'a bas, Red News gibi bir ad ver.",
+              "Anahtarı kopyala — `gsk_` ile başlar. Groq bunu **sadece bir kez** gösterir, bu yüzden hemen uzantıya yapıştır."
             ]
           },
           {
             "type": "p",
-            "text": "Worth knowing: Groq states that it does not retain or train on API prompts and outputs by default. Free-tier request limits are published here: [Groq rate limits](https://console.groq.com/docs/rate-limits)."
+            "text": "Bilmekte fayda var: Groq, varsayılan olarak API istemlerini ve çıktılarını saklamadığını veya bunlarla model eğitmediğini belirtiyor. Ücretsiz katman istek limitleri burada yayınlanır: [Groq rate limits](https://console.groq.com/docs/rate-limits)."
           }
         ]
       },
       {
-        "heading": "3. Get a key from OpenRouter",
+        "heading": "3. OpenRouter'dan anahtar al",
         "blocks": [
           {
             "type": "p",
-            "text": "OpenRouter is a single door to hundreds of models from many vendors: one key, one account, and you switch models from a dropdown instead of signing up everywhere. Some models are free to use; the rest are pay-as-you-go from a prepaid balance. The trade-off is that your request passes through OpenRouter on its way to the model vendor."
+            "text": "OpenRouter, birçok sağlayıcıdan yüzlerce modele açılan tek bir kapıdır: tek anahtar, tek hesap, ve her yere kayıt olmak yerine modelleri bir açılır menüden değiştirirsin. Bazı modeller ücretsizdir; diğerleri ön ödemeli bir bakiyeden kullandığın kadar öde şeklinde çalışır. Buradaki bedel, isteğinin model sağlayıcısına giderken OpenRouter üzerinden geçmesidir."
           },
           {
             "type": "ol",
             "items": [
-              "Open [openrouter.ai/keys](https://openrouter.ai/keys) and sign in.",
-              "Press **Create key** and copy it — it begins with `sk-or-v1-`.",
-              "Optional but recommended: in your OpenRouter account privacy settings, decide whether requests may be routed to providers that train on your data ([privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging))."
+              "[openrouter.ai/keys](https://openrouter.ai/keys) adresini aç ve giriş yap.",
+              "**Anahtar Oluştur**'a bas ve kopyala — `sk-or-v1-` ile başlar.",
+              "İsteğe bağlı ama önerilir: OpenRouter hesabının gizlilik ayarlarında, isteklerin verilerin üzerinde eğitim yapan sağlayıcılara yönlendirilip yönlendirilemeyeceğine karar ver ([privacy & logging](https://openrouter.ai/docs/features/privacy-and-logging))."
             ]
           }
         ]
       },
       {
-        "heading": "Which model should I choose?",
+        "heading": "Hangi modeli seçmeliyim?",
         "blocks": [
           {
             "type": "p",
-            "text": "When you press **Connect**, Red News asks your provider which models your key can use and preselects a sensible one, so you can simply leave the dropdown alone. If you want to change it, the job here is small — a short, grounded explanation of one economic release — so a **small, fast, cheap** model is the right choice. Big \"reasoning\", \"pro\" or \"deep research\" models are slower, cost far more and do not write a better three-paragraph briefing."
+            "text": "**Bağlan**'a bastığında Red News, sağlayıcına anahtarının hangi modelleri kullanabileceğini sorar ve mantıklı bir model önceden seçer; böylece açılır menüye dokunmana gerek kalmaz. Değiştirmek istersen, buradaki iş küçüktür — bir ekonomik veri hakkında kısa, verilere dayalı bir açıklama — bu yüzden doğru seçim **küçük, hızlı ve ucuz** bir modeldir. Büyük \"reasoning\", \"pro\" veya \"deep research\" modelleri daha yavaştır, çok daha fazlaya mal olur ve üç paragraflık özeti daha iyi yazmaz."
           },
           {
             "type": "p",
@@ -808,9 +808,9 @@
           {
             "type": "ul",
             "items": [
-              "`gemini-2.5-flash-lite` — recommended. Fastest and cheapest; ideal for this task. Preselected by the extension.",
-              "`gemini-2.5-flash` — a little slower, slightly richer wording. Good second choice.",
-              "Avoid `…-pro`, and anything with `preview`, `exp`, `thinking`, `deep-research` or `antigravity` in the name: slow, expensive, and preview models can disappear without warning."
+              "`gemini-2.5-flash-lite` — önerilen. En hızlı ve en ucuzu; bu iş için ideal. Uzantı tarafından önceden seçilir.",
+              "`gemini-2.5-flash` — biraz daha yavaş, biraz daha zengin bir dil kullanır. İyi bir ikinci seçenek.",
+              "`…-pro`'dan ve adında `preview`, `exp`, `thinking`, `deep-research` veya `antigravity` geçen her şeyden kaçın: yavaş, pahalıdır ve preview modelleri haber vermeden kaybolabilir."
             ]
           },
           {
@@ -820,9 +820,9 @@
           {
             "type": "ul",
             "items": [
-              "A Llama 3.3 70B model (e.g. `llama-3.3-70b-versatile`) — recommended. Strong general knowledge, answers in a second. Preselected by the extension.",
-              "A smaller Llama 8B model — even faster and with more generous free limits, but noticeably shallower explanations.",
-              "Avoid speech, vision and guard models — they are filtered out of the dropdown anyway."
+              "Bir Llama 3.3 70B modeli (örn. `llama-3.3-70b-versatile`) — önerilen. Güçlü genel bilgi, bir saniyede yanıt verir. Uzantı tarafından önceden seçilir.",
+              "Daha küçük bir Llama 8B modeli — daha da hızlı ve daha cömert ücretsiz limitlerle, ama fark edilir şekilde daha yüzeysel açıklamalar.",
+              "Konuşma, görüntü ve \"guard\" modellerinden kaçın — bunlar zaten açılır menüden filtrelenir."
             ]
           },
           {
@@ -832,94 +832,94 @@
           {
             "type": "ul",
             "items": [
-              "Any model whose name ends in `:free` — recommended to start. No balance needed. The extension preselects a free Llama or Gemini variant when one is available.",
-              "A paid small model (a \"flash\", \"mini\" or \"lite\" variant of any vendor) if you top up your balance and want higher limits and steadier availability.",
-              "Avoid flagship and reasoning models — you would pay several times more per explanation for no benefit here."
+              "Adı `:free` ile biten herhangi bir model — başlamak için önerilir. Bakiye gerekmez. Uzantı, mevcutsa ücretsiz bir Llama veya Gemini varyantını önceden seçer.",
+              "Bakiyeni doldurup daha yüksek limitler ve daha kararlı erişilebilirlik istersen, herhangi bir sağlayıcının ücretli küçük bir modeli (bir \"flash\", \"mini\" veya \"lite\" varyantı).",
+              "Amiral gemisi ve \"reasoning\" modellerinden kaçın — burada hiçbir fayda sağlamadan açıklama başına birkaç kat daha fazla ödersin."
             ]
           },
           {
             "type": "note",
-            "text": "Free tiers are rate-limited, not unlimited. If you read a lot of releases in one sitting you may see \"Too many requests — try again in a minute.\" Red News keeps each answer for 7 days, so re-opening the same event costs nothing."
+            "text": "Ücretsiz katmanların istek hızı sınırlıdır, sınırsız değildir. Bir oturumda çok fazla veri okursan \"Çok fazla istek — bir dakika sonra tekrar dene.\" mesajını görebilirsin. Red News her yanıtı 7 gün saklar, bu yüzden aynı olayı yeniden açmak hiçbir şeye mal olmaz."
           }
         ]
       },
       {
-        "heading": "Connect it in the extension",
+        "heading": "Uzantıda bağlan",
         "blocks": [
           {
             "type": "ol",
             "items": [
-              "Click the Red News icon in Chrome and scroll down to **✨ AI explanations**.",
-              "Pick your **Provider**.",
-              "Paste the key into **API key** (the 👁 button shows or hides what you typed).",
-              "Press **Connect**. Chrome asks for permission to contact that provider’s address — allow it. This is the one-off permission the extension needs to send your requests; if the popup closes while the Chrome prompt is open, just open the extension again and press Connect once more.",
-              "The status turns **Connected ✓** and the **Model** dropdown fills up. Pick another model if you like.",
-              "Open the news list and press **✨** next to any event."
+              "Chrome'da Red News simgesine tıkla ve aşağı kaydırıp **✨ AI açıklamaları**'na gel.",
+              "**Sağlayıcı**'nı seç.",
+              "Anahtarı **API anahtarı** alanına yapıştır (👁 düğmesi yazdığını gösterir veya gizler).",
+              "**Bağlan**'a bas. Chrome, o sağlayıcının adresiyle iletişime geçmek için izin isteyecek — izin ver. Bu, uzantının isteklerini göndermesi için gereken tek seferlik bir izindir; Chrome istemi açıkken açılır pencere kapanırsa, uzantıyı tekrar aç ve Bağlan'a bir kez daha bas.",
+              "Durum **Bağlandı ✓** olur ve **Model** açılır menüsü dolar. İstersen başka bir model seç.",
+              "Haber listesini aç ve herhangi bir olayın yanındaki **✨**'ya bas."
             ]
           },
           {
             "type": "p",
-            "text": "To disconnect, press **Remove key**. The key is deleted from your browser immediately. Chrome keeps the site permission you granted; you can revoke it in `chrome://extensions` → Red News → Details → Site access, or simply leave it, as nothing is sent without a key."
+            "text": "Bağlantıyı kesmek için **Anahtarı kaldır**'a bas. Anahtar tarayıcından hemen silinir. Chrome verdiğin site iznini saklar; bunu `chrome://extensions` → Red News → Details → Site access üzerinden geri alabilirsin, veya anahtar olmadan hiçbir şey gönderilmediği için öylece bırakabilirsin."
           }
         ]
       },
       {
-        "heading": "What is sent, and where",
+        "heading": "Ne gönderilir, nereye",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**Your key never leaves your browser.** It is stored in the extension’s local storage on this computer only — never synced, never sent to Red News servers.",
-              "**Requests go straight from your browser to the provider you chose.** They do not pass through our backend, and we cannot read the questions or the answers.",
-              "**What the request contains:** the event title, its currency, impact level and scheduled time, its forecast, previous and actual values, up to a handful of earlier prints of the same release, and the language you want the answer in. No account details, no email, no chart data, no browsing history.",
-              "**Your provider’s own privacy policy applies** to what it does with that request — see the notes for each provider above. Our own policy is in the [Privacy Policy](/privacy)."
+              "**Anahtarın tarayıcından asla çıkmaz.** Yalnızca bu bilgisayardaki uzantının yerel depolama alanında saklanır — hiçbir zaman senkronize edilmez, hiçbir zaman Red News sunucularına gönderilmez.",
+              "**İstekler tarayıcından doğrudan seçtiğin sağlayıcıya gider.** Bizim altyapımızdan geçmezler ve soruları ya da yanıtları okuyamayız.",
+              "**İsteğin içeriği:** olayın başlığı, para birimi, etki seviyesi ve planlanan zamanı, tahmini, önceki ve gerçekleşen değeri, aynı verinin birkaç önceki değeri ve yanıtı almak istediğin dil. Hesap bilgisi yok, e-posta yok, grafik verisi yok, tarama geçmişi yok.",
+              "**Sağlayıcının kendi gizlilik politikası**, o isteğe ne yaptığı konusunda geçerlidir — yukarıdaki her sağlayıcı için notlara bak. Bizim kendi politikamız [Gizlilik Politikası](/privacy) sayfasında."
             ]
           }
         ]
       },
       {
-        "heading": "What will it cost?",
+        "heading": "Ne kadara gelir?",
         "blocks": [
           {
             "type": "p",
-            "text": "One explanation is a very small request — roughly a page of text in, a short paragraph out. On a free tier it costs nothing; on a paid small model it is a fraction of a cent. You pay your AI provider directly, if at all — never through Red News. Your Red News Premium subscription does not include AI usage, and does not charge for it either."
+            "text": "Bir açıklama çok küçük bir istektir — girişte kabaca bir sayfa metin, çıkışta kısa bir paragraf. Ücretsiz katmanda hiçbir şeye mal olmaz; ücretli küçük bir modelde ise bir sentin küçük bir kesridir. Ödeme yapıyorsan, doğrudan AI sağlayıcına ödersin — asla Red News üzerinden değil. Red News Premium aboneliğin AI kullanımını kapsamaz, ve bunun için de ücret almaz."
           }
         ]
       },
       {
-        "heading": "If something goes wrong",
+        "heading": "Bir şeyler ters giderse",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "**\"The provider rejected this key.\"** — The key was mistyped, truncated or deleted in the console, or the wrong provider is selected in the dropdown. Create a fresh key and paste it again. For Gemini, also check that the Generative Language API is enabled on the project the key belongs to.",
-              "**\"Too many requests — try again in a minute.\"** — You hit the free-tier rate limit. Wait a minute, switch to a smaller model, or add billing at your provider.",
-              "**\"Could not reach the AI provider.\"** — No connection, or the provider’s API is blocked on your network (corporate proxy, VPN, firewall) or temporarily down.",
-              "**\"Access to the provider was not allowed.\"** — The Chrome permission prompt was dismissed. Press Connect again and allow it.",
-              "**\"This key has no suitable chat models.\"** — The key is restricted, or the account has no model access yet. Check the provider console; on OpenRouter, some models require a topped-up balance.",
-              "**The ✨ buttons are not there.** AI explanations are Premium — sign in and make sure your plan is active, then reopen the extension."
+              "**\"Sağlayıcı bu anahtarı reddetti.\"** — Anahtar hatalı yazıldı, kısaltıldı veya konsolda silindi, ya da açılır menüde yanlış sağlayıcı seçili. Yeni bir anahtar oluştur ve tekrar yapıştır. Gemini için, anahtarın ait olduğu projede Generative Language API'nin etkin olduğunu da kontrol et.",
+              "**\"Çok fazla istek — bir dakika sonra tekrar dene.\"** — Ücretsiz katmanın hız limitine ulaştın. Bir dakika bekle, daha küçük bir modele geç veya sağlayıcında faturalandırma ekle.",
+              "**\"AI sağlayıcısına ulaşılamadı.\"** — Bağlantı yok, veya sağlayıcının API'si ağında engelli (kurumsal proxy, VPN, güvenlik duvarı) ya da geçici olarak çalışmıyor.",
+              "**\"Sağlayıcıya erişime izin verilmedi.\"** — Chrome izin istemi kapatıldı. Tekrar Bağlan'a bas ve izin ver.",
+              "**\"Bu anahtarın uygun sohbet modeli yok.\"** — Anahtar kısıtlı, veya hesabın henüz hiçbir modele erişimi yok. Sağlayıcının konsolunu kontrol et; OpenRouter'da bazı modeller yüklü bir bakiye gerektirir.",
+              "**✨ düğmeleri yok.** AI açıklamaları bir Premium özelliğidir — giriş yap, planının aktif olduğundan emin ol, sonra uzantıyı yeniden aç."
             ]
           }
         ]
       },
       {
-        "heading": "Limits worth knowing",
+        "heading": "Bilmekte fayda olan sınırlar",
         "blocks": [
           {
             "type": "ul",
             "items": [
-              "The AI only sees the calendar data we hand it, and it is instructed never to invent figures. It still can be wrong about general context, like any language model. Always check the numbers on the chart.",
-              "**It will not tell you what to trade.** The extension explicitly asks the model for explanation only — no entries, exits, targets or position sizes. Red News does not provide financial, investment or trading advice."
+              "AI yalnızca ona verdiğimiz takvim verilerini görür ve asla sayı icat etmemesi talimatı verilmiştir. Yine de genel bağlam konusunda, her dil modeli gibi, hatalı olabilir. Rakamları her zaman grafikte kontrol et.",
+              "**Ne alıp satacağını söylemez.** Uzantı modelden açıkça sadece açıklama ister — giriş, çıkış, hedef veya pozisyon büyüklüğü yoktur. Red News finansal, yatırım veya ticaret tavsiyesi sağlamaz."
             ]
           }
         ]
       },
       {
-        "heading": "Still stuck?",
+        "heading": "Hâlâ takıldın mı?",
         "blocks": [
           {
             "type": "p",
-            "text": "Write to [support@rednews.app](mailto:support@rednews.app) or reach us on [Discord](https://discord.com/users/1172891214580830322) — tell us which provider you used and what the extension showed, and we will sort it out."
+            "text": "[support@rednews.app](mailto:support@rednews.app) adresine yaz veya [Discord](https://discord.com/users/1172891214580830322) üzerinden bize ulaş — hangi sağlayıcıyı kullandığını ve uzantının ne gösterdiğini söyle, biz de hallederiz."
           }
         ]
       }
